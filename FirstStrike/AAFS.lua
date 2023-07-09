@@ -55,52 +55,29 @@ local INT_MAX = 2147483647
 
 
 
--- [Cumulative Laser/Flak - Charges damage instead of shot count.]
+-- [Cumulative weapons - Charges damage instead of shot count.]
 
-script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, projectile)
-  if weapon.blueprint.name == "AA_LASER_CHARGEGUN_DAMAGE" then
-    local boost = weapon.queuedProjectiles:size()
-    projectile.damage.iDamage = projectile.damage.iDamage + boost
-    weapon.queuedProjectiles:clear()
-  end
-end)
+mods.alder.statChargers = {}
+local statChargers = mods.alder.statChargers
+statChargers["AA_LASER_CHARGEGUN_DAMAGE"] = {{stat = "iDamage"}}
+statChargers["AA_SHOTGUN_CHARGEGUN_DAMAGE"] = {{stat = "iDamage"}}
+statChargers["AA_ION_CHARGEGUN_DAMAGE"] = {{stat = "iIonDamage"}}
+statChargers["AA_ENERGY_CHARGEGUN_DAMAGE"] = {{stat = "iIonDamage"}}
+statChargers["AA_LASER_PARTICLE_CHARGEGUN_DAMAGE"] = {{stat = "iSystemDamage"}}
 
-script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, projectile)
-  if weapon.blueprint.name == "AA_SHOTGUN_CHARGEGUN_DAMAGE" then
-    local boost = weapon.queuedProjectiles:size()
-    projectile.damage.iDamage = projectile.damage.iDamage + boost
-    weapon.queuedProjectiles:clear()
-  end
-end)
-
--- [Cumulative Ion - Charges damage instead of shot count.]
-
-script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, projectile)
-  if weapon.blueprint.name == "AA_ION_CHARGEGUN_DAMAGE" then
-    local boost = weapon.queuedProjectiles:size()
-    projectile.damage.iIonDamage = projectile.damage.iIonDamage + boost
-    weapon.queuedProjectiles:clear()
-  end
-end)
-
--- [Cumulative Energy - Charges damage instead of shot count.]
-
-script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, projectile)
-  if weapon.blueprint.name == "AA_ENERGY_CHARGEGUN_DAMAGE" then
-    local boost = weapon.queuedProjectiles:size()
-    projectile.damage.iIonDamage = projectile.damage.iIonDamage + boost
-    weapon.queuedProjectiles:clear()
-  end
-end)
-
--- [Cumulative Particle - Charges damage instead of shot count.]
-
-script.on_fire_event(Defines.FireEvents.WEAPON_FIRE, function(ship, weapon, projectile)
-  if weapon.blueprint.name == "AA_LASER_PARTICLE_CHARGEGUN_DAMAGE" then
-    local boost = weapon.queuedProjectiles:size()
-    projectile.damage.iSystemDamage = projectile.damage.iSystemDamage + boost
-    weapon.queuedProjectiles:clear()
-  end
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+    local statBoosts = nil
+    if pcall(function() statBoosts = statChargers[weapon.blueprint.name] end) and statBoosts then
+        local boost = weapon.queuedProjectiles:size() -- Gets how many projectiles are charged up (doesn't include the one that was already shot)
+        weapon.queuedProjectiles:clear() -- Delete all other projectiles
+        for _, statBoost in ipairs(statBoosts) do -- Apply all stat boosts
+            if statBoost.calc then
+                projectile.damage[statBoost.stat] = statBoost.calc(boost, projectile.damage[statBoost.stat])
+            else
+                projectile.damage[statBoost.stat] = boost + projectile.damage[statBoost.stat]
+            end
+        end
+    end
 end)
 
 
@@ -312,27 +289,30 @@ particleShields["AA_PARTICLE_SHIELD"] = {
 script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
     local shieldSys = nil
     if pcall(function() shieldSys = ship.shieldSystem end) and shieldSys then
-        for partShieldName, partShieldData in pairs(particleShields) do
-            if ship:HasAugmentation(partShieldName) ~= 0 then
-                if shieldSys.shields.power.super.first < partShieldData.max then
-                    local timer = userdata_table(ship, "mods.alder.partShieldTimer")
-                    if not timer.time then
-                        timer.time = 0
-                        timer.color = partShieldData.color
-                        timer.boss = partShieldData.boss
-                    end
-                    timer.time = timer.time + Hyperspace.FPS.SpeedFactor/16
-                    if timer.time >= partShieldData.time then
-                        timer.time = 0
-                        for i = 1, math.min(partShieldData.max - shieldSys.shields.power.super.first, partShieldData.regen) do
-                            shieldSys:AddSuperShield(shieldSys.center)
-                            Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("particle_shield",0.3,true)
-                        end
-                    end
-                    timer.progress = timer.time/partShieldData.time
-                end
-                break -- Ships should only have one particle shield
+        local partShieldData = nil
+        local mostShields = 0
+        for partShieldName, data in pairs(particleShields) do
+            if ship:HasAugmentation(partShieldName) ~= 0 and data.max > mostShields then
+                partShieldData = data
+                mostShields = data.max
             end
+        end
+        if partShieldData and shieldSys.shields.power.super.first < partShieldData.max then
+            local timer = userdata_table(ship, "mods.alder.partShieldTimer")
+            if not timer.time then
+                timer.time = 0
+                timer.boss = partShieldData.boss
+            end
+            timer.time = timer.time + Hyperspace.FPS.SpeedFactor/16
+            if timer.time >= partShieldData.time then
+                timer.time = 0
+                for i = 1, math.min(partShieldData.max - shieldSys.shields.power.super.first, partShieldData.regen) do
+                    shieldSys:AddSuperShield(shieldSys.center)
+                    Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("particle_shield",0.3,true)
+                end
+            end
+            timer.progress = timer.time/partShieldData.time
+            timer.color = partShieldData.color
         end
     end
 end)
