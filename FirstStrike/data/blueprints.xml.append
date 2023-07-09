@@ -1743,7 +1743,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE">
+<!-- <weaponBlueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE"> (Non-functional, waiting until next HS release.)
 	<type>BURST</type>
 	<drone_targetable>1</drone_targetable> 
 	<flavorType>Physical Projectile Blast</flavorType>
