@@ -156,7 +156,7 @@
 
 <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
 	<mod-append:choice req="AA_ELEMENTARY_SMASH" blue="false">
-		 <text>(Elementary Drone) Set the state of the drone. [Current mode: Proton]</text> 
+		 <text>(Elementary Drone) Set the state of the drone. [Current mode: Smasher]</text> 
 		 <event load="AA_COMBAT_CHECK_TOG_ELEMENTARY_SMASH"/>
 	</mod-append:choice>
 	<mod-append:choice req="AA_ELEMENTARY_ELECTRON" blue="false">
@@ -168,7 +168,7 @@
 <event name="AA_COMBAT_CHECK_TOG_ELEMENTARY_SMASH">
 	<text>Are you sure you want to change the drone's settings?</text>
 	<choice hidden="true">
-		<text>Set the drone to Electron Accelerator Mode.</text>
+		<text>Set the drone to Electronic Inducer Mode.</text>
 		<event>
 			<text>You start calibrating the drone...</text>
 			<remove name="AA_ELEMENTARY_SMASH"/>
@@ -193,7 +193,7 @@
 <event name="AA_COMBAT_CHECK_TOG_ELEMENTARY_ELECTRON">
 	<text>Are you sure you want to change the drone's settings?</text>
 	<choice hidden="true">
-		<text>Set the drone to Proton Accelerator Mode.</text>
+		<text>Set the drone to Shield Smasher Mode.</text>
 		<event>
 			<text>You start calibrating the drone...</text>
 			<remove name="AA_ELEMENTARY_ELECTRON"/>

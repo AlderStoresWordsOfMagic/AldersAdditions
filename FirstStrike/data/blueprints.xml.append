@@ -2466,9 +2466,9 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 <droneBlueprint name="AA_ELEMENTARY_SMASH">
     <type>COMBAT</type>
     <tip>tip_toggle_combat</tip>
-    <title>Elementary Drone [Smash]</title>
+    <title>Elementary Drone [Smasher]</title>
     <short>Elementary [Smh]</short>
-    <desc>[CURRENT MODE: Smash] This combat drone contains the technology to harness multiple types of exotic particles when active.</desc>
+    <desc>[CURRENT MODE: Smasher] This combat drone contains the technology to harness multiple types of exotic particles when active.</desc>
     <power>2</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>
