@@ -76,9 +76,122 @@
 	<name>aa_dustworm</name>
 </blueprintList>
 
+<!-- // ENEMY EQUIPMENT // -->
+
+<blueprintList name="AA_LIST_LOADOUT_PROVISION_WEAPONS">
+	<name>LASER_BURST_2_ENEMY</name>
+	<name>LASER_BURST_3</name>
+	<name>LASER_BURST_5</name>
+	<name>LASER_HEAVY_1</name>
+	<name>LASER_HEAVY_2</name>
+	<name>LASER_STUN_ENEMY</name>
+	<name>LASER_CHAINGUN</name>
+	<name>LASER_CHAINGUN_2</name>
+	<name>LASER_CHARGEGUN</name>
+	<name>LASER_HEAVY_CHAINGUN</name>
+	<name>LASER_CHAINGUN_DAMAGE</name>
+	<name>AA_LASER_CHARGEGUN_DAMAGE</name>
+	<name>LASER_PARTICLE</name>
+	<name>AA_LASER_PARTICLE_MINI</name>
+	<name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</name>
+	<name>AA_LASER_SMASH</name>
+	<name>AA_LASER_SMASH_2</name>
+
+	<name>MISSILES_STUN_ENEMY</name>
+	<name>AA_MISSILES_ION_ENEMY</name>
+	<name>AA_MISSILES_SMASH_ENEMY</name>
+
+	<name>ION_2</name>
+	<name>ION_3</name>
+	<name>ION_HEAVY</name>
+	<name>ION_STUN</name>
+	<name>ION_STUN_2</name>
+	<name>ION_STUN_HEAVY</name>
+	<name>AA_ION_RAINBOW</name>
+	<name>ION_CHAINGUN</name>
+	<name>AA_ION_CHARGEGUN_DAMAGE</name>
+
+	<name>BEAM_1</name>
+	<name>BEAM_2</name>
+	<name>BEAM_LONG</name>
+	<name>BEAM_CHAIN</name>
+	<name>BEAM_ADAPT</name>
+	<name>BEAM_ADAPT_2</name>
+	<name>BEAM_STUN</name>
+	<name>BEAM_PARTICLE</name>
+	<name>AA_BEAM_ION_1</name>
+	<name>AA_BEAM_ION_2</name>
+	<name>AA_BEAM_ION_STUN</name>
+	<name>AA_BEAM_ION_PHASE</name>
+	<name>AA_BEAM_ENERGY</name>
+
+	<name>SHOTGUN_ION</name>
+	<name>AA_SHOTGUN_PARTICLE</name>
+
+	<name>ENERGY_1</name>
+	<name>ENERGY_2</name>
+	<name>ENERGY_STUN</name>
+	<name>ENERGY_CHAINGUN</name>
+	<name>AA_ENERGY_CHARGEGUN_DAMAGE</name>
+
+	<name>FOCUS_1</name>
+	<name>FOCUS_2</name>
+	<name>FOCUS_CHAIN_ENEMY</name>
+	<name>AA_FOCUS_PARTICLE</name>
+	<name>AA_FOCUS_ION_1</name>
+	<name>AA_FOCUS_ION_2</name>
+	<name>AA_FOCUS_ION_PHASE</name>
+</blueprintList>
+
+<blueprintList name="AA_LIST_LOADOUT_PROVISION_DRONES">
+	<name>COMBAT_1_LASER</name>
+	<name>COMBAT_1_BEAM</name>
+	<name>COMBAT_2_LASER</name>
+	<name>COMBAT_2_BEAM</name>
+	<name>ENERGY_1_AMP2_ENEMY</name>
+	<name>DEFENSE_1_ENEMY</name>
+	<name>GUARDIAN_1_MISSILE</name>
+	<name>GUARDIAN_1_DRONE</name>
+	<name>GUARDIAN_2_MISSILE</name>
+	<name>GUARDIAN_2_DRONE</name>
+	<name>AA_DISRUPTOR_1_AMP2</name>
+	<name>AA_DISRUPTOR_1_AMP3</name>
+	<name>AA_ELEMENTARY_SMASH</name>
+	<name>AA_ELEMENTARY_ELECTRON</name>
+	<name>AA_SCOUT_STUN</name>
+	<name>REPAIR</name>
+	<name>BATTLETOG_DEFEND</name>
+	<name>BATTLETOG2_DEFEND</name>
+</blueprintList>
+
 
 
 <!-- /// SHIPS /// -->
+
+<!-- // TEST SHIP // -->
+
+<shipBlueprint name="AA_TEST_RIGGER_SC" layout="mu_rebel_rigger" img="mu_rebel_rigger">
+	<class>Test Rigger</class>
+	<systemList>
+		<doors power="1" max="2" room="5" start="false" />
+		<drones power="2" max="8" room="1" start="true" />
+		<engines power="1" max="2" room="7" start="true" />
+		<medbay power="1" max="3" room="3" start="false" />
+		<oxygen power="1" max="3" room="2" start="true" />
+		<pilot power="1" max="2" room="0" start="true" />
+		<shields power="2" max="8" room="4" start="true" />
+		<weapons power="1" max="6" room="6" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="10" count="4" load="AA_LIST_LOADOUT_PROVISION_WEAPONS" />
+	<droneList drones="4" count="2" load="AA_LIST_LOADOUT_PROVISION_DRONES" />
+	<health amount="9" />
+	<maxPower amount="7" />
+	<crewCount amount="3" max="5" class="AA_LIST_CREW_DUSTWORM" />
+	<boardingAI>sabotage</boardingAI>
+    <aug name="AA_PARTICLE_SHIELD" />
+</shipBlueprint>
 
 <!-- // BOSSES // -->
 
