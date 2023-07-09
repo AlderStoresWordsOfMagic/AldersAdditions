@@ -2735,9 +2735,9 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 <droneBlueprint name="AA_SCOUT_DECOY">
     <type>COMBAT</type>
     <tip>tip_toggle_combat</tip>
-    <title>Scout Drone [Bait]</title>
-    <short>Scout [B]</short>
-    <desc>[CURRENT MODE: Bait] Designed to poke at both ships and planets without harm to itself, this drone is very useful for reconaissance and occasional combat operations.</desc>
+    <title>Scout Drone [Decoy]</title>
+    <short>Scout [D]</short>
+    <desc>[CURRENT MODE: Decoy] Designed to poke at both ships and planets without harm to itself, this drone is very useful for reconaissance and occasional combat operations.</desc>
     <power>1</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>

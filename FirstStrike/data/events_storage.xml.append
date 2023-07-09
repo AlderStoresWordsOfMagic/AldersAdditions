@@ -296,7 +296,7 @@
 <event name="AA_COMBAT_CHECK_TOG_SCOUT_STUN">
 	<text>Are you sure you want to change the drone's settings?</text>
 	<choice hidden="true">
-		<text>Set the drone to Bait Mode.</text>
+		<text>Set the drone to Decoy Mode.</text>
 		<event>
 			<text>You start calibrating the drone...</text>
 			<remove name="AA_SCOUT_STUN"/>
