@@ -16,6 +16,17 @@
 	</mod:findLike>
 </mod:findName>
 
+<mod:findName type="weaponBlueprint" name="SCANNER_BAIT">
+	<mod-overwrite:launchSounds>
+		<sound>decoy</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="SCANNER_RECON">
+	<mod-overwrite:launchSounds>
+		<sound>decoy</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
 <mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN">
 	<mod:findLike type="explosion">
 		<mod:setValue>explosion_bio</mod:setValue>
@@ -2199,9 +2210,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<rarity>0</rarity>
 	<explosion>room_center_pointer</explosion>
 	<launchSounds>
-		<sound>ionShoot1</sound>
-		<sound>ionShoot2</sound>
-		<sound>ionShoot3</sound>
+		<sound>pointer</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>ionHit1</sound>
@@ -2700,9 +2709,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<image>scan</image>
 	<explosion>scan_exp</explosion>
 	<launchSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
+		<sound>decoy</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>miss</sound>
@@ -2724,7 +2731,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
     <power>1</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>
-    <speed>13</speed>
+    <speed>10</speed>
     <cost>65</cost>
     <bp>3</bp>
     <droneImage>aa_drone_scout_b</droneImage>
@@ -2741,7 +2748,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
     <power>1</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>
-    <speed>8</speed>
+    <speed>6</speed>
     <cost>65</cost>
     <bp>3</bp>
     <droneImage>aa_drone_scout_s</droneImage>

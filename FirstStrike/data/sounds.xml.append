@@ -19,6 +19,10 @@
 
 <purge volume="8">weapons/purge.ogg</purge>
 
+<decoy volume="7">weapons/decoy.ogg</decoy>
+
+<pointer volume="7">weapons/pointer.ogg</pointer>
+
 <missile_giant volume="10">weapons/missile_giant.ogg</missile_giant>
 
 <explosion_giant volume="7">weapons/explosion_giant.ogg</explosion_giant>
@@ -26,6 +30,5 @@
 <!-- /// SHIP /// -->
 
 <particle_shield volume="5">ship/particle_shield.ogg</particle_shield>
-<particle_shield_removed volume="5">ship/particle_shield_removed.ogg</particle_shield_removed>
 
 </FTL>
