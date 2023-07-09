@@ -1,0 +1,361 @@
+<FTL>
+
+<!-- /// FIGHT TEST /// -->
+
+<event name="AA_TEST_FIGHT" unused="true">
+    <text>A slip-tunnel opens up nearby, and a massive Zoltan ship painted in caution stripes peeks out. "We will bring you a fight to remember... but only if you know what to pick."</text>
+    <choice hidden="true">
+        <text>A Renegade.</text>
+        <event load="AA_TEST_FIGHT_RENEGADE"/>
+    </choice>
+    <choice hidden="true">
+        <text>Bring me a challenge!</text>
+        <event load="AA_TEST_FIGHT_BOSS"/>
+    </choice>
+</event>
+
+<!-- // BOSSES // -->
+
+<event name="AA_TEST_FIGHT_BOSS" unused="true">
+    <text>"I see you are eager to begin. Who do you desire to stare down?"</text>
+    <choice hidden="true">
+        <text>I want to face a Rebel Cruiser.</text>
+        <event>
+            <text>"Your choice has been made." A hail quickly arrives, and you turn your ship around to find yourself nearly brushing up against a massive Rebel Cruiser!</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="AA_TEST_FIGHT_BOSS_REBEL_CRUISER"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>I want to face Sally.</text>
+        <event>
+            <text>"Your choice has been made." A second slip-tunnel opens up alongside the Zoltan ship as it backs away into its own, revealing a massive, green Auto-ship holding a 39-foot-long paper in one of its scrap arms.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="AA_TEST_FIGHT_BOSS_SALLY"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<!-- // RENEGADES // -->
+
+<event name="AA_TEST_FIGHT_RENEGADE" unused="true">
+    <text>"I see you are eager to begin. Who do you desire to stare down?"</text>
+    <choice hidden="true">
+        <text>I want to face the White Knight.</text>
+        <event>
+            <text>"Your choice has been made." A second slip-tunnel opens behind you, and a strangely-painted Stealth Cruiser rockets past your port window.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="AA_TEST_FIGHT_RENEGADE_STEALTH"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>I want to face Le Camaraderie.</text>
+        <event>
+            <text>"Your choice has been made." A second slip-tunnel opens in front of you, and an ornate Paladin Cruiser approaches menacingly.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="AA_TEST_FIGHT_RENEGADE_PALADIN"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>I want to face the TSS-Bonnie-24.</text>
+        <event>
+            <text>"Your choice has been made." A second slip-tunnel opens to your side, and a horribly worn cruiser formerly belonging to the Tony's retail chain appears before you.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="AA_TEST_FIGHT_RENEGADE_TONY"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>I want to face the Manifestation of Will.</text>
+        <event>
+            <text>"Your choice has been made." Your systems begin to glitch out, flashing strange scenes of white environments populated with gratuitous violence.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="AA_TEST_FIGHT_RENEGADE_HACKER"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<!-- // REBEL CRUISER // -->
+
+<event name="AA_TEST_FIGHT_BOSS_REBEL_CRUISER" unused="true">
+	<text>"Wait... where am I? Oh, god damn it, it's the Feds! Battle stations, everyone!"</text>
+	<ship load="AA_BOSS_REBEL_CRUISER" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+<!-- // WHITE KNIGHT // -->
+
+<event name="AA_TEST_FIGHT_RENEGADE_STEALTH" unused="true">
+    <text>The strange ship hails you, revealing a tall man at the helm bearing graying hair, red eyes, and a script. "So, you're the testing ship we've heard about? Well, let's waste no further time. How hard should we go?"</text>
+    <choice hidden="true">
+        <text>Normal.</text>
+        <event>
+            <text>"Alright. Battle stations, men!"</text>
+            <ship load="AA_RENEGADE_STEALTH_NORMAL" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Challenge.</text>
+        <event>
+            <text>"Alright. Battle stations, men!"</text>
+            <ship load="AA_RENEGADE_STEALTH_CHALLENGE" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Extreme.</text>
+        <event>
+            <text>"Alright. Battle stations, men!"</text>
+            <ship load="AA_RENEGADE_STEALTH_EXTREME" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Chaos.</text>
+        <event>
+            <text>Both of you hear a disturbing laugh from behind you, and the strange captain shifts his stance. "Alright. Battle stations, men! Let's not go easy on them..."</text>
+            <ship load="AA_RENEGADE_STEALTH_CHAOS" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>The first time we met.</text>
+        <event>
+            <text>"Alright. Battle stations, men! Let's not go easy on them..."</text>
+            <ship load="AA_RENEGADE_STEALTH_QUEST" hostile="true"/>
+            <playMusic>sylvan</playMusic>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<!-- // LE CAMARADERIE // -->
+
+<event name="AA_TEST_FIGHT_RENEGADE_PALADIN" unused="true">
+    <text>A Rockman Crusader wearing a thick trenchcoat appears on the viewscreen. He grunts, looking down as a Crystal Liberator awaits your verdict.</text>
+    <choice hidden="true">
+        <text>Normal.</text>
+        <event>
+            <text>A deep, gravelly voice sounds out from the Rockman. "So be it!"</text>
+            <ship load="AA_RENEGADE_PALADIN_NORMAL" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Challenge.</text>
+        <event>
+            <text>A deep, gravelly voice sounds out from the Rockman. "So be it!"</text>
+            <ship load="AA_RENEGADE_PALADIN_CHALLENGE" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Extreme.</text>
+        <event>
+            <text>A deep, gravelly voice sounds out from the Rockman. "So be it!"</text>
+            <ship load="AA_RENEGADE_PALADIN_EXTREME" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Chaos.</text>
+        <event>
+            <text>Both of you hear a disturbing laugh from behind you, and the Rockman turns to face you, staring deep into your eyes. "So be it! This'll be a real pain..."</text>
+            <ship load="AA_RENEGADE_PALADIN_CHAOS" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>The first time we met.</text>
+        <event>
+            <text>A deep, gravelly voice sounds out from the Rockman. "So be it! This will be a pain..."</text>
+            <ship load="AA_RENEGADE_PALADIN_QUEST" hostile="true"/>
+            <playMusic>sylvan</playMusic>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<!-- // TSS-BONNIE-24 // -->
+
+<event name="AA_TEST_FIGHT_RENEGADE_TONY" unused="true">
+    <text>A brown-haired human dressed in a purple guard outfit stares unnervingly into your eyes over the viewscreen. "Agh, it seems the law has finally caught up with me..."</text>
+    <choice hidden="true">
+        <text>Normal.</text>
+        <event>
+            <text>The figure brandishes his knife, before the communication ends. You register a teleporter signal!</text>
+            <ship load="AA_RENEGADE_TONY_NORMAL" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Challenge.</text>
+        <event>
+            <text>The figure brandishes his knife, before the communication ends. You register a teleporter signal!</text>
+            <ship load="AA_RENEGADE_TONY_CHALLENGE" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Extreme.</text>
+        <event>
+            <text>The figure brandishes his knife, before the communication ends. You register a teleporter signal!</text>
+            <ship load="AA_RENEGADE_TONY_EXTREME" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Chaos.</text>
+        <event>
+            <text>A disturbing laugh sounds out inside your head as the figure brandishes his knife. You register a teleporter signal, and he winks before dematerializing!</text>
+            <ship load="AA_RENEGADE_TONY_CHAOS" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>The first time we met.</text>
+        <event>
+            <text>The figure brandishes his knife. You register a teleporter signal, and he winks before dematerializing!</text>
+            <ship load="AA_RENEGADE_TONY_QUEST" hostile="true"/>
+            <playMusic>sylvan</playMusic>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<!-- // MANIFESTATION OF WILL // -->
+
+<event name="AA_TEST_FIGHT_RENEGADE_HACKER" unused="true">
+    <text>[LAUNCHING shipsim.exe...]
+[PLEASE SELECT A DIFFICULTY.]</text>
+    <choice hidden="true">
+        <text>[NORMAL]</text>
+        <event>
+            <text>[NORMAL DIFFICULTY. GOOD LUCK, ADMINISTRATOR.]</text>
+            <ship load="AA_RENEGADE_HACKER_NORMAL" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>[CHALLENGE]</text>
+        <event>
+            <text>[CHALLENGE DIFFICULTY. GOOD LUCK, ADMINISTRATOR.]</text>
+            <ship load="AA_RENEGADE_HACKER_CHALLENGE" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>[EXTREME]</text>
+        <event>
+            <text>[EXTREME DIFFICULTY. GOOD LUCK, ADMINISTRATOR.]</text>
+            <ship load="AA_RENEGADE_HACKER_EXTREME" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>[CHAOS]</text>
+        <event>
+            <text>[CHAOS DIFFICULTY. NOW YOU'RE JUST SHOWING OFF.]</text>
+            <ship load="AA_RENEGADE_HACKER_CHAOS" hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>[ORIGINAL]</text>
+        <event>
+            <text>[LOADING STANDARD SETTINGS...]</text>
+            <ship load="AA_RENEGADE_HACKER_QUEST" hostile="true"/>
+            <playMusic>sylvan</playMusic>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<!-- // SALLY // -->
+
+<event name="AA_TEST_FIGHT_BOSS_SALLY" unused="true">
+	<text>"Uh, I think I got the script... Rehearsal in 3... 2... 1...!"</text>
+	<ship load="AA_SUPERBOSS_INTEGRAL" hostile="true"/>
+	<playMusic>CURA</playMusic> <!-- "Visions of the Puppet Master", by Maddie Doktor, used as a placeholder. -->
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+</FTL>

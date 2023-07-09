@@ -1,0 +1,1065 @@
+<FTL>
+
+<!-- /// LOAD LUA SCRIPTS /// -->
+
+<mod:findLike type="scripts">
+    <mod-append:script>AASC.lua</mod-append:script>
+</mod:findLike>
+
+<!-- /// VARIABLES /// -->
+
+<events>
+
+<!-- // REPUTATION // -->
+
+	<variable name="aa_rep_provision" op="set" val="0"/> <!-- // Reputation with the Provisional Government. // -->
+
+<!-- // ACHIEVEMENTS // -->
+
+	<variable name="aa_ach_axis_stealth_victory" op="set" val="0"/> <!-- // If you've beaten the White Knight. // -->
+	<variable name="aa_ach_axis_paladin_victory" op="set" val="0"/> <!-- // If you've beaten the Camaraderie. // -->
+	<variable name="aa_ach_axis_tony_victory" op="set" val="0"/> <!-- // If you've beaten the TSS-Bonnie-24 for the second time. // -->
+	<variable name="aa_ach_axis_hacker_victory" op="set" val="0"/> <!-- // If you've beaten the Manifestation of Will. // -->
+	<variable name="aa_ach_axis_limit_victory" op="set" val="0"/> <!-- // If you've beaten the Limit IV in an honest duel. // -->
+
+	<variable name="aa_ach_renegade_stealth" op="set" val="0"/> <!-- // If you've beaten the White Knight as a random encounter. // -->
+	<variable name="aa_ach_renegade_paladin" op="set" val="0"/> <!-- // If you've beaten the Camaraderie as a random encounter. // -->
+	<variable name="aa_ach_renegade_tony" op="set" val="0"/> <!-- // If you've beaten the TSS-Bonnie-24 as a random encounter. // -->
+	<variable name="aa_ach_renegade_hacker" op="set" val="0"/> <!-- // If you've beaten the Manifestation of Will/H0TSW1TCH as a random encounter. // -->
+	<variable name="aa_ach_renegade_limit" op="set" val="0"/> <!-- // If you've beaten the Limit IV as a random encounter. // -->
+
+	<variable name="aa_ach_crew_alder" op="set" val="0"/> <!-- // If you have had Alder on your ship before. // -->
+	<variable name="aa_ach_crew_thane" op="set" val="0"/> <!-- // If you have had Thane on your ship before. // -->
+	<variable name="aa_ach_crew_chael" op="set" val="0"/> <!-- // If you have had Chael on your ship before. // -->
+
+<!-- // CREW STORAGE // -->
+
+	<metaVariable name="aa_store_crew_alder" op="set" val="0"/> <!-- // If Alder is currently aboard Axis Station. // -->
+	<metaVariable name="aa_store_crew_thane" op="set" val="0"/> <!-- // If Thane is currently aboard Axis Station. // -->
+	<metaVariable name="aa_store_crew_chael" op="set" val="0"/> <!-- // If Chael is currently aboard Axis Station. // -->
+
+</events>
+
+<!-- /// EVENT FILES AND BOSS BOXES /// -->
+
+<mod:findLike type="events" limit="1">
+
+	<mod-append:eventFile>axis</mod-append:eventFile> <!-- // Events on board Axis Station. // -->
+	<mod-append:eventFile>provision</mod-append:eventFile> <!-- // Events in the Provisional Government's territory. // -->
+	<mod-append:eventFile>sally</mod-append:eventFile> <!-- // Events concerning [REDACTED]. // -->
+	<mod-append:eventFile>testing</mod-append:eventFile> <!-- // Events that are used strictly for development purposes. // -->
+
+	<mod-append:bossShip>AA_BOSS_REBEL_CRUISER</mod-append:bossShip>
+
+	<mod-append:bossShip>AA_RENEGADE_STEALTH_NORMAL</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_STEALTH_CHALLENGE</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_STEALTH_EXTREME</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_STEALTH_CHAOS</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_STEALTH_QUEST</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_PALADIN_NORMAL</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_PALADIN_CHALLENGE</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_PALADIN_EXTREME</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_PALADIN_CHAOS</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_PALADIN_QUEST</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_TONY_NORMAL</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_TONY_CHALLENGE</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_TONY_EXTREME</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_TONY_CHAOS</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_TONY_QUEST</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_HACKER_NORMAL</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_HACKER_CHALLENGE</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_HACKER_EXTREME</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_HACKER_CHAOS</mod-append:bossShip>
+	<mod-append:bossShip>AA_RENEGADE_HACKER_QUEST</mod-append:bossShip>
+
+	<mod-append:bossShip>AA_SUPERBOSS_INTEGRAL</mod-append:bossShip>
+
+</mod:findLike>
+
+<!-- /// EVENTS WITH HYPERSPACE PROPERTIES /// -->
+
+<!-- // CREW LABS // -->
+
+<event name="AA_INSTALL_LAB_DUSTWORM_WARY">
+	<hiddenAug>AA_LAB_DUSTWORM_WARY</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
+	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
+</event>
+<event name="AA_INSTALL_LAB_DUSTWORM_GUN">
+	<hiddenAug>AA_LAB_DUSTWORM_GUN</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
+	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
+</event>
+<event name="AA_INSTALL_LAB_DUSTWORM_SILENCE">
+	<hiddenAug>AA_LAB_DUSTWORM_SILENCE</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
+	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
+</event>
+
+<!-- /// ACHIEVEMENTS /// -->
+
+<mod:findLike type="achievements">
+
+<!-- // TRANSPORTS // -->
+
+	<mod-append:page>
+		<section text="Alder's Additions: Accomplishments" hidden="false">
+			<achievement name="AA_ACH_PROVISION_TRANSPORT">
+				<name>A Bold Move</name>
+				<description>Obtain the loot from the Provisional Government's loot transport.</description>
+				<secretDescription>Obtain the loot from the ??? loot transport.</secretDescription>
+				<icon>aa_ach_provision_transport</icon>
+				<header>Alder's Additions: Transports Raided</header>
+			</achievement>
+			<achievement name="AA_ACH_PROVISION_TRANSPORT">
+				<name>A Bold Move</name>
+				<description>Obtain the loot from Maelstrom Engineering's loot transport.</description>
+				<secretDescription>Obtain the loot from the ??? loot transport.</secretDescription>
+				<icon>aa_ach_maelstrom_transport</icon>
+				<header>Alder's Additions: Transports Raided</header>
+			</achievement>
+
+<!-- // UNIQUES // -->
+
+			<achievement name="AA_ACH_CREW_ALDER">
+				<name>Hey, That's My Name</name>
+				<description>Convince Alder to come on board and see the world.</description>
+				<secretDescription>Pitch into a secret technology project.</secretDescription>
+				<header>Character Recruited</header>
+				<lockImage>ach_locked</lockImage>
+				<icon>aa_ach_crew_alder</icon>
+				<variable name="aa_ach_crew_alder" amount="1"/>
+			</achievement>
+			<achievement name="AA_ACH_CREW_THANE">
+				<name>Blue-Collar Blues</name>
+				<description>Protect Thane from a Wentworth Dreadnought.</description>
+				<secretDescription>Prevent a hostile takeover.</secretDescription>
+				<header>Character Recruited</header>
+				<lockImage>ach_locked</lockImage>
+				<icon>aa_ach_crew_thane</icon>
+				<variable name="aa_ach_crew_thane" amount="1"/>
+			</achievement>
+			<achievement name="AA_ACH_CREW_CHAEL">
+				<name>Hello, Hello?</name>
+				<description>Prove to Chael you're worth sticking with.</description>
+				<secretDescription>Investigate a supernatural occurrence.</secretDescription>
+				<header>Character Recruited</header>
+				<lockImage>ach_locked</lockImage>
+				<icon>aa_ach_crew_chael</icon>
+				<variable name="aa_ach_crew_chael" amount="1"/>
+			</achievement>
+
+<!-- // BOSSES // -->
+
+			<achievement name="AA_ACH_BOSS_PROVISION">
+				<name>Give Them Hell</name>
+				<description>Destroy the cruiser blocking the exit to the Provisional Government's territory.</description>
+				<icon>aa_ach_boss_provision</icon>
+				<lockImage>ach_locked</lockImage>
+				<secretDescription>Fight your way out of a very tough spot.</secretDescription>
+				<header>Alder's Additions: Boss Defeated</header>
+			</achievement>
+			<achievement name="AA_ACH_BOSS_MAELSTROM">
+				<name>Immolation</name>
+				<description>Take down the M.E.I. Dreadnought before it can escape.</description>
+				<icon>aa_ach_boss_maelstrom</icon>
+				<lockImage>ach_locked</lockImage>
+				<secretDescription>Prevent an imminent pirate-related crisis.</secretDescription>
+				<header>Alder's Additions: Boss Defeated</header>
+			</achievement>
+		</section>
+
+<!-- // THE OBSERVERS // -->
+
+		<section text="Alder's Additions: The Observers' Gifts" hidden="false">
+			<achievement name="AA_ACH_BOON_DUSTWORM">
+				<name>Boon of Dustworms</name>
+				<secretName>Boon of ???</secretName>
+				<secretDescription>Receive the Boon of ??? from Thest.</secretDescription>
+				<description>Show a Dustworm crew to Thest. 
+				While in effect; Dustworms become untargetable for 5 seconds after any Dustworm's silk spray.</description>
+				<header>Boon Received</header>
+				<icon>aa_ach_boon_dustworm</icon>
+				<multiDifficulty>false</multiDifficulty>
+			</achievement>
+		</section>
+	</mod-append:page>
+
+<!-- // RENEGADES // -->
+
+	<mod-append:page>
+		<section text="Alder's Additions: Renegade Cruisers" hidden="false">
+			<achievement name="AA_ACH_RENEGADE_STEALTH">
+				<name>Termination By Sunset</name>
+				<description>Defeat the Far-Out Stealth Cruiser and get the Viral Cannon.</description>
+				<icon>aa_ach_renegade_stealth</icon>
+				<lockImage>ach_locked</lockImage>
+				<secretDescription>Defeat the ??? Renegade and get its loot.</secretDescription>
+				<header>Alder's Additions: Renegade Defeated</header>
+			</achievement>
+			<achievement name="AA_ACH_RENEGADE_PALADIN">
+				<name>Plot-Armor-Piercing</name>
+				<description>Defeat the Far-Out Paladin Cruiser and get the "Poseidon" Chain Missiles.</description>
+				<icon>aa_ach_renegade_paladin</icon>
+				<lockImage>ach_locked</lockImage>
+				<secretDescription>Defeat the ??? Renegade and get its loot.</secretDescription>
+				<header>Alder's Additions: Renegade Defeated</header>
+			</achievement>
+			<achievement name="AA_ACH_RENEGADE_TONY">
+				<name>Die In A Fire</name>
+				<description>Defeat the Tony's Renegade Cruiser and get the Spring Bomb.</description>
+				<icon>aa_ach_renegade_tony</icon>
+				<lockImage>ach_locked</lockImage>
+				<secretDescription>Defeat the ??? Renegade and get its loot.</secretDescription>
+				<header>Alder's Additions: Renegade Defeated</header>
+			</achievement>
+			<achievement name="AA_ACH_RENEGADE_HACKER">
+				<name>Set Free</name>
+				<description>Defeat the Hacker Renegade Cruiser and get the Portable Combat Simulator.</description>
+				<icon>aa_ach_renegade_hacker</icon>
+				<lockImage>ach_locked</lockImage>
+				<secretDescription>Defeat the ??? Renegade and get its loot.</secretDescription>
+				<header>Alder's Additions: Renegade Defeated</header>
+			</achievement>
+			<achievement name="AA_ACH_RENEGADE_LIMIT">
+				<name>Down To Earth</name>
+				<description>Defeat the Limit IV and get the Enervation Ray.</description>
+				<icon>aa_ach_renegade_hacker</icon>
+				<lockImage>ach_locked</lockImage>
+				<secretDescription>Defeat the ??? Renegade and get its loot.</secretDescription>
+				<header>Alder's Additions: Renegade Defeated</header>
+			</achievement>
+		</section>
+	</mod-append:page>
+
+</mod:findLike>
+
+<!-- /// EVERYTHING SHIPS WANT /// -->
+
+<mod:findLike type="ships">
+
+<!-- // SHIP ICONS // -->
+
+<mod:findLike type="shipIcons">
+
+	<mod-append:shipIcon>
+		<name>aa_icon_insulated</name>
+		<tooltip>INSULATED ROOMS:
+This enemy has one or more insulated rooms, marked by the blue border and R icon in the top left. Insulated rooms will take no ion damage from weapons or instant crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
+	</mod-append:shipIcon>
+
+	<mod-append:shipIcon>
+		<name>aa_icon_hack_immune</name>
+		<tooltip>FIREWALLED ROOMS:
+This enemy has one or more firewalled rooms, marked by the purple border and R icon in the top left. Firewalled rooms are immune to hacking limpets, but still take all damage as normal.</tooltip>
+	</mod-append:shipIcon>
+
+	<mod-append:shipIcon>
+		<name>aa_icon_silk_armor</name>
+		<tooltip>SILKSTEEL HULL:
+Special, malleable composite hull plating that increases repair speed by 1.2x on board and allows non-Dustworm allied crew to move through silk sprays at normal speed.</tooltip>
+	</mod-append:shipIcon>
+
+	<mod-append:shipIcon>
+		<name>aa_icon_antihuman</name>
+		<tooltip>PALE SAMPLES:
+This enemy bears a weapon capable of spreading the highly lethal Pale Virus. Humans are particularly vulnerable, and are guarenteed to die incredibly quickly if exposed.</tooltip>
+	</mod-append:shipIcon>
+
+	<mod-append:shipIcon>
+		<name>aa_icon_superhot</name>
+		<tooltip>YOU ARE NOT IN CONTROL:
+Time only advances for the enemy ship and crew when the Addict is not idling.</tooltip>
+	</mod-append:shipIcon>
+
+	<mod-append:shipIcon>
+		<name>aa_icon_temporal_power</name>
+		<tooltip>TEMPORAL SUPERCHARGER:
+Time on board this enemy naturally moves at a slower rate, but increases for every bar of power currently being used. Use caution when disabling systems.</tooltip>
+	</mod-append:shipIcon>
+
+	<mod-append:shipIcon>
+		<name>aa_icon_supermath</name>
+		<tooltip>ADVANCED EDUTAINMENT:
+Sally's specialty is mathematics, and she will periodically ask you difficult math questions. Getting these questions wrong could lead to a crippling power surge!</tooltip>
+	</mod-append:shipIcon>
+
+</mod:findLike>
+
+<!-- // CUSTOM SHIP PROPERTIES // -->
+
+<!-- / TEST / -->
+
+<mod-append:customShip name="AA_TEST_FIGHTER">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+	</shipIcons>
+	<hiddenAug>AA_PARTICLE_SHIELD</hiddenAug>
+</mod-append:customShip>
+
+<!-- / BOSSES / -->
+
+<mod-append:customShip name="AA_BOSS_REBEL_CRUISER">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_mfk room="20"/>
+		<human_soldier room="3"/>
+		<human_rebel_medic room="19"/>
+		<human_technician room="23"/>
+		<human_rebel room="4"/>
+		<human_rebel room="2"/>
+		<human_rebel room="11"/>
+		<human_rebel room="14"/>
+	</crew>
+</mod-append:customShip>
+
+<!-- // RENEGADES // -->
+
+<mod-append:customShip name="AA_RENEGADE_STEALTH_QUEST">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_medic room="0" name="K"/>
+		<human_soldier room="3"/>
+		<human_engineer room="8"/>
+		<shell_guardian room="5"/>
+		<human room="13"/>
+		<human room="1"/>
+		<shell room="10"/>
+		<shell room="9"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_STEALTH_NORMAL">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_medic room="0"/>
+		<human_soldier room="3"/>
+		<human_engineer room="8"/>
+		<shell_guardian room="5"/>
+		<human room="13"/>
+		<shell room="10"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_STEALTH_CHALLENGE">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_medic room="0"/>
+		<human_soldier room="3"/>
+		<human_engineer room="8"/>
+		<shell_guardian room="5"/>
+		<human room="13"/>
+		<human room="1"/>
+		<shell room="10"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_STEALTH_EXTREME">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_medic room="0"/>
+		<human_soldier room="3"/>
+		<human_engineer room="8"/>
+		<shell_guardian room="5"/>
+		<human room="13"/>
+		<human room="1"/>
+		<shell room="10"/>
+		<shell room="9"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_STEALTH_CHAOS">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep_chaos</shipIcon>
+		<shipIcon>aa_icon_antihuman</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_medic room="0"/>
+		<human_soldier room="3"/>
+		<human_engineer room="8"/>
+		<shell_guardian room="5"/>
+		<human room="13"/>
+		<human room="1"/>
+		<shell room="10"/>
+		<shell room="9"/>
+	</crew>
+</mod-append:customShip>
+
+<mod-append:customShip name="AA_RENEGADE_PALADIN_QUEST">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_scrambler</shipIcon>
+	</shipIcons>
+	<crew>
+		<rock_crusader room="12" name="Jotaro"/>
+		<rock_crusader room="0" name="Joseph"/>
+		<crystal_liberator room="15" name="Kakyoin"/>
+		<human_soldier room="16" name="Polnareff"/>
+		<phantom_goul_alpha room="14" name="Avdol"/>
+		<orchid_chieftain room="1" name="Iggy"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_PALADIN_NORMAL">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+	</shipIcons>
+	<crew>
+		<rock_crusader room="12" name="Jotaro"/>
+		<rock_crusader room="0" name="Joseph"/>
+		<crystal_liberator room="15" name="Kakyoin"/>
+		<phantom_goul_alpha room="14" name="Avdol"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_PALADIN_CHALLENGE">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+		<shipIcon>icon_scrambler</shipIcon>
+	</shipIcons>
+	<crew>
+		<rock_crusader room="12" name="Jotaro"/>
+		<rock_crusader room="0" name="Joseph"/>
+		<crystal_liberator room="15" name="Kakyoin"/>
+		<human_soldier room="16" name="Polnareff"/>
+		<phantom_goul_alpha room="14" name="Avdol"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_PALADIN_EXTREME">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+		<shipIcon>icon_scrambler</shipIcon>
+	</shipIcons>
+	<crew>
+		<rock_crusader room="12" name="Jotaro"/>
+		<rock_crusader room="0" name="Joseph"/>
+		<crystal_liberator room="15" name="Kakyoin"/>
+		<human_soldier room="16" name="Polnareff"/>
+		<phantom_goul_alpha room="14" name="Avdol"/>
+		<orchid_chieftain room="1" name="Iggy"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_PALADIN_CHAOS">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep_chaos</shipIcon>
+		<shipIcon>icon_scrambler</shipIcon>
+	</shipIcons>
+	<crew>
+		<rock_crusader room="12" name="Jotaro"/>
+		<rock_crusader room="0" name="Joseph"/>
+		<crystal_liberator room="15" name="Kakyoin"/>
+		<human_soldier room="16" name="Polnareff"/>
+		<phantom_goul_alpha room="14" name="Avdol"/>
+		<orchid_chieftain room="1" name="Iggy"/>
+	</crew>
+</mod-append:customShip>
+
+<mod-append:customShip name="AA_RENEGADE_TONY_QUEST">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+	</shipIcons>
+	<crew>
+		<aa_unique_william room="18" name="William"/>
+		<human_soldier room="16"/>
+		<human_engineer room="5"/>
+		<leech room="10"/>
+		<leech room="0"/>
+		<leech room="12"/>
+		<leech room="17"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_TONY_NORMAL">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+	</shipIcons>
+	<crew>
+		<aa_unique_william room="18" name="William"/>
+		<human_engineer room="5"/>
+		<leech room="10"/>
+		<leech room="0"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_TONY_CHALLENGE">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+	</shipIcons>
+	<crew>
+		<aa_unique_william room="18" name="William"/>
+		<human_engineer room="5"/>
+		<leech room="10"/>
+		<leech room="0"/>
+		<leech room="17"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_TONY_EXTREME">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+	</shipIcons>
+	<crew>
+		<aa_unique_william room="18" name="William"/>
+		<human room="16"/>
+		<human_engineer room="5"/>
+		<leech room="10"/>
+		<leech room="0"/>
+		<leech room="12"/>
+		<leech room="17"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_TONY_CHAOS">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep_chaos</shipIcon>
+		<shipIcon>icon_invasion</shipIcon>
+	</shipIcons>
+	<crew>
+		<aa_unique_william room="18" name="William"/>
+		<human_soldier room="16"/>
+		<human_engineer room="5"/>
+		<leech room="10"/>
+		<leech room="0"/>
+		<leech room="12"/>
+		<leech room="17"/>
+	</crew>
+</mod-append:customShip>
+
+<mod-append:customShip name="AA_RENEGADE_HACKER_QUEST">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_bypass</shipIcon>
+		<shipIcon>icon_hackstun</shipIcon>
+	</shipIcons>
+	<crew>
+		<aa_addict room="12" name="addict.mind"/>
+		<aa_red_guy_enemy room="3" name="redguy.sim"/>
+		<aa_red_guy_enemy room="21" name="redguy.sim"/>
+		<aa_red_guy_enemy room="2" name="redguy.sim"/>
+		<aa_red_guy_enemy room="12" name="redguy.sim"/>
+		<aa_red_guy_enemy room="12" name="redguy.sim"/>
+		<aa_red_guy_enemy room="12" name="redguy.sim"/>
+		<aa_red_guy_enemy room="7" name="redguy.sim"/>
+		<aa_red_guy_enemy room="9" name="redguy.sim"/>
+		<aa_red_guy_enemy room="4" name="redguy.sim"/>
+		<aa_red_guy_enemy room="18" name="redguy.sim"/>
+		<aa_red_guy_enemy room="0" name="redguy.sim"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_HACKER_NORMAL">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+		<shipIcon>icon_hackstun</shipIcon>
+		<shipIcon>aa_icon_temporal_power</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_soldier room="0"/>
+		<human room="21"/>
+		<human room="3"/>
+		<slug_saboteur room="18"/>
+		<slug room="9"/>
+		<slug room="4"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_HACKER_CHALLENGE">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+		<shipIcon>icon_hackstun</shipIcon>
+		<shipIcon>aa_icon_temporal_power</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_soldier room="0"/>
+		<human room="21"/>
+		<human room="3"/>
+		<slug_saboteur room="18"/>
+		<slug room="9"/>
+		<slug room="4"/>
+		<slug room="18"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_HACKER_EXTREME">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep</shipIcon>
+		<shipIcon>icon_bypass</shipIcon>
+		<shipIcon>icon_hackstun</shipIcon>
+		<shipIcon>aa_icon_temporal_power</shipIcon>
+	</shipIcons>
+	<crew>
+		<human_soldier room="0"/>
+		<human_engineer room="21"/>
+		<human room="3"/>
+		<human room="6"/>
+		<slug_saboteur room="18"/>
+		<slug_clansman room="9"/>
+		<slug room="4"/>
+		<slug room="18"/>
+	</crew>
+</mod-append:customShip>
+<mod-append:customShip name="AA_RENEGADE_HACKER_CHAOS">
+	<shipIcons>
+		<shipIcon>icon_threat</shipIcon>
+		<shipIcon>icon_specialwep_chaos</shipIcon>
+		<shipIcon>icon_bypass</shipIcon>
+		<shipIcon>icon_hackstun</shipIcon>
+		<shipIcon>aa_icon_superhot</shipIcon>
+	</shipIcons>
+	<crew>
+		<aa_addict room="12" name="addict.mind"/>
+		<aa_red_guy_enemy room="3" name="redguy.sim"/>
+		<aa_red_guy_enemy room="21" name="redguy.sim"/>
+		<aa_red_guy_enemy room="2" name="redguy.sim"/>
+		<aa_red_guy_enemy room="12" name="redguy.sim"/>
+		<aa_red_guy_enemy room="12" name="redguy.sim"/>
+		<aa_red_guy_enemy room="12" name="redguy.sim"/>
+		<aa_red_guy_enemy room="7" name="redguy.sim"/>
+		<aa_red_guy_enemy room="9" name="redguy.sim"/>
+		<aa_red_guy_enemy room="4" name="redguy.sim"/>
+		<aa_red_guy_enemy room="18" name="redguy.sim"/>
+		<aa_red_guy_enemy room="0" name="redguy.sim"/>
+	</crew>
+</mod-append:customShip>
+
+<mod-append:customShip name="AA_SUPERBOSS_INTEGRAL">
+	<shipIcons>
+		<shipIcon>icon_majorthreat</shipIcon>
+		<shipIcon>icon_auto</shipIcon>
+		<shipIcon>icon_no2</shipIcon>
+		<shipIcon>icon_resist</shipIcon>
+		<shipIcon>aa_icon_insulated</shipIcon>
+		<shipIcon>aa_icon_supermath</shipIcon>
+	</shipIcons>
+	<rooms>
+		<room id="6">
+			<roomAnim renderLayer="0">room_ionresist_1x4</roomAnim>
+			<roomAnim renderLayer="3">resist_icon</roomAnim>
+			<ionDamageResistChance>100</ionDamageResistChance>
+		</room>
+		<room id="12">
+			<roomAnim renderLayer="0">room_ionresist_1x3</roomAnim>
+			<roomAnim renderLayer="3">resist_icon</roomAnim>
+			<ionDamageResistChance>100</ionDamageResistChance>
+		</room>
+		<room id="13">
+			<roomAnim renderLayer="0">resist_1x3</roomAnim>
+			<roomAnim renderLayer="3">resist_icon</roomAnim>
+			<sysDamageResistChance>100</sysDamageResistChance>
+		</room>
+		<room id="19">
+			<roomAnim renderLayer="0">resist_1x1</roomAnim>
+			<roomAnim renderLayer="3">resist_icon</roomAnim>
+			<sysDamageResistChance>100</sysDamageResistChance>
+		</room>
+		<room id="17">
+			<roomAnim renderLayer="0">resist_2x2</roomAnim>
+			<roomAnim renderLayer="3">resist_icon</roomAnim>
+			<sysDamageResistChance>100</sysDamageResistChance>
+		</room>
+	</rooms>
+	<hiddenAug>SYSTEM_CASING_NEW</hiddenAug> <!-- // Titanium System Casing, for that extra space bastardry. // -->
+</mod-append:customShip>
+
+</mod:findLike>
+
+<!-- /// AUGMENTS /// -->
+
+<mod:findLike type="augments" limit="1">
+
+<!-- // FACTION // -->
+
+<mod-append:aug name="AA_SILK_HULL">
+	<icon>aa_icon_silk_armor</icon>
+	<locked/>
+</mod-append:aug>
+
+<!-- // MISC. // -->
+
+<mod-append:aug name="AA_TEMPORAL_POWER">
+	<icon>aa_icon_temporal_power</icon>
+</mod-append:aug>
+
+<mod-append:aug name="AA_SUPERHOT">
+	<icon>aa_icon_superhot</icon>
+</mod-append:aug>
+
+<mod-append:aug name="AA_INTEGRAL_PARTICLE_SHIELD">
+    <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
+    <superShield>
+        <add>3</add>
+        <color r="0" g="68" b="255" a="1"/>
+        <shieldImage>ship/enemy_shields_particle.png</shieldImage>
+    </superShield>
+    <icon>aa_icon_particle_shield</icon>
+</mod-append:aug>
+
+<!-- // CREW LABS // -->
+
+<mod-append:aug name="AA_LAB_DUSTWORM_INSTALLED">
+	<icon>aa_icon_particle_shield</icon>
+</mod-append:aug>
+
+<mod-append:aug name="AA_LAB_DUSTWORM_WARY">
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>FLAT</boostType>
+			<amount>0.4</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_DUSTWORM"/>
+		</statBoost>
+		<statBoost name="statBoost"> <!-- Recursive stat boost that makes enemy dustworms afraid of your crew. -->
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<statBoost name="controllable">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<maxStacks>1</maxStacks>
+				<whiteList>
+					<aa_dustworm/>
+				</whiteList>
+				<dangerRating>2</dangerRating>
+			</statBoost>
+		</statBoost>
+	</statBoosts>
+</mod-append:aug>
+
+<mod-append:aug name="AA_LAB_DUSTWORM_GUN">
+	<statBoosts>
+		<statBoost name="doorDamageMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.5</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_DUSTWORM"/>
+		</statBoost>
+		<statBoost name="rangedDamageMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.8</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_DUSTWORM"/>
+		</statBoost>
+		<statBoost name="sabotageSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.5</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_DUSTWORM"/>
+		</statBoost>
+		<statBoost name="canFight">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_DUSTWORM"/>
+		</statBoost>
+		<statBoost name="canSabotage">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_DUSTWORM"/>
+		</statBoost>
+	</statBoosts>
+</mod-append:aug>
+
+<mod-append:aug name="AA_LAB_DUSTWORM_SILENCE">
+	<statBoosts>
+		<statBoost name="maxHealth">
+			<boostType>MULT</boostType>
+			<amount>1.12</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<priority>0</priority>
+			<whiteList load="LIST_CREW_DUSTWORM"/>
+		</statBoost>
+	</statBoosts>
+</mod-append:aug>
+
+</mod:findLike>
+
+<!-- /// CREW /// -->
+
+<crew>
+
+<!-- // DUSTWORMS // -->
+
+<race name="aa_dustworm">
+	<canFight>false</canFight>
+	<canSabotage>false</canSabotage>
+	<maxHealth>90</maxHealth>
+	<animBase>mantis</animBase>
+	<allDamageTakenMultiplier>3</allDamageTakenMultiplier>
+	<damageTakenMultiplier>0.333</damageTakenMultiplier>
+	<fireDamageMultiplier>0.333</fireDamageMultiplier>
+	<suffocationModifier>0.333</suffocationModifier>
+	<moveSpeedMultiplier>0.6</moveSpeedMultiplier>
+	<repairSpeedMultiplier>1.4</repairSpeedMultiplier>
+	<doorDamageMultiplier>3</doorDamageMultiplier>
+	<deathSounds>
+		<deathSound>femaleDeath1</deathSound>
+		<deathSound>femaleDeath2</deathSound>
+		<deathSound>femaleDeath3</deathSound>
+	</deathSounds>
+	<shootingSounds>
+		<shootingSound>particle_sidearm</shootingSound>
+	</shootingSounds>
+	<passiveStatBoosts>
+		<statBoost name="statBoost"> <!-- Recursive stat boost that makes enemy dustworms afraid of your crew. -->
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<statBoost name="trueHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>0</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<maxStacks>1</maxStacks>
+				<whiteList>
+					<aa_dustworm/>
+				</whiteList>
+				<dangerRating>2</dangerRating>
+			</statBoost>
+		</statBoost>
+	</passiveStatBoosts>
+	<powerEffect>
+		<cooldown>30</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<req type="enemy">
+			<enemyInRoom/>
+		</req>
+		<powerSounds>
+			<powerSound>itb_web</powerSound>
+		</powerSounds>
+		<buttonText>SILK</buttonText>
+		<tooltip>[DURATION: 10s]
+			Wrap enemies in the room with silk. Wrapped crew move 0.2x as fast and cannot sabotage.</tooltip>
+		<cooldownColor r="200" g="255" b="255"/>
+		<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+		<statBoosts>
+			<statBoost name="moveSpeedMultiplier">
+				<boostType>MULT</boostType>
+				<amount>0.2</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<affectsSelf>false</affectsSelf>
+				<priority>0</priority>
+				<duration>10</duration>
+				<boostAnim>status_wrap</boostAnim>
+			</statBoost>
+			<statBoost name="canSabotage">
+				<boostType>SET</boostType>
+				<value>FALSE</value>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>CURRENT_ENEMIES</crewTarget>
+				<affectsSelf>false</affectsSelf>
+				<priority>0</priority>
+				<duration>10</duration>
+			</statBoost>
+		</statBoosts>
+	</powerEffect>
+</race>
+
+<!-- // MISC. AND ENEMY-ONLY // -->
+
+<race name="aa_unique_william">
+	<essential>1</essential>
+	<punchTimer min="166" max="200"/>
+	<damageMultiplier>1.5</damageMultiplier>
+	<rangedDamageMultiplier>1</rangedDamageMultiplier>
+	<suffocationModifier>0.5</suffocationModifier>
+	<fireDamageMultiplier>2.0</fireDamageMultiplier>
+	<doorDamageMultiplier>2.0</doorDamageMultiplier>
+	<shootingSounds>
+		<shootingSound>detectiveShoot1</shootingSound>
+		<shootingSound>detectiveShoot2</shootingSound>
+		<shootingSound>detectiveShoot3</shootingSound>
+	</shootingSounds>
+	<deathSounds>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="7"/>
+		<engines req="7"/>
+		<shields req="27"/>
+		<weapons req="32"/>
+		<repair req="9"/>
+		<combat req="4"/>
+	</skills>
+	<passiveStatBoosts>  
+		<statBoost name="statBoost">
+			<statBoost name="canFight">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>CREW_TARGET</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>0</priority>
+				<whiteList>
+					<aa_unique_william/>
+				</whiteList>
+			</statBoost>
+			<shipTarget>CREW_TARGET</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<whiteList load="LIST_CREW_GHOST"/>
+		</statBoost>
+		<statBoost name="statBoost">
+			<statBoost name="silenced">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>CREW_TARGET</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>0</priority>
+				<whiteList>
+					<aa_unique_william/>
+				</whiteList>
+			</statBoost>
+			<shipTarget>CREW_TARGET</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<whiteList load="LIST_CREW_GHOST"/>
+		</statBoost>
+	</passiveStatBoosts>
+	<powerEffect>
+		<req type="enemy">
+			<enemyInRoom/>
+			<inCombat/>
+		</req>
+		<cooldown>15</cooldown>
+		<jumpCooldown>full</jumpCooldown>
+		<buttonText>SLAUGHTER</buttonText>
+		<tooltip>[COOLDOWN:15s  DURATION:7s]
+			Grants the following effects:
+			- 4.0x combat damage
+			- 0.5x movement speed
+			- Immune to mind control
+			- Adjacent doors are hacked</tooltip>
+		<cooldownColor r="112" g="75" b="149"/>
+		<animFrame>-1</animFrame>
+		<temporaryEffect>
+			<duration>7</duration>
+			<cooldownColor r="255" g="0" b="0"/>
+			<resistsMindControl>true</resistsMindControl>
+			<damageMultiplier>2.67</damageMultiplier>
+			<hackDoors>true</hackDoors>
+		</temporaryEffect>
+	</powerEffect>
+ </race>
+
+<race name="aa_red_guy">
+	<resistsMindControl>true</resistsMindControl>
+	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+	<stunMultiplier>0</stunMultiplier>
+	<damageTakenMultiplier>2</damageTakenMultiplier>
+	<fireDamageMultiplier>2</fireDamageMultiplier>
+	<suffocationMultiplier>2</suffocationMultiplier>
+	<repairSpeedMultiplier>2</repairSpeedMultiplier>
+	<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+	<doorDamageMultiplier>2</doorDamageMultiplier>
+	<noClone>true</noClone>
+	<deathSounds>
+		<deathSound>crystalDeath</deathSound>
+	</deathSounds>
+</race>
+
+<race name="aa_addict">
+	<resistsMindControl>true</resistsMindControl>
+	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+	<stunMultiplier>0</stunMultiplier>
+	<damageTakenMultiplier>2</damageTakenMultiplier>
+	<fireDamageMultiplier>2</fireDamageMultiplier>
+	<suffocationMultiplier>2</suffocationMultiplier>
+	<repairSpeedMultiplier>2</repairSpeedMultiplier>
+	<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+	<doorDamageMultiplier>2</doorDamageMultiplier>
+	<noClone>true</noClone>
+	<deathSounds>
+		<deathSound>crystalDeath</deathSound>
+	</deathSounds>
+</race>
+
+</crew>
+
+<!-- /// POWER SURGES /// -->
+
+<mod:findLike type="boss">
+
+<!-- // SALLY // -->
+
+<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_MIXED">
+	<weapon name="LASER_HEAVY_1" count="6"/>
+	<weapon name="SHOTGUN_1" count="16"/>
+</mod-append:surgeBarrage>
+
+<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_LASER">
+	<weapon name="LASER_HEAVY_1" count="12"/>
+</mod-append:surgeBarrage>
+
+<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_ENERGY">
+	<weapon name="ENERGY_1" count="8"/>
+</mod-append:surgeBarrage>
+
+<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_SYSTEM">
+	<weapon name="LASER_PARTICLE" count="30"/>
+</mod-append:surgeBarrage>
+
+<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_FOCUS">
+	<weapon name="FOCUS_1" count="8"/>
+</mod-append:surgeBarrage>
+
+<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_HAVOC">
+	<weapon name="ANCIENT_HAVOC" count="4"/>
+</mod-append:surgeBarrage>
+
+<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_RAINBOW">
+	<weapon name="ION_4" count="3"/>
+	<weapon name="ION_BIO" count="2"/>
+	<weapon name="ION_STUN_2" count="2"/>
+	<weapon name="ION_PIERCE_1" count="2"/>
+	<weapon name="ION_FIRE" count="2"/>
+	<weapon name="ENERGY_1" count="2"/>
+</mod-append:surgeBarrage>
+
+<mod-append:surgeDrones name="AA_SURGE_INTEGRAL_DRONE_ATTACK"> 
+	<drone name="COMBAT_1_LASER" count="3"/>
+	<drone name="COMBAT_1_BEAM" count="2"/>
+	<drone name="ASSAULT_PARTICLE" count="1"/>
+	<drone name="ASSAULT_PIERCE" count="1"/>
+	<drone name="HELLRAISER_HULL" count="2"/>
+	<drone name="FOCUS_1_AMP4" count="2"/>
+	<drone name="FLAK_1_AMP4" count="2"/>
+	<drone name="ENERGY_1_AMP3_ENEMY" count="2"/>
+</mod-append:surgeDrones>
+
+<mod-append:surgeDrones name="AA_SURGE_INTEGRAL_DRONE_STATUS"> 
+	<drone name="PEST_RAD_ENEMY" count="4"/>
+	<drone name="PEST_DEBUFF_ENEMY" count="4"/>
+	<drone name="HELLRAISER_FIRE" count="4"/>
+	<drone name="ION_1_AMP2_ENEMY" count="3"/>
+</mod-append:surgeDrones>
+
+</mod:findLike>
+
+</FTL>

@@ -1,0 +1,17 @@
+<FTL>
+
+<!-- /// WEAPONS /// -->
+
+<static_laser_fire volume="10">weapons/aether/aether_laser_static.ogg</static_laser_fire>
+<aether_impact_warp volume="10">weapons/aether/aether_impact_warp.ogg</aether_impact_warp>
+
+<hot_light volume="5">weapons/misc/hot_light.ogg</hot_light>
+<hot_heavy volume="5">weapons/misc/hot_heavy.ogg</hot_heavy>
+<hot_rail volume="10">weapons/misc/hot_rail.ogg</hot_rail>
+
+<!-- /// CREW /// -->
+
+<itb_web volume="4">crew/itb_web.ogg</itb_web>
+<particle_sidearm volume="2">crew/particle_sidearm.ogg</particle_sidearm>
+
+</FTL>

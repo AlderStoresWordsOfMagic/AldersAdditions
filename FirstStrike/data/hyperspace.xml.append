@@ -1,0 +1,135 @@
+<FTL>
+
+<!-- /// LOAD LUA SCRIPTS /// -->
+
+<mod:findLike type="scripts">
+    <mod-append:script>AAFS.lua</mod-append:script>
+</mod:findLike>
+
+<!-- /// CUSTOM STORES /// -->
+
+<store>
+    <customStore id="STORE_SYLVAN_DISRUPTORS">
+        <itemPurchaseLimit>2</itemPurchaseLimit>
+        <category type="WEAPONS">
+            <customTitle>DISRUPTORS</customTitle>
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_DISRUPTOR</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_DISRUPTOR</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_DISRUPTOR</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+        </category>
+        <category type="WEAPONS">
+            <customTitle>DISRUPTORS</customTitle>
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_DISRUPTOR</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item> 
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_DISRUPTOR_SPECIAL</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    			
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_DISRUPTOR_SPECIAL</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+        </category>
+    </customStore>
+    <customStore id="STORE_SYLVAN_PARTICLE">
+        <itemPurchaseLimit>2</itemPurchaseLimit>
+        <category type="WEAPONS">
+            <customTitle>PARTICLE WEAPONS</customTitle>
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_PARTICLE_OLD</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_PARTICLE_OLD</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_PARTICLE_OLD</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+        </category>
+        <category type="WEAPONS">
+            <customTitle>PARTICLE WEAPONS</customTitle>
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_PARTICLE_NEW</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item> 
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_PARTICLE_NEW</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    			
+            <item>
+                <blueprint>SHOP_ITEM_SYLVAN_PARTICLE_NEW</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+        </category>
+    </customStore>
+</store>
+
+<!-- /// SHIP ICONS /// -->
+
+<mod:findLike type="ships">
+
+<mod:findLike type="shipIcons">
+
+	<mod-append:shipIcon>
+		<name>aa_icon_particle_shield</name>
+		<tooltip>PARTICLE SHIELD:
+This enemy carries a weak energy shield that regenerates a set amount of time after being broken. Think carefully about the order of your attack volley to break through.</tooltip>
+	</mod-append:shipIcon>
+
+</mod:findLike>
+
+</mod:findLike>
+
+
+<!-- /// AUGMENTS /// -->
+
+<mod:findLike type="augments" limit="1">
+
+<mod-append:aug name="AA_PARTICLE_SHIELD">
+    <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
+    <superShield>
+        <add>1</add>
+        <color r="255" g="120" b="0" a="1"/>
+        <shieldImage>ship/enemy_shields_particle.png</shieldImage>
+    </superShield>
+    <icon>aa_icon_particle_shield</icon>
+</mod-append:aug>
+
+<mod-append:aug name="AA_PARTICLE_SHIELD_BOSS"> <!-- The Lua code requires separate augments for the boss box to render correctly. -->
+    <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
+    <superShield>
+        <add>1</add>
+        <color r="255" g="120" b="0" a="1"/>
+        <shieldImage>ship/enemy_shields_particle.png</shieldImage>
+    </superShield>
+    <icon>aa_icon_particle_shield</icon>
+</mod-append:aug>
+
+</mod:findLike>
+
+</FTL>

@@ -1,0 +1,53 @@
+<FTL>
+
+<!-- /// NEW NEMESIS EVENT /// -->
+
+<ship name="SHIP_NEMESIS_PARTICLE" auto_blueprint="AA_BEAM_MASTER_PARTICLE">
+    <destroyed load="DEFEAT_NEMESIS"/>
+    <deadCrew load="DEFEAT_NEMESIS"/>
+</ship>
+<event name="AA_NEMESIS_PARTICLE" unique="true">
+    <text>"Mwahahahahaaa! Command finally recognized that report I put in seven months ago, and gave me the latest and greatest tech, straight from the Universe 1 construction yards! Now, with my new arsenal of particle weaponry, no defensive system will stop me! En-guarde, beyatch!"</text>
+    <ship load="SHIP_NEMESIS_PARTICLE" hostile="true"/>
+    <choice hidden="true">
+        <text>Here we go again.</text>
+        <event load="COMBAT_CHECK"/>
+    </choice>
+</event>
+<mod:findName type="eventList" name="NEMESIS_ENCOUNTER_LIST_NORMAL">
+    <mod-append:event>AA_NEMESIS_PARTICLE</mod-append:event>
+</mod:findName>
+
+<!-- /// SYLVAN /// -->
+
+<!-- // OBSERVER COMPATIBILITY // -->
+
+<mod:findName type="event" name="SYLVAN_TRADES_CHOICE_4">
+    <mod-append:choice>
+        <text>Shop for disruptors.</text>
+        <event load="AA_SYLVAN_DISRUPTORS"/>
+    </mod-append:choice>
+    <mod-append:choice>
+        <text>Shop for particle weaponry.</text>
+        <event load="AA_SYLVAN_PARTICLE"/>
+    </mod-append:choice>
+</mod:findName>
+
+<!-- // NEW SYLVAN STORES // -->
+
+<mod:findName type="eventList" name="SYLVAN_TRADES">
+    <mod-append:name>AA_SYLVAN_DISRUPTORS</mod-append:name>
+    <mod-append:name>AA_SYLVAN_PARTICLE</mod-append:name>
+</mod:findName>
+
+<event name="AA_SYLVAN_DISRUPTORS">
+	<text>"Aaaaah. Ssstranger ssstranger, I have a feeling sssomething... strange... isss about to happen. The Zzzoltan ssseem to be ssstocking sssome weird new tech. Have a look at what I've found, ssstranger!"</text>
+	<store>STORE_SYLVAN_DISRUPTORS</store>
+</event>
+
+<event name="AA_SYLVAN_PARTICLE">
+	<text>"Aaaaah. Ssstranger ssstranger, any good merchant knowsss what'sss trending. Would you care for sssomething... orange? Fiery? Perhaps... anti-sssyssstem?"</text>
+	<store>STORE_SYLVAN_PARTICLE</store>
+</event>
+
+</FTL>

@@ -1,0 +1,2775 @@
+<FTL>
+
+<!-- /// MV OVERWRITES /// -->
+
+<!-- // WEAPONS // -->
+
+<mod:findName type="weaponBlueprint" name="MISSILES_FREE">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>missiles_recycle</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="TRC_MISSILES_INSTANT">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>pre_missiles</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN">
+	<mod:findLike type="explosion">
+		<mod:setValue>explosion_bio</mod:setValue>
+	</mod:findLike>
+	<mod:findLike type="weaponArt">
+		<mod:setValue>missiles_massive</mod:setValue>
+	</mod:findLike>
+	<mod-overwrite:launchSounds>
+		<sound>missile_giant</sound>
+	</mod-overwrite:launchSounds>
+	<mod-overwrite:hitShipSounds>
+		<sound>explosion_giant</sound>
+	</mod-overwrite:hitShipSounds>
+</mod:findName>
+
+<!-- /// WEAPONS /// -->
+
+<!-- // LASERS // -->
+
+<weaponBlueprint name="AA_LASER_PURGE">
+	<type>LASER</type>
+	<title>Scrambler Laser</title>
+	<short>Scrambler Laser</short>
+	<tip>tip_scrambler</tip>
+	<desc>A specialized Laser that deals no direct damage. Instead, it induces flaws into the DNA of crew, greatly reducing their ability to heal wounds.</desc>
+	<tooltip>Scrambler Laser; 10 second cooldown, makes crew unable to heal quickly.</tooltip>
+	<damage>0</damage>
+	<sp>1</sp>
+	<statBoosts>
+		<statBoost name="healSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.25</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+			<boostAnim>status_purge</boostAnim>
+		</statBoost>
+		<statBoost name="noClone">
+			<boostType>SET</boostType>
+			<value>TRUE</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<shots>1</shots>
+	<cooldown>7</cooldown>
+	<power>1</power>
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_purge_projectile</image>
+	<launchSounds>
+		<sound>purge</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_purge</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LASER_PARTICLE_PIERCE">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<flavorType>Particle Accelerator</flavorType>
+	<title>Particle Phaser</title>
+	<short>Phase Part</short>
+	<tip>tip_particle_laser</tip>
+	<desc>This particle weapon sacrifices efficiency and the ability to start fires in exchange for completely side-stepping the nemesis of all particle weaponry.</desc>
+	<tooltip>Part Accelerator; 1 system damage, 3 shots. 16 second cooldown. No fire chance.</tooltip>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<sp>10</sp>
+	<radius>42</radius>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<cooldown>16</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>2</bp>
+	<spin>0</spin>
+	<projectiles>
+		<projectile count="3" fake="false">laser_particle_pierce_projectile</projectile>
+	</projectiles>
+	<rarity>5</rarity>
+	<launchSounds>
+		<sound>laser_particle</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_particle_pierce</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LASER_PARTICLE_MINI">
+	<type>BURST</type>
+	<title>Miniaturized Particle Accelerator</title>
+	<drone_targetable>0</drone_targetable>
+	<short>Part Mini</short>
+	<tip>tip_particle_laser</tip>
+	<desc>A small, fast firing particle accelerator weapon. It is rendered useless by shields but can output lots of system damage when left unchecked.</desc>
+	<tooltip>Particle accelerator, 1 system damage per shot.</tooltip>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<radius>25</radius>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>2</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>4</cooldown>
+	<power>1</power>
+	<cost>30</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<spin>0</spin>
+	<projectiles>
+		<projectile count="1" fake="false">laser_particle</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>laser_particle</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>mini_particle</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LASER_SMASH">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<flavorType>Shield Smasher</flavorType>
+	<title>Shield Smasher MK I</title>
+	<short>Smash I</short>
+	<tip>tip_smash</tip>
+	<desc>This accelerator-like weapon is specifically designed to create and fire bolts that can overload shield generators.</desc>
+	<tooltip>P.</tooltip>
+	<damage>0</damage>
+	<radius>32</radius>
+	<shots>1</shots>
+	<accuracyMod>30</accuracyMod>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>12</cooldown>
+	<power>1</power>
+	<cost>60</cost>
+	<bp>2</bp>
+	<spin>0</spin>
+	<projectiles>
+		<projectile count="1" fake="false">laser_smash_projectile</projectile>
+	</projectiles>
+	<rarity>4</rarity>
+	<launchSounds>
+		<sound>smash</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_smash</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LASER_SMASH_2">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<flavorType>Shield Smasher</flavorType>
+	<title>Shield Smasher MK II</title>
+	<short>Smash II</short>
+	<tip>tip_smash</tip>
+	<desc>A heavy, powerful anti-shield weapon with lower accuracy than its predecessor, but a much higher shot count.</desc>
+	<tooltip>Proton Accelerator; 1 crew damage, 5 shots, pops shields. 15 second cooldown. High breach chance.</tooltip>
+	<damage>0</damage>
+	<radius>38</radius>
+	<shots>1</shots>
+	<accuracyMod>30</accuracyMod>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>4</breachChance>
+	<cooldown>15</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<spin>0</spin>
+	<projectiles>
+		<projectile count="3" fake="false">laser_smash_projectile</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smash</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_smash_2</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LASER_REPAIR">
+	<type>LASER</type>
+	<tip>tip_laser</tip>
+	<title>Pro-Hull Laser</title>
+	<short>Pro-Hull Laser</short>
+	<desc>A rare and bizarre weapon, similar to the ubiquitous Heavy Laser, that repairs the target's hull instead of damaging it. It also inflicts minor system and crew damage.</desc>
+	<tooltip>Fires 1 shot, repairs 3 damage.</tooltip>
+	<damage>-2</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<shots>1</shots>
+	<cooldown>13</cooldown>
+	<power>2</power>
+	<cost>90</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<image>laser_prohull_projectile</image>
+	<explosion>explosion_big1_heal</explosion>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>healBomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_prohull</weaponArt> 
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LASER_CHARGEGUN_DAMAGE"> 
+	<type>LASER</type>
+	<title>Cumulative Laser</title>
+	<short>Cum. Laser</short>
+	<tip>tip_accumulator</tip>
+	<desc>An unusual model of Laser that, when left to charge, can increase the damage of its shots to an incredible degree.</desc>
+	<tooltip>Fires a single shot that deals 1 damage. Damage increases the more it charges.</tooltip>
+	<damage>1</damage>
+	<shots>2</shots>
+	<cooldown>5</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<image>laser_frost</image>
+	<chargeLevels>3</chargeLevels>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_charge_damage</weaponArt> 
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LASER_PARTICLE_CHARGEGUN_DAMAGE"> 
+	<type>LASER</type>
+	<title>Cumulative Particle Accelerator</title>
+	<short>Cum. Particle</short>
+	<tip>tip_accumulator</tip>
+	<desc>Instead of firing a multitude of streamlied bolts, this Particle Accelerator charges a single bolt of varying strength.</desc>
+	<tooltip>Fires a single shot that deals 1 system damage. Damage increases the more it charges.</tooltip>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<shots>1</shots>
+	<cooldown>4</cooldown>
+	<power>2</power>
+	<cost>90</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<fireChance>3</fireChance>
+	<image>laser_particle</image>
+	<chargeLevels>3</chargeLevels>
+	<launchSounds>
+		<sound>laser_particle</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_particle_charge_damage</weaponArt> 
+	<iconImage>laser_chain</iconImage>
+</weaponBlueprint>
+
+<!-- // MISSILES // -->
+
+<weaponBlueprint name="AA_MISSILES_ION">
+	<type>MISSILES</type>
+	<tip>tip_missiles_heavy</tip>
+	<title>'Athena' Electrified Missiles</title>
+	<short>'Athena'</short>
+	<desc>The same technology behind ion weapons has been applied to this ballistic launcher, and the natural shield-piercing properties of missile technology cause its projectiles to behave like those of a phaser.</desc>
+	<tooltip>Fires 1 missile; does 2 damage; pierces all shields.</tooltip>
+	<damage>2</damage>
+	<ion>2</ion>
+	<accuracyMod>10</accuracyMod>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>5</stunChance>
+	<cooldown>22</cooldown>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>6</bp>
+	<rarity>5</rarity>
+	<image>missile_ion</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_ion</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_MISSILES_ION_ENEMY">
+	<type>MISSILES</type>
+	<tip>tip_missiles_heavy</tip>
+	<title>'Athena' Electrified Missiles [E]</title>
+	<short>'Athena' [E]</short>
+	<desc>The same technology behind ion weapons has been applied to this ballistic launcher, and the natural shield-piercing properties of missile technology cause its projectiles to behave like those of a phaser.
+
+This enemy-only version lacks the innate +10% accuracy bonus of missile weapons. It was never supposed to fall into your hands.</desc>
+	<tooltip>Fires 1 missile; does 2 damage; pierces all shields.</tooltip>
+	<damage>2</damage>
+	<ion>2</ion>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>5</stunChance>
+	<cooldown>22</cooldown>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>missile_ion</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_ion</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_MISSILES_SMASH">
+	<type>MISSILES</type>
+	<tip>tip_smash</tip>
+	<title>Smashing Missiles</title>
+	<short>Smash M.</short>
+	<desc>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.</desc>
+	<tooltip>Proton missiles.</tooltip>
+	<damage>0</damage>
+	<accuracyMod>30</accuracyMod>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>10</sp>
+	<cooldown>20</cooldown>
+	<power>3</power>
+	<cost>110</cost>
+	<bp>6</bp>
+	<rarity>5</rarity>
+	<image>missile_smash</image>
+	<explosion>explosion_smash</explosion>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smash_bomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_smash</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_MISSILES_SMASH_ENEMY">
+	<type>MISSILES</type>
+	<tip>tip_smash</tip>
+	<title>Smashing Missiles [E]</title>
+	<short>Smash M. [E]</short>
+	<desc>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.
+
+This enemy-only version lacks the innate +10% accuracy bonus of missile weapons. It was never supposed to fall into your hands.
+	</desc>
+	<tooltip>Proton missiles.</tooltip>
+	<damage>0</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>10</sp>
+	<cooldown>20</cooldown>
+	<power>3</power>
+	<cost>110</cost>
+	<bp>6</bp>
+	<rarity>5</rarity>
+	<image>missile_smash</image>
+	<explosion>explosion_smash</explosion>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smash_bomb</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_smash</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<!-- // IONS // -->
+
+<weaponBlueprint name="AA_ION_RAINBOW">
+	<type>BURST</type>
+	<flavorType>Random Weapon</flavorType>
+	<drone_targetable>0</drone_targetable>
+	<title>Prismatic Ion Barrage</title>
+	<short>Prism Ion</short>
+	<tip>tip_ion_rainbow</tip>
+	<desc>A team of specialists designed this weapon to capture every kind of ion blaster in a single frame. Though the project was a partial success, there is no way to control which kind of blast gets fired.</desc>
+	<tooltip>Every Ion you could want, packed into a singular, cozy chassis.</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<cooldown>6</cooldown>
+	<power>2</power>
+	<cost>110</cost>
+	<bp>10</bp>
+	<speed>20</speed>
+	<rarity>5</rarity>
+	<projectiles>
+		<projectile count="1" fake="false" blueprint="AA_LIST_WEAPON_RAINBOW_ION_BLASTS">ion_rainbow_projectile</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_rainbow</weaponArt> 
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_ION_RAINBOW_NORMAL">
+	<type>LASER</type>
+	<title>Multi-type Ion Barrage (Normal)</title>
+	<short>Rainbow Ion</short>
+	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<ion>2</ion>
+	<speed>40</speed>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<cooldown>1</cooldown>
+	<rarity>0</rarity>
+	<image>ion_2_shot</image>
+	<weaponArt>ion_5</weaponArt>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+</weaponBlueprint>
+<weaponBlueprint name="AA_ION_RAINBOW_STUN">
+	<type>LASER</type>
+	<title>Multi-type Ion Barrage (Stun)</title>
+	<short>Rainbow Ion</short>
+	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<stunChance>10</stunChance>
+	<cooldown>1</cooldown>
+	<rarity>0</rarity>
+	<image>ion_stun_shot</image>
+	<weaponArt>ion_stun_heavy</weaponArt>
+	<explosion>explosion_stun_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+</weaponBlueprint>
+<weaponBlueprint name="AA_ION_RAINBOW_BIO">
+	<type>LASER</type>
+	<title>Multi-type Ion Barrage (Radiation)</title>
+	<short>Rainbow Ion</short>
+	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<persDamage>1</persDamage>
+	<ion>1</ion>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<speed>40</speed>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<breachChance>3</breachChance>
+	<cooldown>1</cooldown>
+	<rarity>0</rarity>
+	<image>ion_bio</image>
+	<explosion>explosion_small_ion_bio</explosion>
+	<weaponArt>ion_bio</weaponArt>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+</weaponBlueprint>
+<weaponBlueprint name="AA_ION_RAINBOW_FIRE">
+	<type>LASER</type>
+	<title>Multi-type Ion Barrage (Fire)</title>
+	<short>Rainbow Ion</short>
+	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>10</fireChance>
+	<stunChance>1</stunChance>
+	<cooldown>1</cooldown>
+	<rarity>0</rarity>
+	<image>ion_fire</image>
+	<weaponArt>ion_fire</weaponArt>
+	<explosion>explosion_small_ion_fire</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+</weaponBlueprint>
+<weaponBlueprint name="AA_ION_RAINBOW_BREACH">
+	<type>LASER</type>
+	<title>Multi-type Ion Barrage (Breach)</title>
+	<short>Rainbow Ion</short>
+	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<breachChance>10</breachChance>
+	<cooldown>1</cooldown>
+	<rarity>0</rarity>
+	<image>ion_phase</image>
+	<weaponArt>ion_breach</weaponArt>
+	<explosion>explosion_small_phase</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+</weaponBlueprint>
+<weaponBlueprint name="AA_ION_RAINBOW_PHASE">
+	<type>LASER</type>
+	<title>Multi-type Ion Barrage (Phasing)</title>
+	<short>Rainbow Ion</short>
+	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<cooldown>1</cooldown>
+	<rarity>0</rarity>
+	<image>ion_phase</image>
+	<weaponArt>ion_phase_2</weaponArt>
+	<explosion>explosion_small_phase</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+</weaponBlueprint>
+<weaponBlueprint name="AA_ION_RAINBOW_ENERGY">
+	<type>LASER</type>
+	<title>Multi-type Ion Barrage (Energy)</title>
+	<short>Rainbow Ion</short>
+	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>3</fireChance>
+	<cooldown>1</cooldown>
+	<rarity>0</rarity>
+	<image>energy_shot2</image>
+	<weaponArt>energy_3</weaponArt>
+	<explosion>explosion_energy</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_ION_CHARGEGUN_DAMAGE"> 
+	<type>LASER</type>
+	<title>Cumulative Ion</title>
+	<short>Cum. Ion</short>
+	<tip>tip_accumulator</tip>
+	<desc>This Ion weapon has the ability to vary the strength of its blast, matching both the lightest and heaviest of its class.</desc>
+	<tooltip>Fires one ion blast that deals 1 damage. Damage increases the more it charges.</tooltip>
+	<ion>1</ion>
+	<shots>1</shots>
+	<cooldown>5</cooldown>
+	<power>2</power>
+	<speed>30</speed>
+	<cost>80</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<image>ion_2_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<chargeLevels>3</chargeLevels>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_charge_damage</weaponArt> 
+	<iconImage>ion_chain</iconImage>
+</weaponBlueprint>
+
+<!-- // ENERGY // -->
+
+<weaponBlueprint name="AA_ENERGY_RAD">
+	<type>LASER</type>
+	<flavorType>Concentrated Energy Blast</flavorType>
+	<tip>tip_energy</tip>
+	<title>Gamma Energy</title>
+	<short>Gamma Energy</short>
+	<locked>1</locked>
+	<desc>Energy weapons can disable systems and cause hull damage. This weapon is tuned specifically to irradiate and kill crew.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage and 1 hull damage. Can hit and disable shields as well as systems.</tooltip>
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<persDamage>2</persDamage>
+	<ion>1</ion>
+	<speed>40</speed>
+	<shots>2</shots>
+	<sp>0</sp>
+	<breachChance>2</breachChance>
+	<cooldown>14</cooldown>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>3</bp>
+	<rarity>4</rarity>
+	<image>energy_rad_projectile</image>
+	<explosion>explosion_small_ion_bio</explosion>
+	<launchSounds>
+		<sound>energy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>energy_rad</weaponArt> 
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_ENERGY_CHARGEGUN_DAMAGE"> 
+	<type>LASER</type>
+	<title>Cumulative Energy</title>
+	<short>Cum. Energy</short>
+	<tip>tip_accumulator</tip>
+	<desc>A multitude of internal capacitors allows this Energy Cannon to hold in a blast, concentrating its hull-cracking power.</desc>
+	<tooltip>Fires one energy blast that deals 1 damage and 1 ion damage. Damage increases the more it charges.</tooltip>
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<ion>1</ion>
+	<shots>1</shots>
+	<fireChance>3</fireChance>
+	<cooldown>6</cooldown>
+	<power>2</power>
+	<speed>30</speed>
+	<cost>90</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<image>energy_shot</image>
+	<explosion>explosion_energy</explosion>
+	<chargeLevels>3</chargeLevels>
+	<launchSounds>
+		<sound>energy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>energy_charge_damage</weaponArt> 
+	<iconImage>energy</iconImage>
+</weaponBlueprint>
+
+<!-- // BEAMS // -->
+
+<weaponBlueprint name="AA_BEAM_SUSTAIN">
+	<type>BEAM</type>
+	<tip>tip_beam_sustain</tip>
+	<title>'Sovnya' Sustaining Beam</title>
+	<short>'Sovnya'</short>
+	<desc>Overriden.</desc>
+	<tooltip>Beam weapon, drills into a single room.</tooltip>
+	<descriptionOverride>This Beam weapon's advanced cooling allows it to behave differently from other Beams. It focuses on a single point and periodically inflicts damage as a Beam for as long as it is powered and locked on.
+	
+Stats:
+Required Power: 3
+Charge Time: 10 seconds
+
+Base Hull Damage: 1
+Base System Damage: 1
+
+Buy/Sell Price: 95~/47~
+	</descriptionOverride>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<cost>95</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<length>1</length>
+	<speed>1</speed>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam_sustain</sound>
+	</launchSounds>
+	<weaponArt>beam_sustain</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_SMASH">
+	<type>BEAM</type>
+	<tip>tip_smash</tip>
+	<title>Smashing Beam</title>
+	<short>Smash Beam</short>
+	<desc>This Beam is capable of hitting shields instead of simply passing through them, with the additional potential to shield-crush. Also creates breaches.</desc>
+	<tooltip>Beam weapon with extended line. 1 damage per room.</tooltip>
+	<damage>0</damage>
+	<fireChance>0</fireChance>
+	<breachChance>10</breachChance>
+	<speed>13</speed>
+	<cooldown>14</cooldown>
+	<color>
+		<r>21</r>
+		<g>19</g>
+		<b>239</b>
+	</color>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>5</bp>
+	<rarity>4</rarity>
+	<image>beam_contact</image>
+	<length>40</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_smash</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_PURGE">
+	<type>BEAM</type>
+	<tip>tip_scrambler</tip>
+	<title>'Knout' Scrambler Beam</title>
+	<short>'Knout'</short>
+	<desc>This beam is incredibly powerful when paired with a source of damage, as it can lock crew out of healing their wounds.</desc>
+	<tooltip>2 power beam weapon that "purges" enemy crew.</tooltip>
+	<damage>0</damage>
+	<cooldown>15</cooldown>
+	<color>
+		<r>130</r>
+		<g>138</g>
+		<b>255</b>
+	</color>
+	<statBoosts>
+		<statBoost name="healSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.25</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+			<boostAnim>status_purge</boostAnim>
+		</statBoost>
+		<statBoost name="noClone">
+			<boostType>SET</boostType>
+			<value>TRUE</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<speed>35</speed>
+	<power>1</power>
+	<cost>80</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<length>120</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_purge</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ION_1">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>'Hanbo' Disruptor</title>
+	<short>'Hanbo'</short>
+	<desc>This curious beam-like weapon ionizes systems and shields in much the same manner as true ion weapons.</desc>
+	<tooltip>Deals 1 ion damage per system it hits.</tooltip>
+	<ion>1</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>3</stunChance>
+	<cooldown>9</cooldown>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<speed>3</speed>
+	<power>1</power>
+	<cost>70</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>impact_disruptor</image>
+	<length>60</length>
+	<launchSounds>
+		<sound>disruptor_light</sound>
+	</launchSounds>
+	<weaponArt>disruptor_1</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ION_2">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>'Jo' Disruptor</title>
+	<short>'Jo'</short>
+	<desc>A potent weapon that can paralyze large sections of a ship, creating chaos aboard.</desc>
+	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
+	<ion>2</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>4</stunChance>
+	<cooldown>21</cooldown>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<power>2</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>130</length>
+	<image>impact_disruptor</image>
+	<launchSounds>
+		<sound>disruptor_light</sound>
+	</launchSounds>
+	<weaponArt>disruptor_2</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ION_3">
+	<type>BEAM</type>
+	<title>'Bo' Disruptor</title>
+	<short>'Bo'</short>
+	<tip>tip_disruptor</tip>
+	<desc>A devastating Disruptor variant known to shut down entire ships with a single sweep.</desc>
+	<tooltip>Deals 3 ion damage per system it hits.</tooltip>
+	<ion>3</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>6</stunChance>
+	<cooldown>30</cooldown>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<power>4</power>
+	<cost>110</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<length>170</length>
+	<image>impact_disruptor</image>
+	<launchSounds>
+		<sound>disruptor_heavy</sound>
+	</launchSounds>
+	<weaponArt>disruptor_3</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ION_RAD">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>'Kusarigama' Rad-Disruptor</title>
+	<short>'Kusarigama'</short>
+	<desc>Though illegal in the territory from whence Disruptors came, this model's anti-personnel tuning makes it a favorite of pirates and other less savory actors.</desc>
+	<tooltip>Deals 2 ion damage per system it hits, and 60 damage to all crew it hits.</tooltip>
+	<persDamage>4</persDamage>
+	<ion>2</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<breachChance>3</breachChance>
+	<cooldown>21</cooldown>
+	<color>
+		<r>255</r>
+		<g>0</g>
+		<b>146</b>
+	</color>
+	<power>3</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>130</length>
+	<image>impact_disruptor</image>
+	<launchSounds>
+		<sound>disruptor_heavy</sound>
+	</launchSounds>
+	<weaponArt>disruptor_rad</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ION_STUN">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>'Kanemuchi' Neural Disruptor</title>
+	<short>'Kanemuchi'</short>
+	<desc>This Disruptor is charged with stun energy, serving a similar purpose to the Partisan.</desc>
+	<tooltip>Deals 2 ion damage per system it hits, alongside stunning crew.</tooltip>
+	<ion>2</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>10</stunChance>
+	<cooldown>23</cooldown>
+	<color>
+		<r>230</r>
+		<g>237</g>
+		<b>133</b>
+	</color>
+	<power>2</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>130</length>
+	<image>impact_disruptor</image>
+	<launchSounds>
+		<sound>disruptor_light</sound>
+	</launchSounds>
+	<weaponArt>disruptor_stun</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ION_PHASE">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>'Tonfa' Phasing Disruptor</title>
+	<short>'Tonfa'</short>
+	<desc>This powerful ion beam can ionize large swaths of a ship even through shields. However, it sweeps very slowly.</desc>
+	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
+	<ion>2</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>4</stunChance>
+	<cooldown>24</cooldown>
+	<speed>1</speed>
+	<color>
+		<r>229</r>
+		<g>253</g>
+		<b>255</b>
+	</color>
+	<power>2</power>
+	<cost>110</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>130</length>
+	<image>impact_disruptor</image>
+	<launchSounds>
+		<sound>disruptor_light</sound>
+	</launchSounds>
+	<weaponArt>disruptor_phase</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ENERGY">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>'Tetsubo' Energized Disruptor</title>
+	<short>'Tetsubo'</short>
+	<desc>Tuned to damage hull alongside the usual effect, this Disruptor serves double-duty.</desc>
+	<tooltip>Deals 2 ion damage per system it hits, and 1 hull damage per room.</tooltip>
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<ion>2</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>4</stunChance>
+	<cooldown>23</cooldown>
+	<color>
+		<r>53</r>
+		<g>255</g>
+		<b>0</b>
+	</color>
+	<power>2</power>
+	<cost>100</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>85</length>
+	<image>impact_disruptor</image>
+	<launchSounds>
+		<sound>disruptor_heavy</sound>
+	</launchSounds>
+	<weaponArt>disruptor_energy</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ION_ADAPT">
+    <type>BEAM</type>
+    <tip>tip_adapter</tip>
+    <title>'Bokken' Adaptive Disruptor</title>
+    <short>'Bokken'</short>
+    <desc>A potentially incredibly powerful Disruptor, adapting to its environment. Damage increases by 1 every time you fire, with a very high limit on the amount of increased damage.</desc>
+    <tooltip>Deals 1 ion damage per system it hits, plus 1 for every time it has fired.</tooltip>
+    <ion>1</ion>
+	<ionBeamFix>true</ionBeamFix>
+    <sp>0</sp>
+    <cooldown>16</cooldown>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+    <power>4</power>
+    <cost>90</cost>
+    <bp>7</bp>
+    <rarity>0</rarity>
+    <length>60</length>
+    <image>impact_disruptor</image>
+    <boost>
+        <type>damage</type>
+        <amount>1</amount>
+        <count>9</count>
+    </boost>
+    <launchSounds>
+        <sound>disruptor_light</sound>
+    </launchSounds>
+    <weaponArt>disruptor_longbow</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_ION_CONSERVATIVE">
+	<type>BEAM</type>
+	<tip>tip_conservative</tip>
+	<title>'Tanbo' Conservative Disruptor</title>
+	<short>'Tanbo'</short>
+	<desc>A potent weapon that can paralyze large sections of a ship, creating chaos aboard. This particular model is very slow, but consumes no power to run.</desc>
+	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
+	<ion>1</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>17</cooldown>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<power>0</power>
+	<cost>85</cost>
+	<bp>7</bp>
+	<rarity>0</rarity>
+	<length>65</length>
+	<image>impact_disruptor</image>
+	<launchSounds>
+		<sound>disruptor_light</sound>
+	</launchSounds>
+	<weaponArt>disruptor_conservative</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<!-- // BOMBS // -->
+
+<weaponBlueprint name="AA_BOMB_SMASH">
+	<type>BOMB</type>
+	<tip>tip_smash</tip>
+	<title>Smashing Bomb</title>
+	<short>Smash Bomb</short>
+	<locked>1</locked>
+	<desc>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.</desc>
+	<tooltip>Bomb weapon; requires a missile; does 1 damage to target system. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<accuracyMod>30</accuracyMod>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<cooldown>20</cooldown>
+	<power>2</power>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<image>bomb_smash</image>
+	<explosion>explosion_smash</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smash_bomb</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_smash</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BOMB_SMASH_ENEMY">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+	<title>Smashing Bomb [E]</title>
+	<short>Smash Bomb [E]</short>
+	<locked>1</locked>
+	<desc>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.
+
+This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It was never supposed to fall into your hands.</desc>
+	<tooltip>Bomb weapon; requires a missile; does 1 damage to target system. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<cooldown>20</cooldown>
+	<power>2</power>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_smash</image>
+	<explosion>explosion_smash</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smash_bomb</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_smash</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BOMB_PURGE">
+	<type>BOMB</type>
+	<tip>tip_scrambler</tip>
+	<title>Scrambler Bomb</title>
+	<short>Scrambler B.</short>
+	<locked>1</locked>
+	<desc>A self-teleporting explosive that violently upsets the body, crippling attempts to heal wounds.</desc>
+	<tooltip>No hull or system damage, but deals incredible crew damage.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>1</persDamage>
+	<accuracyMod>30</accuracyMod>
+	<missiles>1</missiles>
+	<statBoosts>
+		<statBoost name="healSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.25</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+			<boostAnim>status_purge</boostAnim>
+		</statBoost>
+		<statBoost name="noClone">
+			<boostType>SET</boostType>
+			<value>TRUE</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<shots>1</shots>
+	<cooldown>13</cooldown>
+	<power>1</power>
+	<cost>80</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_purge</image>
+	<explosion>explosion_purge</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_purge</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_ELECTRON_1">
+	<type>BOMB</type>
+	<tip>tip_electron</tip>
+	<title>Electronic Inducer</title>
+	<short>Electron</short>
+	<locked>1</locked>
+	<desc>This weapon creates an electric charge in a room of your choice, inflicting a small amount of ion damage. Unlike many other weapons, the Electron Inducer cannot be defended against via conventional means.</desc>
+	<tooltip>Creates an electric pulse anywhere, dealing 1 ion damage.</tooltip>
+	<damage>0</damage>
+	<ion>2</ion>
+	<accuracyMod>100</accuracyMod>
+	<shots>1</shots>
+	<fireTime>0.05</fireTime>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>3</stunChance>
+	<cooldown>14</cooldown>
+	<power>1</power>
+	<cost>65</cost>
+	<bp>4</bp>
+	<rarity>4</rarity>
+	<image>electron_projectile</image>
+	<explosion>explosion_electron</explosion>
+	<launchSounds>
+		<sound>electron</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>electron_1</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_ELECTRON_2">
+	<type>BOMB</type>
+	<tip>tip_electron</tip>
+	<title>Heavy Electronic Inducer</title>
+	<short>Hv. Electron</short>
+	<locked>1</locked>
+	<desc>A stronger variant of the Electronic Inducer, inflicting twice the damage for twice the power.</desc>
+	<tooltip>Creates an electric pulse anywhere, dealing 2 ion damage.</tooltip>
+	<damage>0</damage>
+	<ion>4</ion>
+	<accuracyMod>100</accuracyMod>
+	<shots>1</shots>
+	<fireTime>0.05</fireTime>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>5</stunChance>
+	<cooldown>24</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>4</bp>
+	<rarity>5</rarity>
+	<image>electron_projectile</image>
+	<explosion>explosion_electron</explosion>
+	<launchSounds>
+		<sound>electron</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>electron_2</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<!-- // FLAK // -->
+
+<weaponBlueprint name="AA_SHOTGUN_PARTICLE">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Accelerated Flak Gun</title>
+	<short>Part Flak</short>
+	<tip>tip_particle_flak</tip>
+	<desc>This Flak cannon fires a blast of 4 projectiles charged with exotic particles that shred systems alongside normal hull damage.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 4 damage and 8 system damage.</tooltip>
+	<radius>55</radius>
+	<damage>1</damage>
+	<sysDamage>2</sysDamage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>4</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>18</cooldown>
+	<power>3</power>
+	<cost>90</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>5</rarity>
+	<projectiles>
+		<projectile count="4" fake="false">debris_large_system</projectile>
+		<projectile count="6" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>shotgun_system</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_SHOTGUN_CONSERVATIVE">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Conservative Flak Gun</title>
+	<short>Conserv. F.</short>
+	<tip>tip_conservative</tip>
+	<desc>Slow-charging, 3-shot flak cannon. Deals good damage for no power, but it is hard to aim.</desc>
+	<tooltip>Conservative weapons feed off of power leaks in a system, so they don't need to use any power themselves. As consequence, they take longer to charge and require another weapon to be powered.</tooltip>
+	<radius>55</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spin>720</spin>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>18</cooldown>
+	<power>0</power>
+	<cost>70</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>4</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="3" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>shotgun_conservative</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE">
+	<type>BURST</type>
+	<drone_targetable>1</drone_targetable> 
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Cumulative Flak</title>
+	<tip>tip_accumulator</tip>
+	<short>Cum. Flak</short>
+	<desc>This versatile Flak Cannon has the ability to refine the garbage it fires, increasing the damage its shots deal as it waits.</desc>
+	<tooltip>Fires a blast of debris across a random area doing up to 3 damage. The damage of each shot increases by 1 per charge.</tooltip>
+	<radius>45</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>2</breachChance>
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<chargeLevels>3</chargeLevels>
+	<cost>85</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>5</rarity>
+	<spin>720</spin>
+	<projectiles>
+		<projectile count="1" fake="false">debris_large</projectile>
+		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="3" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>shotgun_charge_damage</weaponArt>  
+	<iconImage>missile_charge</iconImage>
+</weaponBlueprint>
+
+<!-- // MINELAUNCHERS // -->
+
+<weaponBlueprint name="AA_MINELAUNCHER_CLOAK">
+	<type>BURST</type>
+	<tip>tip_mine</tip>
+	<title>'Set' Mine Launcher</title>
+	<short>'Set'</short>
+	<desc>A black sheep even among Mine Launchers, this vile weapon fires cloaked, tracking mines that cannot be stopped by anything short of the most aggressive defense drones.
+	
+	At empty beacons provides 3 fleet delay for 7 missiles; always impacts notoriety.</desc>
+	<tooltip>Fires 1 missile; does 1 damage per shot; pierces all shields.</tooltip>
+	<drone_targetable>0</drone_targetable>
+	<radius>45</radius>
+	<damage>1</damage>
+	<sysDamage>-1</sysDamage>
+	<missiles>1</missiles>
+	<accuracyMod>100</accuracyMod>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>3</power>
+	<speed>15</speed>
+	<cost>50</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="3" fake="false">mine_cloak</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>minelauncher_cloak</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<!-- // PINPOINTS // -->
+
+<weaponBlueprint name="AA_FOCUS_PARTICLE">
+	<type>BEAM</type>
+	<flavorType>Pinpoint</flavorType>
+	<tip>tip_particle_beam</tip>
+	<title>Particle Pinpoint</title>
+	<short>Part P.</short>
+	<desc>This Pinpoint is powered by a particle accelerator, allowing it to annihilate systems with a single shot.</desc>
+	<tooltip>Anti-system pinpoint, dealing 4 system damage.</tooltip>
+	<damage>0</damage>
+	<sysDamage>4</sysDamage>
+	<fireChance>10</fireChance>
+	<cooldown>12</cooldown>
+	<color>
+		<r>255</r>
+		<g>120</g>
+		<b>0</b>
+	</color>
+	<speed>1</speed>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>3</rarity>
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>focus_weak</sound>
+	</launchSounds>
+	<weaponArt>focus_particle</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_FOCUS_ION_1">
+	<type>BEAM</type>
+	<flavorType>Pinpoint</flavorType>
+	<tip>tip_capacitor</tip>
+	<title>'Mallet' Capacitor</title>
+	<short>'Mallet'</short>
+	<desc>This weapon uses technology similar to Disruptors, blasting single rooms with a whiff of ionizing energy that travels instantly.</desc>
+	<tooltip>One damage per room beam weapon</tooltip>
+	<ion>2</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<stunChance>5</stunChance>
+	<cooldown>13</cooldown>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<speed>1</speed>
+	<power>1</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>capacitor_light</sound>
+	</launchSounds>
+	<weaponArt>focus_ion_1</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_FOCUS_ION_2">
+	<type>BEAM</type>
+	<flavorType>Pinpoint</flavorType>
+	<tip>tip_capacitor</tip>
+	<title>'Sledge' Capacitor</title>
+	<short>'Sledge'</short>
+	<desc>This powerful Pinpoint-like weapon zaps single rooms with a hefty dose of electricity.</desc>
+	<tooltip>One damage per room beam weapon</tooltip>
+	<ion>3</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<stunChance>5</stunChance>
+	<cooldown>16</cooldown>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<speed>1</speed>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>capacitor_heavy</sound>
+	</launchSounds>
+	<weaponArt>focus_ion_2</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_FOCUS_ION_PHASE">
+	<type>BEAM</type>
+	<flavorType>Pinpoint</flavorType>
+	<tip>tip_capacitor</tip>
+	<title>'Gavel' Phasing Capacitor</title>
+	<short>'Gavel'</short>
+	<desc>Energy beams tuned to the same frequency as standard shields allow this Capacitor to pierce right through them.</desc>
+	<tooltip>One damage per room beam weapon</tooltip>
+	<ion>2</ion>
+	<sp>10</sp>
+	<ionBeamFix>true</ionBeamFix>
+	<stunChance>2</stunChance>
+	<cooldown>18</cooldown>
+	<color>
+		<r>229</r>
+		<g>253</g>
+		<b>255</b>
+	</color>
+	<speed>1</speed>
+	<power>2</power>
+	<cost>45</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>capacitor_light</sound>
+	</launchSounds>
+	<weaponArt>focus_phase</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<!-- // DRIVERS // -->
+
+<weaponBlueprint name="AA_DRIVER">
+	<type>LASER</type>
+	<title>Mass Driver</title>
+	<short>Driver</short>
+	<tip>tip_driver</tip>
+	<desc>This weapon accelerates a small rod of metal to immense speeds, which reaches the enemy instantly.</desc>
+	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
+	<damage>2</damage>
+	<speed>2147483647</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<breachChance>7</breachChance>
+	<stunChance>3</stunChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<rarity>4</rarity>
+	<launchSounds>
+		<sound>driver</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>driver</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_DRIVER_RAD">
+	<type>LASER</type>
+	<title>Irradiated Mass Driver</title>
+	<short>Rad Driver</short>
+	<tip>tip_driver</tip>
+	<desc>Loaded with projectiles made of radioactive material, this Mass Driver inflicts massive damage to hull and crew alike.</desc>
+	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
+	<damage>1</damage>
+	<persDamage>4</persDamage>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<speed>2147483647</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<breachChance>7</breachChance>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<rarity>5</rarity>
+	<launchSounds>
+		<sound>driver</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>driver_rad</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<!-- // INSTANT // -->
+
+<weaponBlueprint name="AA_LASER_PARTICLE_INSTANT">
+	<type>BURST</type>
+	<tip>tip_preemptive</tip>
+	<drone_targetable>0</drone_targetable>
+	<title>Pre-emptive Particle Accelerator</title>
+	<short>Pre-Particle</short>
+	<desc>This particle accelerator contains a capacitor that lets it charge instantly at the start of combat, in exchange for only being able to fire once per fight.</desc>
+	<tooltip>Particle accelerator that can be fired once, dealing up to 10 system damage.</tooltip>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<radius>55</radius>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>5</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>1</cooldown>
+	<power>0</power>
+	<cost>110</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<spin>0</spin>
+	<boost>
+		<type>cooldown</type>
+		<amount>2</amount>
+		<count>2</count>
+	</boost>
+	<projectiles>
+		<projectile count="10" fake="false">laser_particle</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>laser_particle</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>pre_particle</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_ENERGY_INSTANT">
+	<type>BURST</type>
+	<flavorType>Concentrated Energy Blast</flavorType>
+	<drone_targetable>0</drone_targetable>
+	<title>Pre-emptive Energy Cannon</title>
+	<short>Pre-Energy</short>
+	<tip>tip_preemptive</tip>
+	<desc>This energy cannon fires 6 blasts right at the start of combat, but it can only fire once per fight.</desc>
+	<tooltip>Fires 6 blasts that deal 1 ion damage and 1 hull damage each. Can hit and disable shields as well as systems.</tooltip>
+	<damage>1</damage>
+	<noSysDamage>true</noSysDamage>
+	<noPersDamage>true</noPersDamage>
+	<ion>1</ion>
+	<radius>25</radius>
+	<speed>40</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>1</cooldown>
+	<power>0</power>
+	<cost>100</cost>
+	<bp>3</bp>
+	<rarity>0</rarity>
+	<boost>
+		<type>cooldown</type>
+		<amount>2</amount>
+		<count>2</count>
+	</boost>
+	<projectiles>
+		<projectile count="6" fake="false">energy_shot</projectile>
+	</projectiles>
+	<explosion>explosion_energy</explosion>
+	<launchSounds>
+		<sound>energy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>pre_energy</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<!-- // MISC. // -->
+
+<weaponBlueprint name="AA_POINTER">
+	<type>LASER</type>
+	<tip>tip_pointer</tip>
+	<title>Drone Pointer Antenna</title>
+	<short>Pointer</short>
+	<locked>1</locked>
+	<desc>Though it does nothing on its own, this communications array causes all active combat drones to change their current target to the room it points to.</desc>
+	<tooltip>No.</tooltip>
+	<damage>0</damage>
+	<speed>2147483647</speed>
+	<accuracyMod>100</accuracyMod>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireTime>0.2</fireTime>
+	<sp>0</sp>
+	<cooldown>3</cooldown>
+	<power>1</power>
+	<cost>75</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<explosion>room_center_pointer</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>pointer</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<!-- // TEST // -->
+
+<weaponBlueprint name="AA_TEST">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<title>Tester's Weapon</title>
+	<short>Test</short>
+	<tip>tip_test</tip>
+	<desc>This gun's properties seem to shift rapidly. Nobody knows what it will be next.</desc>
+	<tooltip>No.</tooltip>
+	<damage>1</damage>
+	<shots>1</shots>
+	<radius>20</radius>
+	<sp>0</sp>
+	<cooldown>8</cooldown>
+	<erosion>
+		<speed>0</speed>
+		<maxSpeed>0</maxSpeed>
+		<time>60</time>
+		<maxTime>60</maxTime>
+		<systemRepairMultiplier>0</systemRepairMultiplier>
+		<erodeShields>false</erodeShields>
+		<growBreachMultiplier>0</growBreachMultiplier>
+		<newBreachDamage>0</newBreachDamage>
+		<newBreachRequirement>0</newBreachRequirement>
+		<canDilate>false</canDilate>
+		<roomAnim renderLayer="4">
+			<anim animType="default" animBorder="0">tile_repairblock</anim>
+			<tileAnim>tile_repairblock</tileAnim>
+		</roomAnim>
+	</erosion>
+	<power>1</power>
+	<cost>120</cost>
+	<bp>12</bp>
+	<speed>60</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">laser_stun</projectile>
+	</projectiles>
+	<image>laser_stun</image>
+	<launchSounds>
+		<sound>ancient_laser</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>test_gun</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<!-- /// DRONES /// -->
+
+<!-- // AMP. DISRUPTOR // -->
+
+<weaponBlueprint name="AA_DRONE_BEAM_ION_AMP1">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>Drone Disruptor [A1]</title>
+	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<ion>1</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<speed>10</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>30</length>
+	<launchSounds>
+		<sound>disruptor_light</sound>
+	</launchSounds>
+	<weaponArt>disruptor_1</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="AA_DRONE_BEAM_ION_AMP2">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>Drone Disruptor [A2]</title>
+	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<ion>1</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<speed>10</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>60</length>
+	<launchSounds>
+		<sound>disruptor_light</sound>
+	</launchSounds>
+	<weaponArt>disruptor_2</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="AA_DRONE_BEAM_ION_AMP3">
+	<type>BEAM</type>
+	<tip>tip_disruptor</tip>
+	<title>Drone Disruptor [A3]</title>
+	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<ion>1</ion>
+	<ionBeamFix>true</ionBeamFix>
+	<color>
+		<r>133</r>
+		<g>231</g>
+		<b>237</b>
+	</color>
+	<speed>10</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>90</length>
+	<launchSounds>
+		<sound>disruptor_light</sound>
+	</launchSounds>
+	<weaponArt>disruptor_3</weaponArt>
+</weaponBlueprint>
+
+<blueprintList name="AA_LIST_AMP_DISRUPTOR">
+    <name>AA_DISRUPTOR_1_AMP2</name>
+    <name>AA_DISRUPTOR_1_AMP3</name>
+	<name>AA_DISRUPTOR_1_AMP4</name>
+</blueprintList>
+<droneBlueprint name="AA_DISRUPTOR_1_AMP2">
+	<type>COMBAT</type>
+	<tip>tip_amp_combat</tip>
+	<title>Amp Disruptor</title>
+	<short>Amp D. [2]</short>
+	<desc>[CURRENT POWER: 2] A unique Amp drone that increases its swipe length as its power increases.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>8</speed>
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>aa_drone_disruptor_a1</droneImage>
+	<weaponBlueprint>AA_DRONE_BEAM_ION_AMP1</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="AA_DISRUPTOR_1_AMP3">
+	<type>COMBAT</type>
+	<tip>tip_amp_combat</tip>
+	<title>Amp Disruptor</title>
+	<short>Amp D. [3]</short>
+	<desc>[CURRENT POWER: 3] A unique Amp drone that increases its swipe length as its power increases.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>8</speed>
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>aa_drone_disruptor_a2</droneImage>
+	<weaponBlueprint>AA_DRONE_BEAM_ION_AMP2</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="AA_DISRUPTOR_1_AMP4">
+	<type>COMBAT</type>
+	<tip>tip_amp_combat</tip>
+	<title>Amp Disruptor</title>
+	<short>Amp D. [4]</short>
+	<desc>[CURRENT POWER: 4] A unique Amp drone that increases its swipe length as its power increases.</desc>
+	<power>4</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>8</speed>
+	<cost>50</cost>
+	<bp>3</bp>
+	<droneImage>aa_drone_disruptor_a3</droneImage>
+	<weaponBlueprint>AA_DRONE_BEAM_ION_AMP3</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<!-- // TOG. ELEMENTARY // -->
+
+<weaponBlueprint name="AA_DRONE_LASER_SMASH">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<title>Drone Shield Smasher</title>
+	<short>Smash Drone</short>
+	<tip>tip_smash</tip>
+	<desc>A shield smasher normally integrated into drones. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<radius>25</radius>
+	<shots>1</shots>
+	<sp>0</sp>
+	<breachChance>1</breachChance>
+	<bp>2</bp>
+	<spin>0</spin>
+	<projectiles>
+		<projectile count="1" fake="false">laser_smash_projectile</projectile>
+	</projectiles>
+	<rarity>0</rarity>
+	<launchSounds>
+		<sound>smash</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_smash</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="AA_DRONE_ELECTRON">
+	<type>BOMB</type>
+	<tip>tip_electron</tip>
+	<title>Drone Electronic Inducer</title>
+	<locked>1</locked>
+	<desc>An electronic inducer normally integrated into drones. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<ion>2</ion>
+	<accuracyMod>100</accuracyMod>
+	<shots>1</shots>
+	<stunChance>3</stunChance>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>electron_projectile</image>
+	<explosion>explosion_electron</explosion>
+	<launchSounds>
+		<sound>electron</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>electron_1</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<blueprintList name="AA_LIST_TOGGLE_ELEMENTARY">
+    <name>AA_ELEMENTARY_SMASH</name>
+    <name>AA_ELEMENTARY_ELECTRON</name>
+</blueprintList>
+<droneBlueprint name="AA_ELEMENTARY_SMASH">
+    <type>COMBAT</type>
+    <tip>tip_toggle_combat</tip>
+    <title>Elementary Drone [Smash]</title>
+    <short>Elementary [Smh]</short>
+    <desc>[CURRENT MODE: Smash] This combat drone contains the technology to harness multiple types of exotic particles when active.</desc>
+    <power>2</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>9</speed>
+    <cost>65</cost>
+    <bp>3</bp>
+    <droneImage>aa_drone_elementary_s</droneImage>
+    <weaponBlueprint>AA_DRONE_LASER_SMASH</weaponBlueprint>
+    <rarity>4</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="AA_ELEMENTARY_ELECTRON">
+    <type>COMBAT</type>
+    <tip>tip_toggle_combat</tip>
+    <title>Elementary Drone [Electron]</title>
+    <short>Elementary [Elc]</short>
+    <desc>[CURRENT MODE: Electron] This combat drone contains the technology to harness multiple types of exotic particles when active.</desc>
+    <power>2</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>7</speed>
+    <cost>65</cost>
+    <bp>3</bp>
+    <droneImage>aa_drone_elementary_e</droneImage>
+    <weaponBlueprint>AA_DRONE_ELECTRON</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<!-- // TOG. SPLICER // -->
+
+<weaponBlueprint name="AA_DRONE_LASER_BLEED">
+	<type>LASER</type>
+	<title>Drone Disintegrator</title>
+	<desc>This Disintegrator is integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<persDamage>3</persDamage>
+	<statBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>-1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>30</duration>
+			<boostAnim>blood_effect</boostAnim>
+		</statBoost>
+		<statBoost name="allDamageTakenMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.2</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>30</duration>
+			<boostAnim>blood_effect</boostAnim>
+		</statBoost>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.8</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>30</duration>
+			<boostAnim>blood_effect</boostAnim>
+		</statBoost>
+	</statBoosts>
+	<shots>1</shots>
+	<sp>1</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<rarity>0</rarity>
+	<image>laser_bio</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_bio</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_DRONE_LASER_PURGE">
+	<type>LASER</type>
+	<title>Drone Scrambler</title>
+	<desc>This is a special Scrambler integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<statBoosts>
+		<statBoost name="healSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.25</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+			<boostAnim>status_purge</boostAnim>
+		</statBoost>
+		<statBoost name="noClone">
+			<boostType>SET</boostType>
+			<value>TRUE</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<shots>1</shots>
+	<sp>10</sp>
+	<rarity>0</rarity>
+	<image>laser_purge_projectile</image>
+	<launchSounds>
+		<sound>purge</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_purge</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<blueprintList name="AA_LIST_TOGGLE_SPLICER">
+    <name>AA_SPLICER_BLEED</name>
+    <name>AA_SPLICER_PURGE</name>
+</blueprintList>
+<droneBlueprint name="AA_SPLICER_BLEED">
+    <type>COMBAT</type>
+    <tip>tip_toggle_combat</tip>
+    <title>Splicer Drone [Disintegrator]</title>
+    <short>Splicer [D]</short>
+    <desc>[CURRENT MODE: Disintegrator] A dangerous anti-crew drone that specializes in toying with the flesh.</desc>
+    <power>1</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>15</speed>
+    <cost>75</cost>
+    <bp>3</bp>
+    <droneImage>aa_drone_splicer_d</droneImage>
+    <weaponBlueprint>AA_DRONE_LASER_BLEED</weaponBlueprint>
+    <rarity>5</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="AA_SPLICER_PURGE">
+    <type>COMBAT</type>
+    <tip>tip_toggle_combat</tip>
+    <title>Splicer Drone [Scrambler]</title>
+    <short>Splicer [S]</short>
+    <desc>[CURRENT MODE: Scrambler] A dangerous anti-crew drone that specializes in toying with the flesh.</desc>
+    <power>1</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>16</speed>
+    <cost>75</cost>
+    <bp>3</bp>
+    <droneImage>aa_drone_splicer_p</droneImage>
+    <weaponBlueprint>AA_DRONE_LASER_PURGE</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<!-- // TOG. SCOUT // -->
+
+<weaponBlueprint name="AA_DRONE_BOMB_STUN"> 
+	<type>BOMB</type>
+	<title>Drone Stun Bomb</title>
+	<locked>1</locked>
+	<desc>This bomb weapon is integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<stun>15</stun>
+	<accuracyMod>30</accuracyMod>
+	<shots>1</shots>
+	<rarity>0</rarity>
+	<image>bomb_stun</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_stun</weaponArt> 
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_DRONE_DECOY">
+	<type>BOMB</type>
+	<title>Drone Projector</title>
+	<desc>This holographic device is integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spawnCrew>
+		<number>1</number>
+		<race>hologram</race>
+		<lifetime>20</lifetime>
+		<noSlot>true</noSlot>
+		<statBoosts>
+			<statBoost name="noClone">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>999999</priority>
+			</statBoost>
+		</statBoosts>
+	</spawnCrew>
+	<crewSpawnChance>10</crewSpawnChance>
+	<rarity>0</rarity>
+	<image>scan</image>
+	<explosion>scan_exp</explosion>
+	<launchSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>miss</sound>
+	</hitShipSounds>
+	<weaponArt>scanner</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<blueprintList name="AA_LIST_TOGGLE_SCOUT">
+    <name>AA_SCOUT_STUN</name>
+    <name>AA_SCOUT_DECOY</name>
+</blueprintList>
+<droneBlueprint name="AA_SCOUT_STUN">
+    <type>COMBAT</type>
+    <tip>tip_toggle_combat</tip>
+    <title>Scout Drone [Stun]</title>
+    <short>Scout [S]</short>
+    <desc>[CURRENT MODE: Stun] Designed to poke at both ships and planets without harm to itself, this drone is very useful for reconaissance and occasional combat operations.</desc>
+    <power>1</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>13</speed>
+    <cost>65</cost>
+    <bp>3</bp>
+    <droneImage>aa_drone_scout_b</droneImage>
+    <weaponBlueprint>AA_DRONE_BOMB_STUN</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="AA_SCOUT_DECOY">
+    <type>COMBAT</type>
+    <tip>tip_toggle_combat</tip>
+    <title>Scout Drone [Bait]</title>
+    <short>Scout [B]</short>
+    <desc>[CURRENT MODE: Bait] Designed to poke at both ships and planets without harm to itself, this drone is very useful for reconaissance and occasional combat operations.</desc>
+    <power>1</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>8</speed>
+    <cost>65</cost>
+    <bp>3</bp>
+    <droneImage>aa_drone_scout_s</droneImage>
+    <weaponBlueprint>AA_DRONE_DECOY</weaponBlueprint>
+    <rarity>5</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
+
+
+<!-- /// AUGMENTS /// -->
+
+<augBlueprint name="AA_PARTICLE_SHIELD">
+    <title>Particle Shield</title>
+	<desc>Reverse-engineered Zoltan energy shield tech that sacrifices strength for efficiency. 10 seconds after being damaged, it regenerates its single layer, providing light but continuous protection in the vein of its heavier cousins.
+If another energy shield is present, it refills that shield as well but takes an amount of time that scales with the shield's strength.</desc>
+	<cost>80</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="AA_PARTICLE_SHIELD_BOSS">
+    <title>Particle Shield</title>
+	<desc>Reverse-engineered Zoltan energy shield tech that sacrifices strength for efficiency. 10 seconds after being damaged, it regenerates its single layer, providing light but continuous protection in the vein of its heavier cousins.
+If another energy shield is present, it refills that shield as well but takes an amount of time that scales with the shield's strength.</desc>
+	<cost>80</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+</FTL>

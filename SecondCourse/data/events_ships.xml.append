@@ -1,0 +1,478 @@
+<FTL>
+
+<!-- /// BOSSES /// -->
+
+<!-- // STANDARD // -->
+
+<ship name="AA_BOSS_REBEL_CRUISER" auto_blueprint="AA_BOSS_REBEL_CRUISER">
+	<destroyed load="AA_BOSS_REBEL_CRUISER_DESTROYED"/>
+	<deadCrew load="AA_BOSS_REBEL_CRUISER_DEADCREW"/>
+</ship>
+
+<event name="AA_BOSS_REBEL_CRUISER_DESTROYED">
+	<text>The gargantuan orange vessel bursts into flames for a brief moment as its fuel explodes, before it is promptly extinguished by the vacuum of space. Its wreckage begins to succumb to the gravitational pull of the nearby planet, the debris setting alight again as it breaks up in the atmosphere. You've won.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<weapon name="LASER_CHAINGUN_DAMAGE"/>
+</event>
+
+<event name="AA_BOSS_REBEL_CRUISER_DEADCREW">
+	<text>With nobody left alive on board to stop you or to pilot the ship, it grows inactive and unable to fight back. A prompt shuttle docking allows you unrestricted access to the ship's interior, which you are happy to strip of anything valuable before turning the empty cruiser over to the dry dock. You've won.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<weapon name="LASER_CHAINGUN_DAMAGE"/>
+</event>
+
+<!-- // RENEGADES // -->
+
+<!-- // WHITE KNIGHT // -->
+
+<ship name="AA_RENEGADE_STEALTH_NORMAL" auto_blueprint="AA_RENEGADE_STEALTH_NORMAL">
+	<destroyed load="AA_RENEGADE_STEALTH_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_STEALTH_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_STEALTH_CHALLENGE" auto_blueprint="AA_RENEGADE_STEALTH_CHALLENGE">
+	<destroyed load="AA_RENEGADE_STEALTH_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_STEALTH_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_STEALTH_EXTREME" auto_blueprint="AA_RENEGADE_STEALTH_EXTREME">
+	<destroyed load="AA_RENEGADE_STEALTH_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_STEALTH_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_STEALTH_CHAOS" auto_blueprint="AA_RENEGADE_STEALTH_CHAOS">
+	<destroyed load="AA_RENEGADE_STEALTH_DESTROYED_CHAOS"/>
+	<deadCrew load="AA_RENEGADE_STEALTH_DEADCREW_CHAOS"/>
+</ship>
+
+<ship name="AA_RENEGADE_STEALTH_QUEST" auto_blueprint="AA_RENEGADE_STEALTH_QUEST">
+	<destroyed load="AA_RENEGADE_STEALTH_DESTROYED_CHAOS"/> <!-- / PLACEHOLDER / -->
+	<deadCrew load="AA_RENEGADE_STEALTH_DEADCREW_CHAOS"/> <!-- / PLACEHOLDER / -->
+</ship>
+
+<event name="AA_RENEGADE_STEALTH_DESTROYED">
+	<text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_stealth" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_RENEGADE_STEALTH_DROPCHANCE"/>
+	</choice>
+</event>
+<eventList name="AA_RENEGADE_STEALTH_DROPCHANCE">
+	<event>
+		<text>You find the remains of a unique weapon model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_RENEGADE_STEALTH_DROP</loadEvent></event>
+</eventList>
+<event name="AA_RENEGADE_STEALTH_DEADCREW">
+	<text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_stealth" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_RENEGADE_STEALTH_DROP</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_RENEGADE_STEALTH_DROP">
+	<text>You're also surprised to find a special weapon amongst the wreckage! You've never seen a weapon like this before, so you assume it's a custom model made by the renegades themselves.</text>
+	<achievement silent="false">AA_ACH_RENEGADE_STEALTH</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_LOOT_RENEGADE_STEALTH"/>
+</event>
+
+<event name="AA_RENEGADE_STEALTH_DESTROYED_CHAOS">
+	<text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+	<playMusic/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_stealth" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_RENEGADE_STEALTH_DROPCHANCE_CHAOS"/>
+	</choice>
+</event>
+
+<eventList name="AA_RENEGADE_STEALTH_DROPCHANCE_CHAOS">
+	<event>
+		<text>You find the remains of a unique weapon model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_RENEGADE_STEALTH_DROP_CHAOS</loadEvent></event>
+</eventList>
+<event name="AA_RENEGADE_STEALTH_DEADCREW_CHAOS">
+	<text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+	<playMusic/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_stealth" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_RENEGADE_STEALTH_DROP_CHAOS</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_RENEGADE_STEALTH_DROP_CHAOS">
+	<text>You're also surprised to find a special weapon amongst the wreckage! You've never seen a weapon like this before, so you assume it's a custom model made by the renegades themselves.</text>
+	<achievement silent="false">AA_ACH_RENEGADE_STEALTH</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_LOOT_RENEGADE_STEALTH_CHAOS"/>
+</event>
+
+<!-- / LE CAMARADERIE / -->
+
+<ship name="AA_RENEGADE_PALADIN_NORMAL" auto_blueprint="AA_RENEGADE_PALADIN_NORMAL">
+	<destroyed load="AA_RENEGADE_PALADIN_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_PALADIN_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_PALADIN_CHALLENGE" auto_blueprint="AA_RENEGADE_PALADIN_CHALLENGE">
+	<destroyed load="AA_RENEGADE_PALADIN_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_PALADIN_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_PALADIN_EXTREME" auto_blueprint="AA_RENEGADE_PALADIN_EXTREME">
+	<destroyed load="AA_RENEGADE_PALADIN_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_PALADIN_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_PALADIN_CHAOS" auto_blueprint="AA_RENEGADE_PALADIN_CHAOS">
+	<destroyed load="AA_RENEGADE_PALADIN_DESTROYED_CHAOS"/>
+	<deadCrew load="AA_RENEGADE_PALADIN_DEADCREW_CHAOS"/>
+</ship>
+
+<ship name="AA_RENEGADE_PALADIN_QUEST" auto_blueprint="AA_RENEGADE_PALADIN_QUEST">
+	<destroyed load="AA_RENEGADE_PALADIN_DESTROYED_CHAOS"/> <!-- / PLACEHOLDER / -->
+	<deadCrew load="AA_RENEGADE_PALADIN_DEADCREW_CHAOS"/> <!-- / PLACEHOLDER / -->
+</ship>
+
+<event name="AA_RENEGADE_PALADIN_DESTROYED">
+	<text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_paladin" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_RENEGADE_PALADIN_DROPCHANCE"/>
+	</choice>
+</event>
+<eventList name="AA_RENEGADE_PALADIN_DROPCHANCE">
+	<event>
+		<text>You find the remains of a unique drone model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_RENEGADE_PALADIN_DROP</loadEvent></event>
+</eventList>
+<event name="AA_RENEGADE_PALADIN_DEADCREW">
+	<text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_paladin" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_RENEGADE_PALADIN_DROP</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_RENEGADE_PALADIN_DROP">
+	<text>You're also surprised to find a special drone amongst the wreckage! You've never seen a drone like this before, so you assume it's a custom model made by the renegades themselves.</text>
+	<achievement silent="false">AA_ACH_RENEGADE_PALADIN</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<drone name="ANCIENT_COMBAT_MISSILE"/> <!-- PLACEHOLDER -->
+</event>
+
+<event name="AA_RENEGADE_PALADIN_DESTROYED_CHAOS">
+	<text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+	<playMusic/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_paladin" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_RENEGADE_PALADIN_DROPCHANCE_CHAOS"/>
+	</choice>
+</event>
+
+<eventList name="AA_RENEGADE_PALADIN_DROPCHANCE_CHAOS">
+	<event>
+		<text>You find the remains of a unique drone model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_RENEGADE_PALADIN_DROP_CHAOS</loadEvent></event>
+</eventList>
+<event name="AA_RENEGADE_PALADIN_DEADCREW_CHAOS">
+	<text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+	<playMusic/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_paladin" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_RENEGADE_PALADIN_DROP_CHAOS</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_RENEGADE_PALADIN_DROP_CHAOS">
+	<text>You're also surprised to find a special drone amongst the wreckage! You've never seen a drone like this before, so you assume it's a custom model made by the renegades themselves.</text>
+	<achievement silent="false">AA_ACH_RENEGADE_PALADIN</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<drone name="ROYAL_COMBAT_MISSILE"/> <!-- PLACEHOLDER -->
+</event>
+
+<!-- / TSS-BONNIE-24 / -->
+
+<ship name="AA_RENEGADE_TONY_NORMAL" auto_blueprint="AA_RENEGADE_TONY_NORMAL">
+	<destroyed load="AA_RENEGADE_TONY_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_TONY_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_TONY_CHALLENGE" auto_blueprint="AA_RENEGADE_TONY_CHALLENGE">
+	<destroyed load="AA_RENEGADE_TONY_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_TONY_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_TONY_EXTREME" auto_blueprint="AA_RENEGADE_TONY_EXTREME">
+	<destroyed load="AA_RENEGADE_TONY_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_TONY_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_TONY_CHAOS" auto_blueprint="AA_RENEGADE_TONY_CHAOS">
+	<destroyed load="AA_RENEGADE_TONY_DESTROYED_CHAOS"/>
+	<deadCrew load="AA_RENEGADE_TONY_DEADCREW_CHAOS"/>
+</ship>
+
+<ship name="AA_RENEGADE_TONY_QUEST" auto_blueprint="AA_RENEGADE_TONY_QUEST">
+	<destroyed load="AA_RENEGADE_TONY_DESTROYED_CHAOS"/> <!-- / PLACEHOLDER / -->
+	<deadCrew load="AA_RENEGADE_TONY_DEADCREW_CHAOS"/> <!-- / PLACEHOLDER / -->
+</ship>
+
+<event name="AA_RENEGADE_TONY_DESTROYED">
+	<text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_tony" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_RENEGADE_TONY_DROPCHANCE"/>
+	</choice>
+</event>
+<eventList name="AA_RENEGADE_TONY_DROPCHANCE">
+	<event>
+		<text>You find the remains of a pair of strange weapons amongst the ruins of the ship, but it appears they did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_RENEGADE_TONY_DROP</loadEvent></event>
+</eventList>
+<event name="AA_RENEGADE_TONY_DEADCREW">
+	<text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_tony" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_RENEGADE_TONY_DROP</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_RENEGADE_TONY_DROP">
+	<text>You're also surprised to find a special weapon amongst the wreckage! You've never seen a weapon like this before, so you assume it's a custom model made by the renegades themselves.</text>
+	<achievement silent="false">AA_ACH_RENEGADE_TONY</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_LOOT_RENEGADE_TONY_BIO"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>After some further digging, you also find a second weapon, similar in appearance to the first! It appears that the two were designed as a pair.</text>
+			<weapon name="AA_LOOT_RENEGADE_TONY_STUN"/>
+		</event>
+	</choice>
+</event>
+
+<event name="AA_RENEGADE_TONY_DESTROYED_CHAOS">
+	<text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+	<playMusic/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_tony" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_RENEGADE_TONY_DROPCHANCE_CHAOS"/>
+	</choice>
+</event>
+
+<eventList name="AA_RENEGADE_TONY_DROPCHANCE_CHAOS">
+	<event>
+		<text>You find the remains of a pair of strange weapons amongst the ruins of the ship, but it appears they did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_RENEGADE_TONY_DROP_CHAOS</loadEvent></event>
+</eventList>
+<event name="AA_RENEGADE_TONY_DEADCREW_CHAOS">
+	<text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+	<playMusic/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_tony" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_RENEGADE_TONY_DROP_CHAOS</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_RENEGADE_TONY_DROP_CHAOS">
+	<text>You're also surprised to find a special weapon amongst the wreckage! You've never seen a weapon like this before, so you assume it's a custom model made by the renegades themselves.</text>
+	<achievement silent="false">AA_ACH_RENEGADE_TONY</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_HOT_FOCUS"/> <!-- / PLACEHOLDER ITEM / -->
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>After some further digging, you also find a second weapon, similar in appearance to the first! It appears that the two were designed as a pair.</text>
+			<weapon name="AA_HOT_SHOTGUN"/> <!-- / PLACEHOLDER ITEM / -->
+		</event>
+	</choice>
+</event>
+
+<!-- / H0TSW1TCH /-->
+
+<ship name="AA_RENEGADE_HACKER_NORMAL" auto_blueprint="AA_RENEGADE_HACKER_NORMAL">
+	<destroyed load="AA_RENEGADE_HACKER_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_HACKER_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_HACKER_CHALLENGE" auto_blueprint="AA_RENEGADE_HACKER_CHALLENGE">
+	<destroyed load="AA_RENEGADE_HACKER_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_HACKER_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_HACKER_EXTREME" auto_blueprint="AA_RENEGADE_HACKER_EXTREME">
+	<destroyed load="AA_RENEGADE_HACKER_DESTROYED"/>
+	<deadCrew load="AA_RENEGADE_HACKER_DEADCREW"/>
+</ship>
+<ship name="AA_RENEGADE_HACKER_CHAOS" auto_blueprint="AA_RENEGADE_HACKER_CHAOS">
+	<destroyed load="AA_RENEGADE_HACKER_DESTROYED_CHAOS"/>
+	<deadCrew load="AA_RENEGADE_HACKER_DEADCREW_CHAOS"/>
+</ship>
+
+<ship name="AA_RENEGADE_HACKER_QUEST" auto_blueprint="AA_RENEGADE_HACKER_QUEST">
+	<destroyed load="AA_RENEGADE_HACKER_DESTROYED_CHAOS"/> <!-- / PLACEHOLDER / -->
+	<deadCrew load="AA_RENEGADE_HACKER_DEADCREW_CHAOS"/> <!-- / PLACEHOLDER / -->
+</ship>
+
+<event name="AA_RENEGADE_HACKER_DESTROYED">
+	<text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_hacker" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_RENEGADE_HACKER_DROPCHANCE"/>
+	</choice>
+</event>
+<eventList name="AA_RENEGADE_HACKER_DROPCHANCE">
+	<event>
+		<text>You find the remains of a unique weapon model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_RENEGADE_HACKER_DROP</loadEvent></event>
+</eventList>
+<event name="AA_RENEGADE_HACKER_DEADCREW">
+	<text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_hacker" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_RENEGADE_HACKER_DROP</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_RENEGADE_HACKER_DROP">
+	<text>You're also surprised to find a special weapon amongst the wreckage! You've never seen a weapon like this before, so you assume it's a custom model made by the renegades themselves.</text>
+	<achievement silent="false">AA_ACH_RENEGADE_HACKER</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_HOT_SHOTGUN"/> <!-- / PLACEHOLDER ITEM / -->
+</event>
+
+<event name="AA_RENEGADE_HACKER_DESTROYED_CHAOS">
+	<text>The mighty vessel has been eliminated! Within its wreckage remains plenty of scrap and supplies for the taking.</text>
+	<playMusic/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_hacker" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_RENEGADE_HACKER_DROPCHANCE_CHAOS"/>
+	</choice>
+</event>
+
+<eventList name="AA_RENEGADE_HACKER_DROPCHANCE_CHAOS">
+	<event>
+		<text>You find the remains of a unique weapon model amongst the ruins of the ship, but it appears it did not survive the fight. You'll have to be more careful next time, or get lucky. Fortunately, there's still a bit more supplies to take with you.</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_RENEGADE_HACKER_DROP_CHAOS</loadEvent></event>
+</eventList>
+<event name="AA_RENEGADE_HACKER_DEADCREW_CHAOS">
+	<text>The mighty vessel has been vanquished! Within the now cleared cruiser, plenty of scrap and supplies remain for the taking.</text>
+	<playMusic/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<variable name="aa_ach_renegade_hacker" op="set" val="1"/>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_RENEGADE_HACKER_DROP_CHAOS</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_RENEGADE_HACKER_DROP_CHAOS">
+	<text>You're also surprised to find a special weapon amongst the wreckage! You've never seen a weapon like this before, so you assume it's a custom model made by the renegades themselves.</text>
+	<achievement silent="false">AA_ACH_RENEGADE_HACKER</achievement>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_HOT_FOCUS"/> <!-- / PLACEHOLDER ITEM / -->
+</event>
+
+<!-- // SALLY // -->
+
+<ship name="AA_SUPERBOSS_INTEGRAL" auto_blueprint="AA_SUPERBOSS_INTEGRAL">
+	<destroyed load="AA_SUPERBOSS_INTEGRAL_DESTROYED"/>
+	<deadCrew load="AA_SUPERBOSS_INTEGRAL_DEADCREW"/>
+	<triggeredEvent event="AA_SUPERBOSS_INTEGRAL_DIRTY" enemyHull="20"/>
+	<triggeredEvent event="AA_SUPERBOSS_INTEGRAL_SURRENDER" enemyHull="4"/>
+	<triggeredEvent event="AA_POWER_SURGE_INTEGRAL_QUESTION" seeded="false" loops="999999999" thisFight="true" minTime="10.0" maxTime="20.0">
+		<warningMessage id="warning_integral" x="692" y="84" time="5.0" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+	</triggeredEvent>
+</ship>
+
+<event name="AA_SUPERBOSS_INTEGRAL_DIRTY"> <!-- / We going MFK Flagship mode. /-->
+	<text>Sally's blue lights flare up, and her engines surge with light. Though your attacks have caused cracks and tears to form in the Cognitive's hull, it doesn't slow her down one bit. It becomes clear that playing dirty is an option to her, and a storm of boarding drones surges outward from an auxiliary compartment!</text>
+	<boarders min="4" max="4" class="drone_battle"/>
+	<damage amount="0" system="pilot" effect="breach"/>
+	<damage amount="0" system="random" effect="breach"/>
+	<damage amount="0" system="random" effect="breach"/>
+	<damage amount="0" system="random" effect="breach"/>
+</event>
+
+<event name="AA_SUPERBOSS_INTEGRAL_SURRENDER"> <!-- / Final phase plus surrender opportunity. /-->
+	<text>The Auto-ship leaks coolant and oil from several holes in her hull, and emits sparks and smoke from her engines. "No. No, no, no! I will not let this happen! I'll... We... We can end this without a loss of life, surely! Please!"</text>
+	<choice hidden="true">
+		<text>Accept Sally's surrender and stop firing.</text>
+		<event>
+			<text>Sally sputters away, engines struggling to keep her in the sky. What you did today will forever live on in infamy among the students of Impetus. Your crew give you glares in the hallway as you prepare to move on, collecting small bits of scrap falling from the Cognitive as she leaves.</text>
+			<recallBoarders/>
+			<instantEscape/>
+			<playMusic/>
+			<ship hostile="false"/>
+			<autoReward level="LOW">stuff</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>Ignore Sally's pleas and finish the fight.</text>
+		<event>
+			<text>"If you truly mean to kill me, to destroy this body and confine me to my home... then I'm not going to leave you without a few more gray hairs."</text>
+		</event>
+	</choice>
+</event>
+
+<event name="AA_SUPERBOSS_INTEGRAL_DESTROYED">
+	<text>Sally's emerald-green hull, now torn to shreds by your assault, finally begins to split apart, before violently bursting in a torrent of color and smoke. The blue lights studding her exterior fade away to nothing, and the wreck stalls and falls out of the sky, crashing into a building below.</text>
+	<playMusic/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>Though you hear no more of Sally's voice, your sensors pick up an immense volume of information being transmitted to the communications tower. Sally may live on, but her hopes and dreams have been crushed, and you were the one to do it. You monster.</text>
+		</event>
+	</choice>	
+</event>
+
+<event name="AA_SUPERBOSS_INTEGRAL_DEADCREW">
+	<text>Somehow, some way, you have managed to crew-kill an Auto-ship. After having done the impossible, you find it to be a good time to sit down and take a long time figuring out what the hell you just did to make that a reality.</text>
+	<win creditsText="aa_credit_impossible" text="What have you done?"/>
+</event>
+
+</FTL>

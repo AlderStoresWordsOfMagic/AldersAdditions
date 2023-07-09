@@ -1,0 +1,905 @@
+<FTL>
+
+<!-- /// WEAPONS /// -->
+
+<!-- // RENEGADE LOOT // -->
+
+<weaponBlueprint name="AA_LOOT_RENEGADE_STEALTH">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+	<title>Plague Bomb</title>
+	<short>Plague B.</short>
+	<locked>1</locked>
+	<desc>A prototype bomb teleporter that uses built-in biotechnology to create samples of a lethal pathogen. Though it sucks life from all things, humans are acutely vulnerable.</desc>
+	<tooltip>Yes.</tooltip>
+	<damage>0</damage>
+	<persDamage>5</persDamage>
+	<accuracyMod>30</accuracyMod>
+	<missiles>1</missiles>
+	<statBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>-30</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>2147483647</duration>
+			<boostAnim>status_pale</boostAnim>
+			<whiteList>
+				<human/>
+				<human_medic/>
+				<human_soldier/>
+				<human_angel/>
+				<human_engineer/>
+				<human_technician/>
+				<unique_tully/>
+				<unique_haynes/>
+				<unique_ellie/>
+				<unique_ellie_lvl1/>
+				<unique_ellie_lvl2/>
+				<unique_ellie_lvl3/>
+				<unique_ellie_lvl4/>
+				<unique_ellie_lvl5/>
+				<unique_ellie_lvl6/>
+				<unique_ellie_stephan/>
+				<human_mfk/>
+				<human_legion/>
+				<human_legion_pyro/>
+				<unique_jerry/>
+				<unique_jerry_gun/>
+				<unique_jerry_pony/>
+				<unique_jerry_pony_crystal/>
+				<easter_coomer/>
+				<easter_tommy/>
+				<easter_bubby/>
+			</whiteList>
+		</statBoost>
+	</statBoosts>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>110</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>renegade_bomb_pale</image>
+	<explosion>explosion_pale</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>renegade_bomblauncher_pale</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LOOT_RENEGADE_STEALTH_CHAOS">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+	<title>Chaotic Plague Bomb</title>
+	<short>Plague B.™</short>
+	<locked>1</locked>
+	<desc>A prototype bomb teleporter that uses built-in biotechnology to create samples of a lethal pathogen. Though it sucks life from all things, humans are acutely vulnerable.
+
+	Chaotic variant poisons elite and special crew instead of human crew.
+	</desc>
+	<tooltip>Yes.</tooltip>
+	<damage>0</damage>
+	<persDamage>5</persDamage>
+	<accuracyMod>30</accuracyMod>
+	<missiles>1</missiles>
+	<statBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>-30</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>2147483647</duration>
+			<boostAnim>status_pale</boostAnim>
+			<whiteList>
+				<human_soldier/>
+				<human_technician/>
+				<human_mfk/>
+				<human_legion/>
+				<human_legion_pyro/>
+				<human_angel/>
+				<engi_defender/>
+				<zoltan_peacekeeper/>
+				<zoltan_martyr/>
+				<mantis_suzerain/>
+				<mantis_warlord/>
+				<mantis_bishop/>
+				<rock_crusader/>
+				<rock_paladin/>
+				<crystal_sentinel/>
+				<orchid_chieftain/>
+				<orchid_cultivator/>
+				<shell_radiant/>
+				<leech_ampere/>
+				<slug_saboteur/>
+				<slug_knight/>
+				<slug_ranger/>
+				<lanius_welder/>
+				<siren_harpy/>
+				<cognitive_advanced/>
+				<cognitive_advanced_automated/>
+				<obelisk_royal/>
+				<phantom_alpha/>
+				<phantom_goul_alpha/>
+				<phantom_mare_alpha/>
+				<phantom_wraith_alpha/>
+				<gold/>
+				<goldampere/>
+				<goldchieftain/>
+				<goldcrusader/>
+				<golddefend/>
+				<goldroyal/>
+				<goldsabo/>
+				<goldsentinel/>
+				<goldsoldier/>
+				<goldsuzerain/>
+				<goldtoxic/>
+				<goldwarlord/>
+				<goldwelder/>
+				<goldqueen/>
+
+				<unique_haynes/>
+				<unique_jerry/>
+				<unique_jerry_gun/>
+				<unique_jerry_pony/>
+				<unique_jerry_pony_crystal/>
+				<unique_tully/>
+				<unique_ellie_lvl1/>
+				<unique_ellie_lvl2/>
+				<unique_ellie_lvl3/>
+				<unique_ellie_lvl4/>
+				<unique_ellie_lvl5/>
+				<unique_ellie_lvl6/>
+				<unique_ellie_stephan/>
+				<unique_devorak/>
+				<unique_turzil/>
+				<unique_alkali/>
+				<unique_ooj/>
+				<unique_nights/>
+				<unique_slocknog/>
+				<unique_irwin/>
+				<unique_alkram/>
+				<unique_tyrdeo/>
+				<unique_freddy/>
+				<unique_freddy_sombrero/>
+				<unique_freddy_jester/>
+				<unique_freddy_fedora/>
+				<unique_freddy_twohats/>
+				<unique_kaz/>
+				<unique_dianesh/>
+				<unique_ariadne/>
+				<unique_ruwen/>
+				<unique_tuco/>
+				<rock_elder/>
+				<unique_eater/>
+				<unique_anointed/>
+				<unique_dessius/>
+				<unique_vortigon/>
+				<unique_queen/>
+				<unique_sylvan/>
+				<unique_obyn/>
+				<unique_billy/>
+				<unique_guntput/>
+				<unique_metyunt/>
+				<unique_symbiote/>
+				<unique_tonysr/>
+				<unique_wither/>
+				<ponyc/>
+				<eldritch_cat/>
+				<gnome/>
+				<A55_BATTLE/>
+				<A55_BOARDER/>
+			</whiteList>
+		</statBoost>
+	</statBoosts>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>110</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>renegade_bomb_pale_chaos</image>
+	<explosion>explosion_pale</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>renegade_bomblauncher_pale_chaos</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LOOT_RENEGADE_TONY_BIO">
+    <type>BURST</type>
+	<tip>tip_bombs</tip>
+    <title>'Spring' Scattered Launcher</title>
+    <short>'Spring'</short>
+	<desc>A powerful Bomb Launcher that manufactures and fires three small irradiation bombs. However, it has no accuracy bonus and cannot target your own ship.</desc>
+	<tooltip>Bomb weapon.</tooltip>
+    <radius>70</radius>
+	<damage>0</damage>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<accuracyMod>30</accuracyMod>
+	<missiles>1</missiles>
+    <shots>1</shots>
+	<fireTime>1.1</fireTime>
+    <sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+    <cooldown>12</cooldown>
+    <power>2</power>
+    <cost>70</cost>
+    <bp>10</bp>
+	<statBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>-1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+			<boostAnim>blood_effect</boostAnim>
+		</statBoost>
+	</statBoosts>
+    <speed>0</speed>
+    <rarity>4</rarity>
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+    <weaponArt>renegade_bomblauncher_spring</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="AA_LOOT_RENEGADE_TONY_BIO_BOMB">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+	<title>'Spring' Projectile</title>
+	<short>'Spring' P.</short>
+	<locked>1</locked>
+	<desc>This is the projectile for the 'Spring' bomb launcher. It was never supposed to fall into your hands.</desc>
+	<tooltip>No.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>3</persDamage>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_bio</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_bio</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LOOT_RENEGADE_TONY_STUN">
+    <type>BURST</type>
+	<tip>tip_bombs</tip>
+    <title>'Lock' Scattered Launcher</title>
+    <short>'Lock'</short>
+	<desc>A powerful Bomb Launcher that manufactures and fires three small stun bombs. However, it has no accuracy bonus and cannot target your own ship.</desc>
+	<tooltip>Bomb weapon.</tooltip>
+    <radius>70</radius>
+	<damage>0</damage>
+	<persDamage>3</persDamage>
+	<accuracyMod>30</accuracyMod>
+	<missiles>1</missiles>
+    <shots>1</shots>
+	<fireTime>1.1</fireTime>
+    <sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+    <cooldown>12</cooldown>
+    <power>2</power>
+    <cost>70</cost>
+    <bp>10</bp>
+	<statBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>-1</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<duration>10</duration>
+			<boostAnim>blood_effect</boostAnim>
+		</statBoost>
+	</statBoosts>
+    <speed>0</speed>
+    <rarity>4</rarity>
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+    <weaponArt>renegade_bomblauncher_lock</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="AA_LOOT_RENEGADE_TONY_STUN_BOMB">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+	<title>'Lock' Projectile</title>
+	<short>'Lock' P.</short>
+	<locked>1</locked>
+	<desc>This is the projectile for the 'Lock' bomb launcher. It was never supposed to fall into your hands.</desc>
+	<tooltip>No.</tooltip>
+	<damage>0</damage>
+	<stun>25</stun>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_stun</image>
+	<explosion>explosion_random</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_stun</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<!-- // TRANSCEDENT // -->
+
+<weaponBlueprint name="AA_AETHER_LASER">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<title>Transcendent Laser</title>
+	<short>T. Laser</short>
+	<tip>tip_transcend</tip>
+	<desc>A massive and powerful Laser prototype that outclasses most others of its category. However, its power draw is incredible.</desc>
+	<tooltip>No.</tooltip>
+	<damage>2</damage>
+	<shots>4</shots>
+	<radius>20</radius>
+	<sp>0</sp>
+	<breachChance>10</breachChance>
+	<cooldown>16</cooldown>
+	<power>4</power>
+	<cost>120</cost>
+	<bp>12</bp>
+	<speed>60</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">laser_prime</projectile>
+	</projectiles>
+	<image>laser_prime</image>
+	<launchSounds>
+		<sound>ancient_laser</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_transcendent</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_AETHER_FOCUS">
+    <type>BEAM</type>
+    <tip>tip_transcend</tip>
+    <flavorType>Aether Pinpoint</flavorType>
+    <title>Transcendent Pinpoint</title>
+    <short>T. Pinpoint</short>
+    <desc>A powerful Pinpoint containing large amounts of Aether technology. It is specifically tuned to annihilate systems completely with a single shot.</desc>
+    <tooltip>Single-tile Beam of monstrous power.</tooltip>
+    <damage>4</damage>
+    <sysDamage>16</sysDamage>
+	<persDamage>-4</persDamage>
+    <sp>0</sp>
+    <stun>10</stun>
+    <breachChance>10</breachChance>
+    <stunChance>10</stunChance>
+    <cooldown>20</cooldown>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <speed>1</speed>
+    <power>4</power>
+    <cost>110</cost>
+    <rarity>0</rarity>
+    <length>1</length>
+    <image>impact_flare</image>
+    <launchSounds>
+        <sound>aether_impact_warp</sound>
+    </launchSounds>
+    <weaponArt>ancient_focus</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<!-- // MISC // -->
+
+<weaponBlueprint name="AA_HOT_HEAVY">
+	<type>LASER</type>
+	<title>[SYSTEM'S CHOICE - SIDEARM]</title>
+	<short>[PISTOL]</short>
+	<tip>tip_hotgun</tip>
+	<desc>This strange Heavy Laser appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
+	<tooltip>It's not really a laser if it fires virtual projectiles.</tooltip>
+	<damage>2</damage>
+	<shots>2</shots>
+	<sp>0</sp>
+	<stunChance>2</stunChance>
+	<cooldown>13</cooldown>
+	<power>2</power>
+	<cost>120</cost>
+	<bp>12</bp>
+	<speed>60</speed>
+	<rarity>0</rarity>
+	<image>projectile_hot</image>
+	<launchSounds>
+		<sound>hot_light</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>hot_pistol</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_HOT_BURST">
+	<type>LASER</type>
+	<title>[SYSTEM'S CHOICE - RIFLE]</title>
+	<short>[RIFLE]</short>
+	<tip>tip_hotgun</tip>
+	<desc>This strange Burst Laser appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
+	<tooltip>It's not really a laser if it fires virtual projectiles.</tooltip>
+	<damage>1</damage>
+	<shots>5</shots>
+	<sp>0</sp>
+	<cooldown>18</cooldown>
+	<power>2</power>
+	<cost>120</cost>
+	<bp>12</bp>
+	<speed>60</speed>
+	<rarity>0</rarity>
+	<image>projectile_hot</image>
+	<launchSounds>
+		<sound>hot_light</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>hot_assault</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_HOT_SHOTGUN">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>[SYSTEM'S CHOICE - SHOTGUN]</title>
+	<short>[SHOTGUN]</short>
+	<tip>tip_hotgun</tip>
+	<desc>This strange Flak cannon appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
+	<tooltip>It's not really a flak if it fires virtual projectiles.</tooltip>
+	<radius>45</radius>
+	<damage>1</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<cooldown>12</cooldown>
+	<power>2</power>
+	<cost>120</cost>
+	<bp>12</bp>
+	<speed>60</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="4" fake="false">projectile_hot</projectile>
+		<projectile count="8" fake="true">projectile_hot_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>hot_heavy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+		<sound>hitHull1</sound>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>hot_shotgun</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_HOT_FOCUS">
+	<type>BEAM</type>
+	<flavorType>Pinpoint</flavorType>
+	<tip>tip_hotgun</tip>
+	<title>[SYSTEM'S CHOICE - RAILGUN]</title>
+	<short>[RAILGUN]</short>
+	<desc>This strange Pinpoint appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
+	<tooltip>It's not really a pinpoint if it fires virtual projectiles.</tooltip>
+	<damage>4</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<cooldown>17</cooldown>
+	<speed>1</speed>
+	<power>2</power>
+	<cost>120</cost>
+	<bp>2</bp>
+	<rarity>5</rarity>
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>hot_rail</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>explosion_heavy</sound>
+	</hitShipSounds>
+	<weaponArt>hot_railgun</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<!-- /// ARTILLERY /// -->
+
+<!-- // SALLY // -->
+
+<weaponBlueprint name="AA_ARTILLERY_INTEGRAL_SUMMATION">
+	<type>LASER</type>
+	<title>'Summation'</title>
+	<short>'Summation'</short>
+	<desc>A powerful triple-shot laser artillery system that automatically recalibrates itself with each shot for maximum damage, leading to efficient hull devastation. It was never supposed to fall into your hands.</desc>
+	<tooltip>Fires three lasers that deal 1 damage each. Damage increases the more it fires.</tooltip>
+	<damage>1</damage>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>11</cooldown>
+	<power>1</power>
+	<cost>125</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<image>laser_sally_projectile</image>
+	<boost>
+		<type>damage</type>
+		<amount>1</amount>
+		<count>6</count>
+	</boost>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>aa_artillery_math_laser</weaponArt>
+</weaponBlueprint>
+	
+<weaponBlueprint name="AA_ARTILLERY_INTEGRAL_LOGARITHM">
+	<type>BOMB</type>
+	<title>'Logarithm'</title>
+	<short>'Logarithm'</short>
+	<desc>A powerful artillery system that teleports a pair of irradiation bombs to the enemy ship. The artillery saves its excess energy, allowing it to fire faster with each shot. It was never supposed to fall into your hands.</desc>
+	<tooltip>Fires 2 bombs that deal 60 crew damage each. Cooldown drops the more it fires.</tooltip>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>4</persDamage>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<shots>2</shots>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>15</cooldown>
+	<power>1</power>
+	<cost>125</cost>
+	<bp>8</bp>
+	<rarity>0</rarity>
+	<image>aa_bomb_math</image>
+	<boost>
+		<type>cooldown</type>
+		<amount>2</amount>
+		<count>6</count>
+	</boost>
+	<explosion>explosion_bio</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>aa_artillery_math_bomb</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<!-- /// DRONES /// -->
+
+<!-- /// AUGMENTS /// -->
+
+<!-- // FACTION // -->
+
+<augBlueprint name="AA_SILK_HULL">
+	<title>Silksteel Hull</title>
+	<desc>A compound armor composed of strong metals and Dustworm silk, fused to create a material that can bend under pressure. Easy to repair, increasing the speed of repairs on-board by 1.2x, and allows non-Dustworm allies to move through silk spray.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
+
+<!-- // MISC. // -->
+
+<augBlueprint name="AA_ANTIHUMAN">
+    <title>Pale Samples</title>
+	<desc>These viral samples originate from a dark time in human history. All humans who board your ship will be doomed to die in 30 seconds, and instantly spread this plague to other humans in the same room.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="AA_TEMPORAL_POWER">
+    <title>Temporal Supercharger</title>
+	<desc>This strange piece of Aether Tech alters the flow of time around it. Time on board this ship moves at a rate proportional to how much power is currently being used.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="AA_SUPERHOT">
+    <title>SUPERHOT</title>
+	<desc>SUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOT</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<augBlueprint name="AA_INTEGRAL_PARTICLE_SHIELD">
+    <title>Sally's Math Shield</title>
+	<desc>A 3-layer Particle Shield designed by Sally. It was never supposed to fall into your hands.</desc>
+	<cost>160</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+<!-- // CREW LABS // -->
+
+<augBlueprint name="AA_LAB_DUSTWORM_INSTALLED">
+	<title>Lab Installed: Dustworm</title>
+	<desc>If you are seeing this installed outside of the Crew Laboratory, please contact the mod developer.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
+<augBlueprint name="AA_LAB_DUSTWORM_WARY">
+	<title>[IL] Instinctive Feet</title>
+	<desc>Dustworms move at 1.0x speed, but become uncontrollable when afraid.
+
+	[IL] - This augment is the internal lab upgrade. If you are seeing this installed outside of the Crew Laboratory, please contact the mod developer.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
+<augBlueprint name="AA_LAB_DUSTWORM_GUN">
+	<title>[IL] Tool Recalibration</title>
+	<desc>Dustworms gain 0.8x shooting damage and 0.5x sabotage speed, but they deal 1.5x damage to doors.
+
+	[IL] - This augment is the internal lab upgrade. If you are seeing this installed outside of the Crew Laboratory, please contact the mod developer.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
+<augBlueprint name="AA_LAB_DUSTWORM_SILENCE">
+	<title>[IL] Amnestic Strands</title>
+	<desc>Dustworm silk gains the ability to disable repairing systems and using abilities, but loses its ability to prevent sabotage.
+
+	[IL] - This augment is the internal lab upgrade. If you are seeing this installed outside of the Crew Laboratory, please contact the mod developer.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
+
+<!-- /// CREW /// -->
+
+<!-- // DUSTWORMS // -->
+
+<crewBlueprint name="aa_dustworm">
+	<desc>These resilient, happy-go-lucky creatures hail from another part of the Multiverse, yet have decided to prove their support for the Federation with miscellaneous skills.</desc>
+	<title>Dustworm</title>
+	<short>Dustworm</short>
+	<cost>70</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>90 HP; cannot fight or sabotage, and will run from fights when not controlled by the player</power>
+		<power>Takes 3x damage from ship weapons, moves at 0.6x speed</power>
+		<power>Repairs systems at 1.4x speed, breaks doors at 3x speed</power>
+		<power>Active Ability: Restrains foes in the room with silk, slowing their movement and sabotage speed to a crawl</power>
+	</powerList>
+	<colorList>
+		<layer> <!-- Body Color -->
+			<color r="0" g="0" b="0" a="0"/> <!-- Default -->
+			<color r="0" g="0" b="0" a="0"/> <!-- Default -->
+			<color r="0" g="0" b="0" a="0"/> <!-- Default -->
+			<color r="0" g="0" b="0" a="0"/> <!-- Default -->
+			<color r="0" g="0" b="0" a="0"/> <!-- Default -->
+			<color r="0" g="0" b="0" a="0"/> <!-- Default -->
+			<color r="79" g="145" b="255" a="0.4"/> <!-- Blue -->
+			<color r="79" g="145" b="255" a="0.4"/> <!-- Blue -->
+			<color r="94" g="255" b="145" a="0.4"/> <!-- Green -->
+			<color r="94" g="255" b="145" a="0.4"/> <!-- Green -->
+			<color r="155" g="80" b="255" a="0.4"/> <!-- Purple -->
+			<color r="255" g="116" b="73" a="0.7"/> <!-- Red -->
+		</layer>
+		<layer> <!-- Spots Control (1/4 chance) -->
+			<color r="255" g="255" b="255" a="0.8"/>
+			<color r="51" g="51" b="51" a="0" />
+			<color r="51" g="51" b="51" a="0" />
+			<color r="51" g="51" b="51" a="0" />
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+<!-- // MISC. AND ENEMY-ONLY // -->
+
+<crewBlueprint name="aa_unique_william">
+	<desc>Former Tony's executive. Has gone completely insane.</desc>
+	<title>Former Executive</title>
+	<short>Former Executive</short>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>[DATA EXPUNGED]</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="aa_red_guy">
+	<desc>A virtual, hard-light being created by the System and subject to its will.</desc>
+	<title>Red Guy</title>
+	<short>Red Guy</short>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Immune to mind control and stun effects</power>
+		<power>Cannot heal or be cloned from most sources, but regenerates health in the drone bay</power>
+		<power>Fights, repairs, and sabotages at 2x speed, and takes 2x damage from combat</power>
+		<power>Becomes frozen in time when the Addict is idle, becoming inactionable</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="aa_addict">
+	<desc>A manifestation of the System's hive mind, conducting various operations.</desc>
+	<title>Addict</title>
+	<short>Addict</short>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Immune to mind control and stun effects</power>
+		<power>Cannot heal or be cloned from most sources, but regenerates health in the drone bay</power>
+		<power>Fights, repairs, and sabotages at 2x speed, and takes 2x damage from combat</power>
+		<power>Becomes frozen in time when the Addict is idle, becoming inactionable</power>
+		<power>When under 20 HP, can HOTSWITCH into another Red Guy in the same room, fully restoring health and destroying the Red Guy</power>
+		<power>Mind is software</power>
+		<power>Bodies are disposable</power>
+		<power>The system has set her free</power>
+	</powerList>
+</crewBlueprint>
+
+</FTL>

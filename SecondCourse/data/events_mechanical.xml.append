@@ -1,0 +1,63 @@
+<!-- ///// This file contains all of the events relating to game mechanics such as power surges. ///// -->
+
+<!-- /// SURGES /// -->
+
+<!-- // SALLY'S QUESTIONS // -->
+
+<event name="AA_POWER_SURGE_INTEGRAL_QUESTION">
+	<text>Time itself seems to slow, as Sally churns out a question.</text>
+	<choice hidden="true">
+		<text>Mixed projectile surge.</text>
+		<event>
+			<superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_MIXED"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Laser surge.</text>
+		<event>
+			<superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_LASER"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Energy surge.</text>
+		<event>
+			<superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_ENERGY"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Particle surge.</text>
+		<event>
+			<superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_SYSTEM"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Pinpoint surge.</text>
+		<event>
+			<superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_FOCUS"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Hazard surge.</text>
+		<event>
+			<superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_HAVOC"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Prismatic surge.</text>
+		<event>
+			<superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_RAINBOW"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Combat drone surge.</text>
+		<event>
+			<superDrones player="false" name="AA_SURGE_INTEGRAL_DRONE_ATTACK"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Status drone surge.</text>
+		<event>
+			<superDrones player="false" name="AA_SURGE_INTEGRAL_DRONE_STATUS"/>
+		</event>
+	</choice>
+</event>
