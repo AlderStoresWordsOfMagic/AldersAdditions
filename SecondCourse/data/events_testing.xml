@@ -5,6 +5,16 @@
 <event name="AA_TEST_FIGHT" unused="true">
     <text>A slip-tunnel opens up nearby, and a massive Zoltan ship painted in caution stripes peeks out. "We will bring you a fight to remember... but only if you know what to pick."</text>
     <choice hidden="true">
+        <text>A training dummy.</text>
+        <event>
+            <text>"Your choice has been made." A brightly-colored Rebel Rigger swings in front of your sensors as the Zoltan vessel jumps away.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="AA_TEST_FIGHT_TEST"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
         <text>A Renegade.</text>
         <event load="AA_TEST_FIGHT_RENEGADE"/>
     </choice>
@@ -12,6 +22,17 @@
         <text>Bring me a challenge!</text>
         <event load="AA_TEST_FIGHT_BOSS"/>
     </choice>
+</event>
+
+<!-- // TEST SHIP // -->
+
+<event name="AA_TEST_FIGHT_TEST" unused="true">
+	<text>You receive a single hail from the ship as it turns to face you. "Let's dance!"</text>
+	<ship load="AA_TEST_RIGGER_SC" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
 </event>
 
 <!-- // BOSSES // -->

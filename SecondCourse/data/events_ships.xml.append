@@ -1,5 +1,18 @@
 <FTL>
 
+<!-- // TEST SHIP // -->
+
+<ship name="AA_TEST_RIGGER_SC" auto_blueprint="AA_TEST_RIGGER_SC">
+	<destroyed>
+		<text>To your surprise, you emerge victorious.</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>To your surprise, you emerge victorious.</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</deadCrew>
+</ship>
+
 <!-- /// BOSSES /// -->
 
 <!-- // STANDARD // -->
