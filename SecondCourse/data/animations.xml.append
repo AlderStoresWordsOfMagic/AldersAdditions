@@ -218,7 +218,7 @@
 	<fireFrame>7</fireFrame>
 	<firePoint  x="16" y="14"/>
 	<mountPoint x="0" y="0"/>
-	<chargeImage>weapons_artillery/math/artillery_math_laser_glow.png</chargeImage>
+	<chargeImage>weapons/artillery/math/artillery_math_laser_glow.png</chargeImage>
 	<boost>aa_artillery_math_laser_chargeglow</boost>
 </weaponAnim>
 
@@ -236,10 +236,10 @@
 	<fireFrame>6</fireFrame>
 	<firePoint x="16" y="26" />
 	<mountPoint x="0" y="0" />
-	<chargeImage>weapons_artillery/math/artillery_math_bomb_glow.png</chargeImage>
+	<chargeImage>weapons/artillery/math/artillery_math_bomb_glow.png</chargeImage>
 	<boost>aa_artillery_math_bomb_chargeglow</boost>
 </weaponAnim>
-<animSheet name="aa_bomb_math" w="525" h="35" fw="35" fh="35">weapons_artillery/math/artillery_math_bomb_projectile.png</animSheet>
+<animSheet name="aa_bomb_math" w="525" h="35" fw="35" fh="35">weapons/artillery/math/artillery_math_bomb_projectile.png</animSheet>
 <anim name="aa_bomb_math">
 	<sheet>aa_bomb_math</sheet>
 	<desc length="15" x="0" y="0"/>
