@@ -772,6 +772,15 @@
 	<stackable>false</stackable>
 </augBlueprint>
 
+<augBlueprint name="AA_PARTICLE_SHIELD_BOSS">
+    <title>Particle Shield</title>
+	<desc>Reverse-engineered Zoltan energy shield tech that sacrifices strength for efficiency. 10 seconds after being damaged, it regenerates its single layer, providing light but continuous protection in the vein of its heavier cousins.
+If another energy shield is present, it refills that shield as well but takes an amount of time that scales with the shield's strength.</desc>
+	<cost>80</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
 <augBlueprint name="AA_INTEGRAL_PARTICLE_SHIELD">
     <title>Sally's Math Shield</title>
 	<desc>A 3-layer Particle Shield designed by Sally. It was never supposed to fall into your hands.</desc>

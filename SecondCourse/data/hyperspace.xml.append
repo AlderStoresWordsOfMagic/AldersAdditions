@@ -698,6 +698,16 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 	<icon>aa_icon_superhot</icon>
 </mod-append:aug>
 
+<mod-append:aug name="AA_PARTICLE_SHIELD_BOSS"> <!-- The Lua code requires separate augments for the boss box to render correctly. -->
+    <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
+    <superShield>
+        <add>1</add>
+        <color r="255" g="120" b="0" a="1"/>
+        <shieldImage>ship/enemy_shields_particle.png</shieldImage>
+    </superShield>
+    <icon>aa_icon_particle_shield</icon>
+</mod-append:aug>
+
 <mod-append:aug name="AA_INTEGRAL_PARTICLE_SHIELD">
     <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
     <superShield>

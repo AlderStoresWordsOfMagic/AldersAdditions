@@ -120,16 +120,6 @@ This enemy carries a weak energy shield that regenerates a set amount of time af
     <icon>aa_icon_particle_shield</icon>
 </mod-append:aug>
 
-<mod-append:aug name="AA_PARTICLE_SHIELD_BOSS"> <!-- The Lua code requires separate augments for the boss box to render correctly. -->
-    <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
-    <superShield>
-        <add>1</add>
-        <color r="255" g="120" b="0" a="1"/>
-        <shieldImage>ship/enemy_shields_particle.png</shieldImage>
-    </superShield>
-    <icon>aa_icon_particle_shield</icon>
-</mod-append:aug>
-
 </mod:findLike>
 
 </FTL>

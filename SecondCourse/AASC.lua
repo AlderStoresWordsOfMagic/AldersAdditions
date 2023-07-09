@@ -83,9 +83,17 @@ end, INT_MAX)
 
 
 
--- [Sally's Particle Shield - Regenerates X seconds after being popped. Thanks to Gabriel and Julk for this one! Shoehorned from some guy named Searak and his shields...]
+-- [Particle Shields - More of them here than just the stock one in FS.]
 
 local particleShields = mods.alder.particleShields
+particleShields["AA_PARTICLE_SHIELD_BOSS"] = {
+    max = 1,
+    regen = 1,
+    time = 10,
+    color = Graphics.GL_Color(1.0, 0.47, 0.0, 1.0),
+    boss = true
+}
+
 particleShields["AA_INTEGRAL_PARTICLE_SHIELD"] = {
     max = 3,
     regen = 3,
