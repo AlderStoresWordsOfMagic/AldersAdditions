@@ -37,9 +37,6 @@
 	<mod-overwrite:launchSounds>
 		<sound>missile_giant</sound>
 	</mod-overwrite:launchSounds>
-	<mod-overwrite:hitShipSounds>
-		<sound>explosion_giant</sound>
-	</mod-overwrite:hitShipSounds>
 </mod:findName>
 
 <!-- /// WEAPONS /// -->
@@ -1487,7 +1484,7 @@ Buy/Sell Price: 95~/47~
 	<fireChance>0</fireChance>
 	<cooldown>20</cooldown>
 	<power>2</power>
-	<cost>65</cost>
+	<cost>75</cost>
 	<bp>4</bp>
 	<rarity>4</rarity>
 	<image>bomb_smash</image>
@@ -1729,8 +1726,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<speed>26</speed>
 	<rarity>4</rarity>
 	<projectiles>
-		<projectile count="1" fake="false">debris_large</projectile>
-		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="3" fake="false">debris_med</projectile>
 		<projectile count="3" fake="true">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
@@ -1828,7 +1824,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<cooldown>10</cooldown>
 	<power>3</power>
 	<speed>15</speed>
-	<cost>50</cost>
+	<cost>90</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<projectiles>
@@ -1866,7 +1862,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<damage>0</damage>
 	<sysDamage>4</sysDamage>
 	<fireChance>10</fireChance>
-	<cooldown>12</cooldown>
+	<cooldown>14</cooldown>
 	<color>
 		<r>255</r>
 		<g>120</g>
@@ -1874,7 +1870,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	</color>
 	<speed>1</speed>
 	<power>2</power>
-	<cost>45</cost>
+	<cost>85</cost>
 	<bp>2</bp>
 	<rarity>3</rarity>
 	<image>beam_contact</image>
@@ -1905,7 +1901,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	</color>
 	<speed>1</speed>
 	<power>1</power>
-	<cost>45</cost>
+	<cost>65</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<image>beam_contact</image>
@@ -1928,7 +1924,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<ion>3</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<stunChance>5</stunChance>
-	<cooldown>16</cooldown>
+	<cooldown>18</cooldown>
 	<color>
 		<r>133</r>
 		<g>231</g>
@@ -1936,7 +1932,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	</color>
 	<speed>1</speed>
 	<power>2</power>
-	<cost>45</cost>
+	<cost>80</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<image>beam_contact</image>
@@ -1960,7 +1956,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<sp>10</sp>
 	<ionBeamFix>true</ionBeamFix>
 	<stunChance>2</stunChance>
-	<cooldown>18</cooldown>
+	<cooldown>22</cooldown>
 	<color>
 		<r>229</r>
 		<g>253</g>
@@ -1968,7 +1964,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	</color>
 	<speed>1</speed>
 	<power>2</power>
-	<cost>45</cost>
+	<cost>95</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<image>beam_contact</image>
@@ -1996,7 +1992,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<breachChance>7</breachChance>
 	<stunChance>3</stunChance>
 	<cooldown>12</cooldown>
-	<power>2</power>
+	<power>1</power>
 	<cost>80</cost>
 	<rarity>4</rarity>
 	<launchSounds>
@@ -2025,7 +2021,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<desc>Loaded with projectiles made of radioactive material, this Mass Driver inflicts massive damage to hull and crew alike.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<damage>1</damage>
-	<persDamage>4</persDamage>
+	<persDamage>3</persDamage>
 	<statBoosts>
 		<statBoost name="moveSpeedMultiplier">
 			<boostType>MULT</boostType>
@@ -2060,8 +2056,8 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<shots>1</shots>
 	<sp>0</sp>
 	<breachChance>7</breachChance>
-	<cooldown>12</cooldown>
-	<power>2</power>
+	<cooldown>9</cooldown>
+	<power>1</power>
 	<cost>80</cost>
 	<rarity>5</rarity>
 	<launchSounds>
@@ -2103,7 +2099,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<power>0</power>
 	<cost>110</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<spin>0</spin>
 	<boost>
 		<type>cooldown</type>
@@ -2111,7 +2107,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 		<count>2</count>
 	</boost>
 	<projectiles>
-		<projectile count="10" fake="false">laser_particle</projectile>
+		<projectile count="13" fake="false">laser_particle</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>laser_particle</sound>
@@ -2156,14 +2152,14 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<power>0</power>
 	<cost>100</cost>
 	<bp>3</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<boost>
 		<type>cooldown</type>
 		<amount>2</amount>
 		<count>2</count>
 	</boost>
 	<projectiles>
-		<projectile count="6" fake="false">energy_shot</projectile>
+		<projectile count="8" fake="false">energy_shot</projectile>
 	</projectiles>
 	<explosion>explosion_energy</explosion>
 	<launchSounds>
@@ -2207,7 +2203,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<power>1</power>
 	<cost>75</cost>
 	<bp>4</bp>
-	<rarity>0</rarity>
+	<rarity>5</rarity>
 	<explosion>room_center_pointer</explosion>
 	<launchSounds>
 		<sound>pointer</sound>
