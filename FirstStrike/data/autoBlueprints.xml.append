@@ -117,8 +117,7 @@
         <mod-append:name>AA_DISRUPTOR_1_AMP4</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
-        <mod-append:name>AA_SPLICER_BLEED</mod-append:name>
-        <mod-append:name>AA_SPLICER_PURGE</mod-append:name>
+        <mod-append:name>AA_SPLICER</mod-append:name>
         <mod-append:name>AA_SCOUT_DECOY</mod-append:name>
         <mod-append:name>AA_SCOUT_STUN</mod-append:name>
     </mod:findName>
@@ -127,8 +126,7 @@
         <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
-        <mod-append:name>AA_SPLICER_BLEED</mod-append:name>
-        <mod-append:name>AA_SPLICER_PURGE</mod-append:name>
+        <mod-append:name>AA_SPLICER</mod-append:name>
         <mod-append:name>AA_SCOUT_DECOY</mod-append:name>
         <mod-append:name>AA_SCOUT_STUN</mod-append:name>
     </mod:findName>
@@ -141,8 +139,6 @@
         <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
-        <mod-append:name>AA_SPLICER_BLEED</mod-append:name>
-        <mod-append:name>AA_SPLICER_PURGE</mod-append:name>
         <mod-append:name>AA_SCOUT_DECOY</mod-append:name>
         <mod-append:name>AA_SCOUT_STUN</mod-append:name>
     </mod:findName>
@@ -572,7 +568,7 @@
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_DRONES_COMBAT_SPECIAL">
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
-        <mod-append:name>AA_SPLICER_PURGE</mod-append:name>
+        <mod-append:name>AA_SPLICER</mod-append:name>
         <mod-append:name>AA_SCOUT_DECOY</mod-append:name>
     </mod:findName>
 
@@ -797,7 +793,6 @@
     <mod:findName type="blueprintList" name="LIST_DRONES_SHELL_SCIENCE">
         <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
-        <mod-append:name>AA_SPLICER_BLEED</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_MORPH">
@@ -1073,10 +1068,6 @@
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
     </mod:findName>
 
-    <mod:findName type="blueprintList" name="LIST_DRONES_AUGMENTED">
-        <mod-append:name>AA_SPLICER_BLEED</mod-append:name>
-    </mod:findName>
-
     <mod:findName type="blueprintList" name="LIST_WEAPONS_CULTIST">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
@@ -1089,10 +1080,6 @@
         <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_DRONES_CULTIST">
-        <mod-append:name>AA_SPLICER_BLEED</mod-append:name>
     </mod:findName>
 
 <!-- // PIRATES // -->
@@ -1341,7 +1328,6 @@
         <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
-        <mod-append:name>AA_SPLICER_BLEED</mod-append:name>
         <mod-append:name>AA_SCOUT_STUN</mod-append:name>
     </mod:findName>
 
@@ -1349,7 +1335,6 @@
         <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
-        <mod-append:name>AA_SPLICER_BLEED</mod-append:name>
         <mod-append:name>AA_SCOUT_STUN</mod-append:name>
     </mod:findName>
 

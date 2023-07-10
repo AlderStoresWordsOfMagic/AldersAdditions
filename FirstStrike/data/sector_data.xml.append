@@ -6,7 +6,7 @@
 		<mod-append:blueprint name="AA_MISSILES_ION" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
-		<mod-append:blueprint name="AA_SPLICER_BLEED" rarity="0" />
+		<mod-append:blueprint name="AA_SPLICER" rarity="0" />
 		<mod-append:blueprint name="AA_SCOUT_DECOY" rarity="0" />
 	</mod:findLike>
 </mod:findName>
@@ -118,7 +118,7 @@
 		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="0" />
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />
-		<mod-append:blueprint name="AA_SPLICER_BLEED" rarity="0" />
+		<mod-append:blueprint name="AA_SPLICER" rarity="0" />
 		<mod-append:blueprint name="AA_SCOUT_DECOY" rarity="0" />
 	</mod:findLike>
 </mod:findName>
@@ -157,7 +157,7 @@
 		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="0" />
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />
-		<mod-append:blueprint name="AA_SPLICER_BLEED" rarity="0" />
+		<mod-append:blueprint name="AA_SPLICER" rarity="0" />
 		<mod-append:blueprint name="AA_SCOUT_DECOY" rarity="0" />
 	</mod:findLike>
 </mod:findName>

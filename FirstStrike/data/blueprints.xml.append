@@ -2507,77 +2507,14 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
     <iconImage>combat</iconImage>
 </droneBlueprint>
 
-<!-- // TOG. SPLICER // -->
+<!-- // SPLICER // -->
 
-<weaponBlueprint name="AA_DRONE_LASER_BLEED">
-	<type>LASER</type>
-	<title>Drone Disintegrator</title>
-	<desc>This Disintegrator is integrated into certain drones. It was never supposed to fall into your hands.</desc>
-	<damage>0</damage>
-	<persDamage>3</persDamage>
-	<statBoosts>
-		<statBoost name="trueHealAmount">
-			<boostType>FLAT</boostType>
-			<amount>-1</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>30</duration>
-			<boostAnim>blood_effect</boostAnim>
-		</statBoost>
-		<statBoost name="allDamageTakenMultiplier">
-			<boostType>MULT</boostType>
-			<amount>1.2</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>30</duration>
-			<boostAnim>blood_effect</boostAnim>
-		</statBoost>
-		<statBoost name="moveSpeedMultiplier">
-			<boostType>MULT</boostType>
-			<amount>0.8</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>30</duration>
-			<boostAnim>blood_effect</boostAnim>
-		</statBoost>
-	</statBoosts>
-	<shots>1</shots>
-	<sp>1</sp>
-	<fireChance>0</fireChance>
-	<breachChance>3</breachChance>
-	<rarity>0</rarity>
-	<image>laser_bio</image>
-	<launchSounds>
-		<sound>lightLaser1</sound>
-		<sound>lightLaser2</sound>
-		<sound>lightLaser3</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>laser_bio</weaponArt>
-	<iconImage>laser</iconImage>
-</weaponBlueprint>
-<weaponBlueprint name="AA_DRONE_LASER_PURGE">
-	<type>LASER</type>
+<weaponBlueprint name="AA_DRONE_LASER_SPLICER">
+	<type>BURST</type>
 	<title>Drone Scrambler</title>
 	<desc>This is a special Scrambler integrated into certain drones. It was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
+	<radius>70</radius>
 	<statBoosts>
 		<statBoost name="healSpeed">
 			<boostType>MULT</boostType>
@@ -2597,6 +2534,9 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 			<duration>10</duration>
 		</statBoost>
 	</statBoosts>
+	<projectiles>
+		<projectile count="5" fake="false">laser_purge</projectile>
+	</projectiles>
 	<shots>1</shots>
 	<sp>10</sp>
 	<rarity>0</rarity>
@@ -2620,41 +2560,20 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
-<blueprintList name="AA_LIST_TOGGLE_SPLICER">
-    <name>AA_SPLICER_BLEED</name>
-    <name>AA_SPLICER_PURGE</name>
-</blueprintList>
-<droneBlueprint name="AA_SPLICER_BLEED">
+<droneBlueprint name="AA_SPLICER">
     <type>COMBAT</type>
     <tip>tip_toggle_combat</tip>
-    <title>Splicer Drone [Disintegrator]</title>
-    <short>Splicer [D]</short>
-    <desc>[CURRENT MODE: Disintegrator] A dangerous anti-crew drone that specializes in toying with the flesh.</desc>
+    <title>Splicer Drone</title>
+    <short>Splicer</short>
+    <desc>A dangerous anti-crew drone that specializes in toying with the flesh.</desc>
     <power>1</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>
     <speed>15</speed>
     <cost>75</cost>
     <bp>3</bp>
-    <droneImage>aa_drone_splicer_d</droneImage>
-    <weaponBlueprint>AA_DRONE_LASER_BLEED</weaponBlueprint>
-    <rarity>5</rarity>
-    <iconImage>combat</iconImage>
-</droneBlueprint>
-<droneBlueprint name="AA_SPLICER_PURGE">
-    <type>COMBAT</type>
-    <tip>tip_toggle_combat</tip>
-    <title>Splicer Drone [Scrambler]</title>
-    <short>Splicer [S]</short>
-    <desc>[CURRENT MODE: Scrambler] A dangerous anti-crew drone that specializes in toying with the flesh.</desc>
-    <power>1</power>
-    <cooldown>1000</cooldown>
-    <dodge>0</dodge>
-    <speed>16</speed>
-    <cost>75</cost>
-    <bp>3</bp>
-    <droneImage>aa_drone_splicer_p</droneImage>
-    <weaponBlueprint>AA_DRONE_LASER_PURGE</weaponBlueprint>
+    <droneImage>aa_drone_splicer</droneImage>
+    <weaponBlueprint>AA_DRONE_LASER_SPLICER</weaponBlueprint>
     <rarity>0</rarity>
     <iconImage>combat</iconImage>
 </droneBlueprint>

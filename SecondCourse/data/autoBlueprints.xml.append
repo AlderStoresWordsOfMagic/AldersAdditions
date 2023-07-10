@@ -259,7 +259,7 @@
 		<weapon name="AA_ENERGY_RAD" />
 	</weaponList>
 	<droneList drones="10" count="2">
-		<drone name="AA_SPLICER_PURGE" />
+		<drone name="AA_SPLICER" />
 		<drone name="PEST_RAD" />
 	</droneList>
 	<health amount="20" />
@@ -294,7 +294,7 @@
 		<weapon name="LASER_BIO" />
 	</weaponList>
 	<droneList drones="10" count="2">
-		<drone name="AA_SPLICER_BLEED" />
+		<drone name="AA_SPLICER" />
 		<drone name="PEST_RAD" />
 	</droneList>
 	<health amount="20" />
@@ -328,7 +328,7 @@
 		<weapon name="AA_ENERGY_RAD" />
 	</weaponList>
 	<droneList drones="10" count="2">
-		<drone name="AA_SPLICER_BLEED" />
+		<drone name="AA_SPLICER" />
 		<drone name="PEST_RAD" />
 	</droneList>
 	<health amount="20" />
@@ -362,7 +362,7 @@
 		<weapon name="AA_ENERGY_RAD" />
 	</weaponList>
 	<droneList drones="10" count="2">
-		<drone name="AA_SPLICER_PURGE" />
+		<drone name="AA_SPLICER" />
 		<drone name="PEST_RAD" />
 	</droneList>
 	<health amount="20" />
@@ -397,8 +397,8 @@
 		<weapon name="ION_BIO" />
 	</weaponList>
 	<droneList drones="10" count="3">
-		<drone name="AA_SPLICER_PURGE" />
-		<drone name="AA_SPLICER_BLEED" />
+		<drone name="AA_SPLICER" />
+		<drone name="PEST_RAD" />
 		<drone name="ENERGY_1_AMP2" />
 	</droneList>
 	<health amount="20" />
