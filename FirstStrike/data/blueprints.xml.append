@@ -188,7 +188,19 @@
 	<title>Shield Smasher MK I</title>
 	<short>Smash I</short>
 	<tip>tip_smash</tip>
-	<desc>This accelerator-like weapon is specifically designed to create and fire bolts that can overload shield generators.</desc>
+	<descriptionOverride>This accelerator-like weapon is specifically designed to create and fire bolts that can overload shield generators.
+
+Stats:
+Required Power: 1
+Charge Time: 12 seconds
+Shots Per Charge: 1
+
+Layers Per Shot: 1
+Layers Crushed: 12
+
+Breach Chance: 30%
+
+Buy/Sell Price: 60~/30~</descriptionOverride>
 	<tooltip>P.</tooltip>
 	<damage>0</damage>
 	<radius>32</radius>
@@ -230,7 +242,19 @@
 	<title>Shield Smasher MK II</title>
 	<short>Smash II</short>
 	<tip>tip_smash</tip>
-	<desc>A heavy, powerful anti-shield weapon with lower accuracy than its predecessor, but a much higher shot count.</desc>
+<descriptionOverride>A heavy, powerful anti-shield weapon with lower accuracy than its predecessor, but a much higher shot count.
+
+Stats:
+Required Power: 3
+Charge Time: 14 seconds
+Shots Per Charge: 3
+
+Layers Per Shot: 1
+Layers Crushed: 12
+
+Breach Chance: 40%
+
+Buy/Sell Price: 80~/40~</descriptionOverride>
 	<tooltip>Proton Accelerator; 1 crew damage, 5 shots, pops shields. 15 second cooldown. High breach chance.</tooltip>
 	<damage>0</damage>
 	<radius>38</radius>
@@ -466,7 +490,17 @@ This enemy-only version lacks the innate +10% accuracy bonus of missile weapons.
 	<tip>tip_smash</tip>
 	<title>Smashing Missiles</title>
 	<short>Smash M.</short>
-	<desc>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.</desc>
+	<descriptionOverride>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.
+
+Stats:
+Required Power: 3
+Charge Time: 20 seconds
+Shots Per Charge: 1
+
+Shield Layers Popped: 4
+Shield Layers Crushed: 12
+
+Buy/Sell Price: 110~/55~</descriptionOverride>
 	<tooltip>Proton missiles.</tooltip>
 	<damage>0</damage>
 	<accuracyMod>30</accuracyMod>
@@ -504,10 +538,19 @@ This enemy-only version lacks the innate +10% accuracy bonus of missile weapons.
 	<tip>tip_smash</tip>
 	<title>Smashing Missiles [E]</title>
 	<short>Smash M. [E]</short>
-	<desc>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.
+	<descriptionOverride>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.
 
 This enemy-only version lacks the innate +10% accuracy bonus of missile weapons. It was never supposed to fall into your hands.
-	</desc>
+
+Stats:
+Required Power: 3
+Charge Time: 20 seconds
+Shots Per Charge: 1
+
+Shield Layers Popped: 4
+Shield Layers Crushed: 12
+
+Buy/Sell Price: 110~/55~</descriptionOverride>
 	<tooltip>Proton missiles.</tooltip>
 	<damage>0</damage>
 	<missiles>1</missiles>
@@ -517,7 +560,7 @@ This enemy-only version lacks the innate +10% accuracy bonus of missile weapons.
 	<power>3</power>
 	<cost>110</cost>
 	<bp>6</bp>
-	<rarity>5</rarity>
+	<rarity>0</rarity>
 	<image>missile_smash</image>
 	<explosion>explosion_smash</explosion>
 	<launchSounds>
@@ -553,7 +596,7 @@ This enemy-only version lacks the innate +10% accuracy bonus of missile weapons.
 	<damage>0</damage>
 	<spin>720</spin>
 	<shots>1</shots>
-	<cooldown>6</cooldown>
+	<cooldown>4</cooldown>
 	<power>2</power>
 	<cost>110</cost>
 	<bp>10</bp>
@@ -1070,7 +1113,18 @@ Buy/Sell Price: 95~/47~
 	<tip>tip_smash</tip>
 	<title>Smashing Beam</title>
 	<short>Smash Beam</short>
-	<desc>This Beam is capable of hitting shields instead of simply passing through them, with the additional potential to shield-crush. Also creates breaches.</desc>
+	<descriptionOverride>This Beam is capable of hitting shields instead of simply passing through them, with the additional potential to shield-crush. Also creates breaches.
+
+Stats:
+Required Power: 2
+Charge Time: 14 seconds
+
+Shield Layers Popped: 1
+Shield Layers Crushed: 12
+
+Breach Chance: 100%
+
+Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tooltip>Beam weapon with extended line. 1 damage per room.</tooltip>
 	<damage>0</damage>
 	<fireChance>0</fireChance>
@@ -1474,7 +1528,17 @@ Buy/Sell Price: 95~/47~
 	<title>Smashing Bomb</title>
 	<short>Smash Bomb</short>
 	<locked>1</locked>
-	<desc>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.</desc>
+	<descriptionOverride>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.
+
+Stats:
+Required Power: 2
+Charge Time: 20 seconds
+Shots Per Charge: 1
+
+Shield Layers Popped: 4
+Shield Layers Crushed: 12
+
+Buy/Sell Price: 75~/36~</descriptionOverride>
 	<tooltip>Bomb weapon; requires a missile; does 1 damage to target system. Can target your own ship.</tooltip>
 	<damage>0</damage>
 	<accuracyMod>30</accuracyMod>
@@ -1505,9 +1569,19 @@ Buy/Sell Price: 95~/47~
 	<title>Smashing Bomb [E]</title>
 	<short>Smash Bomb [E]</short>
 	<locked>1</locked>
-	<desc>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.
+	<descriptionOverride>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.
 
-This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It was never supposed to fall into your hands.</desc>
+This enemy-only version lacks the innate +10% accuracy bonus of missile weapons. It was never supposed to fall into your hands.
+
+Stats:
+Required Power: 2
+Charge Time: 20 seconds
+Shots Per Charge: 1
+
+Shield Layers Popped: 4
+Shield Layers Crushed: 12
+
+Buy/Sell Price: 75~/36~</descriptionOverride>
 	<tooltip>Bomb weapon; requires a missile; does 1 damage to target system. Can target your own ship.</tooltip>
 	<damage>0</damage>
 	<missiles>1</missiles>
@@ -2093,7 +2167,7 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<radius>55</radius>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>5</fireChance>
+	<fireChance>1</fireChance>
 	<breachChance>0</breachChance>
 	<cooldown>1</cooldown>
 	<power>0</power>
@@ -2135,8 +2209,8 @@ This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It
 	<title>Pre-emptive Energy Cannon</title>
 	<short>Pre-Energy</short>
 	<tip>tip_preemptive</tip>
-	<desc>This energy cannon fires 6 blasts right at the start of combat, but it can only fire once per fight.</desc>
-	<tooltip>Fires 6 blasts that deal 1 ion damage and 1 hull damage each. Can hit and disable shields as well as systems.</tooltip>
+	<desc>This energy cannon fires 8 blasts right at the start of combat, but it can only fire once per fight.</desc>
+	<tooltip>Fires 8 blasts that deal 1 ion damage and 1 hull damage each. Can hit and disable shields as well as systems.</tooltip>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
 	<noPersDamage>true</noPersDamage>

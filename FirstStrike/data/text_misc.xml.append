@@ -16,7 +16,7 @@ An expansion pack that contains many unusual weapons, and which serves as a grou
 
 <!-- // WEAPONS // -->
 
-<text name="tip_disruptor">Tip: Disruptors deal ion damage, allowing them to crush shields but weakening their effect on a ship compared to standard beams. They have an advantage over standard ion weapons by being able to strike multiple systems with one sweep, and cannot miss.</text>
+<text name="tip_disruptor">Tip: Disruptors deal ion damage, allowing them to take down shields but weakening their effect on a ship compared to standard beams. They have an advantage over standard ion weapons by being able to strike multiple systems with one sweep, and cannot miss.</text>
 <text name="tip_driver">Tip: Mass drivers function much like Laser weapons, with the added bonus of projectiles instantly reaching the target. As such, they can't be shot by defense Drones, and are easy to slip past gaps in shielding.</text>
 <text name="tip_capacitor">Tip: Capacitors deal ion damage, serving a similar purpose to ion barrage weapons with increased accuracy. What Disruptors are to Beams, Capacitors are to Pinpoints.</text>
 <text name="tip_bleed">Tip: Disintegrator weapons deal lots of crew damage and open up gaping wounds, causing struck crew to bleed out and slowly lose health alongside reducing their movement speed and increasing the damage they take.</text>

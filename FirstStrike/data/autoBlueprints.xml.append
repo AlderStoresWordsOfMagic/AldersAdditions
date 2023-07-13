@@ -509,7 +509,6 @@
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_LASERS_CHAIN_AND_CHARGE">
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
-        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_LASERS_SPECIAL">
