@@ -242,17 +242,6 @@
     <power>2</power>
     <cost>70</cost>
     <bp>10</bp>
-	<statBoosts>
-		<statBoost name="trueHealAmount">
-			<boostType>FLAT</boostType>
-			<amount>-1</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<duration>10</duration>
-			<boostAnim>blood_effect</boostAnim>
-		</statBoost>
-	</statBoosts>
     <speed>0</speed>
     <rarity>4</rarity>
     <projectiles>
@@ -314,7 +303,7 @@
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<image>bomb_bio</image>
-	<explosion>explosion_random</explosion>
+	<explosion>explosion_bio</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -346,17 +335,6 @@
     <power>2</power>
     <cost>70</cost>
     <bp>10</bp>
-	<statBoosts>
-		<statBoost name="trueHealAmount">
-			<boostType>FLAT</boostType>
-			<amount>-1</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<duration>10</duration>
-			<boostAnim>blood_effect</boostAnim>
-		</statBoost>
-	</statBoosts>
     <speed>0</speed>
     <rarity>4</rarity>
     <projectiles>
@@ -387,7 +365,7 @@
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<image>bomb_stun</image>
-	<explosion>explosion_random</explosion>
+	<explosion>explosion_big1_ion</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -624,6 +602,98 @@
 </weaponBlueprint>
 
 <!-- /// ARTILLERY /// -->
+
+<!-- // TSS-BONNIE-24 // -->
+
+<weaponBlueprint name="AA_ARTILLERY_TONY_BIO">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+    <title>'Spring' Scattered Launcher [E]</title>
+    <short>'Spring' [E]</short>
+	<desc>A powerful Bomb Launcher that manufactures and fires three small irradiation bombs. This one was never supposed to fall into your hands.</desc>
+	<tooltip>Bomb weapon; requires a missile; does 2 damage, but only damages system, not hull. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<persDamage>3</persDamage>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>20</cooldown>
+	<power>0</power>
+	<cost>150</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_bio</image>
+	<explosion>explosion_bio</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>renegade_bomblauncher_spring</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_ARTILLERY_TONY_STUN">
+	<type>BOMB</type>
+	<tip>tip_bombs</tip>
+    <title>'Lock' Scattered Launcher [E]</title>
+    <short>'Lock' [E]</short>
+	<desc>A powerful Bomb Launcher that manufactures and fires three small stun bombs. This one was never supposed to fall into your hands.</desc>
+	<tooltip>Bomb weapon; requires a missile; does 2 damage, but only damages system, not hull. Can target your own ship.</tooltip>
+	<damage>0</damage>
+	<stun>25</stun>
+	<shots>3</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>3</breachChance>
+	<cooldown>20</cooldown>
+	<power>0</power>
+	<cost>150</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_stun</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>renegade_bomblauncher_lock</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
 
 <!-- // SALLY // -->
 

@@ -13,6 +13,7 @@
 <!-- // REPUTATION // -->
 
 	<variable name="aa_rep_provision" op="set" val="0"/> <!-- // Reputation with the Provisional Government. // -->
+	<variable name="aa_rep_maelstrom" op="set" val="0"/> <!-- // Reputation with Maelstrom Engineering, Inc. // -->
 
 <!-- // ACHIEVEMENTS // -->
 

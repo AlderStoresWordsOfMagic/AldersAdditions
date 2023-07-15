@@ -589,8 +589,8 @@
 	<minSector>1</minSector>
 	<maxSector>8</maxSector>
 	<systemList>
-		<artillery power="3" max="3" room="9" start="true" weapon="AA_LOOT_RENEGADE_TONY_BIO" />
-		<artillery power="3" max="3" room="23" start="true" weapon="AA_LOOT_RENEGADE_TONY_STUN" />
+		<artillery power="3" max="3" room="9" start="true" weapon="AA_ARTILLERY_TONY_BIO" />
+		<artillery power="3" max="3" room="23" start="true" weapon="AA_ARTILLERY_TONY_STUN" />
 		<clonebay power="2" max="2" room="16" start="true" />
 		<doors power="3" max="3" room="10" start="true" />
 		<engines power="2" max="2" room="12" start="true" />
@@ -707,8 +707,8 @@
 	<minSector>1</minSector>
 	<maxSector>8</maxSector>
 	<systemList>
-		<artillery power="3" max="3" room="9" start="true" weapon="AA_LOOT_RENEGADE_TONY_BIO" />
-		<artillery power="3" max="3" room="23" start="true" weapon="AA_LOOT_RENEGADE_TONY_STUN" />
+		<artillery power="3" max="3" room="9" start="true" weapon="AA_ARTILLERY_TONY_BIO" />
+		<artillery power="3" max="3" room="23" start="true" weapon="AA_ARTILLERY_TONY_STUN" />
 		<clonebay power="2" max="2" room="16" start="true" />
 		<doors power="3" max="3" room="10" start="true" />
 		<engines power="2" max="2" room="12" start="true" />
