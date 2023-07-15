@@ -1395,7 +1395,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
 	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
-	<sp>0</sp>
+	<sp>10</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>4</stunChance>
