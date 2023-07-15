@@ -897,7 +897,6 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 
 <race name="aa_unique_william">
 	<essential>1</essential>
-	<punchTimer min="166" max="200"/>
 	<damageMultiplier>1.5</damageMultiplier>
 	<rangedDamageMultiplier>1</rangedDamageMultiplier>
 	<suffocationModifier>0.5</suffocationModifier>
@@ -969,6 +968,7 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 		<cooldownColor r="112" g="75" b="149"/>
 		<animFrame>-1</animFrame>
 		<temporaryEffect>
+			<animSheet>aa_unique_william_power_base</animSheet>
 			<duration>7</duration>
 			<cooldownColor r="255" g="0" b="0"/>
 			<resistsMindControl>true</resistsMindControl>
