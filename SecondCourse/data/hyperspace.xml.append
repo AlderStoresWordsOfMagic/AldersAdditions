@@ -250,7 +250,7 @@ This enemy has one or more insulated rooms, marked by the blue border and R icon
 	</mod-append:shipIcon>
 
 	<mod-append:shipIcon>
-		<name>aa_icon_hack_immune</name>
+		<name>aa_icon_firewall</name>
 		<tooltip>FIREWALLED ROOMS:
 This enemy has one or more firewalled rooms, marked by the purple border and R icon in the top left. Firewalled rooms are immune to hacking limpets, but still take all damage as normal.</tooltip>
 	</mod-append:shipIcon>

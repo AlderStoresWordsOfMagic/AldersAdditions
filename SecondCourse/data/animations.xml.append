@@ -65,16 +65,16 @@
 	<time>1</time>
 </anim>
 
-<animSheet name="room_ionresist_1x3" w="35" h="105" fw="35" fh="105">effects/room_ionresist_1x3.png</animSheet>
-<anim name="room_ionresist_1x3">
-	<sheet>room_ionresist_1x3</sheet>
+<animSheet name="room_insulated_1x3" w="35" h="105" fw="35" fh="105">effects/room_insulated_1x3.png</animSheet>
+<anim name="room_insulated_1x3">
+	<sheet>room_insulated_1x3</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
-<animSheet name="room_ionresist_1x4" w="35" h="140" fw="35" fh="140">effects/room_ionresist_1x4.png</animSheet>
-<anim name="room_ionresist_1x4">
-	<sheet>room_ionresist_1x4</sheet>
+<animSheet name="room_insulated_1x4" w="35" h="140" fw="35" fh="140">effects/room_insulated_1x4.png</animSheet>
+<anim name="room_insulated_1x4">
+	<sheet>room_insulated_1x4</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
