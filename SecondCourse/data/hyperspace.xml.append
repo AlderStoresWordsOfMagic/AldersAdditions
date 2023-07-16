@@ -301,15 +301,6 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 
 <!-- // CUSTOM SHIP PROPERTIES // -->
 
-<!-- / TEST / -->
-
-<mod-append:customShip name="AA_TEST_FIGHTER">
-	<shipIcons>
-		<shipIcon>icon_threat</shipIcon>
-	</shipIcons>
-	<hiddenAug>AA_PARTICLE_SHIELD</hiddenAug>
-</mod-append:customShip>
-
 <!-- / BOSSES / -->
 
 <mod-append:customShip name="AA_BOSS_REBEL_CRUISER">
