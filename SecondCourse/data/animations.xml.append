@@ -65,6 +65,33 @@
 	<time>1</time>
 </anim>
 
+
+
+<!-- /// ROOMS /// -->
+
+<!-- // RESISTANCES // -->
+
+<animSheet name="insulated_icon" w="35" h="35" fw="35" fh="35">effects/icon_insulated.png</animSheet>
+<anim name="insulated_icon">
+	<sheet>insulated_icon</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="firewalled_icon" w="35" h="35" fw="35" fh="35">effects/icon_firewalled.png</animSheet>
+<anim name="firewalled_icon">
+	<sheet>firewalled_icon</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="encased_icon" w="35" h="35" fw="35" fh="35">effects/icon_encased.png</animSheet>
+<anim name="encased_icon">
+	<sheet>encased_icon</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 <animSheet name="room_insulated_1x3" w="35" h="105" fw="35" fh="105">effects/room_insulated_1x3.png</animSheet>
 <anim name="room_insulated_1x3">
 	<sheet>room_insulated_1x3</sheet>
@@ -78,6 +105,8 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
+
+
 
 <!-- /// WEAPONS /// -->
 

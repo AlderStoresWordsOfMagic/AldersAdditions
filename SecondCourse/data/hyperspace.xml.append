@@ -246,19 +246,25 @@
 	<mod-append:shipIcon>
 		<name>aa_icon_insulated</name>
 		<tooltip>INSULATED ROOMS:
-This enemy has one or more insulated rooms, marked by the blue border and R icon in the top left. Insulated rooms will take no ion damage from weapons or instant crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
+This enemy has one or more insulated rooms, marked by the blue border and I icon in the top left. Insulated rooms will take no ion damage from weapons or instant crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
 	</mod-append:shipIcon>
 
 	<mod-append:shipIcon>
 		<name>aa_icon_firewall</name>
 		<tooltip>FIREWALLED ROOMS:
-This enemy has one or more firewalled rooms, marked by the purple border and R icon in the top left. Firewalled rooms are immune to hacking limpets, but still take all damage as normal.</tooltip>
+This enemy has one or more firewalled rooms, marked by the purple border and H icon in the top left. Firewalled rooms are immune to hacking limpets, but still take all damage as normal.</tooltip>
 	</mod-append:shipIcon>
 
-		<mod-append:shipIcon>
+	<mod-append:shipIcon>
 		<name>aa_icon_encased</name>
 		<tooltip>ENCASED ROOMS:
-This enemy has one or more firewalled rooms, marked by the orange border and R icon in the top left. Encased rooms are immune to sabotage and fire damage, but otherwise take damage as normal.</tooltip>
+This enemy has one or more firewalled rooms, marked by the orange border and S icon in the top left. Encased rooms are immune to sabotage and fire damage, but otherwise take damage as normal.</tooltip>
+	</mod-append:shipIcon>
+
+	<mod-append:shipIcon>
+		<name>aa_icon_multiresist</name>
+		<tooltip>MULTIPLE RESISTANCES:
+This enemy has multiple resistant rooms of different types, marked by the R icon in the top left. Use your knowledge to determine which rooms are resistant to what.</tooltip>
 	</mod-append:shipIcon>
 
 	<mod-append:shipIcon>
@@ -648,19 +654,18 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 		<shipIcon>icon_majorthreat</shipIcon>
 		<shipIcon>icon_auto</shipIcon>
 		<shipIcon>icon_no2</shipIcon>
-		<shipIcon>icon_resist</shipIcon>
-		<shipIcon>aa_icon_insulated</shipIcon>
+		<shipIcon>aa_icon_multiresist</shipIcon>
 		<shipIcon>aa_icon_supermath</shipIcon>
 	</shipIcons>
 	<rooms>
 		<room id="6">
-			<roomAnim renderLayer="0">room_ionresist_1x4</roomAnim>
-			<roomAnim renderLayer="3">resist_icon</roomAnim>
+			<roomAnim renderLayer="0">room_insulated_1x4</roomAnim>
+			<roomAnim renderLayer="3">insulated_icon</roomAnim>
 			<ionDamageResistChance>100</ionDamageResistChance>
 		</room>
 		<room id="12">
-			<roomAnim renderLayer="0">room_ionresist_1x3</roomAnim>
-			<roomAnim renderLayer="3">resist_icon</roomAnim>
+			<roomAnim renderLayer="0">room_insulated_1x3</roomAnim>
+			<roomAnim renderLayer="3">insulated_icon</roomAnim>
 			<ionDamageResistChance>100</ionDamageResistChance>
 		</room>
 		<room id="13">
@@ -726,10 +731,6 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 </mod-append:aug>
 
 <!-- // CREW LABS // -->
-
-<mod-append:aug name="AA_LAB_DUSTWORM_INSTALLED">
-	<icon>aa_icon_particle_shield</icon>
-</mod-append:aug>
 
 <mod-append:aug name="AA_LAB_DUSTWORM_WARY">
 	<statBoosts>
