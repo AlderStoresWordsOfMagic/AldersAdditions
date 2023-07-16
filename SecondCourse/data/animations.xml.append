@@ -106,6 +106,21 @@
 	<time>1</time>
 </anim>
 
+<animSheet name="room_firewalled_2x2" w="70" h="70" fw="70" fh="70">effects/room_firewalled_2x2.png</animSheet>
+<anim name="room_firewalled_2x2">
+	<sheet>room_firewalled_2x2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="room_encased_1x2" w="35" h="70" fw="35" fh="70">effects/room_encased_1x2.png</animSheet>
+<anim name="room_encased_1x2">
+	<sheet>room_encased_1x2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+
 
 
 <!-- /// WEAPONS /// -->

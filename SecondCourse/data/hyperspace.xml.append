@@ -658,30 +658,42 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 		<shipIcon>aa_icon_supermath</shipIcon>
 	</shipIcons>
 	<rooms>
-		<room id="6">
+		<room id="6"> <!-- Drone Control -->
 			<roomAnim renderLayer="0">room_insulated_1x4</roomAnim>
 			<roomAnim renderLayer="3">insulated_icon</roomAnim>
 			<ionDamageResistChance>100</ionDamageResistChance>
 		</room>
-		<room id="12">
+		<room id="10"> <!-- Shields -->
+			<roomAnim renderLayer="0">room_encased_1x2</roomAnim>
+			<roomAnim renderLayer="3">encased_icon</roomAnim>
+		</room>
+		<room id="11"> <!-- Weapon Control -->
+			<roomAnim renderLayer="0">room_encased_1x2</roomAnim>
+			<roomAnim renderLayer="3">encased_icon</roomAnim>
+		</room>
+		<room id="12"> <!-- Hacking -->
 			<roomAnim renderLayer="0">room_insulated_1x3</roomAnim>
 			<roomAnim renderLayer="3">insulated_icon</roomAnim>
 			<ionDamageResistChance>100</ionDamageResistChance>
 		</room>
-		<room id="13">
+		<room id="13"> <!-- Temporal -->
 			<roomAnim renderLayer="0">resist_1x3</roomAnim>
 			<roomAnim renderLayer="3">resist_icon</roomAnim>
 			<sysDamageResistChance>100</sysDamageResistChance>
 		</room>
-		<room id="19">
+		<room id="19"> <!-- Doors -->
 			<roomAnim renderLayer="0">resist_1x1</roomAnim>
 			<roomAnim renderLayer="3">resist_icon</roomAnim>
 			<sysDamageResistChance>100</sysDamageResistChance>
 		</room>
-		<room id="17">
+		<room id="17"> <!-- Engines -->
 			<roomAnim renderLayer="0">resist_2x2</roomAnim>
 			<roomAnim renderLayer="3">resist_icon</roomAnim>
 			<sysDamageResistChance>100</sysDamageResistChance>
+		</room>
+		<room id="20"> <!-- Cloaking -->
+			<roomAnim renderLayer="0">room_firewalled_2x2</roomAnim>
+			<roomAnim renderLayer="3">firewalled_icon</roomAnim>
 		</room>
 	</rooms>
 	<hiddenAug>SYSTEM_CASING_NEW</hiddenAug> <!-- // Titanium System Casing, for that extra space bastardry. // -->

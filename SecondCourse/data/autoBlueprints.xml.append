@@ -947,27 +947,4 @@
 	<aug name="SLUG_GEL" />
 </shipBlueprint>
 
-<!-- // MISC. // -->
-
-<shipBlueprint name="AA_TEST_FIGHTER" layout="mu_rebel_fighter" img="mu_rebel_fighter">
-	<class>Test Fighter</class>
-	<systemList>
-		<engines power="2" max="3" room="5" start="true" />
-		<medbay power="1" max="3" room="3" start="false" />
-		<oxygen power="1" max="3" room="2" start="true" />
-		<pilot power="1" max="3" room="0" start="true" />
-		<shields power="2" max="8" room="6" start="true" />
-		<drones power="2" max="8" room="1" start="false" />
-		<weapons power="2" max="8" room="4" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="10" count="4" load="LIST_WEAPONS_REBEL" />
-	<droneList drones="0" count="2" load="LIST_DRONES_REBEL" />
-	<health amount="32767" />
-	<maxPower amount="33" />
-	<crewCount amount="3" max="6" class="LIST_CREW_REBEL_RANDOM" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
 </FTL>
