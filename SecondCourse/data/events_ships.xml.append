@@ -1,17 +1,148 @@
+<!-- ///// This file contains all of the events relating to ships, allowing them to function properly even when consoled in. ///// -->
+
 <FTL>
+
+<!-- /// STANDARD SHIPS /// -->
 
 <!-- // TEST SHIP // -->
 
 <ship name="AA_TEST_RIGGER_SC" auto_blueprint="AA_TEST_RIGGER_SC">
-	<destroyed>
-		<text>To your surprise, you emerge victorious.</text>
-		<autoReward level="HIGH">standard</autoReward>
-	</destroyed>
-	<deadCrew>
-		<text>To your surprise, you emerge victorious.</text>
-		<autoReward level="HIGH">standard</autoReward>
-	</deadCrew>
+	<surrender  chance="0.8" min="2" max="3" load="AA_SHIP_PROVISION_SURRENDER"/>
+	<escape  chance="0.25" min="3" max="4" load="AA_SHIP_PROVISION_ESCAPE"/>
+	<destroyed load="AA_SHIP_PROVISION_DESTROYED"/>
+	<deadCrew load="AA_SHIP_PROVISION_DEADCREW"/>
 </ship>
+
+<!-- // PROVISION // -->
+
+<!-- / NORMAL /-->
+
+<event name="AA_SHIP_PROVISION_DESTROYED">
+	<text load="AA_TEXT_DESTROYED_PROVISION"/>
+	<autoReward level="MED">standard</autoReward>
+</event>
+<textList name="AA_TEXT_DESTROYED_PROVISION">
+	<text>Gouts of colorful fire erupt from the ship as its hull splits into small chunks. You're not sure how to feel.</text>
+	<text>For all of the fight they put up, and the new moral low you've stooped to, they didn't even have that much meat on their ship for you to take.</text>
+	<text>Your crew give you strange glances as you order the final shot to pierce your target's hull. You know their loyalty is strained from how tense the atmosphere feels.</text>
+	<text>Some sins are unforgivable, even if they yield plenty to scrap. Though well-armed for a civilian vessel, you know the Dustworms aboard had no ill intent.</text>
+	<text>As the pieces of the ship drift apart from each other, you try to make peace with your deed by saying you weren't there to see the passengers die.</text>
+	<text>While you pick apart what remains of the superstructure, you try to push away the thought that the A.T.L.A.S. Guard certainly will not be happy about this. You can't stop thinking about it.</text>
+	<text>You feel somewhat emotional watching the Provision vessel crumble under the might of your guns. No matter how desensitized you become to violence, you can sometimes still feel its sting.</text>
+	<text>As the ship breaks apart, you swear you can see a few spatters of blue blood on one of the pieces, belonging to another few innocent lives snuffed out under your wrath.</text>
+</textList>
+
+<event name="AA_SHIP_PROVISION_DEADCREW">
+	<text load="AA_TEXT_DEADCREW_PROVISION"/>
+	<autoReward level="HIGH">standard</autoReward>
+</event>
+<textList name="AA_TEXT_DEADCREW_PROVISION">
+	<text>Death isn't easy to witness, not even for a hardened veteran like yourself. It's even harder up close, when you can gaze into the face of the civilians whose futures and careers you've cut short.</text>
+	<text>Your methods of fighting have left quite the mess inside the Provision ship. With some difficulty, you push the gore out of your mind and haul whatever you can out of the hull.</text>
+	<text>The corpses of the Dustworms you've just slaughtered are laid plain as day within their new coffin, looking like deflated balloons strewn throughout the ship. Stripping the ship, though possible, is a disgusting operation.</text>
+	<text>Yet another wave of innocent lives has been crushed without mercy. You take a moment to reflect upon yourself and your deeds, swallowing the gravity of your crime.</text>
+	<text>As you and your crew inspect the deactivated ship, you see a wounded Dustworm, squirming on the floor and begging you to save them. They die before you can even pick them up. You take a moment to clear your mind of their last expression.</text>
+	<text>Killing these Dustworms is much like picking clean Union ships. They're both civilian craft, and invading them is an act of piracy. You wonder what the Federation would think about what you just did.</text>
+	<text>Boarding the ship yourself, the scene before you looks like something straight out of a slasher film. The only reason you don't vomit on sight is because of the color of their blood, but you still feel quite sick as you scrap the ship.</text>
+	<text>New and strange as these Dustworms may be, they seemed like they'd fit right in with the other members of the Federation. You're not making any friends here by popping them.</text>
+</textList>
+
+<event name="AA_SHIP_PROVISION_SURRENDER">
+	<text load="AA_TEXT_SURRENDER_PROVISION"/>
+	<choice>
+		<text>Accept their surrender.</text>
+		<event>
+			<ship hostile="false"/>
+			<autoReward level="RANDOM">stuff</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text load="GENERIC_SURRENDER_CHOICE_NOMERCY"/>
+		<event/>
+	</choice>
+</event>
+<textList name="AA_TEXT_SURRENDER_PROVISION">
+	<text>The Provision ship repeatedly hails you, the crew on board begging for their lives with tears in their eyes.</text>
+	<text>A bruised and battered Dustworm appears on the viewscreen, semi-conscious from how much they've been thrown around. They can barely muster the strength to plead for mercy.</text>
+	<text>A supply crate is jettisoned from the Provision vessel. A quick scan indicates that their communications are shot, and the crate is very likely an offer of surrender.</text>
+	<text>"What are you doing? Please, please let us go, we didn't even do anything!"</text>
+	<text>"Is this what your Federation does? Promise a hand of peace, then show up with a blazing gun?"</text>
+	<text>"This is everything we have to give. Even the food and the medical kits... please, we just want to live!"</text>
+	<text>"Not like this, not like this! What do you want from us?"</text>
+</textList>
+
+<event name="AA_SHIP_PROVISION_ESCAPE">
+	<text load="AA_TEXT_ESCAPE_PROVISION"/>
+	<ship hostile="true"/>
+</event>
+<textList name="AA_TEXT_ESCAPE_PROVISION">
+	<text>The Dustworms frantically mash and point at their buttons and screens, and their FTL drive flares to life. A sensible reaction, given the circumstances.</text>
+	<text>Seeing you as no better a ship and crew than any small-time pirate, the Provision vessel begins to charge its jump drive.</text>
+	<text>Unlike its occupants, the ship you've decided to pick on is rather fast - and equipped with an FTL drive for emergency exits.</text>
+</textList>
+
+<eventList name="AA_SHIP_PROVISION_GOTAWAY">
+	<event load="AA_SHIP_PROVISION_GOTAWAY_NORMAL"/>
+	<event load="AA_SHIP_PROVISION_GOTAWAY_NORMAL"/>
+	<event load="AA_SHIP_PROVISION_GOTAWAY_NORMAL"/>
+	<event load="AA_SHIP_PROVISION_GOTAWAY_REVENGE"/>
+</eventList>
+<event name="AA_SHIP_PROVISION_GOTAWAY_NORMAL">
+	<text load="AA_TEXT_GOTAWAY_PROVISION"/>
+	<ship hostile="true"/>
+</event>
+<textList name="AA_TEXT_GOTAWAY_PROVISION">
+	<text>In a flash of light, the ship vanishes from sensors. You just assaulted a ship full of civilians for nothing, and even your own crew seem rather frustrated by the whole ordeal.</text>
+	<text>The Dustworms escaped their impending death. You have no idea what they'll do next, but considering how quickly they can spread information, it's not going to be good.</text>
+	<text>As they jump away, the captain of the Provision ship leaves a final hail with a vile oath. It wass a bit shocking to hear a Dustworm to speak like that, but you know the situation made it at least somewhat justified.</text>
+</textList>
+<eventList name="AA_SHIP_PROVISION_GOTAWAY_REVENGE">
+	<event>
+		<text>One final blip in the comms from the Provision ship warrants a quick diagnostic check. Your face falls as you realize it was a distress beacon, possibly calling for help from the local Guard. However, you also know someone else who might catch the signal...</text>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>As you watch the Provision vessel slip away, you sigh. Your frustration is quickly broken, however, as you see a small object barreling towards your ship. It seems the Dustworms wanted to leave you a parting gift...</text>
+		<boarders min="1" max="1" class="drone_battle"/>
+		<damage amount="0" system="pilot" effect="breach"/>
+	</event>
+</eventList>
+
+<!-- / AUTO / -->
+
+<event name="AA_SHIP_PROVISION_AUTO_DESTROYED">
+	<text load="AA_TEXT_DESTROYED_PROVISION_AUTO"/>
+	<autoReward level="MED">standard</autoReward>
+</event>
+<textList name="AA_TEXT_DESTROYED_PROVISION_AUTO">
+	<text>The Auto-ship crumbles to pieces, its lights fading to nothing. It's not particularly satisfying, but at least you don't feel bad, knowing the Provisional Government can make hundreds in a day.</text>
+	<text>Strands of wire and silk burst out of the ship's internals, bearing an uncanny resemblance to the guts of a living being. You rationalize that the yield from breaking open its hull is worth the effort.</text>
+	<text>The constant signals from the vessel cease in an instant as its fuel tank explodes, sending a burst of bright blue fire your way. It feels weird, but not nearly as off as blowing up a crewed ship.</text>
+	<text>A surge of electricity runs through the sensor systems, torching them as the ship explodes. Good thing there's still plenty of hull to scrap, even if the internals are fried.</text>
+	<text>"Critical fail-ail-ail-ailure, type 0x0000-0-0-0-0-0-missing system com-ompon-on-" The vessel's final transmission reaches you, before the vacuum of space crushes a sensitive internal piece and snuffs out the Auto-ship.</text>
+</textList>
+
+<event name="AA_SHIP_PROVISION_AUTO_ESCAPE">
+	<text load="AA_TEXT_ESCAPE_PROVISION_AUTO"/>
+	<ship hostile="true"/>
+</event>
+<textList name="AA_TEXT_ESCAPE_PROVISION_AUTO">
+	<text>The Provision ship begins to prepare a timely and orderly exit, despite all of the havoc your weapons have wrought. The tranquility of the vessel is very much unlike its manned counterparts.</text>
+	<text>Blue light surges from the ship's engines as it prepares to jump. Its sensor band ripples and pulses with more light, calculating the best possible escape path.</text>
+	<text>"Critical failure, type 0x000036. Missing system component, initiating default exit routine." The Auto-ship flares to life, preparing an FTL jump.</text>
+</textList>
+
+<event name="AA_SHIP_PROVISION_AUTO_GOTAWAY">
+	<text load="AA_TEXT_GOTAWAY_PROVISION_AUTO"/>
+	<modifyPursuit amount="1"/>
+</event>
+<textList name="AA_TEXT_GOTAWAY_PROVISION_AUTO">
+	<text>The Provision Auto-ship vanishes into the blackness of space, leaving only you to think about the mistake you made.</text>
+	<text>Blaring signals and flashing lights aren't exactly stealthy. There's no doubt that ship will alert everyone in the sector to your crimes - including your pursuants.</text>
+	<text>"Exit successful. Dumping logs..." Your attempts to stop the Auto-ship have failed, and it is no doubt reporting your attempted attack to the authorities.</text>
+</textList>
+
+
 
 <!-- /// BOSSES /// -->
 
@@ -23,7 +154,7 @@
 </ship>
 
 <event name="AA_BOSS_REBEL_CRUISER_DESTROYED">
-	<text>The gargantuan orange vessel bursts into flames for a brief moment as its fuel explodes, before it is promptly extinguished by the vacuum of space. Its wreckage begins to succumb to the gravitational pull of the nearby planet, the debris setting alight again as it breaks up in the atmosphere. You've won.</text>
+	<text>The gargantuan orange vessel bursts into flames for a brief moment as its fuel tanks explode, before it is promptly extinguished by the vacuum of space. Its wreckage begins to succumb to the gravitational pull of the nearby planet, the debris setting alight again as it breaks up in the atmosphere. You've won.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<weapon name="LASER_CHAINGUN_DAMAGE"/>
 </event>

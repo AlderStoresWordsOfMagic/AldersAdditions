@@ -1,5 +1,7 @@
 <!-- ///// This file contains all of the events relating to game mechanics such as power surges. ///// -->
 
+<FTL>
+
 <!-- /// SURGES /// -->
 
 <!-- // SALLY'S QUESTIONS // -->
@@ -61,3 +63,5 @@
 		</event>
 	</choice>
 </event>
+
+</FTL>

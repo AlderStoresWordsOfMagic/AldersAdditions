@@ -1,3 +1,5 @@
+<!-- ///// This file contains all of the extra data that requires Hyperspace to use, aside from Lua. ///// -->
+
 <FTL>
 
 <!-- /// LOAD LUA SCRIPTS /// -->
@@ -6,16 +8,18 @@
     <mod-append:script>AASC.lua</mod-append:script>
 </mod:findLike>
 
+<!-- /// EVENT FILES, VARIABLES, AND BOSS BOXES /// -->
+
+<mod:findLike type="events" limit="1">
+
 <!-- /// VARIABLES /// -->
 
-<events>
-
-<!-- // REPUTATION // -->
+	<!-- // REPUTATION // -->
 
 	<variable name="aa_rep_provision" op="set" val="0"/> <!-- // Reputation with the Provisional Government. // -->
 	<variable name="aa_rep_maelstrom" op="set" val="0"/> <!-- // Reputation with Maelstrom Engineering, Inc. // -->
-
-<!-- // ACHIEVEMENTS // -->
+	
+	<!-- // ACHIEVEMENTS // -->
 
 	<variable name="aa_ach_axis_stealth_victory" op="set" val="0"/> <!-- // If you've beaten the White Knight. // -->
 	<variable name="aa_ach_axis_paladin_victory" op="set" val="0"/> <!-- // If you've beaten the Camaraderie. // -->
@@ -32,22 +36,23 @@
 	<variable name="aa_ach_crew_alder" op="set" val="0"/> <!-- // If you have had Alder on your ship before. // -->
 	<variable name="aa_ach_crew_thane" op="set" val="0"/> <!-- // If you have had Thane on your ship before. // -->
 	<variable name="aa_ach_crew_chael" op="set" val="0"/> <!-- // If you have had Chael on your ship before. // -->
-
-<!-- // CREW STORAGE // -->
+	
+	<!-- // CREW STORAGE // -->
 
 	<metaVariable name="aa_store_crew_alder" op="set" val="0"/> <!-- // If Alder is currently aboard Axis Station. // -->
 	<metaVariable name="aa_store_crew_thane" op="set" val="0"/> <!-- // If Thane is currently aboard Axis Station. // -->
 	<metaVariable name="aa_store_crew_chael" op="set" val="0"/> <!-- // If Chael is currently aboard Axis Station. // -->
 
-</events>
+	<!-- // MISC. // -->
 
-<!-- /// EVENT FILES AND BOSS BOXES /// -->
+	<variable name="aa_alder_transgressions" op="set" val="0"/> <!-- // Controls Alder enforcing low notoriety; he will leave if this value is greater than 1. // -->
 
-<mod:findLike type="events" limit="1">
+	<!-- // EVENT FILES // -->
 
 	<mod-append:eventFile>axis</mod-append:eventFile> <!-- // Events on board Axis Station. // -->
 	<mod-append:eventFile>provision</mod-append:eventFile> <!-- // Events in the Provisional Government's territory. // -->
 	<mod-append:eventFile>sally</mod-append:eventFile> <!-- // Events concerning [REDACTED]. // -->
+
 	<mod-append:eventFile>testing</mod-append:eventFile> <!-- // Events that are used strictly for development purposes. // -->
 
 	<mod-append:bossShip>AA_BOSS_REBEL_CRUISER</mod-append:bossShip>
