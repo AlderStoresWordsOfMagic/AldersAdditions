@@ -387,8 +387,9 @@
 	<desc>A massive and powerful Laser prototype that outclasses most others of its category. However, its power draw is incredible.</desc>
 	<tooltip>No.</tooltip>
 	<damage>2</damage>
-	<shots>4</shots>
+	<shots>2</shots>
 	<radius>20</radius>
+	<chargeLevels>3</chargeLevels>
 	<sp>0</sp>
 	<breachChance>10</breachChance>
 	<cooldown>16</cooldown>

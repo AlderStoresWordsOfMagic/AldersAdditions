@@ -188,14 +188,20 @@
 
 <!-- // TRANSCEDENTAL // -->
 
-<animSheet name="laser_transcendent" w="900" h="104" fw="36" fh="104">weapons/aether/aether_laser.png</animSheet>
+<animSheet name="laser_transcendent_chargeglow" w="108" h="120" fw="36" fh="120">weapons/aether/aether_laser_chargeglow.png</animSheet>
+<anim name="laser_transcendent_chargeglow">
+	<sheet>laser_transcendent_chargeglow</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="laser_transcendent" w="900" h="120" fw="36" fh="120">weapons/aether/aether_laser.png</animSheet>
 <weaponAnim name="laser_transcendent">
 	<sheet>laser_transcendent</sheet>
 	<desc length="25" x="0" y="0"/>
 	<chargedFrame>15</chargedFrame>
 	<fireFrame>20</fireFrame>
-	<firePoint x="21" y="16"/>
-	<mountPoint x="5" y="77"/>
+	<firePoint x="21" y="50"/>
+	<mountPoint x="5" y="84"/>
 	<chargeImage>weapons/aether/aether_laser_glow.png</chargeImage>
 </weaponAnim>
 
