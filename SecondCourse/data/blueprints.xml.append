@@ -379,7 +379,7 @@
 <!-- // TRANSCEDENT // -->
 
 <weaponBlueprint name="AA_AETHER_LASER">
-	<type>BURST</type>
+	<type>LASER</type>
 	<drone_targetable>0</drone_targetable>
 	<title>Transcendent Laser</title>
 	<short>T. Laser</short>
@@ -388,11 +388,10 @@
 	<tooltip>No.</tooltip>
 	<damage>2</damage>
 	<shots>2</shots>
-	<radius>20</radius>
 	<chargeLevels>3</chargeLevels>
 	<sp>0</sp>
 	<breachChance>10</breachChance>
-	<cooldown>16</cooldown>
+	<cooldown>7</cooldown>
 	<power>4</power>
 	<cost>120</cost>
 	<bp>12</bp>

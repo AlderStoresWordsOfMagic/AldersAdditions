@@ -203,6 +203,7 @@
 	<firePoint x="21" y="50"/>
 	<mountPoint x="5" y="84"/>
 	<chargeImage>weapons/aether/aether_laser_glow.png</chargeImage>
+	<boost>laser_transcendent_chargeglow</boost>
 </weaponAnim>
 
 <!-- // MISC // -->
