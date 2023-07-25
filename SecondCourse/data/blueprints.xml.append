@@ -382,16 +382,17 @@
 	<type>LASER</type>
 	<drone_targetable>0</drone_targetable>
 	<title>Transcendent Laser</title>
-	<short>T. Laser</short>
+	<short>Aether Laser</short>
 	<tip>tip_transcend</tip>
 	<desc>A massive and powerful Laser prototype that outclasses most others of its category. However, its power draw is incredible.</desc>
 	<tooltip>No.</tooltip>
 	<damage>2</damage>
-	<shots>2</shots>
+	<hullBust>1</hullBust>
 	<chargeLevels>3</chargeLevels>
+	<fireTime>0.75</fireTime>
 	<sp>0</sp>
 	<breachChance>10</breachChance>
-	<cooldown>7</cooldown>
+	<cooldown>4</cooldown>
 	<power>4</power>
 	<cost>120</cost>
 	<bp>12</bp>

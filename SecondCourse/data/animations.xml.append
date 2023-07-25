@@ -194,10 +194,10 @@
 	<desc length="3" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
-<animSheet name="laser_transcendent" w="900" h="120" fw="36" fh="120">weapons/aether/aether_laser.png</animSheet>
+<animSheet name="laser_transcendent" w="1548" h="120" fw="36" fh="120">weapons/aether/aether_laser.png</animSheet>
 <weaponAnim name="laser_transcendent">
 	<sheet>laser_transcendent</sheet>
-	<desc length="25" x="0" y="0"/>
+	<desc length="43" x="0" y="0"/>
 	<chargedFrame>15</chargedFrame>
 	<fireFrame>20</fireFrame>
 	<firePoint x="21" y="50"/>
