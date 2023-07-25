@@ -8,11 +8,9 @@
     <mod-append:script>AASC.lua</mod-append:script>
 </mod:findLike>
 
-<!-- /// EVENT FILES, VARIABLES, AND BOSS BOXES /// -->
-
-<mod:findLike type="events" limit="1">
-
 <!-- /// VARIABLES /// -->
+
+<events>
 
 	<!-- // REPUTATION // -->
 
@@ -46,6 +44,12 @@
 	<!-- // MISC. // -->
 
 	<variable name="aa_alder_transgressions" op="set" val="0"/> <!-- // Controls Alder enforcing low notoriety; he will leave if this value is greater than 1. // -->
+
+</events>
+
+<!-- /// EVENT FILES, VARIABLES, AND BOSS BOXES /// -->
+
+<mod:findLike type="events" limit="1">
 
 	<!-- // EVENT FILES // -->
 

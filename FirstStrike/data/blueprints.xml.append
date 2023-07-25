@@ -847,7 +847,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<speed>40</speed>
 	<spin>720</spin>
 	<shots>1</shots>
-	<sp>0</sp>
+	<sp>10</sp>
 	<cooldown>1</cooldown>
 	<rarity>0</rarity>
 	<image>ion_phase</image>
