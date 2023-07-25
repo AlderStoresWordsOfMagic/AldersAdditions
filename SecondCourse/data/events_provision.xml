@@ -1,5 +1,61 @@
 <FTL>
 
+<!-- ///// This file contains all events relating to the Provision sector. All events relating to Axis are instead found in their own file. ///// -->
+
+
+
+<!-- /// SECTOR ENTRY /// -->
+
+
+
+<!-- /// SECTOR EXIT /// -->
+
+
+
+<!-- /// FRIENDLY EVENTS (never have a fight) /// -->
+
+
+
+<!-- /// NEUTRAL EVENTS (might have a fight) /// -->
+
+
+
+<!-- /// HOSTILE EVENTS (always have a fight) /// -->
+
+
+
+<!-- /// MORALITY UPDATES /// -->
+
+<event name="AA_MORALITY_UPDATE_PROVISION">
+	<text>[NOTORIETY INCREASED - PROVISIONAL GOVERNMENT]
+	Your actions here, justifiable or not, will not reflect well in the eyes of the Provisional Government or its citizens. Continuously perform actions like this and you might start to see negative reactions from the Provisional Government and its allies.</text>
+	<variable name="aa_rep_provision" op="add" val="1"/>
+</event>
+<event name="AA_MORALITY_UPDATE_PROVISION_FIGHT">
+	<text>[NOTORIETY INCREASED - PROVISIONAL GOVERNMENT]
+	Your actions here, justifiable or not, will not reflect well in the eyes of the Provisional Government or its citizens. Continuously perform actions like this and you might start to see negative reactions from the Provisional Government and its allies.</text>
+	<variable name="aa_rep_provision" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+<event name="AA_MORALITY_REMOVE_PROVISION">
+	<text>[NOTORIETY DECREASED - PROVISIONAL GOVERNMENT]
+	You have done a good deed here in the eyes of the Provisional Government. If you've gained notoriety from other actions in the past, you're more likely to be forgiven for them.</text>
+	<variable name="aa_rep_provision" op="add" val="-1"/>
+</event>
+<event name="AA_MORALITY_REMOVE_PROVISION_FIGHT">
+	<text>[NOTORIETY DECREASED - PROVISIONAL GOVERNMENT]
+        You have done a good deed here in the eyes of the Provisional Government. If you've gained notoriety from other actions in the past, you're more likely to be forgiven for them.</text>
+	<variable name="aa_rep_provision" op="add" val="-1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
 
 
 </FTL>

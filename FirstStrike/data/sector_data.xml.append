@@ -1,4 +1,7 @@
 <FTL>
+
+<!-- /// RARITY OVERRIDES /// -->
+
 <mod:findName type="sectorDescription" name="STANDARD_SPACE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_SMASH_2" rarity="0" />
@@ -174,4 +177,5 @@
 		<mod-append:blueprint name="AA_SCOUT_DECOY" rarity="0" />
 	</mod:findLike>
 </mod:findName>
+
 </FTL>

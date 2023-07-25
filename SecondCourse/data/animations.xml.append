@@ -200,7 +200,7 @@
 	<desc length="43" x="0" y="0"/>
 	<chargedFrame>15</chargedFrame>
 	<fireFrame>20</fireFrame>
-	<firePoint x="21" y="50"/>
+	<firePoint x="21" y="32"/>
 	<mountPoint x="5" y="84"/>
 	<chargeImage>weapons/aether/aether_laser_glow.png</chargeImage>
 	<boost>laser_transcendent_chargeglow</boost>

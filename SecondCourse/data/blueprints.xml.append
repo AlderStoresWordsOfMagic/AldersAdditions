@@ -392,7 +392,7 @@
 	<fireTime>0.75</fireTime>
 	<sp>0</sp>
 	<breachChance>10</breachChance>
-	<cooldown>4</cooldown>
+	<cooldown>5</cooldown>
 	<power>4</power>
 	<cost>120</cost>
 	<bp>12</bp>

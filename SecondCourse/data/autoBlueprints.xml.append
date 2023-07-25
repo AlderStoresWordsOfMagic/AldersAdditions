@@ -94,7 +94,6 @@
 	<name>LASER_PARTICLE</name>
 	<name>AA_LASER_PARTICLE_MINI</name>
 	<name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</name>
-	<name>AA_LASER_SMASH</name>
 	<name>AA_LASER_SMASH_2</name>
 
 	<name>MISSILES_STUN_ENEMY</name>
@@ -158,7 +157,6 @@
 	<name>AA_DISRUPTOR_1_AMP3</name>
 	<name>AA_ELEMENTARY_SMASH</name>
 	<name>AA_ELEMENTARY_ELECTRON</name>
-	<name>AA_SCOUT_STUN</name>
 	<name>REPAIR</name>
 	<name>BATTLETOG_DEFEND</name>
 	<name>BATTLETOG2_DEFEND</name>

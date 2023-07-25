@@ -12,10 +12,14 @@
 
 <events>
 
+	<!-- // SECTOR COORDINATES // -->
+
+	<variable name="aa_coords_provision" op="set" val="0"/> <!-- // Whether the player can jump to the Provision New Colonies. // -->
+
 	<!-- // REPUTATION // -->
 
-	<variable name="aa_rep_provision" op="set" val="0"/> <!-- // Reputation with the Provisional Government. // -->
-	<variable name="aa_rep_maelstrom" op="set" val="0"/> <!-- // Reputation with Maelstrom Engineering, Inc. // -->
+	<variable name="aa_rep_provision" op="set" val="0"/> <!-- // Reputation with the Provisional Government. Positive values indicate bad reputation. // -->
+	<variable name="aa_rep_maelstrom" op="set" val="0"/> <!-- // Reputation with Maelstrom Engineering, Inc. Positive values indicate bad reputation. // -->
 	
 	<!-- // ACHIEVEMENTS // -->
 
@@ -23,7 +27,7 @@
 	<variable name="aa_ach_axis_paladin_victory" op="set" val="0"/> <!-- // If you've beaten the Camaraderie. // -->
 	<variable name="aa_ach_axis_tony_victory" op="set" val="0"/> <!-- // If you've beaten the TSS-Bonnie-24 for the second time. // -->
 	<variable name="aa_ach_axis_hacker_victory" op="set" val="0"/> <!-- // If you've beaten the Manifestation of Will. // -->
-	<variable name="aa_ach_axis_limit_victory" op="set" val="0"/> <!-- // If you've beaten the Limit IV in an honest duel. // -->
+	<variable name="aa_ach_axis_limit_victory" op="set" val="0"/> <!-- // If you've beaten the Limit IV. // -->
 
 	<variable name="aa_ach_renegade_stealth" op="set" val="0"/> <!-- // If you've beaten the White Knight as a random encounter. // -->
 	<variable name="aa_ach_renegade_paladin" op="set" val="0"/> <!-- // If you've beaten the Camaraderie as a random encounter. // -->
@@ -47,7 +51,7 @@
 
 </events>
 
-<!-- /// EVENT FILES, VARIABLES, AND BOSS BOXES /// -->
+<!-- /// EVENT FILES, VARIABLES, SECRET SECTOR WARPS, AND BOSS BOXES /// -->
 
 <mod:findLike type="events" limit="1">
 
@@ -58,6 +62,8 @@
 	<mod-append:eventFile>sally</mod-append:eventFile> <!-- // Events concerning [REDACTED]. // -->
 
 	<mod-append:eventFile>testing</mod-append:eventFile> <!-- // Events that are used strictly for development purposes. // -->
+
+	<!-- // BOSS BOXES // -->
 
 	<mod-append:bossShip>AA_BOSS_REBEL_CRUISER</mod-append:bossShip>
 
@@ -83,6 +89,12 @@
 	<mod-append:bossShip>AA_RENEGADE_HACKER_QUEST</mod-append:bossShip>
 
 	<mod-append:bossShip>AA_SUPERBOSS_INTEGRAL</mod-append:bossShip>
+
+	<!-- // SECTOR WARPS // -->
+
+	<mod:findName type="req" name="COORDS">
+		<mod-append:name>aa_coords_provision</mod-append:name>
+	</mod:findName>
 
 </mod:findLike>
 
