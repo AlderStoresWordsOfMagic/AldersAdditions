@@ -47,7 +47,7 @@
 
 	<!-- // MISC. // -->
 
-	<variable name="aa_alder_transgressions" op="set" val="0"/> <!-- // Controls Alder enforcing low notoriety; he will leave if this value is greater than 1. // -->
+	<variable name="aa_alder_transgressions" op="set" val="0"/> <!-- // Increases when you gain notoriety and Alder is on board; Alder will leave if this value is greater than 1. // -->
 
 </events>
 
@@ -289,15 +289,21 @@ This enemy has multiple resistant rooms of different types, marked by the R icon
 	</mod-append:shipIcon>
 
 	<mod-append:shipIcon>
+		<name>aa_icon_angry_fleet</name>
+		<tooltip>AGGRESSIVE FLEET:
+A galvanized swarm of fleet ships provides support to the vessel at this beacon. Periodic combat drone bombing runs will assist their ASB fire!</tooltip>
+	</mod-append:shipIcon>
+
+	<mod-append:shipIcon>
 		<name>aa_icon_silk_armor</name>
 		<tooltip>SILKSTEEL HULL:
-Special, malleable composite hull plating that increases repair speed by 1.2x on board and allows non-Dustworm allied crew to move through silk sprays at normal speed.</tooltip>
+Special, malleable composite hull plating that increases repair speed by 1.2x on board.</tooltip>
 	</mod-append:shipIcon>
 
 	<mod-append:shipIcon>
 		<name>aa_icon_antihuman</name>
 		<tooltip>PALE SAMPLES:
-This enemy bears a weapon capable of spreading the highly lethal Pale Virus. Humans are particularly vulnerable, and are guarenteed to die incredibly quickly if exposed.</tooltip>
+This enemy bears a weapon capable of spreading the highly lethal Pale Virus. Humans are particularly vulnerable, and are guaranteed to die incredibly quickly if exposed.</tooltip>
 	</mod-append:shipIcon>
 
 	<mod-append:shipIcon>

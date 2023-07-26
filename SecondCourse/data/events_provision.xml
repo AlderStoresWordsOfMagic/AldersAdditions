@@ -6,6 +6,25 @@
 
 <!-- /// SECTOR ENTRY /// -->
 
+<event name="AA_START_PROVISION"> <!-- /// DUMMY, IDENTICAL TO AUGMENTED GUARD /// -->
+	<metaVariable name="juke_augmented" op="set" val="1"/>
+	<preventQuest/>
+	<beaconType id="map_icon_start" global="false">
+		<color r="46" g="252" b="51" a="1"/>
+	</beaconType>
+	<text>You awake to find yourself facing a large Lanius guard, colored same as the ship before. Your new Lanius friend fiddles with your translator so you can understand them properly.</text>
+	<variable name="loc_unique_sectors" op="add" val="1"/>
+	<achievement silent="false">ACH_TRUEEND_AUGMENTED</achievement>
+	<ship load="SHIP_GUARD_AUGMENTED" hostile="false"/>
+	<changeBackground>BACK_SECTOR_AUGMENTED</changeBackground>
+	<playSound>lightspeed</playSound>
+	<remove name="HIDDEN DUMMY"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="GUARD_AUGMENTED"/>
+	</choice>
+</event>
+
 
 
 <!-- /// SECTOR EXIT /// -->
@@ -21,6 +40,44 @@
 
 
 <!-- /// HOSTILE EVENTS (always have a fight) /// -->
+
+<!-- // REBEL SHIP FIGHT // -->
+
+<event name="AA_ENCOUNTER_PROVISION_REBEL">
+	<text load="AA_TEXT_ENCOUNTER_PROVISION_REBEL"/>
+	<ship load="SHIP_REBEL_FIGHT" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+<textList name="AA_TEXT_ENCOUNTER_PROVISION_REBEL">
+	<text>Even in such a heavily secured sector, the Rebels have proven to be stubborn as always. A Rebel ship that slipped through the cracks of the sector's entry point spots you, and turns to attack!</text>
+	<text>You couldn't mistake it if you tried. The blazing orange hull of a Rebel vessel flits about an Auto-ship of Dustworm make, analyzing its composition, but immediately reverses direction when you show up to the beacon.</text>
+	<text>Hiding behind a nearby asteroid is a Rebel ship. Weapons spring from its hull, and it broadcasts a loud slur over your intercom in an attempt to disorient you.</text>
+	<text>You receive a hail from a vessel. The captain reveals it to be of Rebel design, and spews a cold, yet childish one-liner as you turn around to face it. "Nothing personal, kiddo!"</text>
+	<text>No matter where you flee to, there's one constant you can always rely on: there will be a Rebel ship at most three beacons away from you. You wonder if their travel technologies could be used for better purposes than crusading against all non-humans.</text>
+	<text>You arrive at the beacon just a second too late. A Rebel ship flies directly at you out of a massive, blue fireball, presumably from some Dustworm civilian vessel it just blew up. Battle stations!</text>
+</textList>
+
+<!-- // PIRATE SHIP FIGHT // -->
+
+<event name="AA_ENCOUNTER_PROVISION_PIRATE">
+	<text load="AA_TEXT_ENCOUNTER_PROVISION_PIRATE"/>
+	<ship load="SHIP_PIRATE_ALL" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+<textList name="AA_TEXT_ENCOUNTER_PROVISION_PIRATE">
+	<text>If there's one thing you can expect from pirates, it's that they will always be everywhere you go. A small pirate ship barrels right at you from a nearby moon.</text>
+	<text>As you jump into the beacon, you nearly ram into a pirate ship that slipped by the ever-watchful Provisional Government. Though you're both confused as to what just happened, the smaller vessel decides that they won't pass up such an opportunity...</text>
+	<text>You encounter a pirate ship harassing a Dustworm mining ship. Their engines sputter for a moment as they turn to face your ship, seeing nothing but a bigger payout.</text>
+	<text>A Dustworm vessel rockets past your viewscreen, immediately followed by a pirate vessel. Seeing your ship, they turn to face you, weapons primed and ready to protect themselves from you.</text>
+	<text>There is only a single ship at this otherwise empty beacon. Owned by a band of pirates, it opens fire as soon as it sees a potential victim.</text>
+	<text>Jumping into the beacon, you spot a pirate ship ducking out of range of a nearby A.T.L.A.S. vessel. When the patrol jumps away to inspect another beacon, it immediately springs to life!</text>
+</textList>
 
 
 

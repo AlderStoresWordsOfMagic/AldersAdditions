@@ -31,7 +31,7 @@
 		<blueprint name="zoltan" rarity="0"/>
 		<blueprint name="zoltan_monk" rarity="0"/>
 		<blueprint name="zoltan_devotee" rarity="0"/>
-		<blueprint name="zoltan_peace" rarity="0"/>
+		<blueprint name="zoltan_peacekeeper" rarity="0"/>
 		<!--rock-->
 		<blueprint name="rock" rarity="0"/>
 		<blueprint name="rock_outcast" rarity="0"/>
@@ -60,7 +60,7 @@
 		<!--ghost-->
 		<blueprint name="phantom" rarity="5"/>
 	</rarityList>
-	<startEvent>AA_ENTER_SECTOR_PROVISION</startEvent>
+	<startEvent>AA_START_PROVISION</startEvent>
 	<exitBeacon event="AUGMENTED_ANOINTED" rebelEvent="AUGMENTED_ANOINTED"/>
 	<rebelBeacon event="FLEET_THREAT_VLOW" nebulaEvent="FLEET_THREAT_VLOW_NEBULA"/>
 	<removeFirstBeaconNebula/>
