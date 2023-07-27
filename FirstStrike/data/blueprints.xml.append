@@ -295,7 +295,7 @@ Buy/Sell Price: 80~/40~</descriptionOverride>
 	<title>Pro-Hull Laser</title>
 	<short>Pro-Hull Laser</short>
 	<desc>A rare and bizarre weapon, similar to the ubiquitous Heavy Laser, that repairs the target's hull instead of damaging it. It also inflicts minor system and crew damage.</desc>
-	<tooltip>Fires 1 shot, repairs 3 damage.</tooltip>
+	<tooltip>Fires 1 shot, repairs 2 damage.</tooltip>
 	<damage>-2</damage>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>

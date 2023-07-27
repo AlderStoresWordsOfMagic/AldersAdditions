@@ -912,11 +912,11 @@
 		<cloaking power="3" max="3" room="20" start="true" />
 		<doors power="3" max="3" room="19" start="true" />
 		<drones power="14" max="14" room="6" start="true" />
-		<engines power="4" max="4" room="17" start="true" />
+		<engines power="2" max="2" room="17" start="true" />
 		<hacking power="3" max="3" room="12" start="true" />
 		<mind power="3" max="3" room="7" start="true" />
 		<pilot power="3" max="3" room="18" start="true" />
-		<shields power="6" max="6" room="10" start="true" />
+		<shields power="4" max="4" room="10" start="true" />
 		<temporal power="3" max="3" room="13" start="true" />
 		<weapons power="17" max="17" room="11" start="true" />
 	</systemList>
@@ -938,7 +938,7 @@
 		<drone name="DEFENSE_1" />
 	</droneList>
 	<health amount="40" />
-	<maxPower amount="66" />
+	<maxPower amount="62" />
 	<boardingAI>invasion</boardingAI>
 	<aug name="AA_INTEGRAL_PARTICLE_SHIELD" />
 	<aug name="NO_GHOST" />

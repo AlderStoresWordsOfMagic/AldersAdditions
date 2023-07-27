@@ -379,7 +379,7 @@
 <!-- // TRANSCEDENT // -->
 
 <weaponBlueprint name="AA_AETHER_LASER">
-	<type>LASER</type>
+	<type>BURST</type>
 	<drone_targetable>0</drone_targetable>
 	<title>Transcendent Laser</title>
 	<short>Aether Laser</short>
@@ -388,7 +388,11 @@
 	<tooltip>No.</tooltip>
 	<damage>2</damage>
 	<hullBust>1</hullBust>
+	<shots>2</shots>
+	<accuracyMod>100</accuracyMod>
+	<radius>0</radius>
 	<chargeLevels>3</chargeLevels>
+	<simultaneousFire>true</simultaneousFire>
 	<fireTime>0.75</fireTime>
 	<sp>0</sp>
 	<breachChance>10</breachChance>
@@ -399,7 +403,7 @@
 	<speed>60</speed>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="1" fake="false">laser_prime</projectile>
+		<projectile count="2" fake="false">laser_prime</projectile>
 	</projectiles>
 	<image>laser_prime</image>
 	<launchSounds>

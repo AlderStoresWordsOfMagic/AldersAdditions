@@ -3,7 +3,7 @@
 <!-- /// LOAD LUA SCRIPTS /// -->
 
 <mod:findLike type="scripts">
-    <mod-append:script>AAFS.lua</mod-append:script>
+    <mod-append:script>data/lua/AAFS.lua</mod-append:script>
 </mod:findLike>
 
 <!-- /// CUSTOM STORES /// -->

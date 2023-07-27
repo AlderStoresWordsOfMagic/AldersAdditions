@@ -20,15 +20,6 @@
 	</mod-append:choice>
 </mod:findName>
 
-<event name="AA_ENTER_SECTOR_PROVISION">
-	<text load="TEXT_LIGHTSPEED"/>
-	<img back="BACKGROUND_LIGHTSPEED" planet="NONE"/>
-	<choice hidden="true">
-		<text>Continue...</text>
-		<event load="LOAD_ATLAS_MARKER"/>
-	</choice>
-</event>
-
 <event name="AA_LIGHTSPEED_SECTOR_WARP_PROVISION">
 	<text>You are about to reroute. Below is the Atlas entry for this sector.
 Name: Provision New Colonies
@@ -37,9 +28,8 @@ Unique: True
 Dominant Faction: Provisional Government of the New Colonies
 Rebel Threat Level: Very Low
 
-Your database marks this planet as an abandoned mining sector, stripped of all worth long ago. However, the Long Range Beacon's broadcasts beg to differ, revealing a lush, green planet full of life at your exit point. It seems the Dustworms wish to leave a good first impression!
-[Warning: Rerouting means you will miss any quests that would have spawned in the next sector.]
-	</text>
+Your database marks your destination as an abandoned mining sector, stripped of all worth long ago. However, its Long Range Beacon's broadcasts beg to differ, revealing a number of lush planets and open space stations near the entry point. It seems the Dustworms have been quite busy.
+[Warning: Rerouting means you will miss any quests that would have spawned in the next sector.]</text>
 	<choice hidden="true">
 		<text>Continue with the jump.</text>
 		<event>

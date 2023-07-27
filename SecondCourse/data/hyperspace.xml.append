@@ -5,7 +5,7 @@
 <!-- /// LOAD LUA SCRIPTS /// -->
 
 <mod:findLike type="scripts">
-    <mod-append:script>AASC.lua</mod-append:script>
+    <mod-append:script>data/lua/AASC.lua</mod-append:script>
 </mod:findLike>
 
 <!-- /// VARIABLES /// -->
