@@ -15,7 +15,7 @@
     </choice>
 </event>
 <mod:findName type="eventList" name="NEMESIS_ENCOUNTER_LIST_NORMAL">
-    <mod-append:event>AA_NEMESIS_PARTICLE</mod-append:event>
+    <mod-append:event load="AA_NEMESIS_PARTICLE"/>
 </mod:findName>
 
 <!-- /// SYLVAN /// -->
