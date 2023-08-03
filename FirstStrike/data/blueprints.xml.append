@@ -2580,11 +2580,10 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 <!-- // SPLICER // -->
 
 <weaponBlueprint name="AA_DRONE_LASER_SPLICER">
-	<type>BURST</type>
+	<type>LASER</type>
 	<title>Drone Scrambler</title>
 	<desc>This is a special Scrambler integrated into certain drones. It was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
-	<radius>70</radius>
 	<statBoosts>
 		<statBoost name="healSpeed">
 			<boostType>MULT</boostType>
@@ -2604,11 +2603,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 			<duration>10</duration>
 		</statBoost>
 	</statBoosts>
-	<projectiles>
-		<projectile count="5" fake="false">laser_purge</projectile>
-	</projectiles>
 	<shots>1</shots>
-	<sp>10</sp>
 	<rarity>0</rarity>
 	<image>laser_purge_projectile</image>
 	<launchSounds>
