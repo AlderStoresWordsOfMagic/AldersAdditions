@@ -187,89 +187,87 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipMa
 end)
 
 
+local sustainBeams = {
+    AA_BEAM_SUSTAIN = {
+        baseDamage = 1, --Base damage of the weapon
+        damagePeriod = 4, --Time between damage pulses
+        sabotageRate = 1, --Rate at which beam sabotages systems
+        sound = "sysExplosion", --Sound that plays every pulse
+    }
+}
 
 -- ["Sovnya" Sustaining Beam - Set beam speed to 0, drill into the enemy for the occasional periodic hit of damage identical to regular beams. Again, thank you, Vertaal!]
 
-do
-  --These values are used in both callbacks, so we define them as variables here so that they only need to be changed in one place.
-  local baseDamage = 1 --The base damage of the weapon, normal damage
-  local damagePeriod = 4 --How long between damage pulses (in seconds)
-  local sabotageRate = 1 --The rate at which the beam sabotages systems (unsure of what this translates to in terms of crew sabotage damage)
-  
-  script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM, --This function runs every time damage is applied by a beam
-  function(ShipManager, Projectile, Location, Damage, realNewTile, beamHitType)
-    if Hyperspace.Get_Projectile_Extend(Projectile).name == "AA_BEAM_SUSTAIN" then --If the projectile came from a weapon with ID "SUSTAIN"
-  
-      local baseDamage = baseDamage --not really a reason to do these assignments unless these values were changed in this function
-      local damagePeriod = damagePeriod
-      local sabotageRate = sabotageRate
-  
-  
-      Projectile.speed_magnitude=0 --set the beam speed to 0
-      local roomID = ShipManager.ship:GetSelectedRoomId(Location.x,Location.y, true) --The room that the beam is currently damaging
-      local system = ShipManager:GetSystemInRoom(roomID) --the system that is being damaged
-      local layers = ShipManager:GetShieldPower().first --the number of shield layers that the ship currently has
-  
-  
-      if system then system:PartialDamage(sabotageRate*math.max(baseDamage-layers,0)) end --if the system exists, do sabotage damage to it at a rate proportional to how much damage would bleed through the shields (not accounting for any pierce)
-    
-    
-      if Projectile.timer>damagePeriod then --if damagePeriod seconds have passed since the last pulse, apply another one
-        local dam = Hyperspace.Damage() --Create a Damage object
-        dam.iDamage = math.max(baseDamage-layers,0) --set the iDamage field equal to the baseDamage of the weapon minus the number of shield layers up
-        dam.iSystemDamage = -math.max(baseDamage-layers,0) --set iSystemDamage to cancel iDamage (system damage is applied via "sabotage")
-        local farPoint = Hyperspace.Pointf(-2147483648, -2147483648) --create a Pointf that is as far away as possible so it will never intersect a room
-        Hyperspace.Get_Projectile_Extend(Projectile).name = "" --blank out the name to prevent recursion (we are calling DamageBeam inside a DamageBeam callback)
-        ShipManager:DamageBeam(Location,farPoint,dam) --Apply the damage of the beam to the place where it is (farPoint is where the beam touched last frame so the function can check if it is in a new room or not, we set farPoint such that it will always be in a "new room" and therefore apply damage)
-        Hyperspace.Get_Projectile_Extend(Projectile).name = "AA_BEAM_SUSTAIN" --Set name back
-        Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("sysExplosion",0.5,true) --Play a sound 
-        Projectile.timer = 0 --set the timer back to zero
-      end
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
+function(Projectile, Weapon)
+    if sustainBeams[Projectile.extend.name] then
+        Projectile.speed_magnitude = 0
     end
-  end)
-  
-  script.on_internal_event(Defines.InternalEvents.PROJECTILE_UPDATE_POST,
-  function(Projectile,preempt) --function that runs every tick for a projectile
-    if Hyperspace.Get_Projectile_Extend(Projectile).name == "AA_BEAM_SUSTAIN" then --check the name of the projectile
-      local baseDamage = baseDamage --again, superfluous
-      local damagePeriod = damagePeriod
-  
-    
-      Projectile.speed_magnitude = 0 --set beam speed to 0, might not be necessary to set it to 0 every tick
-      Projectile.timer = Projectile.timer + Hyperspace.FPS.SpeedFactor/16 --increment timer (should use another mechanism to associate a variable with the projectile but this was the quick way)
-  
-      local firingWeapon --declare a variable firingWeapon within the global scope
-      pcall(function() 
-        local firingShipManager = Hyperspace.Global.GetInstance():GetShipManager(Projectile.ownerId)
-        for weapon in vter(firingShipManager.weaponSystem.weapons) do
-          if weapon.weaponVisual == Projectile.weapAnimation then
-            firingWeapon = weapon break --find the weapon that is firing the projectile
-          end
+end)
+
+--TODO: Replace use of Projectile.timer with a Projectile.table member once saving is implemented. 
+script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM, --This function runs every time damage is applied by a beam
+function(ShipManager, Projectile, Location, Damage, realNewTile, beamHitType)
+    local sustainBeam = sustainBeams[Projectile.extend.name]
+    if sustainBeam then
+        local roomID = ShipManager.ship:GetSelectedRoomId(Location.x, Location.y, true) --The room that the beam is currently damaging
+        local system = ShipManager:GetSystemInRoom(roomID) --the system that is being damaged
+        local layers = math.max(ShipManager:GetShieldPower().first, 0) --the number of shield layers that the ship currently has (prevent boosted damage from shield crushing)
+
+        local bleed = sustainBeam.baseDamage + Damage.iShieldPiercing - layers --How much damage would bleed through
+
+        if system then 
+            system:PartialDamage(sustainBeam.sabotageRate * bleed) --Sabotage system at rate proportional to damage bleed
+        end 
+
+        if Projectile.timer > sustainBeam.damagePeriod then --If damagePeriod seconds have passed since the last pulse, apply another one
+            local dam = Hyperspace.Damage() --Create a Damage object
+            dam.iDamage = bleed --Set iDamage to how much damage would pleed through on a "normal" beam
+            dam.iSystemDamage = -dam.iDamage --Cancel system damage (applied via "sabotage" effect)
+            local farPoint = Hyperspace.Pointf(-2147483648, -2147483648) --Create a Pointf that is as far away as possible so it will never intersect a room
+            local savedName = Projectile.extend.name --Save projectile name for later restoration
+            Projectile.extend.name = "" --Blank out the name to prevent recursion (we are calling DamageBeam inside a DamageBeam callback)
+            ShipManager:DamageBeam(Location, farPoint, dam) --Apply the damage of the beam to the place where it is (farPoint is where the beam touched last frame so the function can check if it is in a new room or not, we set farPoint such that it will always be in a "new room" and therefore apply damage)
+            Projectile.extend.name = savedName --Set name back
+            Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix(sustainBeam.sound, 0.5, true) --Play a sound 
+            Projectile.timer = 0 --set the timer back to zero
         end
-      end)
-      --if the weapon either 1. does not exist 2. has a projectile queued 3. is hacked then delete the beam projectile
-      if not (firingWeapon and firingWeapon.queuedProjectiles:size() == 0 and firingWeapon.iHackLevel < 2) then
-        Projectile:Kill()
-      end
-      --weapAnimation seems to be voided on save and load
-      --Projectile.weapAnimation.anim:SetProgress(((2 * Projectile.timer)/damagePeriod)%1)
-  
-      local ShipManager = Hyperspace.Global.GetInstance():GetShipManager((Projectile.ownerId + 1) % 2) --get the ship that the projectile is targeting
-      pcall(function() 
-        if Projectile.timer>damagePeriod and ShipManager:GetShieldPower().super.first > 0 then --if the ship that the projectile is damaging has a super shield and a cycle has passed
-          Projectile.timer = 0 --set timer back to 0
-          local dam = Hyperspace.Damage() --create Damage object
-          dam.iDamage = baseDamage --set the iDamage field
-          local pos = Projectile.shield_end --The place at which the beam projectile is terminated by the shield
-          ShipManager.shieldSystem:CollisionReal(pos.x,pos.y,dam,true) --apply damage to that point
+    end
+end)
+
+--TODO: Replace use of Projectile.timer with a Projectile.table member once saving is implemented. 
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_UPDATE_POST,
+function(Projectile, preempt) --Function that runs every tick for a projectile
+    local sustainBeam = sustainBeams[Projectile.extend.name]
+    if sustainBeam then 
+        Projectile.timer = Projectile.timer + Hyperspace.FPS.SpeedFactor / 16 --Increment timer
+        local firingShip = Hyperspace.Global.GetInstance():GetShipManager(Projectile.ownerId) --Get ShipManager that is firing the projectile
+        local firingWeapon
+        if firingShip.weaponSystem then --Weapon system may not exist in edge cases like surges, best to be safe
+            for weapon in vter(firingShip.weaponSystem.weapons) do
+                if weapon.weaponVisual == Projectile.weapAnimation then --If weapon is firing the projectile then
+                    firingWeapon = weapon 
+                    break
+                end
+            end
         end
-      end)
+        --If the firing weapon either 1. Does not exist or 2. Has a projectile queued (attempted retargeting) or 3. Is hacked, then delete the beam projectile
+        if not (firingWeapon and firingWeapon.queuedProjectiles:size() == 0 and firingWeapon.iHackLevel < 2) then
+            Projectile:Kill()
+        end
+
+        local targetedShip = Hyperspace.Global.GetInstance():GetShipManager(1 - Projectile.ownerId) --Get targeted ship
+        if Projectile.timer > sustainBeam.damagePeriod and targetedShip.shieldSystem and targetedShip:GetShieldPower().super.first > 0 then --If a cycle has passed and a supershield is up
+            Projectile.timer = 0 --Set timer back to 0
+            local dam = Hyperspace.Damage() --Create Damage object
+            dam.iDamage = sustainBeam.baseDamage --Set the iDamage field
+            local pos = Projectile.shield_end --The place at which the beam projectile is terminated by the shield
+            targetedShip.shieldSystem:CollisionReal(pos.x, pos.y, dam, true) --Apply damage to that point
+        end
+    end
+end)
   
 
-    end
-  end)
-  
-end
 
 
 
