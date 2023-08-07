@@ -318,7 +318,7 @@ local outlineColor = Graphics.GL_Color(1.0, 1.0, 1.0, 1.0) -- Color for the outl
 local function render_part_shield_charge(ship, width, x, y)
     local timer = userdata_table(ship, "mods.alder.partShieldTimer")
     local progress = timer.progress
-    if progress and progress > 0 and not ship.bDestroyed then
+    if progress and progress > 0 and not ship.ship.bDestroyed then
         Graphics.CSurface.GL_DrawRectOutline(x, y, width, 6, outlineColor, 1)
         Graphics.CSurface.GL_DrawRect(2 + x, 2 + y, (width - 4)*progress, 2, timer.color)
     end
