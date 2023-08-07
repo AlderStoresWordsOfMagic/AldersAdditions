@@ -279,7 +279,7 @@ particleShields["AA_PARTICLE_SHIELD"] = {
     max = 1,
     regen = 1,
     time = 10,
-    color = Graphics.GL_Color(1.0, 0.47, 0.0, 1.0),
+    color = Graphics.GL_Color(1.0, 0.47, 0.0, 1.0)
 }
 
 -- Logic

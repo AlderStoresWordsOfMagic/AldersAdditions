@@ -84,10 +84,10 @@ end, INT_MAX)
 
 
 -- [Particle Shields - More of them here than just the stock one in FS.]
-
+local particleShields = mods.alder.particleShields
 particleShields["AA_INTEGRAL_PARTICLE_SHIELD"] = {
     max = 3,
     regen = 3,
     time = 10,
-    color = Graphics.GL_Color(0.05, 0.25, 1.0, 1.0),
+    color = Graphics.GL_Color(0.05, 0.25, 1.0, 1.0)
 }
