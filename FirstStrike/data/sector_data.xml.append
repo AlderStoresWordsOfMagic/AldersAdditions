@@ -104,32 +104,45 @@
 		<mod-append:blueprint name="AA_LASER_PARTICLE_MINI" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_PARTICLE_PIERCE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_SMASH" rarity="0" />
-		<mod-append:blueprint name="AA_LASER_REPAIR" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_SMASH_2" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_REPAIR" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_PARTICLE_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="0" />
 		<mod-append:blueprint name="AA_MISSILES_ION" rarity="0" />
 		<mod-append:blueprint name="AA_MISSILES_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_ION_RAINBOW" rarity="0" />
 		<mod-append:blueprint name="AA_ION_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_ENERGY_RAD" rarity="0" />
+		<mod-append:blueprint name="AA_ENERGY_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_SUSTAIN" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_3" rarity="0" />
+		<mod-append:blueprint name="AA_BEAM_ION_RAD" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_STUN" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_ADAPT" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_CONSERVATIVE" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ENERGY" rarity="0" />
+		<mod-append:blueprint name="AA_BEAM_SMASH" rarity="0" />
+		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
+		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_ELECTRON_1" rarity="0" />
 		<mod-append:blueprint name="AA_ELECTRON_2" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
+		<mod-append:blueprint name="AA_SHOTGUN_CONSERVATIVE" rarity="0" />
+		<mod-append:blueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_MINELAUNCHER_CLOAK" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_PARTICLE" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
-		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="0" />
-		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="0" />
+		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_RAD" rarity="0" />
 		<mod-append:blueprint name="AA_POINTER" rarity="0" />
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />
@@ -147,29 +160,42 @@
 		<mod-append:blueprint name="AA_LASER_SMASH_2" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_REPAIR" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_PARTICLE_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="0" />
 		<mod-append:blueprint name="AA_MISSILES_ION" rarity="0" />
 		<mod-append:blueprint name="AA_MISSILES_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_ION_RAINBOW" rarity="0" />
 		<mod-append:blueprint name="AA_ION_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_ENERGY_RAD" rarity="0" />
+		<mod-append:blueprint name="AA_ENERGY_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_SUSTAIN" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_3" rarity="0" />
+		<mod-append:blueprint name="AA_BEAM_ION_RAD" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_STUN" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_ADAPT" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_CONSERVATIVE" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ENERGY" rarity="0" />
+		<mod-append:blueprint name="AA_BEAM_SMASH" rarity="0" />
+		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
+		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_ELECTRON_1" rarity="0" />
 		<mod-append:blueprint name="AA_ELECTRON_2" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
+		<mod-append:blueprint name="AA_SHOTGUN_CONSERVATIVE" rarity="0" />
+		<mod-append:blueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE" rarity="0" />
+		<mod-append:blueprint name="AA_MINELAUNCHER_CLOAK" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_PARTICLE" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
-		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="0" />
-		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="0" />
+		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_RAD" rarity="0" />
 		<mod-append:blueprint name="AA_POINTER" rarity="0" />
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />

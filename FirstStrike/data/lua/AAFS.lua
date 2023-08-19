@@ -13,9 +13,9 @@ mods.alder = {}
 
 -- [Version check for Hyperspace.]
 
-if not (Hyperspace.version and Hyperspace.version.major == 1 and Hyperspace.version.minor >= 5) then
-  if not (Hyperspace.version.patch >= 2) then
-    error("Incorrect Hyperspace version detected! Alder's Additions: First Strike requires Hyperspace 1.5.2+ to function.")
+if not (Hyperspace.version and Hyperspace.version.major == 1 and Hyperspace.version.minor >= 8) then
+  if not (Hyperspace.version.patch >= 0) then
+    error("Incorrect Hyperspace version detected! Alder's Additions: First Strike requires Hyperspace 1.8+ to function.")
   end
 end
 
@@ -66,15 +66,24 @@ statChargers["AA_ENERGY_CHARGEGUN_DAMAGE"] = {{stat = "iIonDamage"}}
 statChargers["AA_LASER_PARTICLE_CHARGEGUN_DAMAGE"] = {{stat = "iSystemDamage"}}
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
-    local statBoosts = nil
-    if pcall(function() statBoosts = statChargers[weapon.blueprint.name] end) and statBoosts then
-        local boost = weapon.queuedProjectiles:size() -- Gets how many projectiles are charged up (doesn't include the one that was already shot)
-        weapon.queuedProjectiles:clear() -- Delete all other projectiles
-        for _, statBoost in ipairs(statBoosts) do -- Apply all stat boosts
-            if statBoost.calc then
-                projectile.damage[statBoost.stat] = statBoost.calc(boost, projectile.damage[statBoost.stat])
-            else
-                projectile.damage[statBoost.stat] = boost + projectile.damage[statBoost.stat]
+    local statBoosts = statChargers[weapon.blueprint.name]
+    if statBoosts then
+        local shotsPerCharge = weapon.blueprint.miniProjectiles:size() --How many shots per charge (projectiles defined in <projectiles>)
+        if shotsPerCharge == 0 then 
+          shotsPerCharge = 1 --Adjust for non-flak weapons
+        end
+        local queuedProjectiles = weapon.queuedProjectiles:size() -- Gets how many projectiles are charged up (doesn't include the one that was already shot)
+        local boost = queuedProjectiles // shotsPerCharge -- Gets how many charges are full
+        if queuedProjectiles % shotsPerCharge == 0 then --If all projectiles in a charge have been fired
+          weapon.queuedProjectiles:clear() -- Delete all other projectiles
+        end
+        if projectile.death_animation.fScale ~= 0.25 then --If projectile is not fake then
+            for _, statBoost in ipairs(statBoosts) do -- Apply all stat boosts
+                if statBoost.calc then
+                    projectile.damage[statBoost.stat] = statBoost.calc(boost, projectile.damage[statBoost.stat])
+                else
+                    projectile.damage[statBoost.stat] = boost + projectile.damage[statBoost.stat]
+                end
             end
         end
     end

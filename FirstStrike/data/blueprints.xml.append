@@ -920,7 +920,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<tooltip>Fires one ion blast that deals 1 damage. Damage increases the more it charges.</tooltip>
 	<ion>1</ion>
 	<shots>1</shots>
-	<cooldown>5</cooldown>
+	<cooldown>6</cooldown>
 	<power>2</power>
 	<speed>30</speed>
 	<cost>80</cost>
@@ -1662,7 +1662,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<short>Electron</short>
 	<locked>1</locked>
 	<desc>This weapon creates an electric charge in a room of your choice, inflicting a small amount of ion damage. Unlike many other weapons, the Electron Inducer cannot be defended against via conventional means.</desc>
-	<tooltip>Creates an electric pulse anywhere, dealing 1 ion damage.</tooltip>
+	<tooltip>Creates an electric pulse anywhere, dealing 2 ion damage.</tooltip>
 	<damage>0</damage>
 	<ion>2</ion>
 	<accuracyMod>100</accuracyMod>
@@ -1698,7 +1698,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<short>Hv. Electron</short>
 	<locked>1</locked>
 	<desc>A stronger variant of the Electronic Inducer, inflicting twice the damage for twice the power.</desc>
-	<tooltip>Creates an electric pulse anywhere, dealing 2 ion damage.</tooltip>
+	<tooltip>Creates an electric pulse anywhere, dealing 4 ion damage.</tooltip>
 	<damage>0</damage>
 	<ion>4</ion>
 	<accuracyMod>100</accuracyMod>
@@ -1824,7 +1824,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
-<!-- <weaponBlueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE"> (Non-functional, waiting until next HS release.)
+<weaponBlueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE">
 	<type>BURST</type>
 	<drone_targetable>1</drone_targetable> 
 	<flavorType>Physical Projectile Blast</flavorType>
@@ -1849,8 +1849,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<rarity>5</rarity>
 	<spin>720</spin>
 	<projectiles>
-		<projectile count="1" fake="false">debris_large</projectile>
-		<projectile count="2" fake="false">debris_med</projectile>
+		<projectile count="3" fake="false">debris_large_cumulative</projectile>
 		<projectile count="3" fake="true">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
@@ -2092,7 +2091,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<title>Irradiated Mass Driver</title>
 	<short>Rad Driver</short>
 	<tip>tip_driver</tip>
-	<desc>Loaded with projectiles made of radioactive material, this Mass Driver inflicts massive damage to hull and crew alike.</desc>
+	<desc>Loaded with projectiles made of radioactive material, this Mass Driver inflicts massive damage to all that dare challenge it.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<damage>1</damage>
 	<persDamage>3</persDamage>

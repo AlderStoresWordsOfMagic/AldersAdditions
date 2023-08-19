@@ -51,6 +51,13 @@
 	<time>1.0</time>
 </anim>
 
+<animSheet name="debris_large_cumulative" w="96" h="32" fw="32" fh="32">projectile/debris_cumulative.png</animSheet>
+<anim name="debris_large_cumulative">
+	<sheet>debris_large_cumulative</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
 <animSheet name="mine_cloak" w="22" h="22" fw="22" fh="22">projectile/mine_cloak.png</animSheet>
 <anim name="mine_cloak">
 	<sheet>mine_cloak</sheet>
