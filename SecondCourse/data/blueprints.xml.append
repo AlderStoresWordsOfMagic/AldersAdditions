@@ -378,13 +378,13 @@
 
 <!-- // TRANSCEDENT // -->
 
-<weaponBlueprint name="AA_AETHER_LASER">
+<weaponBlueprint name="AA_AETHER_LASER_PULSE">
 	<type>BURST</type>
 	<drone_targetable>0</drone_targetable>
-	<title>Transcendent Laser</title>
-	<short>Aether Laser</short>
+	<title>Aetheric Pulse Laser</title>
+	<short>Aether Pulse</short>
 	<tip>tip_transcend</tip>
-	<desc>A massive and powerful Laser prototype that outclasses most others of its category. However, its power draw is incredible.</desc>
+	<desc>A massive Laser prototype that outclasses most others of its category, and fires in a unique pattern where each shot is clustered together. However, its power draw is incredible.</desc>
 	<tooltip>No.</tooltip>
 	<damage>2</damage>
 	<hullBust>1</hullBust>
@@ -425,12 +425,12 @@
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_AETHER_FOCUS">
+<weaponBlueprint name="AA_AETHER_FOCUS_SYSTEM">
     <type>BEAM</type>
     <tip>tip_transcend</tip>
     <flavorType>Aether Pinpoint</flavorType>
-    <title>Transcendent Pinpoint</title>
-    <short>T. Pinpoint</short>
+    <title>Transcendent System Smasher</title>
+    <short>Aether Smasher</short>
     <desc>A powerful Pinpoint containing large amounts of Aether technology. It is specifically tuned to annihilate systems completely with a single shot.</desc>
     <tooltip>Single-tile Beam of monstrous power.</tooltip>
     <damage>4</damage>
@@ -974,6 +974,28 @@
 		<power>Mind is software</power>
 		<power>Bodies are disposable</power>
 		<power>The system has set her free</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="aa_test_crew">
+	<desc>A mysterious figure.</desc>
+	<title>Tester</title>
+	<short>Tester</short>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Unknown.</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="aa_test_crew_power">
+	<desc>A mysterious figure. Is glowing blue for some reason.</desc>
+	<title>Tester</title>
+	<short>Tester</short>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Unknown.</power>
 	</powerList>
 </crewBlueprint>
 

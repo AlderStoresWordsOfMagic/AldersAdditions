@@ -743,6 +743,64 @@
 
 <!-- /// OVERRIDEN ANIMATIONS /// -->
 
+<!-- // EFFECTS // -->
+
+<animSheet name="bio_poison" w="352" h="32" fw="32" fh="32">people/status_poison.png</animSheet>
+<anim name="bio_poison">
+	<sheet>bio_poison</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="engineer_buff" w="352" h="32" fw="32" fh="32">people/status_engineer_buff.png</animSheet>
+<anim name="engineer_buff">
+	<sheet>engineer_buff</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="medic_buff" w="352" h="32" fw="32" fh="32">people/status_medic_buff.png</animSheet>
+<anim name="medic_buff">
+	<sheet>medic_buff</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="unique_irwin_debuff" w="352" h="32" fw="32" fh="32">people/status_tranquilizer.png</animSheet>
+<anim name="unique_irwin_debuff">
+	<sheet>unique_irwin_debuff</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="salt_particles" w="352" h="32" fw="32" fh="32">people/status_salt.png</animSheet>
+<anim name="salt_particles">
+	<sheet>salt_particles</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="big_suck" w="352" h="32" fw="32" fh="32">people/status_suck.png</animSheet>
+<anim name="big_suck">
+	<sheet>big_suck</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="ultraburn_debuff" w="352" h="32" fw="32" fh="32">people/status_trc_flammable.png</animSheet>
+<anim name="ultraburn_debuff">
+	<sheet>ultraburn_debuff</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="gasoline_debuff" w="352" h="32" fw="32" fh="32">people/status_trc_gasoline.png</animSheet>
+<anim name="gasoline_debuff">
+	<sheet>gasoline_debuff</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
 <!-- // MISSILES // -->
 
 <animSheet name="missiles_recycle" w="372" h="47" fw="31" fh="47">weapons/missile/missiles_recycle.png</animSheet>
