@@ -1039,5 +1039,129 @@
 	<time>1</time>
 </anim>
 
+
+
+<animSheet name="aa_test_crew_power" w="385" h="455" fw="35" fh="35">people/aa_test_crew_power_base.png</animSheet>
+<anim name="aa_test_crew_power_clone">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="6" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_test_crew_power_death_right">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="5" x="3" y="0"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_test_crew_power_death_left">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="5" x="3" y="0"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_test_crew_power_walk_down">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_walk_right">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_walk_up">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_walk_left">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="4" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_shoot_down">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_shoot_right">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_shoot_up">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="3" x="6" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_shoot_left">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="3" x="0" y="1"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_fire_down">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_fire_right">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_fire_up">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_fire_left">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_repair">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="9" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_punch_up">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="8" x="3" y="1"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_punch_down">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="8" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_test_crew_power_teleport">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="9" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="aa_test_crew_power_type_right">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_test_crew_power_type_left">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_test_crew_power_type_up">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_test_crew_power_type_down">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_test_crew_power_portrait">
+	<sheet>aa_test_crew_power</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
 </FTL>
 

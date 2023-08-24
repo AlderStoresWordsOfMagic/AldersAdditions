@@ -966,7 +966,7 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 		<statBoost name="statBoost">
 			<statBoost name="silenced">
 				<boostType>SET</boostType>
-				<value>false</value>
+				<value>true</value>
 				<shipTarget>CREW_TARGET</shipTarget>
 				<crewTarget>ALL</crewTarget>
 				<priority>0</priority>
@@ -1041,6 +1041,43 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 <race name="aa_test_crew">
 	<essential>5</essential>
 	<animBase>human</animBase>
+	<maxHealth>400</maxHealth>
+	<stunMultiplier>0</stunMultiplier>
+	<resistsMindControl>true</resistsMindControl>
+	<deathSounds>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+	</deathSounds>
+	<passiveStatBoosts>
+		<statBoost name="silenced"> <!-- Effectively grants immunity to madness. -->
+			<boostType>SET</boostType>
+			<value>false</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>SELF</crewTarget>
+			<priority>-2147483648</priority>
+		</statBoost>
+	</passiveStatBoosts>
+	<powerEffect>
+		<cooldown>15</cooldown>
+		<jumpCooldown>reset</jumpCooldown>
+		<activateWhenReady enemiesOnly="false">true</activateWhenReady> 
+		<buttonText>SHIFT</buttonText>
+		<tooltip>[COOLDOWN:15s]
+			Switches stances.</tooltip>
+		<cooldownColor r="255" g="255" b="0"/>
+		<animFrame>-1</animFrame>
+		<transformRace>aa_test_crew_power</transformRace>
+	</powerEffect>
+</race>
+
+<race name="aa_test_crew_power">
+	<essential>5</essential>
+	<animBase>human</animBase>
+	<canFight>false</canFight>
+	<canSabotage>false</canSabotage>
+	<maxHealth>400</maxHealth>
+	<stunMultiplier>0</stunMultiplier>
+	<resistsMindControl>true</resistsMindControl>
 	<deathSounds>
 		<deathSound>death1</deathSound>
 		<deathSound>death2</deathSound>
@@ -1048,7 +1085,7 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 	<passiveStatBoosts>
 		<statBoost name="statBoost"> <!-- Recursive stat boost that makes them untargetable while allies are in the room. -->
 			<shipTarget>ALL</shipTarget>
-			<crewTarget>ENEMIES</crewTarget>
+			<crewTarget>CURRENT_ALLIES</crewTarget>
 			<statBoost name="validTarget">
 				<boostType>SET</boostType>
 				<value>false</value>
@@ -1060,34 +1097,19 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 				</whiteList>
 				<boostAnim>status_invincible</boostAnim>
 			</statBoost>
-			<shipTarget>CREW_TARGET</shipTarget>
-			<crewTarget>ENEMIES</crewTarget>
+		</statBoost>
+		<statBoost name="silenced"> <!-- Effectively grants immunity to madness. -->
+			<boostType>SET</boostType>
+			<value>false</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>SELF</crewTarget>
+			<priority>-2147483648</priority>
 		</statBoost>
 	</passiveStatBoosts>
 	<powerEffect>
 		<cooldown>15</cooldown>
 		<jumpCooldown>reset</jumpCooldown>
-		<buttonText>SHIFT</buttonText>
-		<tooltip>[COOLDOWN:15s]
-			Switches stances.</tooltip>
-		<cooldownColor r="0" g="255" b="100"/>
-		<animFrame>-1</animFrame>
-		<transformRace>aa_test_crew_power</transformRace>
-	</powerEffect>
-</race>
-
-<race name="aa_test_crew_power">
-	<essential>5</essential>
-	<animBase>human</animBase>
-	<canFight>false</canFight>
-	<canSabotage>false</canSabotage>
-	<deathSounds>
-		<deathSound>death1</deathSound>
-		<deathSound>death2</deathSound>
-	</deathSounds>
-	<powerEffect>
-		<cooldown>15</cooldown>
-		<jumpCooldown>reset</jumpCooldown>
+		<activateWhenReady enemiesOnly="false">true</activateWhenReady> 
 		<buttonText>SHIFT</buttonText>
 		<tooltip>[COOLDOWN:15s]
 			Switches stances.</tooltip>

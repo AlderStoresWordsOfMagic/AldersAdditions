@@ -376,7 +376,7 @@
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
-<!-- // TRANSCEDENT // -->
+<!-- // AETHER // -->
 
 <weaponBlueprint name="AA_AETHER_LASER_PULSE">
 	<type>BURST</type>
@@ -984,18 +984,20 @@
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Unknown.</power>
+		<power>Immune to stun, madness, and mind control</power>
 	</powerList>
 </crewBlueprint>
 
 <crewBlueprint name="aa_test_crew_power">
-	<desc>A mysterious figure. Is glowing blue for some reason.</desc>
+	<desc>A mysterious figure. Is glowing yellow for some reason.</desc>
 	<title>Tester</title>
 	<short>Tester</short>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<powerList>
-		<power>Unknown.</power>
+		<power>Takes 5.0x combat damage</power>
+		<power>Cannot be targeted when allies are in the room</power>
+		<power>Immune to stun, madness, and mind control</power>
 	</powerList>
 </crewBlueprint>
 
