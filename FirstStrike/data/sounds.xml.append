@@ -9,9 +9,10 @@
 <capacitor_light volume="6">weapons/focus_ion.ogg</capacitor_light>
 <capacitor_heavy volume="6">weapons/focus_ion_2.ogg</capacitor_heavy>
 
-<smash volume="2">weapons/smash.ogg</smash>
-<smash_bomb volume="6">weapons/smash_explosion.ogg</smash_bomb>
-<shield_crush volume="10">weapons/shield_crush.ogg</shield_crush>
+<smash volume="4">weapons/smash.ogg</smash>
+<smash_beam volume="4">weapons/smash_beam.ogg</smash_beam>
+<shield_pop volume="4">weapons/shield_pop.ogg</shield_pop>
+<shield_crush volume="4">weapons/shield_crush.ogg</shield_crush>
 
 <electron volume="4">weapons/electron.ogg</electron>
 

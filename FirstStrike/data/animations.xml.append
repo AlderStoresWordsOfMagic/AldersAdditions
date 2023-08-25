@@ -114,11 +114,25 @@
 	<time>1.0</time>
 </anim>
 
-<animSheet name="room_center_pointer" w="480" h="40" fw="40" fh="40">effects/room_center_pointer.png</animSheet>
-<anim name="room_center_pointer">
-	<sheet>room_center_pointer</sheet>
+<animSheet name="center_pointer" w="480" h="40" fw="40" fh="40">effects/center_pointer.png</animSheet>
+<anim name="center_pointer">
+	<sheet>center_pointer</sheet>
 	<desc length="12" x="0" y="0"/>
 	<time>2</time>
+</anim>
+
+<animSheet name="tile_repairblock" w="385" h="35" fw="35" fh="35">effects/tile_repairblock.png</animSheet>
+<anim name="tile_repairblock">
+	<sheet>tile_repairblock</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="tile_erosion" w="140" h="35" fw="35" fh="35">effects/tile_erosion.png</animSheet>
+<anim name="tile_erosion">
+	<sheet>tile_erosion</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>1</time>
 </anim>
 
 <!-- /// WEAPONS /// -->
@@ -501,6 +515,23 @@
 	<time>1.0</time>
 </anim>
 
+<animSheet name="bomblauncher_decay" w="702" h="55" fw="39" fh="55">weapons/bomb/bomblauncher_decay.png</animSheet>
+<weaponAnim name="bomblauncher_decay">
+	<sheet>bomblauncher_decay</sheet>
+	<desc length="18" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>12</fireFrame>
+	<firePoint x="23" y="25" />
+	<mountPoint x="3" y="27" />
+	<chargeImage>weapons/bomb/bomblauncher_decay_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="bomb_decay" w="525" h="35" fw="35" fh="35">weapons/bomb/bomb_decay.png</animSheet>
+<anim name="bomb_decay">
+	<sheet>bomb_decay</sheet>
+	<desc length="15" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
 <animSheet name="electron_1" w="176" h="47" fw="22" fh="47">weapons/misc/electron_1.png</animSheet>
 <weaponAnim name="electron_1">
 	<sheet>electron_1</sheet>
@@ -855,18 +886,35 @@
 	<time>1</time>
 </anim>
 
-<animSheet name="swarm_unspooler" w="945" h="60" fw="45" fh="60">weapons/overwrite/nightshade.png</animSheet>
-<weaponAnim name="swarm_unspooler">
-	<sheet>swarm_unspooler</sheet>
+<animSheet name="missiles_massive_chaos" w="726" h="55" fw="66" fh="55">weapons/overwrite/obsidian_missiles_chaos.png</animSheet>
+<weaponAnim name="missiles_massive_chaos">
+	<sheet>missiles_massive_chaos</sheet>
+	<desc length="11" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint  x="35" y="15"/>
+	<mountPoint x="3" y="37"/>
+	<time>0.5</time>
+</weaponAnim>
+<animSheet name="missile_obsidian_chaos" w="32" h="80" fw="32" fh="80">projectile/missile_obsidian_chaos.png</animSheet>
+<anim name="missile_obsidian_chaos">
+	<sheet>missile_obsidian_chaos</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="nightshade" w="945" h="60" fw="45" fh="60">weapons/overwrite/nightshade.png</animSheet>
+<weaponAnim name="nightshade">
+	<sheet>nightshade</sheet>
 	<desc length="21" x="0" y="0"/>
 	<chargedFrame>11</chargedFrame>
 	<fireFrame>16</fireFrame>
 	<firePoint  x="25" y="13" charge="11"/>
 	<mountPoint x="6" y="35"/>
 </weaponAnim>
-<animSheet name="swarm_unspooler_chaos" w="945" h="60" fw="45" fh="60">weapons/overwrite/nightshade_chaos.png</animSheet>
-<weaponAnim name="swarm_unspooler_chaos">
-	<sheet>swarm_unspooler_chaos</sheet>
+<animSheet name="nightshade_chaos" w="945" h="60" fw="45" fh="60">weapons/overwrite/nightshade_chaos.png</animSheet>
+<weaponAnim name="nightshade_chaos">
+	<sheet>nightshade_chaos</sheet>
 	<desc length="21" x="0" y="0"/>
 	<chargedFrame>11</chargedFrame>
 	<fireFrame>16</fireFrame>

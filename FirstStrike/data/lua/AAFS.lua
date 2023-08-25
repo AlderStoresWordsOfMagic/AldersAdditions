@@ -98,22 +98,22 @@ local popWeapons = mods.alder.popWeapons
 popWeapons["AA_LASER_SMASH"] = {
     count = 1, -- This weapon will pop 1 shield layer per shot
     countSuper = 1, -- This weapon will pop 1 energy shield layer per shot
-    crush = 12 -- If this weapon reduces shields to 0, apply -12 shield layers
+    crush = 10 -- If this weapon reduces shields to 0, apply -12 shield layers
 }
 popWeapons["AA_LASER_SMASH_2"] = {
     count = 1,
     countSuper = 1,
-    crush = 12
+    crush = 10
 }
 popWeapons["AA_DRONE_LASER_SMASH"] = {
     count = 1,
     countSuper = 1,
-    crush = 12
+    crush = 10
 }
 popWeapons["AA_BEAM_SMASH"] = {
     count = 1,
     countSuper = 1,
-    crush = 12
+    crush = 10
 }
 
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
@@ -144,19 +144,19 @@ mods.alder.popBallistics = {}
 local popBallistics = mods.alder.popBallistics
 popBallistics["AA_MISSILES_SMASH"] = {
     count = 4, -- This weapon will pop 4 shield layers per shot
-    crush = 12 -- If this weapon reduces shields to 0, apply -12 shield layers
+    crush = 10 -- If this weapon reduces shields to 0, apply -12 shield layers
 }
 popBallistics["AA_MISSILES_SMASH_ENEMY"] = {
     count = 4,
-    crush = 12
+    crush = 10
 }
 popBallistics["AA_BOMB_SMASH"] = {
     count = 4,
-    crush = 12
+    crush = 10
 }
 popBallistics["AA_BOMB_SMASH_ENEMY"] = {
     count = 4,
-    crush = 12
+    crush = 10
 }
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
 function(shipManager, projectile, location, damage, shipFriendlyFire)

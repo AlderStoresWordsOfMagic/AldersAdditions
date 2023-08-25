@@ -65,13 +65,6 @@
 	<time>1.0</time>
 </anim>
 
-<animSheet name="tile_repairblock" w="352" h="32" fw="32" fh="32">effects/room_tile_repairblock.png</animSheet>
-<anim name="tile_repairblock">
-	<sheet>tile_repairblock</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1</time>
-</anim>
-
 
 
 <!-- /// ROOMS /// -->

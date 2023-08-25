@@ -39,6 +39,34 @@
 	</mod-overwrite:launchSounds>
 </mod:findName>
 
+<mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN_CHAOS">
+	<mod:findLike type="explosion">
+		<mod:setValue>explosion_bio</mod:setValue>
+	</mod:findLike>
+	<mod:findLike type="weaponArt">
+		<mod:setValue>missiles_massive_chaos</mod:setValue>
+	</mod:findLike>
+	<mod:findLike type="image">
+		<mod:setValue>missile_obsidian_chaos</mod:setValue>
+	</mod:findLike>
+	<mod-append:fireTime>2</mod-append:fireTime>
+	<mod-overwrite:launchSounds>
+		<sound>missile_giant</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="UNSPOOLER">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>nightshade</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="UNSPOOLER_CHAOS">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>nightshade_chaos</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
 <!-- /// WEAPONS /// -->
 
 <!-- // LASERS // -->
@@ -208,7 +236,8 @@ Buy/Sell Price: 60~/30~</descriptionOverride>
 	<accuracyMod>30</accuracyMod>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
-	<breachChance>3</breachChance>
+	<stun>5</stun>
+	<stunChance>3</stunChance>
 	<cooldown>12</cooldown>
 	<power>1</power>
 	<cost>60</cost>
@@ -225,9 +254,7 @@ Buy/Sell Price: 60~/30~</descriptionOverride>
 		<sound>hitHull1</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
+		<sound>shield_pop</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>miss</sound>
@@ -262,7 +289,8 @@ Buy/Sell Price: 80~/40~</descriptionOverride>
 	<accuracyMod>30</accuracyMod>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
-	<breachChance>4</breachChance>
+	<stun>5</stun>
+	<stunChance>3</stunChance>
 	<cooldown>15</cooldown>
 	<power>3</power>
 	<cost>80</cost>
@@ -279,9 +307,7 @@ Buy/Sell Price: 80~/40~</descriptionOverride>
 		<sound>hitHull1</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
+		<sound>shield_pop</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>miss</sound>
@@ -506,6 +532,8 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<accuracyMod>30</accuracyMod>
 	<missiles>1</missiles>
 	<shots>1</shots>
+	<stun>5</stun>
+	<stunChance>10</stunChance>
 	<sp>10</sp>
 	<cooldown>20</cooldown>
 	<power>3</power>
@@ -519,7 +547,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 		<sound>smallMissile2</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>smash_bomb</sound>
+		<sound>fireBomb</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
@@ -555,6 +583,8 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<damage>0</damage>
 	<missiles>1</missiles>
 	<shots>1</shots>
+	<stun>5</stun>
+	<stunChance>10</stunChance>
 	<sp>10</sp>
 	<cooldown>20</cooldown>
 	<power>3</power>
@@ -568,7 +598,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 		<sound>smallMissile2</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>smash_bomb</sound>
+		<sound>fireBomb</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
@@ -1120,16 +1150,16 @@ Required Power: 2
 Charge Time: 14 seconds
 
 Shield Layers Popped: 1
-Shield Layers Crushed: 12
+Shield Layers Crushed: 10
 
 Breach Chance: 100%
 
 Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tooltip>Beam weapon with extended line. 1 damage per room.</tooltip>
 	<damage>0</damage>
-	<fireChance>0</fireChance>
-	<breachChance>10</breachChance>
-	<speed>13</speed>
+	<stun>5</stun>
+	<stunChance>3</stunChance>
+	<speed>28</speed>
 	<cooldown>14</cooldown>
 	<color>
 		<r>21</r>
@@ -1143,8 +1173,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<image>beam_contact</image>
 	<length>40</length>
 	<launchSounds>
-		<sound>beam1</sound>
-		<sound>beam1_2</sound>
+		<sound>smash_beam</sound>
 	</launchSounds>
 	<weaponArt>beam_smash</weaponArt>
 	<iconImage>beam</iconImage>
@@ -1545,7 +1574,8 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<missiles>1</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>0</fireChance>
+	<stun>5</stun>
+	<stunChance>10</stunChance>
 	<cooldown>20</cooldown>
 	<power>2</power>
 	<cost>75</cost>
@@ -1557,7 +1587,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 		<sound>bombTeleport</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>smash_bomb</sound>
+		<sound>fireBomb</sound>
 	</hitShipSounds>
 	<weaponArt>bomblauncher_smash</weaponArt>
 	<iconImage>bomb</iconImage>
@@ -1587,7 +1617,8 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<missiles>1</missiles>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>0</fireChance>
+	<stun>5</stun>
+	<stunChance>10</stunChance>
 	<cooldown>20</cooldown>
 	<power>2</power>
 	<cost>65</cost>
@@ -1599,7 +1630,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 		<sound>bombTeleport</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>smash_bomb</sound>
+		<sound>fireBomb</sound>
 	</hitShipSounds>
 	<weaponArt>bomblauncher_smash</weaponArt>
 	<iconImage>bomb</iconImage>
@@ -1652,6 +1683,51 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 		<sound>smallExplosion</sound>
 	</hitShipSounds>
 	<weaponArt>bomblauncher_purge</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BOMB_DECAY">
+	<type>BOMB</type>
+	<tip>tip_scrambler</tip>
+	<title>Decay Bomb</title>
+	<short>Decay B.</short>
+	<locked>1</locked>
+	<desc>This self-teleporting explosive causes no direct damage. Instead, its bizarre technologies create flaws in the structure of a room, causing it to slowly erode.</desc>
+	<tooltip>No damage, but inflicts an effect that decays systems.</tooltip>
+	<damage>0</damage>
+	<accuracyMod>30</accuracyMod>
+	<missiles>1</missiles>
+	<erosion>
+		<speed>1.0</speed>
+		<maxSpeed>3.0</maxSpeed>
+		<time>60</time>
+		<maxTime>60</maxTime>
+		<systemRepairMultiplier>1.0</systemRepairMultiplier>
+		<erodeShields>false</erodeShields>
+		<growBreachMultiplier>2.0</growBreachMultiplier>
+		<newBreachDamage>0.01</newBreachDamage>
+		<newBreachRequirement>200</newBreachRequirement>
+		<canDilate>true</canDilate>
+		<roomAnim renderLayer="2">
+			<anim animType="default" animBorder="0">tile_erosion</anim>
+			<tileAnim>tile_erosion</tileAnim>
+		</roomAnim>
+	</erosion>
+	<shots>1</shots>
+	<cooldown>18</cooldown>
+	<power>1</power>
+	<cost>100</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>bomb_decay</image>
+	<explosion>explosion_toxic_death</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_decay</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
@@ -2277,7 +2353,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<cost>75</cost>
 	<bp>4</bp>
 	<rarity>5</rarity>
-	<explosion>room_center_pointer</explosion>
+	<explosion>center_pointer</explosion>
 	<launchSounds>
 		<sound>pointer</sound>
 	</launchSounds>
@@ -2316,7 +2392,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 		<newBreachDamage>0</newBreachDamage>
 		<newBreachRequirement>0</newBreachRequirement>
 		<canDilate>false</canDilate>
-		<roomAnim renderLayer="4">
+		<roomAnim renderLayer="1">
 			<anim animType="default" animBorder="0">tile_repairblock</anim>
 			<tileAnim>tile_repairblock</tileAnim>
 		</roomAnim>
@@ -2487,7 +2563,8 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<radius>25</radius>
 	<shots>1</shots>
 	<sp>0</sp>
-	<breachChance>1</breachChance>
+	<stun>5</stun>
+	<stunChance>3</stunChance>
 	<bp>2</bp>
 	<spin>0</spin>
 	<projectiles>
@@ -2501,9 +2578,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 		<sound>hitHull1</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
+		<sound>shield_pop</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>miss</sound>
