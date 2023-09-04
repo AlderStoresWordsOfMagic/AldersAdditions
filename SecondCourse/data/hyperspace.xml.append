@@ -39,15 +39,28 @@
 	<variable name="aa_ach_crew_thane" op="set" val="0"/> <!-- // If you have had Thane on your ship before. // -->
 	<variable name="aa_ach_crew_chael" op="set" val="0"/> <!-- // If you have had Chael on your ship before. // -->
 	
-	<!-- // CREW STORAGE // -->
+	<!-- // UNIQUE CREW // -->
+
+	<variable name="aa_alder_ultimate" op="set" val="0"/> <!-- // If Alder has assumed his ultimate form. // -->
+	<variable name="aa_thane_ultimate" op="set" val="0"/> <!-- // If Thane has assumed his ultimate form. // -->
+	<variable name="aa_chael_ultimate" op="set" val="0"/> <!-- // If Chael has assumed her ultimate form. // -->
 
 	<metaVariable name="aa_store_crew_alder" op="set" val="0"/> <!-- // If Alder is currently aboard Axis Station. // -->
 	<metaVariable name="aa_store_crew_thane" op="set" val="0"/> <!-- // If Thane is currently aboard Axis Station. // -->
 	<metaVariable name="aa_store_crew_chael" op="set" val="0"/> <!-- // If Chael is currently aboard Axis Station. // -->
 
-	<!-- // MISC. // -->
+	<metaVariable name="aa_store_crew_alder_ultimate" op="set" val="0"/> <!-- // If Ultimate Alder is currently aboard Axis Station. // -->
+	<metaVariable name="aa_store_crew_thane_ultimate" op="set" val="0"/> <!-- // If Ultimate Thane is currently aboard Axis Station. // -->
+	<metaVariable name="aa_store_crew_chael_ultimate" op="set" val="0"/> <!-- // If Ultimate Chael is currently aboard Axis Station. // -->
 
-	<variable name="aa_alder_transgressions" op="set" val="0"/> <!-- // Increases when you gain notoriety and Alder is on board; Alder will leave if this value is greater than 1. // -->
+	<variable name="aa_alder_transgressions" op="set" val="0"/> <!-- // Increases when you gain notoriety and Alder is on board; Alder will leave if this value is greater than 1. Nexus trangressions do not count. // -->
+
+	<!-- // AXIS STATION // -->
+
+	<variable name="aa_axis_actions" op="set" val="0"/> <!-- // How many actions you have left on board Axis Station this run. // -->
+
+	<variable name="aa_axis_bounty_virus" op="set" val="0"/> <!-- // If the player knows about the virus in the White Knight bounty. // -->
+	<variable name="aa_axis_bounty_corin" op="set" val="0"/> <!-- // If Dr. Corin is alive and present, handled with a Lua script. // -->
 
 </events>
 
@@ -263,6 +276,12 @@
 <!-- // SHIP ICONS // -->
 
 <mod:findLike type="shipIcons">
+
+	<mod-append:shipIcon>
+		<name>aa_icon_superauto</name>
+		<tooltip>ADVANCED AUTOMATION:
+This enemy is powered by a complex artificial intelligence, and therefore cannot be crew-killed. Systems behave as if manned by crew with fully developed skills, and automatic repairs are made at triple the rate of a normal automated ship.</tooltip>
+	</mod-append:shipIcon>
 
 	<mod-append:shipIcon>
 		<name>aa_icon_insulated</name>

@@ -383,7 +383,7 @@
 	<drone_targetable>0</drone_targetable>
 	<title>Aetheric Pulse Laser</title>
 	<short>Aether Pulse</short>
-	<tip>tip_transcend</tip>
+	<tip>aa_tip_transcend</tip>
 	<desc>A massive Laser prototype that outclasses most others of its category, and fires in a unique pattern where each shot is clustered together. However, its power draw is incredible.</desc>
 	<tooltip>No.</tooltip>
 	<damage>2</damage>
@@ -427,7 +427,7 @@
 
 <weaponBlueprint name="AA_AETHER_FOCUS_SYSTEM">
     <type>BEAM</type>
-    <tip>tip_transcend</tip>
+    <tip>aa_tip_transcend</tip>
     <flavorType>Aether Pinpoint</flavorType>
     <title>Transcendent System Smasher</title>
     <short>Aether Smasher</short>
@@ -465,7 +465,7 @@
 	<type>LASER</type>
 	<title>[SYSTEM'S CHOICE - SIDEARM]</title>
 	<short>[PISTOL]</short>
-	<tip>tip_hotgun</tip>
+	<tip>aa_tip_hotgun</tip>
 	<desc>This strange Heavy Laser appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
 	<tooltip>It's not really a laser if it fires virtual projectiles.</tooltip>
 	<damage>2</damage>
@@ -502,7 +502,7 @@
 	<type>LASER</type>
 	<title>[SYSTEM'S CHOICE - RIFLE]</title>
 	<short>[RIFLE]</short>
-	<tip>tip_hotgun</tip>
+	<tip>aa_tip_hotgun</tip>
 	<desc>This strange Burst Laser appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
 	<tooltip>It's not really a laser if it fires virtual projectiles.</tooltip>
 	<damage>1</damage>
@@ -540,7 +540,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>[SYSTEM'S CHOICE - SHOTGUN]</title>
 	<short>[SHOTGUN]</short>
-	<tip>tip_hotgun</tip>
+	<tip>aa_tip_hotgun</tip>
 	<desc>This strange Flak cannon appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
 	<tooltip>It's not really a flak if it fires virtual projectiles.</tooltip>
 	<radius>45</radius>
@@ -580,7 +580,7 @@
 <weaponBlueprint name="AA_HOT_FOCUS">
 	<type>BEAM</type>
 	<flavorType>Pinpoint</flavorType>
-	<tip>tip_hotgun</tip>
+	<tip>aa_tip_hotgun</tip>
 	<title>[SYSTEM'S CHOICE - RAILGUN]</title>
 	<short>[RAILGUN]</short>
 	<desc>This strange Pinpoint appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>

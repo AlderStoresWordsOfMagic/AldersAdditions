@@ -91,3 +91,23 @@ particleShields["AA_INTEGRAL_PARTICLE_SHIELD"] = {
     time = 10,
     color = Graphics.GL_Color(0.05, 0.25, 1.0, 1.0)
 }
+
+
+
+-- [Dr. Corin - A special Human Medic checked for by certain events.]
+mods.alder.corinCheck = {}
+local corinCheck = mods.alder.corinCheck
+
+script.on_internal_event(Defines.InternalEvents.CONSTRUCT_CREWMEMBER, function(crew)
+    if crew:GetName() == "Dr. Corin" or crew:GetLongName() == "Doctor Corin" then
+        crew.table[corinCheck] = true
+    end
+end)
+
+script.on_game_event("AA_BOUNTY_STEALTH_FINALE", false, function()
+    for crew in vter(Hyperspace.ships.player.vCrewList) do
+        if crew.table[corinCheck] then
+            Hyperspace.playerVariables.aa_axis_bounty_corin = 1
+        end
+    end
+end)

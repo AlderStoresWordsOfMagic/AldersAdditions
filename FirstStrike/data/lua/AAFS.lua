@@ -196,13 +196,13 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipMa
 end)
 
 
-local sustainBeams = {
-    AA_BEAM_SUSTAIN = {
-        baseDamage = 1, --Base damage of the weapon
-        damagePeriod = 4, --Time between damage pulses
-        sabotageRate = 1, --Rate at which beam sabotages systems
-        sound = "sysExplosion", --Sound that plays every pulse
-    }
+mods.alder.sustainBeams = {}
+local sustainBeams = mods.alder.sustainBeams
+sustainBeams["AA_BEAM_SUSTAIN"] = {
+    baseDamage = 1, -- Base damage of the weapon
+    damagePeriod = 4, -- Time between damage pulses
+    sabotageRate = 1, -- Rate at which beam sabotages systems
+    sound = "sysExplosion", -- Sound that plays every pulse
 }
 
 -- ["Sovnya" Sustaining Beam - Set beam speed to 0, drill into the enemy for the occasional periodic hit of damage identical to regular beams. Again, thank you, Vertaal!]
@@ -231,7 +231,7 @@ function(ShipManager, Projectile, Location, Damage, realNewTile, beamHitType)
 
         if Projectile.timer > sustainBeam.damagePeriod then --If damagePeriod seconds have passed since the last pulse, apply another one
             local dam = Hyperspace.Damage() --Create a Damage object
-            dam.iDamage = bleed --Set iDamage to how much damage would pleed through on a "normal" beam
+            dam.iDamage = bleed --Set iDamage to how much damage would bleed through on a "normal" beam
             dam.iSystemDamage = -dam.iDamage --Cancel system damage (applied via "sabotage" effect)
             local farPoint = Hyperspace.Pointf(-2147483648, -2147483648) --Create a Pointf that is as far away as possible so it will never intersect a room
             local savedName = Projectile.extend.name --Save projectile name for later restoration

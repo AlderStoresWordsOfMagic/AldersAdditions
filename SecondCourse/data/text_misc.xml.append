@@ -1,13 +1,17 @@
 <!-- /// TOOLTIPS /// -->
 
-<text name="tip_transcend">Tip: A powerful weapon forged by the best Dustworm scientists. Use judiciously.</text>
-<text name="tip_hotgun">Tip: Join us.</text>
-<text name="tip_test">Tip: Go nuts.</text>
+<text name="aa_tip_transcend">Tip: A powerful weapon forged by the best Dustworm scientists. Use judiciously.</text>
+<text name="aa_tip_hotgun">Tip: Join us.</text>
+<text name="aa_tip_test">Tip: Go nuts.</text>
+
+<!-- /// BEACONS /// -->
+
+<text name="aa_beacon_axis_bounty">BOUNTY</text>
 
 <!-- /// WARNINGS /// -->
 
-<text name="warning_bombing">DRONE WING\nINCOMING</text>
-<text name="warning_integral">MATH QUESTION\nIMMINENT</text>
+<text name="aa_warning_bombing">DRONE STRIKE\nINCOMING</text>
+<text name="aa_warning_integral">MATH QUESTION\nIMMINENT</text>
 
 <!-- /// VICTORY TEXT /// -->
 

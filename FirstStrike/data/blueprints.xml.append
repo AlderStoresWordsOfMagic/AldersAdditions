@@ -4,6 +4,12 @@
 
 <!-- // WEAPONS // -->
 
+<mod:findName type="weaponBlueprint" name="LASER_BURST_8">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>laser_burst_8</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
 <mod:findName type="weaponBlueprint" name="MISSILES_FREE">
 	<mod:findLike type="weaponArt">
 		<mod:setValue>missiles_recycle</mod:setValue>
@@ -13,6 +19,12 @@
 <mod:findName type="weaponBlueprint" name="TRC_MISSILES_INSTANT">
 	<mod:findLike type="weaponArt">
 		<mod:setValue>pre_missiles</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="BEAM_REPAIR">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>beam_prohull</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 
@@ -75,7 +87,7 @@
 	<type>LASER</type>
 	<title>Scrambler Laser</title>
 	<short>Scrambler Laser</short>
-	<tip>tip_scrambler</tip>
+	<tip>aa_tip_scrambler</tip>
 	<desc>A specialized Laser that deals no direct damage. Instead, it induces flaws into the DNA of crew, greatly reducing their ability to heal wounds.</desc>
 	<tooltip>Scrambler Laser; 10 second cooldown, makes crew unable to heal quickly.</tooltip>
 	<damage>0</damage>
@@ -215,7 +227,7 @@
 	<flavorType>Shield Smasher</flavorType>
 	<title>Shield Smasher MK I</title>
 	<short>Smash I</short>
-	<tip>tip_smash</tip>
+	<tip>aa_tip_smash</tip>
 	<descriptionOverride>This accelerator-like weapon is specifically designed to create and fire bolts that can overload shield generators.
 
 Stats:
@@ -268,7 +280,7 @@ Buy/Sell Price: 60~/30~</descriptionOverride>
 	<flavorType>Shield Smasher</flavorType>
 	<title>Shield Smasher MK II</title>
 	<short>Smash II</short>
-	<tip>tip_smash</tip>
+	<tip>aa_tip_smash</tip>
 <descriptionOverride>A heavy, powerful anti-shield weapon with lower accuracy than its predecessor, but a much higher shot count.
 
 Stats:
@@ -356,7 +368,7 @@ Buy/Sell Price: 80~/40~</descriptionOverride>
 	<type>LASER</type>
 	<title>Cumulative Laser</title>
 	<short>Cum. Laser</short>
-	<tip>tip_accumulator</tip>
+	<tip>aa_tip_accumulator</tip>
 	<desc>An unusual model of Laser that, when left to charge, can increase the damage of its shots to an incredible degree.</desc>
 	<tooltip>Fires a single shot that deals 1 damage. Damage increases the more it charges.</tooltip>
 	<damage>1</damage>
@@ -393,7 +405,7 @@ Buy/Sell Price: 80~/40~</descriptionOverride>
 	<type>LASER</type>
 	<title>Cumulative Particle Accelerator</title>
 	<short>Cum. Particle</short>
-	<tip>tip_accumulator</tip>
+	<tip>aa_tip_accumulator</tip>
 	<desc>Instead of firing a multitude of streamlied bolts, this Particle Accelerator charges a single bolt of varying strength.</desc>
 	<tooltip>Fires a single shot that deals 1 system damage. Damage increases the more it charges.</tooltip>
 	<damage>0</damage>
@@ -513,7 +525,7 @@ This enemy-only version lacks the innate +10% accuracy bonus of missile weapons.
 
 <weaponBlueprint name="AA_MISSILES_SMASH">
 	<type>MISSILES</type>
-	<tip>tip_smash</tip>
+	<tip>aa_tip_smash</tip>
 	<title>Smashing Missiles</title>
 	<short>Smash M.</short>
 	<descriptionOverride>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.
@@ -563,7 +575,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 
 <weaponBlueprint name="AA_MISSILES_SMASH_ENEMY">
 	<type>MISSILES</type>
-	<tip>tip_smash</tip>
+	<tip>aa_tip_smash</tip>
 	<title>Smashing Missiles [E]</title>
 	<short>Smash M. [E]</short>
 	<descriptionOverride>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.
@@ -620,7 +632,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<drone_targetable>0</drone_targetable>
 	<title>Prismatic Ion Barrage</title>
 	<short>Prism Ion</short>
-	<tip>tip_ion_rainbow</tip>
+	<tip>aa_tip_ion_rainbow</tip>
 	<desc>A team of specialists designed this weapon to capture every kind of ion blaster in a single frame. Though the project was a partial success, there is no way to control which kind of blast gets fired.</desc>
 	<tooltip>Every Ion you could want, packed into a singular, cozy chassis.</tooltip>
 	<damage>0</damage>
@@ -945,7 +957,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Cumulative Ion</title>
 	<short>Cum. Ion</short>
-	<tip>tip_accumulator</tip>
+	<tip>aa_tip_accumulator</tip>
 	<desc>This Ion weapon has the ability to vary the strength of its blast, matching both the lightest and heaviest of its class.</desc>
 	<tooltip>Fires one ion blast that deals 1 damage. Damage increases the more it charges.</tooltip>
 	<ion>1</ion>
@@ -987,8 +999,8 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<flavorType>Concentrated Energy Blast</flavorType>
 	<tip>tip_energy</tip>
-	<title>Gamma Energy</title>
-	<short>Gamma Energy</short>
+	<title>Ultraviolet Energy</title>
+	<short>UV Energy</short>
 	<locked>1</locked>
 	<desc>Energy weapons can disable systems and cause hull damage. This weapon is tuned specifically to irradiate and kill crew.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage and 1 hull damage. Can hit and disable shields as well as systems.</tooltip>
@@ -1061,7 +1073,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Cumulative Energy</title>
 	<short>Cum. Energy</short>
-	<tip>tip_accumulator</tip>
+	<tip>aa_tip_accumulator</tip>
 	<desc>A multitude of internal capacitors allows this Energy Cannon to hold in a blast, concentrating its hull-cracking power.</desc>
 	<tooltip>Fires one energy blast that deals 1 damage and 1 ion damage. Damage increases the more it charges.</tooltip>
 	<damage>1</damage>
@@ -1103,21 +1115,22 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 
 <weaponBlueprint name="AA_BEAM_SUSTAIN">
 	<type>BEAM</type>
-	<tip>tip_beam_sustain</tip>
+	<tip>aa_tip_beam_sustain</tip>
 	<title>'Sovnya' Sustaining Beam</title>
 	<short>'Sovnya'</short>
 	<desc>Overriden.</desc>
 	<tooltip>Beam weapon, drills into a single room.</tooltip>
 	<descriptionOverride>This Beam weapon's advanced cooling allows it to behave differently from other Beams. It focuses on a single point and periodically inflicts damage as a Beam for as long as it is powered and locked on.
 	
-Stats:
-Required Power: 3
-Charge Time: 10 seconds
+		Stats:
+		Required Power: 3
+		Charge Time: 10 seconds
 
-Base Hull Damage: 1
-Base System Damage: 1
+		Base Hull Damage: 1
+		Base System Damage: 1
+		System Damage Rate: 1
 
-Buy/Sell Price: 95~/47~
+	Buy/Sell Price: 95~/47~
 	</descriptionOverride>
 	<damage>1</damage>
 	<sp>0</sp>
@@ -1140,7 +1153,7 @@ Buy/Sell Price: 95~/47~
 
 <weaponBlueprint name="AA_BEAM_SMASH">
 	<type>BEAM</type>
-	<tip>tip_smash</tip>
+	<tip>aa_tip_smash</tip>
 	<title>Smashing Beam</title>
 	<short>Smash Beam</short>
 	<descriptionOverride>This Beam is capable of hitting shields instead of simply passing through them, with the additional potential to shield-crush. Also creates breaches.
@@ -1181,7 +1194,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 
 <weaponBlueprint name="AA_BEAM_PURGE">
 	<type>BEAM</type>
-	<tip>tip_scrambler</tip>
+	<tip>aa_tip_scrambler</tip>
 	<title>'Knout' Scrambler Beam</title>
 	<short>'Knout'</short>
 	<desc>This beam is incredibly powerful when paired with a source of damage, as it can lock crew out of healing their wounds.</desc>
@@ -1228,7 +1241,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 
 <weaponBlueprint name="AA_BEAM_ION_1">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>'Hanbo' Disruptor</title>
 	<short>'Hanbo'</short>
 	<desc>This curious beam-like weapon ionizes systems and shields in much the same manner as true ion weapons.</desc>
@@ -1261,7 +1274,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 
 <weaponBlueprint name="AA_BEAM_ION_2">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>'Jo' Disruptor</title>
 	<short>'Jo'</short>
 	<desc>A potent weapon that can paralyze large sections of a ship, creating chaos aboard.</desc>
@@ -1295,7 +1308,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<type>BEAM</type>
 	<title>'Bo' Disruptor</title>
 	<short>'Bo'</short>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<desc>A devastating Disruptor variant known to shut down entire ships with a single sweep.</desc>
 	<tooltip>Deals 3 ion damage per system it hits.</tooltip>
 	<ion>3</ion>
@@ -1325,7 +1338,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 
 <weaponBlueprint name="AA_BEAM_ION_RAD">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>'Kusarigama' Rad-Disruptor</title>
 	<short>'Kusarigama'</short>
 	<desc>Though illegal in the territory from whence Disruptors came, this model's anti-personnel tuning makes it a favorite of pirates and other less savory actors.</desc>
@@ -1385,7 +1398,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 
 <weaponBlueprint name="AA_BEAM_ION_STUN">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>'Kanemuchi' Neural Disruptor</title>
 	<short>'Kanemuchi'</short>
 	<desc>This Disruptor is charged with stun energy, serving a similar purpose to the Partisan.</desc>
@@ -1417,7 +1430,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 
 <weaponBlueprint name="AA_BEAM_ION_PHASE">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>'Tonfa' Phasing Disruptor</title>
 	<short>'Tonfa'</short>
 	<desc>This powerful ion beam can ionize large swaths of a ship even through shields. However, it sweeps very slowly.</desc>
@@ -1450,7 +1463,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 
 <weaponBlueprint name="AA_BEAM_ENERGY">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>'Tetsubo' Energized Disruptor</title>
 	<short>'Tetsubo'</short>
 	<desc>Tuned to damage hull alongside the usual effect, this Disruptor serves double-duty.</desc>
@@ -1553,7 +1566,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 
 <weaponBlueprint name="AA_BOMB_SMASH">
 	<type>BOMB</type>
-	<tip>tip_smash</tip>
+	<tip>aa_tip_smash</tip>
 	<title>Smashing Bomb</title>
 	<short>Smash Bomb</short>
 	<locked>1</locked>
@@ -1638,7 +1651,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 
 <weaponBlueprint name="AA_BOMB_PURGE">
 	<type>BOMB</type>
-	<tip>tip_scrambler</tip>
+	<tip>aa_tip_scrambler</tip>
 	<title>Scrambler Bomb</title>
 	<short>Scrambler B.</short>
 	<locked>1</locked>
@@ -1688,7 +1701,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 
 <weaponBlueprint name="AA_BOMB_DECAY">
 	<type>BOMB</type>
-	<tip>tip_scrambler</tip>
+	<tip>aa_tip_scrambler</tip>
 	<title>Decay Bomb</title>
 	<short>Decay B.</short>
 	<locked>1</locked>
@@ -1733,7 +1746,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 
 <weaponBlueprint name="AA_ELECTRON_1">
 	<type>BOMB</type>
-	<tip>tip_electron</tip>
+	<tip>aa_tip_electron</tip>
 	<title>Electronic Inducer</title>
 	<short>Electron</short>
 	<locked>1</locked>
@@ -1769,7 +1782,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 
 <weaponBlueprint name="AA_ELECTRON_2">
 	<type>BOMB</type>
-	<tip>tip_electron</tip>
+	<tip>aa_tip_electron</tip>
 	<title>Heavy Electronic Inducer</title>
 	<short>Hv. Electron</short>
 	<locked>1</locked>
@@ -1811,7 +1824,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<drone_targetable>1</drone_targetable>
 	<title>Accelerated Flak Gun</title>
 	<short>Part Flak</short>
-	<tip>tip_particle_flak</tip>
+	<tip>aa_tip_particle_flak</tip>
 	<desc>This Flak cannon fires a blast of 4 projectiles charged with exotic particles that shred systems alongside normal hull damage.</desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 4 damage and 8 system damage.</tooltip>
 	<radius>55</radius>
@@ -1906,7 +1919,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Cumulative Flak</title>
-	<tip>tip_accumulator</tip>
+	<tip>aa_tip_accumulator</tip>
 	<short>Cum. Flak</short>
 	<desc>This versatile Flak Cannon has the ability to refine the garbage it fires, increasing the damage its shots deal as it waits.</desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 3 damage. The damage of each shot increases by 1 per charge.</tooltip>
@@ -2034,7 +2047,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 <weaponBlueprint name="AA_FOCUS_ION_1">
 	<type>BEAM</type>
 	<flavorType>Pinpoint</flavorType>
-	<tip>tip_capacitor</tip>
+	<tip>aa_tip_capacitor</tip>
 	<title>'Mallet' Capacitor</title>
 	<short>'Mallet'</short>
 	<desc>This weapon uses technology similar to Disruptors, blasting single rooms with a whiff of ionizing energy that travels instantly.</desc>
@@ -2065,7 +2078,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 <weaponBlueprint name="AA_FOCUS_ION_2">
 	<type>BEAM</type>
 	<flavorType>Pinpoint</flavorType>
-	<tip>tip_capacitor</tip>
+	<tip>aa_tip_capacitor</tip>
 	<title>'Sledge' Capacitor</title>
 	<short>'Sledge'</short>
 	<desc>This powerful Pinpoint-like weapon zaps single rooms with a hefty dose of electricity.</desc>
@@ -2096,7 +2109,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 <weaponBlueprint name="AA_FOCUS_ION_PHASE">
 	<type>BEAM</type>
 	<flavorType>Pinpoint</flavorType>
-	<tip>tip_capacitor</tip>
+	<tip>aa_tip_capacitor</tip>
 	<title>'Gavel' Phasing Capacitor</title>
 	<short>'Gavel'</short>
 	<desc>Energy beams tuned to the same frequency as standard shields allow this Capacitor to pierce right through them.</desc>
@@ -2131,7 +2144,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<type>LASER</type>
 	<title>Mass Driver</title>
 	<short>Driver</short>
-	<tip>tip_driver</tip>
+	<tip>aa_tip_driver</tip>
 	<desc>This weapon accelerates a small rod of metal to immense speeds, which reaches the enemy instantly.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<damage>2</damage>
@@ -2166,7 +2179,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<type>LASER</type>
 	<title>Irradiated Mass Driver</title>
 	<short>Rad Driver</short>
-	<tip>tip_driver</tip>
+	<tip>aa_tip_driver</tip>
 	<desc>Loaded with projectiles made of radioactive material, this Mass Driver inflicts massive damage to all that dare challenge it.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<damage>1</damage>
@@ -2335,7 +2348,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 
 <weaponBlueprint name="AA_POINTER">
 	<type>LASER</type>
-	<tip>tip_pointer</tip>
+	<tip>aa_tip_pointer</tip>
 	<title>Drone Pointer Antenna</title>
 	<short>Pointer</short>
 	<locked>1</locked>
@@ -2373,7 +2386,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<drone_targetable>0</drone_targetable>
 	<title>Tester's Weapon</title>
 	<short>Test</short>
-	<tip>tip_test</tip>
+	<tip>aa_tip_test</tip>
 	<desc>This gun's properties seem to shift rapidly. Nobody knows what it will be next.</desc>
 	<tooltip>No.</tooltip>
 	<damage>1</damage>
@@ -2431,7 +2444,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 
 <weaponBlueprint name="AA_DRONE_BEAM_ION_AMP1">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>Drone Disruptor [A1]</title>
 	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
 	<ion>1</ion>
@@ -2452,7 +2465,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 </weaponBlueprint>
 <weaponBlueprint name="AA_DRONE_BEAM_ION_AMP2">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>Drone Disruptor [A2]</title>
 	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
 	<ion>1</ion>
@@ -2473,7 +2486,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 </weaponBlueprint>
 <weaponBlueprint name="AA_DRONE_BEAM_ION_AMP3">
 	<type>BEAM</type>
-	<tip>tip_disruptor</tip>
+	<tip>aa_tip_disruptor</tip>
 	<title>Drone Disruptor [A3]</title>
 	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
 	<ion>1</ion>
@@ -2557,7 +2570,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<drone_targetable>0</drone_targetable>
 	<title>Drone Shield Smasher</title>
 	<short>Smash Drone</short>
-	<tip>tip_smash</tip>
+	<tip>aa_tip_smash</tip>
 	<desc>A shield smasher normally integrated into drones. It was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<radius>25</radius>
@@ -2587,7 +2600,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 </weaponBlueprint>
 <weaponBlueprint name="AA_DRONE_ELECTRON">
 	<type>BOMB</type>
-	<tip>tip_electron</tip>
+	<tip>aa_tip_electron</tip>
 	<title>Drone Electronic Inducer</title>
 	<locked>1</locked>
 	<desc>An electronic inducer normally integrated into drones. It was never supposed to fall into your hands.</desc>
