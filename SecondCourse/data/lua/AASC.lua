@@ -28,61 +28,6 @@ local INT_MAX = 2147483647
 
 
 
--- [Spring and Lock - Fires a multitude of bombs across an area.]
-
-mods.alder.shotgunBombs = {}
-local shotgunBombs = mods.alder.shotgunBombs
-shotgunBombs["AA_LOOT_RENEGADE_TONY_BIO"] = {
-    blueprint = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("AA_LOOT_RENEGADE_TONY_BIO_BOMB"),
-    count = 3
-}
-
-shotgunBombs["AA_LOOT_RENEGADE_TONY_STUN"] = {
-    blueprint = Hyperspace.Global.GetInstance():GetBlueprints():GetWeaponBlueprint("AA_LOOT_RENEGADE_TONY_STUN_BOMB"),
-    count = 3
-}
-
-script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
-    local shotgunBomb = shotgunBombs[weapon.blueprint.name]
-    if shotgunBomb then
-        local targetCenter = nil
-        if pcall(function() targetCenter = weapon.lastTargets[0] end) and targetCenter then
-        
-            -- Find all room tiles within the weapon's radius
-            local targetShipGraph = Hyperspace.ShipGraph.GetShipInfo(projectile.destinationSpace)
-            local validTargets = {}
-            local horzMult = 1
-            local vertMult = 1
-            local checkRadius = weapon.radius
-            if targetCenter.x%35 > 0 then horzMult = 0 end
-            if targetCenter.y%35 > 0 then vertMult = 0 end
-            if checkRadius%35 > 0 then checkRadius = checkRadius - checkRadius%35 + 35 end
-            for targetY = targetCenter.y - checkRadius + vertMult*17, targetCenter.y + checkRadius - vertMult*18, 35 do
-                for targetX = targetCenter.x - checkRadius + horzMult*17, targetCenter.x + checkRadius - horzMult*18, 35 do
-                    if (targetX - targetCenter.x)^2 + (targetY - targetCenter.y)^2 <= weapon.radius^2 and targetShipGraph:GetSelectedRoom(targetX, targetY, false) > -1 then
-                        table.insert(validTargets, Hyperspace.Pointf(targetX, targetY))
-                    end
-                end
-            end
-            
-            -- Fire 4 bombs randomly at found tiles
-            local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
-            local bombsCreated = 0
-            while #validTargets > 0 and bombsCreated < shotgunBomb.count do
-                local targetIndex = Hyperspace.random32()%#validTargets + 1
-                target = validTargets[targetIndex]
-                table.remove(validTargets, targetIndex)
-                spaceManager:CreateBomb(shotgunBomb.blueprint, projectile.ownerId, target, projectile.destinationSpace)
-                bombsCreated = bombsCreated + 1
-            end
-            
-            projectile:Kill()
-        end
-    end
-end, INT_MAX)
-
-
-
 -- [Particle Shields - More of them here than just the stock one in FS.]
 local particleShields = mods.alder.particleShields
 particleShields["AA_INTEGRAL_PARTICLE_SHIELD"] = {
@@ -91,23 +36,3 @@ particleShields["AA_INTEGRAL_PARTICLE_SHIELD"] = {
     time = 10,
     color = Graphics.GL_Color(0.05, 0.25, 1.0, 1.0)
 }
-
-
-
--- [Dr. Corin - A special Human Medic checked for by certain events.]
-mods.alder.corinCheck = {}
-local corinCheck = mods.alder.corinCheck
-
-script.on_internal_event(Defines.InternalEvents.CONSTRUCT_CREWMEMBER, function(crew)
-    if crew:GetName() == "Dr. Corin" or crew:GetLongName() == "Doctor Corin" then
-        crew.table[corinCheck] = true
-    end
-end)
-
-script.on_game_event("AA_BOUNTY_STEALTH_FINALE", false, function()
-    for crew in vter(Hyperspace.ships.player.vCrewList) do
-        if crew.table[corinCheck] then
-            Hyperspace.playerVariables.aa_axis_bounty_corin = 1
-        end
-    end
-end)

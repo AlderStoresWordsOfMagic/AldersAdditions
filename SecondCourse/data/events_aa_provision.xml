@@ -1,0 +1,305 @@
+<!-- ///// This file contains all events relating to the Provision sector. All events relating to Axis are instead found in their own file. ///// -->
+
+<FTL>
+
+	
+
+<!-- /// SECTOR ENTRY /// -->
+
+<event name="AA_PROVISION_START"> <!-- DUMMY, IDENTICAL TO AUGMENTED GUARD -->
+	<metaVariable name="juke_augmented" op="set" val="1"/>
+	<preventQuest/>
+	<beaconType id="map_icon_start" global="false">
+		<color r="82" g="161" b="155" a="1"/>
+	</beaconType>
+	<text>You have entered Provisional space. The light of a red dwarf in the background illuminates a small solar system, with the FTL Beacon following suit. Though there wasn't much time to stop and smell the roses, one could easily lose themselves in the scenery!</text>
+	<variable name="loc_unique_sectors" op="add" val="1"/>
+	<achievement silent="false">ACH_TRUEEND_AUGMENTED</achievement>
+	<ship load="SHIP_GUARD_AUGMENTED" hostile="false"/> <!-- DUMMY SHIP, WILL BE REPLACED WITH PROV GUARD -->
+	<changeBackground>BACK_SECTOR_AUGMENTED</changeBackground>
+	<playSound>lightspeed</playSound>
+	<remove name="HIDDEN DUMMY"/>
+	<choice hidden="true" req="rep_general" lvl="-2147483648" max_lvl="0" max_group="0" blue="false">
+		<text>Continue...</text>
+		<event load="AA_GUARD_PROVISION"/>
+	</choice>
+	<choice hidden="true" req="rep_general" lvl="1" max_lvl="2" max_group="0" blue="false">
+		<text>Continue...</text>
+		<event load="AA_GUARD_PROVISION_CRIMINAL"/>
+	</choice>
+	<choice hidden="true" req="rep_general" lvl="3" max_lvl="2147483647" max_group="0" blue="false">
+		<text>Continue...</text>
+		<event load="AA_GUARD_PROVISION_NOTORIOUS"/>
+	</choice>
+</event>
+
+<event name="AA_GUARD_PROVISION"> <!-- TO FINISH -->
+	<text>Upon jumping into the sector, you are greeted by a light fleet of Provision forces alongside a heavily armed guard vessel. The guard hails you, revealing a chipper Dustworm clad in thick, black armor, who asks for your identification and runs a brief inspection. Considering their good mood and your status as a Federation-employed Renegade, you might be able to ask for a little help...</text>
+	<choice>
+		<text>Request supplies.</text>
+		<event>
+			<text>"Certainly! We have an abundance of drone bases at this time, and I have a feeling you'll need these more than us." The guard ship beams over a crate of drone parts, ready for immediate use.</text>
+			<item_modify>
+				<item type="drones" min="6" max="8"/>
+			</item_modify>
+		</event>
+		<event>
+			<text>"Certainly! We're a little dry on drone parts at the moment, but we do have some excess fuel. Considering how often you seem to travel, maybe it'd help?" The guard ship beams over a crate of high-quality FTL fuel cells.</text>
+			<item_modify>
+				<item type="fuel" min="6" max="8"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="AA_LIST_CREW_DUSTWORM" hidden="true">
+		<text>[Dustworm Crew] Put your Dustworm on the call.</text>
+		<event>
+			<text>As the guard talks, your Dustworm peeks up from behind a table, and the two share a brief conversation which you tune out. That is, until your attention is snagged back by a quip about your true mission, followed by a freshly built, military-grade weapon being beamed over to your cargo bay!</text>
+			<weapon name="AA_GIFTLIST_PROVISION"/>
+		</event>
+	</choice>
+</event>
+
+<event name="AA_GUARD_PROVISION_CRIMINAL">
+	<text>Upon jumping into the sector, you are greeted by a light fleet of Provision forces alongside a heavily armed guard vessel. The guard hails you, revealing a chipper Dustworm clad in thick, black armor, who asks for your identification and runs a brief inspection. Upon reading the identification, they stop for a moment, sighing to themselves.</text>
+	<choice>
+		<text>What's wrong?</text>
+		<event>
+			<text>"Hmmm... it seems you have a record following you. Criminal acts in sector 11-A, pretty nasty ones... I'm afraid I'll have to stop you right there. We will not allow you to enter this sector until your track record has been resolved."</text>
+			<choice>
+				<text>Leave the sector.</text>
+			</choice>
+			<choice req="AA_LIST_CREW_DUSTWORM" hidden="true">
+				<text>[Dustworm Crew] Put your Dustworm on the call.</text>
+				<event>
+					<text>As the guard talks, your Dustworm peeks up from behind a table, and the two share a brief conversation, which ends in the guard sighing angrily. "Fine. We understand you have a very important mission, but A.T.L.A.S. will be watching you. As long as you don't cause any trouble, we will still allow you to pass through the sector." Considering how the guard's vessel is bristling with weapons, you find it best to heed that warning.</text>
+					<variable name="aa_provision_hairtrigger" op="set" val="1"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="AA_GUARD_PROVISION_NOTORIOUS">
+	<text>Upon jumping into the sector, you are greeted by a light fleet of Provision forces alongside a heavily armed guard vessel. The guard hails you, revealing a chipper Dustworm clad in thick, black armor, who asks for your identification and runs a brief inspection. Upon reading the identification, they stop, dead in their tracks, stuttering.</text>
+	<choice>
+		<text>What's wrong?</text>
+		<event>
+			<text>"You... you're on the blacklist! Look at your database entry, you're a wanted criminal in several places! I'm afraid we cannot allow you to proceed any further, for the safety of the Provision New Colonies." The Dustworm coldly cuts communications, and their weapons spring from their hull, alongside every turret in the system twisting to face you!</text>
+			<ship hostile="true"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+
+<!-- /// SECTOR EXIT /// -->
+
+
+
+<!-- /// SPECIAL EVENTS (critical sector features not ranked by difficulty) /// -->
+
+<!-- // CRUISER UNLOCK // -->
+
+<event name="AA_PROVISION_UNLOCK_CRUISER_START">
+
+</event>
+
+
+
+<!-- /// FRIENDLY EVENTS (never have a fight) /// -->
+
+<event name="AA_PROVISION_FREE_STUFF">
+	<text load="AA_TEXT_PROVISION_FREE_STUFF"/>
+	<choice>
+		<text>Do something onboard the ship.</text>
+		<event load="STORAGE_CHECK"/>
+	</choice>
+	<choice>
+		<text>Do nothing.</text>
+		<event/>
+	</choice>
+</event>
+<textList name="AA_TEXT_PROVISION_FREE_STUFF">
+	<text>Your jump leads you into a stretch of space with a rather impressive trinary star system. A few civilian stations abound, mostly to watch this astronomical rarity, but what's more surprising is a small Federation vessel passing by to dead-drop some cargo for you!</text>
+	<text>This point of the sector contains the remains of what appeared to be a research station floating in space, yet to de-orbit into the moon it used to observe. Nobody else is here, so you might as well pick the bones before moving on...</text>
+	<text>Something about this stretch of space feels... wrong. Almost as if you're being watched from some place you can't determine, always seeming to have eyes prying down your back... Though there's a nice, rich asteroid and a little bit of broken ship to harvest here, you do so cautiously.</text>
+	<text>An empty cache, most of the contents long since confiscated, lies near the beacon. There's still a few useful supplies left, implying the previous raiders were after a specific item within.</text>
+</textList>
+
+
+
+<!-- /// NEUTRAL EVENTS (might have a fight) /// -->
+
+<eventList name="AA_PROVISION_NEUTRAL_ENCOUNTER">
+	<event load="AA_PROVISION_ROCHE_LIMIT"/>
+</eventList>
+
+<event name="AA_PROVISION_ROCHE_LIMIT" unique="true">
+	<weaponOverride count="2">
+		<name>LIST_WEAPONS_REBEL_SELITE</name>
+	</weaponOverride>
+	<text>As soon as you jump into the beacon, your eyes are struck by the sight of a planet in the process of falling into its sun. Its surface crumbling as it begins to split apart, creating a massive field of rocks that batters your ship, you scan lots of valuable materials in the planet's spilling mantle... and a rather well-armed Rebel auto-ship in the system, presumably pursuing the same objective.</text>
+	<environment type="asteroid"/>
+	<ship load="AA_SHIP_AUTO_ROCHE_LIMIT" hostile="false"/>
+	<choice>
+		<text>Dive into the fray and fight the Auto-ship.</text>
+		<event>
+			<text>When you approach the burning mantle, the Auto-ship turns to face you, its mining equipment retracting into the hull and reevaling weaponry in its place. The heat of the star, combined with the heavy debris from the crumbling planet, creates an extremely hazardous environment... once you're done harvesting the mantle, you will have to leave as soon as possible!</text>
+			<ship hostile="true"/>
+			<environment type="sun"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Stay away from the crumbling planet.</text>
+		<event>
+			<text>You decide fighting the Auto-ship and accessing the resources are not worth the potential damage to your ship.</text>
+			<choice hidden="true">
+				<text>Check the storage.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice hidden="true">
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+<ship name="AA_SHIP_AUTO_ROCHE_LIMIT" auto_blueprint="LIST_SHIPS_AUTO_LARGE">
+	<escape chance="1" min="3" max="4">
+		<text>Considering the circumstances, you can't help but sense a bit of wisdom in the Auto-ship's next move to charge its FTL drive. Even if it leaves, there will still be a lot of mantle to harvest... though, the fleet might take notice if it does.</text>
+	</escape>
+	<gotaway>
+		<text>The Rebel ship slips from your grasp. Though the Rebel fleet will certainly hear about this, the reward still remains for you to harvest.</text>
+		<modifyPursuit amount="1"/>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>With no distractions, you are able to pass the ship by the planet multiple times, scooping up a share of the planet's mineral-rich insides with every pass. Though not exactly helpful to you, it should net a lot of scrap!</text>
+				<autoReward level="HIGH">fuel</autoReward>
+			</event>
+		</choice>
+	</gotaway>
+	<destroyed>
+		<text>The Auto-Ship shatters, much like the planet beneath. Now, you stand alone at the beacon, the hot mantle free for you to harvest.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event>
+				<text>With no distractions, you are able to pass the ship by the planet multiple times, scooping up a share of the planet's mineral-rich insides with every pass. Though not exactly helpful to you, it should net a lot of scrap!</text>
+				<autoReward level="HIGH">fuel</autoReward>
+			</event>
+		</choice>
+	</destroyed>
+</ship>
+
+<!-- /// HOSTILE EVENTS (always have a fight) /// -->
+
+<eventList name="AA_PROVISION_HOSTILE_ENCOUNTER">
+	<event load="AA_PROVISION_ENCOUNTER_REBEL"/>
+	<event load="AA_PROVISION_ENCOUNTER_PIRATE"/>
+</eventList>
+
+<!-- // REBEL SHIP FIGHT // -->
+
+<event name="AA_PROVISION_ENCOUNTER_REBEL">
+	<text load="AA_TEXT_PROVISION_ENCOUNTER_REBEL"/>
+	<ship load="SHIP_REBEL_FIGHT" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+<textList name="AA_TEXT_PROVISION_ENCOUNTER_REBEL">
+	<text>Even in such a heavily secured sector, the Rebels have proven to be stubborn as always. A Rebel ship that slipped through the cracks of the sector's entry point spots you, and turns to attack!</text>
+	<text>You couldn't mistake it if you tried. The blazing orange hull of a Rebel vessel flits about an Auto-ship of Dustworm make, analyzing its composition, but immediately reverses direction when you show up to the beacon.</text>
+	<text>Hiding behind a nearby asteroid is a Rebel ship. Weapons spring from its hull, and it broadcasts a loud slur over your intercom in an attempt to disorient you.</text>
+	<text>You receive a hail from a vessel. The captain reveals it to be of Rebel design, and spews a cold, yet childish one-liner as you turn around to face it. "Nothing personal, kiddo!"</text>
+	<text>No matter where you flee to, there's one constant you can always rely on: there will be a Rebel ship at most three beacons away from you. You wonder if their travel technologies could be used for better purposes than crusading against all non-humans.</text>
+	<text>You arrive at the beacon just a second too late. A Rebel ship flies directly at you out of a massive, blue fireball, presumably from some Dustworm civilian vessel it just blew up. Battle stations!</text>
+</textList>
+
+<!-- // PIRATE SHIP FIGHT // -->
+
+<event name="AA_PROVISION_ENCOUNTER_PIRATE">
+	<text load="AA_TEXT_PROVISION_ENCOUNTER_PIRATE"/>
+	<ship load="SHIP_PIRATE_ALL" hostile="true"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+<textList name="AA_TEXT_PROVISION_ENCOUNTER_PIRATE">
+	<text>If there's one thing you can expect from pirates, it's that they will always be everywhere you go. A small pirate ship barrels right at you from a nearby moon.</text>
+	<text>As you jump into the beacon, you nearly ram into a pirate ship that slipped by the ever-watchful Provisional Government. Though you're both confused as to what just happened, the smaller vessel decides that they won't pass up such an opportunity...</text>
+	<text>You encounter a pirate ship harassing a Dustworm mining ship. Their engines sputter for a moment as they turn to face your ship, seeing nothing but a bigger payout.</text>
+	<text>A Dustworm vessel rockets past your viewscreen, immediately followed by a pirate vessel. Seeing your ship, they turn to face you, weapons primed and ready to protect themselves from you.</text>
+	<text>There is only a single ship at this otherwise empty beacon. Owned by a band of pirates, it opens fire as soon as it sees a potential victim.</text>
+	<text>Jumping into the beacon, you spot a pirate ship ducking out of range of a nearby A.T.L.A.S. vessel. When the patrol jumps away to inspect another beacon, it immediately springs to life!</text>
+</textList>
+
+
+
+<!-- /// MORALITY UPDATES /// -->
+
+<event name="AA_MORALITY_UPDATE_PROVISION">
+	<text>[NOTORIETY INCREASED - PROVISIONAL GOVERNMENT]
+	Your actions here, justifiable or not, will not reflect well in the eyes of the Provisional Government or its citizens. Continuously perform actions like this and you might start to see negative reactions from the Provisional Government and its allies.</text>
+	<variable name="aa_rep_provision" op="add" val="1"/>
+	<choice blue="false" hidden="true" req="aa_provision_hairtrigger" lvl="1">
+		<text>Continue...</text>
+		<event>
+			<text>While you take a moment to think, your ship's systems pick up a few signals from far away, followed by a jump signature. It appears the A.T.L.A.S. Guard was, indeed watching, and things might get hairy whenever you decide you want to leave...</text>
+			<variable name="aa_provision_securitylevel" op="add" val="3"/>
+		</event>
+	</choice>
+</event>
+<event name="AA_MORALITY_UPDATE_PROVISION_FIGHT">
+	<text>[NOTORIETY INCREASED - PROVISIONAL GOVERNMENT]
+	Your actions here, justifiable or not, will not reflect well in the eyes of the Provisional Government or its citizens. Continuously perform actions like this and you might start to see negative reactions from the Provisional Government and its allies.</text>
+	<variable name="aa_rep_provision" op="add" val="1"/>
+	<choice blue="false" hidden="true" req="aa_provision_hairtrigger" lvl="0">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+	<choice blue="false" hidden="true" req="aa_provision_hairtrigger" lvl="1">
+		<text>Continue...</text>
+		<event>
+			<text>While you take a moment to think, your ship's systems pick up a few signals from far away, followed by a jump signature. It appears the A.T.L.A.S. Guard was, indeed watching, and things might get hairy whenever you decide you want to leave...</text>
+			<variable name="aa_provision_securitylevel" op="set" val="3"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="AA_MORALITY_REMOVE_PROVISION">
+	<text>[NOTORIETY DECREASED - PROVISIONAL GOVERNMENT]
+	You have done a good deed here in the eyes of the Provisional Government. If you've gained notoriety from other actions in the past, you're more likely to be forgiven for them.</text>
+	<variable name="aa_rep_provision" op="add" val="-1"/>
+</event>
+<event name="AA_MORALITY_REMOVE_PROVISION_FIGHT">
+	<text>[NOTORIETY DECREASED - PROVISIONAL GOVERNMENT]
+        You have done a good deed here in the eyes of the Provisional Government. If you've gained notoriety from other actions in the past, you're more likely to be forgiven for them.</text>
+	<variable name="aa_rep_provision" op="add" val="-1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+
+
+<!-- /// DISTRESS EVENTS (special distress beacon events) /// -->
+
+
+
+</FTL>

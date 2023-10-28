@@ -1,0 +1,71 @@
+<FTL>
+
+<!-- /// CUSTOM SECTORS /// -->
+
+<sectorDescription name="AA_SECRET_RUBICON" unique="true">
+	<nameList>
+		<name>[ERROR]</name>
+	</nameList>
+    <trackList>
+		<track>augmented</track>
+	</trackList>
+    <rarityList> <!-- /// PLACEHOLDER DATA, NEARLY IDENTICAL TO AUGMENTED SECTOR /// -->
+		<!--
+		\\\\\\\\\\\
+		   CREW
+		\\\\\\\\\\\
+		-->
+		<!-- Human -->
+		<blueprint name="human" rarity="3"/>
+		<blueprint name="human_medic" rarity="4"/>
+		<blueprint name="human_engineer" rarity="0"/>
+		<blueprint name="human_soldier" rarity="5"/>
+		<!-- Engi -->
+		<blueprint name="engi" rarity="5"/>
+		<blueprint name="engi_separatist" rarity="0"/>
+		<blueprint name="engi_defender" rarity="0"/>
+		<!-- Zoltan -->
+		<blueprint name="zoltan" rarity="4"/>
+		<blueprint name="zoltan_monk" rarity="5"/>
+		<blueprint name="zoltan_devotee" rarity="0"/>
+		<blueprint name="zoltan_peacekeeper" rarity="0"/>
+		<!-- Rock -->
+		<blueprint name="rock" rarity="4"/>
+		<blueprint name="rock_outcast" rarity="5"/>
+		<blueprint name="rock_commando" rarity="0"/>
+		<blueprint name="rock_crusader" rarity="0"/>
+		<!-- Mantis -->
+		<blueprint name="mantis" rarity="0"/>
+		<blueprint name="mantis_free" rarity="0"/>
+		<blueprint name="mantis_suzerain" rarity="0"/>
+		<!-- Slug -->
+		<blueprint name="slug" rarity="4"/>
+		<blueprint name="slug_saboteur" rarity="0"/>
+		<!-- Crystal -->
+		<blueprint name="crystal" rarity="0"/>
+		<blueprint name="crystal_liberator" rarity="0"/>
+		<blueprint name="crystal_sentinel" rarity="0"/>
+		<!-- Orchid -->
+		<blueprint name="orchid" rarity="0"/>
+		<blueprint name="orchid_vampweed" rarity="0"/>
+		<!-- Leech -->
+		<blueprint name="leech" rarity="0"/>
+		<!-- Lanius -->
+		<blueprint name="lanius" rarity="0"/>
+		<blueprint name="lanius_augmented" rarity="0"/>
+		<blueprint name="lanius_welder" rarity="0"/>
+		<!-- Ghost -->
+		<blueprint name="phantom" rarity="5"/>
+		<!-- Dustworm -->
+		<blueprint name="aa_dustworm" rarity="2"/>
+	</rarityList>
+	<startEvent>AA_PROVISION_START</startEvent>
+	<exitBeacon event="AUGMENTED_ANOINTED" rebelEvent="AUGMENTED_ANOINTED"/>
+	<rebelBeacon event="AA_RUBICON_END"/>
+	<removeFirstBeaconNebula/>
+	<priorityEvent name="ANOMALY_SPAWNER" min="1" max="1" priority="1" req="ANOMALY_SPAWN_CHECK" lvl="1" max_lvl="200"/>
+	<event name="RUINS_AUGMENTED" min="3" max="3"/>
+	<event name="AA_PROVISION_HOSTILE_ENCOUNTER" min="999" max="999"/>
+</sectorDescription>
+
+</FTL>

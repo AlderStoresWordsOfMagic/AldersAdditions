@@ -7,11 +7,6 @@
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
 	<mod-append:name>AA_LOOT_RENEGADE_STEALTH</mod-append:name>
 	<mod-append:name>AA_LOOT_RENEGADE_STEALTH_CHAOS</mod-append:name>
-
-	<mod-append:name>AA_HOT_BURST</mod-append:name>
-	<mod-append:name>AA_HOT_HEAVY</mod-append:name>
-	<mod-append:name>AA_HOT_SHOTGUN</mod-append:name>
-	<mod-append:name>AA_HOT_FOCUS</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -70,6 +65,25 @@
 
 <!-- /// ALDER'S ADDITIONS LISTS ///-->
 
+<!-- // GIFT LISTS // -->
+
+<blueprintList name="AA_GIFTLIST_PROVISION">
+	<name>LASER_PARTICLE</name>
+	<name>LASER_STUN</name>
+	<name>LASER_CHAINGUN</name>
+
+	<name>ION_CHAINGUN</name>
+	<name>AA_ION_CHARGEGUN_DAMAGE</name>
+
+	<name>BEAM_ADAPT</name>
+	<name>BEAM_PARTICLE</name>
+	<name>AA_BEAM_ION_1</name>
+	<name>AA_BEAM_ION_2</name>
+	<name>AA_BEAM_ION_STUN</name>
+
+	<name>AA_FOCUS_ION_1</name>
+</blueprintList>
+
 <!-- // CREW // -->
 
 <blueprintList name="AA_LIST_CREW_DUSTWORM">
@@ -81,51 +95,32 @@
 <blueprintList name="AA_LIST_LOADOUT_PROVISION_WEAPONS">
 	<name>LASER_BURST_2_ENEMY</name>
 	<name>LASER_BURST_3</name>
-	<name>LASER_BURST_5</name>
-	<name>LASER_HEAVY_1</name>
-	<name>LASER_HEAVY_2</name>
+	<name>LASER_HULL_1_ENEMY</name>
+	<name>LASER_HULL_2</name>
 	<name>LASER_STUN_ENEMY</name>
 	<name>LASER_CHAINGUN</name>
 	<name>LASER_CHAINGUN_2</name>
 	<name>LASER_CHARGEGUN</name>
-	<name>LASER_HEAVY_CHAINGUN</name>
+	<name>LASER_HULL_CHAINGUN</name>
 	<name>LASER_CHAINGUN_DAMAGE</name>
 	<name>AA_LASER_CHARGEGUN_DAMAGE</name>
 	<name>LASER_PARTICLE</name>
 	<name>AA_LASER_PARTICLE_MINI</name>
 	<name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</name>
-	<name>AA_LASER_SMASH_2</name>
-
-	<name>MISSILES_STUN_ENEMY</name>
-	<name>AA_MISSILES_ION_ENEMY</name>
-	<name>AA_MISSILES_SMASH_ENEMY</name>
 
 	<name>ION_2</name>
-	<name>ION_3</name>
-	<name>ION_HEAVY</name>
 	<name>ION_STUN</name>
-	<name>ION_STUN_2</name>
-	<name>ION_STUN_HEAVY</name>
-	<name>AA_ION_RAINBOW</name>
 	<name>ION_CHAINGUN</name>
-	<name>AA_ION_CHARGEGUN_DAMAGE</name>
 
 	<name>BEAM_1</name>
 	<name>BEAM_2</name>
-	<name>BEAM_LONG</name>
 	<name>BEAM_CHAIN</name>
 	<name>BEAM_ADAPT</name>
-	<name>BEAM_ADAPT_2</name>
-	<name>BEAM_STUN</name>
 	<name>BEAM_PARTICLE</name>
 	<name>AA_BEAM_ION_1</name>
 	<name>AA_BEAM_ION_2</name>
 	<name>AA_BEAM_ION_STUN</name>
 	<name>AA_BEAM_ION_PHASE</name>
-	<name>AA_BEAM_ENERGY</name>
-
-	<name>SHOTGUN_ION</name>
-	<name>AA_SHOTGUN_PARTICLE</name>
 
 	<name>ENERGY_1</name>
 	<name>ENERGY_2</name>
@@ -135,29 +130,48 @@
 
 	<name>FOCUS_1</name>
 	<name>FOCUS_2</name>
-	<name>FOCUS_CHAIN_ENEMY</name>
 	<name>AA_FOCUS_PARTICLE</name>
 	<name>AA_FOCUS_ION_1</name>
 	<name>AA_FOCUS_ION_2</name>
+</blueprintList>
+
+<blueprintList name="AA_LIST_LOADOUT_PROVISION_PRIMARIES"> <!-- Always the first weapon in a slot. Heavier than usual. -->
+	<name>LASER_STUN_ENEMY</name>
+	<name>LASER_CHAINGUN_2</name>
+	<name>LASER_HULL_CHAINGUN</name>
+	<name>LASER_CHAINGUN_DAMAGE</name>
+	<name>AA_LASER_CHARGEGUN_DAMAGE</name>
+
+	<name>ION_3</name>
+	<name>ION_HEAVY</name>
+	<name>ION_STUN_HEAVY</name>
+	<name>AA_ION_CHARGEGUN_DAMAGE</name>
+
+	<name>BEAM_CHAIN</name>
+	<name>BEAM_ADAPT_2</name>
+	<name>AA_BEAM_ION_3</name>
+	<name>AA_BEAM_ION_STUN</name>
+	<name>AA_BEAM_ION_PHASE</name>
+	<name>AA_BEAM_ENERGY</name>
+
+	<name>ENERGY_3</name>
+	<name>AA_ENERGY_CHARGEGUN_DAMAGE</name>
+
+	<name>FOCUS_CHAIN_ENEMY</name>
 	<name>AA_FOCUS_ION_PHASE</name>
 </blueprintList>
 
 <blueprintList name="AA_LIST_LOADOUT_PROVISION_DRONES">
 	<name>COMBAT_1_LASER</name>
-	<name>COMBAT_1_BEAM</name>
 	<name>COMBAT_2_LASER</name>
-	<name>COMBAT_2_BEAM</name>
 	<name>ENERGY_1_AMP2_ENEMY</name>
 	<name>DEFENSE_1_ENEMY</name>
 	<name>GUARDIAN_1_MISSILE</name>
 	<name>GUARDIAN_1_DRONE</name>
-	<name>GUARDIAN_2_MISSILE</name>
-	<name>GUARDIAN_2_DRONE</name>
 	<name>AA_DISRUPTOR_1_AMP2</name>
 	<name>AA_DISRUPTOR_1_AMP3</name>
 	<name>AA_ELEMENTARY_SMASH</name>
 	<name>AA_ELEMENTARY_ELECTRON</name>
-	<name>REPAIR</name>
 	<name>BATTLETOG_DEFEND</name>
 	<name>BATTLETOG2_DEFEND</name>
 </blueprintList>
@@ -207,7 +221,7 @@
 		<medbay power="2" max="2" room="19" start="true" />
 		<oxygen power="2" max="2" room="2" start="true" />
 		<pilot power="2" max="2" room="20" start="true" />
-		<shields power="2" max="10" room="4" start="true" />
+		<shields power="8" max="8" room="4" start="true" />
 		<teleporter power="3" max="3" room="7" start="true" />
 		<weapons power="7" max="7" room="3" start="true" />
 	</systemList>
@@ -580,325 +594,7 @@
 
 
 
-<!-- / TSS-24-BONNIE / -->
 
-<shipBlueprint name="AA_RENEGADE_TONY_QUEST" layout="aa_renegade_tony" img="aa_renegade_tony">
-	<class>TSS-24-Bonnie</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<artillery power="3" max="3" room="9" start="true" weapon="AA_ARTILLERY_TONY_BIO" />
-		<artillery power="3" max="3" room="23" start="true" weapon="AA_ARTILLERY_TONY_STUN" />
-		<clonebay power="2" max="2" room="16" start="true" />
-		<doors power="3" max="3" room="10" start="true" />
-		<engines power="2" max="2" room="12" start="true" />
-		<mind power="2" max="2" room="5" start="true" />
-		<oxygen power="2" max="2" room="11" start="true" />
-		<pilot power="3" max="3" room="0" start="true" />
-		<shields power="8" max="8" room="2" start="true" />
-		<teleporter power="3" max="3" room="18" start="true" />
-		<weapons power="8" max="8" room="17" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="10" count="4">
-		<weapon name="BOMB_FIRE_ENEMY" />
-		<weapon name="BOMB_BREACH_1_ENEMY" />
-		<weapon name="SHOTGUN_TOXIC" />
-		<weapon name="SHOTGUN_FIRE" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="33" />
-	<boardingAI>invasion</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="AA_RENEGADE_TONY_NORMAL" layout="aa_renegade_tony" img="aa_renegade_tony">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<clonebay power="2" max="2" room="16" start="true" />
-		<doors power="1" max="1" room="10" start="true" />
-		<engines power="2" max="2" room="12" start="true" />
-		<mind power="2" max="2" room="5" start="true" />
-		<oxygen power="2" max="2" room="11" start="true" />
-		<pilot power="1" max="1" room="0" start="true" />
-		<shields power="6" max="6" room="2" start="true" />
-		<teleporter power="2" max="2" room="18" start="true" />
-		<weapons power="7" max="7" room="17" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="10" count="4">
-		<weapon name="BOMB_FIRE_ENEMY" />
-		<weapon name="BOMB_BREACH_1_ENEMY" />
-		<weapon name="SHOTGUN_TOXIC" />
-		<weapon name="SHOTGUN_2" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="23" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="AA_RENEGADE_TONY_CHALLENGE" layout="aa_renegade_tony" img="aa_renegade_tony">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<clonebay power="2" max="2" room="16" start="true" />
-		<doors power="2" max="2" room="10" start="true" />
-		<engines power="2" max="2" room="12" start="true" />
-		<mind power="2" max="2" room="5" start="true" />
-		<oxygen power="2" max="2" room="11" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="8" max="8" room="2" start="true" />
-		<teleporter power="3" max="3" room="18" start="true" />
-		<weapons power="7" max="7" room="17" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="10" count="4">
-		<weapon name="BOMB_FIRE_ENEMY" />
-		<weapon name="BOMB_BREACH_1_ENEMY" />
-		<weapon name="SHOTGUN_TOXIC" />
-		<weapon name="SHOTGUN_2" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="26" />
-	<boardingAI>sabotage</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="AA_RENEGADE_TONY_EXTREME" layout="aa_renegade_tony" img="aa_renegade_tony">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<clonebay power="2" max="2" room="16" start="true" />
-		<doors power="2" max="2" room="10" start="true" />
-		<engines power="2" max="2" room="12" start="true" />
-		<mind power="2" max="2" room="5" start="true" />
-		<oxygen power="2" max="2" room="11" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="8" max="8" room="2" start="true" />
-		<teleporter power="3" max="3" room="18" start="true" />
-		<weapons power="8" max="8" room="17" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="10" count="4">
-		<weapon name="BOMB_FIRE_ENEMY" />
-		<weapon name="BOMB_BREACH_1_ENEMY" />
-		<weapon name="SHOTGUN_TOXIC" />
-		<weapon name="SHOTGUN_FIRE" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="27" />
-	<boardingAI>invasion</boardingAI>
-</shipBlueprint>
-
-<shipBlueprint name="AA_RENEGADE_TONY_CHAOS" layout="aa_renegade_tony" img="aa_renegade_tony">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<artillery power="3" max="3" room="9" start="true" weapon="AA_ARTILLERY_TONY_BIO" />
-		<artillery power="3" max="3" room="23" start="true" weapon="AA_ARTILLERY_TONY_STUN" />
-		<clonebay power="2" max="2" room="16" start="true" />
-		<doors power="3" max="3" room="10" start="true" />
-		<engines power="2" max="2" room="12" start="true" />
-		<mind power="2" max="2" room="5" start="true" />
-		<oxygen power="2" max="2" room="11" start="true" />
-		<pilot power="3" max="3" room="0" start="true" />
-		<shields power="8" max="8" room="2" start="true" />
-		<teleporter power="3" max="3" room="18" start="true" />
-		<weapons power="8" max="8" room="17" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="10" count="4">
-		<weapon name="BOMB_FIRE_ENEMY" />
-		<weapon name="BOMB_BREACH_1_ENEMY" />
-		<weapon name="SHOTGUN_TOXIC" />
-		<weapon name="SHOTGUN_FIRE" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="33" />
-	<boardingAI>invasion</boardingAI>
-</shipBlueprint>
-
-
-
-<!-- / H0TSW1TCH / -->
-
-<shipBlueprint name="AA_RENEGADE_HACKER_QUEST" layout="aa_renegade_hacker" img="aa_renegade_hacker">
-	<class>Manifestation of Will</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<doors power="1" max="1" room="7" start="true" />
-		<engines power="3" max="2" room="21" start="true" />
-		<hacking power="3" max="3" room="9" start="true" />
-		<mind power="3" max="3" room="4" start="true" />
-		<oxygen power="2" max="2" room="6" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="6" max="10" room="2" start="true" />
-		<teleporter power="3" max="3" room="12" start="true" />
-		<temporal power="3" max="3" room="18" start="true" />
-		<weapons power="8" max="8" room="3" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="7" count="4">
-		<weapon name="AA_HOT_BURST" />
-		<weapon name="AA_HOT_SHOTGUN" />
-		<weapon name="AA_HOT_FOCUS" />
-		<weapon name="AA_HOT_HEAVY" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="31" />
-	<crewCount amount="1" max="1" class="aa_red_guy" />
-	<boardingAI>invasion</boardingAI>
-	<aug name="EX_ZOLTAN_BYPASS" />
-	<aug name="EX_HACKING_STUN" />
-	<aug name="AA_SUPERHOT" />
-</shipBlueprint>
-
-<shipBlueprint name="AA_RENEGADE_HACKER_NORMAL" layout="aa_renegade_hacker" img="aa_renegade_hacker">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<doors power="1" max="1" room="7" start="true" />
-		<engines power="3" max="2" room="21" start="true" />
-		<hacking power="2" max="2" room="9" start="true" />
-		<mind power="2" max="2" room="4" start="true" />
-		<oxygen power="2" max="2" room="6" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="4" max="8" room="2" start="true" />
-		<teleporter power="1" max="1" room="12" start="true" />
-		<temporal power="1" max="1" room="18" start="true" />
-		<weapons power="4" max="4" room="3" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="0" count="4">
-		<weapon name="AA_HOT_BURST" />
-		<weapon name="AA_HOT_HEAVY" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="19" />
-	<crewCount amount="1" max="1" class="human" />
-	<boardingAI>sabotage</boardingAI>
-	<aug name="EX_HACKING_STUN" />
-	<aug name="AA_TEMPORAL_POWER" />
-</shipBlueprint>
-
-<shipBlueprint name="AA_RENEGADE_HACKER_CHALLENGE" layout="aa_renegade_hacker" img="aa_renegade_hacker">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<doors power="1" max="1" room="7" start="true" />
-		<engines power="3" max="2" room="21" start="true" />
-		<hacking power="2" max="2" room="9" start="true" />
-		<mind power="3" max="3" room="4" start="true" />
-		<oxygen power="2" max="2" room="6" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="6" max="8" room="2" start="true" />
-		<teleporter power="2" max="2" room="12" start="true" />
-		<temporal power="2" max="2" room="18" start="true" />
-		<weapons power="6" max="6" room="3" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="7" count="4">
-		<weapon name="AA_HOT_BURST" />
-		<weapon name="AA_HOT_SHOTGUN" />
-		<weapon name="AA_HOT_HEAVY" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="26" />
-	<crewCount amount="1" max="1" class="human" />
-	<boardingAI>invasion</boardingAI>
-	<aug name="EX_HACKING_STUN" />
-	<aug name="AA_TEMPORAL_POWER" />
-</shipBlueprint>
-
-<shipBlueprint name="AA_RENEGADE_HACKER_EXTREME" layout="aa_renegade_hacker" img="aa_renegade_hacker">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<doors power="1" max="1" room="7" start="true" />
-		<engines power="3" max="2" room="21" start="true" />
-		<hacking power="3" max="3" room="9" start="true" />
-		<mind power="3" max="3" room="4" start="true" />
-		<oxygen power="2" max="2" room="6" start="true" />
-		<pilot power="2" max="2" room="0" start="true" />
-		<shields power="6" max="10" room="2" start="true" />
-		<teleporter power="3" max="3" room="12" start="true" />
-		<temporal power="3" max="3" room="18" start="true" />
-		<weapons power="8" max="8" room="3" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="7" count="4">
-		<weapon name="AA_HOT_BURST" />
-		<weapon name="AA_HOT_SHOTGUN" />
-		<weapon name="AA_HOT_FOCUS" />
-		<weapon name="AA_HOT_HEAVY" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="30" />
-	<crewCount amount="1" max="1" class="human" />
-	<boardingAI>invasion</boardingAI>
-	<aug name="EX_ZOLTAN_BYPASS" />
-	<aug name="EX_HACKING_STUN" />
-	<aug name="AA_TEMPORAL_POWER" />
-</shipBlueprint>
-
-<shipBlueprint name="AA_RENEGADE_HACKER_CHAOS" layout="aa_renegade_hacker" img="aa_renegade_hacker">
-	<class>Renegade Cruiser</class>
-	<minSector>1</minSector>
-	<maxSector>8</maxSector>
-	<systemList>
-		<doors power="1" max="1" room="7" start="true" />
-		<engines power="3" max="2" room="21" start="true" />
-		<hacking power="3" max="3" room="9" start="true" />
-		<mind power="3" max="3" room="4" start="true" />
-		<oxygen power="2" max="2" room="6" start="true" />
-		<pilot power="3" max="3" room="0" start="true" />
-		<shields power="6" max="10" room="2" start="true" />
-		<teleporter power="3" max="3" room="12" start="true" />
-		<temporal power="3" max="3" room="18" start="true" />
-		<weapons power="8" max="8" room="3" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>0</droneSlots>
-	<weaponList missiles="7" count="4">
-		<weapon name="AA_HOT_BURST" />
-		<weapon name="AA_HOT_SHOTGUN" />
-		<weapon name="AA_HOT_FOCUS" />
-		<weapon name="AA_HOT_HEAVY" />
-	</weaponList>
-	<droneList drones="0" count="0" />
-	<health amount="20" />
-	<maxPower amount="31" />
-	<crewCount amount="1" max="1" class="aa_red_guy" />
-	<boardingAI>invasion</boardingAI>
-	<aug name="EX_ZOLTAN_BYPASS" />
-	<aug name="EX_HACKING_STUN" />
-	<aug name="AA_SUPERHOT" />
-</shipBlueprint>
 
 <!-- // SUPERBOSS // -->
 

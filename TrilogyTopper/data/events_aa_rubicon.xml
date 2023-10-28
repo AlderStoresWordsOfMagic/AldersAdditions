@@ -1,0 +1,69 @@
+<!-- ///// This file contains all events relating to the Void Between Worlds. ///// -->
+
+<FTL>
+
+<!-- /// SECTOR ENTRY /// -->
+
+<event name="AA_RUBICON_START">
+	<metaVariable name="aa_juke_rubicon" op="set" val="1"/>
+	<preventQuest/>
+	<beaconType id="map_icon_start" global="false">
+		<color r="0" g="0" b="0" a="1"/>
+	</beaconType>
+	<text>In spite of all evidence against it, you eventually return to consciousness alongside your crew, laying on the floor. The strange effects on their minds seem to have ended, and they recognize you once more as their captain after a quick roll call...</text>
+	<variable name="loc_unique_sectors" op="add" val="1"/>
+	<changeBackground>BACKGROUND_DARKNESS</changeBackground>
+	<playSound>lightspeed</playSound>
+    <playMusic>nothing</playMusic>
+	<remove name="HIDDEN DUMMY"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+            <text>Suddenly, one of your crew shouts from the side, and you behold a black, empty void outside the walls of your ship, your sensors returning absolutely nothing. There are some minor space-time anomalies you could probably use to jump around, but other than that... this place, whatever it is, was completely empty. How would you even escape?</text>
+        </event>
+	</choice>
+</event>
+
+<!-- /// SECTOR EXIT /// -->
+
+<event name="AA_RUBICON_END">
+    <changeBackground>BACKGROUND_DARKNESS</changeBackground>
+    <deathEvent>AA_DEATH_RUBICON</deathEvent>
+    <text>With nowhere else to go, you've arrived at the Wave. A field of sparking green energy, seeming to barely exist within this mortal realm, it slowly approaches as you remain still at the beacon. The Wave will either be your ticket out, or the end of your journey...</text>
+    <choice blue="false" hidden="true" req="aa_rubicon_escape" lvl="1">
+        <text>Enter the Wave.</text>
+        <event>
+            <text>As soon as your ship plunges into the Wave, you can feel vibrations in the hull as the energy batters and beats it. Scorch marks begin to form and plating chips away...</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>...but within the green, fluid-like destructive power, you are able to find some sort of anomaly thanks to your new upgrade enhancing the speed of your MV Drive! Wasting no time, you punch in the co-ordinates you were ripped from, and before the Wave can consume you, you vanish into hyperspace, escaping this purgatory!</text>
+                    <deathEvent/>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice blue="false" hidden="true" req="aa_rubicon_escape" lvl="0">
+        <text>Enter the Wave.</text>
+        <event>
+            <text>As soon as your ship plunges into the Wave, you can feel vibrations in the hull as the energy batters and beats it. Scorch marks begin to form and plating chips away...</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>...and within its grasp, you find no exit. A massive crack in the hull, punctuated by the screech of tearing metal and the choked gasps of your crew asthe air leaves the room, is the last thing you hear before your ship is torn apart by the Wave, utterly annihilated at the molecular level. Nobody will know what happened to you...</text>
+                    <damage amount="2147483647"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<event name="AA_DEATH_RUBICON"/>
+    <lose text="You and your crew were annihilated, leaving nobody to stop Asaleth."/>
+<event/>
+
+</FTL>

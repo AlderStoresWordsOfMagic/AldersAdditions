@@ -1,84 +1,5 @@
 <FTL>
 
-<!-- /// MV OVERWRITES /// -->
-
-<!-- // WEAPONS // -->
-
-<mod:findName type="weaponBlueprint" name="LASER_BURST_8">
-	<mod:findLike type="weaponArt">
-		<mod:setValue>laser_burst_8</mod:setValue>
-	</mod:findLike>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="MISSILES_FREE">
-	<mod:findLike type="weaponArt">
-		<mod:setValue>missiles_recycle</mod:setValue>
-	</mod:findLike>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="TRC_MISSILES_INSTANT">
-	<mod:findLike type="weaponArt">
-		<mod:setValue>pre_missiles</mod:setValue>
-	</mod:findLike>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="BEAM_REPAIR">
-	<mod:findLike type="weaponArt">
-		<mod:setValue>beam_prohull</mod:setValue>
-	</mod:findLike>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="SCANNER_BAIT">
-	<mod-overwrite:launchSounds>
-		<sound>decoy</sound>
-	</mod-overwrite:launchSounds>
-</mod:findName>
-<mod:findName type="weaponBlueprint" name="SCANNER_RECON">
-	<mod-overwrite:launchSounds>
-		<sound>decoy</sound>
-	</mod-overwrite:launchSounds>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN">
-	<mod:findLike type="explosion">
-		<mod:setValue>explosion_bio</mod:setValue>
-	</mod:findLike>
-	<mod:findLike type="weaponArt">
-		<mod:setValue>missiles_massive</mod:setValue>
-	</mod:findLike>
-	<mod-overwrite:launchSounds>
-		<sound>missile_giant</sound>
-	</mod-overwrite:launchSounds>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN_CHAOS">
-	<mod:findLike type="explosion">
-		<mod:setValue>explosion_bio</mod:setValue>
-	</mod:findLike>
-	<mod:findLike type="weaponArt">
-		<mod:setValue>missiles_massive_chaos</mod:setValue>
-	</mod:findLike>
-	<mod:findLike type="image">
-		<mod:setValue>missile_obsidian_chaos</mod:setValue>
-	</mod:findLike>
-	<mod-append:fireTime>2</mod-append:fireTime>
-	<mod-overwrite:launchSounds>
-		<sound>missile_giant</sound>
-	</mod-overwrite:launchSounds>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="UNSPOOLER">
-	<mod:findLike type="weaponArt">
-		<mod:setValue>nightshade</mod:setValue>
-	</mod:findLike>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="UNSPOOLER_CHAOS">
-	<mod:findLike type="weaponArt">
-		<mod:setValue>nightshade_chaos</mod:setValue>
-	</mod:findLike>
-</mod:findName>
-
 <!-- /// WEAPONS /// -->
 
 <!-- // LASERS // -->
@@ -1156,14 +1077,14 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<tip>aa_tip_smash</tip>
 	<title>Smashing Beam</title>
 	<short>Smash Beam</short>
-	<descriptionOverride>This Beam is capable of hitting shields instead of simply passing through them, with the additional potential to shield-crush. Also creates breaches.
+	<descriptionOverride>This Beam is capable of hitting shields instead of simply passing through them, with the additional potential to shield-crush.
 
 Stats:
 Required Power: 2
 Charge Time: 14 seconds
 
 Shield Layers Popped: 1
-Shield Layers Crushed: 10
+Shield Layers Crushed: 12
 
 Breach Chance: 100%
 
@@ -1172,7 +1093,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<damage>0</damage>
 	<stun>5</stun>
 	<stunChance>3</stunChance>
-	<speed>28</speed>
+	<speed>32</speed>
 	<cooldown>14</cooldown>
 	<color>
 		<r>21</r>
@@ -1244,7 +1165,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tip>aa_tip_disruptor</tip>
 	<title>'Hanbo' Disruptor</title>
 	<short>'Hanbo'</short>
-	<desc>This curious beam-like weapon ionizes systems and shields in much the same manner as true ion weapons.</desc>
+	<desc>This curious beam-like weapon ionizes systems and shields in much the same manner as ion weapons.</desc>
 	<tooltip>Deals 1 ion damage per system it hits.</tooltip>
 	<ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
@@ -1401,7 +1322,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tip>aa_tip_disruptor</tip>
 	<title>'Kanemuchi' Neural Disruptor</title>
 	<short>'Kanemuchi'</short>
-	<desc>This Disruptor is charged with stun energy, serving a similar purpose to the Partisan.</desc>
+	<desc>This Disruptor is charged with stun energy, serving a similar purpose to the more common Partisan.</desc>
 	<tooltip>Deals 2 ion damage per system it hits, alongside stunning crew.</tooltip>
 	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
@@ -1466,7 +1387,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tip>aa_tip_disruptor</tip>
 	<title>'Tetsubo' Energized Disruptor</title>
 	<short>'Tetsubo'</short>
-	<desc>Tuned to damage hull alongside the usual effect, this Disruptor serves double-duty.</desc>
+	<desc>Tuned to damage hull alongside the usual effect of electrifying systems, this Disruptor serves double duty.</desc>
 	<tooltip>Deals 2 ion damage per system it hits, and 1 hull damage per room.</tooltip>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
@@ -1535,7 +1456,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tip>tip_conservative</tip>
 	<title>'Tanbo' Conservative Disruptor</title>
 	<short>'Tanbo'</short>
-	<desc>A potent weapon that can paralyze large sections of a ship, creating chaos aboard. This particular model is very slow, but consumes no power to run.</desc>
+	<desc>This particular model of Disruptor is fairly slow, but consumes no power to run.</desc>
 	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
 	<ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
@@ -1614,7 +1535,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<locked>1</locked>
 	<descriptionOverride>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.
 
-This enemy-only version lacks the innate +10% accuracy bonus of missile weapons. It was never supposed to fall into your hands.
+This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It was never supposed to fall into your hands.
 
 Stats:
 Required Power: 2
@@ -1705,7 +1626,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<title>Decay Bomb</title>
 	<short>Decay B.</short>
 	<locked>1</locked>
-	<desc>This self-teleporting explosive causes no direct damage. Instead, its bizarre technologies create flaws in the structure of a room, causing it to slowly erode.</desc>
+	<desc>This self-teleporting explosive causes no direct damage. Instead, its bizarre technologies destabilize the structure of a room, causing its systems to slowly erode away.</desc>
 	<tooltip>No damage, but inflicts an effect that decays systems.</tooltip>
 	<damage>0</damage>
 	<accuracyMod>30</accuracyMod>
@@ -1733,7 +1654,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<image>bomb_decay</image>
-	<explosion>explosion_toxic_death</explosion>
+	<explosion>explosion_erosion</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -1842,7 +1763,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<speed>26</speed>
 	<rarity>5</rarity>
 	<projectiles>
-		<projectile count="4" fake="false">debris_large_system</projectile>
+		<projectile count="4" fake="false">debris_large_particle</projectile>
 		<projectile count="6" fake="true">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
@@ -1862,7 +1783,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>shotgun_system</weaponArt> 
+	<weaponArt>shotgun_particle</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1975,6 +1896,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<tooltip>Fires 1 missile; does 1 damage per shot; pierces all shields.</tooltip>
 	<drone_targetable>0</drone_targetable>
 	<radius>45</radius>
+	<spin>50</spin>
 	<damage>1</damage>
 	<sysDamage>-1</sysDamage>
 	<missiles>1</missiles>
@@ -1990,7 +1912,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="3" fake="false">mine_cloak</projectile>
+		<projectile count="3" fake="false">mine_projectile_cloak</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>smallMissile1</sound>
@@ -2008,6 +1930,52 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 		<sound>miss</sound>
 	</missSounds>
 	<weaponArt>minelauncher_cloak</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_MINELAUNCHER_PARTICLE">
+	<type>BURST</type>
+	<tip>tip_mine</tip>
+	<title>'Ammit' Mine Launcher</title>
+	<short>'Ammit'</short>
+	<desc>This strange Mine Launcher design trades the standard explosives found on most designs for miniaturized particle accelerators, allowing the mines to deal system damage. Let that sink in.
+	
+	At empty beacons provides 2 fleet delay for 7 missiles.</desc>
+	<tooltip>Fires 1 missile; does 1 damage per shot; pierces all shields.</tooltip>
+	<radius>45</radius>
+	<spin>50</spin>
+	<sysDamage>1</sysDamage>
+	<missiles>1</missiles>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>2</fireChance>
+	<breachChance>1</breachChance>
+	<cooldown>10</cooldown>
+	<power>2</power>
+	<speed>15</speed>
+	<cost>100</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="4" fake="false">mine_projectile_particle</projectile>
+	</projectiles>
+	<explosion>explosion_particle</explosion>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>minelauncher_particle</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
@@ -2141,22 +2109,29 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 <!-- // DRIVERS // -->
 
 <weaponBlueprint name="AA_DRIVER">
-	<type>LASER</type>
+	<type>BURST</type>
 	<title>Mass Driver</title>
 	<short>Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>This weapon accelerates a small rod of metal to immense speeds, which reaches the enemy instantly.</desc>
+	<desc>An old-school kinetic weapon, utilizing hybrid propulsion to accelerate small physical projectiles at relativistic speeds.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
+	<fireTime>0.2</fireTime>
 	<damage>2</damage>
 	<speed>2147483647</speed>
 	<shots>1</shots>
 	<sp>0</sp>
 	<breachChance>7</breachChance>
 	<stunChance>3</stunChance>
-	<cooldown>12</cooldown>
+	<cooldown>11</cooldown>
 	<power>1</power>
 	<cost>80</cost>
 	<rarity>4</rarity>
+	<radius>20</radius>
+	<spin>720</spin>
+	<drone_targetable>1</drone_targetable>
+	<projectiles>
+		<projectile count="1" fake="false">debris_small</projectile>
+	</projectiles>
 	<launchSounds>
 		<sound>driver</sound>
 	</launchSounds>
@@ -2175,53 +2150,30 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_DRIVER_RAD">
-	<type>LASER</type>
-	<title>Irradiated Mass Driver</title>
-	<short>Rad Driver</short>
+<weaponBlueprint name="AA_DRIVER_BURST">
+	<type>BURST</type>
+	<title>Burst Driver</title>
+	<short>Burst Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>Loaded with projectiles made of radioactive material, this Mass Driver inflicts massive damage to all that dare challenge it.</desc>
+	<desc>This Mass Driver trades single-shot damage and cooldown for a burst-fire mechanism.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
+	<fireTime>0.1</fireTime>
 	<damage>1</damage>
-	<persDamage>3</persDamage>
-	<statBoosts>
-		<statBoost name="moveSpeedMultiplier">
-			<boostType>MULT</boostType>
-			<amount>0.33</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-			<boostAnim>bio_poison</boostAnim>
-		</statBoost>
-		<statBoost name="stunMultiplier">
-			<boostType>MULT</boostType>
-			<amount>1.75</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-		</statBoost>
-		<statBoost name="repairSpeed">
-			<boostType>MULT</boostType>
-			<amount>0.33</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-		</statBoost>
-	</statBoosts>
 	<speed>2147483647</speed>
-	<shots>1</shots>
+	<shots>3</shots>
 	<sp>0</sp>
-	<breachChance>7</breachChance>
-	<cooldown>9</cooldown>
+	<breachChance>4</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>14</cooldown>
 	<power>1</power>
-	<cost>80</cost>
+	<cost>90</cost>
 	<rarity>5</rarity>
+	<radius>20</radius>
+	<spin>720</spin>
+	<drone_targetable>1</drone_targetable>
+	<projectiles>
+		<projectile count="1" fake="false">debris_small</projectile>
+	</projectiles>
 	<launchSounds>
 		<sound>driver</sound>
 	</launchSounds>
@@ -2236,8 +2188,69 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver_rad</weaponArt>
+	<weaponArt>driver_burst</weaponArt>
 	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<!-- // ROCKETS // -->
+
+<weaponBlueprint name="AA_ROCKETS_1">
+	<type>MISSILES</type>
+	<tip>tip_missiles_burst</tip>
+	<title>'Ullr' Rocket Rack</title>
+	<short>'Ullr'</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<descriptionOverride>Rocket racks store up swarms of unguided rockets that grow in strength as the weapon waits, each swarm behaving as a single projectile regardless of charge.
+
+		Stats:
+		Required Power: 2
+		Charge Time: 11 seconds
+		Accuracy Bonus: +10%
+
+		Max Charges: 3
+		Cooldown Reduction: 0/50/125%
+		
+		Base Hull Damage: 1/2/3
+		Total System Damage: 1/2/3
+		Total Crew Damage: 30/45/60
+		
+		Fire Chance: 20%
+		Breach Chance: 20% (Adjusted: 16%)
+
+		Buy/Sell Price: 60~/30~
+	</descriptionOverride>
+	<tooltip>Fires a swarm of missiles that grows similarly to cumulative weapons.</tooltip>
+	<damage>1</damage>
+	<missiles>1</missiles>
+	<speed>50</speed>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>2</fireChance>
+	<breachChance>2</breachChance>
+	<stunChance>3</stunChance>
+	<cooldown>11</cooldown>
+	<power>2</power>
+	<cost>60</cost>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<chargeLevels>3</chargeLevels>
+	<image>rockets_1_projectile</image>
+	<launchSounds>
+		<sound>rockets</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>rockets_1</weaponArt>
+	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
 <!-- // INSTANT // -->
@@ -2377,6 +2390,58 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	</hitShipSounds>
 	<weaponArt>pointer</weaponArt>
 	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_ACID_LAUNCHER">
+	<type>BURST</type>
+	<drone_targetable>1</drone_targetable>
+	<title>A.C.I.D. Launcher</title>
+	<short>A.C.I.D.</short>
+	<tip>aa_tip_acid</tip>
+	<desc>A specialized weapon that loads projectiles with a corrosive mixture. On impact, the mixture coats the inside of rooms, doubling all system and crew damage within while it remains.</desc>
+	<tooltip>No.</tooltip>
+	<damage>0</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<roomStatBoosts>
+		<statBoost name="allDamageTakenMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.5</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<duration>20</duration>
+			<roomAnim renderLayer="1">
+				<anim animType="tile" animBorder="0">tile_acid</anim>
+			</roomAnim>
+		</statBoost>
+	</roomStatBoosts>
+	<cooldown>10</cooldown>
+	<power>1</power>
+	<cost>90</cost>
+	<bp>12</bp>
+	<speed>60</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">acid_projectile</projectile>
+	</projectiles>
+	<image>laser_stun</image>
+	<launchSounds>
+		<sound>acid_launch</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>acid_hit</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>acid_launcher</weaponArt>
+	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
 <!-- // TEST // -->
@@ -2520,7 +2585,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<power>2</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
-	<speed>8</speed>
+	<speed>6</speed>
 	<cost>50</cost>
 	<bp>3</bp>
 	<droneImage>aa_drone_disruptor_a1</droneImage>
@@ -2537,7 +2602,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<power>3</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
-	<speed>8</speed>
+	<speed>5</speed>
 	<cost>50</cost>
 	<bp>3</bp>
 	<droneImage>aa_drone_disruptor_a2</droneImage>
@@ -2554,7 +2619,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<power>4</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
-	<speed>8</speed>
+	<speed>3</speed>
 	<cost>50</cost>
 	<bp>3</bp>
 	<droneImage>aa_drone_disruptor_a3</droneImage>
@@ -2655,7 +2720,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
     <power>2</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>
-    <speed>7</speed>
+    <speed>6</speed>
     <cost>65</cost>
     <bp>3</bp>
     <droneImage>aa_drone_elementary_e</droneImage>
@@ -2840,5 +2905,154 @@ If another energy shield is present, it refills that shield as well but takes an
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
+
+
+
+<!-- /// MV OVERWRITES /// -->
+
+<!-- // WEAPONS // -->
+
+<mod:findName type="weaponBlueprint" name="LASER_BURST_8">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>laser_burst_8</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MISSILES_FREE">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>missiles_recycle</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="TRC_MISSILES_INSTANT">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>pre_missiles</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="BEAM_REPAIR">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>beam_prohull</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_1">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_2">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_3">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_FREE">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_FIRE">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_BREACH">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_STUN">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="TRC_MINELAUNCHER_ION">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_GIANT">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MINELAUNCHER_GIANT_CHAOS">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="ARTILLERY_MINELAUNCHER">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="ARTILLERY_MINELAUNCHER_ENEMY">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="ARTILLERY_AUTO_MINELAUNCHER">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS">
+	<mod-overwrite:spin>50</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS_ELITE">
+	<mod-overwrite:spin>70</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS_VISION">
+	<mod-overwrite:spin>120</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="SCANNER_BAIT">
+	<mod-overwrite:launchSounds>
+		<sound>decoy</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="SCANNER_RECON">
+	<mod-overwrite:launchSounds>
+		<sound>decoy</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="TRC_FLARE_LAUNCHER">
+	<mod-overwrite:spin>8000</mod-overwrite:spin>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN">
+	<mod:findLike type="explosion">
+		<mod:setValue>explosion_bio</mod:setValue>
+	</mod:findLike>
+	<mod:findLike type="weaponArt">
+		<mod:setValue>missiles_massive</mod:setValue>
+	</mod:findLike>
+	<mod-overwrite:launchSounds>
+		<sound>missile_giant</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN_CHAOS">
+	<mod:findLike type="explosion">
+		<mod:setValue>explosion_bio</mod:setValue>
+	</mod:findLike>
+	<mod:findLike type="weaponArt">
+		<mod:setValue>missiles_massive_chaos</mod:setValue>
+	</mod:findLike>
+	<mod:findLike type="image">
+		<mod:setValue>missile_obsidian_chaos</mod:setValue>
+	</mod:findLike>
+	<mod-append:fireTime>2</mod-append:fireTime>
+	<mod-overwrite:launchSounds>
+		<sound>missile_giant</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="UNSPOOLER">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>nightshade</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="UNSPOOLER_CHAOS">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>nightshade_chaos</mod:setValue>
+	</mod:findLike>
+</mod:findName>
 
 </FTL>

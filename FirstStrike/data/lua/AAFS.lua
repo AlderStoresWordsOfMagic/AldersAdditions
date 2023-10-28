@@ -65,6 +65,8 @@ statChargers["AA_ION_CHARGEGUN_DAMAGE"] = {{stat = "iIonDamage"}}
 statChargers["AA_ENERGY_CHARGEGUN_DAMAGE"] = {{stat = "iIonDamage"}}
 statChargers["AA_LASER_PARTICLE_CHARGEGUN_DAMAGE"] = {{stat = "iSystemDamage"}}
 
+statChargers["AA_ROCKETS_1"] = {{stat = "iDamage"}}
+
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local statBoosts = statChargers[weapon.blueprint.name]
     if statBoosts then
@@ -83,6 +85,44 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                     projectile.damage[statBoost.stat] = statBoost.calc(boost, projectile.damage[statBoost.stat])
                 else
                     projectile.damage[statBoost.stat] = boost + projectile.damage[statBoost.stat]
+                end
+            end
+        end
+    end
+end)
+
+-- [Cooldown charging code.]
+
+mods.alder.cooldownChargers = {}
+local cooldownChargers = mods.alder.cooldownChargers
+cooldownChargers["AA_ROCKETS_1"] = 1.5
+
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
+    local weapons = nil
+    if pcall(function() weapons = ship.weaponSystem.weapons end) and weapons then
+        for weapon in vter(weapons) do
+            if weapon.chargeLevel ~= 0 and weapon.chargeLevel < weapon.weaponVisual.iChargeLevels then
+                local cdBoost = nil
+                if pcall(function() cdBoost = cooldownChargers[weapon.blueprint.name] end) and cdBoost then
+                    local cdLast = userdata_table(weapon, "mods.alder.weaponStuff").cdLast
+                    if cdLast and weapon.cooldown.first > cdLast then
+                        -- Calculate the new charge level from number of charges and charge level from last frame
+                        local chargeUpdate = weapon.cooldown.first - cdLast
+                        local chargeNew = weapon.cooldown.first - chargeUpdate + cdBoost^weapon.chargeLevel*chargeUpdate
+                        
+                        -- Apply the new charge level
+                        if chargeNew >= weapon.cooldown.second then
+                            weapon.chargeLevel = weapon.chargeLevel + 1
+                            if weapon.chargeLevel == weapon.weaponVisual.iChargeLevels then
+                                weapon.cooldown.first = weapon.cooldown.second
+                            else
+                                weapon.cooldown.first = 0
+                            end
+                        else
+                            weapon.cooldown.first = chargeNew
+                        end
+                    end
+                    userdata_table(weapon, "mods.alder.weaponStuff").cdLast = weapon.cooldown.first
                 end
             end
         end

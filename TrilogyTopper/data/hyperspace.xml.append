@@ -1,0 +1,146 @@
+<!-- ///// This file contains all of the extra data that requires Hyperspace to use, aside from Lua. ///// -->
+
+<FTL>
+
+<!-- /// LOAD LUA SCRIPTS /// -->
+
+<mod:findLike type="scripts">
+    <mod-append:script>data/lua/AATT.lua</mod-append:script>
+</mod:findLike>
+
+<!-- /// VARIABLES /// -->
+
+<events>
+
+	<!-- // STORY VARIABLES // -->
+
+	<metaVariable name="aa_finale_beacon" op="set" val="0"/> <!-- Whether the player can start the finale sequence. -->
+    <metaVariable name="aa_rubicon_escape" op="set" val="0"/> <!-- Whether the player can escape the Void Between Worlds without dying. -->
+
+    <!-- // MUSIC // -->
+
+    <variable name="aa_juke_rubicon" op="set" val="0"/> <!-- Whether the player has the jukebox entry for the Void Between Worlds. -->
+
+</events>
+
+<!-- /// EVENT FILES, VARIABLES, SECRET SECTOR WARPS, AND BOSS BOXES /// -->
+
+<mod:findLike type="events" limit="1">
+
+	<!-- // EVENT FILES // -->
+
+	<mod-append:eventFile>aa_finale</mod-append:eventFile> <!-- Events in the Overrun Sector and the grand finale. -->
+	<mod-append:eventFile>aa_rubicon</mod-append:eventFile> <!-- Events in the Void Between Places. -->
+
+	<!-- // SECTOR WARPS // -->
+
+	<mod:findName type="req" name="COORDS">
+		<mod-append:name>aa_coords_the_end</mod-append:name>
+	</mod:findName>
+
+</mod:findLike>
+
+<!-- /// EVERYTHING SHIPS WANT /// -->
+
+<mod:findLike type="ships">
+
+<!-- // SHIP ICONS // -->
+
+	<mod:findLike type="shipIcons">
+
+		<mod-append:shipIcon>
+			<name>aa_icon_inf_missiles</name>
+			<tooltip>INFINITE MISSILES:
+A replication device onboard forges explosives from random junk around the ship, ensuring this enemy will never run out of ammunition.</tooltip>
+		</mod-append:shipIcon>
+
+        <mod-append:shipIcon>
+			<name>aa_icon_inf_drones</name>
+			<tooltip>INFINITE MISSILES:
+An onboard assembly line continually manufactures chipsets and components, ensuring this enemy will never run out of droneparts.</tooltip>
+		</mod-append:shipIcon>
+
+        <mod-append:shipIcon>
+			<name>aa_icon_weather</name>
+			<tooltip>LOCAL REALITY MANIPULATOR:
+This enemy will periodically spawn environmental hazards until defeated, and is immune to the effects of said hazards.</tooltip>
+		</mod-append:shipIcon>
+
+        <mod-append:shipIcon>
+			<name>aa_icon_preigniter</name>
+			<tooltip>WEAPON PRE-IGNITER:
+All of this enemy's weapons will fire immediately at the start of combat. Brace for impact!</tooltip>
+		</mod-append:shipIcon>
+
+        <mod-append:shipIcon>
+            <name>aa_icon_super_energy_shield</name>
+            <tooltip>AETHERIC ENERGY SHIELD:
+A strong, Aether-powered energy shield defends this enemy from all attacks, and provides a speed boost to all crew aboard while it is active. It must be removed before the ship can be harmed.</tooltip>
+        </mod-append:shipIcon>
+
+        <mod-append:shipIcon>
+            <name>aa_icon_super_particle_shield</name>
+            <tooltip>AETHERIC PARTICLE SHIELD:
+This enemy carries an energy shield that regenerates a set amount of time after being broken. Think carefully about the order of your attack volley to break through.</tooltip>
+        </mod-append:shipIcon>
+
+        <mod-append:shipIcon>
+            <name>aa_icon_super_heavy_shield</name>
+            <tooltip>HEAVY ENERGY SHIELD:
+Though this enemy boats a very thick energy shield, its standard shield regenerates at only a third of the rate it usually would.</tooltip>
+        </mod-append:shipIcon>
+
+	</mod:findLike>
+
+<!-- // CUSTOM SHIP PROPERTIES // -->
+
+
+
+</mod:findLike>
+
+<!-- /// AUGMENTS /// -->
+
+<mod:findLike type="augments" limit="1">
+
+<mod-append:aug name="AA_SUPER_ENERGY_SHIELD">
+    <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
+    <superShield>
+        <add>15</add>
+        <color r="0" g="255" b="64" a="1"/>
+        <shieldImage>ship/enemy_shields_white.png</shieldImage>
+    </superShield>
+    <icon>aa_icon_energy_shield</icon>
+</mod-append:aug>
+
+<mod-append:aug name="AA_SUPER_PARTICLE_SHIELD">
+    <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
+    <superShield>
+        <add>5</add>
+        <color r="255" g="0" b="106" a="1"/>
+        <shieldImage>ship/enemy_shields_particle.png</shieldImage>
+    </superShield>
+    <icon>aa_icon_particle_shield</icon>
+</mod-append:aug>
+
+<mod-append:aug name="AA_SUPER_HEAVY_SHIELD">
+	<function name="SHIELD_RECHARGE" value="-0.666" useForReqs="false"/>
+    <function name="ENERGY_SHIELD" value="0" useForReqs="true" warning="false"/>
+    <superShield>
+        <add>40</add>
+        <color r="0" g="255" b="255" a="1"/>
+        <shieldImage>ship/enemy_shields_white.png</shieldImage>
+    </superShield>
+    <icon>aa_icon_energy_shield</icon>
+</mod-append:aug>
+
+</mod:findLike>
+
+<!-- /// CREW /// -->
+
+<crew>
+
+
+
+</crew>
+
+</FTL>

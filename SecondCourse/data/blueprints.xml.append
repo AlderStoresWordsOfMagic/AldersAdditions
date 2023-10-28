@@ -220,162 +220,6 @@
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_LOOT_RENEGADE_TONY_BIO">
-    <type>BURST</type>
-	<tip>tip_bombs</tip>
-    <title>'Spring' Scattered Launcher</title>
-    <short>'Spring'</short>
-	<desc>A powerful Bomb Launcher that manufactures and fires three small irradiation bombs. However, it has no accuracy bonus and cannot target your own ship.</desc>
-	<tooltip>Bomb weapon.</tooltip>
-    <radius>70</radius>
-	<damage>0</damage>
-	<sysDamage>1</sysDamage>
-	<persDamage>1</persDamage>
-	<accuracyMod>30</accuracyMod>
-	<missiles>1</missiles>
-    <shots>1</shots>
-	<fireTime>1.1</fireTime>
-    <sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>1</breachChance>
-    <cooldown>12</cooldown>
-    <power>2</power>
-    <cost>70</cost>
-    <bp>10</bp>
-    <speed>0</speed>
-    <rarity>4</rarity>
-    <projectiles>
-        <projectile count="1" fake="false">laser_burst</projectile>
-    </projectiles>
-	<launchSounds>
-		<sound>bombTeleport</sound>
-	</launchSounds>
-    <weaponArt>renegade_bomblauncher_spring</weaponArt>
-</weaponBlueprint>
-<weaponBlueprint name="AA_LOOT_RENEGADE_TONY_BIO_BOMB">
-	<type>BOMB</type>
-	<tip>tip_bombs</tip>
-	<title>'Spring' Projectile</title>
-	<short>'Spring' P.</short>
-	<locked>1</locked>
-	<desc>This is the projectile for the 'Spring' bomb launcher. It was never supposed to fall into your hands.</desc>
-	<tooltip>No.</tooltip>
-	<damage>0</damage>
-	<sysDamage>0</sysDamage>
-	<persDamage>3</persDamage>
-	<statBoosts>
-		<statBoost name="moveSpeedMultiplier">
-			<boostType>MULT</boostType>
-			<amount>0.33</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-			<boostAnim>bio_poison</boostAnim>
-		</statBoost>
-		<statBoost name="stunMultiplier">
-			<boostType>MULT</boostType>
-			<amount>1.75</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-		</statBoost>
-		<statBoost name="repairSpeed">
-			<boostType>MULT</boostType>
-			<amount>0.33</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-		</statBoost>
-	</statBoosts>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>3</breachChance>
-	<cooldown>1</cooldown>
-	<power>1</power>
-	<cost>0</cost>
-	<bp>4</bp>
-	<rarity>0</rarity>
-	<image>bomb_bio</image>
-	<explosion>explosion_bio</explosion>
-	<launchSounds>
-		<sound>bombTeleport</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>smallExplosion</sound>
-	</hitShipSounds>
-	<weaponArt>bomblauncher_bio</weaponArt>
-	<iconImage>bomb</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="AA_LOOT_RENEGADE_TONY_STUN">
-    <type>BURST</type>
-	<tip>tip_bombs</tip>
-    <title>'Lock' Scattered Launcher</title>
-    <short>'Lock'</short>
-	<desc>A powerful Bomb Launcher that manufactures and fires three small stun bombs. However, it has no accuracy bonus and cannot target your own ship.</desc>
-	<tooltip>Bomb weapon.</tooltip>
-    <radius>70</radius>
-	<damage>0</damage>
-	<persDamage>3</persDamage>
-	<accuracyMod>30</accuracyMod>
-	<missiles>1</missiles>
-    <shots>1</shots>
-	<fireTime>1.1</fireTime>
-    <sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>1</breachChance>
-    <cooldown>12</cooldown>
-    <power>2</power>
-    <cost>70</cost>
-    <bp>10</bp>
-    <speed>0</speed>
-    <rarity>4</rarity>
-    <projectiles>
-        <projectile count="1" fake="false">laser_burst</projectile>
-    </projectiles>
-	<launchSounds>
-		<sound>bombTeleport</sound>
-	</launchSounds>
-    <weaponArt>renegade_bomblauncher_lock</weaponArt>
-</weaponBlueprint>
-<weaponBlueprint name="AA_LOOT_RENEGADE_TONY_STUN_BOMB">
-	<type>BOMB</type>
-	<tip>tip_bombs</tip>
-	<title>'Lock' Projectile</title>
-	<short>'Lock' P.</short>
-	<locked>1</locked>
-	<desc>This is the projectile for the 'Lock' bomb launcher. It was never supposed to fall into your hands.</desc>
-	<tooltip>No.</tooltip>
-	<damage>0</damage>
-	<stun>25</stun>
-	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>3</breachChance>
-	<cooldown>1</cooldown>
-	<power>1</power>
-	<cost>0</cost>
-	<bp>4</bp>
-	<rarity>0</rarity>
-	<image>bomb_stun</image>
-	<explosion>explosion_big1_ion</explosion>
-	<launchSounds>
-		<sound>bombTeleport</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>smallExplosion</sound>
-	</hitShipSounds>
-	<weaponArt>bomblauncher_stun</weaponArt>
-	<iconImage>bomb</iconImage>
-</weaponBlueprint>
-
 <!-- // AETHER // -->
 
 <weaponBlueprint name="AA_AETHER_LASER_PULSE">
@@ -461,244 +305,7 @@
 
 <!-- // MISC // -->
 
-<weaponBlueprint name="AA_HOT_HEAVY">
-	<type>LASER</type>
-	<title>[SYSTEM'S CHOICE - SIDEARM]</title>
-	<short>[PISTOL]</short>
-	<tip>aa_tip_hotgun</tip>
-	<desc>This strange Heavy Laser appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
-	<tooltip>It's not really a laser if it fires virtual projectiles.</tooltip>
-	<damage>2</damage>
-	<shots>2</shots>
-	<sp>0</sp>
-	<stunChance>2</stunChance>
-	<cooldown>13</cooldown>
-	<power>2</power>
-	<cost>120</cost>
-	<bp>12</bp>
-	<speed>60</speed>
-	<rarity>0</rarity>
-	<image>projectile_hot</image>
-	<launchSounds>
-		<sound>hot_light</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>hot_pistol</weaponArt>
-	<iconImage>laser</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="AA_HOT_BURST">
-	<type>LASER</type>
-	<title>[SYSTEM'S CHOICE - RIFLE]</title>
-	<short>[RIFLE]</short>
-	<tip>aa_tip_hotgun</tip>
-	<desc>This strange Burst Laser appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
-	<tooltip>It's not really a laser if it fires virtual projectiles.</tooltip>
-	<damage>1</damage>
-	<shots>5</shots>
-	<sp>0</sp>
-	<cooldown>18</cooldown>
-	<power>2</power>
-	<cost>120</cost>
-	<bp>12</bp>
-	<speed>60</speed>
-	<rarity>0</rarity>
-	<image>projectile_hot</image>
-	<launchSounds>
-		<sound>hot_light</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>hot_assault</weaponArt>
-	<iconImage>laser</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="AA_HOT_SHOTGUN">
-	<type>BURST</type>
-	<flavorType>Physical Projectile Blast</flavorType>
-	<drone_targetable>1</drone_targetable>
-	<title>[SYSTEM'S CHOICE - SHOTGUN]</title>
-	<short>[SHOTGUN]</short>
-	<tip>aa_tip_hotgun</tip>
-	<desc>This strange Flak cannon appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
-	<tooltip>It's not really a flak if it fires virtual projectiles.</tooltip>
-	<radius>45</radius>
-	<damage>1</damage>
-	<shots>1</shots>
-	<sp>0</sp>
-	<cooldown>12</cooldown>
-	<power>2</power>
-	<cost>120</cost>
-	<bp>12</bp>
-	<speed>60</speed>
-	<rarity>0</rarity>
-	<projectiles>
-		<projectile count="4" fake="false">projectile_hot</projectile>
-		<projectile count="8" fake="true">projectile_hot_small</projectile>
-	</projectiles>
-	<launchSounds>
-		<sound>hot_heavy</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>hitHull1</sound>
-		<sound>hitHull1</sound>
-		<sound>hitHull1</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>hot_shotgun</weaponArt> 
-	<iconImage>flak</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="AA_HOT_FOCUS">
-	<type>BEAM</type>
-	<flavorType>Pinpoint</flavorType>
-	<tip>aa_tip_hotgun</tip>
-	<title>[SYSTEM'S CHOICE - RAILGUN]</title>
-	<short>[RAILGUN]</short>
-	<desc>This strange Pinpoint appears to be a virtual projection made of black crystal. Its effects, however, are real enough.</desc>
-	<tooltip>It's not really a pinpoint if it fires virtual projectiles.</tooltip>
-	<damage>4</damage>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<cooldown>17</cooldown>
-	<speed>1</speed>
-	<power>2</power>
-	<cost>120</cost>
-	<bp>2</bp>
-	<rarity>5</rarity>
-	<image>beam_contact</image>
-	<length>1</length>
-	<launchSounds>
-		<sound>hot_rail</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>explosion_heavy</sound>
-	</hitShipSounds>
-	<weaponArt>hot_railgun</weaponArt>
-	<iconImage>beam</iconImage>
-</weaponBlueprint>
-
 <!-- /// ARTILLERY /// -->
-
-<!-- // TSS-BONNIE-24 // -->
-
-<weaponBlueprint name="AA_ARTILLERY_TONY_BIO">
-	<type>BOMB</type>
-	<tip>tip_bombs</tip>
-    <title>'Spring' Scattered Launcher [E]</title>
-    <short>'Spring' [E]</short>
-	<desc>A powerful Bomb Launcher that manufactures and fires three small irradiation bombs. This one was never supposed to fall into your hands.</desc>
-	<tooltip>Bomb weapon; requires a missile; does 2 damage, but only damages system, not hull. Can target your own ship.</tooltip>
-	<damage>0</damage>
-	<persDamage>3</persDamage>
-	<statBoosts>
-		<statBoost name="moveSpeedMultiplier">
-			<boostType>MULT</boostType>
-			<amount>0.33</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-			<boostAnim>bio_poison</boostAnim>
-		</statBoost>
-		<statBoost name="stunMultiplier">
-			<boostType>MULT</boostType>
-			<amount>1.75</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-		</statBoost>
-		<statBoost name="repairSpeed">
-			<boostType>MULT</boostType>
-			<amount>0.33</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<maxStacks>1</maxStacks>
-			<duration>10</duration>
-		</statBoost>
-	</statBoosts>
-	<shots>3</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>3</breachChance>
-	<cooldown>20</cooldown>
-	<power>0</power>
-	<cost>150</cost>
-	<bp>4</bp>
-	<rarity>0</rarity>
-	<image>bomb_bio</image>
-	<explosion>explosion_bio</explosion>
-	<launchSounds>
-		<sound>bombTeleport</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>smallExplosion</sound>
-	</hitShipSounds>
-	<weaponArt>renegade_bomblauncher_spring</weaponArt>
-	<iconImage>bomb</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="AA_ARTILLERY_TONY_STUN">
-	<type>BOMB</type>
-	<tip>tip_bombs</tip>
-    <title>'Lock' Scattered Launcher [E]</title>
-    <short>'Lock' [E]</short>
-	<desc>A powerful Bomb Launcher that manufactures and fires three small stun bombs. This one was never supposed to fall into your hands.</desc>
-	<tooltip>Bomb weapon; requires a missile; does 2 damage, but only damages system, not hull. Can target your own ship.</tooltip>
-	<damage>0</damage>
-	<stun>25</stun>
-	<shots>3</shots>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>3</breachChance>
-	<cooldown>20</cooldown>
-	<power>0</power>
-	<cost>150</cost>
-	<bp>4</bp>
-	<rarity>0</rarity>
-	<image>bomb_stun</image>
-	<explosion>explosion_big1_ion</explosion>
-	<launchSounds>
-		<sound>bombTeleport</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>smallExplosion</sound>
-	</hitShipSounds>
-	<weaponArt>renegade_bomblauncher_lock</weaponArt>
-	<iconImage>bomb</iconImage>
-</weaponBlueprint>
 
 <!-- // SALLY // -->
 
@@ -831,22 +438,6 @@
 	<stackable>false</stackable>
 </augBlueprint>
 
-<augBlueprint name="AA_TEMPORAL_POWER">
-    <title>Temporal Supercharger</title>
-	<desc>This strange piece of Aether Tech alters the flow of time around it. Time on board this ship moves at a rate proportional to how much power is currently being used.</desc>
-	<cost>0</cost>
-	<rarity>0</rarity>
-	<stackable>false</stackable>
-</augBlueprint>
-
-<augBlueprint name="AA_SUPERHOT">
-    <title>SUPERHOT</title>
-	<desc>SUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOTSUPERHOT</desc>
-	<cost>0</cost>
-	<rarity>0</rarity>
-	<stackable>false</stackable>
-</augBlueprint>
-
 <augBlueprint name="AA_INTEGRAL_PARTICLE_SHIELD">
     <title>Sally's Math Shield</title>
 	<desc>A 3-layer Particle Shield designed by Sally. It was never supposed to fall into your hands.</desc>
@@ -894,6 +485,24 @@
 
 <!-- /// CREW /// -->
 
+<!-- // HUMANS // -->
+
+<crewBlueprint name="aa_human_pmc">
+	<desc>A stalwart human who signed up for a defensive brand of military training. Their unique equipment and armor configuration assists them in defending other crew.
+
+	Inherited Human stat: minor hazard resistance.</desc>
+	<title>Maelstrom PMC</title>
+	<short>PMC</short>
+	<cost>80</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>1.5x shooting speed</power>
+		<power>Takes 0.75x damage from ranged attacks and 0.5x damage from ship weaponry</power>
+		<power>While in the same room as another crew, all damage dealt by ship weapons is redirected to the PMC</power>
+		<power>Moves at 0.7x speed</power>
+	</powerList>
+</crewBlueprint>
+
 <!-- // DUSTWORMS // -->
 
 <crewBlueprint name="aa_dustworm">
@@ -932,50 +541,60 @@
 	</colorList>
 </crewBlueprint>
 
+<!-- // UNIQUES // -->
+
+<crewBlueprint name="aa_unique_alder">
+	<desc>Though normally content to stay aboard Axis, this researcher has decided to tag along with your crew. He hopes he can be of help to your mission.
+
+	Inherited Dustworm stats: 0.6x movement speed</desc>
+	<title>Provision Researcher</title>
+	<short>Researcher</short>
+	<cost>160</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>150 HP, takes 5x damage from all sources</power>
+		<power>Can sabotage; has 2.0x repair and sabotage speed</power>
+		<power>Instantly breaks doors</power>
+		<power>Ignored by enemies as long as at least one allied crew is in the room</power>
+		<power>Active Ability: Neural debilitator pulse briefly inhibits enemies' ability to fight, repair, or use abilities</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="aa_unique_thane">
+	<desc>This high-and-mighty CSO has been convinced to come down from his perch and indulge in hacking and slashing for the good of the galaxy.
+
+	Inherited Human stat: minor hazard resistance</desc>
+	<title>Maelstrom Protectorate</title>
+	<short>Protectorate</short>
+	<cost>160</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>125 HP</power>
+		<power>Melee attacks deal 3.0x damage, but attacks half as quickly</power>
+		<power>When Thane kills an enemy crew, his attack speed doubles for 20 seconds; this effect can stack with itself</power>
+		<power>Teleports nearly instantly</power>
+		<power>Active Ability: Doubles attack speed and applies panic in the room, causing enemy crew to flee if they have a system to run to</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="aa_unique_chael">
+	<desc>A former Slug Hacker, grizzled and sickened by many harrowing experiences. Now, she wanders the galaxy in search of bounties from bumbling Renegades like you.
+
+	Inherited Slug stats: telepathic, immune to mind control</desc>
+	<title>Grey Wanderer</title>
+	<short>Wanderer</short>
+	<cost>160</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Instantly breaks hacked doors</power>
+		<power>Provides full power and full limit release to the Hacking system while she is standing in it</power>
+		<power>Takes 3x damage from hazards and is stunned for 3x as long</power>
+		<power>Can install Anti-Virus Module for free as an internal upgrade, and halves the cost of hacking-related upgrades</power>
+		<power>Active Ability: Temporarily releases all system limits and applies a bonus effect to the system she is currently standing in. Emits a hacking pulse instead when used on the enemy ship, increasing in level with each use.</power>
+	</powerList>
+</crewBlueprint>
+
 <!-- // MISC. AND ENEMY-ONLY // -->
-
-<crewBlueprint name="aa_unique_william">
-	<desc>Former Tony's executive. Has gone completely insane.</desc>
-	<title>Former Executive</title>
-	<short>Former Executive</short>
-	<cost>0</cost>
-	<rarity>0</rarity>
-	<powerList>
-		<power>[DATA EXPUNGED]</power>
-	</powerList>
-</crewBlueprint>
-
-<crewBlueprint name="aa_red_guy">
-	<desc>A virtual, hard-light being created by the System and subject to its will.</desc>
-	<title>Red Guy</title>
-	<short>Red Guy</short>
-	<cost>0</cost>
-	<rarity>0</rarity>
-	<powerList>
-		<power>Immune to mind control and stun effects</power>
-		<power>Cannot heal or be cloned from most sources, but regenerates health in the drone bay</power>
-		<power>Fights, repairs, and sabotages at 2x speed, and takes 2x damage from combat</power>
-		<power>Becomes frozen in time when the Addict is idle, becoming inactionable</power>
-	</powerList>
-</crewBlueprint>
-
-<crewBlueprint name="aa_addict">
-	<desc>A manifestation of the System's hive mind, conducting various operations.</desc>
-	<title>Addict</title>
-	<short>Addict</short>
-	<cost>0</cost>
-	<rarity>0</rarity>
-	<powerList>
-		<power>Immune to mind control and stun effects</power>
-		<power>Cannot heal or be cloned from most sources, but regenerates health in the drone bay</power>
-		<power>Fights, repairs, and sabotages at 2x speed, and takes 2x damage from combat</power>
-		<power>Becomes frozen in time when the Addict is idle, becoming inactionable</power>
-		<power>When under 20 HP, can HOTSWITCH into another Red Guy in the same room, fully restoring health and destroying the Red Guy</power>
-		<power>Mind is software</power>
-		<power>Bodies are disposable</power>
-		<power>The system has set her free</power>
-	</powerList>
-</crewBlueprint>
 
 <crewBlueprint name="aa_test_crew">
 	<desc>A mysterious figure.</desc>

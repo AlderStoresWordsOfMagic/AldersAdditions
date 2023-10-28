@@ -24,6 +24,11 @@
 
 <pointer volume="5">weapons/pointer.ogg</pointer>
 
+<rockets volume="4">weapons/rockets.ogg</rockets>
+
+<acid_launch volume="4">weapons/acid_launch.ogg</acid_launch>
+<acid_hit volume="4">weapons/acid_hit.ogg</acid_hit>
+
 <missile_giant volume="10">weapons/missile_giant.ogg</missile_giant>
 
 <explosion_giant volume="7">weapons/explosion_giant.ogg</explosion_giant>

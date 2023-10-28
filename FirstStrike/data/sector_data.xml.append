@@ -179,7 +179,8 @@
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_DRIVER" rarity="0" />
-		<mod-append:blueprint name="AA_DRIVER_RAD" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_BURST" rarity="0" />
+		<mod-append:blueprint name="AA_ROCKETS_1" rarity="0" />
 		<mod-append:blueprint name="AA_POINTER" rarity="0" />
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />
@@ -233,7 +234,8 @@
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_DRIVER" rarity="0" />
-		<mod-append:blueprint name="AA_DRIVER_RAD" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_BURST" rarity="0" />
+		<mod-append:blueprint name="AA_ROCKETS_1" rarity="0" />
 		<mod-append:blueprint name="AA_POINTER" rarity="0" />
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />
