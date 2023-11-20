@@ -93,10 +93,31 @@
 	<time>0.75</time>
 </anim>
 
+<animSheet name="explosion_stun" w="640" h="64" fw="64" fh="64">effects/explosion_stun.png</animSheet>
+<anim name="explosion_stun">
+	<sheet>explosion_stun</sheet>
+	<desc length="10" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
 <animSheet name="explosion_erosion" w="576" h="64" fw="64" fh="64">effects/explosion_erosion.png</animSheet>
 <anim name="explosion_erosion">
 	<sheet>explosion_erosion</sheet>
 	<desc length="9" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<animSheet name="explosion_massive" w="1664" h="128" fw="128" fh="128">effects/explosion_massive.png</animSheet>
+<anim name="explosion_massive">
+	<sheet>explosion_massive</sheet>
+	<desc length="13" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<animSheet name="explosion_massive_ion" w="1792" h="128" fw="128" fh="128">effects/explosion_massive_ion.png</animSheet>
+<anim name="explosion_massive_ion">
+	<sheet>explosion_massive_ion</sheet>
+	<desc length="14" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
@@ -911,6 +932,20 @@
 	<sheet>gasoline_debuff</sheet>
 	<desc length="11" x="0" y="0"/>
 	<time>1.0</time>
+</anim>
+
+<animSheet name="explosion_vision" w="576" h="64" fw="64" fh="64">effects/explosion_vision.png</animSheet>
+<anim name="explosion_vision">
+	<sheet>explosion_vision</sheet>
+	<desc length="9" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<animSheet name="impact_vision" w="48" h="48" fw="48" fh="48">effects/impact_vision.png</animSheet>
+<anim name="impact_vision">
+	<sheet>impact_vision</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.75</time>
 </anim>
 
 <!-- // LASERS // -->

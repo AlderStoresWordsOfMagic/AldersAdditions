@@ -2936,68 +2936,108 @@ If another energy shield is present, it refills that shield as well but takes an
 	</mod:findLike>
 </mod:findName>
 
+<mod:findName type="weaponBlueprint" name="BEAM_MADNESS_VISION">
+	<mod-overwrite:image>impact_vision</mod-overwrite:image>
+	<mod-overwrite:color>
+		<r>255</r>
+		<g>255</g>
+		<b>225</b>
+	</mod-overwrite:color>
+	<mod-overwrite:launchSounds>
+		<sound>beam_eldritch</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="BOMB_STUN">
+	<mod-append:explosion>explosion_stun</mod-append:explosion>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="BOMB_STUN_ENEMY">
+	<mod-append:explosion>explosion_stun</mod-append:explosion>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="LOOT_FREEMANTIS_1">
+	<mod-append:explosion>explosion_stun</mod-append:explosion>
+</mod:findName>
+
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_1">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_2">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_3">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_FREE">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_FIRE">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_BREACH">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_STUN">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_stun</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="TRC_MINELAUNCHER_ION">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big1_ion</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_GIANT">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_massive</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_GIANT_CHAOS">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MINELAUNCHER">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_massive</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MINELAUNCHER_ENEMY">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_massive</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_AUTO_MINELAUNCHER">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_massive</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS_ELITE">
 	<mod-overwrite:spin>70</mod-overwrite:spin>
+	<mod-append:explosion>explosion_big3</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS_VISION">
 	<mod-overwrite:spin>120</mod-overwrite:spin>
+	<mod-append:explosion>explosion_vision</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="SCANNER_BAIT">
@@ -3016,9 +3056,7 @@ If another energy shield is present, it refills that shield as well but takes an
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN">
-	<mod:findLike type="explosion">
-		<mod:setValue>explosion_bio</mod:setValue>
-	</mod:findLike>
+	<mod-append:explosion>explosion_massive</mod-append:explosion>
 	<mod:findLike type="weaponArt">
 		<mod:setValue>missiles_massive</mod:setValue>
 	</mod:findLike>
@@ -3028,9 +3066,7 @@ If another energy shield is present, it refills that shield as well but takes an
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN_CHAOS">
-	<mod:findLike type="explosion">
-		<mod:setValue>explosion_bio</mod:setValue>
-	</mod:findLike>
+	<mod-append:explosion>explosion_massive</mod-append:explosion>
 	<mod:findLike type="weaponArt">
 		<mod:setValue>missiles_massive_chaos</mod:setValue>
 	</mod:findLike>

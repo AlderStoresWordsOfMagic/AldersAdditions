@@ -228,7 +228,7 @@
 	<title>Aetheric Pulse Laser</title>
 	<short>Aether Pulse</short>
 	<tip>aa_tip_transcend</tip>
-	<desc>A massive Laser prototype that outclasses most others of its category, and fires in a unique pattern where each shot is clustered together. However, its power draw is incredible.</desc>
+	<desc>A Laser prototype that outclasses most others of its category, and fires in a unique pattern where each shot is clustered together. However, its power draw is incredible.</desc>
 	<tooltip>No.</tooltip>
 	<damage>2</damage>
 	<hullBust>1</hullBust>
@@ -240,14 +240,14 @@
 	<fireTime>0.75</fireTime>
 	<sp>0</sp>
 	<breachChance>10</breachChance>
-	<cooldown>5</cooldown>
+	<cooldown>6</cooldown>
 	<power>4</power>
 	<cost>120</cost>
 	<bp>12</bp>
 	<speed>60</speed>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="2" fake="false">laser_prime</projectile>
+		<projectile count="2" fake="false">laser_aether_green_projectile</projectile>
 	</projectiles>
 	<image>laser_prime</image>
 	<launchSounds>
@@ -265,7 +265,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_transcendent</weaponArt>
+	<weaponArt>laser_aether_pulse</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 

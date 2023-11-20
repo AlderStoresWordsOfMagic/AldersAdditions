@@ -112,6 +112,10 @@
 
 <!-- /// FRIENDLY EVENTS (never have a fight) /// -->
 
+<eventList name="AA_PROVISION_FRIENDLY_ENCOUNTER">
+	<!-- event load="AA_PROVISION_DRONE_ENTHUSIAST"/-->
+</eventList>
+
 <event name="AA_PROVISION_FREE_STUFF">
 	<text load="AA_TEXT_PROVISION_FREE_STUFF"/>
 	<choice>
@@ -130,11 +134,23 @@
 	<text>An empty cache, most of the contents long since confiscated, lies near the beacon. There's still a few useful supplies left, implying the previous raiders were after a specific item within.</text>
 </textList>
 
+<event name="AA_PROVISION_DRONE_ENTHUSIAST">
+	<text>A space station orbits a lush planet, broadcasting periodic signals. From the shape and paint job, it appears to be run by a Provision-affiliated civilian.</text>
+	<choice hidden="true" req="rep_general" lvl="-2147483648" max_lvl="0" max_group="0" blue="false">
+		<text>Hail the station.</text>
+		<event>
+			
+		</event>
+	</choice>
+</event>
+
 
 
 <!-- /// NEUTRAL EVENTS (might have a fight) /// -->
 
 <eventList name="AA_PROVISION_NEUTRAL_ENCOUNTER">
+	<!-- event load="AA_PROVISION_ION_TEST"/-->
+	<!-- event load="AA_PROVISION_WEIRD_AUTO"/-->
 	<event load="AA_PROVISION_ROCHE_LIMIT"/>
 </eventList>
 
@@ -143,14 +159,14 @@
 		<name>LIST_WEAPONS_REBEL_SELITE</name>
 	</weaponOverride>
 	<text>As soon as you jump into the beacon, your eyes are struck by the sight of a planet in the process of falling into its sun. Its surface crumbling as it begins to split apart, creating a massive field of rocks that batters your ship, you scan lots of valuable materials in the planet's spilling mantle... and a rather well-armed Rebel auto-ship in the system, presumably pursuing the same objective.</text>
-	<environment type="asteroid"/>
+	<environment type="sun"/>
 	<ship load="AA_SHIP_AUTO_ROCHE_LIMIT" hostile="false"/>
 	<choice>
 		<text>Dive into the fray and fight the Auto-ship.</text>
 		<event>
 			<text>When you approach the burning mantle, the Auto-ship turns to face you, its mining equipment retracting into the hull and reevaling weaponry in its place. The heat of the star, combined with the heavy debris from the crumbling planet, creates an extremely hazardous environment... once you're done harvesting the mantle, you will have to leave as soon as possible!</text>
 			<ship hostile="true"/>
-			<environment type="sun"/>
+			<environment type="asteroid"/>
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK"/>

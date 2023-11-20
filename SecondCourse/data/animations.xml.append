@@ -9,16 +9,16 @@
 	<time>0.75</time>
 </anim>
 
-<animSheet name="laser_static_projectile" w="60" h="20" fw="60" fh="20">projectile/laser_static.png</animSheet>
-<anim name="laser_static_projectile">
-	<sheet>laser_static_projectile</sheet>
+<animSheet name="laser_aether_green_projectile" w="60" h="20" fw="60" fh="20">projectile/laser_aether_green.png</animSheet>
+<anim name="laser_aether_green_projectile">
+	<sheet>laser_aether_green_projectile</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>0.3</time>
 </anim>
 
-<animSheet name="laser_static_big_projectile" w="60" h="20" fw="60" fh="20">projectile/laser_static_big.png</animSheet>
-<anim name="laser_static_big_projectile">
-	<sheet>laser_static_big_projectile</sheet>
+<animSheet name="laser_aether_white_projectile" w="60" h="20" fw="60" fh="20">projectile/laser_aether_white.png</animSheet>
+<anim name="laser_aether_green_projectile">
+	<sheet>laser_aether_green_projectile</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>0.3</time>
 </anim>
@@ -26,20 +26,6 @@
 <animSheet name="laser_sally_projectile" w="60" h="20" fw="60" fh="20">projectile/laser_sally.png</animSheet>
 <anim name="laser_sally_projectile">
 	<sheet>laser_sally_projectile</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>0.3</time>
-</anim>
-
-<animSheet name="projectile_hot" w="60" h="20" fw="60" fh="20">projectile/projectile_hot.png</animSheet>
-<anim name="projectile_hot">
-	<sheet>projectile_hot</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>0.3</time>
-</anim>
-
-<animSheet name="projectile_hot_small" w="60" h="20" fw="60" fh="20">projectile/projectile_hot_small.png</animSheet>
-<anim name="projectile_hot_small">
-	<sheet>projectile_hot_small</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>0.3</time>
 </anim>
@@ -165,91 +151,27 @@
 	<time>1.0</time>
 </anim>
 
-<animSheet name="renegade_bomblauncher_spring" w="665" h="67" fw="35" fh="67">weapons/loot/bomblauncher_spring.png</animSheet>
-<weaponAnim name="renegade_bomblauncher_spring">
-	<sheet>renegade_bomblauncher_spring</sheet>
-	<desc length="19" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>8</fireFrame>
-	<firePoint x="21" y="49" />
-	<mountPoint x="4" y="36" />
-	<chargeImage>weapons/loot/bomblauncher_spring_glow.png</chargeImage>
-</weaponAnim>
-<animSheet name="renegade_bomblauncher_lock" w="665" h="67" fw="35" fh="67">weapons/loot/bomblauncher_lock.png</animSheet>
-<weaponAnim name="renegade_bomblauncher_lock">
-	<sheet>renegade_bomblauncher_lock</sheet>
-	<desc length="19" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>8</fireFrame>
-	<firePoint x="21" y="49" />
-	<mountPoint x="4" y="36" />
-	<chargeImage>weapons/loot/bomblauncher_lock_glow.png</chargeImage>
-</weaponAnim>
+<!-- // ARTHER // -->
 
-<!-- // TRANSCEDENTAL // -->
-
-<animSheet name="laser_transcendent_chargeglow" w="108" h="120" fw="36" fh="120">weapons/aether/aether_laser_chargeglow.png</animSheet>
-<anim name="laser_transcendent_chargeglow">
-	<sheet>laser_transcendent_chargeglow</sheet>
+<animSheet name="laser_aether_pulse_chargeglow" w="108" h="120" fw="36" fh="120">weapons/aether/aether_laser_pulse_chargeglow.png</animSheet>
+<anim name="laser_aether_pulse_chargeglow">
+	<sheet>laser_aether_pulse_chargeglow</sheet>
 	<desc length="3" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
-<animSheet name="laser_transcendent" w="1548" h="120" fw="36" fh="120">weapons/aether/aether_laser.png</animSheet>
-<weaponAnim name="laser_transcendent">
-	<sheet>laser_transcendent</sheet>
+<animSheet name="laser_aether_pulse" w="1548" h="120" fw="36" fh="120">weapons/aether/aether_laser_pulse.png</animSheet>
+<weaponAnim name="laser_aether_pulse">
+	<sheet>laser_aether_pulse</sheet>
 	<desc length="43" x="0" y="0"/>
 	<chargedFrame>15</chargedFrame>
 	<fireFrame>20</fireFrame>
 	<firePoint x="21" y="32"/>
 	<mountPoint x="5" y="84"/>
-	<chargeImage>weapons/aether/aether_laser_glow.png</chargeImage>
+	<chargeImage>weapons/aether/aether_laser_pulse_glow.png</chargeImage>
 	<boost>laser_transcendent_chargeglow</boost>
 </weaponAnim>
 
 <!-- // MISC // -->
-
-<animSheet name="hot_pistol" w="224" h="71" fw="28" fh="71">weapons/misc/hot_pistol.png</animSheet>
-<weaponAnim name="hot_pistol">
-	<sheet>hot_pistol</sheet>
-	<desc length="8" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="18" y="10"/>
-	<mountPoint x="6" y="45"/>
-	<chargeImage>weapons/misc/hot_pistol_glow.png</chargeImage>
-</weaponAnim>
-
-<animSheet name="hot_assault" w="250" h="64" fw="25" fh="64">weapons/misc/hot_assault.png</animSheet>
-<weaponAnim name="hot_assault">
-	<sheet>hot_assault</sheet>
-	<desc length="10" x="0" y="0"/>
-	<chargedFrame>5</chargedFrame>
-	<fireFrame>8</fireFrame>
-	<firePoint x="14" y="10"/>
-	<mountPoint x="6" y="45"/>
-</weaponAnim>
-
-<animSheet name="hot_shotgun" w="296" h="51" fw="37" fh="51">weapons/misc/hot_shotgun.png</animSheet>
-<weaponAnim name="hot_shotgun">
-	<sheet>hot_shotgun</sheet>
-	<desc length="8" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>3</fireFrame>
-	<firePoint  x="12" y="22"/>
-	<mountPoint x="3" y="33"/>
-	<chargeImage>weapons/misc/hot_shotgun_glow.png</chargeImage>
-</weaponAnim>
-
-<animSheet name="hot_railgun" w="155" h="78" fw="31" fh="78">weapons/misc/hot_railgun.png</animSheet>
-<weaponAnim name="hot_railgun">
-	<sheet>hot_railgun</sheet>
-	<desc length="5" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint  x="18" y="38"/>
-	<mountPoint x="5" y="59"/>
-	<chargeImage>weapons/misc/hot_railgun_glow.png</chargeImage>
-</weaponAnim>
 
 <!-- /// ARTILLERY /// -->
 

@@ -285,7 +285,7 @@
 <!-- // MINELAUNCHER TRAPPING // -->
 
 <mod:findName type="event" name="STORAGE_CHECK_JOB_FLEET">
-	<mod-append:choice req="AA_MINELAUNCHER_CLOAK" blue="false"> <!-- Set (cloaked) -->
+	<mod-append:choice req="AA_MINELAUNCHER_CLOAK" blue="false">
 		 <text>Use your Cloaked Mine Launcher. [-7}, gives 3 delay, always impacts notoriety]</text> 
 		 <event>
             <text>You rig the ammunition and set a trap for the Rebels. Though the cloaked mines may be especially efficient at slowing down the incoming fleet, you know that the weight of the crime you just committed won't show well on your mission report.</text>
@@ -302,7 +302,7 @@
 	<mod:findWithChildLike type="choice" child-type="event"><mod:selector load="STORAGE_CHECK_JOB_LOAD"/>
 		<mod:setAttributes req="pilot" lvl="1" blue="false" max_group="999"/>
 	</mod:findWithChildLike>
-	<mod-append:choice req="AA_MINELAUNCHER_CLOAK" blue="false"> <!-- Ammit (particle) -->
+	<mod-append:choice req="AA_MINELAUNCHER_CLOAK" blue="false">
 		<text>Use your Particle Mine Launcher. [-7}, gives 2 delay]</text> 
 		<event>
 		   <text>You rig the ammunition and set a trap for the Rebels. It's definitely illegal to do, but you'll be gone before it matters.</text>

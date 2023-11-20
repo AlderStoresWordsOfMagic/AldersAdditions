@@ -2,8 +2,44 @@
 
 <FTL>
 
-<!-- /// EVENTS TIED TO SHIPS /// -->
+<!-- /// MATH QUESTIONS /// -->
 
-<!-- // SALLY // -->
+<!-- // SURGE HANDLING // -->
+
+<eventList name="AA_POWER_SURGE_INTEGRAL_RANDOM">
+    <event load="AA_POWER_SURGE_INTEGRAL_MIXED"/>
+    <event load="AA_POWER_SURGE_INTEGRAL_LASER"/>
+    <event load="AA_POWER_SURGE_INTEGRAL_ENERGY"/>
+    <event load="AA_POWER_SURGE_INTEGRAL_PARTICLE"/>
+    <event load="AA_POWER_SURGE_INTEGRAL_FOCUS"/>
+    <event load="AA_POWER_SURGE_INTEGRAL_HAVOC"/>
+    <event load="AA_POWER_SURGE_INTEGRAL_RAINBOW"/>
+    <event load="AA_POWER_SURGE_INTEGRAL_DRONES"/>
+</eventList>
+
+<event name="AA_POWER_SURGE_INTEGRAL_MIXED">
+    <superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_MIXED"/>
+</event>
+<event name="AA_POWER_SURGE_INTEGRAL_LASER">
+    <superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_LASER"/>
+</event>
+<event name="AA_POWER_SURGE_INTEGRAL_ENERGY">
+    <superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_ENERGY"/>
+</event>
+<event name="AA_POWER_SURGE_INTEGRAL_PARTICLE">
+    <superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_PARTICLE"/>
+</event>
+<event name="AA_POWER_SURGE_INTEGRAL_FOCUS">
+    <superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_FOCUS"/>
+</event>
+<event name="AA_POWER_SURGE_INTEGRAL_HAVOC">
+    <superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_HAVOC"/>
+</event>
+<event name="AA_POWER_SURGE_INTEGRAL_RAINBOW">
+    <superBarrage player="false" name="AA_SURGE_INTEGRAL_WEAPON_RAINBOW"/>
+</event>
+<event name="AA_POWER_SURGE_INTEGRAL_DRONES">
+    <superDrones player="false" name="AA_SURGE_INTEGRAL_DRONES"/>
+</event>
 
 </FTL>

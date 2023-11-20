@@ -2,36 +2,37 @@
 
 <!-- /// WEAPONS /// -->
 
-<disruptor_light volume="3">weapons/beam_ion.ogg</disruptor_light>
-<disruptor_heavy volume="3">weapons/beam_ion_2.ogg</disruptor_heavy>
-<beam_sustain volume="3">weapons/sustain.ogg</beam_sustain>
+<disruptor_light volume="3">weapons/beams/beam_ion.ogg</disruptor_light>
+<disruptor_heavy volume="3">weapons/beams/beam_ion_2.ogg</disruptor_heavy>
+<beam_sustain volume="3">weapons/beams/sustain.ogg</beam_sustain>
 
-<capacitor_light volume="6">weapons/focus_ion.ogg</capacitor_light>
-<capacitor_heavy volume="6">weapons/focus_ion_2.ogg</capacitor_heavy>
+<capacitor_light volume="6">weapons/beams/focus_ion.ogg</capacitor_light>
+<capacitor_heavy volume="6">weapons/beams/focus_ion_2.ogg</capacitor_heavy>
 
-<smash volume="4">weapons/smash.ogg</smash>
-<smash_beam volume="4">weapons/smash_beam.ogg</smash_beam>
-<shield_pop volume="4">weapons/shield_pop.ogg</shield_pop>
-<shield_crush volume="4">weapons/shield_crush.ogg</shield_crush>
+<smash volume="4">weapons/lasers/smash.ogg</smash>
+<smash_beam volume="4">weapons/beams/smash_beam.ogg</smash_beam>
+<shield_pop volume="4">weapons/misc/shield_pop.ogg</shield_pop>
+<shield_crush volume="4">weapons/misc/shield_crush.ogg</shield_crush>
 
-<electron volume="4">weapons/electron.ogg</electron>
+<electron volume="4">weapons/misc/electron.ogg</electron>
 
-<driver volume="7">weapons/driver.ogg</driver>
+<driver volume="7">weapons/ballistics/driver.ogg</driver>
 
-<purge volume="8">weapons/purge.ogg</purge>
+<purge volume="8">weapons/lasers/purge.ogg</purge>
 
-<decoy volume="5">weapons/decoy.ogg</decoy>
+<decoy volume="5">weapons/misc/decoy.ogg</decoy>
 
-<pointer volume="5">weapons/pointer.ogg</pointer>
+<pointer volume="5">weapons/misc/pointer.ogg</pointer>
 
-<rockets volume="4">weapons/rockets.ogg</rockets>
+<rockets volume="4">weapons/ballistics/rockets.ogg</rockets>
 
-<acid_launch volume="4">weapons/acid_launch.ogg</acid_launch>
-<acid_hit volume="4">weapons/acid_hit.ogg</acid_hit>
+<acid_launch volume="4">weapons/ballistics/acid_launch.ogg</acid_launch>
+<acid_hit volume="4">weapons/explosions/acid_hit.ogg</acid_hit>
 
-<missile_giant volume="10">weapons/missile_giant.ogg</missile_giant>
+<missile_giant volume="10">weapons/ballistics/missile_giant.ogg</missile_giant>
+<explosion_giant volume="7">weapons/explosions/explosion_giant.ogg</explosion_giant>
 
-<explosion_giant volume="7">weapons/explosion_giant.ogg</explosion_giant>
+<beam_eldritch volume="4">weapons/beams/beam_eldritch.ogg</beam_eldritch>
 
 <!-- /// SHIP /// -->
 

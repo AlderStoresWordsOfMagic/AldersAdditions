@@ -19,7 +19,7 @@
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event>
-            <text>Suddenly, one of your crew shouts from the side, and you behold a black, empty void outside the walls of your ship, your sensors returning absolutely nothing. There are some minor space-time anomalies you could probably use to jump around, but other than that... this place, whatever it is, was completely empty. How would you even escape?</text>
+            <text>Suddenly, one of your crew shouts from the side, and you behold a black, empty void outside the walls of your ship, your sensors returning absolutely nothing. There are some minor space-time anomalies you could probably use to jump around, but other than that... this place, whatever it is, was completely empty. How will you even escape?</text>
         </event>
 	</choice>
 </event>

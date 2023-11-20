@@ -922,7 +922,7 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 	<weapon name="ENERGY_1" count="8"/>
 </mod-append:surgeBarrage>
 
-<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_SYSTEM">
+<mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_PARTICLE">
 	<weapon name="LASER_PARTICLE" count="30"/>
 </mod-append:surgeBarrage>
 
@@ -943,7 +943,7 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 	<weapon name="ENERGY_1" count="2"/>
 </mod-append:surgeBarrage>
 
-<mod-append:surgeDrones name="AA_SURGE_INTEGRAL_DRONE_ATTACK"> 
+<mod-append:surgeDrones name="AA_SURGE_INTEGRAL_DRONES"> 
 	<drone name="COMBAT_1_LASER" count="3"/>
 	<drone name="COMBAT_1_BEAM" count="2"/>
 	<drone name="ASSAULT_PARTICLE" count="1"/>
@@ -952,13 +952,6 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 	<drone name="FOCUS_1_AMP4" count="2"/>
 	<drone name="FLAK_1_AMP4" count="2"/>
 	<drone name="ENERGY_1_AMP3_ENEMY" count="2"/>
-</mod-append:surgeDrones>
-
-<mod-append:surgeDrones name="AA_SURGE_INTEGRAL_DRONE_STATUS"> 
-	<drone name="PEST_RAD_ENEMY" count="4"/>
-	<drone name="PEST_DEBUFF_ENEMY" count="4"/>
-	<drone name="HELLRAISER_FIRE" count="4"/>
-	<drone name="ION_1_AMP2_ENEMY" count="3"/>
 </mod-append:surgeDrones>
 
 </mod:findLike>

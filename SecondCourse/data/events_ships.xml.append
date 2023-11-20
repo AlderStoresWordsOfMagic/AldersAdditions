@@ -7,8 +7,9 @@
 <!-- // TEST SHIP // -->
 
 <ship name="AA_TEST_RIGGER_SC" auto_blueprint="AA_TEST_RIGGER_SC">
-	<surrender  chance="0.8" min="2" max="3" load="AA_SHIP_PROVISION_SURRENDER"/>
-	<escape  chance="0.25" min="3" max="4" load="AA_SHIP_PROVISION_ESCAPE"/>
+	<surrender chance="0.8" min="2" max="3" load="AA_SHIP_PROVISION_SURRENDER"/>
+	<escape chance="0.3" min="3" max="4" load="AA_SHIP_PROVISION_ESCAPE"/>
+	<gotaway load="AA_SHIP_PROVISION_GOTAWAY"/>
 	<destroyed load="AA_SHIP_PROVISION_DESTROYED"/>
 	<deadCrew load="AA_SHIP_PROVISION_DEADCREW"/>
 	<weaponOverride count="1">
@@ -17,6 +18,50 @@
 </ship>
 
 <!-- // PROVISION // -->
+
+<ship name="AA_SHIP_PROVISION_ALL" auto_blueprint="AA_LIST_SHIPS_PROVISION_ALL">
+	<surrender chance="0.8" min="2" max="3" load="AA_SHIP_PROVISION_SURRENDER"/>
+	<escape chance="0.3" min="3" max="4" load="AA_SHIP_PROVISION_ESCAPE"/>
+	<gotaway load="AA_SHIP_PROVISION_GOTAWAY"/>
+	<destroyed load="AA_SHIP_PROVISION_DESTROYED"/>
+	<deadCrew load="AA_SHIP_PROVISION_DEADCREW"/>
+	<weaponOverride count="1">
+		<name>AA_LIST_LOADOUT_PROVISION_PRIMARIES</name>
+	</weaponOverride>
+</ship>
+
+<ship name="AA_SHIP_PROVISION_GENERIC" auto_blueprint="AA_LIST_SHIPS_PROVISION_GENERIC">
+	<surrender chance="0.8" min="2" max="3" load="AA_SHIP_PROVISION_SURRENDER"/>
+	<escape chance="0.3" min="3" max="4" load="AA_SHIP_PROVISION_ESCAPE"/>
+	<gotaway load="AA_SHIP_PROVISION_GOTAWAY"/>
+	<destroyed load="AA_SHIP_PROVISION_DESTROYED"/>
+	<deadCrew load="AA_SHIP_PROVISION_DEADCREW"/>
+	<weaponOverride count="1">
+		<name>AA_LIST_LOADOUT_PROVISION_PRIMARIES</name>
+	</weaponOverride>
+</ship>
+
+<ship name="AA_SHIP_PROVISION_FIGHT" auto_blueprint="AA_LIST_SHIPS_PROVISION_FIGHT">
+	<surrender chance="0.5" min="2" max="3" load="AA_SHIP_PROVISION_SURRENDER"/>
+	<escape chance="0.2" min="3" max="4" load="AA_SHIP_PROVISION_ESCAPE"/>
+	<gotaway load="AA_SHIP_PROVISION_GOTAWAY"/>
+	<destroyed load="AA_SHIP_PROVISION_DESTROYED"/>
+	<deadCrew load="AA_SHIP_PROVISION_DEADCREW"/>
+	<weaponOverride count="1">
+		<name>AA_LIST_LOADOUT_PROVISION_PRIMARIES</name>
+	</weaponOverride>
+</ship>
+
+<ship name="AA_SHIP_PROVISION_BIG" auto_blueprint="AA_LIST_SHIPS_PROVISION_BIG">
+	<surrender chance="0.3" min="2" max="3" load="AA_SHIP_PROVISION_SURRENDER"/>
+	<escape chance="0" min="3" max="4" load="AA_SHIP_PROVISION_ESCAPE"/>
+	<gotaway load="AA_SHIP_PROVISION_GOTAWAY"/>
+	<destroyed load="AA_SHIP_PROVISION_DESTROYED"/>
+	<deadCrew load="AA_SHIP_PROVISION_DEADCREW"/>
+	<weaponOverride count="1">
+		<name>AA_LIST_LOADOUT_PROVISION_PRIMARIES</name>
+	</weaponOverride>
+</ship>
 
 <!-- / NORMAL /-->
 
@@ -46,7 +91,7 @@
 	<text>Yet another wave of innocent lives has been crushed without mercy. You take a moment to reflect upon yourself and your deeds, swallowing the gravity of your crime.</text>
 	<text>As you and your crew inspect the deactivated ship, you see a wounded Dustworm, squirming on the floor and begging you to save them. They die before you can even pick them up. You take a moment to clear your mind of their last expression.</text>
 	<text>Killing these Dustworms is much like picking clean Union ships. They're both civilian craft, and invading them is an act of piracy. You wonder what the Federation would think about what you just did.</text>
-	<text>Boarding the ship yourself, the scene before you looks like something straight out of a slasher film. The only reason you don't vomit on sight is because of the color of their blood, but you still feel quite sick as you scrap the ship.</text>
+	<text>Boarding the ship yourself, the scene before you looks like something straight out of a slasher film. The only reason you don't vomit on sight is because of the unfamiliar color of their blood, but you still feel quite sick as you scrap the ship.</text>
 	<text>New and strange as these Dustworms may be, they seemed like they'd fit right in with the other members of the Federation. You're not making any friends here by popping them.</text>
 </textList>
 
@@ -366,12 +411,11 @@
 
 <ship name="AA_SUPERBOSS_INTEGRAL" auto_blueprint="AA_SUPERBOSS_INTEGRAL">
 	<destroyed load="AA_SUPERBOSS_INTEGRAL_DESTROYED"/>
-	<deadCrew load="AA_SUPERBOSS_INTEGRAL_DEADCREW"/>
 	<triggeredEvent event="AA_SUPERBOSS_INTEGRAL_DIRTY" enemyHull="20"/>
 	<triggeredEvent event="AA_SUPERBOSS_INTEGRAL_SURRENDER" enemyHull="4"/>
-	<triggeredEvent event="AA_POWER_SURGE_INTEGRAL_QUESTION" seeded="false" loops="999999999" thisFight="true" minTime="10.0" maxTime="20.0">
+	<triggeredEvent event="AA_POWER_SURGE_INTEGRAL_RANDOM" seeded="false" loops="999999999" thisFight="true" minTime="10.0" maxTime="20.0">
 		<warningMessage id="warning_integral" x="692" y="84" time="5.0" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
-	</triggeredEvent>
+	</triggeredEvent> <!-- Power surge event is to be altered to ask a question directly. -->
 </ship>
 
 <event name="AA_SUPERBOSS_INTEGRAL_DIRTY"> <!-- / We going MFK Flagship mode. /-->
@@ -413,11 +457,6 @@
 			<text>Though you hear no more of Sally's voice, your sensors pick up an immense volume of information being transmitted to the communications tower. Sally may live on, but her hopes and dreams have been crushed, and you were the one to do it. You monster.</text>
 		</event>
 	</choice>	
-</event>
-
-<event name="AA_SUPERBOSS_INTEGRAL_DEADCREW">
-	<text>Somehow, some way, you have managed to crew-kill an Auto-ship. After having done the impossible, you find it to be a good time to sit down and take a long time figuring out what the hell you just did to make that a reality.</text>
-	<win creditsText="aa_credit_impossible" text="What have you done?"/>
 </event>
 
 </FTL>

@@ -205,6 +205,64 @@
     <aug name="AA_PARTICLE_SHIELD" />
 </shipBlueprint>
 
+<!-- // PROVISION // -->
+
+<blueprintList name="AA_LIST_SHIPS_PROVISION_ALL"> <!-- PLACEHOLDER DATA -->
+	<name>MU_FED_SCOUT</name>
+	<name>MU_FED_OUTRIDER</name>
+	<name>MU_FED_FIGHTER</name>
+	<name>MU_FED_STRIKE_FIGHTER</name>
+	<name>MU_FED_TACTICAL_FIGHTER</name>
+	<name>MU_FED_RIGGER</name>
+	<name>MU_FED_ENFORCER</name>
+	<name>MU_FED_BOMBER</name>
+	<name>MU_FED_CORVETTE</name>
+	<name>MU_FED_ASSAULT</name>
+	<name>MU_FED_LIGHT_CRUISER</name>
+	<name>MU_FED_BATTLESHIP</name>
+	<name>MU_FED_PICKET</name>
+	<name>MU_FED_DESTROYER</name>
+	<name>MU_FED_TRANSPORT</name>
+	<name>MU_FED_ESCORT</name>
+	<name>MU_FED_GUARD</name>
+</blueprintList>
+<blueprintList name="AA_LIST_SHIPS_PROVISION_GENERIC">
+	<name>MU_FED_SCOUT</name>
+	<name>MU_FED_OUTRIDER</name>
+	<name>MU_FED_FIGHTER</name>
+	<name>MU_FED_RIGGER</name>
+	<name>MU_FED_ENFORCER</name>
+	<name>MU_FED_BOMBER</name>
+	<name>MU_FED_CORVETTE</name>
+	<name>MU_FED_ASSAULT</name>
+	<name>MU_FED_LIGHT_CRUISER</name>
+	<name>MU_FED_DESTROYER</name>
+	<name>MU_FED_TRANSPORT</name>
+</blueprintList>
+<blueprintList name="AA_LIST_SHIPS_PROVISION_FIGHT">
+	<name>MU_FED_SCOUT</name>
+	<name>MU_FED_OUTRIDER</name>
+	<name>MU_FED_FIGHTER</name>
+	<name>MU_FED_STRIKE_FIGHTER</name>
+	<name>MU_FED_TACTICAL_FIGHTER</name>
+	<name>MU_FED_RIGGER</name>
+	<name>MU_FED_ENFORCER</name>
+	<name>MU_FED_BOMBER</name>
+	<name>MU_FED_CORVETTE</name>
+	<name>MU_FED_ASSAULT</name>
+	<name>MU_FED_LIGHT_CRUISER</name>
+	<name>MU_FED_BATTLESHIP</name>
+	<name>MU_FED_PICKET</name>
+	<name>MU_FED_DESTROYER</name>
+</blueprintList>
+<blueprintList name="AA_LIST_SHIPS_PROVISION_BIG">
+	<name>MU_FED_ASSAULT</name>
+	<name>MU_FED_LIGHT_CRUISER</name>
+	<name>MU_FED_BATTLESHIP</name>
+	<name>MU_FED_PICKET</name>
+	<name>MU_FED_DESTROYER</name>
+</blueprintList>
+
 <!-- // BOSSES // -->
 
 <!-- / REBEL CRUISER / -->
@@ -594,8 +652,6 @@
 
 
 
-
-
 <!-- // SUPERBOSS // -->
 
 <shipBlueprint name="AA_SUPERBOSS_INTEGRAL" layout="aa_superboss_integral" img="aa_superboss_integral">
@@ -607,34 +663,33 @@
 		<artillery power="3" max="3" room="1" start="true" weapon="AA_ARTILLERY_INTEGRAL_LOGARITHM" />
 		<cloaking power="3" max="3" room="20" start="true" />
 		<doors power="3" max="3" room="19" start="true" />
-		<drones power="14" max="14" room="6" start="true" />
+		<drones power="8" max="8" room="6" start="true" />
 		<engines power="2" max="2" room="17" start="true" />
 		<hacking power="3" max="3" room="12" start="true" />
 		<mind power="3" max="3" room="7" start="true" />
 		<pilot power="3" max="3" room="18" start="true" />
 		<shields power="4" max="4" room="10" start="true" />
 		<temporal power="3" max="3" room="13" start="true" />
-		<weapons power="17" max="17" room="11" start="true" />
+		<weapons power="14" max="14" room="11" start="true" />
 	</systemList>
 	<weaponSlots>6</weaponSlots>
 	<droneSlots>5</droneSlots>
 	<weaponList missiles="30" count="6">
-		<weapon name="LOOT_MATH_3" />
-		<weapon name="AA_SHOTGUN_PARTICLE" />
-		<weapon name="FOCUS_CHAIN" />
-		<weapon name="AA_BEAM_ION_ADAPT" />
-		<weapon name="ENERGY_3" />
 		<weapon name="AA_ENERGY_RAD" />
+		<weapon name="AA_ENERGY_RAD" />
+		<weapon name="AA_SHOTGUN_PARTICLE" />
+		<weapon name="AA_SHOTGUN_PARTICLE" />
+		<weapon name="AA_BEAM_ION_STUN" />
+		<weapon name="AA_BEAM_ENERGY" />
 	</weaponList>
-	<droneList drones="25" count="5">
-		<drone name="COMBAT_2_BEAM" />
-		<drone name="BATTLETOG2_BOARDER" />
+	<droneList drones="25" count="4">
+		<drone name="ASSAULT_PARTICLE" />
+		<drone name="RECON_BOARDER" />
 		<drone name="BOARDER_ION" />
 		<drone name="BOARDER_ION" />
-		<drone name="DEFENSE_1" />
 	</droneList>
 	<health amount="40" />
-	<maxPower amount="62" />
+	<maxPower amount="51" />
 	<boardingAI>invasion</boardingAI>
 	<aug name="AA_INTEGRAL_PARTICLE_SHIELD" />
 	<aug name="NO_GHOST" />
