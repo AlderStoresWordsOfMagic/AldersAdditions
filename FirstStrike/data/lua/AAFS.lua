@@ -41,7 +41,7 @@ function mods.alder.vter(cvec)
 end
 local vter = mods.alder.vter
 
--- [It keeps things from exploding. I don't know what it does, but it keeps this machine cooled.]
+-- [It keeps things from exploding. It creates an empty table for some things, but... I dunno what things lack and need a table.]
 
 function mods.alder.userdata_table(userdata, tableName)
   if not userdata.table[tableName] then userdata.table[tableName] = {} end
