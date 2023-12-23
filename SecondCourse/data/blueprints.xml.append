@@ -450,7 +450,7 @@
 
 <augBlueprint name="AA_LAB_DUSTWORM_INSTALLED">
 	<title>Lab Installed: Dustworm</title>
-	<desc>If you are seeing this installed outside of the Crew Laboratory, please contact the mod developer.</desc>
+	<desc>If you see this augment installed outside of the Crew Laboratory, please contact the mod developer.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>true</stackable>
@@ -459,16 +459,16 @@
 	<title>[IL] Instinctive Feet</title>
 	<desc>Dustworms move at 1.0x speed, but become uncontrollable when afraid.
 
-	[IL] - This augment is the internal lab upgrade. If you are seeing this installed outside of the Crew Laboratory, please contact the mod developer.</desc>
+	[IL] - This augment is the internal lab upgrade. If you are seeing this augment installed outside of the Crew Laboratory, please contact the mod developer.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>true</stackable>
 </augBlueprint>
 <augBlueprint name="AA_LAB_DUSTWORM_GUN">
 	<title>[IL] Tool Recalibration</title>
-	<desc>Dustworms gain 0.8x shooting damage and 0.5x sabotage speed, but they deal 1.5x damage to doors.
+	<desc>Dustworms gain 0.8x shooting damage and 0.5x sabotage speed, but they deal only 1.5x damage to doors.
 
-	[IL] - This augment is the internal lab upgrade. If you are seeing this installed outside of the Crew Laboratory, please contact the mod developer.</desc>
+	[IL] - This augment is the internal lab upgrade. If you are seeing this augment installed outside of the Crew Laboratory, please contact the mod developer.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>true</stackable>
@@ -477,7 +477,7 @@
 	<title>[IL] Amnestic Strands</title>
 	<desc>Dustworm silk gains the ability to disable repairing systems and using abilities, but loses its ability to prevent sabotage.
 
-	[IL] - This augment is the internal lab upgrade. If you are seeing this installed outside of the Crew Laboratory, please contact the mod developer.</desc>
+	[IL] - This augment is the internal lab upgrade. If you are seeing this augment installed outside of the Crew Laboratory, please contact the mod developer.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>true</stackable>
@@ -491,14 +491,14 @@
 	<desc>A stalwart human who signed up for a defensive brand of military training. Their unique equipment and armor configuration assists them in defending other crew.
 
 	Inherited Human stat: minor hazard resistance.</desc>
-	<title>Maelstrom PMC</title>
+	<title>Maelstrom Contractor</title>
 	<short>PMC</short>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<powerList>
 		<power>1.5x shooting speed</power>
 		<power>Takes 0.75x damage from ranged attacks and 0.5x damage from ship weaponry</power>
-		<power>While in the same room as another crew, all damage dealt by ship weapons is redirected to the PMC</power>
+		<power>While in the same room as another crew, all damage dealt by ship weapons is redirected to the Contractor</power>
 		<power>Moves at 0.7x speed</power>
 	</powerList>
 </crewBlueprint>
@@ -513,8 +513,8 @@
 	<rarity>0</rarity>
 	<powerList>
 		<power>90 HP; cannot fight or sabotage, and will run from fights when not controlled by the player</power>
-		<power>Takes 3x damage from ship weapons, moves at 0.6x speed</power>
-		<power>Repairs systems at 1.4x speed, breaks doors at 3x speed</power>
+		<power>Takes 2x damage from ship weapons and instant damage, moves at 0.7x speed</power>
+		<power>Repairs systems at 1.4x speed, can shoot doors for tripled damage</power>
 		<power>Active Ability: Restrains foes in the room with silk, slowing their movement and sabotage speed to a crawl</power>
 	</powerList>
 	<colorList>

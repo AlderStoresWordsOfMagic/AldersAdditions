@@ -1093,7 +1093,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<damage>0</damage>
 	<stun>5</stun>
 	<stunChance>3</stunChance>
-	<speed>32</speed>
+	<speed>36</speed>
 	<cooldown>14</cooldown>
 	<color>
 		<r>21</r>
@@ -1105,6 +1105,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<bp>5</bp>
 	<rarity>4</rarity>
 	<image>beam_contact</image>
+	<explosion>explosion_smash</explosion>
 	<length>40</length>
 	<launchSounds>
 		<sound>smash_beam</sound>
@@ -2412,7 +2413,8 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 			<droneTarget>CREW</droneTarget>
 			<duration>20</duration>
 			<roomAnim renderLayer="1">
-				<anim animType="tile" animBorder="0">tile_acid</anim>
+				<anim animType="default" animBorder="0">tile_acid</anim>
+				<tileAnim>tile_acid</tileAnim>
 			</roomAnim>
 		</statBoost>
 	</roomStatBoosts>
@@ -2423,7 +2425,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<speed>60</speed>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="1" fake="false">acid_projectile</projectile>
+		<projectile count="1" fake="false">acid_launcher_projectile</projectile>
 	</projectiles>
 	<image>laser_stun</image>
 	<launchSounds>
@@ -2942,6 +2944,18 @@ If another energy shield is present, it refills that shield as well but takes an
 		<r>255</r>
 		<g>255</g>
 		<b>225</b>
+	</mod-overwrite:color>
+	<mod-overwrite:launchSounds>
+		<sound>beam_eldritch</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="TRC_EPISTLE">
+	<mod-overwrite:image>impact_vision_black</mod-overwrite:image>
+	<mod-overwrite:color>
+		<r>255</r>
+		<g>255</g>
+		<b>255</b>
 	</mod-overwrite:color>
 	<mod-overwrite:launchSounds>
 		<sound>beam_eldritch</sound>

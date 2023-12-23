@@ -33,6 +33,7 @@
 <explosion_giant volume="7">weapons/explosions/explosion_giant.ogg</explosion_giant>
 
 <beam_eldritch volume="4">weapons/beams/beam_eldritch.ogg</beam_eldritch>
+<launch_eldritch volume="4">weapons/ballistics/launch_eldritch.ogg</launch_eldritch>
 
 <!-- /// SHIP /// -->
 

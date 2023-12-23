@@ -58,77 +58,77 @@
 	<time>1.0</time>
 </anim>
 
-<animSheet name="electron_projectile" w="280" h="35" fw="35" fh="35">effects/electron_projectile.png</animSheet>
+<animSheet name="electron_projectile" w="280" h="35" fw="35" fh="35">effects/explosion/electron_projectile.png</animSheet>
 <anim name="electron_projectile">
 	<sheet>electron_projectile</sheet>
 	<desc length="8" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
-<animSheet name="explosion_electron" w="288" h="32" fw="32" fh="32">effects/explosion_electron.png</animSheet>
+<animSheet name="explosion_electron" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_electron.png</animSheet>
 <anim name="explosion_electron">
 	<sheet>explosion_electron</sheet>
-	<desc length="9" x="0" y="0"/>
+	<desc length="10" x="0" y="0"/>
 	<time>0.5</time>
 </anim>
 
-<animSheet name="explosion_smash" w="640" h="64" fw="64" fh="64">effects/explosion_smash.png</animSheet>
+<animSheet name="explosion_smash" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_smash.png</animSheet>
 <anim name="explosion_smash">
 	<sheet>explosion_smash</sheet>
 	<desc length="9" x="0" y="0"/>
 	<time>0.375</time>
 </anim>
 
-<animSheet name="explosion_purge" w="640" h="64" fw="64" fh="64">effects/explosion_purge.png</animSheet>
+<animSheet name="explosion_purge" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_purge.png</animSheet>
 <anim name="explosion_purge">
 	<sheet>explosion_purge</sheet>
 	<desc length="10" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
-<animSheet name="explosion_particle" w="640" h="64" fw="64" fh="64">effects/explosion_particle.png</animSheet>
+<animSheet name="explosion_particle" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_particle.png</animSheet>
 <anim name="explosion_particle">
 	<sheet>explosion_particle</sheet>
 	<desc length="10" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
-<animSheet name="explosion_stun" w="640" h="64" fw="64" fh="64">effects/explosion_stun.png</animSheet>
+<animSheet name="explosion_stun" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_stun.png</animSheet>
 <anim name="explosion_stun">
 	<sheet>explosion_stun</sheet>
 	<desc length="10" x="0" y="0"/>
-	<time>0.5</time>
+	<time>0.75</time>
 </anim>
 
-<animSheet name="explosion_erosion" w="576" h="64" fw="64" fh="64">effects/explosion_erosion.png</animSheet>
+<animSheet name="explosion_erosion" w="576" h="64" fw="64" fh="64">effects/explosion/explosion_erosion.png</animSheet>
 <anim name="explosion_erosion">
 	<sheet>explosion_erosion</sheet>
 	<desc length="9" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
-<animSheet name="explosion_massive" w="1664" h="128" fw="128" fh="128">effects/explosion_massive.png</animSheet>
+<animSheet name="explosion_massive" w="1664" h="128" fw="128" fh="128">effects/explosion/explosion_massive.png</animSheet>
 <anim name="explosion_massive">
 	<sheet>explosion_massive</sheet>
 	<desc length="13" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
-<animSheet name="explosion_massive_ion" w="1792" h="128" fw="128" fh="128">effects/explosion_massive_ion.png</animSheet>
+<animSheet name="explosion_massive_ion" w="1792" h="128" fw="128" fh="128">effects/explosion/explosion_massive_ion.png</animSheet>
 <anim name="explosion_massive_ion">
 	<sheet>explosion_massive_ion</sheet>
 	<desc length="14" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
-<animSheet name="impact_disruptor" w="48" h="48" fw="48" fh="48">effects/impact_disruptor.png</animSheet>
+<animSheet name="impact_disruptor" w="48" h="48" fw="48" fh="48">effects/impact/impact_disruptor.png</animSheet>
 <anim name="impact_disruptor">
 	<sheet>impact_disruptor</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
-<animSheet name="impact_flare" w="48" h="48" fw="48" fh="48">effects/impact_flare.png</animSheet>
+<animSheet name="impact_flare" w="48" h="48" fw="48" fh="48">effects/impact/impact_flare.png</animSheet>
 <anim name="impact_flare">
 	<sheet>impact_flare</sheet>
 	<desc length="1" x="0" y="0"/>
@@ -142,31 +142,31 @@
 	<time>1.0</time>
 </anim>
 
-<animSheet name="center_pointer" w="480" h="40" fw="40" fh="40">effects/center_pointer.png</animSheet>
+<animSheet name="center_pointer" w="480" h="40" fw="40" fh="40">effects/center/center_pointer.png</animSheet>
 <anim name="center_pointer">
 	<sheet>center_pointer</sheet>
 	<desc length="12" x="0" y="0"/>
 	<time>2</time>
 </anim>
 
-<animSheet name="tile_repairblock" w="385" h="35" fw="35" fh="35">effects/tile_repairblock.png</animSheet>
+<animSheet name="tile_repairblock" w="350" h="35" fw="35" fh="35">effects/tile/tile_repairblock.png</animSheet>
 <anim name="tile_repairblock">
 	<sheet>tile_repairblock</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1</time>
+	<desc length="10" x="0" y="0"/>
+	<time>1.5</time>
 </anim>
 
-<animSheet name="tile_acid" w="35" h="35" fw="35" fh="35">effects/tile_acid.png</animSheet>
+<animSheet name="tile_acid" w="35" h="35" fw="35" fh="35">effects/tile/tile_acid.png</animSheet>
 <anim name="tile_acid">
 	<sheet>tile_acid</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
-<animSheet name="tile_erosion" w="140" h="35" fw="35" fh="35">effects/tile_erosion.png</animSheet>
+<animSheet name="tile_erosion" w="350" h="35" fw="35" fh="35">effects/tile/tile_erosion.png</animSheet>
 <anim name="tile_erosion">
 	<sheet>tile_erosion</sheet>
-	<desc length="4" x="0" y="0"/>
+	<desc length="10" x="0" y="0"/>
 	<time>1</time>
 </anim>
 
@@ -934,16 +934,23 @@
 	<time>1.0</time>
 </anim>
 
-<animSheet name="explosion_vision" w="576" h="64" fw="64" fh="64">effects/explosion_vision.png</animSheet>
+<animSheet name="explosion_vision" w="576" h="64" fw="64" fh="64">effects/explosion/explosion_vision.png</animSheet>
 <anim name="explosion_vision">
 	<sheet>explosion_vision</sheet>
 	<desc length="9" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
 
-<animSheet name="impact_vision" w="48" h="48" fw="48" fh="48">effects/impact_vision.png</animSheet>
+<animSheet name="impact_vision" w="48" h="48" fw="48" fh="48">effects/impact/impact_vision.png</animSheet>
 <anim name="impact_vision">
 	<sheet>impact_vision</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<animSheet name="impact_vision_black" w="48" h="48" fw="48" fh="48">effects/impact/impact_vision_black.png</animSheet>
+<anim name="impact_vision_black">
+	<sheet>impact_vision_black</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>0.75</time>
 </anim>

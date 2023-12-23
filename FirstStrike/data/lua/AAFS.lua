@@ -318,11 +318,10 @@ end)
   
 
 
-
-
 -- [Particle Shield - An energy shield that regenerates some time after taking damage.]
 
 mods.alder.particleShields = {}
+
 local particleShields = mods.alder.particleShields
 particleShields["AA_PARTICLE_SHIELD"] = {
     max = 1,

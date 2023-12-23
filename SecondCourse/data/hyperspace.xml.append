@@ -643,18 +643,93 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 
 <crew>
 
+<!-- // HUMANS // -->
+
+<race name="aa_human_pmc"> <!-- PLACEHOLDER -->
+	<rangedDamageMultiplier>0.75</rangedDamageMultiplier>
+	<allDamageTakenMultiplier>2</allDamageTakenMultiplier>
+	<damageTakenMultiplier>0.5</damageTakenMultiplier>
+	<fireDamageMultiplier>0.25</fireDamageMultiplier>
+	<suffocationModifier>0</suffocationModifier>
+	<shootTimer min="500" max="500"/>
+	<doorDamageMultiplier>0.25</doorDamageMultiplier>
+	<animBase>human</animBase>
+	<shootingSounds>
+		<shootingSound>detectiveShoot1</shootingSound>
+		<shootingSound>detectiveShoot2</shootingSound>
+		<shootingSound>detectiveShoot3</shootingSound>
+	</shootingSounds>
+	<deathSounds>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>death1</deathSound>
+		<deathSound>death2</deathSound>
+		<deathSound>humanDeathSpecial</deathSound>
+	</deathSounds>
+	<skills>
+		<piloting req="10"/>
+		<engines req="10"/>
+		<shields req="43"/>
+		<weapons req="50"/>
+		<repair req="12"/>
+		<combat req="4"/>
+	</skills>
+</race>
+
 <!-- // DUSTWORMS // -->
 
 <race name="aa_dustworm">
 	<canFight>false</canFight>
-	<canSabotage>false</canSabotage>
+	<canSabotage>true</canSabotage>
 	<maxHealth>90</maxHealth>
 	<animBase>mantis</animBase>
-	<allDamageTakenMultiplier>3</allDamageTakenMultiplier>
-	<damageTakenMultiplier>0.333</damageTakenMultiplier>
-	<fireDamageMultiplier>0.333</fireDamageMultiplier>
-	<suffocationModifier>0.333</suffocationModifier>
-	<moveSpeedMultiplier>0.6</moveSpeedMultiplier>
+	<allDamageTakenMultiplier>2</allDamageTakenMultiplier>
+	<damageTakenMultiplier>0.5</damageTakenMultiplier>
+	<fireDamageMultiplier>0.5</fireDamageMultiplier>
+	<suffocationModifier>0.5</suffocationModifier>
+	<moveSpeedMultiplier>0.7</moveSpeedMultiplier>
 	<repairSpeedMultiplier>1.4</repairSpeedMultiplier>
 	<doorDamageMultiplier>3</doorDamageMultiplier>
 	<deathSounds>
@@ -725,12 +800,12 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 	<canSabotage>false</canSabotage>
 	<maxHealth>90</maxHealth>
 	<animBase>mantis</animBase>
-	<allDamageTakenMultiplier>3</allDamageTakenMultiplier>
-	<damageTakenMultiplier>0.333</damageTakenMultiplier>
-	<fireDamageMultiplier>0.333</fireDamageMultiplier>
-	<suffocationModifier>0.333</suffocationModifier>
-	<moveSpeedMultiplier>0.6</moveSpeedMultiplier>
-	<repairSpeedMultiplier>1.4</repairSpeedMultiplier>
+	<allDamageTakenMultiplier>2</allDamageTakenMultiplier>
+	<damageTakenMultiplier>0.5</damageTakenMultiplier>
+	<fireDamageMultiplier>0.5</fireDamageMultiplier>
+	<suffocationModifier>0.5</suffocationModifier>
+	<moveSpeedMultiplier>0.7</moveSpeedMultiplier>
+	<repairSpeedMultiplier>1.8</repairSpeedMultiplier>
 	<doorDamageMultiplier>3</doorDamageMultiplier>
 	<deathSounds>
 		<deathSound>femaleDeath1</deathSound>
@@ -793,6 +868,13 @@ Sally's specialty is mathematics, and she will periodically ask you difficult ma
 			</statBoost>
 		</statBoosts>
 	</powerEffect>
+</race>
+
+<race name="aa_dustworm_agent"> <!-- PLACEHOLDER -->
+	<detectsLifeforms>true</detectsLifeforms>
+	<isTelepathic>true</isTelepathic>
+	<resistsMindControl>true</resistsMindControl>
+	<animBase>slug</animBase>
 </race>
 
 <!-- // UNIQUES // -->
