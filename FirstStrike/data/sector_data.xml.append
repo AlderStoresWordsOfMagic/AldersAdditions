@@ -16,13 +16,7 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ENGI">
-	<mod:findLike type="rarityList">
-		<mod-append:blueprint name="AA_POINTER" rarity="4" />
-	</mod:findLike>
-</mod:findName>
-
-<mod:findName type="sectorDescription" name="SECTOR_SHELL">
+<mod:findName type="sectorDescription" name="SECTOR_GENIOCRACY">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="5" />
@@ -30,7 +24,7 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_SHELL_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_GENIOCRACY_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="4" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="4" />
@@ -38,7 +32,7 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_SLUG_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_KLEPTOCRACY_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="5" />
@@ -52,7 +46,7 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ZOLTAN">
+<mod:findName type="sectorDescription" name="SECTOR_MINISTRY">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BEAM_ION_1" rarity="4" />
 		<mod-append:blueprint name="AA_BEAM_ION_2" rarity="5" />
@@ -63,7 +57,7 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ZOLTAN_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_MINISTRY_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BEAM_ION_1" rarity="4" />
 		<mod-append:blueprint name="AA_BEAM_ION_2" rarity="5" />
@@ -77,7 +71,7 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ENGI">
+<mod:findName type="sectorDescription" name="SECTOR_HARMONY">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_REPAIR" rarity="5" />
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="4" />
@@ -87,7 +81,7 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ENGI_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_HARMONY_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_REPAIR" rarity="4" />
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="4" />
@@ -98,25 +92,31 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_CRYSTAL">
+<mod:findName type="sectorDescription" name="SECTOR_IMPERIAL">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_CRYSTAL_UNIQUE">
+<mod:findName type="sectorDescription" name="SECTOR_IMPERIAL_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="4" />
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_ABANDONED">
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="sectorDescription" name="SECTOR_LANIUS">
+<mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC_HEKTAR">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_LANIUS_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="4" />
 	</mod:findLike>
@@ -156,7 +156,7 @@
 		<mod-append:blueprint name="AA_BEAM_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_3" rarity="0" />
-		<mod-append:blueprint name="AA_BEAM_ION_RAD" rarity="0" />
+		<mod-append:blueprint name="AA_BEAM_ION_BIO" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_STUN" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_ADAPT" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_CONSERVATIVE" rarity="0" />
@@ -180,7 +180,6 @@
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_DRIVER" rarity="0" />
 		<mod-append:blueprint name="AA_DRIVER_BURST" rarity="0" />
-		<mod-append:blueprint name="AA_ROCKETS_1" rarity="0" />
 		<mod-append:blueprint name="AA_POINTER" rarity="0" />
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />
@@ -211,7 +210,7 @@
 		<mod-append:blueprint name="AA_BEAM_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_3" rarity="0" />
-		<mod-append:blueprint name="AA_BEAM_ION_RAD" rarity="0" />
+		<mod-append:blueprint name="AA_BEAM_ION_BIO" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_STUN" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_ADAPT" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_CONSERVATIVE" rarity="0" />
@@ -235,7 +234,6 @@
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_DRIVER" rarity="0" />
 		<mod-append:blueprint name="AA_DRIVER_BURST" rarity="0" />
-		<mod-append:blueprint name="AA_ROCKETS_1" rarity="0" />
 		<mod-append:blueprint name="AA_POINTER" rarity="0" />
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />

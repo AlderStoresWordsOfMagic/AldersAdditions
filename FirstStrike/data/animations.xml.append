@@ -408,110 +408,109 @@
 	<chargeImage>weapons/beam/beam_purge_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_1" w="288" h="33" fw="24" fh="33">weapons/beam/beam_ion_1.png</animSheet>
+<animSheet name="disruptor_1" w="252" h="40" fw="21" fh="40">weapons/disruptor/disruptor_1.png</animSheet>
 <weaponAnim name="disruptor_1">
 	<sheet>disruptor_1</sheet>
 	<desc length="12" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="13"/>
-	<mountPoint x="5" y="24"/>
-	<chargeImage>weapons/beam/beam_ion_1_glow.png</chargeImage>
+	<firePoint x="11" y="10"/>
+	<mountPoint x="2" y="27"/>
+	<chargeImage>weapons/disruptor/disruptor_1_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_2" w="480" h="41" fw="30" fh="41">weapons/beam/beam_ion_2.png</animSheet>
+<animSheet name="disruptor_2" w="459" h="62" fw="27" fh="62">weapons/disruptor/disruptor_2.png</animSheet>
 <weaponAnim name="disruptor_2">
 	<sheet>disruptor_2</sheet>
-	<desc length="16" x="0" y="0"/>
+	<desc length="17" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="13"/>
-	<mountPoint x="5" y="28"/>
-	<chargeImage>weapons/beam/beam_ion_2_glow.png</chargeImage>
+	<firePoint x="15" y="14"/>
+	<mountPoint x="3" y="45"/>
+	<chargeImage>weapons/disruptor/disruptor_2_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_3" w="627" h="60" fw="33" fh="60">weapons/beam/beam_ion_3.png</animSheet>
+<animSheet name="disruptor_3" w="714" h="80" fw="34" fh="80">weapons/disruptor/disruptor_3.png</animSheet>
 <weaponAnim name="disruptor_3">
 	<sheet>disruptor_3</sheet>
-	<desc length="19" x="0" y="0"/>
+	<desc length="21" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="19" y="21"/>
-	<mountPoint x="5" y="41"/>
-	<chargeImage>weapons/beam/beam_ion_3_glow.png</chargeImage>
+	<firePoint x="18" y="19"/>
+	<mountPoint x="5" y="61"/>
+	<chargeImage>weapons/disruptor/disruptor_3_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_rad" w="704" h="56" fw="32" fh="56">weapons/beam/beam_ion_rad.png</animSheet>
-<weaponAnim name="disruptor_rad">
-	<sheet>disruptor_rad</sheet>
+<animSheet name="disruptor_bio" w="638" h="64" fw="29" fh="64">weapons/disruptor/disruptor_bio.png</animSheet>
+<weaponAnim name="disruptor_bio">
+	<sheet>disruptor_bio</sheet>
 	<desc length="22" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="18" y="22"/>
-	<mountPoint x="3" y="33"/>
-	<chargeImage>weapons/beam/beam_ion_rad_glow.png</chargeImage>
+	<firePoint x="15" y="17"/>
+	<mountPoint x="3" y="42"/>
+	<chargeImage>weapons/disruptor/disruptor_bio_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_stun" w="510" h="51" fw="30" fh="51">weapons/beam/beam_ion_stun.png</animSheet>
+<animSheet name="disruptor_stun" w="510" h="54" fw="30" fh="54">weapons/disruptor/disruptor_stun.png</animSheet>
 <weaponAnim name="disruptor_stun">
 	<sheet>disruptor_stun</sheet>
 	<desc length="17" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="18" y="25"/>
-	<mountPoint x="5" y="28"/>
-	<chargeImage>weapons/beam/beam_ion_stun_glow.png</chargeImage>
+	<firePoint x="17" y="10"/>
+	<mountPoint x="3" y="36"/>
+	<chargeImage>weapons/disruptor/disruptor_stun_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_energy" w="540" h="41" fw="30" fh="41">weapons/beam/beam_energy.png</animSheet>
+<animSheet name="disruptor_energy" w="594" h="56" fw="27" fh="56">weapons/disruptor/disruptor_energy.png</animSheet>
 <weaponAnim name="disruptor_energy">
 	<sheet>disruptor_energy</sheet>
-	<desc length="18" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="14"/>
-	<mountPoint x="5" y="28"/>
-	<chargeImage>weapons/beam/beam_energy_glow.png</chargeImage>
-</weaponAnim>
-
-<animSheet name="disruptor_longbow_chargeglow" w="306" h="65" fw="34" fh="65">weapons/beam/beam_ion_longbow_chargeglow.png</animSheet>
-<anim name="disruptor_longbow_chargeglow">
-	<sheet>disruptor_longbow_chargeglow</sheet>
-	<desc length="9" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="disruptor_longbow" w="1122" h="65" fw="34" fh="65">weapons/beam/beam_ion_longbow.png</animSheet>
-<weaponAnim name="disruptor_longbow">
-	<sheet>disruptor_longbow</sheet>
-	<desc length="33" x="0" y="0"/>
-	<chargedFrame>16</chargedFrame>
-	<fireFrame>17</fireFrame>
-	<firePoint x="19" y="32"/>
-	<mountPoint x="5" y="49"/>
-	<chargeImage>weapons/beam/beam_ion_longbow_glow.png</chargeImage>
-	<boost>disruptor_longbow_chargeglow</boost>
-</weaponAnim>
-
-<animSheet name="disruptor_conservative" w="570" h="44" fw="30" fh="44">weapons/beam/beam_ion_cons.png</animSheet>
-<weaponAnim name="disruptor_conservative">
-	<sheet>disruptor_conservative</sheet>
-	<desc length="19" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="15" y="19"/>
-	<mountPoint x="4" y="34"/>
-	<chargeImage>weapons/beam/beam_ion_cons_glow.png</chargeImage>
-</weaponAnim>
-
-<animSheet name="disruptor_phase" w="726" h="56" fw="33" fh="56">weapons/beam/beam_ion_phase.png</animSheet>
-<weaponAnim name="disruptor_phase">
-	<sheet>disruptor_phase</sheet>
 	<desc length="22" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="24"/>
-	<mountPoint x="4" y="37"/>
-	<chargeImage>weapons/beam/beam_ion_phase_glow.png</chargeImage>
+	<firePoint x="15" y="8"/>
+	<mountPoint x="3" y="39"/>
+	<chargeImage>weapons/disruptor/disruptor_energy_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="disruptor_adaptive_chargeglow" w="390" h="79" fw="39" fh="79">weapons/disruptor/disruptor_adaptive_chargeglow.png</animSheet>
+<anim name="disruptor_adaptive_chargeglow">
+	<sheet>disruptor_adaptive_chargeglow</sheet>
+	<desc length="10" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="disruptor_adaptive" w="1482" h="79" fw="39" fh="79">weapons/disruptor/disruptor_adaptive.png</animSheet>
+<weaponAnim name="disruptor_adaptive">
+	<sheet>disruptor_adaptive</sheet>
+	<desc length="38" x="0" y="0"/>
+	<chargedFrame>19</chargedFrame>
+	<fireFrame>20</fireFrame>
+	<firePoint x="19" y="35"/>
+	<mountPoint x="5" y="55"/>
+	<boost>disruptor_adaptive_chargeglow</boost>
+</weaponAnim>
+
+<animSheet name="disruptor_conservative" w="390" h="50" fw="26" fh="50">weapons/disruptor/disruptor_conservative.png</animSheet>
+<weaponAnim name="disruptor_conservative">
+	<sheet>disruptor_conservative</sheet>
+	<desc length="15" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="14" y="14"/>
+	<mountPoint x="2" y="31"/>
+	<chargeImage>weapons/disruptor/disruptor_conservative_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="disruptor_pierce" w="540" h="63" fw="30" fh="63">weapons/disruptor/disruptor_pierce.png</animSheet>
+<weaponAnim name="disruptor_pierce">
+	<sheet>disruptor_pierce</sheet>
+	<desc length="18" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="15" y="13"/>
+	<mountPoint x="3" y="39"/>
+	<chargeImage>weapons/disruptor/disruptor_pierce_glow.png</chargeImage>
 </weaponAnim>
 
 <!-- // BOMBS // -->
@@ -735,32 +734,6 @@
 	<firePoint x="19" y="20"/>
 	<mountPoint x="4" y="43"/>
 	<chargeImage>weapons/driver/driver_burst_glow.png</chargeImage>
-</weaponAnim>
-
-<!-- // ROCKETS // -->
-
-<animSheet name="rockets_1_projectile" w="23" h="31" fw="23" fh="31">projectile/rockets_1_projectile.png</animSheet>
-<anim name="rockets_1_projectile">
-	<sheet>rockets_1_projectile</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>0.3</time>
-</anim>
-<animSheet name="rockets_1_chargeglow" w="93" h="73" fw="31" fh="73">weapons/rockets/rockets_1_chargeglow.png</animSheet>
-<anim name="rockets_1_chargeglow">
-	<sheet>rockets_1_chargeglow</sheet>
-	<desc length="3" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="rockets_1" w="713" h="73" fw="31" fh="73">weapons/rockets/rockets_1.png</animSheet>
-<weaponAnim name="rockets_1">
-	<sheet>rockets_1</sheet>
-	<desc length="23" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="19" y="32"/>
-	<mountPoint x="4" y="45"/>
-	<chargeImage>weapons/rockets/rockets_1_glow.png</chargeImage>
-	<boost>rockets_1_chargeglow</boost>
 </weaponAnim>
 
 <!-- // LOOT // -->
@@ -989,39 +962,6 @@
 <animSheet name="missile_energy" w="32" h="80" fw="32" fh="80">projectile/missile_energy.png</animSheet>
 <anim name="missile_energy">
 	<sheet>missile_energy</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1</time>
-</anim>
-
-<animSheet name="missiles_massive" w="684" h="200" fw="57" fh="200">weapons/overwrite/obsidian_missiles.png</animSheet>
-<weaponAnim name="missiles_massive">
-	<sheet>missiles_massive</sheet>
-	<desc length="12" x="0" y="0"/>
-	<chargedFrame>6</chargedFrame>
-	<fireFrame>7</fireFrame>
-	<firePoint  x="34" y="95"/>
-	<mountPoint x="14" y="152"/>
-</weaponAnim>
-<animSheet name="missile_obsidian" w="32" h="80" fw="32" fh="80">projectile/missile_obsidian.png</animSheet>
-<anim name="missile_obsidian">
-	<sheet>missile_obsidian</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1</time>
-</anim>
-
-<animSheet name="missiles_massive_chaos" w="726" h="55" fw="66" fh="55">weapons/overwrite/obsidian_missiles_chaos.png</animSheet>
-<weaponAnim name="missiles_massive_chaos">
-	<sheet>missiles_massive_chaos</sheet>
-	<desc length="11" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>5</fireFrame>
-	<firePoint  x="35" y="15"/>
-	<mountPoint x="3" y="37"/>
-	<time>0.5</time>
-</weaponAnim>
-<animSheet name="missile_obsidian_chaos" w="32" h="80" fw="32" fh="80">projectile/missile_obsidian_chaos.png</animSheet>
-<anim name="missile_obsidian_chaos">
-	<sheet>missile_obsidian_chaos</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>

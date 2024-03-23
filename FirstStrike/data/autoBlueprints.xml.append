@@ -29,7 +29,7 @@
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
@@ -83,7 +83,7 @@
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
@@ -154,7 +154,7 @@
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
@@ -244,14 +244,14 @@
         <mod-append:name>AA_ENERGY_RAD</mod-append:name>
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NODAMAGE">
         <mod-append:name>AA_LASER_PURGE</mod-append:name>
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_PARTICLE">
@@ -380,7 +380,7 @@
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
@@ -474,7 +474,7 @@
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
@@ -599,7 +599,7 @@
         <mod-append:name>AA_LASER_PURGE</mod-append:name>
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
@@ -632,7 +632,7 @@
 
 <!-- // FRIENDLY // -->
 
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_CIVILIAN">
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_UNION">
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
@@ -847,7 +847,7 @@
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
     </mod:findName>
@@ -859,7 +859,7 @@
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
     </mod:findName>
@@ -968,7 +968,7 @@
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
 
@@ -1042,7 +1042,7 @@
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
@@ -1088,7 +1088,7 @@
 
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
 
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
     
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
 
@@ -1141,7 +1141,7 @@
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
@@ -1164,7 +1164,7 @@
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
@@ -1237,7 +1237,7 @@
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
@@ -1254,7 +1254,7 @@
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
     </mod:findName>
 
@@ -1266,7 +1266,7 @@
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
@@ -1416,7 +1416,7 @@
         <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
     </mod:findName>
 
-    <mod:findName type="blueprintList" name="GIFTLIST_CIVILIAN">
+    <mod:findName type="blueprintList" name="GIFTLIST_UNION">
         <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
 
@@ -1454,7 +1454,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_DUSK">
-        <mod-append:name>AA_BEAM_ION_RAD</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_ENERGY_RAD</mod-append:name>
     </mod:findName>
@@ -1516,7 +1516,7 @@
 <blueprintList name="SHOP_ITEM_SYLVAN_DISRUPTOR_SPECIAL">
     <name>AA_BEAM_ENERGY</name>
     <name>AA_BEAM_ION_PHASE</name>
-    <name>AA_BEAM_ION_RAD</name>
+    <name>AA_BEAM_ION_BIO</name>
     <name>AA_BEAM_ION_STUN</name>
 </blueprintList>
 

@@ -1258,7 +1258,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_BEAM_ION_RAD">
+<weaponBlueprint name="AA_BEAM_ION_BIO">
 	<type>BEAM</type>
 	<tip>aa_tip_disruptor</tip>
 	<title>'Kusarigama' Rad-Disruptor</title>
@@ -1314,7 +1314,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<launchSounds>
 		<sound>disruptor_heavy</sound>
 	</launchSounds>
-	<weaponArt>disruptor_rad</weaponArt>
+	<weaponArt>disruptor_bio</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1379,7 +1379,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_phase</weaponArt>
+	<weaponArt>disruptor_pierce</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1448,7 +1448,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
     <launchSounds>
         <sound>disruptor_light</sound>
     </launchSounds>
-    <weaponArt>disruptor_longbow</weaponArt>
+    <weaponArt>disruptor_adaptive</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -2191,67 +2191,6 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	</missSounds>
 	<weaponArt>driver_burst</weaponArt>
 	<iconImage>heavyL</iconImage>
-</weaponBlueprint>
-
-<!-- // ROCKETS // -->
-
-<weaponBlueprint name="AA_ROCKETS_1">
-	<type>MISSILES</type>
-	<tip>tip_missiles_burst</tip>
-	<title>'Ullr' Rocket Rack</title>
-	<short>'Ullr'</short>
-	<desc>YOU SHOULD NEVER SEE THIS</desc>
-	<descriptionOverride>Rocket racks store up swarms of unguided rockets that grow in strength as the weapon waits, each swarm behaving as a single projectile regardless of charge.
-
-		Stats:
-		Required Power: 2
-		Charge Time: 11 seconds
-		Accuracy Bonus: +10%
-
-		Max Charges: 3
-		Cooldown Reduction: 0/50/125%
-		
-		Base Hull Damage: 1/2/3
-		Total System Damage: 1/2/3
-		Total Crew Damage: 30/45/60
-		
-		Fire Chance: 20%
-		Breach Chance: 20% (Adjusted: 16%)
-
-		Buy/Sell Price: 60~/30~
-	</descriptionOverride>
-	<tooltip>Fires a swarm of missiles that grows similarly to cumulative weapons.</tooltip>
-	<damage>1</damage>
-	<missiles>1</missiles>
-	<speed>50</speed>
-	<shots>1</shots>
-	<sp>10</sp>
-	<fireChance>2</fireChance>
-	<breachChance>2</breachChance>
-	<stunChance>3</stunChance>
-	<cooldown>11</cooldown>
-	<power>2</power>
-	<cost>60</cost>
-	<bp>7</bp>
-	<rarity>5</rarity>
-	<chargeLevels>3</chargeLevels>
-	<image>rockets_1_projectile</image>
-	<launchSounds>
-		<sound>rockets</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>smallExplosion</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>rockets_1</weaponArt>
-	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
 <!-- // INSTANT // -->
@@ -3067,30 +3006,6 @@ If another energy shield is present, it refills that shield as well but takes an
 
 <mod:findName type="weaponBlueprint" name="TRC_FLARE_LAUNCHER">
 	<mod-overwrite:spin>8000</mod-overwrite:spin>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN">
-	<mod-append:explosion>explosion_massive</mod-append:explosion>
-	<mod:findLike type="weaponArt">
-		<mod:setValue>missiles_massive</mod:setValue>
-	</mod:findLike>
-	<mod-overwrite:launchSounds>
-		<sound>missile_giant</sound>
-	</mod-overwrite:launchSounds>
-</mod:findName>
-
-<mod:findName type="weaponBlueprint" name="MISSILES_OBSIDIAN_CHAOS">
-	<mod-append:explosion>explosion_massive</mod-append:explosion>
-	<mod:findLike type="weaponArt">
-		<mod:setValue>missiles_massive_chaos</mod:setValue>
-	</mod:findLike>
-	<mod:findLike type="image">
-		<mod:setValue>missile_obsidian_chaos</mod:setValue>
-	</mod:findLike>
-	<mod-append:fireTime>2</mod-append:fireTime>
-	<mod-overwrite:launchSounds>
-		<sound>missile_giant</sound>
-	</mod-overwrite:launchSounds>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="UNSPOOLER">
