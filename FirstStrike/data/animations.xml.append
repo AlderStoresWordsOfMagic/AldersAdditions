@@ -75,8 +75,8 @@
 <animSheet name="explosion_smash" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_smash.png</animSheet>
 <anim name="explosion_smash">
 	<sheet>explosion_smash</sheet>
-	<desc length="9" x="0" y="0"/>
-	<time>0.375</time>
+	<desc length="10" x="0" y="0"/>
+	<time>0.75</time>
 </anim>
 
 <animSheet name="explosion_purge" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_purge.png</animSheet>
@@ -668,48 +668,59 @@
 
 <!-- // PINPOINTS // -->
 
-<animSheet name="focus_particle" w="960" h="74" fw="30" fh="74">weapons/focus/focus_particle.png</animSheet>
-<weaponAnim name="focus_particle">
-	<sheet>focus_particle</sheet>
+<animSheet name="pinpoint_particle" w="960" h="74" fw="30" fh="74">weapons/pinpoint/pinpoint_particle.png</animSheet>
+<weaponAnim name="pinpoint_particle">
+	<sheet>pinpoint_particle</sheet>
 	<desc length="32" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
 	<firePoint x="16" y="31"/>
 	<mountPoint x="2" y="48"/>
-	<chargeImage>weapons/focus/focus_particle_glow.png</chargeImage>
+	<chargeImage>weapons/pinpoint/pinpoint_particle_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="focus_ion_1" w="150" h="40" fw="25" fh="40">weapons/focus/focus_ion_1.png</animSheet>
-<weaponAnim name="focus_ion_1">
-	<sheet>focus_ion_1</sheet>
-	<desc length="6" x="0" y="0"/>
+<animSheet name="capacitor_1" w="81" h="79" fw="27" fh="79">weapons/capacitor/capacitor_1.png</animSheet>
+<weaponAnim name="capacitor_1">
+	<sheet>capacitor_1</sheet>
+	<desc length="3" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="13" y="22"/>
-	<mountPoint x="3" y="24"/>
-	<chargeImage>weapons/focus/focus_ion_1_glow.png</chargeImage>
+	<firePoint x="14" y="29"/>
+	<mountPoint x="2" y="58"/>
+	<chargeImage>weapons/capacitor/capacitor_1_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="focus_ion_2" w="210" h="53" fw="30" fh="53">weapons/focus/focus_ion_2.png</animSheet>
-<weaponAnim name="focus_ion_2">
-	<sheet>focus_ion_2</sheet>
+<animSheet name="capacitor_2" w="99" h="95" fw="33" fh="95">weapons/capacitor/capacitor_2.png</animSheet>
+<weaponAnim name="capacitor_2">
+	<sheet>capacitor_2</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="20" y="27"/>
+	<mountPoint x="3" y="66"/>
+	<chargeImage>weapons/capacitor/capacitor_2_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="capacitor_pierce" w="93" h="92" fw="31" fh="92">weapons/capacitor/capacitor_pierce.png</animSheet>
+<weaponAnim name="capacitor_pierce">
+	<sheet>capacitor_pierce</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="16" y="31"/>
+	<mountPoint x="3" y="67"/>
+	<chargeImage>weapons/capacitor/capacitor_pierce_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="shock_cannon" w="273" h="95" fw="39" fh="95">weapons/pinpoint/shock_cannon.png</animSheet>
+<weaponAnim name="shock_cannon">
+	<sheet>shock_cannon</sheet>
 	<desc length="7" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="32"/>
-	<mountPoint x="3" y="35"/>
-	<chargeImage>weapons/focus/focus_ion_2_glow.png</chargeImage>
-</weaponAnim>
-
-<animSheet name="focus_phase" w="150" h="50" fw="25" fh="50">weapons/focus/focus_ion_phase.png</animSheet>
-<weaponAnim name="focus_phase">
-	<sheet>focus_phase</sheet>
-	<desc length="6" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="13" y="25"/>
-	<mountPoint x="3" y="36"/>
-	<chargeImage>weapons/focus/focus_ion_phase_glow.png</chargeImage>
+	<fireFrame>3</fireFrame>
+	<firePoint x="21" y="15"/>
+	<mountPoint x="4" y="59"/>
+	<chargeImage>weapons/pinpoint/shock_cannon_glow.png</chargeImage>
 </weaponAnim>
 
 <!-- // DRIVERS // -->
@@ -816,96 +827,9 @@
 	<mountPoint x="3" y="30"/>
 </weaponAnim>
 
-<!-- // TEST // -->
-
-<animSheet name="test_gun_charge" w="145" h="62" fw="29" fh="62">weapons/misc/test_chainglow.png</animSheet>
-<anim name="test_gun_charge">
-	<sheet>test_gun_charge</sheet>
-	<desc length="5" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="test_gun" w="203" h="62" fw="29" fh="62">weapons/misc/test_projectile.png</animSheet>
-<weaponAnim name="test_gun">
-	<sheet>test_gun</sheet>
-	<desc length="7" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>4</fireFrame>
-	<firePoint  x="17" y="12"/>
-	<mountPoint x="4" y="46"/>
-	<chargeImage>weapons/misc/test_glow.png</chargeImage>
-	<boost>test_gun_charge</boost>
-</weaponAnim>
-<animSheet name="test_beam" w="522" h="62" fw="29" fh="62">weapons/misc/test_beam.png</animSheet>
-<weaponAnim name="test_beam">
-	<sheet>test_beam</sheet>
-	<desc length="18" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint  x="17" y="12"/>
-	<mountPoint x="4" y="46"/>
-	<chargeImage>weapons/misc/test_glow.png</chargeImage>
-	<boost>test_gun_charge</boost>
-</weaponAnim>
-
 <!-- /// OVERRIDEN ANIMATIONS /// -->
 
 <!-- // EFFECTS // -->
-
-<animSheet name="bio_poison" w="352" h="32" fw="32" fh="32">people/status_poison.png</animSheet>
-<anim name="bio_poison">
-	<sheet>bio_poison</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
-<animSheet name="engineer_buff" w="352" h="32" fw="32" fh="32">people/status_engineer_buff.png</animSheet>
-<anim name="engineer_buff">
-	<sheet>engineer_buff</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
-<animSheet name="medic_buff" w="352" h="32" fw="32" fh="32">people/status_medic_buff.png</animSheet>
-<anim name="medic_buff">
-	<sheet>medic_buff</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
-<animSheet name="unique_irwin_debuff" w="352" h="32" fw="32" fh="32">people/status_tranquilizer.png</animSheet>
-<anim name="unique_irwin_debuff">
-	<sheet>unique_irwin_debuff</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
-<animSheet name="salt_particles" w="352" h="32" fw="32" fh="32">people/status_salt.png</animSheet>
-<anim name="salt_particles">
-	<sheet>salt_particles</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
-<animSheet name="big_suck" w="352" h="32" fw="32" fh="32">people/status_suck.png</animSheet>
-<anim name="big_suck">
-	<sheet>big_suck</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
-<animSheet name="ultraburn_debuff" w="352" h="32" fw="32" fh="32">people/status_trc_flammable.png</animSheet>
-<anim name="ultraburn_debuff">
-	<sheet>ultraburn_debuff</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
-<animSheet name="gasoline_debuff" w="352" h="32" fw="32" fh="32">people/status_trc_gasoline.png</animSheet>
-<anim name="gasoline_debuff">
-	<sheet>gasoline_debuff</sheet>
-	<desc length="11" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
 
 <animSheet name="explosion_vision" w="576" h="64" fw="64" fh="64">effects/explosion/explosion_vision.png</animSheet>
 <anim name="explosion_vision">
@@ -1049,7 +973,7 @@
 	<time>1</time>
 </anim>
 
-<animSheet name="mine_projectile_stun" w="40" h="40" fw="40" fh="40">projectile/mine_ion.png</animSheet>
+<animSheet name="mine_projectile_stun" w="40" h="40" fw="40" fh="40">projectile/mine_stun.png</animSheet>
 <anim name="mine_stun">
 	<sheet>mine_projectile_stun</sheet>
 	<desc length="1" x="0" y="0"/>
