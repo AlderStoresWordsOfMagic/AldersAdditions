@@ -185,25 +185,25 @@
 	<chargeImage>weapons/laser/laser_purge_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="laser_smash" w="200" h="59" fw="25" fh="59">weapons/laser/laser_smash.png</animSheet>
+<animSheet name="laser_smash" w="150" h="60" fw="25" fh="60">weapons/laser/laser_smash.png</animSheet>
 <weaponAnim name="laser_smash">
 	<sheet>laser_smash</sheet>
-	<desc length="8" x="0" y="0"/>
+	<desc length="6" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>3</fireFrame>
-	<firePoint  x="15" y="13"/>
-	<mountPoint x="3" y="37"/>
+	<firePoint  x="15" y="16"/>
+	<mountPoint x="3" y="35"/>
 	<chargeImage>weapons/laser/laser_smash_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="laser_smash_2" w="296" h="74" fw="37" fh="74">weapons/laser/laser_smash_2.png</animSheet>
+<animSheet name="laser_smash_2" w="248" h="72" fw="31" fh="72">weapons/laser/laser_smash_2.png</animSheet>
 <weaponAnim name="laser_smash_2">
 	<sheet>laser_smash_2</sheet>
 	<desc length="8" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>3</fireFrame>
-	<firePoint  x="23" y="20"/>
-	<mountPoint x="3" y="37"/>
+	<firePoint  x="19" y="26"/>
+	<mountPoint x="3" y="35"/>
 	<chargeImage>weapons/laser/laser_smash_2_glow.png</chargeImage>
 </weaponAnim>
 
@@ -300,14 +300,14 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
-<animSheet name="missiles_smash" w="2117" h="47" fw="29" fh="47">weapons/missile/missiles_smash.png</animSheet>
+<animSheet name="missiles_smash" w="81" h="58" fw="27" fh="58">weapons/missile/missiles_smash.png</animSheet>
 <weaponAnim name="missiles_smash">
 	<sheet>missiles_smash</sheet>
-	<desc length="73" x="0" y="0"/>
-	<chargedFrame>70</chargedFrame>
-	<fireFrame>71</fireFrame>
-	<firePoint  x="22" y="20"/>
-	<mountPoint x="3" y="27"/>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="17" y="22"/>
+	<mountPoint x="3" y="42"/>
 	<chargeImage>weapons/missile/missiles_smash_glow.png</chargeImage>
 </weaponAnim>
 
@@ -375,25 +375,14 @@
 
 <!-- // BEAMS // -->
 
-<animSheet name="beam_sustain" w="192" h="57" fw="32" fh="57">weapons/beam/beam_sustain.png</animSheet>
-<weaponAnim name="beam_sustain">
-	<sheet>beam_sustain</sheet>
-	<desc length="6" x="0" y="0"/>
-	<chargedFrame>4</chargedFrame>
-	<fireFrame>5</fireFrame>
-	<firePoint x="18" y="2"/>
-	<mountPoint x="3" y="33"/>
-	<chargeImage>weapons/beam/beam_sustain_glow.png</chargeImage>
-</weaponAnim>
-
-<animSheet name="beam_smash" w="638" h="56" fw="29" fh="56">weapons/beam/beam_smash.png</animSheet>
+<animSheet name="beam_smash" w="812" h="58" fw="29" fh="58">weapons/beam/beam_smash.png</animSheet>
 <weaponAnim name="beam_smash">
 	<sheet>beam_smash</sheet>
-	<desc length="22" x="0" y="0"/>
+	<desc length="28" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="17" y="13"/>
-	<mountPoint x="3" y="40"/>
+	<firePoint x="17" y="10"/>
+	<mountPoint x="3" y="34"/>
 	<chargeImage>weapons/beam/beam_smash_glow.png</chargeImage>
 </weaponAnim>
 
@@ -406,6 +395,17 @@
 	<firePoint x="16" y="15"/>
 	<mountPoint x="3" y="31"/>
 	<chargeImage>weapons/beam/beam_purge_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="beam_sustain" w="192" h="57" fw="32" fh="57">weapons/beam/beam_sustain.png</animSheet>
+<weaponAnim name="beam_sustain">
+	<sheet>beam_sustain</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="18" y="2"/>
+	<mountPoint x="3" y="33"/>
+	<chargeImage>weapons/beam/beam_sustain_glow.png</chargeImage>
 </weaponAnim>
 
 <animSheet name="disruptor_1" w="252" h="40" fw="21" fh="40">weapons/disruptor/disruptor_1.png</animSheet>
@@ -515,14 +515,14 @@
 
 <!-- // BOMBS // -->
 
-<animSheet name="bomblauncher_smash" w="629" h="50" fw="37" fh="50">weapons/bomb/bomblauncher_smash.png</animSheet>
+<animSheet name="bomblauncher_smash" w="510" h="48" fw="30" fh="48">weapons/bomb/bomblauncher_smash.png</animSheet>
 <weaponAnim name="bomblauncher_smash">
 	<sheet>bomblauncher_smash</sheet>
 	<desc length="17" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
-	<fireFrame>13</fireFrame>
+	<fireFrame>14</fireFrame>
 	<firePoint x="22" y="22" />
-	<mountPoint x="2" y="29" />
+	<mountPoint x="3" y="27" />
 	<chargeImage>weapons/bomb/bomblauncher_smash_glow.png</chargeImage>
 </weaponAnim>
 <animSheet name="bomb_smash" w="525" h="35" fw="35" fh="35">weapons/bomb/bomb_smash.png</animSheet>
@@ -712,14 +712,14 @@
 	<chargeImage>weapons/capacitor/capacitor_pierce_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="shock_cannon" w="273" h="95" fw="39" fh="95">weapons/pinpoint/shock_cannon.png</animSheet>
+<animSheet name="shock_cannon" w="252" h="93" fw="36" fh="93">weapons/pinpoint/shock_cannon.png</animSheet>
 <weaponAnim name="shock_cannon">
 	<sheet>shock_cannon</sheet>
 	<desc length="7" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
-	<fireFrame>3</fireFrame>
-	<firePoint x="21" y="15"/>
-	<mountPoint x="4" y="59"/>
+	<fireFrame>4</fireFrame>
+	<firePoint x="18" y="10"/>
+	<mountPoint x="3" y="60"/>
 	<chargeImage>weapons/pinpoint/shock_cannon_glow.png</chargeImage>
 </weaponAnim>
 

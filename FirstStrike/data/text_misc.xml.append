@@ -20,10 +20,10 @@ An expansion pack that contains many unusual weapons, and which serves as a grou
 <text name="aa_tip_driver">Tip: Mass drivers function much like Laser weapons, with the added bonus of projectiles instantly reaching the target. As such, they can't be shot by defense Drones, and are easy to slip past gaps in shielding.</text>
 <text name="aa_tip_capacitor">Tip: Capacitors deal ion damage, serving a similar purpose to ion barrage weapons with increased accuracy. What Disruptors are to Beams, Capacitors are to Pinpoints.</text>
 <text name="aa_tip_bleed">Tip: Disintegrator weapons deal lots of crew damage and open up gaping wounds, causing struck crew to bleed out and slowly lose health alongside reducing their movement speed and increasing the damage they take.</text>
-<text name="aa_tip_scrambler">Tip: DNA Scramblers don't inflict any damage on their own, but prevent crew from being cloned and quarter their healing from non-instant effects.</text>
+<text name="aa_tip_scrambler">Tip: DNA Scramblers don't inflict any damage on their own, but they do quarter a crew's healing from non-instant effects.</text>
 <text name="aa_tip_smash">Tip: The name "shield smasher" speaks for itself. When one of these weapons pops the final layer of shielding on a ship, the shield will be crushed, forcing it to regenerate nonexistent layers for some time.</text>
 <text name="aa_tip_electron">Tip: Electric Inducers completely bypass all forms of defense, similar to bombs. However, they also have a +100% to hit, making them truly impossible to avoid even when wielded by the enemy.</text>
-<text name="aa_tip_particle_flak">Tip: This flak cannon's energized projectiles allow it to serve double duty as anti-shield and anti-system, making it a valuable and versatile weapon.</text>
+<text name="aa_tip_particle_flak">Tip: This flak cannon's energized projectiles allow it to serve double duty as anti-shield and anti-system, making it a versatile weapon.</text>
 <text name="aa_tip_ion_rainbow">Tip: You never know what you'll get.</text>
 <text name="aa_tip_beam_sustain">Tip: The Sovnya "pulses" every 4 seconds when locked onto a target, dealing its damage as an equivalent Beam weapon with no length or swipe speed.</text>
 <text name="aa_tip_accumulator">Tip: When left to charge, accumulating weapons gradually increase the damage of their shot. This lends them a degree of flexibility similar to charge weapons.</text>

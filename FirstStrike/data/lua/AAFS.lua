@@ -49,6 +49,11 @@ function mods.alder.userdata_table(userdata, tableName)
 end
 local userdata_table = mods.alder.userdata_table
 
+-- [A function that does nothing.]
+
+function mods.alder.doNothing()
+end
+
 -- [Some more compatibility.]
 
 local INT_MAX = 2147483647
@@ -238,13 +243,13 @@ end)
 
 
 -- [Pinpoint Shotguns - Replace burst projectile with beam.]
-mods.alder.shotgunBeams = {}
-local shotgunBeams = mods.alder.shotgunBeams
+local pinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("AA_SHOCK_CANNON_PROJECTILE")
 
-shotgunBeams.AA_SHOCK_CANNON = Hyperspace.Blueprints:GetWeaponBlueprint("AA_SHOCK_CANNON_PROJECTILE")
+local burstsToBeams = {}
+burstsToBeams.AA_SHOCK_CANNON = pinpoint1
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
-    local beamReplacement = shotgunBeams[weapon.blueprint.name]
+    local beamReplacement = burstsToBeams[weapon.blueprint.name]
     if beamReplacement then
         local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
         local beam = spaceManager:CreateBeam(
@@ -394,7 +399,7 @@ local function render_part_shield_charge(ship, width, x, y)
         Graphics.CSurface.GL_DrawRect(2 + x, 2 + y, (width - 4)*progress, 2, timer.color)
     end
 end
-script.on_render_event(Defines.RenderEvents.GUI_CONTAINER, mods.multiverse.doNothingFunction, function()
+script.on_render_event(Defines.RenderEvents.GUI_CONTAINER, mods.alder.doNothing, function()
     if Hyperspace.ships.player then render_part_shield_charge(Hyperspace.ships.player, 98, 30, 89) end
     if Hyperspace.ships.enemy then
         if Hyperspace.Global.GetInstance():GetCApp().gui.combatControl.boss_visual then
