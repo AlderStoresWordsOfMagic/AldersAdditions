@@ -20,7 +20,10 @@
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="5" />
+
 		<mod-append:blueprint name="AA_POINTER" rarity="5" />
+
+		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -29,6 +32,14 @@
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="4" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="4" />
 		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="5" />
+
+		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_KLEPTOCRACY">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="AA_DRIVER_BIO" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -36,6 +47,7 @@
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="5" />
+		<mod-append:blueprint name="AA_DRIVER_BIO" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -43,6 +55,7 @@
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="5" />
+		<mod-append:blueprint name="AA_DRIVER_BIO" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -54,6 +67,8 @@
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="5" />
 
 		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="5" />
+
+		<mod-append:blueprint name="AA_DRIVER_ION" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -68,6 +83,8 @@
 
 		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="5" />
 		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="5" />
+
+		<mod-append:blueprint name="AA_DRIVER_ION" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -78,6 +95,8 @@
 		<mod-append:blueprint name="AA_FOCUS_ION_2" rarity="5" />
 
 		<mod-append:blueprint name="AA_POINTER" rarity="4" />
+
+		<mod-append:blueprint name="AA_DRIVER_ION" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -89,6 +108,8 @@
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="5" />
 
 		<mod-append:blueprint name="AA_POINTER" rarity="4" />
+
+		<mod-append:blueprint name="AA_DRIVER_ION" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -104,33 +125,55 @@
 	</mod:findLike>
 </mod:findName>
 
+<mod:findName type="sectorDescription" name="SECTOR_FREEMANTIS">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_FREEMANTIS_UNIQUE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="5" />
+	</mod:findLike>
+</mod:findName>
+
 <mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="5" />
+
+		<mod-append:blueprint name="AA_DRIVER_SHOTGUN" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_ABANDONED_GENERIC_HEKTAR">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="5" />
+
+		<mod-append:blueprint name="AA_DRIVER_SHOTGUN" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_LANIUS_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="4" />
+
+		<mod-append:blueprint name="AA_DRIVER_SHOTGUN" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_DYNASTY">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="5" />
+
+		<mod-append:blueprint name="AA_DRIVER_EXPLOSIVE" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
 <mod:findName type="sectorDescription" name="SECTOR_DYNASTY_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="4" />
+
+		<mod-append:blueprint name="AA_DRIVER_EXPLOSIVE" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -145,13 +188,17 @@
 		<mod-append:blueprint name="AA_LASER_CHARGEGUN_DAMAGE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_PARTICLE_CHARGEGUN_DAMAGE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="0" />
+
 		<mod-append:blueprint name="AA_MISSILES_ION" rarity="0" />
 		<mod-append:blueprint name="AA_MISSILES_SMASH" rarity="0" />
+
 		<mod-append:blueprint name="AA_ION_RAINBOW" rarity="0" />
 		<mod-append:blueprint name="AA_ION_CHARGEGUN_DAMAGE" rarity="0" />
-		<mod-append:blueprint name="AA_ENERGY_RAD" rarity="0" />
+
+		<mod-append:blueprint name="AA_ENERGY_BIO" rarity="0" />
 		<mod-append:blueprint name="AA_ENERGY_CHARGEGUN_DAMAGE" rarity="0" />
 		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="0" />
+
 		<mod-append:blueprint name="AA_BEAM_SUSTAIN" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_2" rarity="0" />
@@ -164,23 +211,35 @@
 		<mod-append:blueprint name="AA_BEAM_ENERGY" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="0" />
+
 		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="0" />
 		<mod-append:blueprint name="AA_ELECTRON_1" rarity="0" />
 		<mod-append:blueprint name="AA_ELECTRON_2" rarity="0" />
+
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CONSERVATIVE" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE" rarity="0" />
+
 		<mod-append:blueprint name="AA_MINELAUNCHER_CLOAK" rarity="0" />
+		<mod-append:blueprint name="AA_MINELAUNCHER_PARTICLE" rarity="0" />
+
 		<mod-append:blueprint name="AA_FOCUS_PARTICLE" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
+
 		<mod-append:blueprint name="AA_DRIVER" rarity="0" />
-		<mod-append:blueprint name="AA_DRIVER_BURST" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_BIO" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_EXPLOSIVE" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_SHOTGUN" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_ION" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="0" />
+
 		<mod-append:blueprint name="AA_POINTER" rarity="0" />
+
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_SPLICER" rarity="0" />
@@ -199,13 +258,17 @@
 		<mod-append:blueprint name="AA_LASER_CHARGEGUN_DAMAGE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_PARTICLE_CHARGEGUN_DAMAGE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="0" />
+
 		<mod-append:blueprint name="AA_MISSILES_ION" rarity="0" />
 		<mod-append:blueprint name="AA_MISSILES_SMASH" rarity="0" />
+
 		<mod-append:blueprint name="AA_ION_RAINBOW" rarity="0" />
 		<mod-append:blueprint name="AA_ION_CHARGEGUN_DAMAGE" rarity="0" />
-		<mod-append:blueprint name="AA_ENERGY_RAD" rarity="0" />
+
+		<mod-append:blueprint name="AA_ENERGY_BIO" rarity="0" />
 		<mod-append:blueprint name="AA_ENERGY_CHARGEGUN_DAMAGE" rarity="0" />
 		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="0" />
+
 		<mod-append:blueprint name="AA_BEAM_SUSTAIN" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_ION_2" rarity="0" />
@@ -218,23 +281,35 @@
 		<mod-append:blueprint name="AA_BEAM_ENERGY" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="0" />
+
 		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="0" />
 		<mod-append:blueprint name="AA_ELECTRON_1" rarity="0" />
 		<mod-append:blueprint name="AA_ELECTRON_2" rarity="0" />
+
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CONSERVATIVE" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE" rarity="0" />
+
 		<mod-append:blueprint name="AA_MINELAUNCHER_CLOAK" rarity="0" />
+		<mod-append:blueprint name="AA_MINELAUNCHER_PARTICLE" rarity="0" />
+
 		<mod-append:blueprint name="AA_FOCUS_PARTICLE" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
+
 		<mod-append:blueprint name="AA_DRIVER" rarity="0" />
-		<mod-append:blueprint name="AA_DRIVER_BURST" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_BIO" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_EXPLOSIVE" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_SHOTGUN" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_ION" rarity="0" />
+		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="0" />
+
 		<mod-append:blueprint name="AA_POINTER" rarity="0" />
+
 		<mod-append:blueprint name="AA_DISRUPTOR_1_AMP2" rarity="0" />
 		<mod-append:blueprint name="AA_ELEMENTARY_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_SPLICER" rarity="0" />

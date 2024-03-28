@@ -20,7 +20,7 @@
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
@@ -50,8 +50,14 @@
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
 
         <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
         <mod-append:name>AA_ENERGY_INSTANT</mod-append:name>
@@ -74,7 +80,7 @@
 
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
 
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
@@ -103,7 +109,15 @@
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
 
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
         <mod-append:name>AA_ENERGY_INSTANT</mod-append:name>
@@ -164,12 +178,14 @@
 
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
         <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ENERGY">
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
 
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
@@ -182,6 +198,7 @@
 
     <mod:findName type="blueprintList" name="BLUELIST_MINELAUNCHERS_ALL">
         <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_MISSILES_DAMAGE">
@@ -192,8 +209,6 @@
         <mod-append:name>AA_LASER_REPAIR</mod-append:name>
         <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
         <mod-append:name>AA_BOMB_SMASH</mod-append:name>
-        <mod-append:name>AA_DRONE_DECOY</mod-append:name>
-        <mod-append:name>AA_DRONE_BOMB_STUN</mod-append:name>
         <mod-append:name>AA_POINTER</mod-append:name>
     </mod:findName>
 
@@ -241,10 +256,11 @@
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO">
         <mod-append:name>AA_LASER_PURGE</mod-append:name>
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NODAMAGE">
@@ -261,6 +277,7 @@
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
@@ -282,6 +299,7 @@
 
     <mod:findName type="blueprintList" name="BLUELIST_FIRE_BALLISTIC">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
 <!-- // STORE LIST APPENDS // -->
@@ -299,6 +317,7 @@
         <mod-append:name>AA_BOMB_SMASH</mod-append:name>
 
         <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
@@ -342,6 +361,8 @@
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ZOLTAN_ITEM_WEAPONS">
@@ -400,6 +421,8 @@
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_CRYSTAL_ITEM_WEAPONS">
@@ -432,13 +455,14 @@
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
         <mod-append:name>AA_ELECTRON_2</mod-append:name>
 
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_FREEMANTIS_ITEM_WEAPONS_PARTICLE">
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ROCK_ITEM_WEAPONS_MISSILES">
@@ -446,21 +470,20 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_DYNASTY_ITEM_WEAPONS_BREACH_AND_PIERCE">
-        <mod-append:name>AA_LASER_SMASH</mod-append:name>
-        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_SLUG_ITEM_WEAPONS_BIO">
         <mod-append:name>AA_LASER_PURGE</mod-append:name>
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_LANIUS_ITEM_WEAPONS_FLAK">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_HARDSCIFI">
@@ -486,6 +509,11 @@
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_POINTER</mod-append:name>
     </mod:findName>
@@ -499,12 +527,14 @@
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BIO">
         <mod-append:name>AA_LASER_PURGE</mod-append:name>
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_LASERS_CHAIN_AND_CHARGE">
@@ -539,7 +569,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_ENERGY_ATTRIBUTE">
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
@@ -550,6 +580,7 @@
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_MINELAUNCHER_SPECIAL">
         <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BOMB_SPECIAL">
@@ -593,6 +624,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_AMMUNITION_BOSS">
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
         <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_BIO_BOSS">
@@ -608,6 +640,11 @@
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_POWERFUL_BOSS">
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_SLUG_BOSS">
@@ -634,8 +671,6 @@
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_UNION">
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
-
-        <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_MILITIA">
@@ -762,12 +797,14 @@
         <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_VAMPWEED">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_FREEMANTIS">
@@ -866,11 +903,13 @@
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LEECH">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REVOLUTIONARY">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LEECH_ELITE">
@@ -886,6 +925,9 @@
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
 <!-- // HOSTILE // -->
@@ -893,8 +935,6 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
-
-        <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL_SELITE">
@@ -905,6 +945,8 @@
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LEGION">
@@ -915,6 +957,8 @@
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL_SELITEA">
@@ -925,6 +969,8 @@
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ENGINEER">
@@ -932,8 +978,6 @@
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
-
-        <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_DRONES_ENGINEER">
@@ -942,8 +986,6 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_AUTO">
-        <mod-append:name>AA_DRIVER</mod-append:name>
-
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
@@ -958,7 +1000,7 @@
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
 
-        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_COALITION">
@@ -981,6 +1023,9 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_OUTCAST">
@@ -992,6 +1037,10 @@
         <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ROCK_ELITE">
@@ -1001,6 +1050,12 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ROCK_SELITE">
@@ -1012,6 +1067,12 @@
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
         <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_MANTIS">
@@ -1065,6 +1126,10 @@
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_CULTIST">
@@ -1093,6 +1158,8 @@
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_BROOD">
@@ -1135,7 +1202,7 @@
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
 
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
@@ -1153,6 +1220,11 @@
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_SHIELDBREAKER">
@@ -1172,6 +1244,8 @@
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_FIRE">
@@ -1194,14 +1268,10 @@
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_HEAVY">
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
-
-        <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_HEAVY_AND_HULL">
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
-
-        <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_ATTRIBUTE">
@@ -1222,6 +1292,10 @@
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BALLISTICS_DAMAGE">
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_LAUNCHERS">
@@ -1277,7 +1351,7 @@
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
     </mod:findName>
@@ -1286,7 +1360,7 @@
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_ION_ONLY">
@@ -1300,13 +1374,13 @@
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_ENERGY">
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_FLAK">
@@ -1315,12 +1389,17 @@
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_FLAK_ALL">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_PHYSICAL">
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_DRONES_ALL">
@@ -1356,6 +1435,11 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ROCK_BIGGUNS">
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_BEAM_MASTER_ION">
@@ -1379,6 +1463,7 @@
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_ION">
@@ -1389,12 +1474,13 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_ENERGY">
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_EXPLOSIVES">
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
         <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_BALLISTIC">
@@ -1416,10 +1502,6 @@
         <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
     </mod:findName>
 
-    <mod:findName type="blueprintList" name="GIFTLIST_UNION">
-        <mod-append:name>AA_DRIVER</mod-append:name>
-    </mod:findName>
-
     <mod:findName type="blueprintList" name="GIFTLIST_FEDERATION">
         <mod-append:name>AA_DRIVER</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
@@ -1436,8 +1518,6 @@
 
     <mod:findName type="blueprintList" name="GIFTLIST_REBEL">
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
-        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
-        <mod-append:name>AA_LASER_PURGE</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
@@ -1456,7 +1536,7 @@
     <mod:findName type="blueprintList" name="GIFTLIST_DUSK">
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
-        <mod-append:name>AA_ENERGY_RAD</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_FREEMANTIS">
@@ -1478,10 +1558,12 @@
     <mod:findName type="blueprintList" name="GIFTLIST_LANIUS">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_MINELAUNCHERS_TRAPPER">
         <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
     </mod:findName>
 
 <!-- /// NON-MV BLUEPRINT LISTS /// -->

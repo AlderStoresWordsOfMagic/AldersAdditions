@@ -37,9 +37,9 @@
 	<time>0.5</time>
 </anim>
 
-<animSheet name="energy_rad_projectile" w="24" h="24" fw="24" fh="24">projectile/energy_rad_projectile.png</animSheet>
-<anim name="energy_rad_projectile">
-	<sheet>energy_rad_projectile</sheet>
+<animSheet name="energy_bio_projectile" w="24" h="24" fw="24" fh="24">projectile/energy_bio_projectile.png</animSheet>
+<anim name="energy_bio_projectile">
+	<sheet>energy_bio_projectile</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>0.3</time>
 </anim>
@@ -149,20 +149,6 @@
 	<time>2</time>
 </anim>
 
-<animSheet name="tile_repairblock" w="350" h="35" fw="35" fh="35">effects/tile/tile_repairblock.png</animSheet>
-<anim name="tile_repairblock">
-	<sheet>tile_repairblock</sheet>
-	<desc length="10" x="0" y="0"/>
-	<time>1.5</time>
-</anim>
-
-<animSheet name="tile_acid" w="35" h="35" fw="35" fh="35">effects/tile/tile_acid.png</animSheet>
-<anim name="tile_acid">
-	<sheet>tile_acid</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1</time>
-</anim>
-
 <animSheet name="tile_erosion" w="350" h="35" fw="35" fh="35">effects/tile/tile_erosion.png</animSheet>
 <anim name="tile_erosion">
 	<sheet>tile_erosion</sheet>
@@ -174,13 +160,13 @@
 
 <!-- // LASERS // -->
 
-<animSheet name="laser_purge" w="135" h="48" fw="27" fh="48">weapons/laser/laser_purge.png</animSheet>
+<animSheet name="laser_purge" w="130" h="47" fw="26" fh="47">weapons/laser/laser_purge.png</animSheet>
 <weaponAnim name="laser_purge">
 	<sheet>laser_purge</sheet>
 	<desc length="5" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>3</fireFrame>
-	<firePoint x="16" y="8"/>
+	<firePoint x="15" y="9"/>
 	<mountPoint x="3" y="30"/>
 	<chargeImage>weapons/laser/laser_purge_glow.png</chargeImage>
 </weaponAnim>
@@ -344,15 +330,15 @@
 
 <!-- // ENERGY // -->
 
-<animSheet name="energy_rad" w="1066" h="73" fw="41" fh="73">weapons/energy/energy_rad.png</animSheet>
-<weaponAnim name="energy_rad">
-	<sheet>energy_rad</sheet>
+<animSheet name="energy_bio" w="1066" h="73" fw="41" fh="73">weapons/energy/energy_bio.png</animSheet>
+<weaponAnim name="energy_bio">
+	<sheet>energy_bio</sheet>
 	<desc length="26" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="22" y="9"/>
+	<firePoint x="26" y="12"/>
 	<mountPoint x="4" y="45"/>
-	<chargeImage>weapons/energy/energy_rad_glow.png</chargeImage>
+	<chargeImage>weapons/energy/energy_bio_glow.png</chargeImage>
 </weaponAnim>
 
 <animSheet name="energy_charge_damage_chargeglow" w="93" h="68" fw="31" fh="68">weapons/energy/energy_charge_damage_chargeglow.png</animSheet>
@@ -386,14 +372,14 @@
 	<chargeImage>weapons/beam/beam_smash_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="beam_purge" w="570" h="44" fw="30" fh="44">weapons/beam/beam_purge.png</animSheet>
+<animSheet name="beam_purge" w="297" h="46" fw="27" fh="46">weapons/beam/beam_purge.png</animSheet>
 <weaponAnim name="beam_purge">
 	<sheet>beam_purge</sheet>
-	<desc length="19" x="0" y="0"/>
+	<desc length="11" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="15"/>
-	<mountPoint x="3" y="31"/>
+	<firePoint x="15" y="15"/>
+	<mountPoint x="3" y="30"/>
 	<chargeImage>weapons/beam/beam_purge_glow.png</chargeImage>
 </weaponAnim>
 
@@ -532,10 +518,10 @@
 	<time>1.0</time>
 </anim>
 
-<animSheet name="bomblauncher_purge" w="420" h="44" fw="28" fh="44">weapons/bomb/bomblauncher_purge.png</animSheet>
+<animSheet name="bomblauncher_purge" w="480" h="44" fw="30" fh="44">weapons/bomb/bomblauncher_purge.png</animSheet>
 <weaponAnim name="bomblauncher_purge">
 	<sheet>bomblauncher_purge</sheet>
-	<desc length="15" x="0" y="0"/>
+	<desc length="16" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>12</fireFrame>
 	<firePoint x="16" y="22" />
@@ -725,26 +711,70 @@
 
 <!-- // DRIVERS // -->
 
-<animSheet name="driver" w="217" h="76" fw="31" fh="76">weapons/driver/driver.png</animSheet>
+<animSheet name="driver" w="186" h="90" fw="31" fh="90">weapons/driver/driver.png</animSheet>
 <weaponAnim name="driver">
 	<sheet>driver</sheet>
-	<desc length="7" x="0" y="0"/>
+	<desc length="6" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
-	<fireFrame>4</fireFrame>
-	<firePoint x="19" y="19"/>
-	<mountPoint x="4" y="41"/>
+	<fireFrame>3</fireFrame>
+	<firePoint x="19" y="23"/>
+	<mountPoint x="3" y="60"/>
 	<chargeImage>weapons/driver/driver_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="driver_burst" w="224" h="77" fw="32" fh="77">weapons/driver/driver_burst.png</animSheet>
-<weaponAnim name="driver_burst">
-	<sheet>driver_burst</sheet>
-	<desc length="7" x="0" y="0"/>
+<animSheet name="driver_bio" w="180" h="94" fw="30" fh="94">weapons/driver/driver_bio.png</animSheet>
+<weaponAnim name="driver_bio">
+	<sheet>driver_bio</sheet>
+	<desc length="6" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
-	<fireFrame>4</fireFrame>
-	<firePoint x="19" y="20"/>
-	<mountPoint x="4" y="43"/>
-	<chargeImage>weapons/driver/driver_burst_glow.png</chargeImage>
+	<fireFrame>3</fireFrame>
+	<firePoint x="16" y="24"/>
+	<mountPoint x="3" y="65"/>
+	<chargeImage>weapons/driver/driver_bio_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="driver_explosive" w="174" h="98" fw="29" fh="98">weapons/driver/driver_explosive.png</animSheet>
+<weaponAnim name="driver_explosive">
+	<sheet>driver_explosive</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint x="17" y="31"/>
+	<mountPoint x="3" y="68"/>
+	<chargeImage>weapons/driver/driver_explosive_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="driver_flak" w="192" h="85" fw="32" fh="85">weapons/driver/driver_flak.png</animSheet>
+<weaponAnim name="driver_flak">
+	<sheet>driver_flak</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint x="19" y="23"/>
+	<mountPoint x="3" y="54"/>
+	<chargeImage>weapons/driver/driver_flak_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="driver_ion" w="180" h="98" fw="30" fh="98">weapons/driver/driver_ion.png</animSheet>
+<weaponAnim name="driver_ion">
+	<sheet>driver_ion</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint x="18" y="30"/>
+	<mountPoint x="3" y="68"/>
+	<chargeImage>weapons/driver/driver_ion_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="driver_particle" w="198" h="100" fw="33" fh="100">weapons/driver/driver_particle.png</animSheet>
+<weaponAnim name="driver_particle">
+	<sheet>driver_particle</sheet>
+	<desc length="6" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>3</fireFrame>
+	<firePoint x="17" y="32"/>
+	<mountPoint x="3" y="66"/>
+	<chargeImage>weapons/driver/driver_particle_glow.png</chargeImage>
 </weaponAnim>
 
 <!-- // LOOT // -->
@@ -809,22 +839,6 @@
 	<firePoint  x="18" y="3"/>
 	<mountPoint x="4" y="42"/>
 	<chargeImage>weapons/misc/pointer_glow.png</chargeImage>
-</weaponAnim>
-
-<animSheet name="acid_launcher_projectile" w="8" h="15" fw="8" fh="15">projectile/acid_launcher_projectile.png</animSheet>
-<anim name="acid_launcher_projectile">
-	<sheet>acid_launcher_projectile</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>0.3</time>
-</anim>
-<animSheet name="acid_launcher" w="598" h="52" fw="26" fh="52">weapons/misc/acid_launcher.png</animSheet>
-<weaponAnim name="acid_launcher">
-	<sheet>acid_launcher</sheet>
-	<desc length="23" x="0" y="0"/>
-	<chargedFrame>15</chargedFrame>
-	<fireFrame>19</fireFrame>
-	<firePoint x="16" y="15"/>
-	<mountPoint x="3" y="30"/>
 </weaponAnim>
 
 <!-- /// OVERRIDEN ANIMATIONS /// -->

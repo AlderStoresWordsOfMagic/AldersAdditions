@@ -9,8 +9,25 @@
 	<title>Scrambler Laser</title>
 	<short>Scrambler Laser</short>
 	<tip>aa_tip_scrambler</tip>
-	<desc>A specialized Laser that deals no direct damage. Instead, it induces flaws into the DNA of crew, greatly reducing their ability to heal wounds.</desc>
-	<tooltip>Scrambler Laser; 10 second cooldown, makes crew unable to heal quickly.</tooltip>
+	<descriptionOverride>A specialized Laser that deals no direct damage. Instead, its unique radiation spectrum distorts the body's natural healing, inhibiting medical attention offered to crew.
+
+	Stats:
+	Required Power: 1
+	Charge Time: 6 seconds
+
+	Shots Per Charge: 1
+
+	Heal Block: 10 seconds long
+
+	Default Price: 60~   -   Selling Price: 30~
+	</descriptionOverride>
+	<tooltip>P.</tooltip>
+	<tooltipOverride>Required Power: 1
+		Charge Time: 12 seconds
+
+		Shots Per Charge: 1
+
+		Heal Block: 10 seconds long</tooltipOverride>
 	<damage>0</damage>
 	<sp>1</sp>
 	<statBoosts>
@@ -25,7 +42,7 @@
 		</statBoost>
 	</statBoosts>
 	<shots>1</shots>
-	<cooldown>7</cooldown>
+	<cooldown>6</cooldown>
 	<power>1</power>
 	<cost>60</cost>
 	<bp>2</bp>
@@ -55,9 +72,9 @@
 	<drone_targetable>0</drone_targetable>
 	<flavorType>Particle Accelerator</flavorType>
 	<title>Particle Phaser</title>
-	<short>Phase Part</short>
+	<short>Phase Part.</short>
 	<tip>tip_particle_laser</tip>
-	<desc>This particle weapon sacrifices efficiency and the ability to start fires in exchange for completely side-stepping the nemesis of all particle weaponry.</desc>
+	<desc>This particle weapon sacrifices speed and the ability to start fires in exchange for phasing through shields.</desc>
 	<tooltip>Part Accelerator; 1 system damage, 3 shots. 16 second cooldown. No fire chance.</tooltip>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
@@ -95,9 +112,9 @@
 	<type>BURST</type>
 	<title>Miniaturized Particle Accelerator</title>
 	<drone_targetable>0</drone_targetable>
-	<short>Part Mini</short>
+	<short>Part. Mini</short>
 	<tip>tip_particle_laser</tip>
-	<desc>A small, fast firing particle accelerator weapon. It is rendered useless by shields but can output lots of system damage when left unchecked.</desc>
+	<desc>A small, fast firing particle accelerator weapon. It is rendered useless by shields, but can output lots of gradual system damage when left unchecked.</desc>
 	<tooltip>Particle accelerator, 1 system damage per shot.</tooltip>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
@@ -141,20 +158,33 @@
 	<title>Shield Smasher MK I</title>
 	<short>Smash I</short>
 	<tip>aa_tip_smash</tip>
-	<descriptionOverride>This accelerator-like weapon is specifically designed to create and fire bolts that can overload shield generators.
+	<descriptionOverride>A strange energy weapon that fires sprays of bolts specifically designed to break shields.
 
-Stats:
-Required Power: 1
-Charge Time: 12 seconds
-Shots Per Charge: 1
+	Stats:
+	Required Power: 1
+	Charge Time: 12 seconds
 
-Layers Per Shot: 1
-Layers Crushed: 12
+	Shot Radius: 32
+	Shots Per Charge: 1
 
-Breach Chance: 30%
+	Layers Per Shot: 1
+	Layers Crushed: 12
 
-Buy/Sell Price: 60~/30~</descriptionOverride>
+	Stun Chance: 100% (5 seconds long)
+
+	Default Price: 60~   -   Selling Price: 30~
+	</descriptionOverride>
 	<tooltip>P.</tooltip>
+	<tooltipOverride>Required Power: 1
+		Charge Time: 12 seconds
+
+		Shot Radius: 32
+		Shots Per Charge: 1
+
+		Layers Per Shot: 1
+		Layers Crushed: 12
+
+		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
 	<radius>32</radius>
 	<shots>1</shots>
@@ -162,7 +192,7 @@ Buy/Sell Price: 60~/30~</descriptionOverride>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<stun>5</stun>
-	<stunChance>3</stunChance>
+	<stunChance>10</stunChance>
 	<cooldown>12</cooldown>
 	<power>1</power>
 	<cost>60</cost>
@@ -194,20 +224,33 @@ Buy/Sell Price: 60~/30~</descriptionOverride>
 	<title>Shield Smasher MK II</title>
 	<short>Smash II</short>
 	<tip>aa_tip_smash</tip>
-<descriptionOverride>A heavy, powerful anti-shield weapon with lower accuracy than its predecessor, but a much higher shot count.
+	<descriptionOverride>A heavy, powerful anti-shield weapon with lower accuracy than its predecessor, but a much higher shot count.
 
-Stats:
-Required Power: 3
-Charge Time: 14 seconds
-Shots Per Charge: 3
+	Stats:
+	Required Power: 3
+	Charge Time: 14 seconds
 
-Layers Per Shot: 1
-Layers Crushed: 12
+	Shot Radius: 38
+	Shots Per Charge: 3
 
-Breach Chance: 40%
+	Layers Per Shot: 1
+	Layers Crushed: 12
 
-Buy/Sell Price: 80~/40~</descriptionOverride>
-	<tooltip>Proton Accelerator; 1 crew damage, 5 shots, pops shields. 15 second cooldown. High breach chance.</tooltip>
+	Stun Chance: 100% (5 seconds long)
+
+	Default Price: 80~   -   Selling Price: 40~
+	</descriptionOverride>
+	<tooltip>P.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 14 seconds
+
+		Shot Radius: 38
+		Shots Per Charge: 3
+
+		Layers Per Shot: 1
+		Layers Crushed: 12
+
+		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
 	<radius>38</radius>
 	<shots>1</shots>
@@ -215,7 +258,7 @@ Buy/Sell Price: 80~/40~</descriptionOverride>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<stun>5</stun>
-	<stunChance>3</stunChance>
+	<stunChance>10</stunChance>
 	<cooldown>15</cooldown>
 	<power>3</power>
 	<cost>80</cost>
@@ -245,8 +288,30 @@ Buy/Sell Price: 80~/40~</descriptionOverride>
 	<tip>tip_laser</tip>
 	<title>Pro-Hull Laser</title>
 	<short>Pro-Hull Laser</short>
-	<desc>A rare and bizarre weapon, similar to the ubiquitous Heavy Laser, that repairs the target's hull instead of damaging it. It also inflicts minor system and crew damage.</desc>
+	<desc>A.</desc>
+	<descriptionOverride>This odd Laser repairs the enemy hull on contact, whilst dealing minor system and crew damage.
+
+	Stats:
+	Required Power: 2
+	Charge Time: 13 seconds
+
+	Shots Per Charge: 1
+	
+	Hull Repair: 2
+	Total System Damage: 1
+	Total Crew Damage: 15
+
+	Default Price: 90~   -   Selling Price: 45~
+	</descriptionOverride>
 	<tooltip>Fires 1 shot, repairs 2 damage.</tooltip>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 13 seconds
+
+		Shots Per Charge: 1
+
+		Hull Repair: 2
+		Total System Damage: 1
+		Total Crew Damage: 15</tooltipOverride>
 	<damage>-2</damage>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
@@ -399,9 +464,7 @@ Buy/Sell Price: 80~/40~</descriptionOverride>
 	<tip>tip_missiles_heavy</tip>
 	<title>'Athena' Electrified Missiles [E]</title>
 	<short>'Athena' [E]</short>
-	<desc>The same technology behind ion weapons has been applied to this ballistic launcher, and the natural shield-piercing properties of missile technology cause its projectiles to behave like those of a phaser.
-
-This enemy-only version lacks the innate +10% accuracy bonus of missile weapons. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<tooltip>Fires 1 missile; does 2 damage; pierces all shields.</tooltip>
 	<damage>2</damage>
 	<ion>2</ion>
@@ -441,18 +504,28 @@ This enemy-only version lacks the innate +10% accuracy bonus of missile weapons.
 	<tip>aa_tip_smash</tip>
 	<title>Smashing Missiles</title>
 	<short>Smash M.</short>
-	<descriptionOverride>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.
+	<descriptionOverride>This launcher fires small missiles charged with elementary particles, smashing layers of shields upon contact with the hull.
 
-Stats:
-Required Power: 3
-Charge Time: 20 seconds
-Shots Per Charge: 1
+	Stats:
+	Required Power: 3
+	Charge Time: 20 seconds
 
-Shield Layers Popped: 4
-Shield Layers Crushed: 12
+	Shots Per Charge: 1
 
-Buy/Sell Price: 110~/55~</descriptionOverride>
-	<tooltip>Proton missiles.</tooltip>
+	Layers Per Shot: 4
+	Layers Crushed: 12
+
+	Default Price: 110~   -   Selling Price: 55~</descriptionOverride>
+	<tooltip>P.</tooltip>
+	<tooltipOverride>Required Power: 3
+		Charge Time: 20 seconds
+
+		Shots Per Charge: 1
+		
+		Layers Per Shot: 4
+		Layers Crushed: 12
+	
+		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
 	<accuracyMod>30</accuracyMod>
 	<missiles>1</missiles>
@@ -491,19 +564,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<tip>aa_tip_smash</tip>
 	<title>Smashing Missiles [E]</title>
 	<short>Smash M. [E]</short>
-	<descriptionOverride>Fires small missiles charged with ionic particles, smashing layers of shields upon contact with the hull.
-
-This enemy-only version lacks the innate +10% accuracy bonus of missile weapons. It was never supposed to fall into your hands.
-
-Stats:
-Required Power: 3
-Charge Time: 20 seconds
-Shots Per Charge: 1
-
-Shield Layers Popped: 4
-Shield Layers Crushed: 12
-
-Buy/Sell Price: 110~/55~</descriptionOverride>
+	<descriptionOverride>This was never supposed to fall into your hands.</descriptionOverride>
 	<tooltip>Proton missiles.</tooltip>
 	<damage>0</damage>
 	<missiles>1</missiles>
@@ -585,7 +646,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Multi-type Ion Barrage (Normal)</title>
 	<short>Rainbow Ion</short>
-	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<ion>2</ion>
 	<speed>40</speed>
@@ -620,7 +681,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Multi-type Ion Barrage (Stun)</title>
 	<short>Rainbow Ion</short>
-	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>40</speed>
@@ -656,7 +717,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Multi-type Ion Barrage (Radiation)</title>
 	<short>Rainbow Ion</short>
-	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<persDamage>1</persDamage>
 	<ion>1</ion>
@@ -723,7 +784,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Multi-type Ion Barrage (Fire)</title>
 	<short>Rainbow Ion</short>
-	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>40</speed>
@@ -760,7 +821,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Multi-type Ion Barrage (Breach)</title>
 	<short>Rainbow Ion</short>
-	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>40</speed>
@@ -796,7 +857,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Multi-type Ion Barrage (Phasing)</title>
 	<short>Rainbow Ion</short>
-	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>40</speed>
@@ -831,7 +892,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<type>LASER</type>
 	<title>Multi-type Ion Barrage (Energy)</title>
 	<short>Rainbow Ion</short>
-	<desc>This weapon is an internal component of the Multi-Type Ion Barrage. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
 	<noPersDamage>true</noPersDamage>
@@ -908,14 +969,14 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 
 <!-- // ENERGY // -->
 
-<weaponBlueprint name="AA_ENERGY_RAD">
+<weaponBlueprint name="AA_ENERGY_BIO">
 	<type>LASER</type>
 	<flavorType>Concentrated Energy Blast</flavorType>
 	<tip>tip_energy</tip>
 	<title>Ultraviolet Energy</title>
 	<short>UV Energy</short>
 	<locked>1</locked>
-	<desc>Energy weapons can disable systems and cause hull damage. This weapon is tuned specifically to irradiate and kill crew.</desc>
+	<desc>Energy weapons can disable systems and cause hull damage. This particular model is tuned specifically to irradiate and kill crew.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage and 1 hull damage. Can hit and disable shields as well as systems.</tooltip>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
@@ -960,7 +1021,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<cost>70</cost>
 	<bp>3</bp>
 	<rarity>4</rarity>
-	<image>energy_rad_projectile</image>
+	<image>energy_bio_projectile</image>
 	<explosion>explosion_small_ion_bio</explosion>
 	<launchSounds>
 		<sound>energy</sound>
@@ -978,7 +1039,7 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>energy_rad</weaponArt> 
+	<weaponArt>energy_bio</weaponArt> 
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
@@ -1035,15 +1096,15 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<tooltip>Beam weapon, drills into a single room.</tooltip>
 	<descriptionOverride>This Beam weapon's advanced cooling allows it to behave differently from other Beams. It focuses on a single point and periodically inflicts damage as a Beam for as long as it is powered and locked on.
 	
-		Stats:
-		Required Power: 3
-		Charge Time: 10 seconds
+	Stats:
+	Required Power: 3
+	Charge Time: 10 seconds
 
-		Base Hull Damage: 1
-		Base System Damage: 1
-		System Damage Rate: 1
+	Base Hull Damage: 1
+	Base System Damage: 1
+	System Damage Rate: 1
 
-	Buy/Sell Price: 95~/47~
+	Default Price: 95~   -   Selling Price: 47~
 	</descriptionOverride>
 	<damage>1</damage>
 	<sp>0</sp>
@@ -1069,19 +1130,33 @@ Buy/Sell Price: 110~/55~</descriptionOverride>
 	<tip>aa_tip_smash</tip>
 	<title>Smashing Beam</title>
 	<short>Smash Beam</short>
-	<descriptionOverride>This Beam is capable of hitting shields instead of simply passing through them, with the additional potential to shield-crush.
+	<descriptionOverride>The energy emitted by this beam is tuned carefully to disrupt and distort shielding, at the expense of all else.
 
-Stats:
-Required Power: 2
-Charge Time: 14 seconds
+	Stats:
+	Required Power: 1
+	Charge Time: 14 seconds
 
-Shield Layers Popped: 1
-Shield Layers Crushed: 12
+	Beam Length: 40
+	Beam Speed: 36
 
-Breach Chance: 100%
+	Layers Per Shot: 2
+	Layers Crushed: 12
 
-Buy/Sell Price: 70~/35~</descriptionOverride>
+	Stun Chance: 100% (5 seconds long)
+
+	Default Price: 70~   -   Selling Price: 35~
+	</descriptionOverride>
 	<tooltip>Beam weapon with extended line. 1 damage per room.</tooltip>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 14 seconds
+
+		Beam Length: 40
+		Beam Speed: 36
+		
+		Layers Per Shot: 2
+		Layers Crushed: 12
+	
+		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
 	<stun>5</stun>
 	<stunChance>3</stunChance>
@@ -1111,8 +1186,28 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tip>aa_tip_scrambler</tip>
 	<title>'Knout' Scrambler Beam</title>
 	<short>'Knout'</short>
-	<desc>This beam is incredibly powerful when paired with a source of damage, as it can lock crew out of healing their wounds.</desc>
-	<tooltip>2 power beam weapon that "purges" enemy crew.</tooltip>
+	<desc>T.</desc>
+	<descriptionOverride>This beam is incredibly powerful when paired with a source of damage, as it can lock crew out of healing their wounds.
+
+		Stats:
+		Required Power: 1
+		Charge Time: 15 seconds
+	
+		Beam Length: 120
+		Beam Speed: 35
+	
+		Heal Block: 10 seconds long
+	
+		Default Price: 80~   -   Selling Price: 40~
+		</descriptionOverride>
+	<tooltip>2.</tooltip>
+	<tooltipOverride>Required Power: 1
+		Charge Time: 15 seconds
+
+		Beam Length: 120
+		Beam Speed: 35
+		
+		Heal Block: 10 seconds long</tooltipOverride>
 	<damage>0</damage>
 	<cooldown>15</cooldown>
 	<color>
@@ -1129,14 +1224,6 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 			<affectsSelf>true</affectsSelf>
 			<duration>10</duration>
 			<boostAnim>status_purge</boostAnim>
-		</statBoost>
-		<statBoost name="noClone">
-			<boostType>SET</boostType>
-			<value>TRUE</value>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<duration>10</duration>
 		</statBoost>
 	</statBoosts>
 	<speed>35</speed>
@@ -1158,7 +1245,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tip>aa_tip_disruptor</tip>
 	<title>'Hanbo' Disruptor</title>
 	<short>'Hanbo'</short>
-	<desc>This curious beam-like weapon ionizes systems and shields in much the same manner as ion weapons.</desc>
+	<desc>This curious, beam-like weapon ionizes systems and shields in much the same manner as ion weapons.</desc>
 	<tooltip>Deals 1 ion damage per system it hits.</tooltip>
 	<ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
@@ -1223,7 +1310,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<title>'Bo' Disruptor</title>
 	<short>'Bo'</short>
 	<tip>aa_tip_disruptor</tip>
-	<desc>A devastating Disruptor variant known to shut down entire ships with a single sweep.</desc>
+	<desc>This devastating Disruptor variant is known to shut down entire ships with a single sweep.</desc>
 	<tooltip>Deals 3 ion damage per system it hits.</tooltip>
 	<ion>3</ion>
 	<ionBeamFix>true</ionBeamFix>
@@ -1347,7 +1434,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tip>aa_tip_disruptor</tip>
 	<title>'Tonfa' Phasing Disruptor</title>
 	<short>'Tonfa'</short>
-	<desc>This powerful ion beam can ionize large swaths of a ship even through shields. However, it sweeps very slowly.</desc>
+	<desc>This powerful ion beam can ionize large swaths of a ship even through shields. However, it sweeps slowly.</desc>
 	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
 	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
@@ -1356,7 +1443,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<breachChance>0</breachChance>
 	<stunChance>4</stunChance>
 	<cooldown>24</cooldown>
-	<speed>1</speed>
+	<speed>2</speed>
 	<color>
 		<r>229</r>
 		<g>253</g>
@@ -1380,7 +1467,7 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<tip>aa_tip_disruptor</tip>
 	<title>'Tetsubo' Energized Disruptor</title>
 	<short>'Tetsubo'</short>
-	<desc>Tuned to damage hull alongside the usual effect of electrifying systems, this Disruptor serves double duty.</desc>
+	<desc>Tuned to tear through hull alongside the usual effect of electrifying systems, this Disruptor serves double duty.</desc>
 	<tooltip>Deals 2 ion damage per system it hits, and 1 hull damage per room.</tooltip>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
@@ -1484,18 +1571,30 @@ Buy/Sell Price: 70~/35~</descriptionOverride>
 	<title>Smashing Bomb</title>
 	<short>Smash Bomb</short>
 	<locked>1</locked>
-	<descriptionOverride>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.
+	<descriptionOverride>The bombs from this launcher emit blasts of charged particles that burst bubbles of shielding from within.
 
-Stats:
-Required Power: 2
-Charge Time: 20 seconds
-Shots Per Charge: 1
+	Stats:
+	Required Power: 2
+	Charge Time: 20 seconds
 
-Shield Layers Popped: 4
-Shield Layers Crushed: 12
+	Shots Per Charge: 1
 
-Buy/Sell Price: 75~/36~</descriptionOverride>
-	<tooltip>Bomb weapon; requires a missile; does 1 damage to target system. Can target your own ship.</tooltip>
+	Layers Per Shot: 4
+	Layers Crushed: 12
+
+	Stun Chance: 100% (5 seconds long)
+
+	Default Price: 75~   -   Selling Price: 37~</descriptionOverride>
+	<tooltip>P.</tooltip>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 20 seconds
+
+		Shots Per Charge: 1
+		
+		Layers Per Shot: 4
+		Layers Crushed: 12
+	
+		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
 	<accuracyMod>30</accuracyMod>
 	<missiles>1</missiles>
@@ -1526,19 +1625,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<title>Smashing Bomb [E]</title>
 	<short>Smash Bomb [E]</short>
 	<locked>1</locked>
-	<descriptionOverride>Self-teleporting explosive that temporarily lowers some shield bubbles upon detonation, with the potential to shield-crush.
-
-This enemy-only version lacks the innate +30% accuracy bonus of bomb weapons. It was never supposed to fall into your hands.
-
-Stats:
-Required Power: 2
-Charge Time: 20 seconds
-Shots Per Charge: 1
-
-Shield Layers Popped: 4
-Shield Layers Crushed: 12
-
-Buy/Sell Price: 75~/36~</descriptionOverride>
+	<descriptionOverride>This was never supposed to fall into your hands.</descriptionOverride>
 	<tooltip>Bomb weapon; requires a missile; does 1 damage to target system. Can target your own ship.</tooltip>
 	<damage>0</damage>
 	<missiles>1</missiles>
@@ -1569,8 +1656,25 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<title>Scrambler Bomb</title>
 	<short>Scrambler B.</short>
 	<locked>1</locked>
-	<desc>A self-teleporting explosive that violently upsets the body, crippling attempts to heal wounds.</desc>
-	<tooltip>No hull or system damage, but deals incredible crew damage.</tooltip>
+	<descriptionOverride>A self-teleporting explosive that violently upsets the body's homeostasis, preventing it from healing its wounds.
+
+		Stats:
+		Required Power: 1
+		Charge Time: 13 seconds
+	
+		Shots Per Charge: 1
+	
+		Heal Block: 10 seconds long
+	
+		Default Price: 80~   -   Selling Price: 40~
+		</descriptionOverride>
+	<tooltip>2.</tooltip>
+	<tooltipOverride>Required Power: 1
+		Charge Time: 15 seconds
+
+		Shots Per Charge: 1
+		
+		Heal Block: 10 seconds long</tooltipOverride>
 	<damage>0</damage>
 	<sysDamage>0</sysDamage>
 	<persDamage>1</persDamage>
@@ -1585,14 +1689,6 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 			<affectsSelf>true</affectsSelf>
 			<duration>10</duration>
 			<boostAnim>status_purge</boostAnim>
-		</statBoost>
-		<statBoost name="noClone">
-			<boostType>SET</boostType>
-			<value>TRUE</value>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<affectsSelf>true</affectsSelf>
-			<duration>10</duration>
 		</statBoost>
 	</statBoosts>
 	<shots>1</shots>
@@ -1737,7 +1833,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
 	<title>Accelerated Flak Gun</title>
-	<short>Part Flak</short>
+	<short>Part. Flak</short>
 	<tip>aa_tip_particle_flak</tip>
 	<desc>This Flak cannon fires a blast of 4 projectiles charged with exotic particles that shred systems alongside normal hull damage.</desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 4 damage and 8 system damage.</tooltip>
@@ -1835,7 +1931,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<title>Cumulative Flak</title>
 	<tip>aa_tip_accumulator</tip>
 	<short>Cum. Flak</short>
-	<desc>This versatile Flak Cannon has the ability to refine the garbage it fires, increasing the damage its shots deal as it waits.</desc>
+	<desc>This versatile Flak Cannon has the ability to gradually refine the shrapnel it fires, increasing the damage its shots deal as it waits.</desc>
 	<tooltip>Fires a blast of debris across a random area doing up to 3 damage. The damage of each shot increases by 1 per charge.</tooltip>
 	<radius>45</radius>
 	<damage>1</damage>
@@ -1979,7 +2075,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<flavorType>Pinpoint</flavorType>
 	<tip>tip_particle_beam</tip>
 	<title>Particle Pinpoint</title>
-	<short>Part P.</short>
+	<short>Part. P.</short>
 	<desc>This Pinpoint is powered by a particle accelerator, allowing it to annihilate systems with a single shot.</desc>
 	<tooltip>Anti-system pinpoint, dealing 4 system damage.</tooltip>
 	<damage>0</damage>
@@ -2105,7 +2201,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<tip>tip_particle_beam</tip>
 	<title>Shock Cannon</title>
 	<short>Shock</short>
-	<desc>Powerful particle cannon that fires multiple straight beams, dealing damage to both systems and crew.</desc>
+	<desc>A powerful particle cannon that fires multiple straight beams, dealing damage to both systems and crew.</desc>
 	<tooltip>Anti-system pinpoint, dealing 4 system damage.</tooltip>
 	<damage>1</damage>
 	<shots>1</shots>
@@ -2164,25 +2260,25 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<title>Mass Driver</title>
 	<short>Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>An old-school kinetic weapon, utilizing hybrid propulsion to accelerate small physical projectiles at relativistic speeds.</desc>
+	<desc>An old-school kinetic weapon. Special electrical adapters allow it to siphon charge even when it is not directly powered, and its projectiles fly forward at blistering speed.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
-	<fireTime>0.2</fireTime>
-	<damage>2</damage>
+	<damage>3</damage>
 	<speed>2147483647</speed>
 	<shots>1</shots>
+	<accuracyMod>100</accuracyMod>
 	<sp>0</sp>
-	<breachChance>7</breachChance>
-	<stunChance>3</stunChance>
-	<cooldown>11</cooldown>
-	<power>1</power>
+	<breachChance>10</breachChance>
+	<cooldown>25</cooldown>
+	<power>2</power>
 	<cost>80</cost>
-	<rarity>4</rarity>
-	<radius>20</radius>
+	<rarity>5</rarity>
+	<radius>0</radius>
 	<spin>720</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
 		<projectile count="1" fake="false">debris_small</projectile>
 	</projectiles>
+	<explosion>explosion_big2</explosion>
 	<launchSounds>
 		<sound>driver</sound>
 	</launchSounds>
@@ -2201,29 +2297,162 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_DRIVER_BURST">
+<weaponBlueprint name="AA_DRIVER_BIO">
 	<type>BURST</type>
-	<title>Burst Driver</title>
-	<short>Burst Driver</short>
+	<title>Irradiated Mass Driver</title>
+	<short>Rad Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>This Mass Driver trades single-shot damage and cooldown for a burst-fire mechanism.</desc>
+	<desc>This powerful mass driver fires a shell filled with radioactive elements, poisoning crew it strikes.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
-	<fireTime>0.1</fireTime>
-	<damage>1</damage>
+	<damage>2</damage>
+	<sysDamage>-2</sysDamage>
+	<persDamage>4</persDamage>
 	<speed>2147483647</speed>
-	<shots>3</shots>
-	<sp>0</sp>
-	<breachChance>4</breachChance>
-	<stunChance>1</stunChance>
-	<cooldown>14</cooldown>
-	<power>1</power>
+	<shots>1</shots>
+	<accuracyMod>100</accuracyMod>
+	<sp>-2</sp>
+	<breachChance>10</breachChance>
+	<statBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.33</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<maxStacks>1</maxStacks>
+			<duration>10</duration>
+		</statBoost>
+	</statBoosts>
+	<cooldown>26</cooldown>
+	<power>3</power>
 	<cost>90</cost>
-	<rarity>5</rarity>
-	<radius>20</radius>
+	<rarity>0</rarity>
+	<radius>0</radius>
 	<spin>720</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
 		<projectile count="1" fake="false">debris_small</projectile>
+	</projectiles>
+	<explosion>explosion_bio</explosion>
+	<launchSounds>
+		<sound>driver</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>driver_bio</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_DRIVER_EXPLOSIVE">
+	<type>BURST</type>
+	<title>Explosive Mass Driver</title>
+	<short>Explosive Driver</short>
+	<tip>aa_tip_driver</tip>
+	<desc>This weapon fires fragmenting, explosive shots whose damage bleeds over into adjacent rooms.</desc>
+	<descriptionOverride>This weapon fires fragmenting, explosive shots whose damage bleeds over into adjacent rooms.
+
+		Stats:
+		Required Power: 3
+		Charge Time: 30 seconds
+		Accuracy Bonus: +100%
+
+		Shots Per Charge: 1
+		
+		Total Hull Damage: 2
+		Total System Damage: 2
+		Total Crew Damage: 30
+		Adjacent System Damage: 2
+
+		Breach Chance: 50%
+		
+		Default Price: 90~   -   Selling Price: 45~
+	</descriptionOverride>
+	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
+	<damage>2</damage>
+	<speed>2147483647</speed>
+	<shots>1</shots>
+	<accuracyMod>100</accuracyMod>
+	<sp>0</sp>
+	<breachChance>10</breachChance>
+	<cooldown>30</cooldown>
+	<power>3</power>
+	<cost>90</cost>
+	<rarity>0</rarity>
+	<radius>0</radius>
+	<spin>720</spin>
+	<drone_targetable>1</drone_targetable>
+	<projectiles>
+		<projectile count="1" fake="false">debris_small</projectile>
+	</projectiles>
+	<explosion>explosion_massive</explosion>
+	<launchSounds>
+		<sound>driver</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>driver_explosive</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_DRIVER_SHOTGUN">
+	<type>BURST</type>
+	<title>Flak Cannon Driver</title>
+	<short>Flak Driver</short>
+	<tip>aa_tip_driver</tip>
+	<desc>Shells from this mass driver explode in flight, scattering a spray of light flak across the target zone.</desc>
+	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<speed>2147483647</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<breachChance>3</breachChance>
+	<cooldown>27</cooldown>
+	<power>3</power>
+	<cost>90</cost>
+	<rarity>0</rarity>
+	<radius>80</radius>
+	<spin>720</spin>
+	<drone_targetable>1</drone_targetable>
+	<projectiles>
+		<projectile count="7" fake="false">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>driver</sound>
@@ -2239,7 +2468,89 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver_burst</weaponArt>
+	<weaponArt>driver_flak</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_DRIVER_ION">
+	<type>BURST</type>
+	<title>Electrified Mass Driver</title>
+	<short>Ion Driver</short>
+	<tip>aa_tip_driver</tip>
+	<desc>This mass driver contains shells filled with plasma that annihilate shields and cripple systems with ease.</desc>
+	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
+	<ion>4</ion>
+	<speed>2147483647</speed>
+	<shots>1</shots>
+	<accuracyMod>100</accuracyMod>
+	<sp>-2</sp>
+	<cooldown>30</cooldown>
+	<power>3</power>
+	<cost>100</cost>
+	<rarity>0</rarity>
+	<radius>0</radius>
+	<spin>720</spin>
+	<drone_targetable>1</drone_targetable>
+	<projectiles>
+		<projectile count="1" fake="false">debris_small</projectile>
+	</projectiles>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>driver</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>driver_ion</weaponArt>
+	<iconImage>heavyL</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_DRIVER_PARTICLE">
+	<type>BURST</type>
+	<title>Accelerated Mass Driver</title>
+	<short>Part. Driver</short>
+	<tip>aa_tip_driver</tip>
+	<desc>Elementary particles stream through the shells shot from this cannon, crushing a ship's systems.</desc>
+	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
+	<sysDamage>6</sysDamage>
+	<speed>2147483647</speed>
+	<shots>1</shots>
+	<accuracyMod>100</accuracyMod>
+	<fireChance>10</fireChance>
+	<cooldown>25</cooldown>
+	<power>3</power>
+	<cost>100</cost>
+	<rarity>0</rarity>
+	<radius>0</radius>
+	<spin>720</spin>
+	<drone_targetable>1</drone_targetable>
+	<projectiles>
+		<projectile count="1" fake="false">debris_small</projectile>
+	</projectiles>
+	<explosion>explosion_particle</explosion>
+	<launchSounds>
+		<sound>driver</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull1</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>driver_particle</weaponArt>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
@@ -2258,8 +2569,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<radius>55</radius>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
+	<fireChance>2</fireChance>
 	<cooldown>1</cooldown>
 	<power>0</power>
 	<cost>110</cost>
@@ -2311,8 +2621,6 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
-	<stunChance>0</stunChance>
 	<cooldown>1</cooldown>
 	<power>0</power>
 	<cost>100</cost>
@@ -2380,59 +2688,6 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	</hitShipSounds>
 	<weaponArt>pointer</weaponArt>
 	<iconImage>bomb</iconImage>
-</weaponBlueprint>
-
-<weaponBlueprint name="AA_ACID_LAUNCHER">
-	<type>BURST</type>
-	<drone_targetable>1</drone_targetable>
-	<title>A.C.I.D. Launcher</title>
-	<short>A.C.I.D.</short>
-	<tip>aa_tip_acid</tip>
-	<desc>A specialized weapon that loads projectiles with a corrosive mixture. On impact, the mixture coats the inside of rooms, doubling all system and crew damage within while it remains.</desc>
-	<tooltip>No.</tooltip>
-	<damage>0</damage>
-	<shots>1</shots>
-	<sp>0</sp>
-	<roomStatBoosts>
-		<statBoost name="allDamageTakenMultiplier">
-			<boostType>MULT</boostType>
-			<amount>1.5</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<droneTarget>CREW</droneTarget>
-			<duration>20</duration>
-			<roomAnim renderLayer="1">
-				<anim animType="default" animBorder="0">tile_acid</anim>
-				<tileAnim>tile_acid</tileAnim>
-			</roomAnim>
-		</statBoost>
-	</roomStatBoosts>
-	<cooldown>10</cooldown>
-	<power>1</power>
-	<cost>90</cost>
-	<bp>12</bp>
-	<speed>60</speed>
-	<rarity>0</rarity>
-	<projectiles>
-		<projectile count="1" fake="false">acid_launcher_projectile</projectile>
-	</projectiles>
-	<image>laser_stun</image>
-	<launchSounds>
-		<sound>acid_launch</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>acid_hit</sound>
-	</hitShipSounds>
-	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
-	</hitShieldSounds>
-	<missSounds>
-		<sound>miss</sound>
-	</missSounds>
-	<weaponArt>acid_launcher</weaponArt>
-	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
 <!-- /// DRONES /// -->
@@ -2517,7 +2772,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<power>2</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
-	<speed>6</speed>
+	<speed>5</speed>
 	<cost>50</cost>
 	<bp>3</bp>
 	<droneImage>aa_drone_disruptor_a1</droneImage>
@@ -2534,7 +2789,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<power>3</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
-	<speed>5</speed>
+	<speed>4</speed>
 	<cost>50</cost>
 	<bp>3</bp>
 	<droneImage>aa_drone_disruptor_a2</droneImage>
@@ -2551,7 +2806,7 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
 	<power>4</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
-	<speed>3</speed>
+	<speed>2</speed>
 	<cost>50</cost>
 	<bp>3</bp>
 	<droneImage>aa_drone_disruptor_a3</droneImage>
@@ -2661,6 +2916,105 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
     <iconImage>combat</iconImage>
 </droneBlueprint>
 
+<!-- // TOG. SCOUT // -->
+
+<weaponBlueprint name="AA_DRONE_BEAM_STUN"> 
+	<type>BEAM</type>
+	<title>Drone Stun Beam</title>
+	<locked>1</locked>
+	<desc>This was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<stun>15</stun>
+	<color>
+		<r>255</r>
+		<g>230</g>
+		<b>94</b>
+	</color>
+	<speed>10</speed>
+	<length>40</length>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_stun</weaponArt> 
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_DRONE_DECOY">
+	<type>BOMB</type>
+	<title>Drone Projector</title>
+	<desc>This was never supposed to fall into your hands.</desc>
+	<damage>0</damage>
+	<shots>1</shots>
+	<sp>0</sp>
+	<spawnCrew>
+		<number>1</number>
+		<race>hologram</race>
+		<lifetime>20</lifetime>
+		<noSlot>true</noSlot>
+		<statBoosts>
+			<statBoost name="noClone">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>999999</priority>
+			</statBoost>
+		</statBoosts>
+	</spawnCrew>
+	<crewSpawnChance>10</crewSpawnChance>
+	<rarity>0</rarity>
+	<image>scan</image>
+	<explosion>scan_exp</explosion>
+	<launchSounds>
+		<sound>decoy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>miss</sound>
+	</hitShipSounds>
+	<weaponArt>scanner</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<blueprintList name="AA_LIST_TOGGLE_SCOUT">
+    <name>AA_SCOUT_STUN</name>
+    <name>AA_SCOUT_DECOY</name>
+</blueprintList>
+<droneBlueprint name="AA_SCOUT_STUN">
+    <type>COMBAT</type>
+    <tip>tip_toggle_combat</tip>
+    <title>Scout Drone [STUN]</title>
+    <short>Scout [S]</short>
+    <desc>[CURRENT MODE: Stun] Designed to poke at both ships and planets without harm to itself, this drone is very useful for reconaissance and occasional combat operations.</desc>
+    <power>1</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>10</speed>
+    <cost>65</cost>
+    <bp>3</bp>
+    <droneImage>aa_drone_scout_b</droneImage>
+    <weaponBlueprint>AA_DRONE_BEAM_STUN</weaponBlueprint>
+    <rarity>0</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="AA_SCOUT_DECOY">
+    <type>COMBAT</type>
+    <tip>tip_toggle_combat</tip>
+    <title>Scout Drone [DECOY]</title>
+    <short>Scout [D]</short>
+    <desc>[CURRENT MODE: Decoy] Designed to poke at both ships and planets without harm to itself, this drone is very useful for reconaissance and occasional combat operations.</desc>
+    <power>1</power>
+    <cooldown>1000</cooldown>
+    <dodge>0</dodge>
+    <speed>6</speed>
+    <cost>65</cost>
+    <bp>3</bp>
+    <droneImage>aa_drone_scout_s</droneImage>
+    <weaponBlueprint>AA_DRONE_DECOY</weaponBlueprint>
+    <rarity>5</rarity>
+    <iconImage>combat</iconImage>
+</droneBlueprint>
+
 <!-- // SPLICER // -->
 
 <weaponBlueprint name="AA_DRONE_LASER_SPLICER">
@@ -2716,104 +3070,6 @@ Buy/Sell Price: 75~/36~</descriptionOverride>
     <droneImage>aa_drone_splicer</droneImage>
     <weaponBlueprint>AA_DRONE_LASER_SPLICER</weaponBlueprint>
     <rarity>0</rarity>
-    <iconImage>combat</iconImage>
-</droneBlueprint>
-
-<!-- // TOG. SCOUT // -->
-
-<weaponBlueprint name="AA_DRONE_BOMB_STUN"> 
-	<type>BOMB</type>
-	<title>Drone Stun Bomb</title>
-	<locked>1</locked>
-	<desc>This bomb weapon is integrated into certain drones. It was never supposed to fall into your hands.</desc>
-	<damage>0</damage>
-	<stun>15</stun>
-	<accuracyMod>30</accuracyMod>
-	<shots>1</shots>
-	<rarity>0</rarity>
-	<image>bomb_stun</image>
-	<explosion>explosion_big1_ion</explosion>
-	<launchSounds>
-		<sound>bombTeleport</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>smallExplosion</sound>
-	</hitShipSounds>
-	<weaponArt>bomblauncher_stun</weaponArt> 
-	<iconImage>bomb</iconImage>
-</weaponBlueprint>
-<weaponBlueprint name="AA_DRONE_DECOY">
-	<type>BOMB</type>
-	<title>Drone Projector</title>
-	<desc>This holographic device is integrated into certain drones. It was never supposed to fall into your hands.</desc>
-	<damage>0</damage>
-	<shots>1</shots>
-	<sp>0</sp>
-	<spawnCrew>
-		<number>1</number>
-		<race>hologram</race>
-		<lifetime>20</lifetime>
-		<noSlot>true</noSlot>
-		<statBoosts>
-			<statBoost name="noClone">
-				<boostType>SET</boostType>
-				<value>true</value>
-				<shipTarget>ALL</shipTarget>
-				<crewTarget>ALL</crewTarget>
-				<priority>999999</priority>
-			</statBoost>
-		</statBoosts>
-	</spawnCrew>
-	<crewSpawnChance>10</crewSpawnChance>
-	<rarity>0</rarity>
-	<image>scan</image>
-	<explosion>scan_exp</explosion>
-	<launchSounds>
-		<sound>decoy</sound>
-	</launchSounds>
-	<hitShipSounds>
-		<sound>miss</sound>
-	</hitShipSounds>
-	<weaponArt>scanner</weaponArt>
-	<iconImage>bomb</iconImage>
-</weaponBlueprint>
-
-<blueprintList name="AA_LIST_TOGGLE_SCOUT">
-    <name>AA_SCOUT_STUN</name>
-    <name>AA_SCOUT_DECOY</name>
-</blueprintList>
-<droneBlueprint name="AA_SCOUT_STUN">
-    <type>COMBAT</type>
-    <tip>tip_toggle_combat</tip>
-    <title>Scout Drone [Stun]</title>
-    <short>Scout [S]</short>
-    <desc>[CURRENT MODE: Stun] Designed to poke at both ships and planets without harm to itself, this drone is very useful for reconaissance and occasional combat operations.</desc>
-    <power>1</power>
-    <cooldown>1000</cooldown>
-    <dodge>0</dodge>
-    <speed>10</speed>
-    <cost>65</cost>
-    <bp>3</bp>
-    <droneImage>aa_drone_scout_b</droneImage>
-    <weaponBlueprint>AA_DRONE_BOMB_STUN</weaponBlueprint>
-    <rarity>0</rarity>
-    <iconImage>combat</iconImage>
-</droneBlueprint>
-<droneBlueprint name="AA_SCOUT_DECOY">
-    <type>COMBAT</type>
-    <tip>tip_toggle_combat</tip>
-    <title>Scout Drone [Decoy]</title>
-    <short>Scout [D]</short>
-    <desc>[CURRENT MODE: Decoy] Designed to poke at both ships and planets without harm to itself, this drone is very useful for reconaissance and occasional combat operations.</desc>
-    <power>1</power>
-    <cooldown>1000</cooldown>
-    <dodge>0</dodge>
-    <speed>6</speed>
-    <cost>65</cost>
-    <bp>3</bp>
-    <droneImage>aa_drone_scout_s</droneImage>
-    <weaponBlueprint>AA_DRONE_DECOY</weaponBlueprint>
-    <rarity>5</rarity>
     <iconImage>combat</iconImage>
 </droneBlueprint>
 

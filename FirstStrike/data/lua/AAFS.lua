@@ -49,6 +49,40 @@ function mods.alder.userdata_table(userdata, tableName)
 end
 local userdata_table = mods.alder.userdata_table
 
+-- [Find the ID of a room at the given location.]
+local function get_room_at_location(shipManager, location, includeWalls)
+    return Hyperspace.ShipGraph.GetShipInfo(shipManager.iShipId):GetSelectedRoom(location.x, location.y, includeWalls)
+end
+
+-- [Returns a table, where the indices are the IDs of all adjacent rooms to the target, and the values are the rooms' coordinates.]
+local function get_adjacent_rooms(shipId, roomId, diagonals)
+    local shipGraph = Hyperspace.ShipGraph.GetShipInfo(shipId)
+    local roomShape = shipGraph:GetRoomShape(roomId)
+    local adjacentRooms = {}
+    local currentRoom = nil
+    local function check_for_room(x, y)
+        currentRoom = shipGraph:GetSelectedRoom(x, y, false)
+        if currentRoom > -1 and not adjacentRooms[currentRoom] then
+            adjacentRooms[currentRoom] = Hyperspace.Pointf(x, y)
+        end
+    end
+    for offset = 0, roomShape.w - 35, 35 do
+        check_for_room(roomShape.x + offset + 17, roomShape.y - 17)
+        check_for_room(roomShape.x + offset + 17, roomShape.y + roomShape.h + 17)
+    end
+    for offset = 0, roomShape.h - 35, 35 do
+        check_for_room(roomShape.x - 17,               roomShape.y + offset + 17)
+        check_for_room(roomShape.x + roomShape.w + 17, roomShape.y + offset + 17)
+    end
+    if diagonals then
+        check_for_room(roomShape.x - 17,               roomShape.y - 17)
+        check_for_room(roomShape.x + roomShape.w + 17, roomShape.y - 17)
+        check_for_room(roomShape.x + roomShape.w + 17, roomShape.y + roomShape.h + 17)
+        check_for_room(roomShape.x - 17,               roomShape.y + roomShape.h + 17)
+    end
+    return adjacentRooms
+end
+
 -- [A function that does nothing.]
 
 function mods.alder.doNothing()
@@ -69,8 +103,6 @@ statChargers["AA_SHOTGUN_CHARGEGUN_DAMAGE"] = {{stat = "iDamage"}}
 statChargers["AA_ION_CHARGEGUN_DAMAGE"] = {{stat = "iIonDamage"}}
 statChargers["AA_ENERGY_CHARGEGUN_DAMAGE"] = {{stat = "iIonDamage"}}
 statChargers["AA_LASER_PARTICLE_CHARGEGUN_DAMAGE"] = {{stat = "iSystemDamage"}}
-
-statChargers["AA_ROCKETS_1"] = {{stat = "iDamage"}}
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local statBoosts = statChargers[weapon.blueprint.name]
@@ -243,6 +275,7 @@ end)
 
 
 -- [Pinpoint Shotguns - Replace burst projectile with beam.]
+
 local pinpoint1 = Hyperspace.Blueprints:GetWeaponBlueprint("AA_SHOCK_CANNON_PROJECTILE")
 
 local burstsToBeams = {}
@@ -264,6 +297,65 @@ end)
 
 
 
+-- [Charge Holders - Mass Drivers do not lose charge when unpowered.]
+
+mods.alder.holders = {}
+local holders = mods.alder.holders
+
+holders["AA_DRIVER"] = {
+    chargeRate = 0.25 -- Rate of usual at which to charge; 1 = normal charge rate
+}
+holders["AA_DRIVER_BIO"] = {
+    chargeRate = 0.25
+}
+holders["AA_DRIVER_EXPLOSIVE"] = {
+    chargeRate = 0.25
+}
+holders["AA_DRIVER_SHOTGUN"] = {
+    chargeRate = 0.25
+}
+holders["AA_DRIVER_ION"] = {
+    chargeRate = 0.25
+}
+holders["AA_DRIVER_PARTICLE"] = {
+    chargeRate = 0.25
+}
+
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
+    for weapon in vter(shipManager:GetWeaponList()) do
+        if (not weapon.powered) and holders[weapon.blueprint.name] then
+            weapon.cooldown.first = (math.min(weapon.cooldown.first + (Hyperspace.FPS.SpeedFactor * (6 + (holders[weapon.blueprint.name].chargeRate * weapon.cooldownModifier))) / 16, weapon.cooldown.second - 0.01))
+        end
+    end
+end)
+
+
+
+-- [Area-Effect Weapons - A specific weapon's damage bleeds over into other rooms.]
+
+mods.alder.aoeWeapons = {}
+local aoeWeapons = mods.alder.aoeWeapons
+
+aoeWeapons["AA_DRIVER_EXPLOSIVE"] = Hyperspace.Damage()
+aoeWeapons["AA_DRIVER_EXPLOSIVE"].iSystemDamage = 2
+
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipManager, projectile, location, damage, shipFriendlyFire)
+    local weaponName = nil
+    pcall(function() weaponName = Hyperspace.Get_Projectile_Extend(projectile).name end)
+    local aoeDamage = aoeWeapons[weaponName]
+    if aoeDamage then
+        Hyperspace.Get_Projectile_Extend(projectile).name = ""
+        for roomId, roomPos in pairs(get_adjacent_rooms(shipManager.iShipId, get_room_at_location(shipManager, location, false), false)) do
+            shipManager:DamageArea(roomPos, aoeDamage, true)
+        end
+        Hyperspace.Get_Projectile_Extend(projectile).name = weaponName
+    end
+end)
+
+
+
+-- [Sustaining Beams - Set beam speed to 0, drill into the enemy for the occasional periodic hit of damage identical to regular beams. Again, thank you, Vertaal!]
+
 mods.alder.sustainBeams = {}
 local sustainBeams = mods.alder.sustainBeams
 sustainBeams["AA_BEAM_SUSTAIN"] = {
@@ -272,8 +364,6 @@ sustainBeams["AA_BEAM_SUSTAIN"] = {
     sabotageRate = 1, -- Rate at which beam sabotages systems
     sound = "sysExplosion", -- Sound that plays every pulse
 }
-
--- ["Sovnya" Sustaining Beam - Set beam speed to 0, drill into the enemy for the occasional periodic hit of damage identical to regular beams. Again, thank you, Vertaal!]
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE,
 function(Projectile, Weapon)
