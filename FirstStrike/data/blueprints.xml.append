@@ -21,7 +21,6 @@
 
 	Default Price: 60~   -   Selling Price: 30~
 	</descriptionOverride>
-	<tooltip>P.</tooltip>
 	<tooltipOverride>Required Power: 1
 		Charge Time: 12 seconds
 
@@ -75,7 +74,6 @@
 	<short>Phase Part.</short>
 	<tip>tip_particle_laser</tip>
 	<desc>This particle weapon sacrifices speed and the ability to start fires in exchange for phasing through shields.</desc>
-	<tooltip>Part Accelerator; 1 system damage, 3 shots. 16 second cooldown. No fire chance.</tooltip>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<sp>10</sp>
@@ -115,7 +113,6 @@
 	<short>Part. Mini</short>
 	<tip>tip_particle_laser</tip>
 	<desc>A small, fast firing particle accelerator weapon. It is rendered useless by shields, but can output lots of gradual system damage when left unchecked.</desc>
-	<tooltip>Particle accelerator, 1 system damage per shot.</tooltip>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<radius>25</radius>
@@ -174,7 +171,6 @@
 
 	Default Price: 60~   -   Selling Price: 30~
 	</descriptionOverride>
-	<tooltip>P.</tooltip>
 	<tooltipOverride>Required Power: 1
 		Charge Time: 12 seconds
 
@@ -240,7 +236,6 @@
 
 	Default Price: 80~   -   Selling Price: 40~
 	</descriptionOverride>
-	<tooltip>P.</tooltip>
 	<tooltipOverride>Required Power: 3
 		Charge Time: 14 seconds
 
@@ -303,7 +298,6 @@
 
 	Default Price: 90~   -   Selling Price: 45~
 	</descriptionOverride>
-	<tooltip>Fires 1 shot, repairs 2 damage.</tooltip>
 	<tooltipOverride>Required Power: 2
 		Charge Time: 13 seconds
 
@@ -347,8 +341,30 @@
 	<title>Cumulative Laser</title>
 	<short>Cum. Laser</short>
 	<tip>aa_tip_accumulator</tip>
-	<desc>An unusual model of Laser that, when left to charge, can increase the damage of its shots to an incredible degree.</desc>
-	<tooltip>Fires a single shot that deals 1 damage. Damage increases the more it charges.</tooltip>
+	<descriptionOverride>An unusual model of Laser that, when left to charge, can increase the damage of its shots to an incredible degree.
+
+	Stats:
+	Required Power: 2
+	Charge Time: 5 seconds
+
+	Max Charges: 3
+	Charges damage instead of shot count
+	
+	Base Hull Damage: 1/2/3
+	Total System Damage: 1/2/3
+	Total Crew Damage: 15/30/45
+
+	Default Price: 70~   -   Selling Price: 35~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 5 seconds
+	
+		Max Charges: 3
+		Charges damage instead of shot count
+		
+		Base Hull Damage: 1/2/3
+		Total System Damage: 1/2/3
+		Total Crew Damage: 15/30/45</tooltipOverride>
 	<damage>1</damage>
 	<shots>2</shots>
 	<cooldown>5</cooldown>
@@ -384,14 +400,36 @@
 	<title>Cumulative Particle Accelerator</title>
 	<short>Cum. Particle</short>
 	<tip>aa_tip_accumulator</tip>
-	<desc>Instead of firing a multitude of streamlied bolts, this Particle Accelerator charges a single bolt of varying strength.</desc>
-	<tooltip>Fires a single shot that deals 1 system damage. Damage increases the more it charges.</tooltip>
+	<descriptionOverride>Instead of firing a multitude of streamlined bolts, this Particle Accelerator charges a single bolt of varying strength.
+
+	Stats:
+	Required Power: 2
+	Charge Time: 4 seconds
+
+	Max Charges: 3
+	Charges damage instead of shot count
+	
+	Total System Damage: 1/2/3
+
+	Fire Chance: 30%
+
+	Default Price: 80~   -   Selling Price: 40~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 4 seconds
+	
+		Max Charges: 3
+		Charges damage instead of shot count
+		
+		Total System Damage: 1/2/3\
+	
+		Fire Chance: 30%</tooltipOverride>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<shots>1</shots>
 	<cooldown>4</cooldown>
 	<power>2</power>
-	<cost>90</cost>
+	<cost>80</cost>
 	<bp>2</bp>
 	<rarity>5</rarity>
 	<fireChance>3</fireChance>
@@ -424,7 +462,6 @@
 	<title>'Athena' Electrified Missiles</title>
 	<short>'Athena'</short>
 	<desc>The same technology behind ion weapons has been applied to this ballistic launcher, and the natural shield-piercing properties of missile technology cause its projectiles to behave like those of a phaser.</desc>
-	<tooltip>Fires 1 missile; does 2 damage; pierces all shields.</tooltip>
 	<damage>2</damage>
 	<ion>2</ion>
 	<accuracyMod>10</accuracyMod>
@@ -465,7 +502,6 @@
 	<title>'Athena' Electrified Missiles [E]</title>
 	<short>'Athena' [E]</short>
 	<desc>This was never supposed to fall into your hands.</desc>
-	<tooltip>Fires 1 missile; does 2 damage; pierces all shields.</tooltip>
 	<damage>2</damage>
 	<ion>2</ion>
 	<missiles>1</missiles>
@@ -516,7 +552,6 @@
 	Layers Crushed: 12
 
 	Default Price: 110~   -   Selling Price: 55~</descriptionOverride>
-	<tooltip>P.</tooltip>
 	<tooltipOverride>Required Power: 3
 		Charge Time: 20 seconds
 
@@ -565,7 +600,6 @@
 	<title>Smashing Missiles [E]</title>
 	<short>Smash M. [E]</short>
 	<descriptionOverride>This was never supposed to fall into your hands.</descriptionOverride>
-	<tooltip>Proton missiles.</tooltip>
 	<damage>0</damage>
 	<missiles>1</missiles>
 	<shots>1</shots>
@@ -608,7 +642,6 @@
 	<short>Prism Ion</short>
 	<tip>aa_tip_ion_rainbow</tip>
 	<desc>A team of specialists designed this weapon to capture every kind of ion blaster in a single frame. Though the project was a partial success, there is no way to control which kind of blast gets fired.</desc>
-	<tooltip>Every Ion you could want, packed into a singular, cozy chassis.</tooltip>
 	<damage>0</damage>
 	<spin>720</spin>
 	<shots>1</shots>
@@ -932,13 +965,38 @@
 	<title>Cumulative Ion</title>
 	<short>Cum. Ion</short>
 	<tip>aa_tip_accumulator</tip>
-	<desc>This Ion weapon has the ability to vary the strength of its blast, matching both the lightest and heaviest of its class.</desc>
-	<tooltip>Fires one ion blast that deals 1 damage. Damage increases the more it charges.</tooltip>
+	<descriptionOverride>This Ion weapon has the ability to vary the strength of its blast, matching both the lightest and heaviest of its class.
+
+	Stats:
+	Required Power: 2
+	Charge Time: 6 seconds
+
+	Max Charges: 3
+	Charges damage instead of shot count
+	
+	Ion Damage: 1/2/3
+
+	Stun Chance: 30% (3 seconds long)
+
+	Default Price: 80~   -   Selling Price: 40~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 6 seconds
+
+		Max Charges: 3
+		Charges damage instead of shot count
+		
+		Ion Damage: 1/2/3
+
+		Stun Chance: 30% (3 seconds long)
+	
+		Fire Chance: 30%</tooltipOverride>
 	<ion>1</ion>
 	<shots>1</shots>
 	<cooldown>6</cooldown>
 	<power>2</power>
 	<speed>30</speed>
+	<stunChance>3</stunChance>
 	<cost>80</cost>
 	<bp>2</bp>
 	<rarity>5</rarity>
@@ -977,7 +1035,6 @@
 	<short>UV Energy</short>
 	<locked>1</locked>
 	<desc>Energy weapons can disable systems and cause hull damage. This particular model is tuned specifically to irradiate and kill crew.</desc>
-	<tooltip>Fires a single blast that does 1 ion damage and 1 hull damage. Can hit and disable shields as well as systems.</tooltip>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
 	<persDamage>2</persDamage>
@@ -1048,8 +1105,32 @@
 	<title>Cumulative Energy</title>
 	<short>Cum. Energy</short>
 	<tip>aa_tip_accumulator</tip>
-	<desc>A multitude of internal capacitors allows this Energy Cannon to hold in a blast, concentrating its hull-cracking power.</desc>
-	<tooltip>Fires one energy blast that deals 1 damage and 1 ion damage. Damage increases the more it charges.</tooltip>
+	<descriptionOverride>A multitude of internal capacitors allows this Energy Cannon to hold in a blast, concentrating its electrifying power.
+
+	Stats:
+	Required Power: 2
+	Charge Time: 6 seconds
+
+	Max Charges: 3
+	Charges damage instead of shot count
+	
+	Base Hull Damage: 1
+	Ion Damage: 1/2/3
+
+	Fire Chance: 30%
+
+	Default Price: 90~   -   Selling Price: 45~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 6 seconds
+
+		Max Charges: 3
+		Charges damage instead of shot count
+		
+		Base Hull Damage: 1
+		Ion Damage: 1/2/3
+	
+		Fire Chance: 30%</tooltipOverride>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
 	<noPersDamage>true</noPersDamage>
@@ -1092,8 +1173,6 @@
 	<tip>aa_tip_beam_sustain</tip>
 	<title>'Sovnya' Sustaining Beam</title>
 	<short>'Sovnya'</short>
-	<desc>Overriden.</desc>
-	<tooltip>Beam weapon, drills into a single room.</tooltip>
 	<descriptionOverride>This Beam weapon's advanced cooling allows it to behave differently from other Beams. It focuses on a single point and periodically inflicts damage as a Beam for as long as it is powered and locked on.
 	
 	Stats:
@@ -1146,7 +1225,6 @@
 
 	Default Price: 70~   -   Selling Price: 35~
 	</descriptionOverride>
-	<tooltip>Beam weapon with extended line. 1 damage per room.</tooltip>
 	<tooltipOverride>Required Power: 2
 		Charge Time: 14 seconds
 
@@ -1200,7 +1278,6 @@
 	
 		Default Price: 80~   -   Selling Price: 40~
 		</descriptionOverride>
-	<tooltip>2.</tooltip>
 	<tooltipOverride>Required Power: 1
 		Charge Time: 15 seconds
 
@@ -1246,14 +1323,13 @@
 	<title>'Hanbo' Disruptor</title>
 	<short>'Hanbo'</short>
 	<desc>This curious, beam-like weapon ionizes systems and shields in much the same manner as ion weapons.</desc>
-	<tooltip>Deals 1 ion damage per system it hits.</tooltip>
 	<ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>3</stunChance>
-	<cooldown>9</cooldown>
+	<cooldown>11</cooldown>
 	<color>
 		<r>133</r>
 		<g>231</g>
@@ -1265,7 +1341,7 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<image>impact_disruptor</image>
-	<length>60</length>
+	<length>55</length>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
@@ -1279,14 +1355,13 @@
 	<title>'Jo' Disruptor</title>
 	<short>'Jo'</short>
 	<desc>A potent weapon that can paralyze large sections of a ship, creating chaos aboard.</desc>
-	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
 	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>4</stunChance>
-	<cooldown>21</cooldown>
+	<cooldown>19</cooldown>
 	<color>
 		<r>133</r>
 		<g>231</g>
@@ -1296,7 +1371,7 @@
 	<cost>90</cost>
 	<bp>7</bp>
 	<rarity>0</rarity>
-	<length>130</length>
+	<length>120</length>
 	<image>impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_light</sound>
@@ -1311,14 +1386,13 @@
 	<short>'Bo'</short>
 	<tip>aa_tip_disruptor</tip>
 	<desc>This devastating Disruptor variant is known to shut down entire ships with a single sweep.</desc>
-	<tooltip>Deals 3 ion damage per system it hits.</tooltip>
 	<ion>3</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>6</stunChance>
-	<cooldown>30</cooldown>
+	<cooldown>28</cooldown>
 	<color>
 		<r>133</r>
 		<g>231</g>
@@ -1343,7 +1417,6 @@
 	<title>'Kusarigama' Rad-Disruptor</title>
 	<short>'Kusarigama'</short>
 	<desc>Though illegal in the territory from whence Disruptors came, this model's anti-personnel tuning makes it a favorite of pirates and other less savory actors.</desc>
-	<tooltip>Deals 2 ion damage per system it hits, and 60 damage to all crew it hits.</tooltip>
 	<persDamage>4</persDamage>
 	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
@@ -1403,7 +1476,6 @@
 	<title>'Kanemuchi' Neural Disruptor</title>
 	<short>'Kanemuchi'</short>
 	<desc>This Disruptor is charged with stun energy, serving a similar purpose to the more common Partisan.</desc>
-	<tooltip>Deals 2 ion damage per system it hits, alongside stunning crew.</tooltip>
 	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<sp>0</sp>
@@ -1435,7 +1507,6 @@
 	<title>'Tonfa' Phasing Disruptor</title>
 	<short>'Tonfa'</short>
 	<desc>This powerful ion beam can ionize large swaths of a ship even through shields. However, it sweeps slowly.</desc>
-	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
 	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<sp>10</sp>
@@ -1468,7 +1539,6 @@
 	<title>'Tetsubo' Energized Disruptor</title>
 	<short>'Tetsubo'</short>
 	<desc>Tuned to tear through hull alongside the usual effect of electrifying systems, this Disruptor serves double duty.</desc>
-	<tooltip>Deals 2 ion damage per system it hits, and 1 hull damage per room.</tooltip>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
 	<noPersDamage>true</noPersDamage>
@@ -1503,7 +1573,6 @@
     <title>'Bokken' Adaptive Disruptor</title>
     <short>'Bokken'</short>
     <desc>A potentially incredibly powerful Disruptor, adapting to its environment. Damage increases by 1 every time you fire, with a very high limit on the amount of increased damage.</desc>
-    <tooltip>Deals 1 ion damage per system it hits, plus 1 for every time it has fired.</tooltip>
     <ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
     <sp>0</sp>
@@ -1537,7 +1606,6 @@
 	<title>'Tanbo' Conservative Disruptor</title>
 	<short>'Tanbo'</short>
 	<desc>This particular model of Disruptor is fairly slow, but consumes no power to run.</desc>
-	<tooltip>Deals 2 ion damage per system it hits.</tooltip>
 	<ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<sp>0</sp>
@@ -1585,7 +1653,6 @@
 	Stun Chance: 100% (5 seconds long)
 
 	Default Price: 75~   -   Selling Price: 37~</descriptionOverride>
-	<tooltip>P.</tooltip>
 	<tooltipOverride>Required Power: 2
 		Charge Time: 20 seconds
 
@@ -1626,7 +1693,6 @@
 	<short>Smash Bomb [E]</short>
 	<locked>1</locked>
 	<descriptionOverride>This was never supposed to fall into your hands.</descriptionOverride>
-	<tooltip>Bomb weapon; requires a missile; does 1 damage to target system. Can target your own ship.</tooltip>
 	<damage>0</damage>
 	<missiles>1</missiles>
 	<shots>1</shots>
@@ -1668,7 +1734,6 @@
 	
 		Default Price: 80~   -   Selling Price: 40~
 		</descriptionOverride>
-	<tooltip>2.</tooltip>
 	<tooltipOverride>Required Power: 1
 		Charge Time: 15 seconds
 
@@ -1716,7 +1781,6 @@
 	<short>Decay B.</short>
 	<locked>1</locked>
 	<desc>This self-teleporting explosive causes no direct damage. Instead, its bizarre technologies destabilize the structure of a room, causing its systems to slowly erode away.</desc>
-	<tooltip>No damage, but inflicts an effect that decays systems.</tooltip>
 	<damage>0</damage>
 	<accuracyMod>30</accuracyMod>
 	<missiles>1</missiles>
@@ -1761,7 +1825,6 @@
 	<short>Electron</short>
 	<locked>1</locked>
 	<desc>This weapon creates an electric charge in a room of your choice, inflicting a small amount of ion damage. Unlike many other weapons, the Electron Inducer cannot be defended against via conventional means.</desc>
-	<tooltip>Creates an electric pulse anywhere, dealing 2 ion damage.</tooltip>
 	<damage>0</damage>
 	<ion>2</ion>
 	<accuracyMod>100</accuracyMod>
@@ -1797,7 +1860,6 @@
 	<short>Hv. Electron</short>
 	<locked>1</locked>
 	<desc>A stronger variant of the Electronic Inducer, inflicting twice the damage for twice the power.</desc>
-	<tooltip>Creates an electric pulse anywhere, dealing 4 ion damage.</tooltip>
 	<damage>0</damage>
 	<ion>4</ion>
 	<accuracyMod>100</accuracyMod>
@@ -1836,7 +1898,6 @@
 	<short>Part. Flak</short>
 	<tip>aa_tip_particle_flak</tip>
 	<desc>This Flak cannon fires a blast of 4 projectiles charged with exotic particles that shred systems alongside normal hull damage.</desc>
-	<tooltip>Fires a blast of debris across a random area doing up to 4 damage and 8 system damage.</tooltip>
 	<radius>55</radius>
 	<damage>1</damage>
 	<sysDamage>2</sysDamage>
@@ -1884,7 +1945,6 @@
 	<short>Conserv. F.</short>
 	<tip>tip_conservative</tip>
 	<desc>Slow-charging, 3-shot flak cannon. Deals good damage for no power, but it is hard to aim.</desc>
-	<tooltip>Conservative weapons feed off of power leaks in a system, so they don't need to use any power themselves. As consequence, they take longer to charge and require another weapon to be powered.</tooltip>
 	<radius>55</radius>
 	<damage>1</damage>
 	<shots>1</shots>
@@ -1928,18 +1988,47 @@
 	<drone_targetable>1</drone_targetable> 
 	<flavorType>Physical Projectile Blast</flavorType>
 	<drone_targetable>1</drone_targetable>
-	<title>Cumulative Flak</title>
+	<title>Cumulative Flak Gun</title>
 	<tip>aa_tip_accumulator</tip>
 	<short>Cum. Flak</short>
-	<desc>This versatile Flak Cannon has the ability to gradually refine the shrapnel it fires, increasing the damage its shots deal as it waits.</desc>
-	<tooltip>Fires a blast of debris across a random area doing up to 3 damage. The damage of each shot increases by 1 per charge.</tooltip>
+	<descriptionOverride>This versatile Flak Cannon has the ability to gradually refine the shrapnel it fires, increasing the damage its shots deal as it waits.
+
+	Stats:
+	Required Power: 2
+	Charge Time: 11 seconds
+
+	Shot Radius: 45
+	Shots Per Charge: 3
+	Max Charges: 3
+	Charges damage instead of shot count
+	
+	Base Hull Damage: 1/2/3
+	Total System Damage: 1/2/3
+	Total Crew Damage: 15/30/45
+
+	Breach Chance: 20%
+
+	Default Price: 85~   -   Selling Price: 42~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 11 seconds
+
+		Shot Radius: 45
+		Shots Per Charge: 3
+		Max Charges: 3
+		Charges damage instead of shot count
+		
+		Base Hull Damage: 1/2/3
+		Total System Damage: 1/2/3
+		Total Crew Damage: 15/30/45
+	
+		Breach Chance: 20%</tooltipOverride>
 	<radius>45</radius>
 	<damage>1</damage>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>0</fireChance>
 	<breachChance>2</breachChance>
-	<cooldown>14</cooldown>
+	<cooldown>11</cooldown>
 	<power>2</power>
 	<chargeLevels>3</chargeLevels>
 	<cost>85</cost>
@@ -1949,7 +2038,7 @@
 	<spin>720</spin>
 	<projectiles>
 		<projectile count="3" fake="false">debris_large_cumulative</projectile>
-		<projectile count="3" fake="true">debris_small</projectile>
+		<projectile count="4" fake="true">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>flak</sound>
@@ -1982,7 +2071,6 @@
 	<desc>A black sheep even among Mine Launchers, this vile weapon fires cloaked, tracking mines that cannot be stopped by anything short of the most aggressive defense drones.
 	
 	At empty beacons provides 3 fleet delay for 7 missiles; always impacts notoriety.</desc>
-	<tooltip>Fires 1 missile; does 1 damage per shot; pierces all shields.</tooltip>
 	<drone_targetable>0</drone_targetable>
 	<radius>45</radius>
 	<spin>50</spin>
@@ -2030,7 +2118,6 @@
 	<desc>This strange Mine Launcher design trades the standard explosives found on most designs for miniaturized particle accelerators, allowing the mines to deal system damage. Let that sink in.
 	
 	At empty beacons provides 2 fleet delay for 7 missiles.</desc>
-	<tooltip>Fires 1 missile; does 1 damage per shot; pierces all shields.</tooltip>
 	<radius>45</radius>
 	<spin>50</spin>
 	<sysDamage>1</sysDamage>
@@ -2077,7 +2164,6 @@
 	<title>Particle Pinpoint</title>
 	<short>Part. P.</short>
 	<desc>This Pinpoint is powered by a particle accelerator, allowing it to annihilate systems with a single shot.</desc>
-	<tooltip>Anti-system pinpoint, dealing 4 system damage.</tooltip>
 	<damage>0</damage>
 	<sysDamage>4</sysDamage>
 	<fireChance>10</fireChance>
@@ -2108,7 +2194,6 @@
 	<title>'Mallet' Capacitor</title>
 	<short>'Mallet'</short>
 	<desc>This weapon uses technology similar to Disruptors, blasting single rooms with a whiff of ionizing energy that travels instantly.</desc>
-	<tooltip>One damage per room beam weapon</tooltip>
 	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<stunChance>5</stunChance>
@@ -2139,7 +2224,6 @@
 	<title>'Sledge' Capacitor</title>
 	<short>'Sledge'</short>
 	<desc>This powerful Pinpoint-like weapon zaps single rooms with a hefty dose of electricity.</desc>
-	<tooltip>One damage per room beam weapon</tooltip>
 	<ion>3</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<stunChance>5</stunChance>
@@ -2170,7 +2254,6 @@
 	<title>'Gavel' Phasing Capacitor</title>
 	<short>'Gavel'</short>
 	<desc>Energy beams tuned to the same frequency as standard shields allow this Capacitor to pierce right through them.</desc>
-	<tooltip>One damage per room beam weapon</tooltip>
 	<ion>2</ion>
 	<sp>10</sp>
 	<ionBeamFix>true</ionBeamFix>
@@ -2201,10 +2284,32 @@
 	<tip>tip_particle_beam</tip>
 	<title>Shock Cannon</title>
 	<short>Shock</short>
-	<desc>A powerful particle cannon that fires multiple straight beams, dealing damage to both systems and crew.</desc>
-	<tooltip>Anti-system pinpoint, dealing 4 system damage.</tooltip>
+	<descriptionOverride>A powerful particle cannon that fires multiple straight beams, dealing damage to both systems and crew.
+
+	Stats:
+	Required Power: 2
+	Charge Time: 16 seconds
+
+	Shot Radius: 40
+	Shots Per Charge: 4
+	Fires straight beams instead of normal projectiles
+	
+	Total System Damage: 4
+	Total Crew Damage: 60
+
+	Default Price: 110~   -   Selling Price: 55~
+	</descriptionOverride>
+	<tooltipOverride>Required Power: 2
+		Charge Time: 16 seconds
+
+		Shot Radius: 40
+		Shots Per Charge: 4
+		Fires straight beams instead of normal projectiles
+		
+		Total System Damage: 4
+		Total Crew Damage: 60</tooltipOverride>
 	<damage>1</damage>
-	<shots>1</shots>
+	<shots>1</shots>	
 	<radius>40</radius>
 	<cooldown>16</cooldown>
 	<speed>0</speed>
@@ -2229,7 +2334,6 @@
 	<title>Shock Cannon Projectile</title>
 	<short>Shock Cannon Projectile</short>
 	<desc>This was never supposed to fall into your hands.</desc>
-	<tooltip>This was never supposed to fall into your hands.</tooltip>
 	<sysDamage>1</sysDamage>
 	<persDamage>2</persDamage>
 	<sp>0</sp>
@@ -2261,7 +2365,6 @@
 	<short>Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>An old-school kinetic weapon. Special electrical adapters allow it to siphon charge even when it is not directly powered, and its projectiles fly forward at blistering speed.</desc>
-	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<damage>3</damage>
 	<speed>2147483647</speed>
 	<shots>1</shots>
@@ -2302,7 +2405,6 @@
 	<short>Rad Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>This powerful mass driver fires a shell filled with radioactive elements, poisoning crew it strikes.</desc>
-	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<damage>2</damage>
 	<sysDamage>-2</sysDamage>
 	<persDamage>4</persDamage>
@@ -2374,7 +2476,6 @@
 	<title>Explosive Mass Driver</title>
 	<short>Explosive Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>This weapon fires fragmenting, explosive shots whose damage bleeds over into adjacent rooms.</desc>
 	<descriptionOverride>This weapon fires fragmenting, explosive shots whose damage bleeds over into adjacent rooms.
 
 		Stats:
@@ -2393,7 +2494,6 @@
 		
 		Default Price: 90~   -   Selling Price: 45~
 	</descriptionOverride>
-	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<damage>2</damage>
 	<speed>2147483647</speed>
 	<shots>1</shots>
@@ -2434,7 +2534,6 @@
 	<short>Flak Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>Shells from this mass driver explode in flight, scattering a spray of light flak across the target zone.</desc>
-	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
 	<speed>2147483647</speed>
@@ -2474,7 +2573,6 @@
 	<short>Ion Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>This mass driver contains shells filled with plasma that annihilate shields and cripple systems with ease.</desc>
-	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<ion>5</ion>
 	<speed>2147483647</speed>
 	<shots>1</shots>
@@ -2516,7 +2614,6 @@
 	<short>Part. Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>Elementary particles stream through the shells shot from this cannon, crushing a ship's systems.</desc>
-	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
 	<sysDamage>6</sysDamage>
 	<speed>2147483647</speed>
 	<shots>1</shots>
@@ -2560,7 +2657,6 @@
 	<title>Pre-emptive Particle Accelerator</title>
 	<short>Pre-Particle</short>
 	<desc>This particle accelerator contains a capacitor that lets it charge instantly at the start of combat, in exchange for only being able to fire once per fight.</desc>
-	<tooltip>Particle accelerator that can be fired once, dealing up to 10 system damage.</tooltip>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<radius>55</radius>
@@ -2608,7 +2704,6 @@
 	<short>Pre-Energy</short>
 	<tip>tip_preemptive</tip>
 	<desc>This energy cannon fires 8 blasts right at the start of combat, but it can only fire once per fight.</desc>
-	<tooltip>Fires 8 blasts that deal 1 ion damage and 1 hull damage each. Can hit and disable shields as well as systems.</tooltip>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
 	<noPersDamage>true</noPersDamage>
@@ -2661,7 +2756,6 @@
 	<short>Pointer</short>
 	<locked>1</locked>
 	<desc>Though it does nothing on its own, this communications array causes all active combat drones to change their current target to the room it points to.</desc>
-	<tooltip>No.</tooltip>
 	<damage>0</damage>
 	<speed>2147483647</speed>
 	<accuracyMod>100</accuracyMod>
@@ -2695,7 +2789,7 @@
 	<type>BEAM</type>
 	<tip>aa_tip_disruptor</tip>
 	<title>Drone Disruptor [A1]</title>
-	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<color>
@@ -2703,10 +2797,10 @@
 		<g>231</g>
 		<b>237</b>
 	</color>
-	<speed>10</speed>
+	<speed>8</speed>
 	<rarity>0</rarity>
 	<image>beam_contact</image>
-	<length>30</length>
+	<length>25</length>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
@@ -2716,7 +2810,7 @@
 	<type>BEAM</type>
 	<tip>aa_tip_disruptor</tip>
 	<title>Drone Disruptor [A2]</title>
-	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<color>
@@ -2724,10 +2818,10 @@
 		<g>231</g>
 		<b>237</b>
 	</color>
-	<speed>10</speed>
+	<speed>8</speed>
 	<rarity>0</rarity>
 	<image>beam_contact</image>
-	<length>60</length>
+	<length>50</length>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
@@ -2737,7 +2831,7 @@
 	<type>BEAM</type>
 	<tip>aa_tip_disruptor</tip>
 	<title>Drone Disruptor [A3]</title>
-	<desc>This is a special disruptor weapon integrated into certain drones. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<ion>1</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<color>
@@ -2745,10 +2839,10 @@
 		<g>231</g>
 		<b>237</b>
 	</color>
-	<speed>10</speed>
+	<speed>8</speed>
 	<rarity>0</rarity>
 	<image>beam_contact</image>
-	<length>90</length>
+	<length>75</length>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
@@ -2800,7 +2894,7 @@
 	<title>Amp Disruptor</title>
 	<short>Amp D. [4]</short>
 	<desc>[CURRENT POWER: 4] A unique Amp drone that increases its swipe length as its power increases.</desc>
-	<power>4</power>
+	<power>3</power>
 	<cooldown>1000</cooldown>
 	<dodge>0</dodge>
 	<speed>2</speed>
@@ -2820,7 +2914,7 @@
 	<title>Drone Shield Smasher</title>
 	<short>Smash Drone</short>
 	<tip>aa_tip_smash</tip>
-	<desc>A shield smasher normally integrated into drones. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<radius>25</radius>
 	<shots>1</shots>
@@ -2852,7 +2946,7 @@
 	<tip>aa_tip_electron</tip>
 	<title>Drone Electronic Inducer</title>
 	<locked>1</locked>
-	<desc>An electronic inducer normally integrated into drones. It was never supposed to fall into your hands.</desc>
+	<desc>This was never supposed to fall into your hands.</desc>
 	<damage>0</damage>
 	<ion>2</ion>
 	<accuracyMod>100</accuracyMod>
@@ -3054,10 +3148,10 @@
 
 <droneBlueprint name="AA_SPLICER">
     <type>COMBAT</type>
-    <tip>tip_toggle_combat</tip>
+    <tip>aa_tip_scrambler</tip>
     <title>Splicer Drone</title>
     <short>Splicer</short>
-    <desc>A dangerous anti-crew drone that specializes in toying with the flesh.</desc>
+    <desc>A dangerous anti-crew drone that distorts the genetics of struck crew, neutering their ability to heal.</desc>
     <power>1</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>
@@ -3076,12 +3170,14 @@
 
 <augBlueprint name="AA_PARTICLE_SHIELD">
     <title>Particle Shield</title>
-	<desc>Reverse-engineered Zoltan energy shield tech that sacrifices strength for efficiency. 10 seconds after being damaged, it regenerates its single layer, providing light but continuous protection in the vein of its heavier cousins.
-If another energy shield is present, it refills that shield as well but takes an amount of time that scales with the shield's strength.</desc>
+	<desc>Semi-physical shield technology which sacrifices overall strength for efficiency. 10 seconds after being damaged, it regenerates its single layer, providing light but continuous protection in the vein of its heavier cousins.
+If another energy shield is present, it refills that shield as well.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
+
+
 
 
 
