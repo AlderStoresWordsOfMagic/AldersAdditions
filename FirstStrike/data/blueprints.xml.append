@@ -2266,7 +2266,6 @@
 	<speed>2147483647</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
-	<sp>0</sp>
 	<breachChance>10</breachChance>
 	<cooldown>25</cooldown>
 	<power>2</power>
@@ -2283,7 +2282,7 @@
 		<sound>driver</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>hitHull1</sound>
+		<sound>explosion_heavy</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
@@ -2310,7 +2309,6 @@
 	<speed>2147483647</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
-	<sp>-2</sp>
 	<breachChance>10</breachChance>
 	<statBoosts>
 		<statBoost name="moveSpeedMultiplier">
@@ -2357,7 +2355,7 @@
 		<sound>driver</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>hitHull1</sound>
+		<sound>explosion_heavy</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
@@ -2400,7 +2398,6 @@
 	<speed>2147483647</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
-	<sp>0</sp>
 	<breachChance>10</breachChance>
 	<cooldown>30</cooldown>
 	<power>3</power>
@@ -2417,7 +2414,7 @@
 		<sound>driver</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>hitHull1</sound>
+		<sound>explosion_heavy</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
@@ -2442,7 +2439,6 @@
 	<persDamage>1</persDamage>
 	<speed>2147483647</speed>
 	<shots>1</shots>
-	<sp>0</sp>
 	<breachChance>3</breachChance>
 	<cooldown>27</cooldown>
 	<power>3</power>
@@ -2452,13 +2448,13 @@
 	<spin>720</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="7" fake="false">debris_small</projectile>
+		<projectile count="8" fake="false">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>driver</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>hitHull1</sound>
+		<sound>explosion3</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
@@ -2479,11 +2475,10 @@
 	<tip>aa_tip_driver</tip>
 	<desc>This mass driver contains shells filled with plasma that annihilate shields and cripple systems with ease.</desc>
 	<tooltip>Fires 1 shot, causes 2 damage with high chance of breaching.</tooltip>
-	<ion>4</ion>
+	<ion>5</ion>
 	<speed>2147483647</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
-	<sp>-2</sp>
 	<cooldown>30</cooldown>
 	<power>3</power>
 	<cost>100</cost>
@@ -2494,17 +2489,19 @@
 	<projectiles>
 		<projectile count="1" fake="false">debris_small</projectile>
 	</projectiles>
-	<explosion>explosion_big1_ion</explosion>
+	<explosion>explosion_massive_ion</explosion>
 	<launchSounds>
 		<sound>driver</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>hitHull1</sound>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
-		<sound>hitShield1</sound>
-		<sound>hitShield2</sound>
-		<sound>hitShield3</sound>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>miss</sound>
@@ -2540,7 +2537,7 @@
 		<sound>driver</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>hitHull1</sound>
+		<sound>explosion_heavy</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>

@@ -21,7 +21,7 @@
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="5" />
 
-		<mod-append:blueprint name="AA_POINTER" rarity="5" />
+		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
 
 		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="5" />
 	</mod:findLike>
@@ -32,6 +32,8 @@
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="4" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="4" />
 		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="5" />
+
+		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
 
 		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="5" />
 	</mod:findLike>
@@ -48,6 +50,8 @@
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_DRIVER_BIO" rarity="5" />
+
+		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -56,6 +60,8 @@
 		<mod-append:blueprint name="AA_LASER_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="5" />
 		<mod-append:blueprint name="AA_DRIVER_BIO" rarity="5" />
+
+		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
@@ -66,7 +72,10 @@
 		<mod-append:blueprint name="AA_BEAM_ENERGY" rarity="5" />
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="5" />
 
+		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="5" />
 		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="5" />
+
+		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
 
 		<mod-append:blueprint name="AA_DRIVER_ION" rarity="5" />
 	</mod:findLike>
@@ -83,6 +92,8 @@
 
 		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="5" />
 		<mod-append:blueprint name="AA_ENERGY_INSTANT" rarity="5" />
+
+		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
 
 		<mod-append:blueprint name="AA_DRIVER_ION" rarity="5" />
 	</mod:findLike>
@@ -134,6 +145,10 @@
 <mod:findName type="sectorDescription" name="SECTOR_FREEMANTIS_UNIQUE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_DRIVER_PARTICLE" rarity="5" />
+
+		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="5" />
+
+		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
 	</mod:findLike>
 </mod:findName>
 
