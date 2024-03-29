@@ -925,7 +925,7 @@
 
 <!-- // BEAMS // -->
 
-<animSheet name="beam_prohull" w="874" h="67" fw="38" fh="67">weapons/beam/beam_prohull.png</animSheet>
+<animSheet name="beam_prohull" w="874" h="67" fw="38" fh="67">weapons/overwrite/beam_prohull.png</animSheet>
 <weaponAnim name="beam_prohull">
 	<sheet>beam_prohull</sheet>
 	<desc length="23" x="0" y="0"/>
@@ -933,7 +933,7 @@
 	<fireFrame>2</fireFrame>
 	<firePoint  x="22" y="32"/>
 	<mountPoint x="8" y="46"/>
-	<chargeImage>weapons/beam/beam_prohull_glow.png</chargeImage>
+	<chargeImage>weapons/overwrite/beam_prohull_glow.png</chargeImage>
 </weaponAnim>
 
 <!-- // MINELAUNCHERS // -->
