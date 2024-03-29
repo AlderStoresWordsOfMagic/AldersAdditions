@@ -1,7 +1,4 @@
 -- These pieces of code allow various parts of the mod to function in ways that XML alone can't satisfy.
--- Kudos to Chrono, Vertaal, and Julk for helping me figure this out!
--- For a list of stuff this code refers to, check https://github.com/FTL-Hyperspace/FTL-Hyperspace/blob/develop/FTLGameWin32.h
--- Hit CTRL + F in your browser and search.
 
 
 
@@ -13,21 +10,11 @@ mods.alder = {}
 
 -- [Version check for Hyperspace.]
 
-if not (Hyperspace.version and Hyperspace.version.major == 1 and Hyperspace.version.minor >= 8) then
-  if not (Hyperspace.version.patch >= 0) then
-    error("Incorrect Hyperspace version detected! Alder's Additions: First Strike requires Hyperspace 1.8+ to function.")
+if not (Hyperspace.version and Hyperspace.version.major == 1 and Hyperspace.version.minor >= 10) then
+  if not (Hyperspace.version.patch >= 2) then
+    error("Incorrect Hyperspace version detected! Alder's Additions: First Strike requires Hyperspace 1.10.2+ to function.")
   end
 end
-
--- [This piece gets angry if someone patches First Strike before Inferno-Core.]
-
-local infernoInstalled = false
-if mods.inferno then infernoInstalled = true end
-script.on_load(function()
-  if not infernoInstalled and mods.inferno then
-    Hyperspace.ErrorMessage("Incorrect mod order detected! Inferno-Core must be patched before Alder's Addition: First Strike.")
-  end
-end)
 
 -- [An "iterator for C vectors", it makes the for loops work.]
 
