@@ -572,7 +572,8 @@
 	<power>3</power>
 	<cost>100</cost>
 	<bp>6</bp>
-	<rarity>5</rarity>
+	<!-- <rarity>5</rarity> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
+	<rarity>0</rarity>
 	<image>missile_smash</image>
 	<explosion>explosion_smash</explosion>
 	<launchSounds>

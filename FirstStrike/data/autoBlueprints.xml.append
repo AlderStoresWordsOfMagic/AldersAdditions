@@ -15,7 +15,7 @@
         <mod-append:name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
@@ -36,7 +36,7 @@
         <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
         <mod-append:name>AA_BEAM_ION_CONSERVATIVE</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
         <mod-append:name>AA_ELECTRON_2</mod-append:name>
@@ -77,7 +77,7 @@
         <mod-append:name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
 
@@ -97,7 +97,7 @@
         <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
         <mod-append:name>AA_BEAM_ION_CONSERVATIVE</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
         <mod-append:name>AA_ELECTRON_2</mod-append:name>
@@ -193,7 +193,7 @@
 
     <mod:findName type="blueprintList" name="BLUELIST_MISSILES_ALL">
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_MINELAUNCHERS_ALL">
@@ -207,8 +207,8 @@
 
     <mod:findName type="blueprintList" name="BLUELIST_SUPPORT">
         <mod-append:name>AA_LASER_REPAIR</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
         <mod-append:name>AA_POINTER</mod-append:name>
     </mod:findName>
 
@@ -318,9 +318,9 @@
 
     <mod:findName type="blueprintList" name="SHOP_WEAPONS_BALLISTICS">
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
         <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
@@ -344,7 +344,7 @@
         <mod-append:name>AA_LASER_REPAIR</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
 
@@ -422,7 +422,7 @@
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
 
@@ -456,7 +456,7 @@
 
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
@@ -592,7 +592,7 @@
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_MISSILES_SPECIAL">
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_MINELAUNCHER_SPECIAL">
@@ -601,7 +601,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BOMB_SPECIAL">
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
     </mod:findName>
 
@@ -709,7 +709,7 @@
         <mod-append:name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_DRIVER</mod-append:name>
 
@@ -723,11 +723,11 @@
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_DRIVER</mod-append:name>
 
@@ -738,7 +738,7 @@
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
@@ -812,7 +812,7 @@
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ORCHID_ELITE">
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_DRIVER</mod-append:name>
         <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
@@ -942,7 +942,7 @@
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
@@ -1055,7 +1055,7 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
@@ -1087,7 +1087,7 @@
         <mod-append:name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_DRIVER</mod-append:name>
         <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
@@ -1099,7 +1099,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_MANTIS">
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
     
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
@@ -1107,7 +1107,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_SUZERAIN">
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
     
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
@@ -1142,7 +1142,7 @@
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
@@ -1160,7 +1160,7 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
     </mod:findName>
@@ -1218,7 +1218,7 @@
         <mod-append:name>AA_LASER_PARTICLE_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
@@ -1232,7 +1232,7 @@
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
@@ -1253,7 +1253,7 @@
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
@@ -1261,7 +1261,7 @@
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
@@ -1302,14 +1302,14 @@
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_MISSILES">
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BALLISTICS">
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
 
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BALLISTICS_DAMAGE">
@@ -1325,7 +1325,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BOMBS">
-        <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS">
@@ -1502,23 +1502,23 @@
 
     <mod:findName type="blueprintList" name="GIFTLIST_EXPLOSIVES">
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
         <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_BALLISTIC">
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_MISSILES">
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_BOMBS">
-        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_FLAK">
