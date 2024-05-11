@@ -124,22 +124,22 @@ local popWeapons = mods.alder.popWeapons
 popWeapons["AA_LASER_SMASH"] = {
     count = 1, -- This weapon will pop 1 shield layer per shot
     countSuper = 1, -- This weapon will pop 1 energy shield layer per shot
-    crush = 8 -- currently unused, will be reworked into the crush intensity value
+    crush = 1 -- currently used for shield crush layers, will be reworked into the crush intensity value
 }
 popWeapons["AA_LASER_SMASH_2"] = {
     count = 1,
     countSuper = 1,
-    crush = 8
+    crush = 1
 }
 popWeapons["AA_DRONE_LASER_SMASH"] = {
     count = 1,
     countSuper = 1,
-    crush = 8
+    crush = 1
 }
 popWeapons["AA_BEAM_SMASH"] = {
     count = 1,
     countSuper = 1,
-    crush = 8
+    crush = 1
 }
 
 -- Apply crush on shield hit
