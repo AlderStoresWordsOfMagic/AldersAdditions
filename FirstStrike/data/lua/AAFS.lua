@@ -18,57 +18,19 @@ end
 
 -- [An "iterator for C vectors", it makes the for loops work.]
 
-function mods.alder.vter(cvec)
-  local i = -1
-  local n = cvec:size()
-  return function()
-      i = i + 1
-      if i < n then return cvec[i] end
-  end
-end
-local vter = mods.alder.vter
+local vter = mods.multiverse.vter
 
 -- [It keeps things from exploding. It creates an empty table for some things, but... I dunno what things lack and need a table.]
 
-function mods.alder.userdata_table(userdata, tableName)
-  if not userdata.table[tableName] then userdata.table[tableName] = {} end
-  return userdata.table[tableName]
-end
-local userdata_table = mods.alder.userdata_table
+local userdata_table = mods.multiverse.userdata_table
 
 -- [Find the ID of a room at the given location.]
-local function get_room_at_location(shipManager, location, includeWalls)
-    return Hyperspace.ShipGraph.GetShipInfo(shipManager.iShipId):GetSelectedRoom(location.x, location.y, includeWalls)
-end
+
+local get_room_at_location = mods.multiverse.get_room_at_location
 
 -- [Returns a table, where the indices are the IDs of all adjacent rooms to the target, and the values are the rooms' coordinates.]
-local function get_adjacent_rooms(shipId, roomId, diagonals)
-    local shipGraph = Hyperspace.ShipGraph.GetShipInfo(shipId)
-    local roomShape = shipGraph:GetRoomShape(roomId)
-    local adjacentRooms = {}
-    local currentRoom = nil
-    local function check_for_room(x, y)
-        currentRoom = shipGraph:GetSelectedRoom(x, y, false)
-        if currentRoom > -1 and not adjacentRooms[currentRoom] then
-            adjacentRooms[currentRoom] = Hyperspace.Pointf(x, y)
-        end
-    end
-    for offset = 0, roomShape.w - 35, 35 do
-        check_for_room(roomShape.x + offset + 17, roomShape.y - 17)
-        check_for_room(roomShape.x + offset + 17, roomShape.y + roomShape.h + 17)
-    end
-    for offset = 0, roomShape.h - 35, 35 do
-        check_for_room(roomShape.x - 17,               roomShape.y + offset + 17)
-        check_for_room(roomShape.x + roomShape.w + 17, roomShape.y + offset + 17)
-    end
-    if diagonals then
-        check_for_room(roomShape.x - 17,               roomShape.y - 17)
-        check_for_room(roomShape.x + roomShape.w + 17, roomShape.y - 17)
-        check_for_room(roomShape.x + roomShape.w + 17, roomShape.y + roomShape.h + 17)
-        check_for_room(roomShape.x - 17,               roomShape.y + roomShape.h + 17)
-    end
-    return adjacentRooms
-end
+
+local get_adjacent_rooms = mods.multiverse.get_adjacent_rooms
 
 -- [A function that does nothing.]
 
@@ -181,20 +143,22 @@ popWeapons["AA_BEAM_SMASH"] = {
 }
 
 -- Apply crush on shield hit
-script.on_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship, projectile, damage, response)
-    local popData = popWeapons[projectile.extend.name]
+script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship, projectile, damage, response)
+    local popData = popWeapons[projectile and projectile.extend and projectile.extend.name]
     if popData then
+        local shieldPower = ship.shieldSystem.shields.power
         if shieldPower.super.first > 0 then
             if popData.countSuper > 0 then
-                shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
+                ship.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
                 shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
             end
         else
-            shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
+            ship.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
             shieldPower.first = math.max(0, shieldPower.first - popData.count)
             if shieldPower.first == 0 then
                 local shieldTracker = userdata_table(ship, "mods.aa.shieldCrush")
-                shieldTracker.crush = shieldTracker.crush + popData.crush
+                shieldTracker.crush = shieldTracker.crush or 0 + popData.crush
+                print("CRUSH", shieldTracker.crush)
                 Hyperspace.Sounds:PlaySoundMix("shield_crush", -1, true)
             end
         end
@@ -202,11 +166,12 @@ script.on_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship, projecti
 end)
 
 -- Reduce number of shields crushed when one recharges
-script.on_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
     local shieldTracker = userdata_table(ship, "mods.aa.shieldCrush")
-    shieldTracker.currentShields = ship.shields.shieldPower.first
-    if shieldTracker.previousShields and shieldTracker.currentShields > shieldTracker.previousShields then
+    shieldTracker.currentShields = ship._targetable:GetShieldPower().first
+    if shieldTracker.crush and shieldTracker.crush > 0 and shieldTracker.previousShields and shieldTracker.currentShields > shieldTracker.previousShields then
         shieldTracker.crush = math.max(0, shieldTracker.crush - (shieldTracker.currentShields - shieldTracker.previousShields))
+        print("CRUSH", shieldTracker.crush)
     end
     shieldTracker.previousShields = shieldTracker.currentShields
 end)
@@ -215,7 +180,7 @@ end)
 script.on_internal_event(Defines.InternalEvents.GET_AUGMENTATION_VALUE, function(ship, augName, augValue)
     if ship and augName == "SHIELD_RECHARGE" then
         local shieldTracker = userdata_table(ship, "mods.aa.shieldCrush")
-        if shieldTracker.crush > 0 then
+        if shieldTracker.crush and shieldTracker.crush > 0 then
             augValue = augValue - 0.8
         end
     end
