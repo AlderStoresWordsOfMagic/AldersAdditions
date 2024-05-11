@@ -161,11 +161,11 @@
 	Required Power: 1
 	Charge Time: 12 seconds
 
-	Shot Radius: 32
+	Shot Radius: 30
 	Shots Per Charge: 1
 
 	Layers Per Shot: 1
-	Layers Crushed: 12
+	Crush Intensity: 60%
 
 	Stun Chance: 100% (5 seconds long)
 
@@ -174,15 +174,15 @@
 	<tooltipOverride>Required Power: 1
 		Charge Time: 12 seconds
 
-		Shot Radius: 32
+		Shot Radius: 30
 		Shots Per Charge: 1
 
 		Layers Per Shot: 1
-		Layers Crushed: 8
+		Crush Intensity: 60%
 
 		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
-	<radius>32</radius>
+	<radius>30</radius>
 	<shots>1</shots>
 	<accuracyMod>30</accuracyMod>
 	<sp>0</sp>
@@ -226,11 +226,11 @@
 	Required Power: 3
 	Charge Time: 14 seconds
 
-	Shot Radius: 38
+	Shot Radius: 80
 	Shots Per Charge: 3
 
 	Layers Per Shot: 1
-	Layers Crushed: 12
+	Crush Intensity: 60%
 
 	Stun Chance: 100% (5 seconds long)
 
@@ -239,15 +239,15 @@
 	<tooltipOverride>Required Power: 3
 		Charge Time: 14 seconds
 
-		Shot Radius: 38
+		Shot Radius: 80
 		Shots Per Charge: 3
 
 		Layers Per Shot: 1
-		Layers Crushed: 8
+		Crush Intensity: 60%
 
 		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
-	<radius>38</radius>
+	<radius>80</radius>
 	<shots>1</shots>
 	<accuracyMod>30</accuracyMod>
 	<sp>0</sp>
@@ -413,7 +413,7 @@
 
 	Fire Chance: 30%
 
-	Default Price: 80~   -   Selling Price: 40~
+	Default Price: 70~   -   Selling Price: 35~
 	</descriptionOverride>
 	<tooltipOverride>Required Power: 2
 		Charge Time: 4 seconds
@@ -421,7 +421,7 @@
 		Max Charges: 3
 		Charges damage instead of shot count
 		
-		Total System Damage: 1/2/3\
+		Total System Damage: 1/2/3
 	
 		Fire Chance: 30%</tooltipOverride>
 	<damage>0</damage>
@@ -429,7 +429,7 @@
 	<shots>1</shots>
 	<cooldown>4</cooldown>
 	<power>2</power>
-	<cost>80</cost>
+	<cost>70</cost>
 	<bp>2</bp>
 	<rarity>5</rarity>
 	<fireChance>3</fireChance>
@@ -473,7 +473,7 @@
 	<stunChance>5</stunChance>
 	<cooldown>22</cooldown>
 	<power>2</power>
-	<cost>60</cost>
+	<cost>80</cost>
 	<bp>6</bp>
 	<rarity>5</rarity>
 	<image>missile_ion</image>
@@ -512,7 +512,7 @@
 	<stunChance>5</stunChance>
 	<cooldown>22</cooldown>
 	<power>2</power>
-	<cost>60</cost>
+	<cost>80</cost>
 	<bp>6</bp>
 	<rarity>0</rarity>
 	<image>missile_ion</image>
@@ -549,16 +549,16 @@
 	Shots Per Charge: 1
 
 	Layers Per Shot: 4
-	Layers Crushed: 12
+	Crush Intensity: 60%
 
-	Default Price: 110~   -   Selling Price: 55~</descriptionOverride>
+	Default Price: 100~   -   Selling Price: 50~</descriptionOverride>
 	<tooltipOverride>Required Power: 3
 		Charge Time: 20 seconds
 
 		Shots Per Charge: 1
 		
 		Layers Per Shot: 4
-		Layers Crushed: 12
+		Crush Intensity: 60%
 	
 		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
@@ -570,7 +570,7 @@
 	<sp>10</sp>
 	<cooldown>20</cooldown>
 	<power>3</power>
-	<cost>110</cost>
+	<cost>100</cost>
 	<bp>6</bp>
 	<rarity>5</rarity>
 	<image>missile_smash</image>
@@ -608,7 +608,7 @@
 	<sp>10</sp>
 	<cooldown>20</cooldown>
 	<power>3</power>
-	<cost>110</cost>
+	<cost>100</cost>
 	<bp>6</bp>
 	<rarity>0</rarity>
 	<image>missile_smash</image>
@@ -965,7 +965,7 @@
 	<title>Cumulative Ion</title>
 	<short>Cum. Ion</short>
 	<tip>aa_tip_accumulator</tip>
-	<descriptionOverride>This Ion weapon has the ability to vary the strength of its blast, matching both the lightest and heaviest of its class.
+	<descriptionOverride>This Ion weapon has the ability to vary the strength of its singular blast, matching both the lightest and heaviest of its class.
 
 	Stats:
 	Required Power: 2
@@ -1183,7 +1183,7 @@
 	Base System Damage: 1
 	System Damage Rate: 1
 
-	Default Price: 95~   -   Selling Price: 47~
+	Default Price: 90~   -   Selling Price: 45~
 	</descriptionOverride>
 	<damage>1</damage>
 	<sp>0</sp>
@@ -1191,7 +1191,7 @@
 	<breachChance>0</breachChance>
 	<cooldown>10</cooldown>
 	<power>2</power>
-	<cost>95</cost>
+	<cost>90</cost>
 	<bp>7</bp>
 	<rarity>5</rarity>
 	<length>1</length>
@@ -1213,40 +1213,40 @@
 
 	Stats:
 	Required Power: 2
-	Charge Time: 14 seconds
+	Charge Time: 16 seconds
 
 	Beam Length: 40
 	Beam Speed: 36
 
 	Layers Per Shot: 2
-	Layers Crushed: 10
+	Crush Intensity: 60%
 
 	Stun Chance: 100% (5 seconds long)
 
-	Default Price: 70~   -   Selling Price: 35~
+	Default Price: 90~   -   Selling Price: 45~
 	</descriptionOverride>
 	<tooltipOverride>Required Power: 2
-		Charge Time: 14 seconds
+		Charge Time: 16 seconds
 
 		Beam Length: 40
 		Beam Speed: 36
 		
 		Layers Per Shot: 2
-		Layers Crushed: 12
+		Crush Intensity: 60%
 	
 		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
 	<stun>5</stun>
 	<stunChance>3</stunChance>
 	<speed>36</speed>
-	<cooldown>14</cooldown>
+	<cooldown>16</cooldown>
 	<color>
 		<r>21</r>
 		<g>19</g>
 		<b>239</b>
 	</color>
 	<power>2</power>
-	<cost>70</cost>
+	<cost>90</cost>
 	<bp>5</bp>
 	<rarity>4</rarity>
 	<image>beam_contact</image>
@@ -1276,7 +1276,7 @@
 	
 		Heal Block: 10 seconds long
 	
-		Default Price: 80~   -   Selling Price: 40~
+		Default Price: 70~   -   Selling Price: 35~
 		</descriptionOverride>
 	<tooltipOverride>Required Power: 1
 		Charge Time: 15 seconds
@@ -1305,7 +1305,7 @@
 	</statBoosts>
 	<speed>35</speed>
 	<power>1</power>
-	<cost>80</cost>
+	<cost>70</cost>
 	<bp>6</bp>
 	<rarity>0</rarity>
 	<length>120</length>
@@ -1337,7 +1337,7 @@
 	</color>
 	<speed>3</speed>
 	<power>1</power>
-	<cost>70</cost>
+	<cost>60</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<image>impact_disruptor</image>
@@ -1368,7 +1368,7 @@
 		<b>237</b>
 	</color>
 	<power>2</power>
-	<cost>90</cost>
+	<cost>80</cost>
 	<bp>7</bp>
 	<rarity>0</rarity>
 	<length>120</length>
@@ -1386,20 +1386,20 @@
 	<short>'Bo'</short>
 	<tip>aa_tip_disruptor</tip>
 	<desc>This devastating Disruptor variant is known to shut down entire ships with a single sweep.</desc>
-	<ion>3</ion>
+	<ion>2</ion>
 	<ionBeamFix>true</ionBeamFix>
 	<sp>0</sp>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>6</stunChance>
-	<cooldown>28</cooldown>
+	<cooldown>24</cooldown>
 	<color>
 		<r>133</r>
 		<g>231</g>
 		<b>237</b>
 	</color>
 	<power>4</power>
-	<cost>110</cost>
+	<cost>100</cost>
 	<bp>12</bp>
 	<rarity>0</rarity>
 	<length>170</length>
@@ -1482,7 +1482,7 @@
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>10</stunChance>
-	<cooldown>23</cooldown>
+	<cooldown>21</cooldown>
 	<color>
 		<r>230</r>
 		<g>237</g>
@@ -1513,7 +1513,7 @@
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>4</stunChance>
-	<cooldown>24</cooldown>
+	<cooldown>22</cooldown>
 	<speed>2</speed>
 	<color>
 		<r>229</r>
@@ -1521,7 +1521,7 @@
 		<b>255</b>
 	</color>
 	<power>2</power>
-	<cost>110</cost>
+	<cost>100</cost>
 	<bp>7</bp>
 	<rarity>0</rarity>
 	<length>130</length>
@@ -1648,7 +1648,7 @@
 	Shots Per Charge: 1
 
 	Layers Per Shot: 4
-	Layers Crushed: 12
+	Crush Intensity: 60%
 
 	Stun Chance: 100% (5 seconds long)
 
@@ -1659,7 +1659,7 @@
 		Shots Per Charge: 1
 		
 		Layers Per Shot: 4
-		Layers Crushed: 12
+		Crush Intensity: 60%
 	
 		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
@@ -1701,7 +1701,7 @@
 	<stunChance>10</stunChance>
 	<cooldown>20</cooldown>
 	<power>2</power>
-	<cost>65</cost>
+	<cost>75</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<image>bomb_smash</image>
@@ -1787,8 +1787,8 @@
 	<erosion>
 		<speed>1.0</speed>
 		<maxSpeed>3.0</maxSpeed>
-		<time>60</time>
-		<maxTime>60</maxTime>
+		<time>30</time>
+		<maxTime>30</maxTime>
 		<systemRepairMultiplier>1.0</systemRepairMultiplier>
 		<erodeShields>false</erodeShields>
 		<growBreachMultiplier>2.0</growBreachMultiplier>
@@ -1898,7 +1898,7 @@
 	<short>Part. Flak</short>
 	<tip>aa_tip_particle_flak</tip>
 	<desc>This Flak cannon fires a blast of 4 projectiles charged with exotic particles that shred systems alongside normal hull damage.</desc>
-	<radius>55</radius>
+	<radius>50</radius>
 	<damage>1</damage>
 	<sysDamage>2</sysDamage>
 	<spin>720</spin>
@@ -1906,9 +1906,9 @@
 	<sp>0</sp>
 	<fireChance>4</fireChance>
 	<breachChance>1</breachChance>
-	<cooldown>18</cooldown>
+	<cooldown>16</cooldown>
 	<power>3</power>
-	<cost>90</cost>
+	<cost>85</cost>
 	<bp>10</bp>
 	<speed>26</speed>
 	<rarity>5</rarity>
@@ -2000,7 +2000,7 @@
 	Shot Radius: 45
 	Shots Per Charge: 3
 	Max Charges: 3
-	Charges damage instead of shot count
+	Charges damage on each shot instead of shot count
 	
 	Base Hull Damage: 1/2/3
 	Total System Damage: 1/2/3
@@ -2016,7 +2016,7 @@
 		Shot Radius: 45
 		Shots Per Charge: 3
 		Max Charges: 3
-		Charges damage instead of shot count
+		Charges damage on each shot instead of shot count
 		
 		Base Hull Damage: 1/2/3
 		Total System Damage: 1/2/3
@@ -2115,7 +2115,7 @@
 	<tip>tip_mine</tip>
 	<title>'Ammit' Mine Launcher</title>
 	<short>'Ammit'</short>
-	<desc>This strange Mine Launcher design trades the standard explosives found on most designs for miniaturized particle accelerators, allowing the mines to deal system damage. Let that sink in.
+	<desc>This strange Mine Launcher design trades the standard explosives found on most designs for miniaturized particle accelerators, allowing the mines to deal system damage.
 	
 	At empty beacons provides 2 fleet delay for 7 missiles.</desc>
 	<radius>45</radius>
@@ -2533,7 +2533,7 @@
 	<title>Flak Cannon Driver</title>
 	<short>Flak Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>Shells from this mass driver explode in flight, scattering a spray of light flak across the target zone.</desc>
+	<desc>Shells from this mass driver explode in flight, scattering a spray of light shrapnel across the target zone.</desc>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
 	<speed>2147483647</speed>
@@ -2572,7 +2572,7 @@
 	<title>Electrified Mass Driver</title>
 	<short>Ion Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>This mass driver contains shells filled with plasma that annihilate shields and cripple systems with ease.</desc>
+	<desc>This mass driver contains shells filled with hot plasma, which annihilate shields and cripple systems with ease.</desc>
 	<ion>5</ion>
 	<speed>2147483647</speed>
 	<shots>1</shots>
@@ -2613,7 +2613,7 @@
 	<title>Accelerated Mass Driver</title>
 	<short>Part. Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>Elementary particles stream through the shells shot from this cannon, crushing a ship's systems.</desc>
+	<desc>Elementary particles stream through the shells shot from this cannon, making short work of ship systems.</desc>
 	<sysDamage>6</sysDamage>
 	<speed>2147483647</speed>
 	<shots>1</shots>

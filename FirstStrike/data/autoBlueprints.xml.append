@@ -774,7 +774,6 @@
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
-        <mod-append:name>AA_ELECTRON_2</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_DRONES_ZOLTAN">
@@ -1003,7 +1002,6 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_DRONES_ENGINEER">
-        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
         <mod-append:name>AA_SCOUT_STUN</mod-append:name>
     </mod:findName>
 
@@ -1111,8 +1109,6 @@
     
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
 
-        <mod-append:name>AA_ELECTRON_1</mod-append:name>
-
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
@@ -1179,6 +1175,7 @@
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
     
         <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
@@ -1479,7 +1476,6 @@
 
     <mod:findName type="blueprintList" name="GIFTLIST_FREE">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
-        <mod-append:name>AA_ELECTRON_1</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_WEAPONS_ANCIENTS_USELESS">

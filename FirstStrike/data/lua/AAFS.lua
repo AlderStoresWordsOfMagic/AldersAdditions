@@ -124,7 +124,7 @@ local popWeapons = mods.alder.popWeapons
 popWeapons["AA_LASER_SMASH"] = {
     count = 1, -- This weapon will pop 1 shield layer per shot
     countSuper = 1, -- This weapon will pop 1 energy shield layer per shot
-    crush = 8 -- If this weapon reduces shields to 0, apply -10 shield layers
+    crush = 8 -- currently unused, will be reworked into the crush intensity value
 }
 popWeapons["AA_LASER_SMASH_2"] = {
     count = 1,
@@ -179,7 +179,7 @@ script.on_internal_event(Defines.InternalEvents.GET_AUGMENTATION_VALUE, function
     if ship and augName == "SHIELD_RECHARGE" then
         local shieldTracker = userdata_table(ship, "mods.aa.shieldCrush")
         if shieldTracker.crush and shieldTracker.crush > 0 then
-            augValue = augValue - 0.8
+            augValue = augValue - 0.6
         end
     end
     return Defines.Chain.CONTINUE, augValue
