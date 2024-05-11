@@ -158,7 +158,6 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship,
             if shieldPower.first == 0 then
                 local shieldTracker = userdata_table(ship, "mods.aa.shieldCrush")
                 shieldTracker.crush = shieldTracker.crush or 0 + popData.crush
-                print("CRUSH", shieldTracker.crush)
                 Hyperspace.Sounds:PlaySoundMix("shield_crush", -1, true)
             end
         end
@@ -171,7 +170,6 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
     shieldTracker.currentShields = ship._targetable:GetShieldPower().first
     if shieldTracker.crush and shieldTracker.crush > 0 and shieldTracker.previousShields and shieldTracker.currentShields > shieldTracker.previousShields then
         shieldTracker.crush = math.max(0, shieldTracker.crush - (shieldTracker.currentShields - shieldTracker.previousShields))
-        print("CRUSH", shieldTracker.crush)
     end
     shieldTracker.previousShields = shieldTracker.currentShields
 end)
