@@ -178,7 +178,7 @@
 		Shots Per Charge: 1
 
 		Layers Per Shot: 1
-		Layers Crushed: 12
+		Layers Crushed: 8
 
 		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
@@ -243,7 +243,7 @@
 		Shots Per Charge: 3
 
 		Layers Per Shot: 1
-		Layers Crushed: 12
+		Layers Crushed: 8
 
 		Stun Chance: 100% (5 seconds long)</tooltipOverride>
 	<damage>0</damage>
@@ -647,7 +647,7 @@
 	<shots>1</shots>
 	<cooldown>4</cooldown>
 	<power>2</power>
-	<cost>110</cost>
+	<cost>90</cost>
 	<bp>10</bp>
 	<speed>20</speed>
 	<rarity>5</rarity>
@@ -1212,14 +1212,14 @@
 	<descriptionOverride>The energy emitted by this beam is tuned carefully to disrupt and distort shielding, at the expense of all else.
 
 	Stats:
-	Required Power: 1
+	Required Power: 2
 	Charge Time: 14 seconds
 
 	Beam Length: 40
 	Beam Speed: 36
 
 	Layers Per Shot: 2
-	Layers Crushed: 12
+	Layers Crushed: 10
 
 	Stun Chance: 100% (5 seconds long)
 

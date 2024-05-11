@@ -162,45 +162,67 @@ local popWeapons = mods.alder.popWeapons
 popWeapons["AA_LASER_SMASH"] = {
     count = 1, -- This weapon will pop 1 shield layer per shot
     countSuper = 1, -- This weapon will pop 1 energy shield layer per shot
-    crush = 10 -- If this weapon reduces shields to 0, apply -12 shield layers
+    crush = 8 -- If this weapon reduces shields to 0, apply -10 shield layers
 }
 popWeapons["AA_LASER_SMASH_2"] = {
     count = 1,
     countSuper = 1,
-    crush = 10
+    crush = 8
 }
 popWeapons["AA_DRONE_LASER_SMASH"] = {
     count = 1,
     countSuper = 1,
-    crush = 10
+    crush = 8
 }
 popWeapons["AA_BEAM_SMASH"] = {
     count = 1,
     countSuper = 1,
-    crush = 10
+    crush = 8
 }
 
-script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
-    if projectile.bDamageSuperShield == nil or projectile.bDamageSuperShield then
-        local shieldPower = shipManager.shieldSystem.shields.power
-        local popData = nil
-        if pcall(function() popData = popWeapons[Hyperspace.Get_Projectile_Extend(projectile).name] end) and popData then
-            if shieldPower.super.first > 0 then
-                if popData.countSuper > 0 then
-                    shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
-                    shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
-                end
-            else
+-- Apply crush on shield hit
+script.on_event(Defines.InternalEvents.SHIELD_COLLISION, function(ship, projectile, damage, response)
+    local popData = popWeapons[projectile.extend.name]
+    if popData then
+        if shieldPower.super.first > 0 then
+            if popData.countSuper > 0 then
                 shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
-                shieldPower.first = math.max(0, shieldPower.first - popData.count)
-                if shieldPower.first == 0 then
-                    shieldPower.first = shieldPower.first - popData.crush
-                    Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("shield_crush",1,true)
-                end
+                shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
+            end
+        else
+            shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(), true)
+            shieldPower.first = math.max(0, shieldPower.first - popData.count)
+            if shieldPower.first == 0 then
+                local shieldTracker = userdata_table(ship, "mods.aa.shieldCrush")
+                shieldTracker.crush = shieldTracker.crush + popData.crush
+                Hyperspace.Sounds:PlaySoundMix("shield_crush", -1, true)
             end
         end
     end
 end)
+
+-- Reduce number of shields crushed when one recharges
+script.on_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
+    local shieldTracker = userdata_table(ship, "mods.aa.shieldCrush")
+    shieldTracker.currentShields = ship.shields.shieldPower.first
+    if shieldTracker.previousShields and shieldTracker.currentShields > shieldTracker.previousShields then
+        shieldTracker.crush = math.max(0, shieldTracker.crush - (shieldTracker.currentShields - shieldTracker.previousShields))
+    end
+    shieldTracker.previousShields = shieldTracker.currentShields
+end)
+
+-- Reduce shield recharge rate by 80% while crushed
+script.on_internal_event(Defines.InternalEvents.GET_AUGMENTATION_VALUE, function(ship, augName, augValue)
+    if ship and augName == "SHIELD_RECHARGE" then
+        local shieldTracker = userdata_table(ship, "mods.aa.shieldCrush")
+        if shieldTracker.crush > 0 then
+            augValue = augValue - 0.8
+        end
+    end
+    return Defines.Chain.CONTINUE, augValue
+end)
+
+
 
 -- [Smash Missile/Smash Bomb - Pop shield without hull damage on collision with room, and crush when fully drained.]
 
@@ -208,20 +230,21 @@ mods.alder.popBallistics = {}
 local popBallistics = mods.alder.popBallistics
 popBallistics["AA_MISSILES_SMASH"] = {
     count = 4, -- This weapon will pop 4 shield layers per shot
-    crush = 10 -- If this weapon reduces shields to 0, apply -12 shield layers
+    crush = 8 -- If this weapon reduces shields to 0, apply -12 shield layers
 }
 popBallistics["AA_MISSILES_SMASH_ENEMY"] = {
     count = 4,
-    crush = 10
+    crush = 8
 }
 popBallistics["AA_BOMB_SMASH"] = {
     count = 4,
-    crush = 10
+    crush = 8
 }
 popBallistics["AA_BOMB_SMASH_ENEMY"] = {
     count = 4,
-    crush = 10
+    crush = 8
 }
+
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
 function(shipManager, projectile, location, damage, shipFriendlyFire)
     local shieldSystem = shipManager.shieldSystem
