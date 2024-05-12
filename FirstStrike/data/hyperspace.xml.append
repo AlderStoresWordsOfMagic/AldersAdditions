@@ -92,17 +92,13 @@
 <!-- /// SHIP ICONS /// -->
 
 <mod:findLike type="ships">
-
-<mod:findLike type="shipIcons">
-
-	<mod-append:shipIcon>
-		<name>aa_icon_particle_shield</name>
-		<tooltip>PARTICLE SHIELD:
-This enemy carries a weak energy shield that regenerates a set amount of time after being broken. Think carefully about the order of your attack volley to break through.</tooltip>
-	</mod-append:shipIcon>
-
-</mod:findLike>
-
+    <mod:findLike type="shipIcons">
+        <mod-append:shipIcon>
+            <name>aa_icon_particle_shield</name>
+            <tooltip>PARTICLE SHIELD:
+    This enemy carries a weak energy shield that regenerates a set amount of time after being broken. Think carefully about the order of your attack volley to break through.</tooltip>
+        </mod-append:shipIcon>
+    </mod:findLike>
 </mod:findLike>
 
 
