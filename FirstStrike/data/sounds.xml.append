@@ -51,8 +51,4 @@
 
 <launch_eldritch volume="4">weapons/overwrites/launch_eldritch.ogg</launch_eldritch>
 
-<!-- /// SHIP /// -->
-
-<particle_shield volume="5">ship/particle_shield.ogg</particle_shield>
-
 </FTL>

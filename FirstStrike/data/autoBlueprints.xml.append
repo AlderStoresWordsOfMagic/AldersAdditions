@@ -1680,29 +1680,4 @@
 	<boardingAI>sabotage</boardingAI>
 </shipBlueprint>
 
-<!-- // TEST SHIP // -->
-
-<shipBlueprint name="AA_TEST_RIGGER" layout="mu_rebel_rigger" img="mu_rebel_rigger">
-	<class>Test Rigger</class>
-	<systemList>
-		<doors power="1" max="2" room="5" start="false" />
-		<drones power="2" max="8" room="1" start="true" />
-		<engines power="1" max="2" room="7" start="true" />
-		<medbay power="1" max="3" room="3" start="false" />
-		<oxygen power="1" max="3" room="2" start="true" />
-		<pilot power="1" max="2" room="0" start="true" />
-		<shields power="2" max="8" room="4" start="true" />
-		<weapons power="1" max="6" room="6" start="true" />
-	</systemList>
-	<weaponSlots>4</weaponSlots>
-	<droneSlots>2</droneSlots>
-	<weaponList missiles="10" count="4" load="LIST_WEAPONS_REBEL" />
-	<droneList drones="4" count="2" load="LIST_DRONES_ENEMY_STANDARD" />
-	<health amount="9" />
-	<maxPower amount="7" />
-	<crewCount amount="3" max="5" class="LIST_CREW_REBEL_RANDOM" />
-	<boardingAI>sabotage</boardingAI>
-    <aug name="AA_PARTICLE_SHIELD" />
-</shipBlueprint>
-
 </FTL>

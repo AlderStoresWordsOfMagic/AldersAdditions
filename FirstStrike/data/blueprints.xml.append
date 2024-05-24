@@ -2660,13 +2660,13 @@
 	<desc>This particle accelerator contains a capacitor that lets it charge instantly at the start of combat, in exchange for only being able to fire once per fight.</desc>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
-	<radius>55</radius>
+	<radius>65</radius>
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>2</fireChance>
 	<cooldown>1</cooldown>
 	<power>0</power>
-	<cost>110</cost>
+	<cost>100</cost>
 	<bp>2</bp>
 	<rarity>5</rarity>
 	<spin>0</spin>
@@ -2704,7 +2704,7 @@
 	<title>Pre-emptive Energy Cannon</title>
 	<short>Pre-Energy</short>
 	<tip>tip_preemptive</tip>
-	<desc>This energy cannon fires 8 blasts right at the start of combat, but it can only fire once per fight.</desc>
+	<desc>This energy cannon fires 4 blasts right at the start of combat, but it can only fire once per fight.</desc>
 	<damage>1</damage>
 	<noSysDamage>true</noSysDamage>
 	<noPersDamage>true</noPersDamage>
@@ -2716,7 +2716,7 @@
 	<fireChance>1</fireChance>
 	<cooldown>1</cooldown>
 	<power>0</power>
-	<cost>100</cost>
+	<cost>90</cost>
 	<bp>3</bp>
 	<rarity>5</rarity>
 	<boost>
@@ -2725,7 +2725,7 @@
 		<count>2</count>
 	</boost>
 	<projectiles>
-		<projectile count="8" fake="false">energy_shot</projectile>
+		<projectile count="4" fake="false">energy_shot</projectile>
 	</projectiles>
 	<explosion>explosion_energy</explosion>
 	<launchSounds>
@@ -3164,22 +3164,6 @@
     <rarity>0</rarity>
     <iconImage>combat</iconImage>
 </droneBlueprint>
-
-
-
-<!-- /// AUGMENTS /// -->
-
-<augBlueprint name="AA_PARTICLE_SHIELD">
-    <title>Particle Shield</title>
-	<desc>Semi-physical shield technology which sacrifices overall strength for efficiency. 10 seconds after being damaged, it regenerates its single layer, providing light but continuous protection in the vein of its heavier cousins.
-If another energy shield is present, it refills that shield as well.</desc>
-	<cost>80</cost>
-	<rarity>0</rarity>
-	<stackable>false</stackable>
-</augBlueprint>
-
-
-
 
 
 <!-- /// MV OVERWRITES /// -->
