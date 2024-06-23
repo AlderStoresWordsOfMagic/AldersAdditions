@@ -1593,7 +1593,7 @@
 
 <!-- // SYLVAN SHOPS // -->
 
-<blueprintList name="SHOP_ITEM_SYLVAN_PARTICLE_OLD">
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_PARTICLE_OLD">
 	<name>LASER_PARTICLE</name>
 	<name>LASER_PARTICLE_2</name>
 	<name>BEAM_PARTICLE</name>
@@ -1601,7 +1601,7 @@
 	<name>MISSILES_PARTICLE_PLAYER</name>
 </blueprintList>
 
-<blueprintList name="SHOP_ITEM_SYLVAN_PARTICLE_NEW">
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_PARTICLE_NEW">
     <name>AA_LASER_PARTICLE_PIERCE</name>
     <name>AA_LASER_PARTICLE_MINI</name>
     <name>AA_LASER_PARTICLE_INSTANT</name>
@@ -1610,19 +1610,25 @@
     <name>AA_SHOTGUN_PARTICLE</name>
 </blueprintList>
 
-<blueprintList name="SHOP_ITEM_SYLVAN_DISRUPTOR">
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_DISRUPTOR">
     <name>AA_BEAM_ION_1</name>
     <name>AA_BEAM_ION_2</name>
     <name>AA_BEAM_ION_3</name>
     <name>AA_BEAM_ION_CONSERVATIVE</name>
-    <name>AA_BEAM_ION_ADAPT</name>
+    <name>AA_BEAM_ENERGY</name>
 </blueprintList>
 
-<blueprintList name="SHOP_ITEM_SYLVAN_DISRUPTOR_SPECIAL">
-    <name>AA_BEAM_ENERGY</name>
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_DISRUPTOR_SPECIAL">
     <name>AA_BEAM_ION_PHASE</name>
     <name>AA_BEAM_ION_BIO</name>
     <name>AA_BEAM_ION_STUN</name>
+    <name>AA_BEAM_ION_ADAPT</name>
+</blueprintList>
+
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_CAPACITOR">
+    <name>AA_FOCUS_ION_1</name>
+    <name>AA_FOCUS_ION_2</name>
+    <name>AA_FOCUS_ION_PHASE</name>
 </blueprintList>
 
 <!-- /// WEAPONS WITH RANDOM EFFECTS /// -->
