@@ -146,6 +146,34 @@ popWeapons["AA_BEAM_SMASH"] = {
     crush = 1,
     reduction = 0.6
 }
+popWeapons["AA_MISSILES_SMASH"] = {
+    count = 4,
+    countSuper = 4,
+    crush = 8,
+    reduction = 0.6,
+    onHit = true
+}
+popWeapons["AA_MISSILES_SMASH_ENEMY"] = {
+    count = 4,
+    countSuper = 4,
+    crush = 8,
+    reduction = 0.6,
+    onHit = true
+}
+popWeapons["AA_BOMB_SMASH"] = {
+    count = 4,
+    countSuper = 4,
+    crush = 8,
+    reduction = 0.6,
+    onHit = true
+}
+popWeapons["AA_BOMB_SMASH_ENEMY"] = {
+    count = 4,
+    countSuper = 4,
+    crush = 8,
+    reduction = 0.6,
+    onHit = true
+}
 
 -- Apply crush on shield hit
 local function crush_shield(popData, ship, x, y)
@@ -204,45 +232,6 @@ script.on_internal_event(Defines.InternalEvents.GET_AUGMENTATION_VALUE, function
         end
     end
     return Defines.Chain.CONTINUE, augValue
-end)
-
-
-
--- [Smash Missile/Smash Bomb - Pop shield without hull damage on collision with room, and crush when fully drained.]
-
-mods.alder.popBallistics = {}
-local popBallistics = mods.alder.popBallistics
-popBallistics["AA_MISSILES_SMASH"] = {
-    count = 4, -- This weapon will pop 4 shield layers per shot
-    crush = 8 -- If this weapon reduces shields to 0, apply -12 shield layers
-}
-popBallistics["AA_MISSILES_SMASH_ENEMY"] = {
-    count = 4,
-    crush = 8
-}
-popBallistics["AA_BOMB_SMASH"] = {
-    count = 4,
-    crush = 8
-}
-popBallistics["AA_BOMB_SMASH_ENEMY"] = {
-    count = 4,
-    crush = 8
-}
-
-script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, 
-function(shipManager, projectile, location, damage, shipFriendlyFire)
-    local shieldSystem = shipManager.shieldSystem
-    local popData = nil
-    if shieldSystem and pcall(function() popData = popBallistics[Hyperspace.Get_Projectile_Extend(projectile).name] end) and popData then
-        shieldSystem:CollisionReal(location.x, location.y, Hyperspace.Damage(), true)
-        shieldSystem.shields.power.first = math.max(0, shieldSystem.shields.power.first - popData.count) 
-        
-        if shieldSystem.shields.power.first == 0 then
-            shieldSystem.shields.power.first = shieldSystem.shields.power.first  - popData.crush
-            Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("shield_crush",1,true)
-        end
-    end
-    return Defines.Chain.CONTINUE
 end)
 
 
