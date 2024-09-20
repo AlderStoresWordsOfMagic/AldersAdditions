@@ -777,19 +777,6 @@
 	<chargeImage>weapons/driver/driver_particle_glow.png</chargeImage>
 </weaponAnim>
 
-<!-- // LOOT // -->
-
-<animSheet name="loot_math_7" w="210" h="55" fw="30" fh="55">weapons/overwrite/math_loot_7.png</animSheet>
-<weaponAnim name="loot_math_7">
-	<sheet>loot_math_7</sheet>
-	<desc length="7" x="0" y="0"/>
-	<chargedFrame>5</chargedFrame>
-	<fireFrame>6</fireFrame>
-	<firePoint  x="16" y="15"/>
-	<mountPoint x="3" y="40"/>
-	<chargeImage>weapons/overwrite/math_loot_7_glow.png</chargeImage>
-</weaponAnim>
-
 <!-- // INSTANT // -->
 
 <animSheet name="pre_particle_burnout" w="45" h="107" fw="45" fh="107">weapons/instant/instant_particle_burnout.png</animSheet>
@@ -879,16 +866,6 @@
 </weaponAnim>
 
 <!-- // MISSILES // -->
-
-<animSheet name="missiles_recycle" w="372" h="47" fw="31" fh="47">weapons/overwrite/missiles_recycle.png</animSheet>
-<weaponAnim name="missiles_recycle">
-	<sheet>missiles_recycle</sheet>
-	<desc length="12" x="0" y="0"/>
-	<chargedFrame>10</chargedFrame>
-	<fireFrame>11</fireFrame>
-	<firePoint  x="17" y="24"/>
-	<mountPoint x="3" y="30"/>
-</weaponAnim>
 
 <animSheet name="missile_particle" w="32" h="80" fw="32" fh="80">projectile/missile_particle.png</animSheet>
 <anim name="missile_particle">
@@ -995,77 +972,6 @@
 </anim>
 
 <!-- // INSTANT // -->
-
-<animSheet name="ion_instant_burnout" w="38" h="91" fw="38" fh="91">weapons/overwrite/instant_ion_burnout.png</animSheet>
-<anim name="ion_instant_burnout">
-	<sheet>ion_instant_burnout</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="ion_instant" w="190" h="91" fw="38" fh="91">weapons/overwrite/instant_ion.png</animSheet>
-<weaponAnim name="ion_instant">
-	<sheet>ion_instant</sheet>
-	<desc length="5" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint  x="21" y="34"/>
-	<mountPoint x="6" y="68"/>
-	<chargeImage>weapon_instant/instant_ion_glow.png</chargeImage>
-	<boost>ion_instant_burnout</boost>
-</weaponAnim>
-
-<animSheet name="loot_math_5_burnout" w="38" h="91" fw="38" fh="91">weapons/overwrite/loot_math_5_burnout.png</animSheet>
-<anim name="ion_instant_charge">
-	<sheet>ion_instant_charge</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="loot_math_5" w="190" h="91" fw="38" fh="91">weapons/overwrite/loot_math_5.png</animSheet>
-<weaponAnim name="loot_math_5">
-	<sheet>loot_math_5</sheet>
-	<desc length="5" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint  x="21" y="34"/>
-	<mountPoint x="6" y="68"/>
-	<chargeImage>weapon_instant/instant_ion_glow.png</chargeImage>
-	<boost>loot_math_5_burnout</boost>
-</weaponAnim>
-
-<animSheet name="big_ion_burnout" w="42" h="119" fw="42" fh="119">weapons/overwrite/big_ion_burnout.png</animSheet>
-<anim name="big_ion_burnout">
-	<sheet>big_ion_burnout</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="big_ion" w="210" h="119" fw="42" fh="119">weapons/overwrite/big_ion.png</animSheet>
-<weaponAnim name="big_ion">
-	<sheet>big_ion</sheet>
-	<desc length="5" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint  x="25" y="61"/>
-	<mountPoint x="5" y="92"/>
-	<chargeImage>weapons/overwrite/big_ion_glow.png</chargeImage>
-	<boost>big_ion_burnout</boost>
-</weaponAnim>
-<animSheet name="big_ion_chaos_burnout" w="42" h="119" fw="42" fh="119">weapons/overwrite/big_ion_chaos_burnout.png</animSheet>
-<anim name="big_ion_chaos_burnout">
-	<sheet>big_ion_chaos_burnout</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="big_ion_chaos" w="210" h="119" fw="42" fh="119">weapons/overwrite/big_ion_chaos.png</animSheet>
-<weaponAnim name="big_ion_chaos">
-	<sheet>big_ion_chaos</sheet>
-	<desc length="5" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint  x="25" y="61"/>
-	<mountPoint x="5" y="92"/>
-	<chargeImage>weapons/overwrite/big_ion_chaos_glow.png</chargeImage>
-	<boost>big_ion_chaos_burnout</boost>
-</weaponAnim>
 
 <animSheet name="pre_fire_burnout" w="49" h="90" fw="49" fh="90">weapons/overwrite/instant_torch_burnout.png</animSheet>
 <anim name="pre_fire_burnout">

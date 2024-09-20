@@ -3176,12 +3176,6 @@
 	</mod:findLike>
 </mod:findName>
 
-<mod:findName type="weaponBlueprint" name="MISSILES_FREE">
-	<mod:findLike type="weaponArt">
-		<mod:setValue>missiles_recycle</mod:setValue>
-	</mod:findLike>
-</mod:findName>
-
 <mod:findName type="weaponBlueprint" name="TRC_MISSILES_INSTANT">
 	<mod:findLike type="weaponArt">
 		<mod:setValue>pre_missiles</mod:setValue>
