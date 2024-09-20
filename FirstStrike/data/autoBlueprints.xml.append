@@ -1532,7 +1532,6 @@
 
     <mod:findName type="blueprintList" name="GIFTLIST_ENGI">
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
-        <mod-append:name>AA_POINTER</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_ZOLTAN">
