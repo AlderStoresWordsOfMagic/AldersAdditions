@@ -1,0 +1,272 @@
+<FTL>
+
+<!-- /// TOGGLEABLE EQUIPMENT /// -->
+
+<!-- // AMP. DISRUPTOR // -->
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+    <mod-append:choice req="AA_DISRUPTOR_1_AMP2" blue="false">
+        <text>(Amp Disruptor) Set the state of the drone. [Current power: 2]</text>
+        <event load="AA_COMBAT_CHECK_AMP_DISRUPTOR_2"/>
+    </mod-append:choice>
+    <mod-append:choice req="AA_DISRUPTOR_1_AMP3" blue="false">
+        <text>(Amp Disruptor) Set the state of the drone. [Current power: 3]</text>
+        <event load="AA_COMBAT_CHECK_AMP_DISRUPTOR_3"/>
+    </mod-append:choice>
+    <mod-append:choice req="AA_DISRUPTOR_1_AMP4" blue="false">
+        <text>(Amp Disruptor) Set the state of the drone. [Current power: 4]</text>
+        <event load="AA_COMBAT_CHECK_AMP_DISRUPTOR_4"/>
+    </mod-append:choice>
+</mod:findName>
+
+<event name="AA_COMBAT_CHECK_AMP_DISRUPTOR_2">
+	<text>What power do you want to set the drone to?
+	Current stats; [swipe length: 30 px]</text>
+	<choice hidden="true">
+		<text>Set the drone to 3 power. [swipe length: 60 px]</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_DISRUPTOR_1_AMP2"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_DISRUPTOR_1_AMP3"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Set the drone to 4 power. [swipe length: 90 px]</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_DISRUPTOR_1_AMP2"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_DISRUPTOR_1_AMP4"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+<event name="AA_COMBAT_CHECK_AMP_DISRUPTOR_3">
+	<text>What power do you want to set the drone to?
+	Current stats; [swipe length: 60 px]</text>
+	<choice hidden="true">
+		<text>Set the drone to 2 power. [swipe length: 30 px]</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_DISRUPTOR_1_AMP3"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_DISRUPTOR_1_AMP2"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Set the drone to 4 power. [swipe length: 90 px]</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_DISRUPTOR_1_AMP3"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_DISRUPTOR_1_AMP4"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+<event name="AA_COMBAT_CHECK_AMP_DISRUPTOR_4">
+	<text>What power do you want to set the drone to?
+	Current stats; [swipe length: 90 px]</text>
+	<choice hidden="true">
+		<text>Set the drone to 2 power. [swipe length: 30 px]</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_DISRUPTOR_1_AMP4"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_DISRUPTOR_1_AMP2"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Set the drone to 3 power. [swipe length: 60 px]</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_DISRUPTOR_1_AMP4"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_DISRUPTOR_1_AMP3"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+
+<!-- // TOG. ELEMENTARY // -->
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+	<mod-append:choice req="AA_ELEMENTARY_SMASH" blue="false">
+		 <text>(Elementary Drone) Set the state of the drone. [Current mode: Smasher]</text> 
+		 <event load="AA_COMBAT_CHECK_TOG_ELEMENTARY_SMASH"/>
+	</mod-append:choice>
+	<mod-append:choice req="AA_ELEMENTARY_ELECTRON" blue="false">
+		 <text>(Elementary Drone) Set the state of the drone. [Current mode: Electron]</text> 
+		 <event load="AA_COMBAT_CHECK_TOG_ELEMENTARY_ELECTRON"/>
+	</mod-append:choice>
+</mod:findName>
+
+<event name="AA_COMBAT_CHECK_TOG_ELEMENTARY_SMASH">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Electronic Inducer Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_ELEMENTARY_SMASH"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_ELEMENTARY_ELECTRON"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+<event name="AA_COMBAT_CHECK_TOG_ELEMENTARY_ELECTRON">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Shield Smasher Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_ELEMENTARY_ELECTRON"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_ELEMENTARY_SMASH"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+
+<!-- /// STORAGE CHECK SHENANIGANS /// -->
+
+<!-- // MINELAUNCHER TRAPPING // -->
+
+<mod:findName type="event" name="STORAGE_CHECK_JOB_FLEET">
+	<mod-append:choice req="AA_MINELAUNCHER_CLOAK" blue="false">
+		 <text>Use your Cloaked Mine Launcher. [-7}, gives 3 delay, always impacts notoriety]</text> 
+		 <event>
+            <text>You rig the ammunition and set a trap for the Rebels. Though the cloaked mines may be especially efficient at slowing down the incoming fleet, you know that the weight of the crime you just committed won't show well on your mission report.</text>
+            <modifyPursuit amount="-3"/>
+            <item_modify>
+                <item type="missiles" min="-7" max="-7"/>
+            </item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="MORALITY_UPDATE_GENERAL"/>
+			</choice>
+        </event>
+	</mod-append:choice>
+	<mod:findWithChildLike type="choice" child-type="event"><mod:selector load="STORAGE_CHECK_JOB_LOAD"/>
+		<mod:setAttributes req="pilot" lvl="1" blue="false" max_group="999"/>
+	</mod:findWithChildLike>
+	<mod-append:choice req="AA_MINELAUNCHER_CLOAK" blue="false">
+		<text>Use your Particle Mine Launcher. [-7}, gives 2 delay]</text> 
+		<event>
+		   <text>You rig the ammunition and set a trap for the Rebels. It's definitely illegal to do, but you'll be gone before it matters.</text>
+		   <modifyPursuit amount="-2"/>
+		   <item_modify>
+			   <item type="missiles" min="-7" max="-7"/>
+		   </item_modify>
+		   <choice hidden="true" req="loc_mine_counter" max_group="0" lvl="0" blue="false">
+			<text>Continue...</text>
+			<event load="TRAP_WARNING_1"/>
+			</choice>
+			<choice hidden="true" req="loc_mine_counter" max_group="0" lvl="1" blue="false">
+				<text>Continue...</text>
+				<event load="TRAP_WARNING_2"/>
+			</choice>
+			<choice hidden="true" req="loc_mine_counter" max_group="0" lvl="2" blue="false">
+				<text>Continue...</text>
+				<event load="TRAP_WARNING_3"/>
+			</choice>
+			<choice hidden="true" req="loc_mine_counter" max_group="0" lvl="3" blue="false">
+				<text>Continue...</text>
+				<event load="MORALITY_UPDATE_GENERAL"/>
+			</choice>
+	   </event>
+   </mod-append:choice>
+   <mod:findWithChildLike type="choice" child-type="event"><mod:selector load="STORAGE_CHECK_JOB_LOAD"/>
+	   <mod:setAttributes req="pilot" lvl="1" blue="false" max_group="999"/>
+   </mod:findWithChildLike>
+</mod:findName>
+
+</FTL>

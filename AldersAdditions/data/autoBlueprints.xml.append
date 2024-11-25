@@ -1,0 +1,1654 @@
+<FTL>
+
+<!-- /// EQUIPMENT LISTS FROM MULTIVERSE /// -->
+
+<!-- // BASIC LISTS // -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
+        <mod-append:name>AA_LASER_PURGE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_REPAIR</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+        <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_CONSERVATIVE</mod-append:name>
+
+        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_ENERGY_INSTANT</mod-append:name>
+
+        <mod-append:name>AA_POINTER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
+        <mod-append:name>AA_LASER_PURGE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_REPAIR</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+        <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_CONSERVATIVE</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_ENERGY_INSTANT</mod-append:name>
+
+        <mod-append:name>AA_POINTER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <mod-append:name>AA_DISRUPTOR_1_AMP3</mod-append:name>
+        <mod-append:name>AA_DISRUPTOR_1_AMP4</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+        <mod-append:name>AA_SPLICER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+        <mod-append:name>AA_SPLICER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="DRONE_CONTROL_COMBAT">
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_CHECK_TOGGLES_AND_AMPS">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+    </mod:findName>
+
+<!-- // BLUELIST APPENDS // -->
+
+    <mod:findName type="blueprintList" name="BLUELIST_ION">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_ENERGY">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+        <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_MISSILES_ALL">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_MINELAUNCHERS_ALL">
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_MISSILES_DAMAGE">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_SUPPORT">
+        <mod-append:name>AA_LASER_REPAIR</mod-append:name>
+        <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
+        <mod-append:name>AA_BOMB_SMASH</mod-append:name>
+        <mod-append:name>AA_POINTER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_CONSERVATIVE</mod-append:name>
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HEAVY">
+        <mod-append:name>AA_DRIVER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_NODAMAGE">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO">
+        <mod-append:name>AA_LASER_PURGE</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NODAMAGE">
+        <mod-append:name>AA_LASER_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_PARTICLE">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_FIRE_NONBALLISTIC">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_FIRE_BALLISTIC">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+<!-- // STORE LIST APPENDS // -->
+
+<!-- / STANDARD / -->
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_WEAPONS_LASERS">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_WEAPONS_BALLISTICS">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [broken] -->
+
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_WEAPONS_ION">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+    </mod:findName>
+
+<!-- / FACTION FAVORITES / -->
+
+    <mod:findName type="blueprintList" name="SHOP_ENGI_ITEM_WEAPONS">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_REPAIR</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ENGI_ITEM_WEAPONS_ION">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ZOLTAN_ITEM_WEAPONS">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_INSTANT</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ZOLTAN_ITEM_WEAPONS_BEAM">
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_CONSERVATIVE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ORCHID_ITEM_WEAPONS">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_CRYSTAL_ITEM_WEAPONS">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_REBEL_ITEM_WEAPONS_LASERS">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_FREEMANTIS_ITEM_WEAPONS">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_FREEMANTIS_ITEM_WEAPONS_PARTICLE">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ROCK_ITEM_WEAPONS_MISSILES">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_DYNASTY_ITEM_WEAPONS_BREACH_AND_PIERCE">
+        <mod-append:name>AA_DRIVER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_SLUG_ITEM_WEAPONS_BIO">
+        <mod-append:name>AA_LASER_PURGE</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_LANIUS_ITEM_WEAPONS_FLAK">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_HARDSCIFI">
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_CONSERVATIVE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_POINTER</mod-append:name>
+    </mod:findName>
+
+<!-- / SYLVAN'S STOCK / -->
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_SYSTEM">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BIO">
+        <mod-append:name>AA_LASER_PURGE</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_LASERS_CHAIN_AND_CHARGE">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_LASERS_SPECIAL">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_CHARGE">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BEAM_UTILITY">
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BEAM_BIO">
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+    </mod:findName>
+
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_ION_ATTRIBUTE">
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_ION_SPECIAL">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_ENERGY_ATTRIBUTE">
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+        <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_MISSILES_SPECIAL">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [broken] -->
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_MINELAUNCHER_SPECIAL">
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BOMB_SPECIAL">
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_FLAK_ELEMENTAL">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_DRONES_COMBAT_AMP">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_DRONES_COMBAT_SPECIAL">
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+        <mod-append:name>AA_SPLICER</mod-append:name>
+    </mod:findName>
+
+<!-- / THE OBSERVERS' CATEGORIES / -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_LASER_BOSS">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ION_BOSS">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_BEAM_BOSS">
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_AMMUNITION_BOSS">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_BIO_BOSS">
+        <mod-append:name>AA_LASER_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_POWERFUL_BOSS">
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_SLUG_BOSS">
+        <mod-append:name>AA_LASER_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ENGI_BOSS">
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_PACIFIST_BOSS">
+        <mod-append:name>AA_POINTER</mod-append:name>
+    </mod:findName>
+
+<!-- /// OTHER SHIPS FROM MULTIVERSE /// -->
+
+<!-- // FRIENDLY // -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_UNION">
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_MILITIA">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_MILITIA_ELITE">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_FED">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ENGI">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_DRONES_ENGI">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+    </mod:findName>
+    <mod:findName type="blueprintList" name="LIST_DRONES_ENGI_COMBAT">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ZOLTAN">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_DRONES_ZOLTAN">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <mod-append:name>AA_DISRUPTOR_1_AMP3</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_MONK">
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_DRONES_ZOLTAN">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <mod-append:name>AA_DISRUPTOR_1_AMP3</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ORCHID">
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ORCHID_ELITE">
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_VAMPWEED">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_FREEMANTIS">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_SHELL">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_DRONES_SHELL_SCIENCE">
+        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_MORPH">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_LOSTSUN">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+    
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+    </mod:findName>
+
+<!-- // NEUTRAL // -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_SSLG">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_GHOST">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_DYNASTY">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_SIREN">
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_RHYME">
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_SLUG">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_CLAN">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_LEECH">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_REVOLUTIONARY">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_LEECH_ELITE">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_LANIUS">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+<!-- // HOSTILE // -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL_SELITE">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_LEGION">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL_SELITEA">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ENGINEER">
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_AUTO">
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ESTATE">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_COALITION">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ROCK">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_OUTCAST">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ROCK_ELITE">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ROCK_SELITE">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_MANTIS">
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+    
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_SUZERAIN">
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+    
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_DUSKBRINGER">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+    </mod:findName>
+
+<!-- // SECRET // -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_AUGMENTED">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_CULTIST">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+<!-- // PIRATES // -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_HACKER">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+    
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_BROOD">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+    </mod:findName>
+
+<!-- // CORPORATIONS // -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_HEPHAESTUS">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ARCADIA">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+    </mod:findName>
+
+<!-- // MULTIVERSE TRAVELLERS // -->
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_ALL">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_SHIELDBREAKER">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_FIRE">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_LASER">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_HEAVY">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_HEAVY_AND_HULL">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_ATTRIBUTE">
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_MISSILES">
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_BALLISTICS">
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name> [broken] -->
+
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_BALLISTICS_DAMAGE">
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_LAUNCHERS">
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_BOMBS">
+        <!-- <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name> [broken] -->
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS">
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS_FOCUS">
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS_ONLY">
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS_DAMAGE">
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS_UTILITY">
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_ION">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_ION_PROJECTILE">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_ION_ONLY">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_ION_NOBOMB">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_ENERGY">
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_FLAK">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_FLAK_ALL">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_WEAPONS_PHYSICAL">
+        <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_DRONES_ALL">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_DRONES_COMBAT">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="MV_DRONES_COMBAT_ION">
+        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+    </mod:findName>
+
+<!-- // MISCELLANEOUS // -->
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_AUTOION">
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_DRONES_AUTOION">
+        <mod-append:name>AA_ELEMENTARY_ELECTRON</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_ROCK_BIGGUNS">
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_DRIVER_ION</mod-append:name>
+        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_BEAM_MASTER_ION">
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+    </mod:findName>
+
+<!-- /// GIFT LISTS /// -->
+
+    <mod:findName type="blueprintList" name="GIFTLIST_FREE">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_WEAPONS_ANCIENTS_USELESS">
+        <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_ION">
+        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
+        <mod-append:name>AA_ELECTRON_1</mod-append:name>
+        <mod-append:name>AA_ELECTRON_2</mod-append:name>
+        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_ENERGY">
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_EXPLOSIVES">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_BALLISTIC">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [broken] -->
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_MISSILES">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+        <!-- <mod-append:name>AA_MISSILES_SMASH</mod-append:name> [broken] -->
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_BOMBS">
+        <!-- <mod-append:name>AA_BOMB_SMASH</mod-append:name> [broken] -->
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_FLAK">
+        <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_FEDERATION">
+        <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_ENGI">
+        <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_ZOLTAN">
+        <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_REBEL">
+        <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name>
+        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_COALITION">
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_ROCK">
+        <mod-append:name>AA_MISSILES_ION</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_LOSTSUN">
+        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_DUSK">
+        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_ENERGY_BIO</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_FREEMANTIS">
+        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_MANTIS">
+        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_LEECH">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_DYNASTY">
+        <mod-append:name>AA_LASER_SMASH</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_LANIUS">
+        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
+        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="GIFTLIST_MINELAUNCHERS_TRAPPER">
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    
+<!-- /// NON-MV BLUEPRINT LISTS /// -->
+
+<!-- // SYLVAN SHOPS // -->
+
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_PARTICLE_OLD">
+	<name>LASER_PARTICLE</name>
+	<name>LASER_PARTICLE_2</name>
+	<name>BEAM_PARTICLE</name>
+	<name>MISSILES_PARTICLE</name>
+	<name>MISSILES_PARTICLE_PLAYER</name>
+</blueprintList>
+
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_PARTICLE_NEW">
+    <name>AA_LASER_PARTICLE_PIERCE</name>
+    <name>AA_LASER_PARTICLE_MINI</name>
+    <name>AA_LASER_PARTICLE_INSTANT</name>
+    <name>AA_FOCUS_PARTICLE</name>
+    <name>AA_SHOTGUN_PARTICLE</name>
+</blueprintList>
+
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_DISRUPTOR">
+    <name>AA_BEAM_ION_1</name>
+    <name>AA_BEAM_ION_2</name>
+    <name>AA_BEAM_ION_3</name>
+    <name>AA_BEAM_ION_CONSERVATIVE</name>
+    <name>AA_BEAM_ENERGY</name>
+</blueprintList>
+
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_DISRUPTOR_SPECIAL">
+    <name>AA_BEAM_ION_PHASE</name>
+    <name>AA_BEAM_ION_BIO</name>
+    <name>AA_BEAM_ION_STUN</name>
+    <name>AA_BEAM_ION_ADAPT</name>
+</blueprintList>
+
+<blueprintList name="AA_SHOP_ITEM_SYLVAN_CAPACITOR">
+    <name>AA_FOCUS_ION_1</name>
+    <name>AA_FOCUS_ION_2</name>
+    <name>AA_FOCUS_ION_PHASE</name>
+</blueprintList>
+
+<!-- /// WEAPONS WITH RANDOM EFFECTS /// -->
+
+<!-- // MULTITYPE ION // -->
+
+<blueprintList name="AA_LIST_WEAPON_RAINBOW_ION_BLASTS">
+	<name>AA_ION_RAINBOW_NORMAL</name>
+    <name>AA_ION_RAINBOW_NORMAL</name>
+    <name>AA_ION_RAINBOW_STUN</name>
+    <name>AA_ION_RAINBOW_STUN</name>
+    <name>AA_ION_RAINBOW_BIO</name>
+    <name>AA_ION_RAINBOW_BIO</name>
+    <name>AA_ION_RAINBOW_FIRE</name>
+    <name>AA_ION_RAINBOW_FIRE</name>
+    <name>AA_ION_RAINBOW_BREACH</name>
+    <name>AA_ION_RAINBOW_BREACH</name>
+    <name>AA_ION_RAINBOW_PHASE</name>
+    <name>AA_ION_RAINBOW_PHASE</name>
+    <name>AA_ION_RAINBOW_ENERGY</name>
+    <name>AA_ION_RAINBOW_ENERGY</name>
+</blueprintList>
+
+<!-- /// SHIPS NOT FROM MULTIVERSE /// -->
+
+<!-- // THE BEAM MASTER: PARTICLE EDITION // -->
+
+<blueprintList name="LIST_WEAPONS_BEAM_MASTER_PARTICLE">  
+	<name>LASER_PARTICLE</name>
+	<name>LASER_PARTICLE_2</name>
+	<name>AA_LASER_PARTICLE_MINI</name>
+	<name>BEAM_PARTICLE</name>
+	<name>AA_FOCUS_PARTICLE</name>
+</blueprintList>
+<blueprintList name="LIST_DRONES_BEAM_MASTER_PARTICLE">  
+	<name>ASSAULT_PARTICLE</name>
+</blueprintList>
+<shipBlueprint name="AA_BEAM_MASTER_PARTICLE" layout="mu_beam_master" img="mu_beam_master">
+	<class>The Particle Master</class>
+	<systemList>
+		<drones power="2" max="6" room="1" start="true" />
+		<engines power="1" max="2" room="7" start="true" />
+		<oxygen power="1" max="3" room="2" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="2" max="8" room="3" start="true" />
+		<weapons power="1" max="8" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="8" count="4" load="LIST_WEAPONS_BEAM_MASTER_PARTICLE" />
+	<droneList drones="4" count="3" load="LIST_DRONES_BEAM_MASTER_PARTICLE" />
+	<health amount="10" />
+	<maxPower amount="8" />
+	<boardingAI>sabotage</boardingAI>
+    <aug name="AA_PARTICLE_SHIELD" />
+</shipBlueprint>
+
+</FTL>

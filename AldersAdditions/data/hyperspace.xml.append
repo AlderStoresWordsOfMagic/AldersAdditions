@@ -1,0 +1,351 @@
+<FTL>
+
+<!-- /// LOAD LUA SCRIPTS /// -->
+
+<mod:findLike type="scripts">
+
+    <mod-append:script>data/lua/AA.lua</mod-append:script>
+
+</mod:findLike>
+
+
+<!-- /// EVENTS /// -->
+
+<mod:findLike type="events" limit="1">
+
+    <!-- // EVENT FILES // -->
+
+
+
+
+    <!-- // VARIABLES // -->
+
+
+
+
+    <!-- // REQS // -->
+
+
+
+
+    <!-- // CUSTOM FLEETS // -->
+
+
+
+
+    <!-- // EVENTS WITH HYPERSPACE FEATURES // -->
+
+
+
+
+    <!-- // BOSS BOXES // -->
+
+
+
+
+
+</mod:findLike>
+
+
+<!-- /// SHIPS /// -->
+
+<mod:findLike type="ships" limit="1">
+
+    <!-- // SHIP ICONS // -->
+
+    <mod:findLike type="shipIcons" limit="1">
+
+        <!-- / GENERAL / -->
+
+        <!-- <mod-append:shipIcon>
+            <name>aa_icon_insulated</name>
+            <tooltip>INSULATED ROOMS:
+    This enemy has one or more insulated rooms, marked by the blue border and I icon in the top left. Insulated rooms will take no ion damage from weapons or instant crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
+        </mod-append:shipIcon>
+    
+        <mod-append:shipIcon>
+            <name>aa_icon_firewall</name>
+            <tooltip>FIREWALLED ROOMS:
+    This enemy has one or more firewalled rooms, marked by the purple border and H icon in the top left. Firewalled rooms are immune to hacking effects, but take all damage as normal.</tooltip>
+        </mod-append:shipIcon>
+    
+        <mod-append:shipIcon>
+            <name>aa_icon_encased</name>
+            <tooltip>ENCASED ROOMS:
+    This enemy has one or more firewalled rooms, marked by the orange border and S icon in the top left. Encased rooms are immune to sabotage and fire damage, but otherwise take damage as normal.</tooltip>
+        </mod-append:shipIcon>
+    
+        <mod-append:shipIcon>
+            <name>aa_icon_multiresist</name>
+            <tooltip>MULTIPLE RESISTANCES:
+    This enemy has multiple resistant rooms of different types, marked by the letter in the top left. Use your knowledge to determine which rooms are resistant to what.</tooltip>
+        </mod-append:shipIcon> 
+        
+        <mod-append:shipIcon>
+            <name>aa_icon_superauto</name>
+            <tooltip>ADVANCED AUTOMATION:
+    This enemy is controlled by a complex artificial intelligence, and therefore cannot be crew-killed. Systems behave as if manned by crew with fully developed skills, and automatic repairs are made at triple the rate of a normal automated ship.</tooltip>
+	    </mod-append:shipIcon>-->
+
+
+        <!-- / AUGMENTS / -->
+
+        <mod-append:shipIcon>
+	        <name>aa_icon_particle_shield</name>
+            <tooltip>PARTICLE SHIELD:
+This enemy is protected by a weak energy shield that regenerates on its own. Order your volleys carefully to break through.</tooltip>
+	    </mod-append:shipIcon>
+
+    </mod:findLike>
+
+    <!-- // CUSTOM SHIP SPECIFICATIONS // -->
+
+    <mod-append:customShip name="AA_BEAM_MASTER_PARTICLE">
+		<shipIcons>
+			<shipIcon>icon_lowthreat</shipIcon>
+        </shipIcons>
+		<crew>
+			<unique_leah room="0" name="Leah"/> <!--pilot-->
+			<human_engineer room="3"/> <!--shields-->
+			<human_rebel room="7"/> <!--engines-->
+		</crew>
+		<autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+
+</mod:findLike>
+
+
+<!-- /// CREW /// -->
+
+<mod:findLike type="crew" limit="1">
+
+    <!-- // DUSTWORMS // -->
+
+	<mod-append:race name="aa_dustworm">
+		<canFight>false</canFight>
+		<canSabotage>true</canSabotage>
+		<maxHealth>90</maxHealth>
+		<animBase>mantis</animBase>
+		<allDamageTakenMultiplier>2</allDamageTakenMultiplier>
+		<damageTakenMultiplier>0.5</damageTakenMultiplier>
+		<fireDamageMultiplier>0.5</fireDamageMultiplier>
+		<suffocationModifier>0.5</suffocationModifier>
+		<moveSpeedMultiplier>0.7</moveSpeedMultiplier>
+		<repairSpeedMultiplier>1.4</repairSpeedMultiplier>
+		<doorDamageMultiplier>3</doorDamageMultiplier>
+		<deathSounds>
+			<deathSound>femaleDeath1</deathSound>
+			<deathSound>femaleDeath2</deathSound>
+			<deathSound>femaleDeath3</deathSound>
+		</deathSounds>
+		<shootingSounds>
+			<shootingSound>laser_particle</shootingSound>
+		</shootingSounds>
+		<powerEffect>
+			<cooldown>30</cooldown>
+			<jumpCooldown>full</jumpCooldown>
+			<req type="enemy">
+				<enemyInRoom/>
+			</req>
+			<powerSounds>
+				<powerSound>dustworm_silk</powerSound>
+			</powerSounds>
+			<buttonText>SILK</buttonText>
+			<tooltip>[DURATION: 10s]
+				Spray enemies in the room with silk. Wrapped crew move 0.2x as fast and cannot sabotage.</tooltip>
+			<cooldownColor r="200" g="255" b="255"/>
+			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+			<statBoosts>
+				<statBoost name="moveSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>0.2</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>CURRENT_ENEMIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<duration>10</duration>
+					<boostAnim>status_wrap</boostAnim>
+				</statBoost>
+				<statBoost name="canSabotage">
+					<boostType>SET</boostType>
+					<value>FALSE</value>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>CURRENT_ENEMIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<duration>10</duration>
+				</statBoost>
+			</statBoosts>
+		</powerEffect>
+	</mod-append:race>
+
+
+	<!-- // MV SPECIES VARIANTS // -->
+
+
+    <!-- // UNIQUES // -->
+
+
+</mod:findLike>
+
+<mod:findLike type="drones" limit="1">
+
+	<!-- // CREW DRONES // -->
+
+
+</mod:findLike>
+
+
+<!-- /// AUGMENTS /// -->
+
+<mod:findLike type="augments" limit="1">
+
+    <!-- // GENERAL // -->
+
+    <mod-append:aug name="AA_PARTICLE_SHIELD">
+        <function name="ENERGY_SHIELD" value="0" useForReqs="true" stackable="false" warning="false"/>
+        <superShield>
+            <value>1</value>
+            <color r="255" g="120" b="0" a="1"/>
+            <shieldImage>ship/enemy_shields_particle.png</shieldImage>
+        </superShield>
+        <icon>aa_icon_particle_shield</icon>
+    </mod-append:aug>
+
+    <!-- // FACTION // -->
+
+    <mod-append:aug name="AA_SILK_ARMOR">
+		<statBoosts>
+			<statBoost name="repairSpeed">
+				<boostType>MULT</boostType>
+				<amount>1.2</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<priority>999</priority>
+			</statBoost>
+		</statBoosts>
+		<icon>aa_icon_silk_armor</icon>
+	</mod-append:aug>
+
+    <!-- // GENERAL // -->
+
+
+    <!-- // TECHNICAL // -->
+
+
+
+
+</mod:findLike>
+
+
+<!-- /// POWER SURGES /// -->
+
+<mod:findLike type="boss" limit="1">
+
+    <!-- // INTEGRAL // -->
+    <mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_MIXED">
+        <weapon name="LASER_HEAVY_1" count="6"/>
+        <weapon name="SHOTGUN_1" count="16"/>
+    </mod-append:surgeBarrage>
+
+</mod:findLike>
+
+
+<!-- /// CUSTOM STORES /// -->
+
+<mod:findLike type="store" limit="1">
+
+    <mod-append:customStore id="STORE_SYLVAN_DISRUPTORS">
+        <itemPurchaseLimit>2</itemPurchaseLimit>
+        <category type="WEAPONS">
+            <customTitle>ION BEAMS</customTitle>
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_DISRUPTOR</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_DISRUPTOR</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_DISRUPTOR</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+        </category>
+        <category type="WEAPONS">
+            <customTitle>ION BEAMS</customTitle>
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_DISRUPTOR_SPECIAL</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item> 
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_DISRUPTOR_SPECIAL</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    			
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_CAPACITOR</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+        </category>
+    </mod-append:customStore>
+    <mod-append:customStore id="STORE_SYLVAN_PARTICLE">
+        <itemPurchaseLimit>2</itemPurchaseLimit>
+        <category type="WEAPONS">
+            <customTitle>PARTICLE WEAPONS</customTitle>
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_PARTICLE_OLD</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_PARTICLE_OLD</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_PARTICLE_OLD</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+        </category>
+        <category type="WEAPONS">
+            <customTitle>PARTICLE WEAPONS</customTitle>
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_PARTICLE_NEW</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item> 
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_PARTICLE_NEW</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    			
+            <item>
+                <blueprint>AA_SHOP_ITEM_SYLVAN_PARTICLE_NEW</blueprint>
+                <modifier min="0.8" max="1.1" flat="false"/>
+                <price>-1</price>
+            </item>    
+        </category>
+    </mod-append:customStore>
+
+</mod:findLike>
+
+
+<!-- /// ACHIEVEMENTS /// -->
+<mod:findLike type="achievements" limit="1">
+
+</mod:findLike>
+
+<!-- /// DISCORD RICH PRESENCE INTEGRATION /// -->
+
+
+
+
+</FTL>

@@ -1,0 +1,67 @@
+<FTL>
+
+
+<!-- /// ENVIRONMENT /// -->
+
+<!-- // AUG EFFECTS // -->
+
+<particle_shield volume="3">ship/particle_shield.ogg</particle_shield>
+
+
+<!-- /// WEAPONS /// -->
+
+<!-- // LASERS // -->
+
+<laser_purge volume="3">weapons/lasers/laser_purge.ogg</laser_purge>
+<laser_smash volume="3">weapons/lasers/laser_smash.ogg</laser_smash>
+
+<!-- // IONS // -->
+
+<electron volume="3">weapons/ions/electron.ogg</electron>
+
+<!-- // BEAMS // -->
+
+<beam_smash volume="3">weapons/beams/beam_smash.ogg</beam_smash>
+<beam_sustain volume="3">weapons/beams/beam_sustain.ogg</beam_sustain>
+<beam_sustain_chain volume="3">weapons/beams/beam_sustain_chain.ogg</beam_sustain_chain>
+
+<disruptor_light volume="2">weapons/beams/disruptor_light.ogg</disruptor_light>
+<disruptor_heavy volume="2">weapons/beams/disruptor_heavy.ogg</disruptor_heavy>
+
+<capacitor_light volume="4">weapons/beams/capacitor_light.ogg</capacitor_light>
+<capacitor_heavy volume="4">weapons/beams/capacitor_heavy.ogg</capacitor_heavy>
+
+<shock_cannon volume="2">weapons/beams/shock_cannon.ogg</shock_cannon>
+
+<!-- // BALLISTICS // -->
+
+<driver volume="2">weapons/ballistics/driver.ogg</driver>
+<driver_heavy volume="2">weapons/ballistics/driver_heavy.ogg</driver_heavy>
+<driver_flechette volume="2">weapons/ballistics/driver_flechette.ogg</driver_flechette>
+
+<rockets volume="2">weapons/ballistics/rockets.ogg</rockets>
+
+<acid_launch volume="2">weapons/ballistics/acid_launch.ogg</acid_launch>
+
+<!-- // MISC // -->
+
+<decoy volume="2">weapons/misc/decoy.ogg</decoy>
+
+<pointer volume="2">weapons/misc/pointer.ogg</pointer>
+
+<!-- // IMPACTS // -->
+
+<sustain volume="3">weapons/impacts/sustain.ogg</sustain>
+
+<acid_hit volume="4">weapons/impacts/acid_hit.ogg</acid_hit>
+
+<shield_pop volume="4">weapons/impacts/shield_pop.ogg</shield_pop>
+<shield_crush volume="5">weapons/impacts/shield_crush.ogg</shield_crush>
+
+<!-- // OVERWRITES // -->
+
+<beam_eldritch volume="4">weapons/overwrites/beam_eldritch.ogg</beam_eldritch>
+
+<launch_eldritch volume="4">weapons/overwrites/launch_eldritch.ogg</launch_eldritch>
+
+</FTL>

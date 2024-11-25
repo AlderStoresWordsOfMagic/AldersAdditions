@@ -1,7 +1,0 @@
-<FTL>
-
-<event name="AA_CHECK_PATCH_FS_BEFORE_SC" unused="true">
-	<text>If you're seeing this, then that means you got curious. This event exists to make sure AA: FS is patched before AA: SC. If it isn't, Slipstream will throw an error when trying to patch AA: SC.</text>
-</event>
-
-</FTL>
