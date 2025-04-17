@@ -6,6 +6,7 @@
 <!-- // AUG EFFECTS // -->
 
 <particle_shield volume="3">ship/particle_shield.ogg</particle_shield>
+<temp_hull volume="3">ship/temp_hull.ogg</temp_hull>
 
 
 <!-- /// WEAPONS /// -->
@@ -39,6 +40,8 @@
 <driver_heavy volume="2">weapons/ballistics/driver_heavy.ogg</driver_heavy>
 <driver_flechette volume="2">weapons/ballistics/driver_flechette.ogg</driver_flechette>
 
+<railgun volume="3">weapons/ballistics/railgun.ogg</railgun>
+
 <rockets volume="2">weapons/ballistics/rockets.ogg</rockets>
 
 <acid_launch volume="2">weapons/ballistics/acid_launch.ogg</acid_launch>
@@ -63,5 +66,11 @@
 <beam_eldritch volume="4">weapons/overwrites/beam_eldritch.ogg</beam_eldritch>
 
 <launch_eldritch volume="4">weapons/overwrites/launch_eldritch.ogg</launch_eldritch>
+
+
+<!-- /// CREW /// -->
+
+<dustworm_silk volume="4">crew/dustworm_silk.ogg</dustworm_silk>
+
 
 </FTL>

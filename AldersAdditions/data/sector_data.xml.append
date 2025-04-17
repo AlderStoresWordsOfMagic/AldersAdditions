@@ -5,7 +5,7 @@
 <mod:findName type="sectorDescription" name="STANDARD_SPACE">
 	<mod:findLike type="rarityList">
 		<mod-append:blueprint name="AA_LASER_SMASH_2" rarity="0" />
-		<mod-append:blueprint name="AA_ELECTRON_2" rarity="0" />
+		<mod-append:blueprint name="AA_ELECTRON_HEAVY" rarity="0" />
 		<mod-append:blueprint name="AA_MISSILES_ION" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
@@ -228,8 +228,8 @@
 		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="0" />
-		<mod-append:blueprint name="AA_ELECTRON_1" rarity="0" />
-		<mod-append:blueprint name="AA_ELECTRON_2" rarity="0" />
+		<mod-append:blueprint name="AA_ELECTRON" rarity="0" />
+		<mod-append:blueprint name="AA_ELECTRON_HEAVY" rarity="0" />
 
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CONSERVATIVE" rarity="0" />
@@ -296,8 +296,8 @@
 		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_BOMB_DECAY" rarity="0" />
-		<mod-append:blueprint name="AA_ELECTRON_1" rarity="0" />
-		<mod-append:blueprint name="AA_ELECTRON_2" rarity="0" />
+		<mod-append:blueprint name="AA_ELECTRON" rarity="0" />
+		<mod-append:blueprint name="AA_ELECTRON_HEAVY" rarity="0" />
 
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CONSERVATIVE" rarity="0" />

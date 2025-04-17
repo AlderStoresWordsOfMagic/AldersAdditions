@@ -1,0 +1,24 @@
+<FTL>
+
+<!-- /// SHIP DEFINITIONS /// -->
+
+<!-- // BOSSES // -->
+
+<!-- Rebel Cruiser -->
+
+<ship name="AA_BOSS_REBEL_CRUISER" auto_blueprint="AA_BOSS_REBEL_CRUISER">
+	<destroyed load="AA_BOSS_REBEL_CRUISER_DESTROYED"/>
+	<deadCrew load="AA_BOSS_REBEL_CRUISER_DEADCREW"/>
+</ship>
+
+<event name="AA_BOSS_REBEL_CRUISER_DESTROYED">
+	<text>The gargantuan orange vessel bursts into flames for a brief moment as its fuel tanks explode, before it is promptly extinguished by the vacuum of space. Its wreckage begins to succumb to the gravitational pull of the nearby planet, the debris setting alight again as it breaks up in the atmosphere. You've won.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+<event name="AA_BOSS_REBEL_CRUISER_DEADCREW">
+	<text>With nobody left alive on board to stop you or to pilot the ship, it grows inactive and unable to fight back. A prompt shuttle docking allows you unrestricted access to the ship's interior, which you are happy to strip of anything valuable before turning the empty cruiser over to the dry dock. You've won.</text>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+</event>
+
+</FTL>

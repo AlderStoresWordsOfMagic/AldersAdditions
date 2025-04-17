@@ -4,7 +4,24 @@
 
 <mod:findLike type="scripts">
 
-    <mod-append:script>data/lua/AA.lua</mod-append:script>
+    <mod-append:script>data/scripts/AA_core.lua</mod-append:script>
+
+    <mod-append:script>data/scripts/augments/regen_shields.lua</mod-append:script>
+
+    <mod-append:script>data/scripts/crew/advanced_crew_ai.lua</mod-append:script>
+    <mod-append:script>data/scripts/crew/mania.lua</mod-append:script>
+
+    <mod-append:script>data/scripts/drones/missile_drones.lua</mod-append:script>
+
+    <mod-append:script>data/scripts/weapons/_fusion.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/charge_holders.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/cores.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/cumulative.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/painter.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/room_impact_beams.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/shotgun.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/smash.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/sustain.lua</mod-append:script>
 
 </mod:findLike>
 
@@ -15,11 +32,11 @@
 
     <!-- // EVENT FILES // -->
 
+    <mod-append:eventFile>sector_provision</mod-append:eventFile>
 
-
+    <mod-append:eventFile>special_testing</mod-append:eventFile>
 
     <!-- // VARIABLES // -->
-
 
 
 
@@ -27,9 +44,7 @@
 
 
 
-
     <!-- // CUSTOM FLEETS // -->
-
 
 
 
@@ -37,12 +52,9 @@
 
 
 
-
     <!-- // BOSS BOXES // -->
 
-
-
-
+    <mod-append:bossShip>AA_BOSS_REBEL_CRUISER</mod-append:bossShip>
 
 </mod:findLike>
 
@@ -55,7 +67,7 @@
 
     <mod:findLike type="shipIcons" limit="1">
 
-        <!-- / GENERAL / -->
+        <!-- / NON-AUGMENT ICONS / -->
 
         <!-- <mod-append:shipIcon>
             <name>aa_icon_insulated</name>
@@ -88,7 +100,7 @@
 	    </mod-append:shipIcon>-->
 
 
-        <!-- / AUGMENTS / -->
+        <!-- / GENERAL AUGMENTS / -->
 
         <mod-append:shipIcon>
 	        <name>aa_icon_particle_shield</name>
@@ -96,9 +108,37 @@
 This enemy is protected by a weak energy shield that regenerates on its own. Order your volleys carefully to break through.</tooltip>
 	    </mod-append:shipIcon>
 
+        <!-- / FACTION AUGMENTS / -->
+
+        <mod-append:shipIcon>
+            <name>aa_icon_silk_armor</name>
+            <tooltip>SILKSTEEL HULL:
+    Special, malleable composite hull plating that increases repair speed by 1.2x on board. If a system is fully repaired, the ship gains a temporary hull point.</tooltip>
+        </mod-append:shipIcon>
+
     </mod:findLike>
 
     <!-- // CUSTOM SHIP SPECIFICATIONS // -->
+
+    <!-- / BOSSES / -->
+
+    <mod-append:customShip name="AA_BOSS_REBEL_CRUISER">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+        </shipIcons>
+		<crew>
+			<human_mfk room="20"/>
+			<human_soldier room="3"/>
+			<human_rebel_medic room="19"/>
+			<human_technician room="23"/>
+			<human_rebel room="4"/>
+			<human_rebel room="2"/>
+			<human_rebel room="11"/>
+			<human_rebel room="14"/>
+		</crew>
+	</mod-append:customShip>
+
+    <!-- / MISC / -->
 
     <mod-append:customShip name="AA_BEAM_MASTER_PARTICLE">
 		<shipIcons>
@@ -125,13 +165,15 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 		<canFight>false</canFight>
 		<canSabotage>true</canSabotage>
 		<maxHealth>90</maxHealth>
+        <lowHealthThreshold>30.0</lowHealthThreshold>
 		<animBase>mantis</animBase>
 		<allDamageTakenMultiplier>2</allDamageTakenMultiplier>
 		<damageTakenMultiplier>0.5</damageTakenMultiplier>
 		<fireDamageMultiplier>0.5</fireDamageMultiplier>
 		<suffocationModifier>0.5</suffocationModifier>
 		<moveSpeedMultiplier>0.7</moveSpeedMultiplier>
-		<repairSpeedMultiplier>1.4</repairSpeedMultiplier>
+		<repairSpeedMultiplier>1.5</repairSpeedMultiplier>
+        <sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
 		<doorDamageMultiplier>3</doorDamageMultiplier>
 		<deathSounds>
 			<deathSound>femaleDeath1</deathSound>
@@ -139,7 +181,9 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 			<deathSound>femaleDeath3</deathSound>
 		</deathSounds>
 		<shootingSounds>
-			<shootingSound>laser_particle</shootingSound>
+			<shootingSound>detectiveShoot1</shootingSound>
+            <shootingSound>detectiveShoot2</shootingSound>
+            <shootingSound>detectiveShoot3</shootingSound>
 		</shootingSounds>
 		<powerEffect>
 			<cooldown>30</cooldown>
@@ -152,29 +196,13 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 			</powerSounds>
 			<buttonText>SILK</buttonText>
 			<tooltip>[DURATION: 10s]
-				Spray enemies in the room with silk. Wrapped crew move 0.2x as fast and cannot sabotage.</tooltip>
+				Spray enemies in the room with silk. Wrapped crew move 0.2x as fast and cannot sabotage or break doors.</tooltip>
 			<cooldownColor r="200" g="255" b="255"/>
 			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 			<statBoosts>
-				<statBoost name="moveSpeedMultiplier">
-					<boostType>MULT</boostType>
-					<amount>0.2</amount>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>CURRENT_ENEMIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<duration>10</duration>
-					<boostAnim>status_wrap</boostAnim>
-				</statBoost>
-				<statBoost name="canSabotage">
-					<boostType>SET</boostType>
-					<value>FALSE</value>
-					<shipTarget>CURRENT_ROOM</shipTarget>
-					<crewTarget>CURRENT_ENEMIES</crewTarget>
-					<affectsSelf>false</affectsSelf>
-					<priority>0</priority>
-					<duration>10</duration>
-				</statBoost>
+				<statBoost name="moveSpeedMultiplier" load="AA_SILK_MOVE"/>
+				<statBoost name="canSabotage" load="AA_SILK_SABO"/>
+                <statBoost name="doorDamageMultiplier" load="AA_SILK_DOORS"/>
 			</statBoosts>
 		</powerEffect>
 	</mod-append:race>
@@ -215,6 +243,7 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
     <!-- // FACTION // -->
 
     <mod-append:aug name="AA_SILK_ARMOR">
+        <function name="AA_TECH_TEMP_HP_REPAIR" value="1" useForReqs="true" stackable="false" warning="false"/>
 		<statBoosts>
 			<statBoost name="repairSpeed">
 				<boostType>MULT</boostType>
@@ -228,12 +257,64 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 		<icon>aa_icon_silk_armor</icon>
 	</mod-append:aug>
 
-    <!-- // GENERAL // -->
+    <!-- // CREW LABS // -->
 
+    <mod-append:aug name="AA_LAB_DUSTWORM_ESCAPE">
+        <statBoosts>
+            <statBoost name="moveSpeedMultiplier">
+                <boostType>FLAT</boostType>
+                <amount>0.5</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <priority>0</priority>
+                <whiteList load="LIST_CREW_DUSTWORM"/>
+            </statBoost>
+        </statBoosts>
+    </mod-append:aug>
+    <mod-append:aug name="AA_LAB_DUSTWORM_RAGE">
+        <statBoosts>
+            <statBoost name="canFight">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <priority>0</priority>
+                <whiteList load="LIST_CREW_DUSTWORM"/>
+            </statBoost>
+            <statBoost name="resistsMindControl">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <priority>0</priority>
+                <whiteList load="LIST_CREW_DUSTWORM"/>
+            </statBoost>
+            <statBoost name="sabotageSpeedMultiplier">
+                <boostType>FLAT</boostType>
+                <amount>1</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <priority>0</priority>
+                <whiteList load="LIST_CREW_DUSTWORM"/>
+            </statBoost>
+        </statBoosts>
+    </mod-append:aug>
+    <mod-append:aug name="AA_LAB_DUSTWORM_SILENCE">
+        <statBoosts>
+			<statBoost name="silenced">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+                <crewTarget>ALL</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<affectsSelf>false</affectsSelf>
+				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
+				<boostAnim>madness</boostAnim>
+			</statBoost>
+        </statBoosts>
+    </mod-append:aug>
 
     <!-- // TECHNICAL // -->
-
-
 
 
 </mod:findLike>

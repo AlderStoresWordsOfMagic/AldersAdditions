@@ -12,17 +12,15 @@
 	<tooltip>You should never see this.</tooltip>
 	<damage>1</damage>
 	<shots>1</shots>
-	<sp>0</sp>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>0</cooldown>
+	<cooldown>-1</cooldown>
 	<power>1</power>
-	<cost>20</cost>
+	<cost>0</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 
 	<!-- This is where all of the common AA statuses are stored. -->
 	<statBoosts>
+
 		<statBoost name="healSpeed" save="AA_PURGE"> <!-- Heal Block -->
 			<boostType>MULT</boostType>
 			<amount>0.25</amount>
@@ -34,9 +32,110 @@
 			<duration>15</duration>
 			<boostAnim>status_purge</boostAnim>
 		</statBoost>
+
+		<statBoost name="moveSpeedMultiplier" save="AA_SILK_MOVE">
+			<boostType>MULT</boostType>
+			<amount>0.2</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>CURRENT_ENEMIES</crewTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>0</priority>
+			<duration>10</duration>
+			<boostAnim>status_silk</boostAnim>
+		</statBoost>
+		<statBoost name="canSabotage" save="AA_SILK_SABO">
+			<boostType>SET</boostType>
+			<value>FALSE</value>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>CURRENT_ENEMIES</crewTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>0</priority>
+			<duration>10</duration>
+		</statBoost>
+		<statBoost name="doorDamageMultiplier" save="AA_SILK_DOORS">
+			<boostType>MULT</boostType>
+			<amount>0</amount>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>CURRENT_ENEMIES</crewTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>0</priority>
+			<duration>10</duration>
+			<boostAnim>status_silk</boostAnim>
+		</statBoost>
+
+		<statBoost name="silenced" save="AA_MANIA_SILENCE">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>-100</priority>
+			<maxStacks>1</maxStacks>
+			<duration>25</duration>
+			<!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+			<blackList>
+				<slug_hektar_box/>
+				<unique_billy_box/>
+				<unique_irwin_demon/>
+				<unique_dessius/>
+				<siren/>
+				<siren_harpy/>
+				<eldritch_thing/>
+				<eldritch_thing_weak/>
+				<eldritch_cat/>
+				<gnome/>
+			</blackList>
+			<boostAnim>status_mania</boostAnim>
+		</statBoost>
+		<statBoost name="resistsMindControl" save="AA_MANIA_MC">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>-100</priority>
+			<maxStacks>1</maxStacks>
+			<duration>25</duration>
+		</statBoost>
+		<statBoost name="moveSpeedMultiplier" save="AA_MANIA_MOVE">
+			<boostType>MULT</boostType>
+			<amount>1.5</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>-100</priority>
+			<maxStacks>1</maxStacks>
+			<duration>25</duration>
+		</statBoost>
+		<statBoost name="sabotageSpeedMultiplier" save="AA_MANIA_SABO">
+			<boostType>MULT</boostType>
+			<amount>1.5</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>-100</priority>
+			<maxStacks>1</maxStacks>
+			<duration>25</duration>
+		</statBoost>
+		<statBoost name="damageMultiplier" save="AA_MANIA_DAMAGE">
+			<boostType>MULT</boostType>
+			<amount>1.5</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>false</affectsSelf>
+			<priority>-100</priority>
+			<maxStacks>1</maxStacks>
+			<duration>25</duration>
+		</statBoost>
+
 	</statBoosts>
 
-	<image>laser_light1</image>
+	<image>laser_hull</image>
 	<launchSounds>
 		<sound>lightLaser1</sound>
 		<sound>lightLaser2</sound>
@@ -54,12 +153,13 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>default</weaponArt>
+	<weaponArt>laser_hull</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
 
 <!-- /// WEAPONS /// -->
+
 
 <!-- // LASERS // -->
 
@@ -187,7 +287,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>pre_particle</weaponArt>
+	<weaponArt>laser_particle_instant</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -227,6 +327,7 @@
 	<cost>30</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
+	<mv-crewTarget>MOST_CREW</mv-crewTarget>
 	<image>laser_purge_projectile</image>
 	<launchSounds>
 		<sound>laser_purge</sound>
@@ -377,6 +478,79 @@
 	<weaponArt>laser_smash_2</weaponArt>
 </weaponBlueprint>
 
+<weaponBlueprint name="AA_LASER_BREACH">
+	<type>LASER</type>
+	<title>Suffocator</title>
+	<short>Suffocator</short>
+	<tip>tip_laser</tip>
+	<desc>A large, menacing hull laser. Its shots rock the superstructure of ships, tearing open a breach on every tile in the target room.</desc>
+	<damage>1</damage>
+	<hullBust>1</hullBust>
+	<shots>1</shots>
+	<breachChance>100</breachChance> <!-- Triggers some Fusion stuff -->
+	<cooldown>14</cooldown>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_breach_projectile</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_breach</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_LASER_STRAIN">
+	<type>LASER</type>
+	<title>Thermal Crusher</title>
+	<short>Thermal</short>
+	<tip>tip_laser</tip>
+	<desc>This Laser weapon causes immense thermal stress on any room it strikes, dealing additional damage for each fire in the room it hits and converting each of those fires into breaches.</desc>
+	<damage>1</damage>
+	<shots>1</shots>
+	<breachChance>100</breachChance> <!-- Triggers some Lua stuff -->
+	<cooldown>15</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>2</bp>
+	<rarity>0</rarity>
+	<image>laser_breach_projectile</image>
+	<launchSounds>
+		<sound>heavyLaser1</sound>
+		<sound>heavyLaser2</sound>
+		<sound>heavyLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_strain</weaponArt>
+	<iconImage>laser</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="AA_LASER_REPAIR">
 	<type>LASER</type>
 	<tip>tip_laser</tip>
@@ -494,6 +668,7 @@
 	<weaponArt>laser_cumulative</weaponArt> 
 	<iconImage>laser_chain</iconImage>
 </weaponBlueprint>
+
 
 <!-- // MISSILES // -->
 
@@ -615,7 +790,7 @@
 	<power>3</power>
 	<cost>90</cost>
 	<bp>6</bp>
-	<!-- <rarity>5</rarity> [WILL BE READDED WHEN MECHANIC IS UPDATED] -->
+	<rarity>5</rarity>
 	<rarity>0</rarity>
 	<image>missile_smash</image>
 	<explosion>explosion_smash</explosion>
@@ -676,6 +851,7 @@
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
+
 <!-- // IONS // -->
 
 <weaponBlueprint name="AA_ION_RAINBOW">
@@ -730,7 +906,7 @@
 	<spin>720</spin>
 	<shots>1</shots>
 	<sp>0</sp>
-	<cooldown>1</cooldown>
+	<cooldown>-1</cooldown>
 	<rarity>0</rarity>
 	<image>ion_2_shot</image>
 	<weaponArt>ion_5</weaponArt>
@@ -766,7 +942,7 @@
 	<shots>1</shots>
 	<sp>0</sp>
 	<stunChance>10</stunChance>
-	<cooldown>1</cooldown>
+	<cooldown>-1</cooldown>
 	<rarity>0</rarity>
 	<image>ion_stun_shot</image>
 	<weaponArt>ion_stun_heavy</weaponArt>
@@ -808,7 +984,7 @@
 	<shots>1</shots>
 	<sp>0</sp>
 	<breachChance>3</breachChance>
-	<cooldown>1</cooldown>
+	<cooldown>-1</cooldown>
 	<rarity>0</rarity>
 	<image>ion_bio</image>
 	<explosion>explosion_small_ion_bio</explosion>
@@ -845,7 +1021,7 @@
 	<sp>0</sp>
 	<fireChance>10</fireChance>
 	<stunChance>1</stunChance>
-	<cooldown>1</cooldown>
+	<cooldown>-1</cooldown>
 	<rarity>0</rarity>
 	<image>ion_fire</image>
 	<weaponArt>ion_fire</weaponArt>
@@ -881,7 +1057,7 @@
 	<shots>1</shots>
 	<sp>0</sp>
 	<breachChance>10</breachChance>
-	<cooldown>1</cooldown>
+	<cooldown>-1</cooldown>
 	<rarity>0</rarity>
 	<image>ion_phase</image>
 	<weaponArt>ion_breach</weaponArt>
@@ -916,7 +1092,7 @@
 	<spin>720</spin>
 	<shots>1</shots>
 	<sp>10</sp>
-	<cooldown>1</cooldown>
+	<cooldown>-1</cooldown>
 	<rarity>0</rarity>
 	<image>ion_phase</image>
 	<weaponArt>ion_phase_2</weaponArt>
@@ -954,7 +1130,7 @@
 	<shots>1</shots>
 	<sp>0</sp>
 	<fireChance>3</fireChance>
-	<cooldown>1</cooldown>
+	<cooldown>-1</cooldown>
 	<rarity>0</rarity>
 	<image>energy_shot2</image>
 	<weaponArt>energy_3</weaponArt>
@@ -1044,6 +1220,7 @@
 	<weaponArt>ion_cumulative</weaponArt> 
 	<iconImage>ion_chain</iconImage>
 </weaponBlueprint>
+
 
 <!-- // ENERGY // -->
 
@@ -1212,6 +1389,7 @@
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
+
 <!-- // BEAMS // -->
 
 <weaponBlueprint name="AA_BEAM_SUSTAIN">
@@ -1348,12 +1526,37 @@
 	<cost>50</cost>
 	<bp>6</bp>
 	<rarity>0</rarity>
+	<mv-crewTarget>MOST_CREW</mv-crewTarget>
 	<length>120</length>
 	<image>beam_contact</image>
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
 	<weaponArt>beam_purge</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_CHARGEGUN_DAMAGE"> <!-- add to bluelists -->
+	<type>BEAM</type>
+	<tip>aa_tip_accumulator</tip>
+	<title>'Woldo' Cumulative Beam</title>
+	<short>'Woldo'</short>
+	<desc>A heavy-hitting Beam that only hits heavier as it is left to gather power.</desc>
+	<damage>1</damage>
+	<sp>0</sp>
+	<breachChance>2</breachChance>
+	<cooldown>18</cooldown>
+	<power>3</power>
+	<cost>75</cost>
+	<chargeLevels>3</chargeLevels>
+	<bp>7</bp>
+	<rarity>5</rarity>
+	<length>85</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_cumulative</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1655,6 +1858,7 @@
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
+
 <!-- // BOMBS // -->
 
 <weaponBlueprint name="AA_BOMB_SMASH">
@@ -1778,6 +1982,7 @@
 	<cost>60</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
+	<mv-crewTarget>MOST_CREW</mv-crewTarget>
 	<image>bomb_purge</image>
 	<explosion>explosion_purge</explosion>
 	<launchSounds>
@@ -1834,6 +2039,7 @@
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
+
 <!-- // FLAK // -->
 
 <weaponBlueprint name="AA_SHOTGUN_PARTICLE">
@@ -1883,6 +2089,54 @@
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="AA_SHOTGUN_STUN">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Concussive Flak Gun</title>
+	<short>Stun Flak</short>
+	<tip>tip_flak</tip>
+	<desc>This Flak cannon fires a blast of 4 blunt, heavy projectiles that rock the ship and stun crew.</desc>
+	<radius>50</radius>
+	<damage>1</damage>
+	<spin>720</spin>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>10</stunChance>
+	<stun>15</stun>
+	<cooldown>15</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>5</rarity>
+	<projectiles>
+		<projectile count="4" fake="false">debris_large_stun</projectile>
+		<projectile count="6" fake="true">debris_small</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>flak</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>shotgun_stun</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="AA_SHOTGUN_CONSERVATIVE">
 	<type>BURST</type>
 	<flavorType>Physical Projectile Blast</flavorType>
@@ -1890,7 +2144,7 @@
 	<title>Conservative Flak Gun</title>
 	<short>Conserv. F.</short>
 	<tip>tip_conservative</tip>
-	<desc>Slow-charging, 3-shot flak cannon. Deals good damage for no power, but it is hard to aim.</desc>
+	<desc>Slow-charging, 3-shot Flak cannon. Deals good damage for no power, but it is hard to aim.</desc>
 	<radius>55</radius>
 	<damage>1</damage>
 	<shots>1</shots>
@@ -1937,7 +2191,7 @@
 	<title>Cumulative Flak Gun</title>
 	<tip>aa_tip_accumulator</tip>
 	<short>Cum. Flak</short>
-	<descriptionOverride>This versatile Flak Cannon has the ability to gradually refine the shrapnel it fires, increasing the damage its shots deal as it waits.
+	<descriptionOverride>This versatile Flak cannon has the ability to gradually refine the shrapnel it fires, increasing the damage its shots deal as it waits.
 
 	Stats:
 	Required Power: 2
@@ -2006,6 +2260,7 @@
 	<weaponArt>shotgun_cumulative</weaponArt>  
 	<iconImage>missile_charge</iconImage>
 </weaponBlueprint>
+
 
 <!-- // MINELAUNCHERS // -->
 
@@ -2100,6 +2355,7 @@
 	<weaponArt>minelauncher_particle</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
+
 
 <!-- // PINPOINTS // -->
 
@@ -2236,7 +2492,7 @@
 	<tip>aa_tip_driver</tip>
 	<desc>An old-school kinetic weapon. Special electrical adapters allow it to gradually accumulate charge even when it is not directly powered, and its projectiles fly forward at blistering speeds.</desc>
 	<damage>4</damage>
-	<speed>2147483647</speed>
+	<speed>200</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<breachChance>10</breachChance>
@@ -2245,10 +2501,10 @@
 	<cost>80</cost>
 	<rarity>5</rarity>
 	<radius>0</radius>
-	<spin>720</spin>
+	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="1" fake="false">debris_small</projectile>
+		<projectile count="1" fake="false">driver_projectile</projectile>
 	</projectiles>
 	<explosion>explosion_big2</explosion>
 	<launchSounds>
@@ -2278,7 +2534,7 @@
 	<damage>2</damage>
 	<sysDamage>-2</sysDamage>
 	<persDamage>4</persDamage>
-	<speed>2147483647</speed>
+	<speed>200</speed>
 	<sp>1</sp>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
@@ -2293,10 +2549,10 @@
 	<cost>90</cost>
 	<rarity>0</rarity>
 	<radius>0</radius>
-	<spin>720</spin>
+	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="1" fake="false">debris_small</projectile>
+		<projectile count="1" fake="false">driver_projectile_rad</projectile>
 	</projectiles>
 	<explosion>explosion_bio</explosion>
 	<launchSounds>
@@ -2324,7 +2580,7 @@
 	<tip>aa_tip_driver</tip>
 	<description>This weapon fires fragmenting, explosive shots whose damage bleeds over into adjacent rooms.</description>
 	<damage>2</damage>
-	<speed>2147483647</speed>
+	<speed>200</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<breachChance>10</breachChance>
@@ -2336,10 +2592,10 @@
 	<cost>90</cost>
 	<rarity>0</rarity>
 	<radius>0</radius>
-	<spin>720</spin>
+	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="1" fake="false">debris_small</projectile>
+		<projectile count="1" fake="false">driver_projectile_explosive</projectile>
 	</projectiles>
 	<explosion>explosion_massive</explosion>
 	<launchSounds>
@@ -2365,10 +2621,10 @@
 	<title>Flechette Mass Driver</title>
 	<short>Flechette Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>Shells from this mass driver explode in flight, scattering a spray of sharp projectiles across the target zone.</desc>
+	<desc>This wide mass driver scatters a spray of sharp projectiles across the target zone, sacrificing hull damage in exchange for shredding targets at a low level.</desc>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
-	<speed>2147483647</speed>
+	<speed>200</speed>
 	<shots>1</shots>
 	<breachChance>3</breachChance>
 	<cooldown>27</cooldown>
@@ -2376,10 +2632,10 @@
 	<cost>90</cost>
 	<rarity>0</rarity>
 	<radius>80</radius>
-	<spin>720</spin>
+	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="8" fake="false">debris_small</projectile>
+		<projectile count="8" fake="false">driver_projectile_flechette</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>driver</sound>
@@ -2406,7 +2662,7 @@
 	<tip>aa_tip_driver</tip>
 	<desc>This mass driver contains shells filled with hot plasma, which annihilate shields and cripple systems with ease.</desc>
 	<ion>5</ion>
-	<speed>2147483647</speed>
+	<speed>200</speed>
 	<shots>1</shots>
 	<stunChance>10</stunChance>
 	<stun>5</stun>
@@ -2416,10 +2672,10 @@
 	<cost>100</cost>
 	<rarity>0</rarity>
 	<radius>0</radius>
-	<spin>720</spin>
+	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="1" fake="false">debris_small</projectile>
+		<projectile count="1" fake="false">driver_projectile_ion</projectile>
 	</projectiles>
 	<explosion>explosion_massive_ion</explosion>
 	<launchSounds>
@@ -2449,7 +2705,7 @@
 	<tip>aa_tip_driver</tip>
 	<desc>Elementary particles stream through the shells shot from this cannon, making short work of ship systems.</desc>
 	<sysDamage>6</sysDamage>
-	<speed>2147483647</speed>
+	<speed>200</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<fireChance>10</fireChance>
@@ -2458,10 +2714,10 @@
 	<cost>100</cost>
 	<rarity>0</rarity>
 	<radius>0</radius>
-	<spin>720</spin>
+	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="1" fake="false">debris_small</projectile>
+		<projectile count="1" fake="false">driver_projectile_particle</projectile>
 	</projectiles>
 	<explosion>explosion_particle</explosion>
 	<launchSounds>
@@ -2482,9 +2738,33 @@
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
+
+<!-- // CORES // -->
+
+<weaponBlueprint name="AA_CORE_PARTICLE">
+	<type>BEAM</type>
+	<tip>aa_tip_core</tip>
+	<flavorType>Particle Core</flavorType>
+	<title>Particle Core</title>
+	<short>P. Core</short>
+	<desc>A dedicated particle accelerator device that supercharges the weapon to its right with system-destroying capability.</desc>
+	<tooltip>Storage Weapon</tooltip>
+	<damage>0</damage>
+	<sp>0</sp>
+	<cooldown>-1</cooldown>
+	<speed>0</speed>
+	<length>0</length>
+	<rarity>0</rarity>
+	<power>3</power>
+	<cost>80</cost>
+	<image>beam_contact</image>
+	<weaponArt>core_particle</weaponArt>
+</weaponBlueprint>
+
+
 <!-- // MISC. // -->
 
-<weaponBlueprint name="AA_ELECTRON_1">
+<weaponBlueprint name="AA_ELECTRON">
 	<type>BOMB</type>
 	<tip>aa_tip_electron</tip>
 	<title>Electronic Inducer</title>
@@ -2519,7 +2799,7 @@
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_ELECTRON_2">
+<weaponBlueprint name="AA_ELECTRON_HEAVY">
 	<type>BOMB</type>
 	<tip>aa_tip_electron</tip>
 	<title>Heavy Electronic Inducer</title>
@@ -2593,6 +2873,7 @@
 	<cost>110</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
+	<mv-crewTarget>MOST_CREW</mv-crewTarget>
 	<projectiles>
         <projectile count="4" fake="false">laser_burst</projectile> <!-- Amount of beams to shoot. -->
     </projectiles>
@@ -2614,7 +2895,7 @@
 	<persDamage>2</persDamage>
 	<sp>0</sp>
 	<breachChance>1</breachChance>
-	<cooldown>1</cooldown>
+	<cooldown>-1</cooldown>
 	<color>
 		<r>255</r>
 		<g>151</g>
@@ -2664,10 +2945,563 @@
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
+
+<!-- // LOOT WEAPONS // -->
+
+<weaponBlueprint name="AA_RAILGUN">
+	<type>BURST</type>
+	<title>Railgun</title>
+	<short>Railgun</short>
+	<tip>aa_tip_driver</tip>
+	<desc>An experimental weapon which prioritizes shield penetration. Choose your targets carefully.</desc>
+	<damage>4</damage>
+	<speed>2147483647</speed>
+	<sp>10</sp>
+	<shots>1</shots>
+	<accuracyMod>100</accuracyMod>
+	<breachChance>10</breachChance>
+	<cooldown>30</cooldown>
+	<power>3</power>
+	<cost>80</cost>
+	<rarity>0</rarity>
+	<radius>0</radius>
+	<spin>0</spin>
+	<drone_targetable>1</drone_targetable>
+	<projectiles>
+		<projectile count="1" fake="false">debris_small</projectile>
+	</projectiles>
+	<explosion>explosion_big2</explosion>
+	<launchSounds>
+		<sound>railgun</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>explosion_heavy</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>railgun</weaponArt>
+	<iconReplace>railgun_icon</iconReplace>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_MANIA">
+	<type>BEAM</type>
+	<tip>aa_tip_mania</tip>
+	<title>'Dahl' Beam</title>
+	<short>'Dahl'</short>
+	<desc>This anomalous Beam can fire a stream of pure creative, frenzied energy. All crew who are hit by it will be overcome by a powerful mania.</desc>
+	<tooltip>Beam weapon, 2 damage per room.</tooltip>
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<sp>2</sp>
+	<cooldown>16</cooldown>
+	<power>2</power>
+	<cost>70</cost>
+	<bp>7</bp>
+	<color>
+		<r>169</r>
+		<g>112</g>
+		<b>255</b>
+	</color>
+	<statBoosts>
+		<statBoost name="silenced" load="AA_MANIA_SILENCE"/>
+		<statBoost name="resistsMindControl" load="AA_MANIA_MC"/>
+		<statBoost name="moveSpeedMultiplier" load="AA_MANIA_MOVE"/>
+		<statBoost name="sabotageSpeedMultiplier" load="AA_MANIA_SABO"/>
+		<statBoost name="damageMultiplier" load="AA_MANIA_DAMAGE"/>
+    </statBoosts>
+	<rarity>0</rarity>
+	<mv-crewTarget>MOST_CREW</mv-crewTarget>
+	<length>120</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_mania</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_BEAM_IMAGINE">
+	<type>BEAM</type>
+	<tip>aa_tip_mania</tip>
+	<title>Imaginator</title>
+	<short>Imaginator</short>
+	<desc>One swipe from this beam will fill the target vessel with all sorts of surreal wonders. There's no telling what will spring forth in each room.</desc>
+	<tooltip>Beam weapon, 2 damage per room.</tooltip>
+	<damage>0</damage>
+	<sp>10</sp>
+	<cooldown>20</cooldown>
+	<power>3</power>
+	<cost>90</cost>
+	<bp>7</bp>
+	<color>
+		<r>169</r>
+		<g>112</g>
+		<b>255</b>
+	</color>
+	<rarity>0</rarity>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>beam_imagine</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_HACK">
+	<type>BOMB</type>
+	<title>Imaginator (Hack)</title>
+	<short>Imaginator (Hack)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<mv-hack duration="5" hitShieldDuration="5" immuneAfterHack="5"/>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_hack</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hackStart</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_MC">
+	<type>BOMB</type>
+	<title>Imaginator (Mind Control)</title>
+	<short>Imaginator (MC)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<mv-mindControl>
+		<limit>1</limit>
+		<duration>15</duration>
+	</mv-mindControl>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_hack</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>mindControl</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_LOCKDOWN">
+	<type>BOMB</type>
+	<title>Imaginator (Lockdown)</title>
+	<short>Imaginator (Lockdown)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<lockdown>1</lockdown>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_hack</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>lockdown1</sound>
+		<sound>lockdown2</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_SPORES_POSITIVE">
+	<type>BOMB</type>
+	<title>Imaginator (Praetor Spores)</title>
+	<short>Imaginator (P. Spores)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<roomStatBoosts>
+		<statBoost name="maxHealth">
+			<boostType>MULT</boostType>
+			<amount>2</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<droneTarget>CREW</droneTarget>
+			<permanent>true</permanent>
+			<jumpClear>true</jumpClear>
+			<boostAnim>spores_buff_elite</boostAnim>
+			<maxStacks>1</maxStacks>
+			<duration>20</duration>
+			<priority>10000</priority>
+			<roomAnim renderLayer="1">
+				<anim animType="center">hazard_praetor_spores</anim>
+			</roomAnim>
+		</statBoost>
+		<statBoost name="repairSpeed">
+			<boostType>MULT</boostType>
+			<amount>2</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<droneTarget>CREW</droneTarget>
+			<permanent>true</permanent>
+			<jumpClear>true</jumpClear>
+			<maxStacks>1</maxStacks>
+			<duration>20</duration>
+			<priority>10000</priority>
+		</statBoost>
+		<statBoost name="bonusPower">
+			<boostType>MULT</boostType>
+			<amount>2</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<droneTarget>CREW</droneTarget>
+			<permanent>true</permanent>
+			<jumpClear>true</jumpClear>
+			<maxStacks>1</maxStacks>
+			<duration>20</duration>
+			<priority>10000</priority>
+		</statBoost>
+		<statBoost name="powerDrain">
+			<boostType>MULT</boostType>
+			<amount>2</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALLIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<droneTarget>CREW</droneTarget>
+			<permanent>true</permanent>
+			<jumpClear>true</jumpClear>
+			<maxStacks>1</maxStacks>
+			<duration>20</duration>
+			<priority>10000</priority>
+		</statBoost>
+	</roomStatBoosts>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_hack</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>cultivatorSpore</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_SPORES_NEGATIVE">
+	<type>BOMB</type>
+	<title>Imaginator (Cultivator Spores)</title>
+	<short>Imaginator (C. Spores)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<roomStatBoosts>
+		<statBoost name="allDamageTakenMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.6</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<droneTarget>CREW</droneTarget>
+			<permanent>true</permanent>
+			<jumpClear>true</jumpClear>
+			<maxStacks>1</maxStacks>
+			<duration>20</duration>
+			<priority>10000</priority>
+			<roomAnim renderLayer="1">
+				<anim animType="center">center_cultivator_spores</anim>
+			</roomAnim>
+		</statBoost>
+		<statBoost name="stunMultiplier">
+			<boostType>MULT</boostType>
+			<amount>1.5</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<droneTarget>CREW</droneTarget>
+			<permanent>true</permanent>
+			<jumpClear>true</jumpClear>
+			<maxStacks>1</maxStacks>
+			<duration>20</duration>
+			<priority>10000</priority>
+		</statBoost>
+		<statBoost name="healSpeed">
+			<boostType>MULT</boostType>
+			<amount>0.75</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<affectsSelf>true</affectsSelf>
+			<droneTarget>CREW</droneTarget>
+			<permanent>true</permanent>
+			<jumpClear>true</jumpClear>
+			<maxStacks>1</maxStacks>
+			<duration>20</duration>
+			<priority>10000</priority>
+		</statBoost>
+	</roomStatBoosts>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_hack</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>cultivatorSpore</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_SENTRY_NEURO">
+	<type>BOMB</type>
+	<title>Imaginator (Neuro-Sentry)</title>
+	<short>Imaginator (Neuro)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<roomStatBoosts>
+		<statBoost name="trueHealAmount">
+			<boostType>FLAT</boostType>
+			<amount>0</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<duration>20</duration>
+			<dangerRating>2</dangerRating>
+			<boostAnim>captivity</boostAnim>
+			<roomAnim renderLayer="3">
+				<anim animType="center">hazard_sentry_mind</anim>
+			</roomAnim>
+		</statBoost>
+		<statBoost name="controllable"> <!--for player crew-->
+			<boostType>SET</boostType>
+			<value>false</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<duration>20</duration>
+		</statBoost>
+	</roomStatBoosts>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_hack</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>sentry_impact</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_SENTRY_FROST">
+	<type>BOMB</type>
+	<title>Imaginator (Frost Sentry)</title>
+	<short>Imaginator (Frost)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<roomStatBoosts>
+		<statBoost name="moveSpeedMultiplier">
+			<boostType>MULT</boostType>
+			<amount>0.5</amount>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<duration>20</duration>
+			<roomAnim renderLayer="3">
+				<anim animType="center">hazard_sentry_frost</anim>
+			</roomAnim>
+			<fireCount min="0"/>
+		</statBoost>
+		<statBoost name="silenced">
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<duration>20</duration>
+			<boostAnim>madness</boostAnim>
+			<fireCount min="0"/>
+		</statBoost>
+	</roomStatBoosts>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_hack</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>sentry_impact</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_BAIT">
+	<type>BOMB</type>
+	<title>Imaginator (Bait)</title>
+	<short>Imaginator (Bait)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<spawnCrew>
+		<number>1</number>
+		<race>hologram</race>
+		<lifetime>20</lifetime>
+		<noSlot>true</noSlot>
+		<statBoosts>
+			<statBoost name="noClone">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<priority>999999</priority>
+			</statBoost>
+		</statBoosts>
+	</spawnCrew>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>decoy</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_SPIDER">
+	<type>BOMB</type>
+	<title>Imaginator (Spider)</title>
+	<short>Imaginator (Spider)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<spawnCrew>
+		<number>2</number>
+		<race>spider_hatch</race>
+		<lifetime>20</lifetime>
+		<statBoosts>
+			<statBoost name="noClone">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+		</statBoosts>
+		<noSlot>true</noSlot>
+	</spawnCrew>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>cloneArrive</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_BEAM_IMAGINE_DUSTWORM">
+	<type>BOMB</type>
+	<title>Imaginator (Dustworm)</title>
+	<short>Imaginator (Dustworm)</short>
+	<description>You should never see this.</description>
+	<damage>0</damage>
+	<accuracyMod>100</accuracyMod>
+	<spawnCrew>
+		<number>1</number>
+		<race>aa_dustworm</race>
+		<lifetime>20</lifetime>
+		<statBoosts>
+			<statBoost name="noClone">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+		</statBoosts>
+		<noSlot>true</noSlot>
+	</spawnCrew>
+	<shots>1</shots>
+	<cooldown>-1</cooldown>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>4</bp>
+	<rarity>0</rarity>
+	<image>projectile_imagine</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>bombTeleport</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>cloneArrive</sound>
+	</hitShipSounds>
+	<weaponArt>bomblauncher_small</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+
+
+
 <!-- /// DRONES /// -->
 
-<!-- // AMP. DISRUPTOR // -->
 
+<!-- // AMP. DISRUPTOR // -->
 <weaponBlueprint name="AA_DRONE_BEAM_ION_AMP1">
 	<type>BEAM</type>
 	<tip>aa_tip_disruptor</tip>
@@ -2731,7 +3565,6 @@
 	</launchSounds>
 	<weaponArt>disruptor_3</weaponArt>
 </weaponBlueprint>
-
 <blueprintList name="AA_LIST_AMP_DISRUPTOR">
     <name>AA_DISRUPTOR_1_AMP2</name>
     <name>AA_DISRUPTOR_1_AMP3</name>
@@ -2790,7 +3623,6 @@
 </droneBlueprint>
 
 <!-- // TOG. ELEMENTARY // -->
-
 <weaponBlueprint name="AA_DRONE_LASER_SMASH">
 	<type>BURST</type>
 	<drone_targetable>0</drone_targetable>
@@ -2850,7 +3682,6 @@
 	<weaponArt>electron</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
-
 <blueprintList name="AA_LIST_TOGGLE_ELEMENTARY">
     <name>AA_ELEMENTARY_SMASH</name>
     <name>AA_ELEMENTARY_ELECTRON</name>
@@ -2859,7 +3690,7 @@
     <type>COMBAT</type>
     <tip>tip_toggle_combat</tip>
     <title>Elementary Drone [Smasher]</title>
-    <short>Elementary [SMASH]</short>
+    <short>Elementary [S]</short>
     <desc>[CURRENT MODE: Smasher] This combat drone contains the technology to harness multiple types of exotic particles when active.</desc>
     <power>2</power>
     <cooldown>1000</cooldown>
@@ -2876,7 +3707,7 @@
     <type>COMBAT</type>
     <tip>tip_toggle_combat</tip>
     <title>Elementary Drone [Electron]</title>
-    <short>Elementary [ELEC]</short>
+    <short>Elementary [E]</short>
     <desc>[CURRENT MODE: Electron] This combat drone contains the technology to harness multiple types of exotic particles when active.</desc>
     <power>2</power>
     <cooldown>1000</cooldown>
@@ -2891,7 +3722,6 @@
 </droneBlueprint>
 
 <!-- // SPLICER // -->
-
 <weaponBlueprint name="AA_DRONE_LASER_SPLICER">
 	<type>LASER</type>
 	<title>Drone Scrambler</title>
@@ -2929,7 +3759,6 @@
 	<weaponArt>laser_purge</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
-
 <droneBlueprint name="AA_SPLICER">
     <type>COMBAT</type>
     <tip>aa_tip_scrambler</tip>
@@ -2949,7 +3778,10 @@
 </droneBlueprint>
 
 
+
+
 <!-- /// AUGMENTS /// -->
+
 
 <!-- // GENERAL // -->
 
@@ -2970,37 +3802,77 @@
 	<stackable>false</stackable>
 </augBlueprint>
 
+
 <!-- // FACTION // -->
 
 <augBlueprint name="AA_SILK_ARMOR"> <!-- UNIMPLEMENTED -->
 	<title>Silksteel Hull</title>
-	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and stronger when compressed. All crew repair 15% faster, and repairing a system fully gives the ship a temporary hull point, up to a maximum of 15.</desc>
+	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and stronger when compressed. All crew repair 15% faster, and repairing a system fully gives the ship a temporary hull point, up to a maximum of 15. Temporary hull points are cleared on jump.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
 <augBlueprint name="AA_SILK_ARMOR_LOCKED">
 	<title>Silksteel Hull</title>
-	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and stronger when compressed. All crew repair 15% faster, and repairing a system fully gives the ship a temporary hull point, up to a maximum of 15.</desc>
+	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and stronger when compressed. All crew repair 15% faster, and repairing a system fully gives the ship a temporary hull point, up to a maximum of 15. Temporary hull points are cleared on jump.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
 
+
 <!-- // CREW LABS // -->
+
+<augBlueprint name="AA_LAB_DUSTWORM_INSTALLED">
+    <title>Dustworm Lab Installed</title>
+	<desc>A primary crew lab for the Dustworms has been installed; another cannot be installed.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="AA_LAB_DUSTWORM_ESCAPE">
+    <title>Escape Protocol</title>
+	<desc>Dustworms move 50% faster, but cannot resist fear even if controlled by the player.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="AA_LAB_DUSTWORM_RAGE">
+    <title>Emotional Reaction</title>
+	<desc>Dustworms can now fight at normal damage and resist mind control, but lose their bonus to sabotage speed.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="AA_LAB_DUSTWORM_SILENCE">
+    <title>Confounding Stare</title>
+	<desc>Enemies in the same room as a Dustworm who are wrapped in silk cannot use their abilities.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
 
 
 <!-- // TECHNICAL // -->
+
+<augBlueprint name="AA_TECH_TEMP_HP_REPAIR">
+    <title>Temporary Hull Tracker</title>
+	<desc>You should never see this.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
 
 
 
 
 <!-- /// CREW /// -->
 
-<!-- Dustworms -->
+
+<!-- // DUSTWORMS // -->
 
 <crewBlueprint name="aa_dustworm">
-	<desc>These resilient, happy-go-lucky creatures hail from another part of the Multiverse, and have decided to cast their lot with the Federation.</desc>
+	<desc>Small, rotund, and surprisingly friendly, these peculiar aliens originate from another part of the Multiverse entirely.</desc>
 	<title>Dustworm</title>
 	<short>Dustworm</short>
 	<cost>70</cost>
@@ -3008,8 +3880,8 @@
 	<powerList>
 		<power>90 HP; cannot fight or sabotage, and will run from fights when not controlled by the player</power>
 		<power>Takes 2x damage from ship weapons and instant damage, moves at 0.7x speed</power>
-		<power>Repairs systems at 1.4x speed, deals 3.0x damage to doors</power>
-		<power>Active Ability: Restrains foes in the room with silk, slowing their movement and sabotage speed to a crawl</power>
+		<power>Repairs and sabotages systems at 1.5x speed, deals 3.0x damage to doors</power>
+		<power>Active Ability: Restrains foes in the room with silk, fifthing their movement speed and preventing them from sabotaging or breaking doors</power>
 	</powerList>
 	<colorList>
 		<layer> <!-- Body Color -->
@@ -3034,6 +3906,8 @@
 		</layer>
 	</colorList>
 </crewBlueprint>
+
+
 
 
 <!-- /// MV OVERWRITES /// -->
@@ -3077,7 +3951,6 @@
 <mod:findName type="weaponBlueprint" name="BOMB_STUN">
 	<mod-append:explosion>explosion_stun</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="BOMB_STUN_ENEMY">
 	<mod-append:explosion>explosion_stun</mod-append:explosion>
 </mod:findName>
@@ -3090,37 +3963,30 @@
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_2">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_3">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_FREE">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_FIRE">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_BREACH">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_STUN">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_stun</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="TRC_MINELAUNCHER_ION">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_big1_ion</mod-append:explosion>
@@ -3130,17 +3996,57 @@
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_massive</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_GIANT_CHAOS">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_big1</mod-append:explosion>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="ARTILLERY_BOSS_1">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>artillery_generic_laser</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="ARTILLERY_BOSS_2">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>artillery_generic_missile</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="ARTILLERY_BOSS_3">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>artillery_generic_beam</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="ARTILLERY_BOSS_4">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>artillery_generic_ion</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="ARTILLERY_BOSSMV_LASER">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>artillery_bossmv_laser</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="ARTILLERY_BOSSMV_MISSILE">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>artillery_bossmv_missile</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="ARTILLERY_BOSSMV_BEAM">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>artillery_bossmv_beam</mod:setValue>
+	</mod:findLike>
+</mod:findName>
+<mod:findName type="weaponBlueprint" name="ARTILLERY_BOSSMV_PHASE">
+	<mod:findLike type="weaponArt">
+		<mod:setValue>artillery_bossmv_phase</mod:setValue>
+	</mod:findLike>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MINELAUNCHER">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_massive</mod-append:explosion>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MINELAUNCHER_ENEMY">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 	<mod-append:explosion>explosion_massive</mod-append:explosion>
@@ -3154,11 +4060,9 @@
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS_ELITE">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS_VISION">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
 </mod:findName>
@@ -3183,7 +4087,6 @@
 		<mod:setValue>nightshade</mod:setValue>
 	</mod:findLike>
 </mod:findName>
-
 <mod:findName type="weaponBlueprint" name="UNSPOOLER_CHAOS">
 	<mod:findLike type="weaponArt">
 		<mod:setValue>nightshade_chaos</mod:setValue>

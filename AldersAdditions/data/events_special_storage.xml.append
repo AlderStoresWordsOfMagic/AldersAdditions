@@ -3,7 +3,6 @@
 <!-- /// TOGGLEABLE EQUIPMENT /// -->
 
 <!-- // AMP. DISRUPTOR // -->
-
 <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
     <mod-append:choice req="AA_DISRUPTOR_1_AMP2" blue="false">
         <text>(Amp Disruptor) Set the state of the drone. [Current power: 2]</text>
@@ -153,7 +152,6 @@
 </event>
 
 <!-- // TOG. ELEMENTARY // -->
-
 <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
 	<mod-append:choice req="AA_ELEMENTARY_SMASH" blue="false">
 		 <text>(Elementary Drone) Set the state of the drone. [Current mode: Smasher]</text> 
@@ -216,9 +214,10 @@
 	</choice>
 </event>
 
-<!-- /// STORAGE CHECK SHENANIGANS /// -->
 
-<!-- // MINELAUNCHER TRAPPING // -->
+<!-- /// STORAGE CHECK APPENDS /// -->
+
+<!-- // MINELAUNCHERS // -->
 
 <mod:findName type="event" name="STORAGE_CHECK_JOB_FLEET">
 	<mod-append:choice req="AA_MINELAUNCHER_CLOAK" blue="false">
@@ -268,5 +267,157 @@
 	   <mod:setAttributes req="pilot" lvl="1" blue="false" max_group="999"/>
    </mod:findWithChildLike>
 </mod:findName>
+
+
+<!-- // CREW LABS // -->
+
+<mod:findName type="event" name="STORAGE_CHECK_LAB">
+	<mod-append:choice req="AA_LIST_CREW_DUSTWORM" blue="false">
+		<text>Dustworm.</text>
+		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM"/>
+	</mod-append:choice>
+</mod:findName>
+
+<event name="AA_STORAGE_CHECK_LAB_DUSTWORM">
+	<text>You are viewing the lab menu for: [DUSTWORM]</text>
+	<choice req="AA_LAB_DUSTWORM_ESCAPE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Escape Protocol.
+		[+50% movement speed, fear reaction even when controlled]</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_RAGE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Emotional Reaction.
+		[Can fight at normal damage and resists mind control, loses sabotage bonus]</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_SILENCE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Amnestic Strands.
+		[Silk disables abilities instead of sabotage and door breaching]</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: None</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Pri: Escape Protocol. [An upgrade is already installed]</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="0" max_group="1" blue="false" hidden="true">
+		<text>Pri: Escape Protocol. [Cost: 25~, 3{]</text>
+		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_ESCAPE"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="1" max_group="2" blue="false" hidden="true">
+		<text>Pri: Emotional Reaction. [An upgrade is already installed]</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="0" max_group="2" blue="false" hidden="true">
+		<text>Pri: Emotional Reaction. [Cost: 30~, 2}]</text>
+		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_RAGE"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="1" max_group="3" blue="false" hidden="true">
+		<text>Pri: Confounding Stare. [An upgrade is already installed]</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="0" max_group="3" blue="false" hidden="true">
+		<text>Pri: Confounding Stare. [Cost: 30~, 2|]</text>
+		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_SILENCE"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="5" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_ESCAPE">
+	<text>You are about to install the Escape Protocol modification.
+	[Effects: Dustworms move 50% faster, but react to fear even when controlled]
+	
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 25~, 3{]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-25"/>
+				<item type="fuel" min="-3" max="-3"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="AA_INSTALL_LAB_DUSTWORM_ESCAPE"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+<event name="AA_INSTALL_LAB_DUSTWORM_ESCAPE">
+	<variable name="loc_lab_upgrades" op="add" val="1"/>
+	<hiddenAug>AA_LAB_DUSTWORM_ESCAPE</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
+	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
+</event>
+<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_RAGE">
+	<text>You are about to install the Emotional Reaction modification.
+	[Effects: Dustworms can now fight at normal damage and resist mind control, but lose their sabotage bonus]
+	
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 30~, 2}]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="scrap" min="-30" max="-30"/>
+				<item type="missiles" min="-2" max="-2"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="AA_INSTALL_LAB_DUSTWORM_RAGE"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+<event name="AA_INSTALL_LAB_DUSTWORM_RAGE">
+	<variable name="loc_lab_upgrades" op="add" val="1"/>
+	<hiddenAug>AA_LAB_DUSTWORM_RAGE</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
+	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
+</event>
+<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_SILENCE">
+	<text>You are about to install the Confounding Stare modification.
+	[Effects: Enemies in the same room as a Dustworm who are wrapped in silk cannot use their abilities]
+	
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 30~, 2|]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="scrap" min="-30" max="-30"/>
+				<item type="drones" min="-2" max="-2"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="AA_INSTALL_LAB_DUSTWORM_SILENCE"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+<event name="AA_INSTALL_LAB_DUSTWORM_SILENCE">
+	<variable name="loc_lab_upgrades" op="add" val="1"/>
+	<hiddenAug>AA_LAB_DUSTWORM_SILENCE</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
+	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
+</event>
+
 
 </FTL>
