@@ -44,8 +44,6 @@
 
 <rockets volume="2">weapons/ballistics/rockets.ogg</rockets>
 
-<acid_launch volume="2">weapons/ballistics/acid_launch.ogg</acid_launch>
-
 <!-- // MISC // -->
 
 <decoy volume="2">weapons/misc/decoy.ogg</decoy>
@@ -56,16 +54,12 @@
 
 <sustain volume="3">weapons/impacts/sustain.ogg</sustain>
 
-<acid_hit volume="4">weapons/impacts/acid_hit.ogg</acid_hit>
-
 <shield_pop volume="4">weapons/impacts/shield_pop.ogg</shield_pop>
 <shield_crush volume="5">weapons/impacts/shield_crush.ogg</shield_crush>
 
 <!-- // OVERWRITES // -->
 
 <beam_eldritch volume="4">weapons/overwrites/beam_eldritch.ogg</beam_eldritch>
-
-<launch_eldritch volume="4">weapons/overwrites/launch_eldritch.ogg</launch_eldritch>
 
 
 <!-- /// CREW /// -->

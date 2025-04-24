@@ -1,11 +1,11 @@
 local vter = mods.multiverse.vter
 local get_room_at_location = mods.multiverse.get_room_at_location
 
--- [Mania - Status effect/crew trait that causes them to repair enemy systems and/or disable system bars on repair. Framework by Arc, actual effect was a joint effort.]
+-- [Mania - Status effect/crew trait that causes them to repair enemy systems and/or disable system bars on repair. Framework by Arc.]
 
 local maniaTablePlayer = {}
 local maniaTableEnemy = {}
-local maniaTable = {maniaTablePlayer, maniaTableEnemy}
+local maniaTable = {[0] = maniaTablePlayer, [1] = maniaTableEnemy}
 
 mods.alder.maniaWeapons = {}
 local maniaWeapons = mods.alder.maniaWeapons
@@ -14,10 +14,16 @@ maniaWeapons["WEAPON_TWO"] = 90
 
 mods.alder.maniaCrew = {}
 local maniaCrew = mods.alder.maniaCrew
-maniaCrew["crew_one"] = true
+maniaCrew["crew_one"] = true -- "aa_dustworm" for testing
 maniaCrew["crew_two"] = true
 
 local function applyMania(crewmem) -- how tf is this gonna work
+    local shipManager = Hyperspace.ships(crewmem.currentShipId) -- Get the ship containing the crewmember.
+    if crewmem.currentShipId ~= crewmem.iShipId then -- Is the crewmemmember on an enemy ship?
+        if crewmem:AtGoal() and crewmem.bFighting and (crewmem:GetIntruder() ~= crewmem.bMindControlled) then
+            shipManager:GetSystemInRoom(crewmem.iRoomId):PartialRepair(3, false)
+        end
+    end
 end
 
 script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)

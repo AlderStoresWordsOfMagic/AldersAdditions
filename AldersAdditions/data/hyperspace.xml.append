@@ -214,6 +214,10 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
     <!-- // UNIQUES // -->
 
 
+
+    <!-- // MISC // -->
+
+
 </mod:findLike>
 
 <mod:findLike type="drones" limit="1">

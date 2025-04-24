@@ -63,74 +63,14 @@
 			<boostAnim>status_silk</boostAnim>
 		</statBoost>
 
-		<statBoost name="silenced" save="AA_MANIA_SILENCE">
+		<statBoost name="canSabotage" save="AA_MANIA_SABO">
 			<boostType>SET</boostType>
-			<value>true</value>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<droneTarget>CREW</droneTarget>
+			<value>FALSE</value>
+			<shipTarget>CURRENT_ROOM</shipTarget>
+			<crewTarget>CURRENT_ENEMIES</crewTarget>
 			<affectsSelf>false</affectsSelf>
-			<priority>-100</priority>
-			<maxStacks>1</maxStacks>
-			<duration>25</duration>
-			<!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
-			<blackList>
-				<slug_hektar_box/>
-				<unique_billy_box/>
-				<unique_irwin_demon/>
-				<unique_dessius/>
-				<siren/>
-				<siren_harpy/>
-				<eldritch_thing/>
-				<eldritch_thing_weak/>
-				<eldritch_cat/>
-				<gnome/>
-			</blackList>
-			<boostAnim>status_mania</boostAnim>
-		</statBoost>
-		<statBoost name="resistsMindControl" save="AA_MANIA_MC">
-			<boostType>SET</boostType>
-			<value>true</value>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<droneTarget>CREW</droneTarget>
-			<affectsSelf>false</affectsSelf>
-			<priority>-100</priority>
-			<maxStacks>1</maxStacks>
-			<duration>25</duration>
-		</statBoost>
-		<statBoost name="moveSpeedMultiplier" save="AA_MANIA_MOVE">
-			<boostType>MULT</boostType>
-			<amount>1.5</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<droneTarget>CREW</droneTarget>
-			<affectsSelf>false</affectsSelf>
-			<priority>-100</priority>
-			<maxStacks>1</maxStacks>
-			<duration>25</duration>
-		</statBoost>
-		<statBoost name="sabotageSpeedMultiplier" save="AA_MANIA_SABO">
-			<boostType>MULT</boostType>
-			<amount>1.5</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<droneTarget>CREW</droneTarget>
-			<affectsSelf>false</affectsSelf>
-			<priority>-100</priority>
-			<maxStacks>1</maxStacks>
-			<duration>25</duration>
-		</statBoost>
-		<statBoost name="damageMultiplier" save="AA_MANIA_DAMAGE">
-			<boostType>MULT</boostType>
-			<amount>1.5</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<droneTarget>CREW</droneTarget>
-			<affectsSelf>false</affectsSelf>
-			<priority>-100</priority>
-			<maxStacks>1</maxStacks>
-			<duration>25</duration>
+			<priority>0</priority>
+			<duration>10</duration>
 		</statBoost>
 
 	</statBoosts>
@@ -3009,11 +2949,7 @@
 		<b>255</b>
 	</color>
 	<statBoosts>
-		<statBoost name="silenced" load="AA_MANIA_SILENCE"/>
-		<statBoost name="resistsMindControl" load="AA_MANIA_MC"/>
-		<statBoost name="moveSpeedMultiplier" load="AA_MANIA_MOVE"/>
-		<statBoost name="sabotageSpeedMultiplier" load="AA_MANIA_SABO"/>
-		<statBoost name="damageMultiplier" load="AA_MANIA_DAMAGE"/>
+		<statBoost name="canSabotage" load="AA_MANIA_SABO"/>
     </statBoosts>
 	<rarity>0</rarity>
 	<mv-crewTarget>MOST_CREW</mv-crewTarget>
@@ -3905,6 +3841,17 @@
 			<color r="51" g="51" b="51" a="0" />
 		</layer>
 	</colorList>
+</crewBlueprint>
+
+<crewBlueprint name="aa_test">
+	<desc>Small, rotund, and surprisingly friendly. And yet, something seems... off... about this one.</desc>
+	<title>Dustworm?</title>
+	<short>Dustworm?</short>
+	<cost>70</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Has gone completely insane</power>
+	</powerList>
 </crewBlueprint>
 
 
