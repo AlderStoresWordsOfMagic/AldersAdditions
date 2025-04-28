@@ -295,7 +295,7 @@
 	<title>Shield Smasher MK I</title>
 	<short>Smash I</short>
 	<tip>aa_tip_smash</tip>
-	<descriptionOverride>A strange energy weapon that fires sprays of bolts specifically designed to break shields.
+	<descriptionOverride>A strange Laser that fires bolts which can temporarily cripple shielding.
 
 	Stats:
 	Required Power: 1
@@ -337,7 +337,7 @@
 	<projectiles>
 		<projectile count="1" fake="false">laser_smash_projectile</projectile>
 	</projectiles>
-	<rarity>4</rarity>
+	<rarity>3</rarity>
 	<launchSounds>
 		<sound>laser_smash</sound>
 	</launchSounds>
@@ -360,7 +360,7 @@
 	<title>Shield Smasher MK II</title>
 	<short>Smash II</short>
 	<tip>aa_tip_smash</tip>
-	<descriptionOverride>A heavy, powerful anti-shield weapon with lower accuracy than its predecessor, but a much higher shot count.
+	<descriptionOverride>A strange Laser that fires bolts which can temporarily cripple shielding. Has lower accuracy than its predecessor, but fires multiple bolts.
 
 	Stats:
 	Required Power: 3
@@ -398,7 +398,7 @@
 	<power>3</power>
 	<cost>80</cost>
 	<bp>2</bp>
-	<rarity>5</rarity>
+	<rarity>4</rarity>
 	<spin>0</spin>
 	<projectiles>
 		<projectile count="3" fake="false">laser_smash_projectile</projectile>
@@ -1332,6 +1332,7 @@
 
 <!-- // BEAMS // -->
 
+<!-- [Very janky, may return when a better implementation is found]
 <weaponBlueprint name="AA_BEAM_SUSTAIN">
 	<type>BEAM</type>
 	<tip>aa_tip_beam_sustain</tip>
@@ -1369,7 +1370,7 @@
 	</launchSounds>
 	<weaponArt>beam_sustain</weaponArt>
 	<iconImage>beam</iconImage>
-</weaponBlueprint>
+</weaponBlueprint> -->
 
 <weaponBlueprint name="AA_BEAM_SMASH">
 	<type>BEAM</type>
@@ -2704,13 +2705,13 @@
 
 <!-- // MISC. // -->
 
-<weaponBlueprint name="AA_ELECTRON">
+<weaponBlueprint name="AA_INDUCER">
 	<type>BOMB</type>
-	<tip>aa_tip_electron</tip>
-	<title>Electronic Inducer</title>
-	<short>Electron</short>
+	<tip>aa_tip_inducer</tip>
+	<title>Electric Inducer</title>
+	<short>Inducer</short>
 	<locked>1</locked>
-	<desc>This weapon creates an electric charge in a room of your choice, inflicting a small amount of ion damage. Unlike many other weapons, the Electron Inducer cannot be defended against via conventional means.</desc>
+	<desc>This weapon creates an electric charge in a room of your choice, inflicting a small amount of unavoidable ion damage.</desc>
 	<damage>0</damage>
 	<ion>2</ion>
 	<accuracyMod>100</accuracyMod>
@@ -2739,13 +2740,13 @@
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_ELECTRON_HEAVY">
+<weaponBlueprint name="AA_INDUCER_HEAVY">
 	<type>BOMB</type>
-	<tip>aa_tip_electron</tip>
-	<title>Heavy Electronic Inducer</title>
-	<short>Hv. Electron</short>
+	<tip>aa_tip_inducer</tip>
+	<title>Heavy Electric Inducer</title>
+	<short>Heavy Inducer</short>
 	<locked>1</locked>
-	<desc>A stronger variant of the Electronic Inducer, inflicting twice the damage for twice the power.</desc>
+	<desc>This weapon creates an electric charge in a room of your choice, inflicting a small amount of unavoidable ion damage. Inflicts more damage than its smaller cousin.</desc>
 	<damage>0</damage>
 	<ion>5</ion>
 	<accuracyMod>100</accuracyMod>
@@ -3565,7 +3566,7 @@
 	<title>Drone Shield Smasher</title>
 	<short>Smash Drone</short>
 	<tip>aa_tip_smash</tip>
-	<desc>This was never supposed to fall into your hands.</desc>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<damage>0</damage>
 	<radius>25</radius>
 	<shots>1</shots>
@@ -3592,12 +3593,12 @@
 	</missSounds>
 	<weaponArt>laser_smash</weaponArt>
 </weaponBlueprint>
-<weaponBlueprint name="AA_DRONE_ELECTRON">
+<weaponBlueprint name="AA_DRONE_INDUCER">
 	<type>BOMB</type>
-	<tip>aa_tip_electron</tip>
-	<title>Drone Electronic Inducer</title>
+	<tip>aa_tip_inducer</tip>
+	<title>Drone Electric Inducer</title>
 	<locked>1</locked>
-	<desc>This was never supposed to fall into your hands.</desc>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<damage>0</damage>
 	<ion>2</ion>
 	<accuracyMod>100</accuracyMod>
@@ -3620,14 +3621,14 @@
 </weaponBlueprint>
 <blueprintList name="AA_LIST_TOGGLE_ELEMENTARY">
     <name>AA_ELEMENTARY_SMASH</name>
-    <name>AA_ELEMENTARY_ELECTRON</name>
+    <name>AA_ELEMENTARY_INDUCER</name>
 </blueprintList>
 <droneBlueprint name="AA_ELEMENTARY_SMASH">
     <type>COMBAT</type>
     <tip>tip_toggle_combat</tip>
     <title>Elementary Drone [Smasher]</title>
     <short>Elementary [S]</short>
-    <desc>[CURRENT MODE: Smasher] This combat drone contains the technology to harness multiple types of exotic particles when active.</desc>
+    <desc>[CURRENT MODE: Smasher] This combat drone contains the technology to apply multiple types of energy attacks.</desc>
     <power>2</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>
@@ -3639,12 +3640,12 @@
     <rarity>4</rarity>
     <iconImage>combat</iconImage>
 </droneBlueprint>
-<droneBlueprint name="AA_ELEMENTARY_ELECTRON">
+<droneBlueprint name="AA_ELEMENTARY_INDUCER">
     <type>COMBAT</type>
     <tip>tip_toggle_combat</tip>
-    <title>Elementary Drone [Electron]</title>
-    <short>Elementary [E]</short>
-    <desc>[CURRENT MODE: Electron] This combat drone contains the technology to harness multiple types of exotic particles when active.</desc>
+    <title>Elementary Drone [Inducer]</title>
+    <short>Elementary [I]</short>
+    <desc>[CURRENT MODE: Inducer] This combat drone contains the technology to apply multiple types of energy attacks.</desc>
     <power>2</power>
     <cooldown>1000</cooldown>
     <dodge>0</dodge>
@@ -3652,7 +3653,7 @@
     <cost>65</cost>
     <bp>3</bp>
     <droneImage>aa_drone_elementary_e</droneImage>
-    <weaponBlueprint>AA_DRONE_ELECTRON</weaponBlueprint>
+    <weaponBlueprint>AA_DRONE_INDUCER</weaponBlueprint>
     <rarity>0</rarity>
     <iconImage>combat</iconImage>
 </droneBlueprint>

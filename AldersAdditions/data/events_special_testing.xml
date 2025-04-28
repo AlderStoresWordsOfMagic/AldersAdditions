@@ -5,7 +5,7 @@
 <event name="AA_EVENT_TEST_BOSS" unused="true">
     <text>Select a boss to fight.</text>
     <choice hidden="true">
-        <text>The Rebel Cruiser.</text>
+        <text>Rebel Cruiser.</text>
         <event>
             <text>A large, orange vessel suddenly fades into existence - a full-fledged cruiser!</text>
             <ship load="AA_BOSS_REBEL_CRUISER" hostile="true"/>
@@ -14,6 +14,10 @@
                 <event load="COMBAT_CHECK"/>
             </choice>
         </event>
+    </choice>
+    <choice hidden="true">
+        <text>Renegade Cruiser.</text>
+        <event load="AA_SHIP_MVBOSS_STEALTH_CRUISER"/>
     </choice>
     <choice>
         <text>Nevermind.</text>

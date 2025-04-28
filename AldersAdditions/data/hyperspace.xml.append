@@ -8,8 +8,7 @@
 
     <mod-append:script>data/scripts/augments/regen_shields.lua</mod-append:script>
 
-    <mod-append:script>data/scripts/crew/advanced_crew_ai.lua</mod-append:script>
-    <mod-append:script>data/scripts/crew/mania.lua</mod-append:script>
+    <mod-append:script>data/scripts/crew/behavior_fear.lua</mod-append:script>
 
     <mod-append:script>data/scripts/drones/missile_drones.lua</mod-append:script>
 
@@ -55,6 +54,8 @@
     <!-- // BOSS BOXES // -->
 
     <mod-append:bossShip>AA_BOSS_REBEL_CRUISER</mod-append:bossShip>
+
+    <mod-append:bossShip>AA_BOSS_STEALTH_CRUISER</mod-append:bossShip>
 
 </mod:findLike>
 
@@ -135,6 +136,22 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 			<human_rebel room="2"/>
 			<human_rebel room="11"/>
 			<human_rebel room="14"/>
+		</crew>
+	</mod-append:customShip>
+	
+	<mod-append:customShip name="AA_BOSS_STEALTH_CRUISER">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+        </shipIcons>
+		<crew>
+			<human_medic room="0"/>
+			<human_soldier room="8"/>
+			<human room="11"/>
+			<human room="13"/>
+			<shell_guardian room="10"/>
+			<shell_medic room="3"/>
+			<shell room="6"/>
+			<shell room="16"/>
 		</crew>
 	</mod-append:customShip>
 
