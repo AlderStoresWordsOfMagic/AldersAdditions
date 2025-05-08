@@ -236,26 +236,7 @@
 	<title>Scrambler Laser</title>
 	<short>Scrambler Laser</short>
 	<tip>aa_tip_scrambler</tip>
-	<descriptionOverride>A specialized Laser that deals no direct damage. Instead, its unique radiation spectrum distorts the body's natural healing, inhibiting medical attention offered to crew.
-
-	Stats:
-	Required Power: 1
-	Charge Time: 6 seconds
-
-	Shots Per Charge: 1
-
-	Shield Piercing: 1
-	Heal Block: 10 seconds long
-
-	Default Price: 30~   -   Selling Price: 15~
-	</descriptionOverride>
-	<tooltipOverride>Required Power: 1
-		Charge Time: 6 seconds
-
-		Shots Per Charge: 1
-
-		Shield Piercing: 1
-		Heal Block: 10 seconds long</tooltipOverride>
+	<description>A specialized Laser that deals no direct damage. Instead, its unique radiation spectrum distorts the body's natural healing, inhibiting medical attention offered to crew.</description>
 	<damage>0</damage>
 	<sp>1</sp>
 	<statBoosts>
@@ -300,6 +281,7 @@
 	Stats:
 	Required Power: 1
 	Charge Time: 12 seconds
+	Accuracy Bonus: +30%
 
 	Shot Radius: 30
 	Shots Per Charge: 1
@@ -313,6 +295,7 @@
 	</descriptionOverride>
 	<tooltipOverride>Required Power: 1
 		Charge Time: 12 seconds
+		Accuracy Bonus: +30%
 
 		Shot Radius: 30
 		Shots Per Charge: 1
@@ -365,6 +348,7 @@
 	Stats:
 	Required Power: 3
 	Charge Time: 15 seconds
+	Accuracy Bonus: +30%
 
 	Shot Radius: 80
 	Shots Per Charge: 3
@@ -378,6 +362,7 @@
 	</descriptionOverride>
 	<tooltipOverride>Required Power: 3
 		Charge Time: 15 seconds
+		Accuracy Bonus: +30%
 
 		Shot Radius: 80
 		Shots Per Charge: 3
@@ -423,14 +408,30 @@
 	<title>Suffocator</title>
 	<short>Suffocator</short>
 	<tip>tip_laser</tip>
-	<desc>A large, menacing hull laser. Its shots rock the superstructure of ships, tearing open a breach on every tile in the target room.</desc>
+	<descriptionOverride>A large, menacing hull Laser. Its shots rock the superstructure of ships, tearing open a breach on every tile in the target room.
+
+	Stats:
+	Required Power: 2
+	Charge Time: 16 seconds
+
+	Shots Per Charge: 1
+
+	2x hull damage on systemless rooms.
+	Base Hull Damage: 1
+	Total System Damage: 1
+	Total Crew Damage: 15
+
+	Breaches every tile in the room
+
+	Default Price: 70~   -   Selling Price: 35~
+	</descriptionOverride>
 	<damage>1</damage>
 	<hullBust>1</hullBust>
 	<shots>1</shots>
-	<breachChance>100</breachChance> <!-- Triggers some Fusion stuff -->
-	<cooldown>14</cooldown>
+	<breachChance>100</breachChance> <!-- 1000% breach chance, triggers some Lua stuff in Fusion -->
+	<cooldown>16</cooldown>
 	<power>2</power>
-	<cost>80</cost>
+	<cost>70</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<image>laser_breach_projectile</image>
@@ -440,8 +441,7 @@
 		<sound>heavyLaser3</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
+		<sound>hitHull1</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
@@ -460,10 +460,9 @@
 	<title>Thermal Crusher</title>
 	<short>Thermal</short>
 	<tip>tip_laser</tip>
-	<desc>This Laser weapon causes immense thermal stress on any room it strikes, dealing additional damage for each fire in the room it hits and converting each of those fires into breaches.</desc>
+	<desc>This Laser weapon causes immense thermal stress on any room it strikes, dealing 1 additional damage for each fire in the room it hits and converting each of those fires into breaches.</desc>
 	<damage>1</damage>
 	<shots>1</shots>
-	<breachChance>100</breachChance> <!-- Triggers some Lua stuff -->
 	<cooldown>15</cooldown>
 	<power>2</power>
 	<cost>70</cost>
@@ -476,8 +475,7 @@
 		<sound>heavyLaser3</sound>
 	</launchSounds>
 	<hitShipSounds>
-		<sound>hitHull2</sound>
-		<sound>hitHull3</sound>
+		<sound>hitHull1</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
 		<sound>hitShield1</sound>
@@ -800,7 +798,7 @@
 	<drone_targetable>0</drone_targetable>
 	<title>Prismatic Ion Barrage</title>
 	<short>Prism Ion</short>
-	<tip>aa_tip_ion_rainbow</tip>
+	<tip>tip_ion</tip>
 	<desc>A team of specialists designed this weapon to capture every kind of ion blaster in a single frame. Though the project was a partial success, there is no way to control which kind of blast gets fired.</desc>
 	<damage>0</damage>
 	<spin>720</spin>
@@ -1104,7 +1102,7 @@
 
 	Stats:
 	Required Power: 2
-	Charge Time: 6 seconds
+	Charge Time: 9 seconds
 
 	Max Charges: 3
 	Charges damage instead of shot count
@@ -1116,7 +1114,7 @@
 	Default Price: 80~   -   Selling Price: 40~
 	</descriptionOverride>
 	<tooltipOverride>Required Power: 2
-		Charge Time: 6 seconds
+		Charge Time: 9 seconds
 
 		Max Charges: 3
 		Charges damage instead of shot count
@@ -1332,46 +1330,6 @@
 
 <!-- // BEAMS // -->
 
-<!-- [Very janky, may return when a better implementation is found]
-<weaponBlueprint name="AA_BEAM_SUSTAIN">
-	<type>BEAM</type>
-	<tip>aa_tip_beam_sustain</tip>
-	<title>'Sovnya' Sustaining Beam</title>
-	<short>'Sovnya'</short>
-	<descriptionOverride>Originally designed for mining, this unique Beam weapon's advanced cooling systems allow it to focus on a single point and deal increasing damage for as long as it is locked onto a point.
-	
-	Stats:
-	Required Power: 3
-	Charge Time: 10 seconds
-
-	Sabotage Rate: 1
-	Pulse Hull Damage: 1
-
-	Pulse Rate: 4 seconds
-	Pulse Rate Scaling: 5% per pulse
-	Pulse Scaling Maximum: 8 pulses
-
-	Default Price: 90~   -   Selling Price: 45~
-	</descriptionOverride>
-	<damage>0</damage>
-	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>10</cooldown>
-	<power>3</power>
-	<cost>90</cost>
-	<bp>7</bp>
-	<rarity>5</rarity>
-	<length>1</length>
-	<speed>1</speed>
-	<image>beam_contact</image>
-	<launchSounds>
-		<sound>beam_sustain</sound>
-	</launchSounds>
-	<weaponArt>beam_sustain</weaponArt>
-	<iconImage>beam</iconImage>
-</weaponBlueprint> -->
-
 <weaponBlueprint name="AA_BEAM_SMASH">
 	<type>BEAM</type>
 	<tip>aa_tip_smash</tip>
@@ -1477,7 +1435,7 @@
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_BEAM_CHARGEGUN_DAMAGE"> <!-- add to bluelists -->
+<!-- <weaponBlueprint name="AA_BEAM_CHARGEGUN_DAMAGE"> <!-- add to bluelists
 	<type>BEAM</type>
 	<tip>aa_tip_accumulator</tip>
 	<title>'Woldo' Cumulative Beam</title>
@@ -1499,7 +1457,7 @@
 	</launchSounds>
 	<weaponArt>beam_cumulative</weaponArt>
 	<iconImage>beam</iconImage>
-</weaponBlueprint>
+</weaponBlueprint> -->
 
 <weaponBlueprint name="AA_BEAM_ION_1">
 	<type>BEAM</type>
@@ -1579,7 +1537,7 @@
 	<breachChance>0</breachChance>
 	<stunChance>6</stunChance>
 	<stun>5</stun>
-	<cooldown>20</cooldown>
+	<cooldown>21</cooldown>
 	<color>
 		<r>133</r>
 		<g>231</g>
@@ -1989,7 +1947,7 @@
 	<drone_targetable>1</drone_targetable>
 	<title>Accelerated Flak Gun</title>
 	<short>Part. Flak</short>
-	<tip>aa_tip_particle_flak</tip>
+	<tip>tip_flak</tip>
 	<desc>This Flak cannon fires a blast of 4 projectiles charged with exotic particles that shred systems alongside normal hull damage.</desc>
 	<radius>50</radius>
 	<damage>1</damage>
@@ -2685,21 +2643,145 @@
 <weaponBlueprint name="AA_CORE_PARTICLE">
 	<type>BEAM</type>
 	<tip>aa_tip_core</tip>
-	<flavorType>Particle Core</flavorType>
-	<title>Particle Core</title>
-	<short>P. Core</short>
-	<desc>A dedicated particle accelerator device that supercharges the weapon to its right with system-destroying capability.</desc>
-	<tooltip>Storage Weapon</tooltip>
+	<title>Accelerator Core</title>
+	<short>Particle Core</short>
+	<desc>A dedicated device that empowers the weapon to its right. That weapon deals 1 extra system damage.</desc>
 	<damage>0</damage>
-	<sp>0</sp>
+	<sysDamage>1</sysDamage> <!-- damage properties of cores trigger Lua stuff -->
 	<cooldown>-1</cooldown>
-	<speed>0</speed>
-	<length>0</length>
 	<rarity>0</rarity>
 	<power>3</power>
 	<cost>80</cost>
 	<image>beam_contact</image>
 	<weaponArt>core_particle</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_CORE_BIO">
+	<type>BEAM</type>
+	<tip>aa_tip_core</tip>
+	<title>Irradiator Core</title>
+	<short>Rad Core</short>
+	<desc>A dedicated device that empowers the weapon to its right. That weapon deals 45 extra crew damage and poisons hit crew.</desc>
+	<damage>0</damage>
+	<persDamage>3</persDamage>
+	<statBoosts>
+        <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+		<statBoost name="stunMultiplier" load="RAD_STUN"/>
+        <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+    </statBoosts>
+	<cooldown>-1</cooldown>
+	<rarity>0</rarity>
+	<power>2</power>
+	<cost>50</cost>
+	<image>beam_contact</image>
+	<weaponArt>core_rad</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_CORE_ION">
+	<type>BEAM</type>
+	<tip>aa_tip_core</tip>
+	<title>Electrifier Core</title>
+	<short>Ion Core</short>
+	<desc>A dedicated device that empowers the weapon to its right. That weapon deals 1 extra ion damage.
+
+This core has no effect on beam weapons, as crossing the energies used in both is quite difficult.</desc>
+	<damage>0</damage>
+	<ion>1</ion>
+	<cooldown>-1</cooldown>
+	<rarity>0</rarity>
+	<power>3</power>
+	<cost>50</cost>
+	<image>beam_contact</image>
+	<weaponArt>core_ion</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_CORE_FIRE">
+	<type>BEAM</type>
+	<tip>aa_tip_core</tip>
+	<title>Incendiary Core</title>
+	<short>Fire Core</short>
+	<desc>A dedicated device that empowers the weapon to its right. That weapon always starts fires.</desc>
+	<damage>0</damage>
+	<fireChance>10</fireChance>
+	<cooldown>-1</cooldown>
+	<rarity>0</rarity>
+	<power>3</power>
+	<cost>70</cost>
+	<image>beam_contact</image>
+	<weaponArt>core_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_CORE_BREACH">
+	<type>BEAM</type>
+	<tip>aa_tip_core</tip>
+	<title>Crushing Core</title>
+	<short>Breach Core</short>
+	<desc>A dedicated device that empowers the weapon to its right. That weapon always tears breaches.</desc>
+	<damage>0</damage>
+	<breachChance>10</breachChance>
+	<cooldown>-1</cooldown>
+	<rarity>0</rarity>
+	<power>2</power>
+	<cost>60</cost>
+	<image>beam_contact</image>
+	<weaponArt>core_breach</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_CORE_STUN">
+	<type>BEAM</type>
+	<tip>aa_tip_core</tip>
+	<title>Neural Core</title>
+	<short>Stun Core</short>
+	<desc>A dedicated device that empowers the weapon to its right. That weapon always stuns crew.</desc>
+	<damage>0</damage>
+	<stunChance>10</stunChance>
+	<stun>10</stun>
+	<cooldown>-1</cooldown>
+	<rarity>0</rarity>
+	<power>2</power>
+	<cost>50</cost>
+	<image>beam_contact</image>
+	<weaponArt>core_stun</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_CORE_MADNESS">
+	<type>BEAM</type>
+	<tip>aa_tip_core</tip>
+	<title>'Twisted Pastiche'</title>
+	<short>'Pastiche'</short>
+	<desc>A creation from the darkest depths of the Multiverse that empowers the weapon to its right. That weapon inflicts madness on any hit crew.</desc>
+	<damage>0</damage>
+	<statBoosts>
+        <statBoost name="silenced"> <!-- Madness effect identical to 'Seuss' Beam -->
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>false</affectsSelf>
+			<duration>25</duration>
+			<!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+			<blackList>
+				<slug_hektar_box/>
+				<unique_billy_box/>
+				<unique_irwin_demon/>
+				<unique_dessius/>
+				<siren/>
+				<siren_harpy/>
+				<eldritch_thing/>
+				<eldritch_thing_weak/>
+				<eldritch_cat/>
+				<gnome/>
+			</blackList>
+			<boostAnim>madness</boostAnim>
+		</statBoost>
+    </statBoosts>
+	<cooldown>-1</cooldown>
+	<rarity>0</rarity>
+	<power>0</power>
+	<cost>90</cost>
+	<image>beam_contact</image>
+	<weaponArt>core_madness</weaponArt>
 </weaponBlueprint>
 
 
@@ -2867,7 +2949,6 @@
 	<accuracyMod>100</accuracyMod>
 	<shots>1</shots>
 	<sp>10</sp>
-	<sp>0</sp>
 	<cooldown>3</cooldown>
 	<power>1</power>
 	<cost>50</cost>
@@ -2888,6 +2969,205 @@
 
 
 <!-- // LOOT WEAPONS // -->
+
+<weaponBlueprint name="AA_MVLOOT_STEALTH">
+	<type>BEAM</type>
+	<tip>aa_tip_scrambler</tip>
+	<title>'Scourge' Scrambler Beam</title>
+	<short>'Scourge'</short>
+	<desc>A vile anti-personnel Beam that charges faster with every swipe and locks crew out of the ability to heal.</desc>
+	<damage>0</damage>
+	<persDamage>4</persDamage>
+	<sp>2</sp>
+	<cooldown>15</cooldown>
+	<color>
+		<r>130</r>
+		<g>138</g>
+		<b>255</b>
+	</color>
+	<statBoosts>
+		<statBoost name="healSpeed" load="AA_PURGE"/>
+	</statBoosts>
+	<boost>
+		<type>cooldown</type>
+		<amount>3.5</amount>
+		<count>3</count>
+	</boost>
+	<speed>15</speed>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<mv-crewTarget>MOST_CREW</mv-crewTarget>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>renegade_loot_stealth</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_MVLOOT_STEALTH_CHAOS">
+	<type>BEAM</type>
+	<tip>aa_tip_scrambler</tip>
+	<title>Chaotic 'Scourge' Scrambler Beam</title>
+	<short>'Scourge'™</short>
+	<desc>A vile anti-personnel Beam that charges faster with every swipe and locks crew out of the ability to heal.
+	Chaotic variant pierces all shields and stuns but swipes extremely slowly.</desc>
+	<damage>0</damage>
+	<persDamage>4</persDamage>
+	<sp>10</sp>
+	<stunChance>10</stunChance>
+	<cooldown>15</cooldown>
+	<color>
+		<r>130</r>
+		<g>138</g>
+		<b>255</b>
+	</color>
+	<statBoosts>
+		<statBoost name="healSpeed" load="AA_PURGE"/>
+	</statBoosts>
+	<boost>
+		<type>cooldown</type>
+		<amount>3.5</amount>
+		<count>3</count>
+	</boost>
+	<speed>2</speed>
+	<power>2</power>
+	<cost>80</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<mv-crewTarget>MOST_CREW</mv-crewTarget>
+	<length>140</length>
+	<image>beam_contact</image>
+	<launchSounds>
+		<sound>beam2</sound>
+	</launchSounds>
+	<weaponArt>renegade_loot_stealth_chaos</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_MVLOOT_HACKER">
+	<type>BOMB</type>
+	<tip>aa_tip_system</tip>
+	<title>Combat Projector</title>
+	<short>C. Projector</short>
+	<locked>1</locked>
+	<desc>This weapon appears ethereal, as if it were simply a projection over reality. It transmits temporary simulated combat personnel to the enemy ship.</desc>
+	<damage>0</damage>
+	<accuracyMod>30</accuracyMod>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>16</cooldown>
+	<power>3</power>
+	<cost>75</cost>
+	<bp>4</bp>
+	<spawnCrew>
+		<number>3</number>
+		<race>aa_red_guy</race>
+		<lifetime>20</lifetime>
+		<statBoosts>
+			<statBoost name="noClone">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+			<statBoost name="lowHealthThreshold">
+                <boostType>SET</boostType>
+                <amount>-1</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+		</statBoosts>
+		<noSlot>true</noSlot>
+	</spawnCrew>
+	<crewSpawnChance>10</crewSpawnChance>
+	<rarity>0</rarity>
+	<image>electron_projectile</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>decoy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>renegade_loot_hacker</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="AA_MVLOOT_HACKER_CHAOS">
+	<type>BOMB</type>
+	<tip>aa_tip_system</tip>
+	<title>Chaotic Combat Projector</title>
+	<short>C. Projector™</short>
+	<locked>1</locked>
+	<desc>This weapon appears ethereal, as if it were simply a projection over reality. It transmits temporary simulated combat personnel to the enemy ship.
+	Chaotic variant is a Pre-emptive weapon that spawns 8 crew who are invulnerable to all damage.</desc>
+	<damage>0</damage>
+	<accuracyMod>30</accuracyMod>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>1</cooldown>
+	<boost>
+		<type>cooldown</type>
+		<amount>2</amount>
+		<count>2</count>
+	</boost>
+	<power>0</power>
+	<cost>75</cost>
+	<bp>4</bp>
+	<spawnCrew>
+		<number>8</number>
+		<race>aa_red_guy</race>
+		<lifetime>20</lifetime>
+		<statBoosts>
+			<statBoost name="noClone">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+			<statBoost name="lowHealthThreshold">
+                <boostType>SET</boostType>
+                <amount>-1</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+			<statBoost name="allDamageTakenMultiplier">
+                <boostType>SET</boostType>
+                <value>0</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+		</statBoosts>
+		<noSlot>true</noSlot>
+	</spawnCrew>
+	<crewSpawnChance>10</crewSpawnChance>
+	<rarity>0</rarity>
+	<image>electron_projectile</image>
+	<explosion>explosion_big1_ion</explosion>
+	<launchSounds>
+		<sound>decoy</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>renegade_loot_hacker_chaos</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
 
 <weaponBlueprint name="AA_RAILGUN">
 	<type>BURST</type>
@@ -2930,49 +3210,16 @@
 	<iconReplace>railgun_icon</iconReplace>
 </weaponBlueprint>
 
-<!-- <weaponBlueprint name="AA_BEAM_MANIA">
-	<type>BEAM</type>
-	<tip>aa_tip_mania</tip>
-	<title>'Dahl' Beam</title>
-	<short>'Dahl'</short>
-	<desc>This anomalous Beam can fire a stream of pure creative, frenzied energy. All crew who are hit by it will be overcome by a powerful mania.</desc>
-	<tooltip>Beam weapon, 2 damage per room.</tooltip>
-	<damage>0</damage>
-	<sysDamage>2</sysDamage>
-	<sp>2</sp>
-	<cooldown>16</cooldown>
-	<power>2</power>
-	<cost>70</cost>
-	<bp>7</bp>
-	<color>
-		<r>169</r>
-		<g>112</g>
-		<b>255</b>
-	</color>
-	<statBoosts>
-		<statBoost name="canSabotage" load="AA_MANIA_SABO"/>
-    </statBoosts>
-	<rarity>0</rarity>
-	<mv-crewTarget>MOST_CREW</mv-crewTarget>
-	<length>120</length>
-	<image>beam_contact</image>
-	<launchSounds>
-		<sound>beam2</sound>
-	</launchSounds>
-	<weaponArt>beam_mania</weaponArt>
-	<iconImage>beam</iconImage>
-</weaponBlueprint> -->
-
 <weaponBlueprint name="AA_BEAM_IMAGINE">
 	<type>BEAM</type>
-	<tip>tip_beams</tip>
+	<tip>aa_tip_imagine</tip>
 	<title>Imaginator</title>
 	<short>Imaginator</short>
 	<desc>One swipe from this beam will fill the target vessel with all sorts of surreal wonders. There's no telling what will spring forth in each room.</desc>
-	<tooltip>Beam weapon, 2 damage per room.</tooltip>
 	<damage>0</damage>
+	<sysDamage>1</sysDamage>
 	<sp>10</sp>
-	<cooldown>20</cooldown>
+	<cooldown>15</cooldown>
 	<power>3</power>
 	<cost>90</cost>
 	<bp>7</bp>
@@ -2987,7 +3234,7 @@
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
-	<weaponArt>beam_mania</weaponArt>
+	<weaponArt>beam_imagine</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="AA_BEAM_IMAGINE_HACK">
@@ -3392,16 +3639,16 @@
 	<weaponArt>bomblauncher_small</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
-<weaponBlueprint name="AA_BEAM_IMAGINE_DUSTWORM">
+<weaponBlueprint name="AA_BEAM_IMAGINE_GHOST">
 	<type>BOMB</type>
-	<title>Imaginator (Dustworm)</title>
-	<short>Imaginator (Dustworm)</short>
+	<title>Imaginator (Ghost)</title>
+	<short>Imaginator (Ghost)</short>
 	<description>You should never see this.</description>
 	<damage>0</damage>
 	<accuracyMod>100</accuracyMod>
 	<spawnCrew>
 		<number>1</number>
-		<race>aa_dustworm</race>
+		<race>phantom_alpha</race>
 		<lifetime>20</lifetime>
 		<statBoosts>
 			<statBoost name="noClone">
@@ -3714,6 +3961,120 @@
     <iconImage>combat</iconImage>
 </droneBlueprint>
 
+<!-- // PALADIN LOOT // -->
+<weaponBlueprint name="AA_MVLOOT_PALADIN_PROJECTILE">
+	<type>MISSILES</type>
+	<title>Drone Ion Missiles</title>
+	<desc>You should never see this.</desc>
+	<damage>2</damage>
+	<ion>2</ion>
+	<accuracyMod>10</accuracyMod>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>1</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>5</stunChance>
+	<stun>5</stun>
+	<cooldown>21</cooldown>
+	<power>2</power>
+	<cost>75</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>missile_ion</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_ion</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+<droneBlueprint name="AA_MVLOOT_PALADIN">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>'Platinum' Missile Drone</title>
+	<short>'Platinum'</short>
+	<desc>This one of a kind combat drone can fire a seemingly bottomless supply of ionized missiles. Requires a sum of 4 missiles to deploy, but does not consume missiles to fire.</desc>
+	<power>3</power>
+	<mv-droneMissileCost>4</mv-droneMissileCost>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>5</speed>
+	<cost>90</cost>
+	<bp>3</bp>
+	<droneImage>aa_drone_loot_mvboss_paladin</droneImage>
+	<weaponBlueprint>AA_MVLOOT_PALADIN_PROJECTILE</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<weaponBlueprint name="AA_MVLOOT_PALADIN_CHAOS_PROJECTILE">
+	<type>MISSILES</type>
+	<title>Drone Ion Missiles™</title>
+	<desc>You should never see this.</desc>
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<persDamage>2</persDamage>
+	<accuracyMod>10</accuracyMod>
+	<shots>1</shots>
+	<sp>10</sp>
+	<fireChance>10</fireChance>
+	<breachChance>1</breachChance>
+	<stunChance>5</stunChance>
+	<stun>5</stun>
+	<cooldown>21</cooldown>
+	<power>2</power>
+	<cost>75</cost>
+	<bp>6</bp>
+	<rarity>0</rarity>
+	<image>missile_ion</image>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>smallExplosion</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>missiles_ion</weaponArt>
+	<iconImage>missile</iconImage>
+</weaponBlueprint>
+<droneBlueprint name="AA_MVLOOT_PALADIN_CHAOS">
+	<type>COMBAT</type>
+	<tip>tip_combat</tip>
+	<title>Chaotic 'Platinum' Missile Drone</title>
+	<short>'Platinum'™</short>
+	<desc>This one of a kind combat drone can fire a seemingly bottomless supply of ionized missiles. Requires a sum of 4 missiles to deploy, but does not consume missiles to fire.
+Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
+	<power>3</power>
+	<mv-droneMissileCost>4</mv-droneMissileCost>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>5</speed>
+	<cost>90</cost>
+	<bp>3</bp>
+	<droneImage>aa_drone_loot_mvboss_paladin_chaos</droneImage>
+	<weaponBlueprint>AA_MVLOOT_PALADIN_CHAOS_PROJECTILE</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
 
 
 
@@ -3742,16 +4103,16 @@
 
 <!-- // FACTION // -->
 
-<augBlueprint name="AA_SILK_ARMOR"> <!-- UNIMPLEMENTED -->
+<augBlueprint name="AA_SILK_ARMOR">
 	<title>Silksteel Hull</title>
-	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and stronger when compressed. All crew repair 15% faster, and repairing a system fully gives the ship a temporary hull point, up to a maximum of 15. Temporary hull points are cleared on jump.</desc>
+	<desc>A peculiar hull armor interwoven with sheets of strong, flexible Dustworm silk, making it malleable and self-binding. All crew repair 20% faster, and you restore 2 hull points on jump.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
 <augBlueprint name="AA_SILK_ARMOR_LOCKED">
 	<title>Silksteel Hull</title>
-	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and stronger when compressed. All crew repair 15% faster, and repairing a system fully gives the ship a temporary hull point, up to a maximum of 15. Temporary hull points are cleared on jump.</desc>
+	<desc>A peculiar hull armor interwoven with sheets of strong, flexible Dustworm silk, making it malleable and self-binding. All crew repair 20% faster, and you restore 2 hull points on jump.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -3792,12 +4153,28 @@
 
 <!-- // TECHNICAL // -->
 
-<augBlueprint name="AA_TECH_TEMP_HP_REPAIR">
-    <title>Temporary Hull Tracker</title>
-	<desc>You should never see this.</desc>
+<augBlueprint name="AA_TECH_JUMP_REPAIR">
+    <title>Repair On Jump [T]</title>
+	<desc>You should never see this. Repairs 1 hull on jump for every value's worth, done through Lua.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
-	<stackable>false</stackable>
+	<stackable>true</stackable>
+</augBlueprint>
+
+<augBlueprint name="AA_TECH_ENCASED_CLOAKING">
+    <title>Encased Cloaking [T]</title>
+	<desc>You should never see this. Crew in the Cloaking system deal no sabotage damage.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
+
+<augBlueprint name="AA_TECH_ENCASED_DRONES">
+    <title>Encased Drones [T]</title>
+	<desc>You should never see this. Crew in the Drones system deal no sabotage damage.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
 </augBlueprint>
 
 
@@ -3809,7 +4186,7 @@
 <!-- // DUSTWORMS // -->
 
 <crewBlueprint name="aa_dustworm">
-	<desc>Small, rotund, and surprisingly friendly, these peculiar aliens originate from another part of the Multiverse entirely.</desc>
+	<desc>Small, rotund, and surprisingly friendly, there is no data in your system on from where these aliens originate.</desc>
 	<title>Dustworm</title>
 	<short>Dustworm</short>
 	<cost>70</cost>
@@ -3833,7 +4210,6 @@
 			<color r="94" g="255" b="145" a="0.4"/> <!-- Green -->
 			<color r="94" g="255" b="145" a="0.4"/> <!-- Green -->
 			<color r="155" g="80" b="255" a="0.4"/> <!-- Purple -->
-			<color r="255" g="116" b="73" a="0.7"/> <!-- Red -->
 		</layer>
 		<layer> <!-- Spots Control (1/4 chance) -->
 			<color r="0" g="0" b="0" a="0.8"/>
@@ -3842,6 +4218,20 @@
 			<color r="51" g="51" b="51" a="0" />
 		</layer>
 	</colorList>
+</crewBlueprint>
+
+<!-- // MISC // -->
+
+<crewBlueprint name="aa_red_guy">
+	<desc>Simulated combat personnel. WIll kick everyone's ass.</desc>
+	<title>Projection</title>
+	<short>Projection</short>
+	<cost>70</cost>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Immune to mind control, but cannot be controlled</power>
+		<power>Resilience and determination makes them take less damage from the environment</power>
+	</powerList>
 </crewBlueprint>
 
 <crewBlueprint name="aa_test">
@@ -3858,7 +4248,7 @@
 
 
 
-<!-- /// MV OVERWRITES /// -->
+<!-- /// OVERWRITES /// -->
 
 <!-- // WEAPONS // -->
 
@@ -3875,6 +4265,11 @@
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="BEAM_REPAIR">
+	<mod-overwrite:color>
+		<r>49</r>
+		<g>255</g>
+		<b>0</b>
+	</mod-overwrite:color>
 	<mod:findLike type="weaponArt">
 		<mod:setValue>beam_prohull</mod:setValue>
 	</mod:findLike>
@@ -3884,7 +4279,7 @@
 	<mod-overwrite:color>
 		<r>255</r>
 		<g>255</g>
-		<b>225</b>
+		<b>255</b>
 	</mod-overwrite:color>
 </mod:findName>
 
@@ -3909,27 +4304,21 @@
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_1">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_2">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_3">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_FREE">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_FIRE">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_BREACH">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_big1</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_STUN">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
@@ -4040,5 +4429,6 @@
 		<mod:setValue>nightshade_chaos</mod:setValue>
 	</mod:findLike>
 </mod:findName>
+
 
 </FTL>

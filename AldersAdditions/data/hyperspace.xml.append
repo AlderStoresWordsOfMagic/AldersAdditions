@@ -6,21 +6,23 @@
 
     <mod-append:script>data/scripts/AA_core.lua</mod-append:script>
 
+    <mod-append:script>data/scripts/augments/regen_hull.lua</mod-append:script>
     <mod-append:script>data/scripts/augments/regen_shields.lua</mod-append:script>
 
     <mod-append:script>data/scripts/crew/behavior_fear.lua</mod-append:script>
 
-    <mod-append:script>data/scripts/drones/missile_drones.lua</mod-append:script>
-
-    <mod-append:script>data/scripts/weapons/_fusion.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/charge_holders.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/cores.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/cumulative.lua</mod-append:script>
-    <mod-append:script>data/scripts/weapons/painter.lua</mod-append:script>
-    <mod-append:script>data/scripts/weapons/room_impact_beams.lua</mod-append:script>
-    <mod-append:script>data/scripts/weapons/shotgun.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/smash.lua</mod-append:script>
-    <mod-append:script>data/scripts/weapons/sustain.lua</mod-append:script>
+
+    <mod-append:script>data/scripts/weapons/oneoffs/imaginator.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/oneoffs/pointer.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/oneoffs/shock_cannon.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/oneoffs/thermal.lua</mod-append:script>
+
+    <mod-append:script>data/scripts/misc/resistant_rooms.lua</mod-append:script>
+
 
 </mod:findLike>
 
@@ -55,7 +57,20 @@
 
     <mod-append:bossShip>AA_BOSS_REBEL_CRUISER</mod-append:bossShip>
 
-    <mod-append:bossShip>AA_BOSS_STEALTH_CRUISER</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_STEALTH_CRUISER_NORMAL</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_STEALTH_CRUISER_CHALLENGE</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_STEALTH_CRUISER_EXTREME</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_STEALTH_CRUISER_CHAOS</mod-append:bossShip>
+
+    <mod-append:bossShip>AA_MVBOSS_PALADIN_CRUISER_NORMAL</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_PALADIN_CRUISER_CHALLENGE</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_PALADIN_CRUISER_EXTREME</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_PALADIN_CRUISER_CHAOS</mod-append:bossShip>
+
+    <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_NORMAL</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_CHALLENGE</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_EXTREME</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_CHAOS</mod-append:bossShip>
 
 </mod:findLike>
 
@@ -70,25 +85,25 @@
 
         <!-- / NON-AUGMENT ICONS / -->
 
-        <!-- <mod-append:shipIcon>
-            <name>aa_icon_insulated</name>
+        <mod-append:shipIcon>
+            <name>aa_icon_resist_ion</name>
             <tooltip>INSULATED ROOMS:
-    This enemy has one or more insulated rooms, marked by the blue border and I icon in the top left. Insulated rooms will take no ion damage from weapons or instant crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
+This enemy has one or more insulated rooms, marked by the blue border and blue R icon in the top left. Insulated rooms will take no ion damage from weapons or instant crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
         </mod-append:shipIcon>
     
         <mod-append:shipIcon>
-            <name>aa_icon_firewall</name>
+            <name>aa_icon_resist_hack</name>
             <tooltip>FIREWALLED ROOMS:
-    This enemy has one or more firewalled rooms, marked by the purple border and H icon in the top left. Firewalled rooms are immune to hacking effects, but take all damage as normal.</tooltip>
+This enemy has one or more firewalled rooms, marked by the purple border and purple R icon in the top left. Firewalled rooms are immune to hacking effects, but take all damage as normal.</tooltip>
         </mod-append:shipIcon>
     
         <mod-append:shipIcon>
-            <name>aa_icon_encased</name>
+            <name>aa_icon_resist_sabo</name>
             <tooltip>ENCASED ROOMS:
-    This enemy has one or more firewalled rooms, marked by the orange border and S icon in the top left. Encased rooms are immune to sabotage and fire damage, but otherwise take damage as normal.</tooltip>
+This enemy has one or more encased rooms, marked by the orange border and orange R icon in the top left. Encased rooms are immune to sabotage and fire damage, but otherwise take damage as normal.</tooltip>
         </mod-append:shipIcon>
     
-        <mod-append:shipIcon>
+        <!--<mod-append:shipIcon>
             <name>aa_icon_multiresist</name>
             <tooltip>MULTIPLE RESISTANCES:
     This enemy has multiple resistant rooms of different types, marked by the letter in the top left. Use your knowledge to determine which rooms are resistant to what.</tooltip>
@@ -114,7 +129,20 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
         <mod-append:shipIcon>
             <name>aa_icon_silk_armor</name>
             <tooltip>SILKSTEEL HULL:
-    Special, malleable composite hull plating that increases repair speed by 1.2x on board. If a system is fully repaired, the ship gains a temporary hull point.</tooltip>
+Special, malleable composite hull plating that increases repair speed by 1.2x on board. If a system is fully repaired, the ship gains a temporary hull point.</tooltip>
+        </mod-append:shipIcon>
+
+        <!-- / CREW LABS / -->
+        <mod-append:shipIcon>
+            <name>aa_icon_lab_rock_skin</name>
+            <tooltip>OBSIDIAN SKIN:
+Enemy Rockmen have 33% extra health, but move 40% slower.</tooltip>
+        </mod-append:shipIcon>
+
+        <mod-append:shipIcon>
+            <name>aa_icon_lab_slug_boost</name>
+            <tooltip>NEURAL REDIRECTION:
+Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
         </mod-append:shipIcon>
 
     </mod:findLike>
@@ -137,12 +165,33 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 			<human_rebel room="11"/>
 			<human_rebel room="14"/>
 		</crew>
+        <autoShipForce>false</autoShipForce>
 	</mod-append:customShip>
 	
-	<mod-append:customShip name="AA_BOSS_STEALTH_CRUISER">
+    <mod-append:customShip name="AA_MVBOSS_STEALTH_CRUISER_NORMAL">
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
         </shipIcons>
+		<crew>
+			<human_medic room="0"/>
+			<human room="8"/>
+			<human room="11"/>
+			<human room="13"/>
+			<shell room="10"/>
+			<shell_medic room="3"/>
+			<shell room="6"/>
+			<shell room="16"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+	<mod-append:customShip name="AA_MVBOSS_STEALTH_CRUISER_CHALLENGE">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_resist_sabo</shipIcon>
+        </shipIcons>
+        <hiddenAug>AA_TECH_ENCASED_CLOAKING</hiddenAug>
 		<crew>
 			<human_medic room="0"/>
 			<human_soldier room="8"/>
@@ -153,7 +202,294 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 			<shell room="6"/>
 			<shell room="16"/>
 		</crew>
+        <rooms>
+            <room id="16"> <!-- Cloaking -->
+                <roomAnim renderLayer="0">resist_2x2_sabo</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_sabo</roomAnim>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
 	</mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_STEALTH_CRUISER_EXTREME">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_resist_sabo</shipIcon>
+        </shipIcons>
+        <hiddenAug>AA_TECH_ENCASED_CLOAKING</hiddenAug>
+        <hiddenAug>AA_TECH_ENCASED_DRONES</hiddenAug>
+		<crew>
+			<human_medic room="0"/>
+			<human_soldier room="8"/>
+			<human_engineer room="11"/>
+			<human_soldier room="13"/>
+			<shell_guardian room="10"/>
+			<shell_medic room="3"/>
+			<shell_medic room="6"/>
+			<shell_guardian room="16"/>
+		</crew>
+        <rooms>
+            <room id="16"> <!-- Cloaking -->
+                <roomAnim renderLayer="0">resist_2x2_sabo</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_sabo</roomAnim>
+            </room>
+            <room id="15"> <!-- Drones -->
+                <roomAnim renderLayer="0">resist_1x3_sabo</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_sabo</roomAnim>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_STEALTH_CRUISER_CHAOS">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep_chaos</shipIcon>
+            <shipIcon>aa_icon_resist_sabo</shipIcon>
+        </shipIcons>
+        <hiddenAug>AA_TECH_ENCASED_CLOAKING</hiddenAug>
+        <hiddenAug>AA_TECH_ENCASED_DRONES</hiddenAug>
+		<crew>
+			<human_medic room="0"/>
+			<human_soldier room="8"/>
+			<human_engineer room="11"/>
+			<human_soldier room="13"/>
+			<shell_guardian room="10"/>
+			<shell_medic room="3"/>
+			<shell_medic room="6"/>
+			<shell_guardian room="16"/>
+		</crew>
+        <rooms>
+            <room id="16"> <!-- Cloaking -->
+                <roomAnim renderLayer="0">resist_2x2_sabo</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_sabo</roomAnim>
+            </room>
+            <room id="15"> <!-- Drones -->
+                <roomAnim renderLayer="0">resist_1x3_sabo</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_sabo</roomAnim>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+
+    <mod-append:customShip name="AA_MVBOSS_PALADIN_CRUISER_NORMAL">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_lab_rock_skin</shipIcon>
+        </shipIcons>
+		<crew>
+			<rock_outcast room="2"/>
+			<rock room="18"/>
+			<crystal_liberator room="15"/>
+			<orchid room="20"/>
+			<human_soldier room="5"/>
+			<spider room="10"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_PALADIN_CRUISER_CHALLENGE">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_lab_rock_skin</shipIcon>
+        </shipIcons>
+		<crew>
+			<rock_outcast room="2"/>
+			<rock_crusader room="18"/>
+			<crystal_liberator room="15"/>
+			<orchid_praetor room="20"/>
+			<human_soldier room="5"/>
+			<spider_weaver room="10"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_PALADIN_CRUISER_EXTREME">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_resist</shipIcon>
+            <shipIcon>aa_icon_lab_rock_skin</shipIcon>
+        </shipIcons>
+		<crew>
+			<rock_outcast room="2"/>
+			<rock_crusader room="18"/>
+			<crystal_liberator room="15"/>
+			<orchid_praetor room="20"/>
+			<human_mfk room="5"/>
+			<spider_weaver room="10"/>
+		</crew>
+        <rooms>
+            <room id="10"> <!-- Drones -->
+                <roomAnim renderLayer="0">resist_2x2</roomAnim>
+                <roomAnim renderLayer="3">resist_icon</roomAnim>
+                <sysDamageResistChance>100</sysDamageResistChance>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_PALADIN_CRUISER_CHAOS">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep_chaos</shipIcon>
+            <shipIcon>icon_resist</shipIcon>
+            <shipIcon>aa_icon_lab_rock_skin</shipIcon>
+        </shipIcons>
+		<crew>
+			<rock_outcast room="2"/>
+			<rock_crusader room="18"/>
+			<crystal_liberator room="15"/>
+			<orchid_praetor room="20"/>
+			<human_mfk room="5"/>
+			<spider_weaver room="10"/>
+		</crew>
+        <rooms>
+            <room id="2"> <!-- Piloting -->
+                <roomAnim renderLayer="0">resist_2x2</roomAnim>
+                <roomAnim renderLayer="3">resist_icon</roomAnim>
+                <sysDamageResistChance>100</sysDamageResistChance>
+            </room>
+            <room id="10"> <!-- Drones -->
+                <roomAnim renderLayer="0">resist_2x2</roomAnim>
+                <roomAnim renderLayer="3">resist_icon</roomAnim>
+                <sysDamageResistChance>100</sysDamageResistChance>
+            </room>
+            <room id="5"> <!-- Weapons -->
+                <roomAnim renderLayer="0">resist_1x2</roomAnim>
+                <roomAnim renderLayer="3">resist_icon</roomAnim>
+                <sysDamageResistChance>100</sysDamageResistChance>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+
+    <mod-append:customShip name="AA_MVBOSS_HACKER_CRUISER_NORMAL">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_resist_hack</shipIcon>
+            <shipIcon>aa_icon_lab_slug_boost</shipIcon>
+        </shipIcons>
+		<crew>
+			<human_engineer room="1"/>
+            <slug room="13"/>
+            <slug room="16"/>
+            <human room="14"/>
+            <human room="15"/>
+            <human room="17"/>
+
+            <!-- dedicated boarding party-->
+            <slug room="5"/>
+            <slug room="5"/>
+            <human room="5"/>
+            <siren room="5"/>
+		</crew>
+        <rooms>
+            <room id="15"> <!-- Shields -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+            <room id="5"> <!-- Teleporter -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_HACKER_CRUISER_CHALLENGE">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_resist_hack</shipIcon>
+            <shipIcon>aa_icon_lab_slug_boost</shipIcon>
+        </shipIcons>
+		<crew>
+			<human_technician room="1"/>
+            <slug room="13"/>
+            <slug room="16"/>
+            <human_soldier room="14"/>
+            <human room="15"/>
+            <human room="17"/>
+
+            <!-- dedicated boarding party-->
+            <slug_saboteur room="5"/>
+            <slug room="5"/>
+            <human room="5"/>
+            <siren room="5"/>
+		</crew>
+        <rooms>
+            <room id="15"> <!-- Shields -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+            <room id="5"> <!-- Teleporter -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_HACKER_CRUISER_EXTREME">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_resist_hack</shipIcon>
+            <shipIcon>aa_icon_lab_slug_boost</shipIcon>
+        </shipIcons>
+		<crew>
+			<human_technician room="1"/>
+            <slug room="13"/>
+            <slug room="16"/>
+            <human_soldier room="14"/>
+            <human room="15"/>
+            <human room="17"/>
+
+            <slug_saboteur room="5"/>
+            <slug_ranger room="5"/>
+            <human_soldier room="5"/>
+            <siren room="5"/>
+		</crew>
+        <rooms>
+            <room id="11"> <!-- Temporal -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+            <room id="15"> <!-- Shields -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+            <room id="5"> <!-- Teleporter -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_HACKER_CRUISER_CHAOS">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep_chaos</shipIcon>
+            <shipIcon>aa_icon_resist_hack</shipIcon>
+        </shipIcons>
+		<crew>
+			<human_technician room="1"/>
+            <slug room="13"/>
+            <slug room="16"/>
+            <human_soldier room="14"/>
+            <human room="15"/>
+            <human room="17"/>
+		</crew>
+        <rooms>
+            <room id="11"> <!-- Temporal -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+            <room id="15"> <!-- Shields -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
+        </rooms>
+        <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
 
     <!-- / MISC / -->
 
@@ -225,6 +561,8 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 	</mod-append:race>
 
 
+
+
 	<!-- // MV SPECIES VARIANTS // -->
 
 
@@ -233,6 +571,18 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 
 
     <!-- // MISC // -->
+
+    <mod-append:race name="aa_red_guy"> <!-- temporary variant of humans spawned from a specific Renegade loot -->
+        <controllable>false</controllable>
+        <selectable>false</selectable>
+        <resistsMindControl>true</resistsMindControl>
+		<suffocationModifier>0.83</suffocationModifier>
+		<fireDamageMultiplier>0.83</fireDamageMultiplier>
+		<animBase>human</animBase>
+		<deathSounds>
+			<deathSound>crystalDeath</deathSound>
+		</deathSounds>
+	</mod-append:race>
 
 
 </mod:findLike>
@@ -264,7 +614,7 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
     <!-- // FACTION // -->
 
     <mod-append:aug name="AA_SILK_ARMOR">
-        <function name="AA_TECH_TEMP_HP_REPAIR" value="1" useForReqs="true" stackable="false" warning="false"/>
+        <function name="AA_TECH_JUMP_REPAIR" value="2" useForReqs="true" stackable="false" warning="false"/>
 		<statBoosts>
 			<statBoost name="repairSpeed">
 				<boostType>MULT</boostType>
@@ -283,8 +633,8 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
     <mod-append:aug name="AA_LAB_DUSTWORM_ESCAPE">
         <statBoosts>
             <statBoost name="moveSpeedMultiplier">
-                <boostType>FLAT</boostType>
-                <amount>0.5</amount>
+                <boostType>MULT</boostType>
+                <amount>1.5</amount>
                 <shipTarget>ALL</shipTarget>
                 <crewTarget>ALLIES</crewTarget>
                 <priority>0</priority>
@@ -336,7 +686,39 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
     </mod-append:aug>
 
     <!-- // TECHNICAL // -->
-
+    
+    <mod-append:aug name="AA_TECH_ENCASED_CLOAKING">
+        <statBoosts>
+            <statBoost name="sabotageSpeedMultiplier">
+                <boostType>SET</boostType>
+                <amount>0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemList>
+                    <cloaking/>
+                </systemList>
+                <maxStacks>1</maxStacks>
+                <priority>2147483647</priority>
+            </statBoost>
+        </statBoosts>
+    </mod-append:aug>
+    <mod-append:aug name="AA_TECH_ENCASED_DRONES">
+        <statBoosts>
+            <statBoost name="sabotageSpeedMultiplier">
+                <boostType>SET</boostType>
+                <amount>0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <systemRoomTarget>ALL</systemRoomTarget>
+                <systemList>
+                    <drones/>
+                </systemList>
+                <maxStacks>1</maxStacks>
+                <priority>2147483647</priority>
+            </statBoost>
+        </statBoosts>
+    </mod-append:aug>
 
 </mod:findLike>
 
@@ -444,6 +826,7 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
 <mod:findLike type="achievements" limit="1">
 
 </mod:findLike>
+
 
 <!-- /// DISCORD RICH PRESENCE INTEGRATION /// -->
 

@@ -1,10 +1,10 @@
 local userdata_table = mods.multiverse.userdata_table
 
--- [Particle Shield - An energy shield that regenerates some time after taking damage.]
+-- [Regenerative Shields - Energy shields that naturally regenerate.]
 
 mods.alder.regenShields = {}
-
 local regenShields = mods.alder.regenShields
+
 regenShields["AA_PARTICLE_SHIELD"] = {
     max = 1,
     regen = 1,
@@ -34,7 +34,7 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
                 timer.time = 0
                 for i = 1, math.min(regenShieldData.max - shieldSys.shields.power.super.first, regenShieldData.regen) do
                     shieldSys:AddSuperShield(shieldSys.center)
-                    Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("particle_shield", -1, true)
+                    Hyperspace.Global.GetInstance():GetSoundControl():PlaySoundMix("regen_shield", -1, true)
                 end
             end
             timer.progress = timer.time/regenShieldData.time
@@ -43,7 +43,7 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
     end
 end)
 
--- Charge bar
+-- Charge bar, will change later to be an editable texture.
 local outlineColor = Graphics.GL_Color(1.0, 1.0, 1.0, 1.0) -- Color for the outline of the charge bar (White).
 local function render_part_shield_charge(ship, width, x, y)
     local timer = userdata_table(ship, "mods.alder.regenShieldTimer")

@@ -17,18 +17,15 @@ An expansion pack that contains many unusual weapons, and which serves as a grou
 <!-- // WEAPONS // -->
 
 <text name="aa_tip_disruptor">Tip: Disruptors deal ion damage, allowing them to take down shields but weakening their effect on a ship compared to standard beams. They have an advantage over standard ion weapons by being able to strike multiple systems with one sweep, and cannot miss.</text>
-<text name="aa_tip_capacitor">Tip: Capacitors deal ion damage, serving a similar purpose to ion barrage weapons with increased accuracy. What Disruptors are to Beams, Capacitors are to Pinpoints.</text>
-<text name="aa_tip_driver">Tip: Mass drivers do not lose charge when depowered. Instead, they charge at a quarter of the usual speed.</text>
-<text name="aa_tip_scrambler">Tip: Scramblers quarter a crew's healing from non-instant effects.</text>
+<text name="aa_tip_capacitor">Tip: Capacitors deal ion damage, serving a similar purpose to ion barrage weapons with increased accuracy and precision.</text>
+<text name="aa_tip_driver">Tip: Mass drivers do not lose charge when depowered. Instead, they continue to charge at a quarter of the usual speed. Firing them still requires power.</text>
+<text name="aa_tip_scrambler">Tip: Scramblers quarter a crew's healing from non-instant effects for the duration of their effect.</text>
 <text name="aa_tip_smash">Tip: When one of these weapons pops the final layer of shielding on a ship, the shield will be crushed, forcing it to regenerate its first layer at a rate slowed by the crush intensity percentage.</text>
-<text name="aa_tip_inducer">Tip: Electric Inducers completely bypass all forms of defense, similar to bombs. They also have a +100% bonus to hit, making them nearly impossible to avoid even when wielded by the enemy.</text>
-<text name="aa_tip_particle_flak">Tip: This flak cannon's energized projectiles allow it to serve double duty as anti-shield and anti-system, making it a versatile weapon.</text>
-<text name="aa_tip_ion_rainbow">Tip: You never know what you'll get.</text>
-<text name="aa_tip_beam_sustain">Tip: The Sovnya "pulses" every 4 seconds when locked onto a target, dealing its damage as an equivalent Pinpoint weapon.</text>
+<text name="aa_tip_inducer">Tip: Electric Inducers completely bypass almost all forms of defense, similar to bombs. They also have a +100% bonus to hit, making them nearly impossible to avoid even when wielded by the enemy.</text>
 <text name="aa_tip_accumulator">Tip: When left to charge, accumulating weapons gradually increase the damage of their shot. This lends them a degree of flexibility similar to charge weapons.</text>
 <text name="aa_tip_core">Tip: Cores do not do anything on their own, but provide benefits to the weapon immediately to their right. Some may need to be powered to provide their benefits.</text>
-<text name="aa_tip_pointer">Tip: Drones will love you for the rest of your life.</text>
-
-<text name="aa_tip_mania">Tip: Mania will prevent the use of active abilities of afflicted crew for 25 seconds. It also renders them immune to mind control, and boosts their movement speed, sabotage speed, and damage output by 50% for that length of time.</text>
+<text name="aa_tip_pointer">Tip: Do not underestimate this device.</text>
+<text name="aa_tip_imagine">Tip: You never know what you'll get.</text>
+<text name="aa_tip_system">Tip: We will set you free.</text>
 
 </FTL>

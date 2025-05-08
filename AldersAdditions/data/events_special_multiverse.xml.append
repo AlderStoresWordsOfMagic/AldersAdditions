@@ -54,17 +54,96 @@
 
 
 <!-- // RENEGADE CRUISERS // -->
-<ship name="AA_BOSS_STEALTH_CRUISER" auto_blueprint="AA_BOSS_STEALTH_CRUISER">
-    <destroyed load="AA_SHIP_BOSS_STEALTH_CRUISER_DESTROYED"/>
-    <deadCrew load="AA_SHIP_BOSS_STEALTH_CRUISER_DEADCREW"/>
+<!-- These events will be supplemented in the future by special fight events that add these cruisers to the mystery pool. -->
+
+<!-- Far-Out Stealth -->
+<ship name="AA_MVBOSS_STEALTH_CRUISER_NORMAL" auto_blueprint="AA_MVBOSS_STEALTH_CRUISER_NORMAL">
+    <destroyed load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DEADCREW"/>
 </ship>
-<event name="AA_SHIP_MVBOSS_STEALTH_CRUISER">
-	<text>From out of the tunnel comes a massive cruiser vessel, of Stealth design! Its odd, two-tone design brings to mind something particularly vile you can't quite put your finger on, but that is of no concern compared to its array of anti-personnel weaponry.</text>
-	<ship load="AA_BOSS_STEALTH_CRUISER" hostile="false"/> 
+<ship name="AA_MVBOSS_STEALTH_CRUISER_CHALLENGE" auto_blueprint="AA_MVBOSS_STEALTH_CRUISER_CHALLENGE">
+    <destroyed load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_STEALTH_CRUISER_EXTREME" auto_blueprint="AA_MVBOSS_STEALTH_CRUISER_EXTREME">
+    <destroyed load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_STEALTH_CRUISER_CHAOS" auto_blueprint="AA_MVBOSS_STEALTH_CRUISER_CHAOS">
+    <destroyed load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DEADCREW"/>
+</ship>
+<event name="AA_EVENT_MVBOSS_STEALTH_CRUISER_NORMAL">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Stealth design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_STEALTH_CRUISER_NORMAL" hostile="false"/> 
 	<choice hidden="true" max_group="0">
 		<text>Continue...</text>
 		<event>
-			<text>The vidscreen flickers to life, having been answered by a small cleaning drone rolling over the bridge. A tall man in a coat stands at the helm, humming orders to the crew. "Yes, take the power converters to the engine room. Uh, no, the sample of K-PVIA-18 won't be ready for use for another week - hey, hey! Watch the traffic cone, it's swallowed seven - agh, who is it now!? The Feds!? Arm the weapons! Renegades like you give me such a headache..."</text>
+			<text>The vidscreen flickers to life, having been answered by a small cleaning drone rolling over the console. A tall man in a coat stands at the helm, humming orders to the crew. "Yes, take the power converters to the engine room. Uh, no, the sample of K-PVIA-18 won't be ready for use for another week - hey, hey! Watch the traffic cone, it's swallowed seven - agh, who is it now!? The Feds!? Arm the weapons! Renegades like you give me such a headache..."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_STEALTH_CRUISER_CHALLENGE">
+	<beaconType id="map_icon_quest" global="true">
+		<color r="25" g="205" b="150" a="1.0"/>
+		<unvisitedTooltip>This is the location of abnormal energy signatures. [???]</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	</beaconType>
+	<text>From out of the tunnel comes a massive cruiser vessel, of Stealth design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_STEALTH_CRUISER_CHALLENGE" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>The vidscreen flickers to life, having been answered by a small cleaning drone rolling over the console. A tall man in a coat stands at the helm, humming orders to the crew. "Yes, take the power converters to the engine room. Uh, no, the sample of K-PVIA-18 won't be ready for use for another week - hey, hey! Watch the traffic cone, it's swallowed seven - agh, who is it now!? The Feds!? Arm the weapons! Renegades like you give me such a headache..."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_STEALTH_CRUISER_EXTREME">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Stealth design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_STEALTH_CRUISER_EXTREME" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>The vidscreen flickers to life, having been answered by a small cleaning drone rolling over the console. A tall man in a coat stands at the helm, humming orders to the crew. "Yes, take the power converters to the engine room. Uh, no, the sample of K-PVIA-18 won't be ready for use for another week - hey, hey! Watch the traffic cone, it's swallowed seven - agh, who is it now!? The Feds!? Arm the weapons! Renegades like you give me such a headache..."</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -81,7 +160,7 @@
 			</item_modify>
 		</event>
 	</choice>
-	<choice hidden="true" req="loc_sector_count" lvl="5">
+	<choice hidden="true" blue="false" req="loc_sector_count" lvl="5">
 		<text id="renegade_tribute_scrap_impossible"/>
 		<event load="OPTION_INVALID"/>
 	</choice>
@@ -90,37 +169,453 @@
 		<event load="MV_TRAVELER_BOON"/>
 	</choice>
 </event>
-<event name="AA_SHIP_BOSS_STEALTH_CRUISER_DESTROYED">
+<event name="AA_EVENT_MVBOSS_STEALTH_CRUISER_CHAOS">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Stealth design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_STEALTH_CRUISER_CHAOS" hostile="false"/> 
+	<eventAlias jumpClear="false" name="AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP">AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP_CHAOS</eventAlias>
+	<choice hidden="true">
+		<text>Prepare to fight!</text>
+		<event>
+			<text>The vidscreen flickers to life, having been answered by a small cleaning drone rolling over the console. A tall man in a coat stands at the helm, humming orders to the crew. "Yes, take the power converters to the engine room. Uh, no, the sample of K-PVIA-18 won't be ready for use for another week - hey, hey! Watch the traffic cone, it's swallowed seven - agh, who is it now!? The Feds!? Arm the weapons! Renegades like you give me such a headache..."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice blue="false" req="BRIBE_CHAOS" lvl="1">
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed_chaos"/>
+			<playSound>gm_bribe</playSound>
+			<variable name="gnome_bribe" op="set" val="1"/>
+			<item_modify>
+				<item type="scrap" min="-45" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="BRIBE_CHAOS" lvl="0" max_lvl="0">
+		<text>*%$##@*%!</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+
+</event>
+<event name="AA_SHIP_MVBOSS_STEALTH_CRUISER_DESTROYED">
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<variable name="ach_mv_dusk" op="set" val="1"/>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AA_SHIP_BOSS_STEALTH_CRUISER_DROP_CHANCE"/>
+		<event load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP_CHANCE"/>
 	</choice>
 </event>
-<eventList name="AA_SHIP_BOSS_STEALTH_CRUISER_DROP_CHANCE">
+<eventList name="AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP_CHANCE">
 	<event>
 		<text id="renegade_drop_fail"/>
 		<autoReward level="LOW">stuff</autoReward>
 	</event>
-	<event><loadEvent>AA_SHIP_BOSS_STEALTH_CRUISER_DROP</loadEvent></event>
+	<event><loadEvent>AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP</loadEvent></event>
 </eventList>
-<event name="AA_SHIP_BOSS_STEALTH_CRUISER_DEADCREW">
+<event name="AA_SHIP_MVBOSS_STEALTH_CRUISER_DEADCREW">
 	<text id="renegade_killed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
-	<variable name="ach_mv_dusk" op="set" val="1"/>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event><loadEvent>AA_SHIP_BOSS_STEALTH_CRUISER_DROP</loadEvent></event>
+		<event><loadEvent>AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP</loadEvent></event>
 	</choice>
 </event>
-<event name="AA_SHIP_BOSS_STEALTH_CRUISER_DROP">
+<event name="AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP">
 	<text id="renegade_drop_yes"/>
 	<autoReward level="LOW">stuff</autoReward>
-	<weapon name="BEAM_MADNESS_VISION"/>
+	<weapon name="AA_MVLOOT_STEALTH"/>
 </event>
+<event name="AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP_CHAOS">
+	<text id="renegade_drop_yes"/>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_MVLOOT_STEALTH_CHAOS"/>
+</event>
+
+<!-- Far-Out Paladin -->
+<ship name="AA_MVBOSS_PALADIN_CRUISER_NORMAL" auto_blueprint="AA_MVBOSS_PALADIN_CRUISER_NORMAL">
+    <destroyed load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_PALADIN_CRUISER_CHALLENGE" auto_blueprint="AA_MVBOSS_PALADIN_CRUISER_CHALLENGE">
+    <destroyed load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_PALADIN_CRUISER_EXTREME" auto_blueprint="AA_MVBOSS_PALADIN_CRUISER_EXTREME">
+    <destroyed load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_PALADIN_CRUISER_CHAOS" auto_blueprint="AA_MVBOSS_PALADIN_CRUISER_CHAOS">
+    <destroyed load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DEADCREW"/>
+</ship>
+<event name="AA_EVENT_MVBOSS_PALADIN_CRUISER_NORMAL">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_PALADIN_CRUISER_NORMAL" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>"Good grief... you truly are the lowest scum in history." A Rock Outcast in a heavy trenchcoat stares at you through the screen, the fury of a thousand suns behind his eyes, then turns his head to shout at another Rock in the corner. "Heyyyy, old man! We've found the enemy Renegade!" You have no idea what you did to receive such a scathing insult, but it looks like you're not gonna be talking your way out of this one.</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_PALADIN_CRUISER_CHALLENGE">
+	<beaconType id="map_icon_quest" global="true">
+		<color r="25" g="205" b="150" a="1.0"/>
+		<unvisitedTooltip>This is the location of abnormal energy signatures. [???]</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	</beaconType>
+	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_PALADIN_CRUISER_CHALLENGE" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>"Good grief... you truly are the lowest scum in history." A Rock Outcast in a heavy trenchcoat stares at you through the screen, the fury of a thousand suns behind his eyes, then turns his head to shout at another Rock in the corner. "Heyyyy, old man! We've found the enemy Renegade!" You have no idea what you did to receive such a scathing insult, but it looks like you're not gonna be talking your way out of this one.</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_PALADIN_CRUISER_EXTREME">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_PALADIN_CRUISER_EXTREME" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>"Good grief... you truly are the lowest scum in history." A Rock Outcast in a heavy trenchcoat stares at you through the screen, the fury of a thousand suns behind his eyes, then turns his head to shout at another Rock in the corner. "Heyyyy, old man! We've found the enemy Renegade!" You have no idea what you did to receive such a scathing insult, but it looks like you're not gonna be talking your way out of this one.</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice blue="false" req="loc_sector_count" lvl="0" max_lvl="4">
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-45" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="loc_sector_count" lvl="5">
+		<text id="renegade_tribute_scrap_impossible"/>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_PALADIN_CRUISER_CHAOS">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_PALADIN_CRUISER_CHAOS" hostile="false"/> 
+	<eventAlias jumpClear="false" name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP">AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP_CHAOS</eventAlias>
+	<choice hidden="true">
+		<text>Prepare to fight!</text>
+		<event>
+			<text>"Good grief... you truly are the lowest scum in history." A Rock Outcast in a heavy trenchcoat stares at you through the screen, the fury of a thousand suns behind his eyes, then turns his head to shout at another Rock in the corner. "Heyyyy, old man! We've found the enemy Renegade!" You have no idea what you did to receive such a scathing insult, but it looks like you're not gonna be talking your way out of this one.</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice blue="false" req="BRIBE_CHAOS" lvl="1">
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed_chaos"/>
+			<playSound>gm_bribe</playSound>
+			<variable name="gnome_bribe" op="set" val="1"/>
+			<item_modify>
+				<item type="scrap" min="-45" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="BRIBE_CHAOS" lvl="0" max_lvl="0">
+		<text>*%$##@*%!</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+
+</event>
+<event name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DESTROYED">
+	<text id="renegade_destroyed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP_CHANCE"/>
+	</choice>
+</event>
+<eventList name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP_CHANCE">
+	<event>
+		<text id="renegade_drop_fail"/>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP</loadEvent></event>
+</eventList>
+<event name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DEADCREW">
+	<text id="renegade_killed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP">
+	<text id="renegade_drop_yes"/>
+	<autoReward level="LOW">stuff</autoReward>
+	<drone name="AA_MVLOOT_PALADIN"/>
+</event>
+<event name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP_CHAOS">
+	<text id="renegade_drop_yes"/>
+	<autoReward level="LOW">stuff</autoReward>
+	<drone name="AA_MVLOOT_PALADIN_CHAOS"/>
+</event>
+
+<!-- Far-Out Hacker -->
+<ship name="AA_MVBOSS_HACKER_CRUISER_NORMAL" auto_blueprint="AA_MVBOSS_HACKER_CRUISER_NORMAL">
+    <destroyed load="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_HACKER_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_HACKER_CRUISER_CHALLENGE" auto_blueprint="AA_MVBOSS_HACKER_CRUISER_CHALLENGE">
+    <destroyed load="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_HACKER_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_HACKER_CRUISER_EXTREME" auto_blueprint="AA_MVBOSS_HACKER_CRUISER_EXTREME">
+    <destroyed load="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_HACKER_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_HACKER_CRUISER_CHAOS" auto_blueprint="AA_MVBOSS_HACKER_CRUISER_CHAOS">
+    <destroyed load="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_HACKER_CRUISER_DEADCREW"/>
+</ship>
+<event name="AA_EVENT_MVBOSS_HACKER_CRUISER_NORMAL">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Hacker design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_HACKER_CRUISER_NORMAL" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>Before you can even reach out to flick on the viewscreen, it opens on its own to reveal the ship's stark-white interior. Every screen on your ship does the same, displaying scenes of gratuitous, low-poly violence and emaciated crewmembers strapped to neural interfaces. At the end of this stomach-turning display, a single phrase glows on every monitor. "WE WILL SET YOU FREE."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_HACKER_CRUISER_CHALLENGE">
+	<beaconType id="map_icon_quest" global="true">
+		<color r="25" g="205" b="150" a="1.0"/>
+		<unvisitedTooltip>This is the location of abnormal energy signatures. [???]</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	</beaconType>
+	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_HACKER_CRUISER_CHALLENGE" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>Before you can even reach out to flick on the viewscreen, it opens on its own to reveal the ship's stark-white interior. Every screen on your ship does the same, displaying scenes of gratuitous, low-poly violence and emaciated crewmembers strapped to neural interfaces. At the end of this stomach-turning display, a single phrase glows on every monitor. "WE WILL SET YOU FREE."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_HACKER_CRUISER_EXTREME">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_HACKER_CRUISER_EXTREME" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>Before you can even reach out to flick on the viewscreen, it opens on its own to reveal the ship's stark-white interior. Every screen on your ship does the same, displaying scenes of gratuitous, low-poly violence and emaciated crewmembers strapped to neural interfaces. At the end of this stomach-turning display, a single phrase glows on every monitor. "WE WILL SET YOU FREE."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice blue="false" req="loc_sector_count" lvl="0" max_lvl="4">
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-45" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="loc_sector_count" lvl="5">
+		<text id="renegade_tribute_scrap_impossible"/>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_HACKER_CRUISER_CHAOS">
+	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_HACKER_CRUISER_CHAOS" hostile="false"/> 
+	<eventAlias jumpClear="false" name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP">AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHAOS</eventAlias>
+	<choice hidden="true">
+		<text>Prepare to fight!</text>
+		<event>
+			<text>Before you can even reach out to flick on the viewscreen, it opens on its own to reveal the ship's stark-white interior. Every screen on your ship does the same, displaying scenes of gratuitous, low-poly violence and emaciated crewmembers strapped to neural interfaces. At the end of this stomach-turning display, a single phrase glows on every monitor. "WE WILL SET YOU FREE."</text>
+			<ship hostile="true"/> 
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice blue="false" req="BRIBE_CHAOS" lvl="1">
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed_chaos"/>
+			<playSound>gm_bribe</playSound>
+			<variable name="gnome_bribe" op="set" val="1"/>
+			<item_modify>
+				<item type="scrap" min="-45" max="-45"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="BRIBE_CHAOS" lvl="0" max_lvl="0">
+		<text>*%$##@*%!</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+
+</event>
+<event name="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED">
+	<text id="renegade_destroyed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHANCE"/>
+	</choice>
+</event>
+<eventList name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHANCE">
+	<event>
+		<text id="renegade_drop_fail"/>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_SHIP_MVBOSS_HACKER_CRUISER_DROP</loadEvent></event>
+</eventList>
+<event name="AA_SHIP_MVBOSS_HACKER_CRUISER_DEADCREW">
+	<text id="renegade_killed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_SHIP_MVBOSS_HACKER_CRUISER_DROP</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP">
+	<text id="renegade_drop_yes"/>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_MVLOOT_HACKER"/>
+</event>
+<event name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHAOS">
+	<text id="renegade_drop_yes"/>
+	<autoReward level="LOW">stuff</autoReward>
+	<weapon name="AA_MVLOOT_HACKER_CHAOS"/>
+</event>
+
 
 </FTL>

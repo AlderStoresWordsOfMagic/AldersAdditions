@@ -6,12 +6,10 @@ local userdata_table = mods.multiverse.userdata_table
 mods.alder.behaviorFear = {}
 local behaviorFear = mods.alder.behaviorFear
 
-behaviorFear["aa_dustworm"] = {
+behaviorFear["aa_crew"] = { -- aa_dustworm
 
-  flee = true, -- Will try to flee from danger sources such as enemy crew. Pathing implemented, buggy (changes target on every frame)
-  flee_exceptions = {}, -- Will not treat these crew types as threats.
-
-  -- follow_targets = {} -- Will try to follow the closest instance of these crew types. Unimplemented.
+    flee = true, -- Will try to flee from danger sources such as enemy crew.
+    flee_exceptions = {}, -- Will not treat these crew types as threats.
   
 }
 
@@ -27,7 +25,7 @@ local function check_crew_enemies(crew1, crew2)
     return crew1.iShipId ~= crew2.iShipId
 end
 
-local function check_crew_room_threat(crew, behaviorTable) -- check for enemies in the room
+local function check_crew_room_threat(crew, behaviorTable) -- check for enemies in the room [CURRENT ISSUE: Boarding drones in flight count as being in room 0, creating phantom fear effects]
     print("CHECK_CREW_ROOM_THREAT: room: "..crew.iRoomId..", race: "..crew.type..", name: "..crew:GetName())
     for otherCrew in vter(Hyperspace.ships(crew.currentShipId).vCrewList) do
         print("race: "..otherCrew.type..", Functional(): "..tostring(otherCrew:Functional())..", ReadyToFight(): "..tostring(otherCrew:ReadyToFight()))

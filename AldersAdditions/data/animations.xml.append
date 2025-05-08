@@ -135,6 +135,9 @@
 	<time>1</time>
 </anim>
 
+
+<!-- // EXPLOSIONS // -->
+
 <animSheet name="explosion_smash" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_smash.png</animSheet>
 <anim name="explosion_smash">
 	<sheet>explosion_smash</sheet>
@@ -205,6 +208,8 @@
 	<time>0.75</time>
 </anim>
 
+<!-- // STATUS EFFECTS // -->
+
 <animSheet name="status_purge" w="352" h="32" fw="32" fh="32">people/status_purge.png</animSheet>
 <anim name="status_purge">
 	<sheet>status_purge</sheet>
@@ -226,6 +231,9 @@
 	<time>1.0</time>
 </anim>
 
+
+<!-- // CENTER EFFECTS // -->
+
 <animSheet name="center_pointer" w="480" h="40" fw="40" fh="40">effects/center/center_pointer.png</animSheet>
 <anim name="center_pointer">
 	<sheet>center_pointer</sheet>
@@ -240,6 +248,9 @@
 	<time>1</time>
 </anim>
 
+
+<!-- // TILE EFFECTS // -->
+
 <animSheet name="tile_decay" w="350" h="35" fw="35" fh="35">effects/tile/tile_decay.png</animSheet>
 <anim name="tile_decay">
 	<sheet>tile_decay</sheet>
@@ -248,6 +259,39 @@
 </anim>
 
 
+<!-- // ROOM GRAPHICS // -->
+
+<animSheet name="resist_icon_hack" w="35" h="35" fw="35" fh="35">effects/rooms/resist_ico_hack.png</animSheet>
+<anim name="resist_icon_hack">
+	<sheet>resist_icon_hack</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="resist_2x2_hack" w="70" h="70" fw="70" fh="70">effects/rooms/resist_hack_2x2.png</animSheet>
+<anim name="resist_2x2_hack">
+	<sheet>resist_2x2_hack</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="resist_icon_sabo" w="35" h="35" fw="35" fh="35">effects/rooms/resist_ico_sabo.png</animSheet>
+<anim name="resist_icon_sabo">
+	<sheet>resist_icon_sabo</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="resist_2x2_sabo" w="70" h="70" fw="70" fh="70">effects/rooms/resist_sabo_2x2.png</animSheet>
+<anim name="resist_2x2_sabo">
+	<sheet>resist_2x2_sabo</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="resist_1x3_sabo" w="35" h="105" fw="35" fh="105">effects/rooms/resist_sabo_1x3.png</animSheet>
+<anim name="resist_1x3_sabo">
+	<sheet>resist_1x3_sabo</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
 
 
 <!-- /// WEAPONS /// -->
@@ -373,7 +417,7 @@
 	<desc length="22" x="0" y="0"/>
 	<chargedFrame>3</chargedFrame>
 	<fireFrame>7</fireFrame>
-	<firePoint  x="16" y="20" charge="6"/>
+	<firePoint x="16" y="20" charge="0"/>
 	<mountPoint x="4" y="42"/>
 	<boost>laser_cumulative_chargeglow</boost>
 </weaponAnim>
@@ -441,7 +485,7 @@
 	<desc length="29" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint  x="18" y="9" charge="9"/>
+	<firePoint x="18" y="9" charge="0"/>
 	<mountPoint x="3" y="42"/>
 	<chargeImage>weapons/ion/ion_cumulative_glow.png</chargeImage>
 	<boost>ion_cumulative_chargeglow</boost>
@@ -473,7 +517,7 @@
 	<desc length="62" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint  x="18" y="15" charge="20"/>
+	<firePoint  x="18" y="15" charge="0"/>
 	<mountPoint x="3" y="50"/>
 	<chargeImage>weapons/energy/energy_cumulative_glow.png</chargeImage>
 	<boost>energy_cumulative_chargeglow</boost>
@@ -545,7 +589,7 @@
 	<desc length="50" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="19" y="23"/>
+	<firePoint x="19" y="23" charge="0"/>
 	<mountPoint x="5" y="48"/>
 	<chargeImage>weapons/beam/beam_cumulative_glow.png</chargeImage>
 	<boost>beam_cumulative_chargeglow</boost>
@@ -751,7 +795,7 @@
 	<desc length="17" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>4</fireFrame>
-	<firePoint  x="17" y="7" charge="5"/>
+	<firePoint x="17" y="7" charge="0"/>
 	<mountPoint x="4" y="27"/>
 	<chargeImage>weapons/flak/shotgun_cumulative_glow.png</chargeImage>
 	<boost>shotgun_cumulative_chargeglow</boost>
@@ -924,6 +968,72 @@
 	<chargeImage>weapons/core/core_particle_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="core_rad" w="111" h="70" fw="37" fh="70">weapons/core/core_rad.png</animSheet>
+<weaponAnim name="core_rad">
+	<sheet>core_rad</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="18" y="35"/>
+	<mountPoint x="4" y="38"/>
+	<chargeImage>weapons/core/core_rad_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="core_ion" w="123" h="77" fw="41" fh="77">weapons/core/core_ion.png</animSheet>
+<weaponAnim name="core_ion">
+	<sheet>core_ion</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="21" y="42"/>
+	<mountPoint x="4" y="44"/>
+	<chargeImage>weapons/core/core_ion_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="core_fire" w="120" h="76" fw="40" fh="76">weapons/core/core_fire.png</animSheet>
+<weaponAnim name="core_fire">
+	<sheet>core_fire</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="21" y="41"/>
+	<mountPoint x="4" y="45"/>
+	<chargeImage>weapons/core/core_fire_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="core_breach" w="123" h="69" fw="41" fh="69">weapons/core/core_breach.png</animSheet>
+<weaponAnim name="core_breach">
+	<sheet>core_breach</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="21" y="37"/>
+	<mountPoint x="4" y="37"/>
+	<chargeImage>weapons/core/core_breach_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="core_stun" w="102" h="75" fw="34" fh="75">weapons/core/core_stun.png</animSheet>
+<weaponAnim name="core_stun">
+	<sheet>core_stun</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="17" y="40"/>
+	<mountPoint x="4" y="40"/>
+	<chargeImage>weapons/core/core_stun_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="core_madness" w="189" h="86" fw="63" fh="86">weapons/core/core_madness.png</animSheet>
+<weaponAnim name="core_madness">
+	<sheet>core_madness</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="40" y="37"/>
+	<mountPoint x="8" y="50"/>
+	<chargeImage>weapons/core/core_madness_glow.png</chargeImage>
+</weaponAnim>
+
 
 <!-- // MISC. // -->
 
@@ -974,6 +1084,54 @@
 
 <!-- // LOOT // -->
 
+<animSheet name="renegade_loot_stealth_chargeglow" w="108" h="78" fw="36" fh="78">weapons/loot/loot_mvboss_stealth_chainglow.png</animSheet>
+<anim name="renegade_loot_stealth_chargeglow">
+	<sheet>renegade_loot_stealth_chargeglow</sheet>
+	<desc length="3" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+<animSheet name="renegade_loot_stealth" w="720" h="78" fw="36" fh="78">weapons/loot/loot_mvboss_stealth.png</animSheet>
+<weaponAnim name="renegade_loot_stealth">
+	<sheet>renegade_loot_stealth</sheet>
+	<desc length="20" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="19" y="23"/>
+	<mountPoint x="4" y="50"/>
+	<chargeImage>weapons/loot/loot_mvboss_stealth_glow.png</chargeImage>
+	<boost>renegade_loot_stealth_chargeglow</boost>
+</weaponAnim>
+<animSheet name="renegade_loot_stealth_chaos" w="720" h="78" fw="36" fh="78">weapons/loot/loot_mvboss_stealth_chaos.png</animSheet>
+<weaponAnim name="renegade_loot_stealth_chaos">
+	<sheet>renegade_loot_stealth_chaos</sheet>
+	<desc length="20" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="19" y="23"/>
+	<mountPoint x="4" y="50"/>
+	<chargeImage>weapons/loot/loot_mvboss_stealth_glow.png</chargeImage>
+	<boost>renegade_loot_stealth_chargeglow</boost>
+</weaponAnim>
+
+<animSheet name="renegade_loot_hacker" w="1131" h="95" fw="39" fh="95">weapons/loot/loot_mvboss_hacker.png</animSheet>
+<weaponAnim name="renegade_loot_hacker">
+	<sheet>renegade_loot_hacker</sheet>
+	<desc length="29" x="0" y="0"/>
+	<chargedFrame>21</chargedFrame>
+	<fireFrame>22</fireFrame>
+	<firePoint x="26" y="4"/>
+	<mountPoint x="8" y="63"/>
+</weaponAnim>
+<animSheet name="renegade_loot_hacker_chaos" w="1131" h="95" fw="39" fh="95">weapons/loot/loot_mvboss_hacker_chaos.png</animSheet>
+<weaponAnim name="renegade_loot_hacker_chaos">
+	<sheet>renegade_loot_hacker_chaos</sheet>
+	<desc length="29" x="0" y="0"/>
+	<chargedFrame>21</chargedFrame>
+	<fireFrame>22</fireFrame>
+	<firePoint x="26" y="4"/>
+	<mountPoint x="8" y="63"/>
+</weaponAnim>
+
 <animSheet name="railgun_icon" w="138" h="30" fw="69" fh="30">weapons/loot/railgun_icon.png</animSheet>
 <anim name="railgun_icon">
 	<sheet>railgun_icon</sheet>
@@ -991,31 +1149,20 @@
 	<chargeImage>weapons/loot/railgun_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="beam_mania" w="1500" h="76" fw="50" fh="76">weapons/loot/beam_mania.png</animSheet>
-<weaponAnim name="beam_mania">
-	<sheet>beam_mania</sheet>
-	<desc length="30" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-    <firePoint  x="29" y="28"/>
-    <mountPoint x="8" y="50"/>
-	<chargeImage>weapons/loot/beam_mania_glow.png</chargeImage>
-</weaponAnim>
-
 <animSheet name="projectile_imagine" w="525" h="35" fw="35" fh="35">projectile/projectile_imagine.png</animSheet>
 <anim name="projectile_imagine">
 	<sheet>projectile_imagine</sheet>
 	<desc length="15" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
-<animSheet name="beam_imagine" w="1736" h="85" fw="56" fh="85">weapons/loot/beam_imagine.png</animSheet>
+<animSheet name="beam_imagine" w="1500" h="76" fw="50" fh="76">weapons/loot/beam_imagine.png</animSheet>
 <weaponAnim name="beam_imagine">
 	<sheet>beam_imagine</sheet>
-	<desc length="31" x="0" y="0"/>
+	<desc length="30" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-    <firePoint  x="34" y="24"/>
-    <mountPoint x="11" y="44"/>
+    <firePoint  x="29" y="28"/>
+    <mountPoint x="8" y="50"/>
 	<chargeImage>weapons/loot/beam_imagine_glow.png</chargeImage>
 </weaponAnim>
 
@@ -1154,6 +1301,131 @@
 	<time>0.75</time>
 </anim>
 
+
+<!-- // MISC // -->
+
+<animSheet name="aa_red_guy" w="315" h="455" fw="35" fh="35">people/aa_red_guy_base.png</animSheet>
+<anim name="aa_red_guy_clone">
+	<sheet>aa_red_guy</sheet>
+	<desc length="6" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_red_guy_death_right">
+	<sheet>aa_red_guy</sheet>
+	<desc length="5" x="3" y="0"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_red_guy_death_left">
+	<sheet>aa_red_guy</sheet>
+	<desc length="5" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_red_guy_walk_down">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="0" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_walk_right">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="4" y="12"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_walk_up">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="0" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_walk_left">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="4" y="11"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_shoot_down">
+	<sheet>aa_red_guy</sheet>
+	<desc length="3" x="0" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_shoot_right">
+	<sheet>aa_red_guy</sheet>
+	<desc length="3" x="3" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_shoot_up">
+	<sheet>aa_red_guy</sheet>
+	<desc length="3" x="6" y="10"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_shoot_left">
+	<sheet>aa_red_guy</sheet>
+	<desc length="3" x="0" y="1"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_fire_down">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="0" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_fire_right">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="4" y="9"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_fire_up">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="0" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_fire_left">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="4" y="8"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_repair">
+	<sheet>aa_red_guy</sheet>
+	<desc length="9" x="0" y="7"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_punch_up">
+	<sheet>aa_red_guy</sheet>
+	<desc length="6" x="3" y="1"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_punch_down">
+	<sheet>aa_red_guy</sheet>
+	<desc length="6" x="0" y="6"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_red_guy_teleport">
+	<sheet>aa_red_guy</sheet>
+	<desc length="9" x="0" y="3"/>
+	<time>0.5</time>
+</anim>
+<anim name="aa_red_guy_type_right">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_red_guy_type_left">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_red_guy_type_up">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="0" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_red_guy_type_down">
+	<sheet>aa_red_guy</sheet>
+	<desc length="4" x="4" y="4"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_red_guy_portrait">
+	<sheet>aa_red_guy</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+</FTL>
 
 
 
