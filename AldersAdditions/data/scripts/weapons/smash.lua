@@ -65,7 +65,7 @@ popWeapons["AA_BOMB_SMASH_ENEMY"] = {
 -- Apply crush on shield hit
 local function crush_shield(popData, ship, x, y)
     local shieldPower = ship.shieldSystem.shields.power
-    if shieldPower.super.first > 0 then
+    if shieldPower.super.first > 0 then -- Handle energy shields
         if popData.countSuper > 0 then
             ship.shieldSystem:CollisionReal(x, y, Hyperspace.Damage(), true)
             shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
@@ -119,4 +119,25 @@ script.on_internal_event(Defines.InternalEvents.GET_AUGMENTATION_VALUE, function
         end
     end
     return Defines.Chain.CONTINUE, augValue
+end)
+
+
+-- Render a graphic over shield bubble icons to represent crushed layers
+local crushIcon = Hyperspace.Resources:GetImageId("statusUI/top_shieldsquare_crushed_full.png")
+local function render_crush_bubbles(ship, x, y)
+    local crushTable = userdata_table(ship, "mods.aa.shieldCrush").crush
+    local crushCount = crushTable and #crushTable or 0 -- # means length of the table, and the length of the table is the number of shields crushed
+    for i = 1, crushCount do
+        Graphics.CSurface.GL_BlitImage(crushIcon, x + (23 * i), y, 30, 30, 0, Graphics.GL_Color(1.0, 1.0, 1.0, 0.6), false)
+    end
+end
+script.on_render_event(Defines.RenderEvents.GUI_CONTAINER, mods.alder.doNothing, function()
+    if Hyperspace.ships.player then render_crush_bubbles(Hyperspace.ships.player, 7, 47) end
+    if Hyperspace.ships.enemy and not Hyperspace.ships.enemy.bDestroyed then
+        if Hyperspace.Global.GetInstance():GetCApp().gui.combatControl.boss_visual then
+            render_crush_bubbles(Hyperspace.ships.enemy, 740, 71) -- Boss box has different shield counter position
+        else
+            render_crush_bubbles(Hyperspace.ships.enemy, 865, 114)
+        end
+    end
 end)

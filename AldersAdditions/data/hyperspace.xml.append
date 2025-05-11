@@ -12,8 +12,8 @@
     <mod-append:script>data/scripts/crew/behavior_fear.lua</mod-append:script>
 
     <mod-append:script>data/scripts/weapons/charge_holders.lua</mod-append:script>
-    <mod-append:script>data/scripts/weapons/cores.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/cumulative.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/infusers.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/smash.lua</mod-append:script>
 
     <mod-append:script>data/scripts/weapons/oneoffs/imaginator.lua</mod-append:script>
@@ -94,7 +94,7 @@ This enemy has one or more insulated rooms, marked by the blue border and blue R
         <mod-append:shipIcon>
             <name>aa_icon_resist_hack</name>
             <tooltip>FIREWALLED ROOMS:
-This enemy has one or more firewalled rooms, marked by the purple border and purple R icon in the top left. Firewalled rooms are immune to hacking effects, but take all damage as normal.</tooltip>
+This enemy has one or more firewalled rooms, marked by the purple border and purple R icon in the top left. Firewalled rooms cannot be hacked, but take all damage as normal.</tooltip>
         </mod-append:shipIcon>
     
         <mod-append:shipIcon>

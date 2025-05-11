@@ -212,6 +212,8 @@
 		<mod-append:blueprint name="AA_LASER_PARTICLE_PIERCE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_SMASH_2" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_BREACH" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_STRAIN" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_REPAIR" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_CHARGEGUN_DAMAGE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="0" />
@@ -280,6 +282,8 @@
 		<mod-append:blueprint name="AA_LASER_PARTICLE_PIERCE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_SMASH" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_SMASH_2" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_BREACH" rarity="0" />
+		<mod-append:blueprint name="AA_LASER_STRAIN" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_REPAIR" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_CHARGEGUN_DAMAGE" rarity="0" />
 		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="0" />

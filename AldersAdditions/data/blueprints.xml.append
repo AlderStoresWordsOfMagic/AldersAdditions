@@ -428,7 +428,7 @@
 	<damage>1</damage>
 	<hullBust>1</hullBust>
 	<shots>1</shots>
-	<breachChance>100</breachChance> <!-- 1000% breach chance, triggers some Lua stuff in Fusion -->
+	<breachChance>300</breachChance> <!-- 3000% breach chance, triggers some Lua stuff in Fusion -->
 	<cooldown>16</cooldown>
 	<power>2</power>
 	<cost>70</cost>
@@ -467,7 +467,7 @@
 	<power>2</power>
 	<cost>70</cost>
 	<bp>2</bp>
-	<rarity>0</rarity>
+	<rarity>4</rarity>
 	<image>laser_breach_projectile</image>
 	<launchSounds>
 		<sound>heavyLaser1</sound>
@@ -1435,7 +1435,7 @@
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
-<!-- <weaponBlueprint name="AA_BEAM_CHARGEGUN_DAMAGE"> <!-- add to bluelists
+<weaponBlueprint name="AA_BEAM_CHARGEGUN_DAMAGE"> <!-- add to bluelists -->
 	<type>BEAM</type>
 	<tip>aa_tip_accumulator</tip>
 	<title>'Woldo' Cumulative Beam</title>
@@ -1457,7 +1457,7 @@
 	</launchSounds>
 	<weaponArt>beam_cumulative</weaponArt>
 	<iconImage>beam</iconImage>
-</weaponBlueprint> -->
+</weaponBlueprint>
 
 <weaponBlueprint name="AA_BEAM_ION_1">
 	<type>BEAM</type>
@@ -2090,7 +2090,7 @@
 	<title>Cumulative Flak Gun</title>
 	<tip>aa_tip_accumulator</tip>
 	<short>Cum. Flak</short>
-	<descriptionOverride>This versatile Flak cannon has the ability to gradually refine the shrapnel it fires, increasing the damage its shots deal as it waits.
+	<descriptionOverride>This versatile Flak cannon gradually refines the shrapnel it fires, allowing it to hit with a punch that mirrors the strongest of Beams.
 
 	Stats:
 	Required Power: 2
@@ -2101,9 +2101,9 @@
 	Max Charges: 3
 	Charges damage on each shot instead of shot count
 	
-	Base Hull Damage: 1/2/3
-	Total System Damage: 1/2/3
-	Total Crew Damage: 15/30/45
+	Base Hull Damage: 2/4/6
+	Total System Damage: 2/4/6
+	Total Crew Damage: 30/60/90
 
 	Breach Chance: 20%
 
@@ -2117,9 +2117,9 @@
 		Max Charges: 3
 		Charges damage on each shot instead of shot count
 		
-		Base Hull Damage: 1/2/3
-		Total System Damage: 1/2/3
-		Total Crew Damage: 15/30/45
+		Base Hull Damage: 2/4/6
+		Total System Damage: 2/4/6
+		Total Crew Damage: 30/60/90
 	
 		Breach Chance: 20%</tooltipOverride>
 	<radius>45</radius>
@@ -2313,7 +2313,7 @@
 	<image>beam_contact</image>
 	<length>1</length>
 	<launchSounds>
-		<sound>capacitor_light</sound>
+		<sound>capacitor</sound>
 	</launchSounds>
 	<weaponArt>capacitor_1</weaponArt>
 	<iconImage>beam</iconImage>
@@ -2344,7 +2344,7 @@
 	<image>beam_contact</image>
 	<length>1</length>
 	<launchSounds>
-		<sound>capacitor_heavy</sound>
+		<sound>capacitor</sound>
 	</launchSounds>
 	<weaponArt>capacitor_2</weaponArt>
 	<iconImage>beam</iconImage>
@@ -2376,7 +2376,7 @@
 	<image>beam_contact</image>
 	<length>1</length>
 	<launchSounds>
-		<sound>capacitor_light</sound>
+		<sound>capacitor</sound>
 	</launchSounds>
 	<weaponArt>capacitor_pierce</weaponArt>
 	<iconImage>beam</iconImage>
@@ -2586,9 +2586,9 @@
 		<sound>ionHit3</sound>
 	</hitShipSounds>
 	<hitShieldSounds>
-		<sound>ionShields1</sound>
-		<sound>ionShields2</sound>
-		<sound>ionShields3</sound>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
 	</hitShieldSounds>
 	<missSounds>
 		<sound>miss</sound>
@@ -2638,29 +2638,32 @@
 </weaponBlueprint>
 
 
-<!-- // CORES // -->
+<!-- // INFUSER // -->
 
-<weaponBlueprint name="AA_CORE_PARTICLE">
+<weaponBlueprint name="AA_INFUSER_PARTICLE">
 	<type>BEAM</type>
-	<tip>aa_tip_core</tip>
-	<title>Accelerator Core</title>
-	<short>Particle Core</short>
+	<tip>aa_tip_infuser</tip>
+	<title>Accelerated Infuser</title>
+	<short>P. Infuser</short>
 	<desc>A dedicated device that empowers the weapon to its right. That weapon deals 1 extra system damage.</desc>
 	<damage>0</damage>
-	<sysDamage>1</sysDamage> <!-- damage properties of cores trigger Lua stuff -->
-	<cooldown>-1</cooldown>
+	<sysDamage>1</sysDamage> <!-- Damage properties of cores are imparted onto the weapon to its right -->
+	<cooldown>15</cooldown> <!-- After imparting stats, they must cooldown before they can do so again -->
 	<rarity>0</rarity>
 	<power>3</power>
 	<cost>80</cost>
+	<launchSounds>
+		<sound>infuser_buff</sound> <!-- Sound to play when infusing a weapon -->
+	</launchSounds>
 	<image>beam_contact</image>
 	<weaponArt>core_particle</weaponArt>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_CORE_BIO">
+<weaponBlueprint name="AA_INFUSER_BIO">
 	<type>BEAM</type>
-	<tip>aa_tip_core</tip>
-	<title>Irradiator Core</title>
-	<short>Rad Core</short>
+	<tip>aa_tip_infuser</tip>
+	<title>Irradiated Infuser</title>
+	<short>R. Infuser</short>
 	<desc>A dedicated device that empowers the weapon to its right. That weapon deals 45 extra crew damage and poisons hit crew.</desc>
 	<damage>0</damage>
 	<persDamage>3</persDamage>
@@ -2669,119 +2672,94 @@
 		<statBoost name="stunMultiplier" load="RAD_STUN"/>
         <statBoost name="repairSpeed" load="RAD_REPAIR"/>
     </statBoosts>
-	<cooldown>-1</cooldown>
+	<cooldown>10</cooldown>
 	<rarity>0</rarity>
 	<power>2</power>
 	<cost>50</cost>
+	<launchSounds>
+		<sound>infuser_buff</sound>
+	</launchSounds>
 	<image>beam_contact</image>
 	<weaponArt>core_rad</weaponArt>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_CORE_ION">
+<weaponBlueprint name="AA_INFUSER_ION">
 	<type>BEAM</type>
-	<tip>aa_tip_core</tip>
-	<title>Electrifier Core</title>
-	<short>Ion Core</short>
+	<tip>aa_tip_infuser</tip>
+	<title>Electrified Infuser</title>
+	<short>I. Infuser</short>
 	<desc>A dedicated device that empowers the weapon to its right. That weapon deals 1 extra ion damage.
 
 This core has no effect on beam weapons, as crossing the energies used in both is quite difficult.</desc>
 	<damage>0</damage>
 	<ion>1</ion>
-	<cooldown>-1</cooldown>
+	<cooldown>15</cooldown>
 	<rarity>0</rarity>
 	<power>3</power>
 	<cost>50</cost>
+	<launchSounds>
+		<sound>infuser_buff</sound>
+	</launchSounds>
 	<image>beam_contact</image>
 	<weaponArt>core_ion</weaponArt>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_CORE_FIRE">
+<weaponBlueprint name="AA_INFUSER_FIRE">
 	<type>BEAM</type>
-	<tip>aa_tip_core</tip>
-	<title>Incendiary Core</title>
-	<short>Fire Core</short>
+	<tip>aa_tip_infuser</tip>
+	<title>Incendiary Infuser</title>
+	<short>F. Infuser</short>
 	<desc>A dedicated device that empowers the weapon to its right. That weapon always starts fires.</desc>
 	<damage>0</damage>
 	<fireChance>10</fireChance>
-	<cooldown>-1</cooldown>
+	<cooldown>10</cooldown>
 	<rarity>0</rarity>
 	<power>3</power>
 	<cost>70</cost>
+	<launchSounds>
+		<sound>infuser_buff</sound>
+	</launchSounds>
 	<image>beam_contact</image>
 	<weaponArt>core_fire</weaponArt>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_CORE_BREACH">
+<weaponBlueprint name="AA_INFUSER_BREACH">
 	<type>BEAM</type>
-	<tip>aa_tip_core</tip>
-	<title>Crushing Core</title>
-	<short>Breach Core</short>
+	<tip>aa_tip_infuser</tip>
+	<title>Crushing Infuser</title>
+	<short>B. Infuser</short>
 	<desc>A dedicated device that empowers the weapon to its right. That weapon always tears breaches.</desc>
 	<damage>0</damage>
 	<breachChance>10</breachChance>
-	<cooldown>-1</cooldown>
+	<cooldown>10</cooldown>
 	<rarity>0</rarity>
 	<power>2</power>
 	<cost>60</cost>
+	<launchSounds>
+		<sound>infuser_buff</sound>
+	</launchSounds>
 	<image>beam_contact</image>
 	<weaponArt>core_breach</weaponArt>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_CORE_STUN">
+<weaponBlueprint name="AA_INFUSER_STUN">
 	<type>BEAM</type>
-	<tip>aa_tip_core</tip>
-	<title>Neural Core</title>
-	<short>Stun Core</short>
+	<tip>aa_tip_infuser</tip>
+	<title>Neural Infuser</title>
+	<short>S. Infuser</short>
 	<desc>A dedicated device that empowers the weapon to its right. That weapon always stuns crew.</desc>
 	<damage>0</damage>
 	<stunChance>10</stunChance>
 	<stun>10</stun>
-	<cooldown>-1</cooldown>
+	<cooldown>10</cooldown>
 	<rarity>0</rarity>
 	<power>2</power>
 	<cost>50</cost>
+	<launchSounds>
+		<sound>infuser_buff</sound>
+	</launchSounds>
 	<image>beam_contact</image>
 	<weaponArt>core_stun</weaponArt>
-</weaponBlueprint>
-
-<weaponBlueprint name="AA_CORE_MADNESS">
-	<type>BEAM</type>
-	<tip>aa_tip_core</tip>
-	<title>'Twisted Pastiche'</title>
-	<short>'Pastiche'</short>
-	<desc>A creation from the darkest depths of the Multiverse that empowers the weapon to its right. That weapon inflicts madness on any hit crew.</desc>
-	<damage>0</damage>
-	<statBoosts>
-        <statBoost name="silenced"> <!-- Madness effect identical to 'Seuss' Beam -->
-			<boostType>SET</boostType>
-			<value>true</value>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
-			<droneTarget>CREW</droneTarget>
-			<affectsSelf>false</affectsSelf>
-			<duration>25</duration>
-			<!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
-			<blackList>
-				<slug_hektar_box/>
-				<unique_billy_box/>
-				<unique_irwin_demon/>
-				<unique_dessius/>
-				<siren/>
-				<siren_harpy/>
-				<eldritch_thing/>
-				<eldritch_thing_weak/>
-				<eldritch_cat/>
-				<gnome/>
-			</blackList>
-			<boostAnim>madness</boostAnim>
-		</statBoost>
-    </statBoosts>
-	<cooldown>-1</cooldown>
-	<rarity>0</rarity>
-	<power>0</power>
-	<cost>90</cost>
-	<image>beam_contact</image>
-	<weaponArt>core_madness</weaponArt>
 </weaponBlueprint>
 
 
@@ -3210,6 +3188,49 @@ This core has no effect on beam weapons, as crossing the energies used in both i
 	<iconReplace>railgun_icon</iconReplace>
 </weaponBlueprint>
 
+<weaponBlueprint name="AA_INFUSER_MADNESS">
+	<type>BEAM</type>
+	<tip>aa_tip_infuser</tip>
+	<title>'Twisted Pastiche'</title>
+	<short>'Pastiche'</short>
+	<desc>A creation from the darkest depths of the Multiverse that empowers the weapon to its right. That weapon inflicts madness on any hit crew.</desc>
+	<damage>0</damage>
+	<statBoosts>
+        <statBoost name="silenced"> <!-- Madness effect identical to 'Seuss' Beam -->
+			<boostType>SET</boostType>
+			<value>true</value>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ALL</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<affectsSelf>false</affectsSelf>
+			<duration>25</duration>
+			<!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+			<blackList>
+				<slug_hektar_box/>
+				<unique_billy_box/>
+				<unique_irwin_demon/>
+				<unique_dessius/>
+				<siren/>
+				<siren_harpy/>
+				<eldritch_thing/>
+				<eldritch_thing_weak/>
+				<eldritch_cat/>
+				<gnome/>
+			</blackList>
+			<boostAnim>madness</boostAnim>
+		</statBoost>
+    </statBoosts>
+	<cooldown>5</cooldown>
+	<rarity>0</rarity>
+	<power>0</power>
+	<cost>90</cost>
+	<launchSounds>
+		<sound>infuser_buff</sound>
+	</launchSounds>
+	<image>beam_contact</image>
+	<weaponArt>core_madness</weaponArt>
+</weaponBlueprint>
+
 <weaponBlueprint name="AA_BEAM_IMAGINE">
 	<type>BEAM</type>
 	<tip>aa_tip_imagine</tip>
@@ -3217,7 +3238,6 @@ This core has no effect on beam weapons, as crossing the energies used in both i
 	<short>Imaginator</short>
 	<desc>One swipe from this beam will fill the target vessel with all sorts of surreal wonders. There's no telling what will spring forth in each room.</desc>
 	<damage>0</damage>
-	<sysDamage>1</sysDamage>
 	<sp>10</sp>
 	<cooldown>15</cooldown>
 	<power>3</power>
@@ -3232,7 +3252,7 @@ This core has no effect on beam weapons, as crossing the energies used in both i
 	<length>140</length>
 	<image>beam_contact</image>
 	<launchSounds>
-		<sound>beam2</sound>
+		<sound>beam_eldritch</sound>
 	</launchSounds>
 	<weaponArt>beam_imagine</weaponArt>
 	<iconImage>beam</iconImage>
@@ -3619,6 +3639,13 @@ This core has no effect on beam weapons, as crossing the energies used in both i
                 <crewTarget>ALL</crewTarget>
                 <priority>999999</priority>
             </statBoost>
+			<statBoost name="lowHealthThreshold">
+                <boostType>SET</boostType>
+                <amount>-1</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
 		</statBoosts>
 		<noSlot>true</noSlot>
 	</spawnCrew>
@@ -3654,6 +3681,13 @@ This core has no effect on beam weapons, as crossing the energies used in both i
 			<statBoost name="noClone">
                 <boostType>SET</boostType>
                 <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
+			<statBoost name="lowHealthThreshold">
+                <boostType>SET</boostType>
+                <amount>-1</amount>
                 <shipTarget>ALL</shipTarget>
                 <crewTarget>ALL</crewTarget>
                 <priority>999999</priority>
@@ -4192,7 +4226,8 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 	<cost>70</cost>
 	<rarity>0</rarity>
 	<powerList>
-		<power>90 HP; cannot fight or sabotage, and will run from fights when not controlled by the player</power>
+		<power>90 HP; cannot fight or sabotage</power>
+		<power>When not controlled by the player and targeted by an enemy, runs to a random room</power>
 		<power>Takes 2x damage from ship weapons and instant damage, moves at 0.7x speed</power>
 		<power>Repairs and sabotages systems at 1.5x speed, deals 3.0x damage to doors</power>
 		<power>Active Ability: Restrains foes in the room with silk, fifthing their movement speed and preventing them from sabotaging or breaking doors</power>
@@ -4275,12 +4310,27 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 	</mod:findLike>
 </mod:findName>
 
+<mod:findName type="weaponBlueprint" name="BEAM_MADNESS">
+	<mod-overwrite:launchSounds>
+		<sound>beam_eldritch</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="BEAM_MADNESS_ELITE">
+	<mod-overwrite:launchSounds>
+		<sound>beam_eldritch</sound>
+	</mod-overwrite:launchSounds>
+</mod:findName>
+
 <mod:findName type="weaponBlueprint" name="BEAM_MADNESS_VISION">
 	<mod-overwrite:color>
 		<r>255</r>
 		<g>255</g>
 		<b>255</b>
 	</mod-overwrite:color>
+	<mod-overwrite:launchSounds>
+		<sound>beam_eldritch</sound>
+	</mod-overwrite:launchSounds>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="TRC_EPISTLE">
@@ -4289,6 +4339,9 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 		<g>255</g>
 		<b>255</b>
 	</mod-overwrite:color>
+	<mod-overwrite:launchSounds>
+		<sound>beam_eldritch</sound>
+	</mod-overwrite:launchSounds>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="BOMB_STUN">
@@ -4396,12 +4449,21 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-overwrite:launchSounds>
+		<sound>launch_eldritch</sound>
+	</mod-overwrite:launchSounds>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS_ELITE">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-overwrite:launchSounds>
+		<sound>launch_eldritch</sound>
+	</mod-overwrite:launchSounds>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS_VISION">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
+	<mod-overwrite:launchSounds>
+		<sound>launch_eldritch</sound>
+	</mod-overwrite:launchSounds>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="SCANNER_BAIT">

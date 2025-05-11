@@ -11,6 +11,8 @@
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_REPAIR</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
@@ -80,6 +82,8 @@
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_REPAIR</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
@@ -335,6 +339,8 @@
 <!-- / STANDARD / -->
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_WEAPONS_LASERS">
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
@@ -439,6 +445,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ORCHID_ITEM_WEAPONS">
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
@@ -464,6 +471,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_REBEL_ITEM_WEAPONS_LASERS">
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
@@ -501,6 +509,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_DYNASTY_ITEM_WEAPONS_BREACH_AND_PIERCE">
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
         <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
 
@@ -579,6 +588,8 @@
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_LASERS_SPECIAL">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_CHARGE">
@@ -639,6 +650,8 @@
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_UNIQUE">
         <mod-append:name>AA_MVLOOT_STEALTH</mod-append:name>
         <mod-append:name>AA_MVLOOT_HACKER</mod-append:name>
+
+        <mod-append:name>AA_MVLOOT_PALADIN</mod-append:name>
     </mod:findName>
 
 <!-- / THE OBSERVERS' CATEGORIES / -->
@@ -647,6 +660,8 @@
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
@@ -724,6 +739,7 @@
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_MILITIA">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
@@ -733,6 +749,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_MILITIA_ELITE">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
@@ -789,6 +806,7 @@
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
 
         <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
@@ -834,6 +852,8 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ORCHID">
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
+
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
@@ -865,6 +885,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_SHELL">
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
@@ -899,6 +920,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_GHOST">
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
@@ -907,6 +929,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_DYNASTY">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
         <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
@@ -927,6 +950,8 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_SLUG">
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
@@ -938,6 +963,8 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_CLAN">
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
@@ -967,6 +994,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LANIUS">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
@@ -982,12 +1010,14 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL_SELITE">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
@@ -998,6 +1028,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LEGION">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
         <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
@@ -1011,6 +1042,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL_SELITEA">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
         <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
@@ -1049,6 +1081,7 @@
     <mod:findName type="blueprintList" name="LIST_WEAPONS_COALITION">
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
@@ -1137,6 +1170,7 @@
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
@@ -1162,6 +1196,7 @@
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
 
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
 
@@ -1176,6 +1211,7 @@
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
 
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
@@ -1234,6 +1270,8 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
@@ -1307,10 +1345,13 @@
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_HEAVY">
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_HEAVY_AND_HULL">
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_LASER_ATTRIBUTE">
@@ -1491,6 +1532,7 @@
 
     <mod:findName type="blueprintList" name="GIFTLIST_FREE">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
+        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_WEAPONS_ANCIENTS_USELESS">
@@ -1597,6 +1639,7 @@
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
         <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+        <mod-append:name>AA_LASER_BREACH</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_MINELAUNCHERS_TRAPPER">

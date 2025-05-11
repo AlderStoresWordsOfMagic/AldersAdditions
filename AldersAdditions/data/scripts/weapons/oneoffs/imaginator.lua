@@ -10,7 +10,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM, function(shipManage
         local blueprint = Hyperspace.Blueprints:GetWeaponBlueprint("AA_LIST_WEAPON_IMAGINATOR_BLASTS")
         local roomLoc = shipManager:GetRoomCenter(get_room_at_location(shipManager, location, true))
         local spaceManager = Hyperspace.App.world.space
-        if roomLoc then
+        if get_room_at_location(shipManager, location, true) ~= -1 then -- Fixes a bug where passing over empty rooms would make bombs appear in the top left
             spaceManager:CreateBomb(blueprint, projectile.ownerId, roomLoc, shipManager.iShipId)
         end
     end
