@@ -20,7 +20,7 @@
     <mod-append:script>data/scripts/weapons/oneoffs/pointer.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/oneoffs/shock_cannon.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/oneoffs/thermal.lua</mod-append:script>
-    <mod-append:script>data/scripts/weapons/oneoffs/woldo.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/oneoffs/cum_beam_stability.lua</mod-append:script>
 
     <mod-append:script>data/scripts/misc/resistant_rooms.lua</mod-append:script>
 
