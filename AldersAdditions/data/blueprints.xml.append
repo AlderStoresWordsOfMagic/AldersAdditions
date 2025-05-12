@@ -2385,13 +2385,13 @@
 <!-- // DRIVERS // -->
 
 <weaponBlueprint name="AA_DRIVER">
-	<type>BURST</type>
+	<type>LASER</type>
 	<title>Mass Driver</title>
 	<short>Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>An old-school kinetic weapon. Special electrical adapters allow it to gradually accumulate charge even when it is not directly powered, and its projectiles fly forward at blistering speeds.</desc>
 	<damage>4</damage>
-	<speed>200</speed>
+	<speed>150</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<breachChance>10</breachChance>
@@ -2399,12 +2399,7 @@
 	<power>2</power>
 	<cost>80</cost>
 	<rarity>5</rarity>
-	<radius>0</radius>
-	<spin>0</spin>
-	<drone_targetable>1</drone_targetable>
-	<projectiles>
-		<projectile count="1" fake="false">driver_projectile</projectile>
-	</projectiles>
+	<image>driver_projectile</image>
 	<explosion>explosion_big2</explosion>
 	<launchSounds>
 		<sound>driver</sound>
@@ -2425,7 +2420,7 @@
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_DRIVER_BIO">
-	<type>BURST</type>
+	<type>LASER</type>
 	<title>Irradiated Mass Driver</title>
 	<short>Rad Driver</short>
 	<tip>aa_tip_driver</tip>
@@ -2433,7 +2428,7 @@
 	<damage>2</damage>
 	<sysDamage>-2</sysDamage>
 	<persDamage>4</persDamage>
-	<speed>200</speed>
+	<speed>150</speed>
 	<sp>1</sp>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
@@ -2447,12 +2442,7 @@
 	<power>3</power>
 	<cost>90</cost>
 	<rarity>0</rarity>
-	<radius>0</radius>
-	<spin>0</spin>
-	<drone_targetable>1</drone_targetable>
-	<projectiles>
-		<projectile count="1" fake="false">driver_projectile_rad</projectile>
-	</projectiles>
+	<image>driver_projectile_rad</image>
 	<explosion>explosion_bio</explosion>
 	<launchSounds>
 		<sound>driver</sound>
@@ -2473,13 +2463,13 @@
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_DRIVER_EXPLOSIVE">
-	<type>BURST</type>
+	<type>LASER</type>
 	<title>Explosive Mass Driver</title>
 	<short>Explosive Driver</short>
 	<tip>aa_tip_driver</tip>
 	<description>This weapon fires fragmenting, explosive shots whose damage bleeds over into adjacent rooms.</description>
 	<damage>2</damage>
-	<speed>200</speed>
+	<speed>150</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<breachChance>10</breachChance>
@@ -2490,12 +2480,7 @@
 	<power>3</power>
 	<cost>90</cost>
 	<rarity>0</rarity>
-	<radius>0</radius>
-	<spin>0</spin>
-	<drone_targetable>1</drone_targetable>
-	<projectiles>
-		<projectile count="1" fake="false">driver_projectile_explosive</projectile>
-	</projectiles>
+	<image>driver_projectile_explosive</image>
 	<explosion>explosion_massive</explosion>
 	<launchSounds>
 		<sound>driver_heavy</sound>
@@ -2517,13 +2502,13 @@
 
 <weaponBlueprint name="AA_DRIVER_SHOTGUN">
 	<type>BURST</type>
-	<title>Flechette Mass Driver</title>
-	<short>Flechette Driver</short>
+	<title>Flak Mass Driver</title>
+	<short>Flak Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>This wide mass driver scatters a spray of sharp projectiles across the target zone, sacrificing hull damage in exchange for shredding targets at a low level.</desc>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
-	<speed>200</speed>
+	<speed>150</speed>
 	<shots>1</shots>
 	<breachChance>3</breachChance>
 	<cooldown>27</cooldown>
@@ -2534,10 +2519,10 @@
 	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="8" fake="false">driver_projectile_flechette</projectile>
+		<projectile count="8" fake="false">driver_projectile_flak</projectile>
 	</projectiles>
 	<launchSounds>
-		<sound>driver</sound>
+		<sound>driver_heavy</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>explosion3</sound>
@@ -2550,18 +2535,18 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver_flechette</weaponArt>
+	<weaponArt>driver_flak</weaponArt>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_DRIVER_ION">
-	<type>BURST</type>
+	<type>LASER</type>
 	<title>Electrified Mass Driver</title>
 	<short>Ion Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>This mass driver contains shells filled with hot plasma, which annihilate shields and cripple systems with ease.</desc>
 	<ion>5</ion>
-	<speed>200</speed>
+	<speed>150</speed>
 	<shots>1</shots>
 	<stunChance>10</stunChance>
 	<stun>5</stun>
@@ -2570,12 +2555,7 @@
 	<power>3</power>
 	<cost>100</cost>
 	<rarity>0</rarity>
-	<radius>0</radius>
-	<spin>0</spin>
-	<drone_targetable>1</drone_targetable>
-	<projectiles>
-		<projectile count="1" fake="false">driver_projectile_ion</projectile>
-	</projectiles>
+	<image>driver_projectile_ion</image>
 	<explosion>explosion_massive_ion</explosion>
 	<launchSounds>
 		<sound>driver</sound>
@@ -2598,13 +2578,13 @@
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_DRIVER_PARTICLE">
-	<type>BURST</type>
+	<type>LASER</type>
 	<title>Accelerated Mass Driver</title>
 	<short>Part. Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>Elementary particles stream through the shells shot from this cannon, making short work of ship systems.</desc>
 	<sysDamage>6</sysDamage>
-	<speed>200</speed>
+	<speed>150</speed>
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<fireChance>10</fireChance>
@@ -2612,12 +2592,7 @@
 	<power>3</power>
 	<cost>100</cost>
 	<rarity>0</rarity>
-	<radius>0</radius>
-	<spin>0</spin>
-	<drone_targetable>1</drone_targetable>
-	<projectiles>
-		<projectile count="1" fake="false">driver_projectile_particle</projectile>
-	</projectiles>
+	<image>driver_projectile_particle</image>
 	<explosion>explosion_particle</explosion>
 	<launchSounds>
 		<sound>driver_heavy</sound>
@@ -4107,6 +4082,103 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 	<weaponBlueprint>AA_MVLOOT_PALADIN_CHAOS_PROJECTILE</weaponBlueprint>
 	<rarity>0</rarity>
 	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<blueprintList name="AA_LIST_MVLOOT_LIMIT">
+	<name>AA_MVLOOT_LIMIT_DEFENSE</name>
+	<name>AA_MVLOOT_LIMIT_SHIELD</name>
+</blueprintList>
+<droneBlueprint name="AA_MVLOOT_LIMIT_DEFENSE">
+	<type>DEFENSE</type>
+	<level>1</level>
+	<tip>tip_drone_conservative</tip>
+	<title>Optimized Aegis</title>
+	<short>Aegis [D]</short>
+	<desc>[CURRENT MODE: Defense] Highly optimized protective drone that can toggle between applying energy shields or using a missile cannon to shoot down incoming missiles. Requires no power.
+	Reload: 300 MS</desc>
+	<power>0</power>
+	<cooldown>300</cooldown>
+	<dodge>0</dodge>
+	<speed>5</speed>
+	<cost>90</cost>
+	<bp>2</bp>
+	<droneImage>aa_drone_loot_mvboss_limit_d</droneImage>
+	<weaponBlueprint>DRONE_MISSILE_DEFENSE</weaponBlueprint>
+	<iconImage>defense</iconImage>
+	<rarity>0</rarity>
+</droneBlueprint>
+<droneBlueprint name="AA_MVLOOT_LIMIT_SHIELD">
+	<type>SHIELD</type>
+	<level>1</level>
+	<tip>tip_drone_conservative</tip>
+	<title>Optimized Aegis</title>
+	<short>Aegis [S]</short>
+	<desc>[CURRENT MODE: Defense] Highly optimized protective drone that can toggle between applying energy shields or using a missile cannon to shoot down missiles and drones. Requires no power.
+	Charges faster and does not slow down with additional layers.</desc>
+	<power>0</power>
+	<cooldown>12000</cooldown>
+	<dodge>0</dodge>
+	<speed>5</speed>
+	<cost>90</cost>
+	<slowDuration>0.5</slowDuration>
+	<pulseDuration>1.5</pulseDuration>
+	<layers>1</layers>
+	<cooldowns>
+		<allLayers>8.0</allLayers>
+	</cooldowns>
+	<bp>2</bp>
+	<droneImage>aa_drone_loot_mvboss_limit_s</droneImage>
+	<iconImage>shield</iconImage>
+	<rarity>0</rarity>
+</droneBlueprint>
+<blueprintList name="AA_LIST_MVLOOT_LIMIT_CHAOS">
+	<name>AA_MVLOOT_LIMIT_CHAOS_DEFENSE</name>
+	<name>AA_MVLOOT_LIMIT_CHAOS_SHIELD</name>
+</blueprintList>
+<droneBlueprint name="AA_MVLOOT_LIMIT_CHAOS_DEFENSE">
+	<type>DEFENSE</type>
+	<level>1</level>
+	<tip>tip_drone_conservative</tip>
+	<title>Chaotic Optimized Aegis</title>
+	<short>Aegis [D]™</short>
+	<desc>[CURRENT MODE: Defense] Highly optimized protective drone that can toggle between applying energy shields or using a missile cannon to shoot down missiles and drones. Requires no power.
+	Chaotic version has an extremely short reload time and travels faster, but targets only drones.
+	Reload: 25 MS</desc>
+	<power>0</power>
+	<cooldown>25</cooldown>
+	<dodge>0</dodge>
+	<speed>13</speed>
+	<cost>90</cost>
+	<bp>2</bp>
+	<droneImage>aa_drone_loot_mvboss_limit_chaos_d</droneImage>
+	<weaponBlueprint>DRONE_MISSILE_DEFENSE</weaponBlueprint>
+	<iconImage>defense</iconImage>
+	<rarity>0</rarity>
+</droneBlueprint>
+<droneBlueprint name="AA_MVLOOT_LIMIT_CHAOS_SHIELD">
+	<type>SHIELD</type>
+	<level>1</level>
+	<tip>tip_drone_conservative</tip>
+	<title>Chaotic Optimized Aegis</title>
+	<short>Aegis [S]™</short>
+	<desc>[CURRENT MODE: Defense] Highly optimized protective drone that can toggle between applying energy shields or using a missile cannon to shoot down missiles and drones. Requires no power.
+	Charges faster and does not slow down with additional layers.
+	Chaotic version recharges 5 layers and travels much faster but has a much slower cooldown.</desc>
+	<power>0</power>
+	<cooldown>12000</cooldown>
+	<dodge>0</dodge>
+	<speed>13</speed>
+	<cost>90</cost>
+	<slowDuration>0.5</slowDuration>
+	<pulseDuration>1.5</pulseDuration>
+	<layers>5</layers>
+	<cooldowns>
+		<allLayers>25.0</allLayers>
+	</cooldowns>
+	<bp>2</bp>
+	<droneImage>aa_drone_loot_mvboss_limit_chaos_s</droneImage>
+	<iconImage>shield</iconImage>
+	<rarity>0</rarity>
 </droneBlueprint>
 
 

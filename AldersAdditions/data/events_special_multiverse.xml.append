@@ -405,7 +405,7 @@
 </event>
 <eventList name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP_CHANCE">
 	<event>
-		<text id="renegade_drop_fail"/>
+		<text id="renegade_drone_fail"/>
 		<autoReward level="LOW">stuff</autoReward>
 	</event>
 	<event><loadEvent>AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP</loadEvent></event>
@@ -420,12 +420,12 @@
 	</choice>
 </event>
 <event name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP">
-	<text id="renegade_drop_yes"/>
+	<text id="renegade_drop_drone"/>
 	<autoReward level="LOW">stuff</autoReward>
 	<drone name="AA_MVLOOT_PALADIN"/>
 </event>
 <event name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP_CHAOS">
-	<text id="renegade_drop_yes"/>
+	<text id="renegade_drop_drone"/>
 	<autoReward level="LOW">stuff</autoReward>
 	<drone name="AA_MVLOOT_PALADIN_CHAOS"/>
 </event>
@@ -615,6 +615,250 @@
 	<text id="renegade_drop_yes"/>
 	<autoReward level="LOW">stuff</autoReward>
 	<weapon name="AA_MVLOOT_HACKER_CHAOS"/>
+</event>
+
+<!-- Limit IV -->
+<ship name="AA_MVBOSS_LIMIT_CRUISER_NORMAL" auto_blueprint="AA_MVBOSS_LIMIT_CRUISER_NORMAL">
+    <destroyed load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_LIMIT_CRUISER_CHALLENGE" auto_blueprint="AA_MVBOSS_LIMIT_CRUISER_CHALLENGE">
+    <destroyed load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_LIMIT_CRUISER_EXTREME" auto_blueprint="AA_MVBOSS_LIMIT_CRUISER_EXTREME">
+    <destroyed load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DEADCREW"/>
+</ship>
+<ship name="AA_MVBOSS_LIMIT_CRUISER_CHAOS" auto_blueprint="AA_MVBOSS_LIMIT_CRUISER_CHAOS">
+    <destroyed load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DESTROYED"/>
+    <deadCrew load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DEADCREW"/>
+</ship>
+<event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_NORMAL">
+	<text>From out of the tunnel comes a massive cruiser vessel, of a... very unoptimized... design. At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_LIMIT_CRUISER_NORMAL" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>"God damn it, god damn it, get out of our way! We're on the best run of our lives!" The captain, an aging man with a chest full of medals, veers the vessel around like a wild animal as its engines sputter. Though it may be poorly designed, the hostile vessel's systems have been pushed to their absolute limits!</text>
+			<ship hostile="true"/> 
+			<choice hidden="true" req="cloaking" lvl="1">
+				<text>Continue...</text>
+				<event>
+					<text>A set of tracking flares explodes outwards from hatches on the sorry vessel's side. They shine lights onto your ship, disrupting your ability to cloak!</text>
+					<status type="limit" target="player" system="cloaking" amount="0"/>
+					<triggeredEvent event="AA_EVENT_MVBOSS_LIMIT_CRUISER_FLARES_END" time="30" thisFight="true">
+						<triggeredEventBox load="DEFAULT_TIMER" pos="default">
+							<warning time="5" flash="true"/>
+							<tooltip>The enemy's cloaking jammer will expire in this amount of time.</tooltip>
+						</triggeredEventBox>
+						<timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+					</triggeredEvent>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="cloaking" max_lvl="0" lvl="0">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-35" max="-35"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_CHALLENGE">
+	<beaconType id="map_icon_quest" global="true">
+		<color r="25" g="205" b="150" a="1.0"/>
+		<unvisitedTooltip>This is the location of abnormal energy signatures. [???]</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+	</beaconType>
+	<text>From out of the tunnel comes a massive cruiser vessel, of a... very unoptimized... design. At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_LIMIT_CRUISER_CHALLENGE" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>"God damn it, god damn it, get out of our way! We're on the best run of our lives!" The captain, an aging man with a chest full of medals, veers the vessel around like a wild animal as its engines sputter. Though it may be poorly designed, the hostile vessel's systems have been pushed to their absolute limits!</text>
+			<ship hostile="true"/> 
+			<choice hidden="true" req="cloaking" lvl="1" blue="false">
+				<text>Continue...</text>
+				<event>
+					<text>A set of tracking flares explodes outwards from hatches on the sorry vessel's side. They shine lights onto your ship, disrupting your ability to cloak!</text>
+					<status type="limit" target="player" system="cloaking" amount="0"/>
+					<triggeredEvent event="AA_EVENT_MVBOSS_LIMIT_CRUISER_FLARES_END" time="30" thisFight="true">
+						<triggeredEventBox load="DEFAULT_TIMER" pos="default">
+							<warning time="5" flash="true"/>
+							<tooltip>The enemy's cloaking jammer will expire in this amount of time.</tooltip>
+						</triggeredEventBox>
+						<timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+					</triggeredEvent>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="cloaking" lvl="0" max_lvl="0" blue="false">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text id="renegade_tribute_scrap"/>
+		<event>
+			<text id="renegade_tributed"/>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_EXTREME">
+	<text>From out of the tunnel comes a massive cruiser vessel, of a... very unoptimized... design. At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_LIMIT_CRUISER_EXTREME" hostile="false"/> 
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>"God damn it, god damn it, get out of our way! We're on the best run of our lives!" The captain, an aging man with a chest full of medals, veers the vessel around like a wild animal as its engines sputter. Though it may be poorly designed, the hostile vessel's systems have been pushed to their absolute limits!</text>
+			<ship hostile="true"/> 
+			<choice hidden="true" req="cloaking" lvl="1">
+				<text>Continue...</text>
+				<event>
+					<text>A set of tracking flares explodes outwards from hatches on the sorry vessel's side. They shine lights onto your ship, disrupting your ability to cloak!</text>
+					<status type="limit" target="player" system="cloaking" amount="0"/>
+					<triggeredEvent event="AA_EVENT_MVBOSS_LIMIT_CRUISER_FLARES_END" time="30" thisFight="true">
+						<triggeredEventBox load="DEFAULT_TIMER" pos="default">
+							<warning time="5" flash="true"/>
+							<tooltip>The enemy's cloaking jammer will expire in this amount of time.</tooltip>
+						</triggeredEventBox>
+						<timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+					</triggeredEvent>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="cloaking" max_lvl="0" lvl="0">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="loc_sector_count" lvl="5">
+		<text id="renegade_tribute_scrap_impossible"/>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+<event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_CHAOS">
+	<text>From out of the tunnel comes a massive cruiser vessel, of a... very unoptimized... design. At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<playSound>mysteriousBeacon</playSound>
+	<ship load="AA_MVBOSS_LIMIT_CRUISER_CHAOS" hostile="false"/> 
+	<eventAlias jumpClear="false" name="AA_SHIP_MVBOSS_LIMIT_CRUISER_DROP">AA_SHIP_MVBOSS_LIMIT_CRUISER_DROP_CHAOS</eventAlias>
+	<choice hidden="true" max_group="0">
+		<text>Continue...</text>
+		<event>
+			<text>"God damn it, god damn it, get out of our way! We're on the best run of our lives!" The captain, an aging man with a chest full of medals, veers the vessel around like a wild animal as its engines sputter. Though it may be poorly designed, the hostile vessel's systems have been pushed to their absolute limits!</text>
+			<ship hostile="true"/> 
+			<choice hidden="true" req="cloaking" lvl="1" blue="false">
+				<text>Continue...</text>
+				<event>
+					<text>A set of tracking flares explodes outwards from hatches on the sorry vessel's side. They shine lights onto your ship, disrupting your ability to cloak!</text>
+					<status type="limit" target="player" system="cloaking" amount="0"/>
+					<triggeredEvent event="AA_EVENT_MVBOSS_LIMIT_CRUISER_FLARES_END" time="30" thisFight="true">
+						<triggeredEventBox load="DEFAULT_TIMER" pos="default">
+							<warning time="5" flash="true"/>
+							<tooltip>The enemy's cloaking jammer will expire in this amount of time.</tooltip>
+						</triggeredEventBox>
+						<timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+					</triggeredEvent>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="cloaking" lvl="0" max_lvl="0" blue="false">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="BRIBE_CHAOS" lvl="0" max_lvl="0">
+		<text>*%$##@*%!</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice hidden="true" req="JUDGE_BOON_RENEGADE">
+		<text>Use your blessing to avoid combat.</text>
+		<event load="MV_TRAVELER_BOON"/>
+	</choice>
+</event>
+
+</event>
+<event name="AA_SHIP_MVBOSS_LIMIT_CRUISER_DESTROYED">
+	<text id="renegade_destroyed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_SHIP_MVBOSS_LIMIT_CRUISER_DROP_CHANCE"/>
+	</choice>
+</event>
+<eventList name="AA_SHIP_MVBOSS_LIMIT_CRUISER_DROP_CHANCE">
+	<event>
+		<text id="renegade_drone_fail"/>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event><loadEvent>AA_SHIP_MVBOSS_LIMIT_CRUISER_DROP</loadEvent></event>
+</eventList>
+<event name="AA_SHIP_MVBOSS_LIMIT_CRUISER_DEADCREW">
+	<text id="renegade_killed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event><loadEvent>AA_SHIP_MVBOSS_LIMIT_CRUISER_DROP</loadEvent></event>
+	</choice>
+</event>
+<event name="AA_SHIP_MVBOSS_LIMIT_CRUISER_DROP">
+	<text id="renegade_drop_drone"/>
+	<autoReward level="LOW">stuff</autoReward>
+	<drone name="AA_MVLOOT_LIMIT_DEFENSE"/>
+</event>
+<event name="AA_SHIP_MVBOSS_LIMIT_CRUISER_DROP_CHAOS">
+	<text id="renegade_drop_drone"/>
+	<autoReward level="LOW">stuff</autoReward>
+	<drone name="AA_MVLOOT_LIMIT_CHAOS_DEFENSE"/>
+</event>
+
+<event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_FLARES_END">
+	<text>The flares fade into the background of space. Your systems have returned to normal.</text>
+	<status type="clear" target="player" system="cloaking" amount="100"/>
 </event>
 
 

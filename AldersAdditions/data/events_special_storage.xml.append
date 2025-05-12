@@ -214,6 +214,129 @@
 	</choice>
 </event>
 
+<!-- // LIMIT LOOT // -->
+ <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+	<mod-append:choice req="AA_MVLOOT_LIMIT_DEFENSE" blue="false">
+		 <text>(Optimized Aegis) Set the state of the drone. [Current mode: Defense]</text> 
+		 <event load="AA_COMBAT_CHECK_TOG_MVLOOT_LIMIT_DEFENSE"/>
+	</mod-append:choice>
+	<mod-append:choice req="AA_MVLOOT_LIMIT_SHIELD" blue="false">
+		 <text>(Optimized Aegis) Set the state of the drone. [Current mode: Shield]</text> 
+		 <event load="AA_COMBAT_CHECK_TOG_MVLOOT_LIMIT_SHIELD"/>
+	</mod-append:choice>
+</mod:findName>
+<event name="AA_COMBAT_CHECK_TOG_MVLOOT_LIMIT_DEFENSE">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Shield Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_MVLOOT_LIMIT_DEFENSE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_MVLOOT_LIMIT_SHIELD"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+<event name="AA_COMBAT_CHECK_TOG_MVLOOT_LIMIT_SHIELD">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Defense Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_MVLOOT_LIMIT_SHIELD"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_MVLOOT_LIMIT_DEFENSE"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+
+ <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+	<mod-append:choice req="AA_MVLOOT_LIMIT_CHAOS_DEFENSE" blue="false">
+		 <text>(Chaotic Optimized Aegis) Set the state of the drone. [Current mode: Defense]</text> 
+		 <event load="AA_COMBAT_CHECK_TOG_MVLOOT_LIMIT_CHAOS_DEFENSE"/>
+	</mod-append:choice>
+	<mod-append:choice req="AA_MVLOOT_LIMIT_CHAOS_SHIELD" blue="false">
+		 <text>(Chaotic Optimized Aegis) Set the state of the drone. [Current mode: Shield]</text> 
+		 <event load="AA_COMBAT_CHECK_TOG_MVLOOT_LIMIT_CHAOS_SHIELD"/>
+	</mod-append:choice>
+</mod:findName>
+<event name="AA_COMBAT_CHECK_TOG_MVLOOT_LIMIT_CHAOS_DEFENSE">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Shield Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_MVLOOT_LIMIT_CHAOS_DEFENSE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_MVLOOT_LIMIT_CHAOS_SHIELD"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+<event name="AA_COMBAT_CHECK_TOG_MVLOOT_LIMIT_CHAOS_SHIELD">
+	<text>Are you sure you want to change the drone's settings?</text>
+	<choice hidden="true">
+		<text>Set the drone to Defense Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="AA_MVLOOT_LIMIT_CHAOS_SHIELD"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AA_MVLOOT_LIMIT_CHAOS_DEFENSE"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+	</choice>
+</event>
+
 
 <!-- /// STORAGE CHECK APPENDS /// -->
 

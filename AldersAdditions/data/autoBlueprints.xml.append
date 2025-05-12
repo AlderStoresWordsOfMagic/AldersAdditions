@@ -1909,22 +1909,22 @@
 		<oxygen power="3" max="3" room="13" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="4" max="8" room="10" start="true" />
-		<weapons power="8" max="8" room="8" start="true" />
+		<weapons power="9" max="9" room="8" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="0" count="4">
-        <weapon name="AA_MVLOOT_STEALTH" />
-        <weapon name="AA_BEAM_ION_BIO" />
+		<weapon name="AA_BEAM_ION_BIO" />
 		<weapon name="AA_ENERGY_BIO" />
-		<weapon name="AA_ENERGY_BIO" />
+		<weapon name="AA_MVLOOT_STEALTH" />
+		<weapon name="AA_MVLOOT_STEALTH" />
 	</weaponList>
 	<droneList drones="10" count="2">
 		<drone name="ION_1_AMP2_ENEMY" />
 		<drone name="ION_1_AMP3_ENEMY" />
 	</droneList>
 	<health amount="20" />
-	<maxPower amount="32" />
+	<maxPower amount="37" />
 	<boardingAI>sabotage</boardingAI>
 	<aug name="UPG_CLOAK_FIRE" />
     <aug name="SYSTEM_CASING_NEW"/>
@@ -2038,7 +2038,7 @@
 	<maxSector>8</maxSector>
 	<systemList>
 		<doors power="2" max="2" room="20" start="true" />
-		<drones power="10" max="10" room="10" start="true" />
+		<drones power="13" max="13" room="10" start="true" />
 		<engines power="2" max="2" room="18" start="true" />
 		<hacking power="3" max="3" room="14" start="true" />
 		<medbay power="3" max="3" room="9" start="true" />
@@ -2054,14 +2054,15 @@
 		<weapon name="AA_MISSILES_ION_ENEMY" />
 		<weapon name="AA_MISSILES_ION_ENEMY" />
 	</weaponList>
-	<droneList drones="20" count="4">
-		<drone name="COMBAT_2_BEAM" />
+	<droneList drones="20" count="5">
+		<drone name="COMBAT_2_LASER" />
 		<drone name="HELLRAISER_FIRE" />
 		<drone name="FOCUS_1_AMP3" />
-        <drone name="PEST_RAD" />
+        <drone name="AA_ELEMENTARY_SMASH" />
+        <drone name="AA_ELEMENTARY_INDUCER" />
 	</droneList>
 	<health amount="20" />
-	<maxPower amount="36" />
+	<maxPower amount="39" />
 	<boardingAI>sabotage</boardingAI>
 	<aug name="ROCK_ARMOR" />
     <aug name="EX_EXPLOSIVE_REPLICATOR" />
@@ -2181,7 +2182,7 @@
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="7" count="4">
 		<weapon name="AA_MVLOOT_HACKER" />
-		<weapon name="AA_SHOTGUN_PARTICLE" />
+		<weapon name="AA_MVLOOT_HACKER" />
 		<weapon name="AA_INDUCER" />
 		<weapon name="AA_INDUCER" />
 	</weaponList>
@@ -2189,6 +2190,151 @@
 	<maxPower amount="33" />
 	<boardingAI>invasion</boardingAI>
 	<aug name="UPG_HACK_STUN" />
+    <aug name="LAB_SLUG_BUFF" />
+</shipBlueprint>
+
+<shipBlueprint name="AA_MVBOSS_LIMIT_CRUISER_NORMAL" layout="aa_mvboss_limit_cruiser" img="aa_mvboss_limit_cruiser">
+	<class>Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<battery power="2" max="2" room="18" start="true" />
+		<cloaking power="2" max="2" room="19" start="true" />
+		<clonebay power="1" max="1" room="3" start="true" />
+		<doors power="2" max="2" room="15" start="true" />
+		<drones power="6" max="6" room="13" start="true" />
+		<engines power="5" max="5" room="0" start="true" />
+		<hacking power="1" max="1" room="20" start="true" />
+		<pilot power="2" max="2" room="9" start="true" />
+		<shields power="5" max="5" room="14" start="true" />
+		<weapons power="4" max="4" room="1" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="25" count="2">
+		<weapon name="KERNEL_FIRE_ENEMY" />
+		<weapon name="ANCIENT_BOMB_ENEMY" />
+	</weaponList>
+	<droneList drones="25" count="4">
+		<drone name="MENDER" />
+		<drone name="BATTLETOG2_BOARDER" />
+		<drone name="PEST_RAD_ENEMY" />
+		<drone name="COMBAT_CONSERVATIVE_BEAM" />
+	</droneList>
+	<health amount="10" />
+	<maxPower amount="25" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="SYSTEM_CASING_NEW" />
+	<aug name="ENERGY_SHIELD" />
+	<aug name="COMBAT_CLOAKING_JAMMER" />
+</shipBlueprint>
+<shipBlueprint name="AA_MVBOSS_LIMIT_CRUISER_CHALLENGE" layout="aa_mvboss_limit_cruiser" img="aa_mvboss_limit_cruiser">
+	<class>Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<battery power="3" max="3" room="18" start="true" />
+		<cloaking power="3" max="3" room="19" start="true" />
+		<clonebay power="1" max="1" room="3" start="true" />
+		<doors power="3" max="3" room="15" start="true" />
+		<drones power="6" max="6" room="13" start="true" />
+		<engines power="5" max="5" room="0" start="true" />
+		<hacking power="1" max="1" room="20" start="true" />
+		<mind power="1" max="1" room="16" start="true" />
+		<pilot power="3" max="3" room="9" start="true" />
+		<shields power="5" max="5" room="14" start="true" />
+		<weapons power="4" max="4" room="1" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="25" count="2">
+		<weapon name="KERNEL_FIRE_ENEMY" />
+		<weapon name="ANCIENT_BOMB_ENEMY" />
+	</weaponList>
+	<droneList drones="25" count="4">
+		<drone name="MENDER" />
+		<drone name="BATTLETOG2_BOARDER" />
+		<drone name="PEST_RAD_ENEMY" />
+		<drone name="COMBAT_CONSERVATIVE_LASER" />
+	</droneList>
+	<health amount="10" />
+	<maxPower amount="25" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="SYSTEM_CASING_NEW" />
+	<aug name="ANCIENT_SHIELD" />
+	<aug name="COMBAT_CLOAKING_JAMMER" />
+</shipBlueprint>
+<shipBlueprint name="AA_MVBOSS_LIMIT_CRUISER_EXTREME" layout="aa_mvboss_limit_cruiser" img="aa_mvboss_limit_cruiser">
+	<class>Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<battery power="3" max="3" room="18" start="true" />
+		<cloaking power="3" max="3" room="19" start="true" />
+		<clonebay power="1" max="1" room="3" start="true" />
+		<doors power="3" max="3" room="15" start="true" />
+		<drones power="6" max="6" room="13" start="true" />
+		<engines power="5" max="5" room="0" start="true" />
+		<hacking power="1" max="1" room="20" start="true" />
+		<mind power="1" max="1" room="16" start="true" />
+		<pilot power="3" max="3" room="9" start="true" />
+		<shields power="5" max="5" room="14" start="true" />
+		<weapons power="4" max="4" room="1" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="25" count="2">
+		<weapon name="KERNEL_FIRE_ELITE_ENEMY" />
+		<weapon name="ANCIENT_BOMB_ENEMY" />
+	</weaponList>
+	<droneList drones="25" count="4">
+		<drone name="MENDER" />
+		<drone name="BATTLETOG2_BOARDER" />
+		<drone name="PEST_RAD_ENEMY" />
+		<drone name="COMBAT_CONSERVATIVE_LASER" />
+	</droneList>
+	<health amount="10" />
+	<maxPower amount="25" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="SYSTEM_CASING_NEW" />
+	<aug name="ANCIENT_SHIELD" />
+	<aug name="COMBAT_CLOAKING_JAMMER" />
+</shipBlueprint>
+<shipBlueprint name="AA_MVBOSS_LIMIT_CRUISER_CHAOS" layout="aa_mvboss_limit_cruiser" img="aa_mvboss_limit_cruiser">
+	<class>Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<battery power="3" max="3" room="18" start="true" />
+		<cloaking power="3" max="3" room="19" start="true" />
+		<clonebay power="1" max="1" room="3" start="true" />
+		<doors power="3" max="3" room="15" start="true" />
+		<drones power="6" max="6" room="13" start="true" />
+		<engines power="5" max="5" room="0" start="true" />
+		<hacking power="1" max="1" room="20" start="true" />
+		<mind power="1" max="1" room="16" start="true" />
+		<pilot power="3" max="3" room="9" start="true" />
+		<shields power="5" max="5" room="14" start="true" />
+		<weapons power="4" max="4" room="1" start="true" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="25" count="2">
+		<weapon name="KERNEL_FIRE_ELITE_ENEMY" />
+		<weapon name="ANCIENT_BOMB_ENEMY" />
+	</weaponList>
+	<droneList drones="25" count="4">
+		<drone name="MENDER" />
+		<drone name="BATTLETOG2_BOARDER" />
+		<drone name="PEST_RAD_ENEMY" />
+		<drone name="DIVREPAIR" />
+	</droneList>
+	<health amount="10" />
+	<maxPower amount="25" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="SYSTEM_CASING_NEW" />
+	<aug name="SYLVAN_SHIELD_REWARD" />
+	<aug name="COMBAT_CLOAKING_JAMMER" />
 </shipBlueprint>
 
 

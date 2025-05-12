@@ -32,9 +32,8 @@
 
 <!-- // BALLISTICS // -->
 
-<driver volume="2">weapons/ballistics/driver.ogg</driver>
-<driver_heavy volume="2">weapons/ballistics/driver_heavy.ogg</driver_heavy>
-<driver_flechette volume="2">weapons/ballistics/driver_flechette.ogg</driver_flechette>
+<driver volume="3">weapons/ballistics/driver.ogg</driver>
+<driver_heavy volume="3">weapons/ballistics/driver_heavy.ogg</driver_heavy>
 
 <railgun volume="3">weapons/ballistics/railgun.ogg</railgun>
 

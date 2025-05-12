@@ -20,6 +20,7 @@
     <mod-append:script>data/scripts/weapons/oneoffs/pointer.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/oneoffs/shock_cannon.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/oneoffs/thermal.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/oneoffs/woldo.lua</mod-append:script>
 
     <mod-append:script>data/scripts/misc/resistant_rooms.lua</mod-append:script>
 
@@ -72,6 +73,11 @@
     <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_EXTREME</mod-append:bossShip>
     <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_CHAOS</mod-append:bossShip>
 
+    <mod-append:bossShip>AA_MVBOSS_LIMIT_CRUISER_NORMAL</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_LIMIT_CRUISER_CHALLENGE</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_LIMIT_CRUISER_EXTREME</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_LIMIT_CRUISER_CHAOS</mod-append:bossShip>
+
 </mod:findLike>
 
 
@@ -119,7 +125,13 @@ This enemy has one or more encased rooms, marked by the orange border and orange
         <!-- / GENERAL AUGMENTS / -->
 
         <mod-append:shipIcon>
-	        <name>aa_icon_particle_shield</name>
+            <name>aa_icon_aug_tracking_flares</name>
+            <tooltip>TRACKING FLARES:
+This enemy launches tracking flares at the start of combat, disabling your Cloaking system if you have it for 30 seconds.</tooltip>
+        </mod-append:shipIcon>
+
+        <mod-append:shipIcon>
+	        <name>aa_icon_aug_particle_shield</name>
             <tooltip>PARTICLE SHIELD:
 This enemy is protected by a weak energy shield that regenerates on its own. Order your volleys carefully to break through.</tooltip>
 	    </mod-append:shipIcon>
@@ -127,9 +139,9 @@ This enemy is protected by a weak energy shield that regenerates on its own. Ord
         <!-- / FACTION AUGMENTS / -->
 
         <mod-append:shipIcon>
-            <name>aa_icon_silk_armor</name>
+            <name>aa_icon_aug_silk_armor</name>
             <tooltip>SILKSTEEL HULL:
-Special, malleable composite hull plating that increases repair speed by 1.2x on board. If a system is fully repaired, the ship gains a temporary hull point.</tooltip>
+Special, malleable composite hull plating that increases repair speed by 1.2x on board.</tooltip>
         </mod-append:shipIcon>
 
         <!-- / CREW LABS / -->
@@ -469,14 +481,17 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep_chaos</shipIcon>
             <shipIcon>aa_icon_resist_hack</shipIcon>
+            <shipIcon>aa_icon_lab_slug_boost</shipIcon>
         </shipIcons>
 		<crew>
 			<human_technician room="1"/>
             <slug room="13"/>
             <slug room="16"/>
             <human_soldier room="14"/>
-            <human room="15"/>
-            <human room="17"/>
+            <slug_saboteur room="15"/>
+            <human_medic room="17"/>
+            <siren room="5"/>
+            <siren room="11"/>
 		</crew>
         <rooms>
             <room id="11"> <!-- Temporal -->
@@ -488,6 +503,84 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
                 <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
             </room>
         </rooms>
+        <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+
+    <mod-append:customShip name="AA_MVBOSS_LIMIT_CRUISER_NORMAL">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_no2</shipIcon>
+            <shipIcon>aa_icon_aug_tracking_flares</shipIcon>
+        </shipIcons>
+        <hiddenAug>UPG_TECH_BYPASS</hiddenAug>
+        <hiddenAug>UPG_TECH_SCRAMBLER_ENEMY</hiddenAug>
+        <hiddenAug>UPG_TECH_RESPIRATOR</hiddenAug>
+        <hiddenAug>UPG_DRONE_SPEED</hiddenAug>
+        <hiddenAug>UPG_SHIELDS_PERFORMANCE</hiddenAug>
+		<crew>
+			<cognitive room="9"/>
+            <zoltan_peacekeeper room="0"/>
+            <orchid_caretaker room="0"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_LIMIT_CRUISER_CHALLENGE">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_no2</shipIcon>
+            <shipIcon>aa_icon_aug_tracking_flares</shipIcon>
+        </shipIcons>
+        <hiddenAug>UPG_TECH_BYPASS</hiddenAug>
+        <hiddenAug>UPG_TECH_SCRAMBLER_ENEMY</hiddenAug>
+        <hiddenAug>UPG_TECH_RESPIRATOR</hiddenAug>
+        <hiddenAug>UPG_DRONE_SPEED</hiddenAug>
+        <hiddenAug>UPG_SHIELDS_PERFORMANCE</hiddenAug>
+		<crew>
+			<cognitive_advanced room="9"/>
+            <zoltan_peacekeeper room="0"/>
+            <orchid_caretaker room="0"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_LIMIT_CRUISER_EXTREME">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_no2</shipIcon>
+            <shipIcon>aa_icon_aug_tracking_flares</shipIcon>
+        </shipIcons>
+        <hiddenAug>UPG_TECH_BYPASS</hiddenAug>
+        <hiddenAug>UPG_TECH_SCRAMBLER_ENEMY</hiddenAug>
+        <hiddenAug>UPG_TECH_RESPIRATOR</hiddenAug>
+        <hiddenAug>UPG_DRONE_SPEED</hiddenAug>
+        <hiddenAug>UPG_SHIELDS_PERFORMANCE</hiddenAug>
+		<crew>
+			<cognitive_advanced room="9"/>
+            <zoltan_peacekeeper room="0"/>
+            <orchid_caretaker room="0"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+    </mod-append:customShip>
+        <mod-append:customShip name="AA_MVBOSS_LIMIT_CRUISER_CHAOS">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_no2</shipIcon>
+            <shipIcon>aa_icon_aug_tracking_flares</shipIcon>
+        </shipIcons>
+        <hiddenAug>UPG_TECH_BYPASS</hiddenAug>
+        <hiddenAug>UPG_TECH_SCRAMBLER_ENEMY</hiddenAug>
+        <hiddenAug>UPG_TECH_RESPIRATOR</hiddenAug>
+        <hiddenAug>UPG_DRONE_SPEED</hiddenAug>
+        <hiddenAug>UPG_SHIELDS_PERFORMANCE</hiddenAug>
+        <hiddenAug>UPG_WEAPONS_PERFORMANCE</hiddenAug>
+		<crew>
+			<cognitive_advanced room="9"/>
+            <zoltan_peacekeeper room="0"/>
+            <orchid_caretaker room="0"/>
+		</crew>
         <autoShipForce>false</autoShipForce>
     </mod-append:customShip>
 

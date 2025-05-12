@@ -81,6 +81,28 @@
             </choice>
         </event>
     </choice>
+        <choice hidden="true">
+        <text>Renegade Cruiser [Limit].</text>
+        <event>
+            <text>Which difficulty variant?</text>
+            <choice hidden="true">
+                <text>Normal.</text>
+                <event load="AA_EVENT_MVBOSS_LIMIT_CRUISER_NORMAL"/>
+            </choice>
+            <choice hidden="true">
+                <text>Challenging.</text>
+                <event load="AA_EVENT_MVBOSS_LIMIT_CRUISER_CHALLENGE"/>
+            </choice>
+            <choice hidden="true">
+                <text>Extreme.</text>
+                <event load="AA_EVENT_MVBOSS_LIMIT_CRUISER_EXTREME"/>
+            </choice>
+            <choice hidden="true">
+                <text>Chaos.</text>
+                <event load="AA_EVENT_MVBOSS_LIMIT_CRUISER_CHAOS"/>
+            </choice>
+        </event>
+    </choice>
     <choice>
         <text>Nevermind.</text>
         <event/>
