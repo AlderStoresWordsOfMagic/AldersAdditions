@@ -5,19 +5,19 @@ local get_ship_crew_point = mods.multiverse.get_ship_crew_point
 local is_first_shot = mods.multiverse.is_first_shot
 local INT_MAX = mods.multiverse.INT_MAX
 
+-- XML parsing imports
+local weaponTagParsers = mods.multiverse.weaponTagParsers
+
 -- [Infusers - Weapons that do not fire, but provide effects and stat bonuses to the weapon to their right.]
 
 
--- Take the stats of the infuser itself and add them to the target weapon, up to specific maximums
+-- Take the stats of the infuser itself and add them to the target weapon, up to specific maximums, by XML tag
 local infuserIDs = {}
-infuserIDs.AA_INFUSER_PARTICLE = true
-infuserIDs.AA_INFUSER_BIO = true
-infuserIDs.AA_INFUSER_ION = true
-infuserIDs.AA_INFUSER_FIRE = true
-infuserIDs.AA_INFUSER_BREACH = true
-infuserIDs.AA_INFUSER_STUN = true
-infuserIDs.AA_INFUSER_MADNESS = true
-infuserIDs.POWER_CORE = true -- Allows MV's own power core to chain with other infusers.
+table.insert(weaponTagParsers, function(weaponNode)
+    if weaponNode:first_node("aa-infuser") then
+        infuserIDs[weaponNode:first_attribute("name"):value()] = true
+    end
+end)
 
 
 -- Prevent infusers from being selectable, only need to do this for the player
@@ -131,4 +131,13 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipMa
         end
     end
     return Defines.Chain.CONTINUE
+end)
+
+-- Add info to stats
+script.on_internal_event(Defines.InternalEvents.WEAPON_STATBOX, function(bp, stats)
+    if infuserIDs[bp.name] then
+        return Defines.Chain.CONTINUE, stats.."\n\n"..Hyperspace.Text:GetText("aa_stat_infuser")
+    -- Muffle VSCode warning
+    ---@diagnostic disable-next-line: missing-return
+    end
 end)

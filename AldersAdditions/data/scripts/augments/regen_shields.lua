@@ -53,7 +53,7 @@ local function render_part_shield_charge(ship, width, x, y)
         Graphics.CSurface.GL_DrawRect(2 + x, 2 + y, (width - 4)*progress, 2, timer.color)
     end
 end
-script.on_render_event(Defines.RenderEvents.GUI_CONTAINER, mods.alder.doNothing, function()
+script.on_render_event(Defines.RenderEvents.SHIP_STATUS, mods.alder.doNothing, function()
     if Hyperspace.ships.player then render_part_shield_charge(Hyperspace.ships.player, 98, 30, 89) end
     if Hyperspace.ships.enemy then
         if Hyperspace.Global.GetInstance():GetCApp().gui.combatControl.boss_visual then

@@ -1,0 +1,1321 @@
+<!-- Certain AA content will drop as loot from special sector events until they can be properly assigned quests in the future. For now, enjoy my mediocre event writing. -->
+
+
+<!-- /// LOOT EVENTS /// -->
+
+
+<!-- // DUSTWORM RECRUITMENT // -->
+<event name="AA_EVENT_OUTCAST_SANDWORM" unique="true"> <!-- Event 1: Theocracy Badlands -->
+    <text>Upon the stony, sandswept planet below, you can see an Outcast settlement. Its buildings are crumbled and dilapidated, likely the result of an attack or a natural disaster.</text>
+    <img planet="PLANET_UNPOPULATED_TERRA"/>
+    <choice>
+        <text>Land on the planet.</text>
+        <event>
+            <text>Other than some poor weather on its way towards the colony, you encounter no resistance on your way to the surface. As soon as you land your vessel, a group of Outcasts and a Lost Sun quietly approach your group, urging you to come closer.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"Careful now, traveler... this planet is quite dangerous! We've heard tales of sandworms out here, massive things that can feel your steps upon the sand a mile away! Our best team of explorers went missing a couple of days ago, and the day after, it burrowed through our streets and knocked down several of our buildings. Suffice to say, we've called off that mission until we can get another team in order to rescue them.</text>
+                    <choice hidden="true">
+                        <text>Offer your help repairing the settlement.</text>
+                        <event>
+                            <text>Although you can't do much, especially with the fleet crawling down your back as always, the Outcasts appreciate the help you're able to offer.</text>
+                            <autoReward level="LOW">stuff</autoReward>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>Explore the sands yourself.</text>
+                        <event>
+                            <text>Although the Outcasts laugh at your proclamation, they do offer you directions towards the last known location of their exploration team, and you and your crew set out into the sands. If the colony sent an exploration team out here, perhaps there was something they were looking for. You make sure to tread lightly in the hopes of not aggravating whatever these sandworms are, but signs of an oncoming sandstorm and the blazing heat of the sun tell you it might be more difficult than you expected.</text>
+                            <choice hidden="true">
+                                <text>Continue to explore, knowing the Rebel Fleet may catch up.</text>
+                                <event>
+                                    <text>It's difficult to navigate the sandstorm, let alone push your body forwards through the blistering wind and abrasive particles. Tremors from the earth and movement in the nearby sands suggest sandworm activity, though your steps are thankfully quiet enough to avoid rousing them. Your crew struggle similarly, eventually stumbling through the dunes to find the remains of a small Chrysolic temple. Though heavily eroded by the relentless sandstorms, it still serves as a good shelter, and likely was the location the Outcast explorers were trying to reach.</text>
+                                    <modifyPursuit amount="1"/>
+                                    <choice hidden="true">
+                                        <text>Continue...</text>
+                                        <event load="AA_EVENT_OUTCAST_SANDWORM_DISCOVER"/>
+                                    </choice>
+                                </event>
+                            </choice>
+                            <choice req="LIST_CREW_ROCK" hidden="true">
+                                <text>(Rock Crew) Have your Rock lead the way.</text>
+                                <event>
+                                    <text>With the large frame and high resilience of your crewmember acting as a shield, navigating the sand is at least slightly less time-consuming. Soon, you find the remains of a small Chrysolic temple. Though heavily eroded by the relentless sandstorms, it still serves as a good shelter, and likely was the location the Outcast explorers were trying to reach.</text>
+                                    <choice hidden="true">
+                                        <text>Continue...</text>
+                                        <event load="AA_EVENT_OUTCAST_SANDWORM_DISCOVER"/>
+                                    </choice>
+                                </event>
+                            </choice>
+                            <choice req="LIST_CREW_CRYSTAL" hidden="true">
+                                <text>(Crystal Crew) Have your Crystal lead the way.</text>
+                                <event>
+                                    <text>With the large frame and high resilience of your crewmember acting as a shield, navigating the sand is at least slightly less time-consuming. Soon, you find the remains of a small Chrysolic temple. Though heavily eroded by the relentless sandstorms, it still serves as a good shelter, and likely was the location the Outcast explorers were trying to reach.</text>
+                                    <choice hidden="true">
+                                        <text>Continue...</text>
+                                        <event load="AA_EVENT_OUTCAST_SANDWORM_DISCOVER"/>
+                                    </choice>
+                                </event>
+                            </choice>
+                            <choice>
+                                <text>Return to the colony.</text>
+                                <event>
+                                    <text>With sand thoroughly suffusing your outfit and your body, you return to the colony in defeat. Even so, being willing to walk out into the stirring sands and the hot sun earns you a smile from the Commando on your way back to the ship.</text>
+                                </event>
+                            </choice>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>Sorry, we can't help.</text>
+                        <event/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>We don't have time.</text>
+        <event>
+            <text>You steer away from the planet, flying out to orbit.</text>
+            <choice>
+                <text>Do something onboard the ship.</text>
+                <event load="STORAGE_CHECK"/>
+            </choice>
+            <choice>
+                <text>Do nothing.</text>
+                <event/>
+            </choice>
+        </event>
+    </choice>
+</event>
+<event name="AA_EVENT_OUTCAST_SANDWORM_DISCOVER">
+    <text>The temple is mostly filled with simple relics and artworks. Few things here are actually worth any scrap, but they seem like they'd be quite valuable to Theocracy-aligned Rockmen. As you turn a corner, rumbles and shaking sound out through the walls, and a large mound of sand begins to move as an odd squeaking sounds from behind it!</text>
+    <choice hidden="true" max_group="0">
+        <text>Shoot it!</text>
+        <event>
+            <text>A single shot is all that it takes to stop the movement, blue goo leaking from the small hole left behind. The collapsing sand releases a couple of Rockmen, who are resilient enough to get back up after a successful resuscitation procedure. Unfortunately, more rumbles from around the temple suggest it's too dangeous to stay for much longer, the sound of your weapon having likely stirred up more sandworms to hunt you down. Your return to the colony is bittersweet, with a funeral held for the remaining expedition members. Even so, the colony offers you a few supplies as thanks.</text>
+            <autoReward level="LOW">stuff</autoReward>
+        </event>
+    </choice>
+    <choice hidden="true" blue="false" req="aa_found_dustworm" lvl="0" max_group="1">
+        <text>Wait for the sand to fall away.</text>
+        <event name="AA_EVENT_OUTCAST_SANDWORM_DISCOVER_GOOD"> <!-- Update when Dustworms are implemented as a faction to make their description more direct.-->
+            <text>As the sand settles to the floor, it reveals a strange, caterpillar-like alien who tumbles to the floor in a daze. The streaming particles also release a couple of Rockmen, who are resilient enough to get back up after a successful resuscitation procedure. This was certainly not the kind of sandworm the Outcasts told you about, and the now-found exploration team doesn't recognize them either, but they do their best to aid in the search for remaining members of the team. Your return to the colony is triumphant, with the colony thankful and the alien offering to join your crew!</text>
+            <autoReward level="MED">stuff</autoReward>
+            <crewMember amount="1" class="aa_dustworm"/>
+        </event>
+    </choice>
+    <choice hidden="true" blue="false" req="aa_found_dustworm" lvl="1" max_group="1">
+        <text>Wait for the sand to fall away.</text>
+        <event name="AA_EVENT_OUTCAST_SANDWORM_DISCOVER_DUSTWORM">
+            <text>As the sand settles to the floor, it reveals a Dustworm who tumbles to the floor in a daze. The streaming particles also release a couple of Rockmen, who are resilient enough to get back up after a successful resuscitation procedure. This was certainly not the kind of sandworm the Outcasts told you about, and the now-found exploration team doesn't recognize them either, but they do their best to aid in the search for remaining members of the team. Your return to the colony is triumphant, with the colony thankful and the Dustworm offering to join your crew!</text>
+            <autoReward level="MED">stuff</autoReward>
+            <crewMember amount="1" class="aa_dustworm"/>
+        </event>
+    </choice>
+    <choice req="LIST_CREW_SLUG" hidden="true" max_group="2">
+        <text>(Slug Crew) Your Slug crew shouts to hold your fire!</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice req="BLUELIST_CREW_SNAIL" hidden="true" max_group="3">
+        <text>(Telepathic Shell) Your Shell crew shouts to hold your fire!</text>
+        <event load="AA_EVENT_OUTCAST_SANDWORM_DISCOVER_GOOD"/>
+    </choice>
+    <choice req="LIST_CREW_MONK" hidden="true" max_group="4">
+        <text>(Monk Crew) Your Monk urges you to relax.</text>
+        <event load="AA_EVENT_OUTCAST_SANDWORM_DISCOVER_GOOD"/>
+    </choice>
+    <choice req="AA_LIST_CREW_DUSTWORM" hidden="true" max_group="5">
+        <text>(Dustworm Crew) Your Dustworm recognizes the squeaking.</text>
+        <event load="AA_EVENT_OUTCAST_SANDWORM_DISCOVER_DUSTWORM"/>
+    </choice>
+</event>
+
+<ship name="AA_SHIP_SEPARATIST_INFESTATION" auto_blueprint="MU_SEPARATIST_SCOUT_NOCREW">
+    <triggeredEvent name="AA_SHIP_SEPARATIST_INFESTATION_SURRENDER_TRIGGER" event="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER" thisFight="true">
+        <enemyHull amount="0" min="4" max="4" scaling="0.0"/>
+    </triggeredEvent>
+	<destroyed load="AA_EVENT_SEPARATIST_INFESTATION_DESTROYED"/>
+</ship>
+<event name="AA_EVENT_SEPARATIST_INFESTATION" unique="true"> <!-- Event 2: Emancipated Sanctuary -->
+    <text>There is a single, battered Separatist ship at the beacon, and it hails you the moment you show up. "F-F-F-Federation vessel? You must help! Ship is [infested] with a virus, I am on the -outside- and trying to regain control. Have taken command of c-c-c-communications, but more is difficult. Can you help remove the infestation?"</text>
+    <ship load="AA_SHIP_SEPARATIST_INFESTATION" hostile="false"/>
+    <choice>
+        <text>Accept.</text>
+        <event>
+            <text>"Thank you." The Separatist cuts the communications, and the threatened ship raises its weapons and automated defenses to protect itself!</text>
+            <ship hostile="true"/>
+            <choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+        </event>
+    </choice>
+    <choice req="hacking">
+        <text>(Hacking) Attempt to purge the "virus."</text>
+        <event>
+            <text>Your Hacking system finds not only no trace of corrupted code, but a very angry rudimentary artificial intelligence system. The ship attempts to defend itself!</text>
+            <ship hostile="true"/>
+            <choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+        </event>
+    </choice>
+    <choice req="BLUELIST_WEAPONS_HACK">
+        <text>(Hacking Weapon) Attempt to purge the "virus."</text>
+        <event>
+            <text>Your Hacking weapon only aggravates a very angry rudimentary artificial intelligence system. The ship attempts to defend itself!</text>
+            <ship hostile="true"/>
+            <choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+        </event>
+    </choice>
+    <choice req="LIST_CREW_SLUG">
+        <text>(Slug Crew) Your Slug has something to say.</text>
+        <event>
+            <text>As your Slug takes the stage, they explain to the Engi that they sense a number of caterpillar-like life-forms in the walls of the ship. They aren't quite familiar in nature, but they are not hostile, and seem to have damaged some of the circuitry in their attempts to hide.</text>
+            <choice hidden="true">
+				<text>Continue...</text>
+				<event load="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP"/>
+			</choice>
+        </event>
+    </choice>
+    <choice req="BLUELIST_CREW_SNAIL">
+        <text>(Telepathic Shell) Your Shell has something to say.</text>
+        <event>
+            <text>As your Shell takes the stage, they explain to the Engi that they sense a number of caterpillar-like life-forms in the walls of the ship. They aren't quite familiar in nature, but they are not hostile, and seem to have damaged some of the circuitry in their attempts to hide.</text>
+            <choice hidden="true">
+				<text>Continue...</text>
+				<event load="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP"/>
+			</choice>
+        </event>
+    </choice>
+    <choice req="LIST_CREW_HARMONY">
+        <text>(Harmony Engi) Your Engi has something to say.</text>
+        <event>
+            <text>Your Engi attempts to take the stage, but the Separatist gets panicky and slams the outside of the ship. This causes its weapons to spring to life!</text>
+            <ship hostile="true"/>
+            <choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Decline.</text>
+        <event>
+            <text>You apologize and cut comms.</text>
+            <choice>
+                <text>Do something onboard the ship.</text>
+                <event load="STORAGE_CHECK"/>
+            </choice>
+            <choice>
+                <text>Do nothing.</text>
+                <event/>
+            </choice>
+        </event>
+    </choice>
+</event>
+<event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER">
+    <text>As your shots rock the hull, the ship hails again. The voice that comes out over the waves isn't the stutter of a Separatist Engi, but of a much lighter, more organic nature. "Stop, stop! What did they tell you to do!?"</text>
+    <choice hidden="true" blue="false" req="aa_found_dustworm" lvl="0" max_group="0">
+        <text>They told us to "remove the infestation."</text>
+        <event>
+            <text>The strange voice manages to get the camera working, revealing a group of small, caterpillar-like creatures peering through cracks in the wall. "N-no, we had no other choice! This was the only ship we could find, we ended up with a bunch of pirates who wanted to get rid of us... I thought the robot-thing would do the same!"</text>
+            <choice>
+                <text>Explain the situation to the Separatist.</text>
+                <event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP">
+                    <text>"What? This... i-i-i-is..." The Engi, having managed to force their way in through the airlock, is completely stunned, not sure what to do about the situation. A couple of the braver aliens begin to crawl out of panels in the wall, squeaking out and staring at the red figure in the center of the room. "I-I-I-I thought it was a -virus-... what to do [now]?" The Engi, and the creatures, stare at you.</text>
+                    <ship hostile="false"/>
+                    <choice hidden="true">
+                        <text>Suggest the creatures come with you.</text>
+                        <event>
+                            <text>Still somewhat afraid, the insects nod, waiting in the room as you dock with your ship. They all board your ship, relieved to be out of the situation, and hide out in the cargo bay until you drop them off at a nearby station with many curious eyes. On the way, a couple of them have the handiness to help fix up your hull, and one of them even wants to join you on your journey through the stars!</text>
+                            <crewMember amount="1" class="aa_dustworm"/>
+                            <damage amount="-7"/>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>Suggest the Engi coexists with the creatures.</text>
+                        <event>
+                            <text>Although the bugs are concerned, you, your crew, and the Engi are able to help calm them down and fully describe the misunderstanding. The Separatist is quite grateful that you were able to help solve the issue, and is quite curious about these... "dustworms." In return, they offer a number of useful supplies and a spare weapon!</text>
+                            <autoReward level="HIGH">stuff</autoReward>
+                            <weapon name="GIFTLIST_ION"/>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" blue="false" req="aa_found_dustworm" lvl="1" max_group="0">
+        <text>They told us to "remove the infestation."</text>
+        <event>
+            <text>The strange voice manages to get the camera working, revealing a group of Dustworms peering through cracks in the wall. "N-no, we had no other choice! This was the only ship we could find, we ended up with a bunch of pirates who wanted to get rid of us... I thought the robot-thing would do the same!"</text>
+            <choice>
+                <text>Explain the situation to the Separatist.</text>
+                <event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP">
+                    <text>"What? This... i-i-i-is..." The Engi, having managed to force their way in through the airlock, is completely stunned, not sure what to do about the situation. A couple of the braver Dustworms begin to crawl out of panels in the wall, squeaking out and staring at the red figure in the center of the room. "I-I-I-I thought it was a -virus-... what to do [now]?" The Engi, and the Dustworms, stare at you.</text>
+                    <ship hostile="false"/>
+                    <choice hidden="true">
+                        <text>Suggest the Dustworms come with you.</text>
+                        <event>
+                            <text>Still somewhat afraid, the Dustworms nod, waiting in the room as you dock with your ship. They all board your ship, relieved to be out of the situation, and hide out in the cargo bay until you drop them off at a nearby station with many curious eyes. On the way, a couple of them have the handiness to help fix up your hull, and one of them even wants to join you on your journey through the stars!</text>
+                            <crewMember amount="1" class="aa_dustworm"/>
+                            <damage amount="-7"/>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>Suggest the Engi coexists with the Dustworms.</text>
+                        <event>
+                            <text>Although the Dustworms are concerned, you, your crew, and the Engi are able to help calm them down and fully describe the misunderstanding. The Separatist is quite grateful that you were able to help solve the issue, and is quite curious about them. In return, they offer a number of useful supplies and a spare weapon!</text>
+                            <autoReward level="HIGH">stuff</autoReward>
+                            <weapon name="GIFTLIST_ION"/>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Ignore the communication.</text>
+        <event>
+            <text>"Wait, STO-" The voice is shut off, and you continue to attack the ship. It may not be what the Separatist wanted, but it'll still benefit you.</text>
+        </event>
+    </choice>
+</event>
+<event name="AA_EVENT_SEPARATIST_INFESTATION_DESTROYED">
+    <text>The ship breaks apart, though you also seem to have destroyed the Separatist owner clinging to its hull. You can scrap the remains at your leisure, though it isn't much.</text>
+    <autoReward level="LOW">scrap</autoReward>
+</event>
+
+<event name="AA_EVENT_ORCHID_GREENHOUSE" unique="true"> <!-- Event 3: Gathering Gardenworlds -->
+    <text>There is a Gathering station at the beacon. Several visible greenhouses mounted to it offer a good view of several growing pieces of technology, though they seem worse for wear and some of the plants are damaged. Though there is a Caretaker ship docked to it, the station does not respond to your presence.</text>
+    <ship load="SHIP_ORCHID_STATION" hostile="false"/>
+    <choice hidden="true">
+        <text>Dock with the station.</text>
+        <event>
+            <text>The halls are empty, but well-lit and kept maintained. A soft, floral scent wafts through the air, crossing with the pungent scent of spores. It doesn't take long to find the staff, who are all huddled in the corner of a safe room. "You have to help us! Our kernel growths are being devoured by monsters!"</text>
+            <choice hidden="true" blue="false" req="aa_found_dustworm" lvl="0" max_group="0">
+                <text>Inspect the greenhouses.</text>
+                <event>
+                    <text>A Caretaker among the staff hands you the keycard to open the greenhouses. The heat and humidity flow out, revealing several big, blue worms devouring the plants! The one closest to you notices your arrival, squeaking out. "W-wait, wait! Who are you? I thought this place was abandoned!"</text>
+                    <choice hidden="true">
+                        <text>You're eating weaponry.</text>
+                        <event>
+                            <text>The alien calms down as you explain the situation to them, their stare of fear quickly being replaced by one of embarrassment. The others turn to listen to the conversation, the sounds of crunching throughout the room ceasing and leaving a dead silence. Although it's tough, you're able to coax the Orchids into working out a negotiation, and nudge the worms into vacating the station. The Orchids offer you one of the few uneaten Kernel weapons being grown aboard as thanks, and one of the bugs offers to join you instead of being dropped off.</text>
+                            <crewMember amount="1" class="aa_dustworm"/>
+                            <weapon name="GIFTLIST_KERNEL"/>
+                        </event>
+                    </choice>
+                    <choice>
+                        <text>Get out of there!</text>
+                        <event>
+                            <text>You brandish your weapon. The strange worms panic and swarm out of the room, throughout the station. Hunkering down wherever they can, it quickly becomes clear that flushing them out will take more time than you have. The Caretakers will have to find help elsewhere.</text>
+                        </event>
+                    </choice>
+                    <choice>
+                        <text>Not my problem.</text>
+                        <event>
+                            <text>You promptly shut the door, leaving the greenhouse alone. The Caretakers will have to find help elsewhere.</text>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+            <choice hidden="true" blue="false" req="aa_found_dustworm" lvl="1" max_group="0">
+                <text>Inspect the greenhouses.</text>
+                <event>
+                    <text>A Caretaker among the staff hands you the keycard to open the greenhouses. The heat and humidity flow out, revealing several Dustworms devouring the plants. Thankfully, since you know what they are, you are able to defuse the situation and lead them out of the greenhouse. The Orchids offer you one of the few uneaten Kernel weapons being grown aboard as thanks, and one of the bugs offers to join you instead of being dropped off.</text>
+                    <crewMember amount="1" class="aa_dustworm"/>
+                    <weapon name="GIFTLIST_KERNEL"/>
+                </event>
+            </choice>
+            <choice hidden="true" req="AA_LIST_CREW_DUSTWORM" max_group="1">
+                <text>(Dustworm Crew) The Orchids seem to be huddled further away from your crew.</text>
+                <event>
+                    <text>Noticing their reaction, your Dustworm speaks up. It doesn't take long for the situation to calm down, and it quickly becomes obvious from the Orchids' descriptions of the situation that a small group of other Dustworms managed to infest the greenhouse without knowing what they were eating. After they clear out from the greenhouse, the Orchids offer you one of the few uneaten Kernel weapons being grown aboard as thanks, and one of the bugs offers to join you instead of being dropped off.</text>
+                    <crewMember amount="1" class="aa_dustworm"/>
+                    <weapon name="GIFTLIST_KERNEL"/>
+                </event>
+            </choice>
+            <choice max_group="2">
+                <text>I'm sorry, we can't help.</text>
+                <event/> <!-- This one piece of the event was such a nightmare, I did not know choices required an empty event if no leave text was displayed. -->
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Attack!</text>
+        <event>
+            <text>You raise your weapons, and the station responds in kind. The Gathering won't be very happy about this.</text>
+            <ship hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="MORALITY_UPDATE_ORCHID_FIGHT"/>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Avoid the station.</text>
+        <event>
+            <text>You keep clear of the station. Best not to mess with an Orchid greenhouse.</text>
+            <choice>
+                <text>Do something onboard the ship.</text>
+                <event load="STORAGE_CHECK"/>
+            </choice>
+            <choice>
+                <text>Do nothing.</text>
+                <event/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+
+
+
+<!-- // IMAGINATOR // -->
+<ship name="AA_SHIP_ZOLTAN_IMAGINATOR" auto_blueprint="LIST_SHIPS_ZOLTAN_ELITE_FIGHT">
+	<destroyed>
+        <text>The gray vessel splits apart, its sections crackling with energy before falling silent. Most of the other ships are unarmed, and they are powerless to stop you ransacking the station. Unfortunately, there isn't much to take from their station, with the most standout of the spoils being some rather tasty candy.</text>
+        <autoReward level="MED">scrap_only</autoReward>
+    </destroyed>
+    <deadCrew>
+        <text>The gray vessel falls silent, stripped of the diligent crew keeping it active. Most of the other ships are unarmed, and they are powerless to stop you ransacking the station. Unfortunately, there isn't much to take from their station, with the most standout of the spoils being some rather tasty candy.</text>
+        <autoReward level="MED">scrap_only</autoReward>
+    </deadCrew>
+    <crew>
+		<crewMember type="zoltan" prop="0.70"/>
+		<crewMember type="zoltan_peacekeeper" prop="0.20"/>	
+        <crewMember type="human_soldier" prop="0.10"/>
+	</crew>
+</ship>
+<event name="AA_EVENT_DUSK_IMAGINATOR" unique="true">
+    <distressBeacon/>
+    <text>You arrive at the beacon. In spite of the oppressive Duskbringer presence here, several Union and Ministry ships have established a trading post around it, their colorful hulls gleaming in the light of a distant sun. A Peacekeeper stands guard, as most of the vessels are unarmed.</text>
+    <ship load="AA_SHIP_ZOLTAN_IMAGINATOR" hostile="false"/>
+    <customFleet right="false" firing="false" autoDarkening="true">CUSTOM_FLEET_CIVILIAN</customFleet>
+    <choice req="aa_found_imaginator" lvl="0" hidden="true" max_group="0" blue="false"> <!-- Have not found this event yet -->
+        <text>Hail the traders.</text>
+        <event>
+            <variable name="aa_found_imaginator" op="set" val="1"/> <!-- This event cannot yield the loot outcome more than once per run. -->
+            <text>Out of all the ships, it is the Peacekeeper that responds directly to your hail. An old Zoltan in heavy armor responds in an uncharacteristic panic. "Oh, thank goodness! You're military, right? Renegade, even?"</text>
+            <choice>
+                <text>That would be us.</text>
+                <event>
+                    <text>"Couldn't be a better time for you to show up! Some of our salvage crew's run into a stretch of territory the Rebels have taken... they've been taken hostage! My son's in danger!" He steps back from the panel, clutching his head. "Oh, Great Eye, will you help? The Ministry wants me to stay here... but how can I!?"</text>
+                    <choice>
+                        <text>Agree to help.</text>
+                        <event>
+                            <text>"Thank you! Goodness, I'll send over the co-ordinates right away!" He sprints off to a corner of the room, and transfers a string of numbers. "T-they were salvaging our old trading post... a candy store. Why would those pricks go after a bunch of civvies salvaging an un-militarized station? I-it doesn't make sense! P-please, save my son!" The hyperventilating captain is led away by his crew, presumably to the medbay, as the other ships open their doors to you.</text>
+                            <quest event="AA_EVENT_QUEST_IMAGINATOR"/>
+                            <store>STORE_STANDARD</store>
+                        </event>
+                    </choice>
+                    <choice>
+                        <text>Decline.</text>
+                        <event name="AA_EVENT_FILLER_IMAGINATOR_DECLINE">
+                            <text>"Drat!" The captain slams his fist on his console, accidentally cutting the feed. At least the other ships at the beacon offer some rather lucrative trade deals for your trouble.</text>
+                            <store>STORE_STANDARD</store>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+            <choice>
+                <text>Nope.</text>
+                <event load="AA_EVENT_FILLER_IMAGINATOR_DECLINE"/>
+            </choice>
+        </event>
+    </choice>
+    <choice req="aa_found_imaginator" lvl="1" hidden="true" max_group="0" blue="false"> <!-- Already found this event -->
+        <text>Hail the traders.</text>
+        <event>
+            <text>A sense of deja-vu resonates within you as you approach the traders. However, the Peacekeeper doesn't make a move to hail you. Just a few vessels open to trade this time, it seems.</text>
+            <store>STORE_STANDARD</store>
+        </event>
+    </choice>
+    <choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+        <text>Attack the station!</text>
+        <event>
+            <text>You open fire on the trading post. Most of the civilian vessels are unarmed - the only ship with enough weapons to contest you here is the Ministry envoy. Hopefully, they have enough scrap to make it worthwhile...</text>
+            <ship hostile="true"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="MORALITY_UPDATE_UNION_FIGHT"/>
+            </choice>
+        </event>
+    </choice>
+    <choice req="pilot" lvl="1" max_group="2" blue="false" hidden="true">
+        <text>Leave them be.</text>
+            <event>
+			<text>You have no need for trade right now.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+    </choice>
+</event>
+
+<ship name="AA_SHIP_REBEL_IMAGINATOR" auto_blueprint="AA_SHIP_REBEL_IMAGINATOR">
+	<destroyed load="AA_EVENT_QUEST_IMAGINATOR_WIN"/>
+    <deadCrew load="AA_EVENT_QUEST_IMAGINATOR_WIN"/>
+</ship>
+<event name="AA_SHIP_REBEL_IMAGINATOR_FLARES">
+	<text>As its weapons spring from its hull, the MFK Ace fires off a set of tracking flares. They shine lights onto your ship, disrupting your ability to cloak!</text>
+	<status type="loss" target="player" system="cloaking" amount="3"/>
+	<triggeredEvent event="AA_SHIP_REBEL_IMAGINATOR_FLARES_END" time="20" thisFight="false" clearOnJump="true">
+		<triggeredEventBox load="DEFAULT_SMALL" pos="combat">
+			<tooltip>The enemy's cloaking jammer will expire in this amount of time.</tooltip>
+		</triggeredEventBox>
+        <timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+	</triggeredEvent>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="COMBAT_CHECK"/>
+    </choice>
+</event>
+<event name="AA_SHIP_REBEL_IMAGINATOR_FLARES_END">
+	<text>The flares fade into the background of space. Your systems have returned to normal.</text>
+	<status type="clear" target="player" system="cloaking" amount="100"/>
+</event>
+</event>
+<event name="AA_EVENT_QUEST_IMAGINATOR">
+    <beaconType id="map_icon_quest" global="true">
+		<color r="69" g="168" b="235" a="1"/>
+		<unvisitedTooltip>You've been tasked with searching for hostages at a candy store.</unvisitedTooltip>
+	</beaconType>
+    <text>The instant you arrive at the beacon, it becomes clear something is wrong. In front of you lies the derelict station, as expected, but the civilian vessel you were sent for is currently being accosted by an MFK Dropship Ace and a pair of Auto-ships. Why would some of the highest-profile Rebels in their forces terrorize random civilians?</text>
+    <ship load="AA_SHIP_REBEL_IMAGINATOR" hostile="false"/>
+    <choice hidden="true">
+        <text>Rescue the civilians.</text>
+        <event>
+            <text>The Ace's captain reeks of a stuck-up attitude, his voice dripping with contempt. "Hoho, a Renegade has come to interfere with our operation? I don't think so, not today. That cache is mine!" If the Rebels brought an Ace all the way out here, whatever the civilians are carrying must be important.</text>
+            <ship hostile="true"/>
+			<choice hidden="true" blue="false" req="cloaking">
+				<text>Continue...</text>
+				<event load="AA_SHIP_REBEL_IMAGINATOR_FLARES"/>
+			</choice>
+			<choice hidden="true" blue="false" req="cloaking" max_lvl="0" lvl="0">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK"/>
+			</choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>This is above our pay grade.</text>
+        <event>
+			<text>After a time, the Ace turns and leaves, a strange, luminous object attached to its hull. No life-signs are detected from the damaged ship as the Auto-ships descend upon it to strip it to the bone.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+    </choice>
+</event>
+<event name="AA_EVENT_QUEST_IMAGINATOR_WIN">
+    <text>The MFK Ace ship has been dealt with, leaving only the Union vessel. The Auto-ships, having relied upon the Ace to escort them, quickly scatter without weapons to contest you.</text>
+    <status type="clear" target="player" system="engines" amount="100"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>The civilians aboard the crippled Union ship profess their thanks, though most have nothing to offer. From the crowd, a meek Zoltan in a ragged shirt staggers up to you, presumably the captain's son. "T-thank you... we were trying to figure out what happened to our station, b-but the Rebels wanted everything we had. The least we could do is share something we found. N-never seen anything like it..."</text>
+            <choice hidden="true">
+                <text>Check their cargo.</text>
+                <event>
+                    <text>The Zoltan leads you to the cargo bay, opening the doors. The moment they open, a violet light shines out from the spacious room, giving you a momentary headache before your gaze settles on a beam. At least, it looks like a beam. It matches no schematic in your database, its coloration and alien runes betraying not a word of its function. Who knows what the Rebels would want to do with it?</text>
+                    <weapon name="AA_BEAM_IMAGINE"/>
+                </event>
+            </choice>
+            <choice hidden="true">
+                <text>Decline.</text>
+                <event>
+                    <text>"It's okay... that old thing's probably not worth much anyways. I could make it up to you, maybe...?" The Zoltan salutes, wanting to stick around.</text>
+                    <crewMember amount="1" class="zoltan">Charles</crewMember>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+
+
+
+<!-- // RAILGUN // -->
+<ship name="AA_SHIP_AUTO_RAILGUN" auto_blueprint="LIST_SHIPS_ESTATE_AUTO">
+	<destroyed>
+        <text>The powerful Auto-ship is consumed by the fire of your weaponry, letting you snag some useful components and take a closer look at the coordinates you wrote down. You still can't stay for long, though - the city's PDS is still active!</text>
+        <quest event="AA_EVENT_QUEST_RAILGUN"/>
+        <autoReward level="MED">scrap</autoReward>
+    </destroyed>
+</ship>
+<event name="AA_EVENT_AUTO_RAILGUN" unique="true">
+    <text>You've found an island of calm in a sector that churns with the endless march of machinery. For once, the planet near this beacon is a city world, likely a residential area amongst the shipyards and factories.</text>
+    <img back="BACKGROUND" planet="PLANET_POPULATED"/>
+    <choice>
+        <text>Fly closer.</text>
+        <event>
+            <text>As you enter the planet's atmosphere, you see the vast expanse of the city below, millions of lights flickering and reflecting off of gray and orange facades. A Rebel city, through and through - it's not likely the people here will be of much help to you.</text>
+            <choice>
+                <text>Continue...</text>
+                <event>
+                    <text>A particularly large complex installed onto the planet, appearing to be a research center, sticks out from many of the buildings. Several Rebel and automated ships, chief among them an automated vessel adorned with crimson paint and a bright logo, swirl around the facility like a flock of vultures as they exchange gigabytes' worth of communications. Listening into whatever this is would likely mean getting close to the building - and getting close to the Rebel force.</text>
+                    <ship load="AA_SHIP_AUTO_RAILGUN" hostile="false"/>
+                    <choice>
+                        <text>Listen in, and risk getting caught.</text>
+                        <event>
+                            <text>You fly close, doing your best to quell the hum of your engines. Splitting your attention between stealth and listening is not easy, but you are able to determine that the station was asking the Rebels to recover a pair of crashed Auto-ships investigating a mysterious shipwreck. Unfortunately, you don't even get the opportunity to read the coordinates you wrote down before the Auto-ship leading the group notices something's off and turns to face you. Even worse, the city's PDS batteries take notice as chatter surges through the facility and the Rebel team!</text>
+                            <ship hostile="true"/>
+                            <environment type="PDS" target="player"/>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event load="COMBAT_CHECK"/>
+                            </choice>
+                        </event>
+                    </choice>
+                    <choice>
+                        <text>This is too dangerous, let's leave.</text>
+                        <event/>
+                    </choice>
+                    <choice hidden="true" req="cloaking" lvl="2" max_group="0">
+                        <text>(Upg. Cloaking) Eavesdrop on the meeting.</text>
+                        <event>
+                            <text>Not a single Rebel vessel can spot you as your cloaking device hums to life, keeping you hidden from their sensors long enough to get in and get out. The research station was in the middle of hailing a few of the nastier ships in the group to investigate what was most likely a space-time anomaly or another Renegade; though they sent a pair of Auto-ships to investigate, and discovered the remains of a foreign ship, they were unable to escape the planet's ionized atmosphere. Perhaps you could do better than some dinky probes, especially since they leaked the coordinates during the session.</text>
+                            <quest event="AA_EVENT_QUEST_RAILGUN"/>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Ignore the city.</text>
+        <event>
+			<text>You know better than to get close to a populated area in Rebel territory.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+    </choice>
+</event>
+
+<event name="AA_EVENT_QUEST_RAILGUN">
+    <beaconType id="map_icon_quest" global="true">
+		<color r="69" g="168" b="235" a="1"/>
+		<unvisitedTooltip>The location of a crashed ship, whose coordinates you overheard.</unvisitedTooltip>
+	</beaconType>
+    <img back="BACKGROUND" planet="PLANET_WATER"/>
+    <text>You arrive at a beacon clear of ships or debris in orbit, overlooking a large planet shrouded in a blue hue. A number of faint signals flicker from the surface; however, they are in a format you can't read. The atmosphere of the planet is suffused with ion storms and electrical disturbances that further distort the broadcasts, extending out into the space around it.</text>
+    <choice>
+        <text>Try to investigate the surface.</text>
+        <event>
+            <text>Though you try to navigate the treacherous atmosphere, it proves wholly untenable to your sensor systems. It will take a great deal of work to find the source of the signal.</text>
+            <choice hidden="true">
+                <text>Stay and search.</text>
+                <event>
+                    <text>Although you know the fleet will catch up to you, you press on through the ion storm. Eventually, you are able to locate the source of the signal... though, not without considerable delay.</text>
+                    <modifyPursuit amount="1"/>
+                    <choice>
+                        <text>Continue...</text>
+                        <event load="AA_EVENT_QUEST_RAILGUN_SEARCH"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice>
+                <text>This isn't worth it.</text>
+                <event>
+                    <text>Disappointed at the perpetual storm having absorbed and impeded your attempts, you call off the search. You aren't even left enough time for a routine storage check!</text>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="LIST_CREW_SLUG">
+        <text>(Slug Crew) Have your Slug crew guide you through the ion storm.</text>
+        <event>
+            <text>With the help of your crew's senses, you are able to steer the ship through the chaos of the storm and down to the distress signal.</text>
+            <choice>
+                <text>Continue...</text>
+                <event load="AA_EVENT_QUEST_RAILGUN_SEARCH"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="BLUELIST_CREW_SNAIL">
+        <text>(Telepathic Shell) Have your Shell crew guide you through the ion storm.</text>
+        <event>
+            <text>With the help of your crew's senses, you are able to steer the ship through the chaos of the storm and down to the distress signal.</text>
+            <choice>
+                <text>Continue...</text>
+                <event load="AA_EVENT_QUEST_RAILGUN_SEARCH"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="ADV_SCANNERS">
+        <text>(Long-Ranged Scanners) Use your specialized scanners to track the signal.</text>
+        <event>
+            <text>With your advanced scanning capabilities, you are able to steer the ship through the chaos of the storm and down to the distress signal.</text>
+            <choice>
+                <text>Continue...</text>
+                <event load="AA_EVENT_QUEST_RAILGUN_SEARCH"/>
+            </choice>
+        </event>
+    </choice>
+    <choice req="sensors" lvl="3" hidden="true">
+        <text>(Adv. Sensors) Use your powerful sensor system to track the signal.</text>
+        <event>
+            <text>With your advanced scanning capabilities, you are able to steer the ship through the chaos of the storm and down to the distress signal.</text>
+            <choice>
+                <text>Continue...</text>
+                <event load="AA_EVENT_QUEST_RAILGUN_SEARCH"/>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true" req="UPG_AETHER_SCANNERS">
+        <text>(Anomaly Detector) Use your specialized scanners to track the signal.</text>
+        <event>
+            <text>With your Anomaly Detector screaming all sorts of warnings about the source, you are able to steer the ship through the chaos of the storm and down to the distress signal.</text>
+            <choice>
+                <text>Continue...</text>
+                <event load="AA_EVENT_QUEST_RAILGUN_SEARCH"/>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Leave it be.</text>
+        <event>
+			<text>Who knows, perhaps it could be a trap? It wouldn't be the first time. You steer away from the planet, leaving the calls unanswered.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+		</event>
+    </choice>
+</event>
+<event name="AA_EVENT_QUEST_RAILGUN_SEARCH">
+    <text>You are able to find the remnants of a massive, crashed ship. Although its make seems human, you cannot tell what faction it belongs to, and its architecture seems very old-school despite how recent the wreck reads to be. Yellow stripes of paint still blaze through the darkness and the tree cover.</text>
+    <choice>
+        <text>Move in to inspect the wreck.</text>
+        <event>
+            <text>As you approach the ship, something quickly becomes obvious. Not all of the ship has ceased to function, and a couple of the ship's turrets swivel to face your vessel!</text>
+            <choice>
+                <text>We can take a few hits!</text>
+                <event>
+                    <text>The turrets unload a volley of projectiles into your hull! Although rather outdated, using mostly physical shells, they certainly still pack one hell of a punch. It takes some fancy flying and quick thinking to get out of range, your ship dipping below the upper section of the giant wreck to land amongst the trees.</text>
+                    <damage amount="8" system="random" effect="breach"/>
+                    <damage amount="0" system="random" effect="breach"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="AA_EVENT_QUEST_RAILGUN_SUCCESS"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice>
+                <text>Let's get out of here!</text>
+                <event>
+                    <text>You punch the engines, leaving the wreck as fast as possible. Artillery shells whistle past your ship as you rocket back off into the atmosphere! Unfortunately, your escapades in navigating the ionic atmosphere have drained you of the time to perform a routine storage check.</text>
+                </event>
+            </choice>
+            <choice req="weapons" lvl="6" hidden="true">
+                <text>(Adv. Weapons) Annihilate the turrets.</text>
+                <event>
+                    <text>Although the turrets are very fast, your weapons are faster. The turrets cease to exist before they can even fire a shot, leaving you free to inspect the wreck undisturbed.</text>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="AA_EVENT_QUEST_RAILGUN_SUCCESS"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice req="engines" lvl="5" hidden="true">
+                <text>(Upg. Engines) Dodge the turrets.</text>
+                <event>
+                    <text>Although the turrets are very fast, your engines are faster. Each shot from the turrets whizzes by without leaving so much as a scratch on the paint as you home in, leaving you free to inspect the wreck undisturbed.</text>
+                    <choice>
+                        <text>Continue...</text>
+                        <event load="AA_EVENT_QUEST_RAILGUN_SUCCESS"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice hidden="true" req="cloaking" lvl="2" max_group="0">
+                <text>(Upg. Cloaking) Approach undetected.</text>
+                <event>
+                    <text>You engage your cloaking device as you fly towards the vessel. The turrets can't even get a lock on your ship, leaving you free to inspect the wreck undisturbed as they jitter around.</text>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="AA_EVENT_QUEST_RAILGUN_SUCCESS"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice hidden="true" req="PDS_DISABLE">
+                <text>(Signal Diluter) Approach undetected.</text>
+                <event>
+                    <text>You engage your signal diluter as you fly towards the vessel. The turrets can't even get a lock on your ship, leaving you free to inspect the wreck undisturbed as they jitter around.</text>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="AA_EVENT_QUEST_RAILGUN_SUCCESS"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Stay in the air.</text>
+        <event>
+            <text>It's a mystery for sure, but not one that you feel equipped to explore. At least it wasn't a trap. Unfortunately, your escapades in navigating the ionic atmosphere have drained you of the time to perform a routine storage check.</text>
+        </event>
+    </choice>
+</event>
+<event name="AA_EVENT_QUEST_RAILGUN_SUCCESS">
+    <text>Within the bowels of the crashed vessel, you are able to salvage a great deal of old equipment and raw materials. A drop-pod launching system, massive magazine of cryopods, and heavy underside armament suggest this ship was designed for planetary invasion, and its tattered banners with golden highlights and a skull emblem indicate an unknown, though decidedly pompous origin.</text>
+    <autoReward level="HIGH">stuff</autoReward>
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <text>Though there is already a lot remaining from the wreck, you are able to dig up even more. Unfortunately, you do not have time to salvage all of it - but you find a number of enticing spoils aboard, one kind of which you can claim.</text>
+            <choice>
+                <text>Take the ship's main gun.</text>
+                <event>
+                    <text>It's big, menacing, and seriously outdated in spite of its masterful construction. After bringing it aboard and giving its leftover ammunition a thorough inspection, you are able to reverse-engineer it. It seems strong enough to punch right through shielding. Perhaps this dinosaur of a gun won't be so useless after all.</text>
+                    <autoReward level="HIGH">missiles</autoReward>
+                    <weapon name="AA_RAILGUN"/>
+                </event>
+            </choice>
+            <choice>
+                <text>Take the ship's firearms.</text>
+                <event>
+                    <text>In spite of their age, the huge variety of intact weapons and ammunition you find would easily make mincemeat of anything twice your crews' size. Some of them are too large for most crew to wield effectively, up to and including a shoulder-mounted autocannon. Even the more modest of firearms will likely prove to be a great asset to your crew.</text>
+                    <autoReward level="MED">scrap</autoReward>
+                    <augment name="AA_SUPER_FIREARMS"/>
+                </event>
+            </choice>
+            <choice>
+                <text>Take the ship's regalia.</text>
+                <event>
+                    <text>Each rolled-up banner and blue flag depicting a full view of Old Earth seems to drip with the kind of fervent, dogmatic vigor best befitting a Rebel vessel. Whether this ship used to belong to some Rebel sub-faction, or a different galactic empire entirely, is uncertain. At least they look pretty draped across the galley.</text>
+                    <autoReward level="MED">scrap</autoReward>
+                    <augment name="AA_XENOPHOBIA"/>
+                </event>
+            </choice>
+            <choice>
+                <text>Take a cryopod from the ship.</text>
+                <event>
+                    <text>The smell coming from this part of the ship is wretched. Although most of the cryopods have malfunctioned, resulting in the deaths of their occupants, a couple of them are still operational. One of them is a human soldier, clad in yellow-striped armor, who seems to have lost their memory of who they were. Judging by the propaganda posters around the ship, that is a good thing.</text>
+                    <autoReward level="HIGH">scrap</autoReward>
+                    <crewMember amount="1" class="human_soldier">Olofsson</crewMember>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+
+
+
+<!-- // PASTICHE // -->
+
+<event name="AA_EVENT_ROCK_PASTICHE" unique="true">
+    <text>A fleet of Theocracy ships is stationed here, including a few from the blue-clad Inquisition, all clustered around the smoldering wreck of a station. Although it's clear they notice you, for once they don't seem interested in firing at you.</text>
+    <customFleet right="false" firing="false" autoDarkening="true">CUSTOM_FLEET_ROCK</customFleet>
+    <choice>
+        <text>Hail the fleet.</text>
+        <event>
+            <text>To your surprise, they accept the hail. The Rockman in charge is currently scribbling in a notebook, and an investigation team composed of Orchids and Zoltan scramble about in the background.</text>
+            <choice>
+                <text>Continue...</text>
+                <event>
+                    <text>"Well, then. Renegade, I know your kind. Scrap is what makes your world go round, is it not? We are in the middle of a... very serious... investigation, and your assistance would be appreciated. In return for your aid, we will allow you to remove any valuables from what remains of the wreck once all of the evidence has been collected."</text>
+                    <choice>
+                        <text>Sure!</text>
+                        <event>
+                            <text>After they conduct their search and carry a cart of evidence out, the investigation team fills you in on the situation while you scrap the station. A Rockman high up in the Theocracy's hierarchy was performing quite the thunderous speech, but it was cut short when he, and the entirety of his audience, were killed in a bombing that razed the entire station.</text>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event>
+                                    <text>Evidence from the remnants of the station implied that the attack was not the work of some Outcast band or internal political matter, but an intervention from another group entirely. Rumors had been circulating around nearby beacons and star systems of a fledgling cult known as the "Gazers," whose preachings were aggressive enough to sway even the most hardened Chrysolic practitioners, and whose converts always wandered around in a drunken stupor. They've been a pain for Rock police to track down until today, and perhaps a Renegade like you could have a better shot at figuring out what happened.</text>
+                                    <autoReward level="HIGH">scrap</autoReward>
+                                    <quest event="AA_EVENT_QUEST_PASTICHE"/>
+                                </event>
+                            </choice>
+                        </event>
+                    </choice>
+                    <choice>
+                        <text>No thank you.</text>
+                        <event>
+                            <text>You decline. The Rockman grunts, but says no more and shuts off the transmission.</text>
+                            <choice>
+                                <text>Do something onboard the ship.</text>
+                                <event load="STORAGE_CHECK"/>
+                            </choice>
+                            <choice>
+                                <text>Do nothing.</text>
+                                <event/>
+                            </choice>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Not our business.</text>
+        <event>
+            <text>You figure it's an internal matter, and decide to avoid the Rock ships.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+        </event>
+    </choice>
+</event>
+
+<event name="AA_EVENT_QUEST_PASTICHE" unique="true">
+    <beaconType id="map_icon_quest" global="true">
+        <color r="69" g="168" b="235" a="1"/>
+        <unvisitedTooltip>The purported location of a cult.</unvisitedTooltip>
+	</beaconType>
+    <text>The investigators' directions led you to a beacon in a mostly unpopulated star system. Although it is quite pretty, you know you have to hurry. In orbit around the planet, you can see a massive space station, likely belonging to the so-called "Gazers." It has been constructed in the shape of a massive eye, staring back from the beacon. There are no other ships anywhere in orbit of the planet or the station, suggesting they are the only inhabitants of the system.</text>
+    <img back="BACKGROUND" planet="PLANET_UNPOPULATED"/>
+    <choice>
+        <text>Check it out.</text>
+        <event>
+            <text>The station does not open any communications, and the hangar doors seem to have been left open. It remains on its path in orbit, making it easy to intercept and enter. There aren't even drones in the hangar to service your ship, only a few Rock vessels hastily painted over with black paint and an insignia resembling some sort of three-legged creature. It seems almost as if the station is abandoned.</text>
+            <jumpEvent>AA_EVENT_QUEST_PASTICHE_ENCOUNTER</jumpEvent>
+            <choice>
+                <text>Explore further.</text>
+                <event>
+                    <text>The hallways are not very well-maintained, with patches of rust and dust, chips in the wall, and service doors left hanging open. The lights flicker ominously, and the air feels stale enough that you suspect the station's life support is malfunctioning.</text>
+                    <choice>
+                        <text>Continue...</text>
+                        <event>
+                            <text>Each corridor feels like a maze unto itself, yet all of them lead to a fairly large ritual chamber with a golden statue of a three-legged entity similar to what was depicted on the Rock ships. Monstrous grins are carved into the walls, some big, some small, and several shelves of scripture are scattered around alongside a variety of crates and boxes. You will not have much time before the air becomes unbreathable, so your inspection of the room will have to be quick and dirty.</text>
+                            <choice>
+                                <text>Leave the ritual room be.</text>
+                                <event>
+                                    <text>You can feel the air getting more and more difficult to breathe with each passing second. You give your crew the order to leave before you all suffocate.</text>
+                                </event>
+                            </choice>
+                            <choice>
+                                <text>Inspect the boxes.</text>
+                                <event>
+                                    <text>Although most of the boxes are full of ritual components and basic supplies, a couple of them are crammed full of ammunition. It seems the Gazers were keeping some ammunition on hand in case the situation spiraled out of control. Even better, however, is another box containing timing mechanisms and other electronics; it's likely they jury-rigged some of their spare missiles to launch an attack on the speech.</text>
+                                    <choice hidden="true">
+                                        <text>Confiscate the missiles.</text>
+                                        <event>
+                                            <text>Leaving a couple of them behind as evidence should be enough for the Theocracy investigators, especially since you don't need timers to connect them to. Being in boxes makes it easier to carry them out of the station, though they are still rather heavy. There isn't enough oxygen left to grab much more, but on your way out of the station, there's a few more supplies to take with you as well.</text>
+                                            <autoReward level="HIGH">missiles</autoReward>
+                                        </event>
+                                    </choice>
+                                </event>
+                            </choice>
+                            <choice>
+                                <text>Inspect the bookshelves.</text>
+                                <event>
+                                    <text>Never would you have expected to see both Chrysolic and Illesctrian scripture right next to each other on a shelf. The cultists have amassed a collection of holy texts from across the galaxy, likely in an attempt to better understand their own religious experiences. This, of course, pales in comparison to the entire shelf above it of black-covered books, stark and practical in their construction - it would take weeks to read through it all, but it could definitely serve as a way to pass the time or find out more about these Gazers.</text>
+                                    <choice hidden="true">
+                                        <text>Take as many books as you can.</text>
+                                        <event>
+                                            <text>The books are quite a collection, and it takes your crew a while to find a good way to carry them all. Although the texts on other religions would certainly be worth a decent amount of scrap to the right people, you decide to hang onto the Gazer scripture, as it could prove useful in dealing with these cultists. There isn't enough oxygen left to grab much more, but on your way out of the station, there's a few more supplies to take with you as well.</text>
+                                            <autoReward level="LOW">stuff</autoReward>
+                                            <hiddenAug>AA_GAZER_SCRIPTURE</hiddenAug>
+                                        </event>
+                                    </choice>
+                                </event>
+                            </choice>
+                            <choice>
+                                <text>Inspect the statue.</text>
+                                <event>
+                                    <text>Underneath the golden monument is a ritual circle, inscribed with inks and carvings that indicate heavy use. Even with the obvious seams and connection points indicating it was assembled piece by piece, it's a miracle the Gazers could fit the statue into the station, especially given how tight the passageways here are. Although something in the back of your head says this thing would be worth a boatload of scrap, making off with it would be no easy task.</text>
+                                    <choice req="LIST_CREW_ENGI" hidden="true">
+                                        <text>(Engi Crew) Have your Engi help disassemble it.</text>
+                                        <event name="AA_EVENT_QUEST_PASTICHE_INSPECT_STATUE">
+                                            <text>As large as the statue is, with precision and expertise, you and your crew concoct a plan to disassemble it for transport. It would still take a while to move, and you suspect the life support here will give out before you can move them all.</text>
+                                            <choice req="LIST_CREW_ROCK" hidden="true">
+                                                <text>(Rock Crew) Have your Rock help move the pieces.</text>
+                                                <event>
+                                                    <text>Each piece of the statue is extremely unwieldy and heavy, but your crew's strength helps ease the process. You are able to navigate each piece through the hallways of the station and dump the entire statue aboard before the life support in the room gives out. It's certainly pretty, but it will likely provide a lot more value than just aesthetics.</text>
+                                                    <weapon name="AA_GAZER_STATUE"/>
+                                                </event>
+                                            </choice>
+                                            <choice req="BLUELIST_CREW_NO2" hidden="true">
+                                                <text>(Anaerobic Crew) It will take a while, but your anaerobic crewmember can handle the lack of oxygen.</text>
+                                                <event>
+                                                    <text>Each piece of the statue is extremely unwieldy and heavy, and the falling oxygen levels mean that only anaerobic crew can even enter the station after a time. Very slowly, your crew is able to navigate each piece through the hallways of the station and dump the entire statue aboard. It's certainly pretty, but it will likely provide a lot more value than just aesthetics.</text>
+                                                    <modifyPursuit amount="1"/>
+                                                    <weapon name="AA_GAZER_STATUE"/>
+                                                </event>
+                                            </choice>
+                                            <choice req="DRONE_CONTROL_MEDICAL" hidden="true">
+                                                <text>(Medical Drone) Have your drone empower your crew.</text>
+                                                <event>
+                                                    <text>Each piece of the statue is extremely unwieldy and heavy, but boosting your crew's speed with your medical drone helps ease the process. You are able to navigate each piece through the hallways of the station and dump the entire statue aboard before the life support in the room gives out. It's certainly pretty, but it will likely provide a lot more value than just aesthetics.</text>
+                                                    <weapon name="AA_GAZER_STATUE"/>
+                                                </event>
+                                            </choice>
+                                            <choice hidden="true">
+                                                <text>The pieces would be too heavy.</text>
+                                                <event>
+                                                    <text>There's no way to get the statue off of the station. Without much time to spare, you and your crew collect all the supplies they can carry on their person before departing. It's not much, but it's better than nothing.</text>
+                                                    <autoReward level="LOW">stuff</autoReward>
+                                                </event>
+                                            </choice>
+                                        </event>
+                                    </choice>
+                                    <choice req="LIST_CREW_GHOST" hidden="true">
+                                        <text>(Ghost Crew) Have your Ghost help disassemble it.</text>
+                                        <event load="AA_EVENT_QUEST_PASTICHE_INSPECT_STATUE"/>
+                                    </choice>
+                                    <choice req="DRONE_CONTROL_REPAIR_CREW" hidden="true">
+                                        <text>(Repair Drone) Have your drone help disassemble it.</text>
+                                        <event load="AA_EVENT_QUEST_PASTICHE_INSPECT_STATUE"/>
+                                    </choice>
+                                    <choice hidden="true">
+                                        <text>There's no way we can disassemble it in time.</text>
+                                        <event>
+                                            <text>There's no way to get the statue off of the station. Without much time to spare, you and your crew collect all the supplies they can carry on their person before departing. It's not much, but it's better than nothing.</text>
+                                            <autoReward level="LOW">stuff</autoReward>
+                                        </event>
+                                    </choice>
+                                </event>
+                            </choice>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+            <choice>
+                <text>This could be an ambush.</text>
+                <event>
+                    <text>You stay in the hangar, the murals on the bay wall providing both juicy evidence and an interesting puzzle to decipher as you work on your vessel. Hopefully, the Theocracy investigation team will have enough here to clean up the mess.</text>
+                    <choice>
+                        <text>Do something onboard the ship.</text>
+                        <event load="STORAGE_CHECK"/>
+                    </choice>
+                    <choice>
+                        <text>Do nothing.</text>
+                        <event/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Stay away.</text>
+        <event>
+            <text>You avoid the station. Hopefully, just knowing its location will be enough for the Theocracy investigators to clean up the mess.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+        </event>
+    </choice>
+</event>
+
+<ship name="AA_SHIP_ROCK_PASTICHE" auto_blueprint="AA_SHIP_ROCK_PASTICHE">
+    <triggeredEvent name="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_TRIGGER" event="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_ESCAPE" thisFight="true">
+        <enemyHull amount="0" min="4" max="4" scaling="0.0"/>
+        <enemyCrew amount="0" min="2" max="2" includeClonebay="true"/>
+    </triggeredEvent>
+    <gotaway load="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_GOTAWAY"/>
+	<destroyed load="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_KILL"/>
+    <deadCrew load="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_KILL"/>
+    <weaponOverride count="1">
+        <name>MISSILES_PARTICLE</name> <!-- TECHNICALLY speaking Rocks can have this :3 -->
+    </weaponOverride>
+</ship>
+<event name="AA_EVENT_QUEST_PASTICHE_ENCOUNTER">
+    <text>As you fire up the engines to leave the station, alarms begin to blare in the hangar. A rather large Rock ship sporting a pretty nasty-looking missile launcher begins to rocket towards the bay from the nearby moon, covered in the same black paint as the other docked ships. It seems the station was not abandoned after all...</text>
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <text>The ship hails you, its comms hissing to life to reveal a great number of Gazer cultists aboard. They stumble around, as if in a stupor, and speak in an angered, slurred tone. "Trespasser... who... are you..."</text>
+            <ship load="AA_SHIP_ROCK_PASTICHE" hostile="false"/>
+            <choice>
+                <text>We've come to stop this operation.</text>
+                <event>
+                    <text>"You... dare to stop... what is to come?" The captain and every single one of his crew stares directly at you through the intercom. At once, they all grin in unison, wide, toothy grins that seem like they've... always been there. "He was only... the first pin... in the plan. You will see... you will see..."</text>
+                    <ship hostile="true"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice>
+                <text>We've come to learn more about your ways.</text>
+                <event>
+                    <text>"You... wish to join us...? Who... how..." They all stand there, their stupor obfuscating your words.</text>
+                    <choice>
+                        <text>Yes, we wish to join you.</text>
+                         <event name="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_LIAR">
+                            <text>"LIAR!" The captain slams his fist into the helm so hard that the control panel cracks underneath it. He, and every single one of his crew, grin at you in unison, wide, toothy grins that seem like they've... always been there. "She told us... we were special. We are the only ones who know, WE ARE THE ONLY ONES SHE LOVES!"</text>
+                            <ship hostile="true"/>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event load="COMBAT_CHECK"/>
+                            </choice>
+                        </event>
+                    </choice>
+                    <choice>
+                        <text>No, idiot! We've come to kill you.</text>
+                        <event>
+                            <text>The Rockman at the helm begins to laugh, a maniacal laugh that echoes through the entire ship. He, and every single one of his crew, grin at you in unison, wide, toothy grins that seem like they've... always been there. "In time... you will see... who the real idiot... is!"</text>
+                            <ship hostile="true"/>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event load="COMBAT_CHECK"/>
+                            </choice>
+                        </event>
+                    </choice>
+                    <choice req="AA_GAZER_SCRIPTURE">
+                        <text>(Gazer Scripture) Claim you've been reading their books.</text>
+                        <event load="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_LIAR"/>
+                    </choice>
+                    <choice req="LIST_CREW_ROCK">
+                        <text>(Rock Crew) Have your Rockman talk them down.</text>
+                        <event load="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_LIAR"/>
+                    </choice>
+                    <choice req="LIST_CREW_ZOLTAN">
+                        <text>(Zoltan Crew) Have your Zoltan talk them down.</text>
+                        <event load="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_LIAR"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice>
+                <text>I don't know why we're here.</text>
+                <event>
+                    <text>The Rockman at the helm begins to laugh, a maniacal laugh that echoes through the entire ship. He, and every single one of his crew, grin at you in unison, wide, toothy grins that seem like they've... always been there. "Then you must... get out... of our way! We must continue to follow the plan!"</text>
+                    <ship hostile="true"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice req="LIST_CREW_ELDRITCH" hidden="true">
+                <text>(Eldritch Crew) We have come for an offering.</text>
+                <event>
+                    <text>As soon as your unusual crewmember takes the stand, the Rockmen all stand up straight, whatever mental haze they are feeling directing itself towards the viewscreen. They all drop to their knees in prayer, muttering ancient words that you do not understand. The ship gives you everything they have, in addition to even more loot set aside in hidden compartments on the station! After the haul is brought aboard, your crew even shows you leaked coordinates to the supposed birthplace of their religion.</text>
+                    <autoReward level="HIGH">scrap</autoReward>
+                    <weapon name="GIFTLIST_ROCK"/>
+                    <crewMember amount="1" class="rock_commando"/>
+                    <quest event="AA_EVENT_QUEST_PASTICHE_FINAL"/>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+<event name="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_KILL">
+    <text>With the strange Rock ship defeated, you can finally leave the beacon without further interruption. They had a lot of scrap and resources to give, likely an offering or resources to further a plan. Although you expect the Theocracy will be here soon to clean the rest up, you can't help but feel that this mystery goes deeper than you thought...</text>
+    <autoReward level="HIGH">scrap</autoReward>
+</event>
+<event name="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_ESCAPE">
+    <text>"Must... go... home..." With the Gazer ship running on fumes, the crew at least have enough sense left in their minds to attempt an escape, presumably to what they see as safer territory. Their engines sputter to life!</text>
+    <clearTriggeredEvent name="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_TRIGGER"/> 
+    <escape/>
+</event>
+<event name="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_GOTAWAY">
+    <text>The Gazer ship has escaped. Although the Theocracy likely won't be very happy, they'll at least have a station full of evidence to work out the case on their own. This "home," however, could be anywhere, and they left very little to go off of.</text>
+    <choice hidden="true" req="FTL_JUMPER">
+		<text>(Adv. Navigation) Track the ship's jump signature.</text>
+		<event name="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_GOTAWAY_FOLLOW">
+            <text>Sniffing out the ship's jump signature allows your systems to reconstruct the path it took across the stars. Although the coordinates it offers seem rather strange, and some sort of interference radiates from the beacon in question, it's the only lead you have if you want to pursue this mystery to its end. You scoop up some loose scrap shaken from their battered vessel, and prepare to leave.</text>
+            <autoReward level="LOW">scrap</autoReward>
+            <quest event="AA_EVENT_QUEST_PASTICHE_FINAL"/>
+        </event>
+	</choice>
+	<choice hidden="true" req="ADV_SCANNERS">
+		<text>(Long-Ranged Scanners) Track the ship's jump signature.</text>
+		<event load="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_GOTAWAY_FOLLOW"/>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="3">
+		<text>(Adv. Sensors) Track the ship's jump signature.</text>
+		<event load="AA_EVENT_QUEST_PASTICHE_ENCOUNTER_GOTAWAY_FOLLOW"/>
+	</choice>
+    	<choice hidden="true">
+		<text>There's nothing we can do.</text>
+		<event>
+            <text>Although they may have escaped, there's at least a bit of loose scrap from the beating their ship took. You are able to squeeze in a salvage mission before the time comes to leave.</text>
+            <autoReward level="LOW">scrap</autoReward>
+        </event>
+	</choice>
+</event>
+
+<ship name="AA_BOSS_SIREN_PASTICHE" auto_blueprint="AA_BOSS_SIREN_PASTICHE">
+	<destroyed load="AA_EVENT_QUEST_PASTICHE_FINAL_WIN"/>
+    <deadCrew>
+        <recallBoarders force="true"/>
+        <enemyDamage amount="30"/>
+        <event load="AA_EVENT_QUEST_PASTICHE_FINAL_WIN"/>
+    </deadCrew>
+    <miniBoss sound="nothing" musicDelay="-1"/>
+</ship>
+<event name="AA_BOSS_SIREN_PASTICHE_HAZARDS"> <!-- Reality Manipulator augment is handled by this technical event -->
+	<removeHazards/>
+	<changeBackground>VICTORY_TRUE</changeBackground>
+    <playSound>reality_manipulator</playSound>
+	<loadEventList seeded="false">
+		<event name="AA_BOSS_SIREN_PASTICHE_HAZARDS_SUN"/>
+		<event name="AA_BOSS_SIREN_PASTICHE_HAZARDS_ASTEROID"/>
+		<event name="AA_BOSS_SIREN_PASTICHE_HAZARDS_PULSAR"/>
+	</loadEventList>
+</event>
+<event name="AA_BOSS_SIREN_PASTICHE_HAZARDS_SUN">
+	<environment type="sun"/>
+</event><event name="AA_BOSS_SIREN_PASTICHE_HAZARDS_ASTEROID">
+	<environment type="asteroid"/>
+</event><event name="AA_BOSS_SIREN_PASTICHE_HAZARDS_PULSAR">
+	<environment type="pulsar"/>
+</event>
+<event name="AA_EVENT_QUEST_PASTICHE_FINAL" unique="true">
+    <beaconType id="map_icon_cultist" global="true">
+		<color r="255" g="0" b="0" a="1.0"/>
+		<unvisitedTooltip>The location the Gazers jumped to.</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+		<undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
+	</beaconType>
+    <text>You've made it to the presumed "home" of the Gazers. The stars here seem to be dimmer than usual, and there are no other ships at the beacon. It feels... quiet. Too quiet.</text>
+    <img back="BACK_EVENT_STARS_SPARSE" planet="NONE"/>
+    <choice>
+        <text>Stay at the beacon.</text>
+        <event>
+            <text>The oppressive darkness around you seems to blanket your ship in its cold embrace. It feels like the lights are dimming, their colors separating more and more the longer you remain here. Nothing seems to be here, though the sense of fear is quite palpable...</text>
+            <playMusic>nothing</playMusic>
+            <changeBackground>VICTORY_TRUE</changeBackground>
+            <choice>
+                <text>Continue...</text>
+                <event>
+                    <text>As it seems the darkness can't get any thicker, a roiling fog of shadow that threatens to swallow you, your ship, and your crew whole, you can make out the outline of another vessel. Blacker than the darkest night, its paradoxical highlights splitting into hues of red and blue at the corners, the mere sight of it is enough to give you a splitting headache for reasons that you can't explain. The text on each screen of your ship begins to smear, each visual warping to display maddening grins that stare into your very soul, whispers echoing in the back of your mind that direct you to do everything you don't want to do.</text>
+                    <ship load="AA_BOSS_SIREN_PASTICHE" hostile="false"/>
+                    <variable name="loc_protomv_drive_block" op="set" val="1"/>
+                    <choice>
+                        <text>Continue...</text>
+                        <event>
+                            <text>As the maddening darkness draws closer, both infinitely captivating and utterly repulsive in every possible way, you see visions of infinite futures that could be, and infinite pasts that led you to this moment. The ship does not hail, but the message of its occupants, a message everyone on your ship sees in their mind's eye, is clearer than the purest pools of water. You must join them, and the Rockmen who have dedicated themselves to them, and submit to eternal revelry in a madness so deep that it will swallow you forever.</text>
+                            <choice>
+                                <text>Join them.</text>
+                                <event name="AA_EVENT_QUEST_PASTICHE_FINAL_LOSE">
+                                    <text>Their ship slowly begins to creep up beside yours. Although you can feel your legs slowly trudging below you, the last few cognizant neurons in your mind scream at you to stop, that this is wrong, that you still have a mission to do. Their cries are but whispers amongst the comforting thoughts filling your head...</text>
+                                    <choice>
+                                        <text>Wait, this is wrong!</text>
+                                        <event load="AA_EVENT_QUEST_PASTICHE_FINAL_FIGHT"/>
+                                    </choice>
+                                    <choice>
+                                        <text>Relax, and let your worries slip away.</text>
+                                        <event>
+                                            <text>In what feels like an instant, your last feelings of terror are overcome with a feeling of absolute bliss, your vision hazy and your thoughts pulsing in rhythm with the heralds of a new dawn. Your crew follow suit, walking in lockstep with each minute that passes. Your vessel begins to unravel, revealing a bridge into infinite blackness that you are all too comfortable to walk down, forever and ever, as the secrets of the Multiverse fill your mind, melting your mind until there is naught left but your desire to serve the gods of this world. You are one with your new masters, and it feels good.</text>
+                                            <lose text="Forever enslaved to a being beyond your comprehension, you traveled the Multiverse as a chained captain."/>
+                                        </event>
+                                    </choice>
+                                </event>
+                            </choice>
+                            <choice>
+                                <text>Resist the pull.</text>
+                                <event>
+                                    <text>Why don't you want to join them, you hear in the back of your mind? All of your worries can drift away. That silly little Flagship, that funny little Rebel fleet, your fears of the health and well-being of your crew, or of being torn to shreds by giant alien spiders... all of it can become irrelevant, for as long as you live. Join them.</text>
+                                    <choice>
+                                        <text>Join them.</text>
+                                        <event load="AA_EVENT_QUEST_PASTICHE_FINAL_LOSE"/>
+                                    </choice>
+                                    <choice>
+                                        <text>Continue to resist the pull.</text>
+                                        <event load="AA_EVENT_QUEST_PASTICHE_FINAL_FIGHT"/>
+                                    </choice>
+                                </event>
+                            </choice>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+            <choice>
+            <text>Run!</text>
+            <event>
+                <text>Fearful, you order your crew to punch the engines and escape the general vicinity of the system. You do not want to tangle with whatever this is!</text>
+                <changeBackground>BACKGROUND</changeBackground>
+                <playMusic/>
+                <choice>
+                    <text>Do something onboard the ship.</text>
+                    <event load="STORAGE_CHECK"/>
+                </choice>
+                <choice>
+                    <text>Do nothing.</text>
+                    <event/>
+                </choice>
+            </event>
+        </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Get out of here!</text>
+        <event>
+            <text>Space normally doesn't look like this. With a lingering sense of dread tingling down your spine, you order your crew to move on after the usual storage check procedures. You do not want to tangle with whatever this is!</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK"/>
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event/>
+			</choice>
+        </event>
+    </choice>
+</event>
+<event name="AA_EVENT_QUEST_PASTICHE_FINAL_FIGHT">
+    <text>The fuzz from your mind begins to dissipate, the comforting whispers beginning to recede as the full might of the abomination before you becomes apparent. A mix of homegrown weaponry and guns pillaged from other vessels adorns its hull, and the cultists from the Gazer craft you met earlier are visible through your comms feed alongside massive, jet-black, three-legged creatures of unknown origin. The ship emits an unearthly roar as its thrusters hiss black fire and grainy smoke, and its highlights nearly blind you with their captivating, migraine-inducing splendor. There is only one way out of this, and that is to fight for your life!</text>
+    <ship hostile="true"/>
+    <playMusic>ancient2</playMusic>
+    <triggeredEvent name="AA_TRIGGER_BOSS_SIREN_PASTICHE_HAZARDS" event="AA_BOSS_SIREN_PASTICHE_HAZARDS" time="35" thisFight="true" loops="999999"> <!-- Start hazard cycling -->
+        <warningMessage id="warning_newhazard" x="444" y="46" time="5.0" centerText="true" flash="true" sound="surgeWarning" useWarningLine="true"/>
+    </triggeredEvent>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="COMBAT_CHECK"/>
+    </choice>
+</event>
+<event name="AA_EVENT_QUEST_PASTICHE_FINAL_WIN">
+    <text>The ship seems to writhe in several impossible directions, and you rapidly black out...</text>
+    <removeHazards/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>When you finally come to, you see the rest of your crew also pulling themselves off of the floor. Your ship's systems begin to sputter back online, revealing the smoldering wreckage of an enemy ship you barely recognize. Its hull is darker than the depths of space, and it bears runic marks across its exterior that once glowed with a disorienting light. Its scrap, though relatively low in quantity and still crackling with an energy you do not understand, is sure to be extremely valuable thanks to its mysterious source.</text>
+            <autoReward level="HIGH">scrap</autoReward>
+            <changeBackground>BACKGROUND</changeBackground>
+            <variable name="loc_protomv_drive_block" op="set" val="0"/>
+            <playMusic/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>Amidst the wreckage, you find the corpses of the tripods who tried to take control of you, crossed with the crumbled stones of the cultists who fell in the battle. You're able to retrieve both a surviving weapon and a cultist sealed in a stasis pod, their mind now free of the creatures' influence!</text>
+                    <autoReward level="HIGH">stuff</autoReward>
+                    <weapon name="AA_INFUSER_MADNESS"/>
+                    <crewMember amount="1" class="rock_crusader"/>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>

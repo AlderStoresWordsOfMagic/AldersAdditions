@@ -338,6 +338,31 @@
 </event>
 
 
+<!-- /// COMBAT AUGMENTS /// -->
+
+<mod:findName type="event" name="COMBAT_CHECK_REAL">
+    <mod-append:choice req="AA_BOON_IMAGINE">
+        <text>(Blessing of Wonder) Call upon your imagination.</text>
+        <event load="AA_COMBAT_CHECK_IMAGINE"/>
+    </mod-append:choice>
+</mod:findName>
+<event name="AA_COMBAT_CHECK_IMAGINE">
+	<text>Are you sure you want to do this?
+	[Fires a single Imaginator beam from your ship.]</text>
+	<choice>
+		<text>Yes.</text>
+		<event>
+			<text>You peer into the deepest recesses of your mind...</text>
+			<superBarrage player="true" name="AA_SURGE_IMAGINE"/>
+		</event>
+	</choice>
+	<choice>
+		<text>Do something else instead.</text>
+		<event load="COMBAT_CHECK"/>
+	</choice>
+</event>
+
+
 <!-- /// STORAGE CHECK APPENDS /// -->
 
 <!-- // MINELAUNCHERS // -->
@@ -361,7 +386,7 @@
 	<mod:findWithChildLike type="choice" child-type="event"><mod:selector load="STORAGE_CHECK_JOB_LOAD"/>
 		<mod:setAttributes req="pilot" lvl="1" blue="false" max_group="999"/>
 	</mod:findWithChildLike>
-	<mod-append:choice req="AA_MINELAUNCHER_CLOAK" blue="false">
+	<mod-append:choice req="AA_MINELAUNCHER_PARTICLE" blue="false">
 		<text>Use your Particle Mine Launcher. [-7}, gives 2 delay]</text> 
 		<event>
 		   <text>You rig the ammunition and set a trap for the Rebels. It's definitely illegal to do, but you'll be gone before it matters.</text>
@@ -406,17 +431,17 @@
 	<text>You are viewing the lab menu for: [DUSTWORM]</text>
 	<choice req="AA_LAB_DUSTWORM_ESCAPE" lvl="1" max_group="0" blue="false" hidden="true">
 		<text>Currently Installed: Escape Protocol.
-		[+50% movement speed, fear reaction even when controlled]</text>
+		[Dustworms move at doubled speed in a room with enemy crew]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
-	<choice req="AA_LAB_DUSTWORM_RAGE" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: Emotional Reaction.
-		[Can fight at normal damage and resists mind control, loses sabotage bonus]</text>
+	<choice req="AA_LAB_DUSTWORM_DEFENSE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Hunker Down.
+		[Dustworms take halved damage from combat when an allied crew is in the room]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
-	<choice req="AA_LAB_DUSTWORM_SILENCE" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: Confounding Stare.
-		[Silk-wrapped enemies cannot use their abilities if a Dustworm is in the room]</text>
+	<choice req="AA_LAB_DUSTWORM_FIRE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Flaming Passion.
+		[Dustworms become immune to fire, but their sabotage bonus is reduced to 1.0x while outside of fire]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
@@ -428,24 +453,34 @@
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="0" max_group="1" blue="false" hidden="true">
-		<text>Pri: Escape Protocol. [Cost: 25~, 3{]</text>
+		<text>Pri: Escape Protocol. [Cost: 25~, 3}]</text>
 		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_ESCAPE"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="1" max_group="2" blue="false" hidden="true">
-		<text>Pri: Emotional Reaction. [An upgrade is already installed]</text>
+		<text>Pri: Hunker Down. [An upgrade is already installed]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="0" max_group="2" blue="false" hidden="true">
-		<text>Pri: Emotional Reaction. [Cost: 30~, 2}]</text>
-		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_RAGE"/>
+		<text>Pri: Hunker Down. [Cost: 30~, 2|]</text>
+		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_DEFENSE"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="1" max_group="3" blue="false" hidden="true">
-		<text>Pri: Confounding Stare. [An upgrade is already installed]</text>
+		<text>Pri: Flaming Passion. [An upgrade is already installed]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="0" max_group="3" blue="false" hidden="true">
-		<text>Pri: Confounding Stare. [Cost: 30~, 2|]</text>
-		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_SILENCE"/>
+		<text>Pri: Flaming Passion. [Cost: 30~, 3{}]</text>
+		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_FIRE"/>
+	</choice>
+		<choice req="AA_LAB_DUSTWORM_SECONDARY_SILENCE" lvl="1" max_group="4" blue="false" hidden="true">
+		<text>Sec [Dustworm]: Captivating Strands. [An upgrade is already installed]
+		[Regular Dustworm silk disables enemy abilities and teleportation instead of reducing their movement speed]
+		</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="AA_LAB_DUSTWORM_SECONDARY_SILENCE" lvl="0" max_group="4" blue="false" hidden="true">
+		<text>Sec [Dustworm]: Captivating Strands. [Cost: 40~, 2|]</text>
+		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_SECONDARY_SILENCE"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="5" blue="false" hidden="true">
 		<text>Go back.</text>
@@ -454,16 +489,16 @@
 </event>
 <event name="AA_STORAGE_CHECK_LAB_DUSTWORM_ESCAPE">
 	<text>You are about to install the Escape Protocol modification.
-	[Effects: Dustworms move 50% faster, but react to fear even when controlled]
+	[Effects: Dustworms move at doubled speed in a room with enemy crew]
 	
 	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
 	<choice hidden="true">
-		<text>Install the modification. [Cost: 25~, 3{]</text>
+		<text>Install the modification. [Cost: 25~, 3}]</text>
 		<event>
 			<text>You install the modification.</text>
 			<item_modify>
 				<item type="scrap" min="-25" max="-25"/>
-				<item type="fuel" min="-3" max="-3"/>
+				<item type="missiles" min="-3" max="-3"/>
 			</item_modify>
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -482,39 +517,9 @@
 	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
 	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
 </event>
-<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_RAGE">
-	<text>You are about to install the Emotional Reaction modification.
-	[Effects: Dustworms can now fight at normal damage and resist mind control, but lose their sabotage bonus]
-	
-	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
-	<choice hidden="true">
-		<text>Install the modification. [Cost: 30~, 2}]</text>
-		<event>
-			<text>You install the modification.</text>
-			<item_modify>
-				<item type="scrap" min="-30" max="-30"/>
-				<item type="missiles" min="-2" max="-2"/>
-			</item_modify>
-			<choice hidden="true">
-				<text>Continue...</text>
-				<event load="AA_INSTALL_LAB_DUSTWORM_RAGE"/>
-			</choice>
-		</event>
-	</choice>
-	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Nevermind.</text>
-		<event load="STORAGE_CHECK_LAB_LOAD"/>
-	</choice>
-</event>
-<event name="AA_INSTALL_LAB_DUSTWORM_RAGE">
-	<variable name="loc_lab_upgrades" op="add" val="1"/>
-	<hiddenAug>AA_LAB_DUSTWORM_RAGE</hiddenAug>
-	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
-	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
-</event>
-<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_SILENCE">
-	<text>You are about to install the Confounding Stare modification.
-	[Effects: Enemies in the same room as a Dustworm who are wrapped in silk cannot use their abilities]
+<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_DEFENSE">
+	<text>You are about to install the Hunker Down modification.
+	[Effects: Dustworms take halved damage from combat when an allied crew is in the room]
 	
 	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
 	<choice hidden="true">
@@ -527,7 +532,7 @@
 			</item_modify>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="AA_INSTALL_LAB_DUSTWORM_SILENCE"/>
+				<event load="AA_INSTALL_LAB_DUSTWORM_DEFENSE"/>
 			</choice>
 		</event>
 	</choice>
@@ -536,12 +541,195 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
-<event name="AA_INSTALL_LAB_DUSTWORM_SILENCE">
+<event name="AA_INSTALL_LAB_DUSTWORM_DEFENSE">
 	<variable name="loc_lab_upgrades" op="add" val="1"/>
-	<hiddenAug>AA_LAB_DUSTWORM_SILENCE</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_DEFENSE</hiddenAug>
 	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
 	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
 </event>
+<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_FIRE">
+	<text>You are about to install the Flaming Passion modification.
+	[Effects: Dustworms become immune to fire, but they lose any bonus to sabotage speed while not on fire]
+	
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 30~, 3{]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="scrap" min="-30" max="-30"/>
+				<item type="fuel" min="-3" max="-3"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="AA_INSTALL_LAB_DUSTWORM_FIRE"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+<event name="AA_INSTALL_LAB_DUSTWORM_FIRE">
+	<variable name="loc_lab_upgrades" op="add" val="1"/>
+	<hiddenAug>AA_LAB_DUSTWORM_FIRE</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
+	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
+</event>
+<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_SECONDARY_SILENCE">
+	<text>You are about to install the Captivating Strands modification.
+	[Effects: Regular Dustworm silk disables enemy abilities and teleportation instead of reducing their movement speed]
+	
+	[Warning: This will affect standard Dustworms only. You will be able to install other secondary mods and primary mods afterwards.]</text>
+	<choice hidden="true" req="LAB_UPGRADE" lvl="1" max_group="0" blue="false">
+		<text>Install the modification. [Cost: 40~, 2|]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="scrap" min="-40" max="-40"/>
+				<item type="drones" min="-2" max="-2"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="AA_INSTALL_LAB_DUSTWORM_SECONDARY_SILENCE"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="LAB_UPGRADE" lvl="0" max_lvl="2" max_group="0" blue="false" hidden="true">
+		<text>You must have the lab upgrade for this modification.</text>
+		<event load="OPTION_INVALID"/>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD"/>
+	</choice>
+</event>
+<event name="AA_INSTALL_LAB_DUSTWORM_SECONDARY_SILENCE">
+	<hiddenAug>AA_LAB_DUSTWORM_SECONDARY_SILENCE</hiddenAug>
+	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
+</event>
+
+
+<!-- // STORAGE CHECK OPTIONS // -->
+
+<!-- / CLONE CANNON / -->
+<mod:findName type="event" name="STORAGE_CHECK_CLONE_CANNON">
+    <mod:findLike type="choice">
+        <mod:findLike type="event">
+            <mod-append:choice hidden="true" req="aa_dustworm" blue="false">
+				<text>Upload your Dustworm.</text>
+				<event>
+					<text>Are you sure? Any learned skills will be lost. You may later safely retrieve the loaded crew if desired.</text>
+					<choice hidden="true">
+						<text>Yes.</text>
+						<event>
+							<text>You start the process.</text>
+							<remove name="CLONE_CANNON"/>
+							<removeCrew class="aa_dustworm">
+								<clone>false</clone>
+								<text>Your crew cannot be cloned on your ship as they are inside the cannon.</text>
+							</removeCrew>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>You finish the process.</text>
+									<weapon name="AA_CLONE_CANNON_DUSTWORM"/>
+									<choice>
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+            </mod-append:choice>
+		</mod:findLike>
+	</mod:findLike>
+	<mod-append:choice hidden="true" req="AA_CLONE_CANNON_DUSTWORM" blue="false">
+		<text>Reset the cannon.</text>
+		<event>
+			<text>You reset the weapon.</text>
+			<remove name="AA_CLONE_CANNON_DUSTWORM"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text id="clone_cannon_unload"/>
+					<crewMember amount="1" class="aa_dustworm">Projectile</crewMember>
+					<weapon name="CLONE_CANNON"/>
+					<choice>
+						<text>Continue...</text>
+						<event load="STORAGE_CHECK"/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</mod-append:choice>
+</mod:findName>
+
+<!-- / PLEASURE PODS AND HAUNTED PODS / -->
+<mod:findName type="event" name="STORAGE_CHECK_AUG_SLUG_DUPLICATOR">
+	<mod-append:choice req="AA_LIST_CREW_DUSTWORM" lvl="2" blue="false">
+		<text>Breed 2 Dustworms.</text>
+		<event>
+			<text>Your Dustworms journey into the pods together, and when they exit another Dustworm is with them. Don't question how it grew up so fast.</text>
+			<crewMember amount="1" class="aa_dustworm"/>
+		</event>
+	</mod-append:choice>
+</mod:findName>
+<mod:findName type="event" name="STORAGE_CHECK_AUG_SLUG_DUPLICATOR_GHOST">
+	<mod-append:choice req="AA_LIST_CREW_DUSTWORM" lvl="2" blue="false">
+		<text>Breed 2 Dustworms.</text>
+		<event>
+			<text>Your Dustworms journey into the pods together, and when they exit another Dustworm is with them. Don't question how it grew up so fast.</text>
+			<crewMember amount="1" class="aa_dustworm"/>
+		</event>
+	</mod-append:choice>
+</mod:findName>
+
+<!-- / MORPH TRANSFORMATIONS / -->
+<mod:findName type="event" name="STORAGE_CHECK_MORPH_TRANSFORM">
+    <mod:findLike type="choice"><mod:selector req="LIST_CREW_MORPH_TRANSFORMED"/>
+        <mod:findLike type="event">
+            <mod-append:choice hidden="true" req="aa_blob_dustworm" blue="false">
+				<text>Reset your Dustworm Morph. [-1{]</text>
+				<event>
+					<item_modify>
+						<item type="fuel" min="-1" max="-1"/>
+					</item_modify>
+					<text>Your Morph transforms back to its original shape.</text>
+					<transformRace class="aa_blob_dustworm">blob</transformRace>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<loadEvent>STORAGE_CHECK_MORPH_TRANSFORM</loadEvent>
+						</event>
+					</choice>
+				</event>
+            </mod-append:choice>
+		</mod:findLike>
+    </mod:findLike>
+	<mod:findLike type="choice">
+	</mod:findLike>
+	<mod:findLike type="choice"><mod:selector req="blob"/>
+		<mod:findLike type="event">
+			<mod-append:choice hidden="true" req="AA_LIST_CREW_DUSTWORM">
+				<text>(Dustworm) Take the form of a Dustworm.</text>
+				<event>
+					<text>Your Morph transforms into a new shape.</text>
+					<transformRace class="blob">aa_blob_dustworm</transformRace>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<loadEvent>STORAGE_CHECK_MORPH_TRANSFORM</loadEvent>
+						</event>
+					</choice>
+				</event>
+			</mod-append:choice>
+		</mod:findLike>
+	</mod:findLike>
+</mod:findName>
 
 
 </FTL>

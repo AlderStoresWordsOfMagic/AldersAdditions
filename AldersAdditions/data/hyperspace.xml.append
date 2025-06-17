@@ -9,8 +9,6 @@
     <mod-append:script>data/scripts/augments/regen_hull.lua</mod-append:script>
     <mod-append:script>data/scripts/augments/regen_shields.lua</mod-append:script>
 
-    <mod-append:script>data/scripts/crew/behavior_fear.lua</mod-append:script>
-
     <mod-append:script>data/scripts/weapons/charge_holders.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/cumulative.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/infusers.lua</mod-append:script>
@@ -18,9 +16,9 @@
 
     <mod-append:script>data/scripts/weapons/oneoffs/imaginator.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/oneoffs/pointer.lua</mod-append:script>
+    <mod-append:script>data/scripts/weapons/oneoffs/prism.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/oneoffs/shock_cannon.lua</mod-append:script>
     <mod-append:script>data/scripts/weapons/oneoffs/thermal.lua</mod-append:script>
-    <mod-append:script>data/scripts/weapons/oneoffs/cum_beam_stability.lua</mod-append:script>
 
     <mod-append:script>data/scripts/misc/resistant_rooms.lua</mod-append:script>
 
@@ -34,13 +32,12 @@
 
     <!-- // EVENT FILES // -->
 
-    <mod-append:eventFile>sector_provision</mod-append:eventFile>
-
     <mod-append:eventFile>special_testing</mod-append:eventFile>
+    <!-- <mod-append:eventFile>special_temp</mod-append:eventFile> -->
 
     <!-- // VARIABLES // -->
-
-
+    <mod-append:variable name="aa_found_imaginator" op="set" val="0"/> <!-- Loads the generic version of the quest if the quest has been examined thoroughly enough. -->
+    <mod-append:variable name="aa_found_dustworm" op="set" val="0"/> <!-- Changes certain event text if Dustworms have been encountered in the run. -->
 
     <!-- // REQS // -->
 
@@ -58,6 +55,8 @@
 
     <mod-append:bossShip>AA_BOSS_REBEL_CRUISER</mod-append:bossShip>
 
+    <mod-append:bossShip>AA_BOSS_SIREN_PASTICHE</mod-append:bossShip>
+
     <mod-append:bossShip>AA_MVBOSS_STEALTH_CRUISER_NORMAL</mod-append:bossShip>
     <mod-append:bossShip>AA_MVBOSS_STEALTH_CRUISER_CHALLENGE</mod-append:bossShip>
     <mod-append:bossShip>AA_MVBOSS_STEALTH_CRUISER_EXTREME</mod-append:bossShip>
@@ -72,6 +71,11 @@
     <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_CHALLENGE</mod-append:bossShip>
     <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_EXTREME</mod-append:bossShip>
     <mod-append:bossShip>AA_MVBOSS_HACKER_CRUISER_CHAOS</mod-append:bossShip>
+
+    <mod-append:bossShip>AA_MVBOSS_MONK_CRUISER_NORMAL</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_MONK_CRUISER_CHALLENGE</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_MONK_CRUISER_EXTREME</mod-append:bossShip>
+    <mod-append:bossShip>AA_MVBOSS_MONK_CRUISER_CHAOS</mod-append:bossShip>
 
     <mod-append:bossShip>AA_MVBOSS_LIMIT_CRUISER_NORMAL</mod-append:bossShip>
     <mod-append:bossShip>AA_MVBOSS_LIMIT_CRUISER_CHALLENGE</mod-append:bossShip>
@@ -125,12 +129,6 @@ This enemy has one or more encased rooms, marked by the orange border and orange
         <!-- / GENERAL AUGMENTS / -->
 
         <mod-append:shipIcon>
-            <name>aa_icon_aug_tracking_flares</name>
-            <tooltip>TRACKING FLARES:
-This enemy launches tracking flares at the start of combat, disabling your Cloaking system if you have it for 30 seconds.</tooltip>
-        </mod-append:shipIcon>
-
-        <mod-append:shipIcon>
 	        <name>aa_icon_aug_particle_shield</name>
             <tooltip>PARTICLE SHIELD:
 This enemy is protected by a weak energy shield that regenerates on its own. Order your volleys carefully to break through.</tooltip>
@@ -157,13 +155,45 @@ Enemy Rockmen have 33% extra health, but move 40% slower.</tooltip>
 Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
         </mod-append:shipIcon>
 
+        <mod-append:shipIcon>
+            <name>aa_icon_lab_zoltan_shielding</name>
+            <tooltip>HARD-LIGHT SHIELDING:
+Enemy Zoltan can't fight, but cause all other crew in the room to take 33% damage from all sources.</tooltip>
+        </mod-append:shipIcon>
+
     </mod:findLike>
 
     <!-- // CUSTOM SHIP SPECIFICATIONS // -->
 
+    <!-- / MINIBOSSES / -->
+
+    <mod-append:customShip name="AA_SHIP_REBEL_IMAGINATOR"> <!-- Minibosses, for AA, are ships with partially static loadouts. -->
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_cloakjam</shipIcon>
+        </shipIcons>
+        <crew>
+            <human_mfk room="0"/>
+            <human_mfk room="1"/>
+        </crew>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_SHIP_ROCK_PASTICHE">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+        </shipIcons>
+        <crew>
+            <rock_crusader room="0"/>
+            <rock_crusader room="5"/>
+            <rock_outcast room="1"/>
+            <rock_outcast room="4"/>
+            <rock_commando room="9"/>
+        </crew>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+
     <!-- / BOSSES / -->
 
-    <mod-append:customShip name="AA_BOSS_REBEL_CRUISER">
+    <mod-append:customShip name="AA_BOSS_REBEL_CRUISER"> <!-- Bosses, for AA, are ships with fully static loadouts. -->
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
         </shipIcons>
@@ -178,6 +208,81 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 			<human_rebel room="14"/>
 		</crew>
         <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_BOSS_SIREN_PASTICHE">
+		<shipIcons>
+			<shipIcon>icon_threat</shipIcon>
+			<shipIcon>icon_reality</shipIcon>
+        </shipIcons>
+        <crew>
+            <siren room="2"/>
+            <siren room="6"/>
+            <siren room="1"/>
+            <siren_harpy room="9"/>
+            <rock_outcast room="0"/>
+            <rock_crusader room="10"/>
+
+            <!-- Boarding team -->
+            <siren_harpy room="5"/>
+            <siren_harpy room="5"/>
+            <rock_commando room="5"/>
+        </crew>
+		<rooms>
+			<room id="0">
+				<roomAnim renderLayer="0">chaos_2x2</roomAnim>
+			</room>
+			<room id="1">
+				<roomAnim renderLayer="0">chaos_2x2</roomAnim>
+			</room>
+			<room id="2">
+				<roomAnim renderLayer="0">chaos_1x3</roomAnim>
+			</room>
+			<room id="3">
+				<roomAnim renderLayer="0">chaos_2x1</roomAnim>
+			</room>
+			<room id="4">
+				<roomAnim renderLayer="0">chaos_2x1</roomAnim>
+			</room>
+			<room id="5">
+				<roomAnim renderLayer="0">chaos_1x3</roomAnim>
+			</room>
+			<room id="6">
+				<roomAnim renderLayer="0">chaos_1x3</roomAnim>
+			</room>
+			<room id="7">
+				<roomAnim renderLayer="0">chaos_2x1</roomAnim>
+			</room>
+			<room id="8">
+				<roomAnim renderLayer="0">chaos_2x1</roomAnim>
+			</room>
+			<room id="9">
+				<roomAnim renderLayer="0">chaos_1x3</roomAnim>
+			</room>
+			<room id="10">
+				<roomAnim renderLayer="0">chaos_1x3</roomAnim>
+			</room>
+			<room id="11">
+				<roomAnim renderLayer="0">chaos_1x2</roomAnim>
+			</room>
+			<room id="12">
+				<roomAnim renderLayer="0">chaos_1x2</roomAnim>
+			</room>
+			<room id="13">
+				<roomAnim renderLayer="0">chaos_1x3</roomAnim>
+			</room>
+			<room id="14">
+				<roomAnim renderLayer="0">chaos_1x3</roomAnim>
+			</room>
+			<room id="15">
+				<roomAnim renderLayer="0">chaos_1x1</roomAnim>
+			</room>
+			<room id="16">
+				<roomAnim renderLayer="0">chaos_1x1</roomAnim>
+			</room>
+		</rooms>
+        <autoShipForce>false</autoShipForce>
+        <noFuelStalemate/>
+        <noJump/>
 	</mod-append:customShip>
 	
     <mod-append:customShip name="AA_MVBOSS_STEALTH_CRUISER_NORMAL">
@@ -264,10 +369,10 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 			<human_medic room="0"/>
 			<human_soldier room="8"/>
 			<human_engineer room="11"/>
-			<human_soldier room="13"/>
+			<human_mfk room="13"/>
 			<shell_guardian room="10"/>
 			<shell_medic room="3"/>
-			<shell_medic room="6"/>
+			<shell_radiant room="6"/>
 			<shell_guardian room="16"/>
 		</crew>
         <rooms>
@@ -347,12 +452,12 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
             <shipIcon>aa_icon_lab_rock_skin</shipIcon>
         </shipIcons>
 		<crew>
-			<rock_outcast room="2"/>
-			<rock_crusader room="18"/>
-			<crystal_liberator room="15"/>
+			<rock_paladin room="2"/>
+			<rock_paladin room="18"/>
+			<crystal_sentinel room="15"/>
 			<orchid_praetor room="20"/>
-			<human_mfk room="5"/>
-			<spider_weaver room="10"/>
+			<rock_commando room="5"/>
+			<rock_commando room="10"/>
 		</crew>
         <rooms>
             <room id="2"> <!-- Piloting -->
@@ -378,6 +483,7 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_invasion</shipIcon>
             <shipIcon>aa_icon_resist_hack</shipIcon>
             <shipIcon>aa_icon_lab_slug_boost</shipIcon>
         </shipIcons>
@@ -411,6 +517,7 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_invasion</shipIcon>
             <shipIcon>aa_icon_resist_hack</shipIcon>
             <shipIcon>aa_icon_lab_slug_boost</shipIcon>
         </shipIcons>
@@ -444,6 +551,7 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_invasion</shipIcon>
             <shipIcon>aa_icon_resist_hack</shipIcon>
             <shipIcon>aa_icon_lab_slug_boost</shipIcon>
         </shipIcons>
@@ -480,18 +588,19 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep_chaos</shipIcon>
+            <shipIcon>icon_invasion</shipIcon>
             <shipIcon>aa_icon_resist_hack</shipIcon>
             <shipIcon>aa_icon_lab_slug_boost</shipIcon>
         </shipIcons>
 		<crew>
 			<human_technician room="1"/>
-            <slug room="13"/>
-            <slug room="16"/>
+            <slug_ranger room="13"/>
+            <slug_knight room="16"/>
             <human_soldier room="14"/>
             <slug_saboteur room="15"/>
             <human_medic room="17"/>
-            <siren room="5"/>
-            <siren room="11"/>
+            <siren_harpy room="5"/>
+            <siren_harpy room="11"/>
 		</crew>
         <rooms>
             <room id="11"> <!-- Temporal -->
@@ -506,12 +615,85 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
         <autoShipForce>false</autoShipForce>
     </mod-append:customShip>
 
+    <mod-append:customShip name="AA_MVBOSS_MONK_CRUISER_NORMAL">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_lab_zoltan_shielding</shipIcon>
+        </shipIcons>
+		<crew>
+			<zoltan_monk room="3"/>
+            <zoltan_monk room="12"/>
+            <zoltan_devotee room="17"/>
+            <zoltan_devotee room="7"/>
+            <zoltan_monk room="5"/>
+            <zoltan_martyr room="8"/>
+            <human_soldier room="0"/>
+            <rock room="10"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_MONK_CRUISER_CHALLENGE">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_lab_zoltan_shielding</shipIcon>
+        </shipIcons>
+		<crew>
+			<zoltan_monk room="3"/>
+            <zoltan_monk room="12"/>
+            <zoltan_devotee room="17"/>
+            <zoltan_devotee room="7"/>
+            <zoltan_peacekeeper room="5"/>
+            <zoltan_martyr room="8"/>
+            <human_soldier room="0"/>
+            <rock_commando room="10"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_MONK_CRUISER_EXTREME">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>aa_icon_lab_zoltan_shielding</shipIcon>
+        </shipIcons>
+		<crew>
+			<zoltan_infernum room="3"/>
+            <zoltan_monk room="12"/>
+            <zoltan_devotee room="17"/>
+            <zoltan_devotee room="7"/>
+            <zoltan_peacekeeper room="5"/>
+            <zoltan_martyr room="8"/>
+            <human_soldier room="0"/>
+            <rock_commando room="10"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+    <mod-append:customShip name="AA_MVBOSS_MONK_CRUISER_CHAOS">
+		<shipIcons>
+            <shipIcon>icon_threat</shipIcon>
+            <shipIcon>icon_specialwep_chaos</shipIcon>
+            <shipIcon>aa_icon_lab_zoltan_shielding</shipIcon>
+        </shipIcons>
+		<crew>
+			<zoltan_infernum room="3"/>
+            <zoltan_infernum room="12"/>
+            <zoltan_devotee room="17"/>
+            <zoltan_devotee room="7"/>
+            <zoltan_peacekeeper room="5"/>
+            <zoltan_infernum room="8"/>
+            <human_mfk room="0"/>
+            <rock_commando room="10"/>
+		</crew>
+        <autoShipForce>false</autoShipForce>
+	</mod-append:customShip>
+
     <mod-append:customShip name="AA_MVBOSS_LIMIT_CRUISER_NORMAL">
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_no2</shipIcon>
-            <shipIcon>aa_icon_aug_tracking_flares</shipIcon>
+            <shipIcon>icon_cloakjam</shipIcon>
         </shipIcons>
         <hiddenAug>UPG_TECH_BYPASS</hiddenAug>
         <hiddenAug>UPG_TECH_SCRAMBLER_ENEMY</hiddenAug>
@@ -530,7 +712,7 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_no2</shipIcon>
-            <shipIcon>aa_icon_aug_tracking_flares</shipIcon>
+            <shipIcon>icon_cloakjam</shipIcon>
         </shipIcons>
         <hiddenAug>UPG_TECH_BYPASS</hiddenAug>
         <hiddenAug>UPG_TECH_SCRAMBLER_ENEMY</hiddenAug>
@@ -547,9 +729,9 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
     <mod-append:customShip name="AA_MVBOSS_LIMIT_CRUISER_EXTREME">
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
-            <shipIcon>icon_specialwep</shipIcon>
+            <shipIcon>icon_specialwep_chaos</shipIcon>
             <shipIcon>icon_no2</shipIcon>
-            <shipIcon>aa_icon_aug_tracking_flares</shipIcon>
+            <shipIcon>icon_cloakjam</shipIcon>
         </shipIcons>
         <hiddenAug>UPG_TECH_BYPASS</hiddenAug>
         <hiddenAug>UPG_TECH_SCRAMBLER_ENEMY</hiddenAug>
@@ -568,7 +750,7 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
             <shipIcon>icon_no2</shipIcon>
-            <shipIcon>aa_icon_aug_tracking_flares</shipIcon>
+            <shipIcon>icon_cloakjam</shipIcon>
         </shipIcons>
         <hiddenAug>UPG_TECH_BYPASS</hiddenAug>
         <hiddenAug>UPG_TECH_SCRAMBLER_ENEMY</hiddenAug>
@@ -601,56 +783,66 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 </mod:findLike>
 
 
+
+
 <!-- /// CREW /// -->
 
 <mod:findLike type="crew" limit="1">
 
     <!-- // DUSTWORMS // -->
 
-	<mod-append:race name="aa_dustworm">
+	<mod-append:race name="aa_dustworm"> <!-- Stock dustworm -->
+        
 		<canFight>false</canFight>
 		<canSabotage>true</canSabotage>
 		<maxHealth>90</maxHealth>
         <lowHealthThreshold>30.0</lowHealthThreshold>
-		<animBase>mantis</animBase>
-		<allDamageTakenMultiplier>2</allDamageTakenMultiplier>
+
+        <allDamageTakenMultiplier>2</allDamageTakenMultiplier> <!-- no stat for instant damage, so this finagling has to happen -->
 		<damageTakenMultiplier>0.5</damageTakenMultiplier>
 		<fireDamageMultiplier>0.5</fireDamageMultiplier>
 		<suffocationModifier>0.5</suffocationModifier>
-		<moveSpeedMultiplier>0.7</moveSpeedMultiplier>
-		<repairSpeedMultiplier>1.5</repairSpeedMultiplier>
+
+        <moveSpeedMultiplier>0.7</moveSpeedMultiplier>
+        <repairSpeedMultiplier>1.5</repairSpeedMultiplier>
         <sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
 		<doorDamageMultiplier>3</doorDamageMultiplier>
+
 		<deathSounds>
-			<deathSound>femaleDeath1</deathSound>
-			<deathSound>femaleDeath2</deathSound>
-			<deathSound>femaleDeath3</deathSound>
+			<deathSound>death_dustworm</deathSound>
 		</deathSounds>
 		<shootingSounds>
 			<shootingSound>detectiveShoot1</shootingSound>
             <shootingSound>detectiveShoot2</shootingSound>
             <shootingSound>detectiveShoot3</shootingSound>
 		</shootingSounds>
-		<powerEffect>
-			<cooldown>30</cooldown>
+
+		<powerEffect name="aa_power_silk">
+			<cooldown>10</cooldown>
 			<jumpCooldown>full</jumpCooldown>
+            <powerCharges>1</powerCharges>
+            <initialCharges>1</initialCharges> 
+
 			<req type="enemy">
 				<enemyInRoom/>
+                <inCombat/>
 			</req>
-			<powerSounds>
-				<powerSound>dustworm_silk</powerSound>
-			</powerSounds>
+            <activateWhenReady enemiesOnly="true">true</activateWhenReady>
+
 			<buttonText>SILK</buttonText>
-			<tooltip>[DURATION: 10s]
-				Spray enemies in the room with silk. Wrapped crew move 0.2x as fast and cannot sabotage or break doors.</tooltip>
+			<tooltip>[COOLDOWN:10s]
+Creates a semi-permanent effect in the current room, which will dissipate only when jumping. Sabotage becomes impossible in the affected room, and enemy crew have their movement speed quartered.</tooltip>
 			<cooldownColor r="200" g="255" b="255"/>
-			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
-			<statBoosts>
+            <powerSounds>
+				<powerSound>power_dustworm</powerSound>
+			</powerSounds>
+
+			<roomStatBoosts>
+                <statBoost name="canSabotage" load="AA_SILK_SABO"/>
 				<statBoost name="moveSpeedMultiplier" load="AA_SILK_MOVE"/>
-				<statBoost name="canSabotage" load="AA_SILK_SABO"/>
-                <statBoost name="doorDamageMultiplier" load="AA_SILK_DOORS"/>
-			</statBoosts>
+			</roomStatBoosts>
 		</powerEffect>
+
 	</mod-append:race>
 
 
@@ -661,6 +853,40 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 
     <!-- // UNIQUES // -->
 
+
+
+    <!-- // MORPH VARIANTS // -->
+
+	<mod-append:race name="aa_blob_dustworm">
+
+        <crewSlots>0.5</crewSlots>
+		<canFight>false</canFight>
+		<canSabotage>true</canSabotage>
+		<maxHealth>67</maxHealth>
+        <lowHealthThreshold>30.0</lowHealthThreshold>
+
+        <allDamageTakenMultiplier>2</allDamageTakenMultiplier> <!-- no stat for instant damage, so this finagling has to happen -->
+		<damageTakenMultiplier>0.5</damageTakenMultiplier>
+		<fireDamageMultiplier>0.5</fireDamageMultiplier>
+		<suffocationModifier>0.5</suffocationModifier>
+
+        <moveSpeedMultiplier>0.7</moveSpeedMultiplier>
+        <repairSpeedMultiplier>1.5</repairSpeedMultiplier>
+        <sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
+		<doorDamageMultiplier>3</doorDamageMultiplier>
+
+		<deathSounds>
+			<deathSound>death_dustworm</deathSound>
+		</deathSounds>
+		<shootingSounds>
+			<shootingSound>detectiveShoot1</shootingSound>
+            <shootingSound>detectiveShoot2</shootingSound>
+            <shootingSound>detectiveShoot3</shootingSound>
+		</shootingSounds>
+
+		<powerEffect load="aa_power_silk"/>
+
+	</mod-append:race>
 
 
     <!-- // MISC // -->
@@ -686,6 +912,8 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 
 
 </mod:findLike>
+
+
 
 
 <!-- /// AUGMENTS /// -->
@@ -721,61 +949,106 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 		<icon>aa_icon_silk_armor</icon>
 	</mod-append:aug>
 
+    <!-- // MISC // -->
+
+    <mod-append:aug name="AA_SUPER_FIREARMS">
+        <function name="CREW_FIREARMS" value="2" useForReqs="true" stackable="false" warning="false"/>
+	</mod-append:aug>
+
+    <mod-append:aug name="AA_XENOPHOBIA"> <!-- Identical to Xenophobia, except that it's not locked -->
+        <function name="LOCKED_XENOPHOBIA" value="1" useForReqs="true" stackable="true" warning="false"/>
+    </mod-append:aug>
+
     <!-- // CREW LABS // -->
 
     <mod-append:aug name="AA_LAB_DUSTWORM_ESCAPE">
         <statBoosts>
-            <statBoost name="moveSpeedMultiplier">
-                <boostType>MULT</boostType>
-                <amount>1.5</amount>
-                <shipTarget>ALL</shipTarget>
-                <crewTarget>ALLIES</crewTarget>
-                <priority>0</priority>
-                <whiteList load="LIST_CREW_DUSTWORM"/>
-            </statBoost>
-        </statBoosts>
-    </mod-append:aug>
-    <mod-append:aug name="AA_LAB_DUSTWORM_RAGE">
-        <statBoosts>
-            <statBoost name="canFight">
-                <boostType>SET</boostType>
-                <value>true</value>
-                <shipTarget>ALL</shipTarget>
-                <crewTarget>ALLIES</crewTarget>
-                <priority>0</priority>
-                <whiteList load="LIST_CREW_DUSTWORM"/>
-            </statBoost>
-            <statBoost name="resistsMindControl">
-                <boostType>SET</boostType>
-                <value>true</value>
-                <shipTarget>ALL</shipTarget>
-                <crewTarget>ALLIES</crewTarget>
-                <priority>0</priority>
-                <whiteList load="LIST_CREW_DUSTWORM"/>
-            </statBoost>
-            <statBoost name="sabotageSpeedMultiplier">
-                <boostType>FLAT</boostType>
-                <amount>1</amount>
-                <shipTarget>ALL</shipTarget>
-                <crewTarget>ALLIES</crewTarget>
-                <priority>0</priority>
-                <whiteList load="LIST_CREW_DUSTWORM"/>
-            </statBoost>
-        </statBoosts>
-    </mod-append:aug>
-    <mod-append:aug name="AA_LAB_DUSTWORM_SILENCE">
-        <statBoosts>
-			<statBoost name="silenced">
-				<boostType>SET</boostType>
-				<value>true</value>
-				<shipTarget>ORIGINAL_SHIP</shipTarget>
-                <crewTarget>ALL</crewTarget>
-				<droneTarget>CREW</droneTarget>
-				<affectsSelf>false</affectsSelf>
-				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
-				<boostAnim>madness</boostAnim>
+			<statBoost name="statBoost">
+				<statBoost name="moveSpeedMultiplier">
+                    <boostType>MULT</boostType>
+					<amount>2</amount>
+                    <shipTarget>CURRENT_ROOM</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+					<whiteList load="AA_LIST_CREW_DUSTWORM"/>
+                </statBoost>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
 			</statBoost>
         </statBoosts>
+    </mod-append:aug>
+    <mod-append:aug name="AA_LAB_DUSTWORM_DEFENSE">
+        <statBoosts>
+			<statBoost name="statBoost">
+				<statBoost name="damageTakenMultiplier">
+                    <boostType>MULT</boostType>
+					<amount>0.5</amount>
+                    <shipTarget>CURRENT_ROOM</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+					<whiteList load="AA_LIST_CREW_DUSTWORM"/>
+                </statBoost>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+			</statBoost>
+        </statBoosts>
+    </mod-append:aug>
+    <mod-append:aug name="AA_LAB_DUSTWORM_FIRE">
+        <statBoosts>
+			<statBoost name="canBurn">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+                <whiteList load="AA_LIST_CREW_DUSTWORM"/>
+			</statBoost>
+			<statBoost name="sabotageSpeedMultiplier">
+				<boostType>SET</boostType>
+				<amount>1</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+                <whiteList load="AA_LIST_CREW_DUSTWORM"/>
+				<extraConditions type="and">
+					<burning>false</burning> <!-- this debuff is nullified in the presence of fire -->
+				</extraConditions>
+                <boostAnim>status_depression</boostAnim> <!-- :( -->
+            </statBoost>
+        </statBoosts>
+    </mod-append:aug>
+    <mod-append:aug name="AA_LAB_DUSTWORM_SECONDARY_SILENCE">
+    	<statBoosts>
+			<statBoost name="powerEffect">
+				<boostType>REPLACE_POWER</boostType> <!-- Replaces this specific power -->
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <whiteList>
+                    <aa_dustworm/>
+                </whiteList>
+                <powerWhitelist load="aa_power_silk"/> <!-- Power to replace -->
+                <powerEffect name="aa_power_silk_lab_silence">
+                    <cooldown>10</cooldown>
+                    <jumpCooldown>full</jumpCooldown>
+                    <req type="enemy">
+                        <enemyInRoom/>
+                        <inCombat/>
+                    </req>
+                    <powerSounds>
+                        <powerSound>power_dustworm</powerSound>
+                    </powerSounds>
+                    <buttonText>SILK</buttonText>
+                    <tooltip>[COOLDOWN:10s]
+Creates a semi-permanent effect in the current room, which will dissipate only when jumping. Sabotage becomes impossible in the affected room, and enemy crew can't use their abilities or teleport.</tooltip>
+                    <cooldownColor r="255" g="200" b="200"/>
+                    <activateWhenReady enemiesOnly="true">true</activateWhenReady>
+                    <powerCharges>1</powerCharges>
+                    <roomStatBoosts>
+                        <statBoost name="canSabotage" load="AA_SILK_SABO"/>
+                        <statBoost name="silenced" load="AA_SILK_LAB_SILENCE"/>
+                        <statBoost name="canTeleport" load="AA_SILK_LAB_TELEPORT"/>
+                    </roomStatBoosts>
+                </powerEffect>
+			</statBoost>
+		</statBoosts>
     </mod-append:aug>
 
     <!-- // TECHNICAL // -->
@@ -820,10 +1093,9 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
 
 <mod:findLike type="boss" limit="1">
 
-    <!-- // INTEGRAL // -->
-    <mod-append:surgeBarrage name="AA_SURGE_INTEGRAL_WEAPON_MIXED">
-        <weapon name="LASER_HEAVY_1" count="6"/>
-        <weapon name="SHOTGUN_1" count="16"/>
+    <!-- // BLESSING OF WONDER // -->
+    <mod-append:surgeBarrage name="AA_SURGE_IMAGINE">
+        <weapon name="AA_BEAM_IMAGINE" count="1"/>
     </mod-append:surgeBarrage>
 
 </mod:findLike>

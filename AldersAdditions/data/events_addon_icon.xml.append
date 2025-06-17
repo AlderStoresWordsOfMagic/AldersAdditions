@@ -1,0 +1,13 @@
+<FTL>
+
+<event name="ADDON_AA" unused="true"> 
+	<hover-text>ALDER'S ADDITIONS
+	Click to see more info.</hover-text>
+	<text>ALDER'S ADDITIONS
+Developed by: Alder, with contributions from Chrono Vortex, Pepson, sillysandvich, Arc, Tabbi, and more!
+	
+An expansion pack meant to be used alongside Multiverse, adding weapons, drones, crew, augments, events, and battles that attempt to capture the spirit of Multiverse while providing its own twist. As this mod is a work-in-progress, it may contain strong balance variations and placeholder content; play at your own risk!</text>
+    <playSound>regen_hull</playSound>
+</event>
+
+</FTL>

@@ -1,6 +1,6 @@
 local get_room_at_location = mods.multiverse.get_room_at_location
 
-local fires = mods.fusion.fires
+local fires = mods.fusion.custom_fires.fires
 
 -- [Thermal Crusher - Turn all fires into breaches, +1 damage per converted fire]
 

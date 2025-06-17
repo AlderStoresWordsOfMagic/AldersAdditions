@@ -1,36 +1,42 @@
 <FTL>
 
+<!-- /// MUSIC /// -->
 
-<!-- /// ENVIRONMENT /// -->
 
-<!-- // AUG EFFECTS // -->
+
+
+<!-- /// WAVES /// -->
+
+<!-- // ENVIRONMENT // -->
+
+<!-- / AUGMENT EFFECTS / -->
 
 <regen_shield volume="3">ship/regen_shield.ogg</regen_shield>
 <regen_hull volume="2">ship/regen_hull.ogg</regen_hull>
+<reality_manipulator volume="5">ship/reality_manipulator.ogg</reality_manipulator>
 
 
-<!-- /// WEAPONS /// -->
+<!-- // WEAPONS // -->
 
-<!-- // LASERS // -->
+<!-- / LASERS / -->
 
 <laser_purge volume="2">weapons/lasers/laser_purge.ogg</laser_purge>
 <laser_smash volume="3">weapons/lasers/laser_smash.ogg</laser_smash>
 
-<!-- // IONS // -->
+<!-- / IONS / -->
 
 <electron volume="3">weapons/ions/electron.ogg</electron>
 
-<!-- // BEAMS // -->
-
-<beam_smash volume="3">weapons/beams/beam_smash.ogg</beam_smash>
+<!-- / BEAMS / -->
 
 <disruptor_light volume="3">weapons/beams/disruptor_light.ogg</disruptor_light>
-<disruptor_heavy volume="3">weapons/beams/disruptor_heavy.ogg</disruptor_heavy>
+<disruptor_heavy volume="4">weapons/beams/disruptor_heavy.ogg</disruptor_heavy>
 
-<capacitor volume="2">weapons/beams/capacitor.ogg</capacitor>
+<focus_smash volume="3">weapons/beams/focus_smash.ogg</focus_smash>
+<focus_ion volume="2">weapons/beams/focus_ion.ogg</focus_ion>
 <shock_cannon volume="2">weapons/beams/shock_cannon.ogg</shock_cannon>
 
-<!-- // BALLISTICS // -->
+<!-- / BALLISTICS / -->
 
 <driver volume="3">weapons/ballistics/driver.ogg</driver>
 <driver_heavy volume="3">weapons/ballistics/driver_heavy.ogg</driver_heavy>
@@ -39,26 +45,27 @@
 
 <rockets volume="2">weapons/ballistics/rockets.ogg</rockets>
 
-<!-- // MISC // -->
+<!-- / MISC / -->
 
 <decoy volume="2">weapons/misc/decoy.ogg</decoy>
 <pointer volume="2">weapons/misc/pointer.ogg</pointer>
 <infuser_buff volume="2">weapons/misc/infuser_buff.ogg</infuser_buff>
 
-<!-- // IMPACTS // -->
+<!-- / IMPACTS / -->
  
 <shield_pop volume="4">weapons/impacts/shield_pop.ogg</shield_pop>
 <shield_crush volume="5">weapons/impacts/shield_crush.ogg</shield_crush>
 
-<!-- // OVERWRITES // -->
+<!-- / OVERWRITES / -->
 
 <beam_eldritch volume="4">weapons/overwrites/beam_eldritch.ogg</beam_eldritch>
 <launch_eldritch volume="10">weapons/overwrites/launch_eldritch.ogg</launch_eldritch>
 
 
-<!-- /// CREW /// -->
+<!-- // CREW // -->
 
-<dustworm_silk volume="4">crew/dustworm_silk.ogg</dustworm_silk>
+<power_dustworm volume="4">crew/power_dustworm.ogg</power_dustworm>
+<death_dustworm volume="6">crew/death_dustworm.ogg</death_dustworm>
 
 
 </FTL>

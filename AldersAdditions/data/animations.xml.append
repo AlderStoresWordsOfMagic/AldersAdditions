@@ -134,6 +134,28 @@
 	<desc length="13" x="0" y="0"/>
 	<time>1</time>
 </anim>
+<animSheet name="electron_stun_projectile" w="832" h="64" fw="64" fh="64">projectile/projectile_electron_stun.png</animSheet>
+<anim name="electron_stun_projectile">
+	<sheet>electron_stun_projectile</sheet>
+	<desc length="13" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="projector_projectile" w="832" h="64" fw="64" fh="64">projectile/projectile_projector.png</animSheet>
+<anim name="projector_projectile">
+	<sheet>projector_projectile</sheet>
+	<desc length="13" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+
+<!-- // CLONE CANNON PROJECTILES // -->
+<animSheet name="crewproj_dustworm" w="24" h="24" fw="24" fh="24">projectile/crewproj_dustworm.png</animSheet>
+<anim name="crewproj_dustworm">
+	<sheet>crewproj_dustworm</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
 
 
 <!-- // EXPLOSIONS // -->
@@ -152,9 +174,16 @@
 	<time>0.75</time>
 </anim>
 
-<animSheet name="explosion_hack" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_hack.png</animSheet>
-<anim name="explosion_hack">
-	<sheet>explosion_hack</sheet>
+<animSheet name="explosion_imagine" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_imagine.png</animSheet>
+<anim name="explosion_imagine">
+	<sheet>explosion_imagine</sheet>
+	<desc length="10" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<animSheet name="explosion_projector" w="640" h="64" fw="64" fh="64">effects/explosion/explosion_projector.png</animSheet>
+<anim name="explosion_projector">
+	<sheet>explosion_projector</sheet>
 	<desc length="10" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
@@ -223,6 +252,19 @@
 	<desc length="1" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
+<animSheet name="status_silk_silence" w="35" h="35" fw="35" fh="35">people/status_silk_silence.png</animSheet>
+<anim name="status_silk_silence">
+	<sheet>status_silk_silence</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="status_depression" w="70" h="14" fw="14" fh="14">people/status_depression.png</animSheet>
+<anim name="status_depression">
+	<sheet>status_depression</sheet>
+	<desc length="5" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
 
 <animSheet name="status_mania" w="70" h="14" fw="14" fh="14">people/status_mania.png</animSheet>
 <anim name="status_mania">
@@ -244,6 +286,19 @@
 <animSheet name="center_cultivator_spores" w="35" h="35" fw="35" fh="35">effects/center/center_cultivator_spores.png</animSheet>
 <anim name="center_cultivator_spores">
 	<sheet>center_cultivator_spores</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="center_silk" w="35" h="35" fw="35" fh="35">effects/center/center_silk.png</animSheet>
+<anim name="center_silk">
+	<sheet>center_silk</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="center_silk_silence" w="35" h="35" fw="35" fh="35">effects/center/center_silk_silence.png</animSheet>
+<anim name="center_silk_silence">
+	<sheet>center_silk_silence</sheet>
 	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
@@ -544,17 +599,6 @@
 
 <!-- // BEAMS // -->
 
-<animSheet name="beam_smash" w="551" h="58" fw="29" fh="58">weapons/beam/beam_smash.png</animSheet>
-<weaponAnim name="beam_smash">
-	<sheet>beam_smash</sheet>
-	<desc length="19" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="19"/>
-	<mountPoint x="3" y="45"/>
-	<chargeImage>weapons/beam/beam_smash_glow.png</chargeImage>
-</weaponAnim>
-
 <animSheet name="beam_purge" w="522" h="56" fw="29" fh="56">weapons/beam/beam_purge.png</animSheet>
 <weaponAnim name="beam_purge">
 	<sheet>beam_purge</sheet>
@@ -595,102 +639,102 @@
 	<boost>beam_cumulative_chargeglow</boost>
 </weaponAnim>
 
-<animSheet name="disruptor_1" w="252" h="40" fw="21" fh="40">weapons/disruptor/disruptor_1.png</animSheet>
+<animSheet name="disruptor_1" w="165" h="48" fw="33" fh="48">weapons/disruptor/disruptor_1.png</animSheet>
 <weaponAnim name="disruptor_1">
 	<sheet>disruptor_1</sheet>
-	<desc length="12" x="0" y="0"/>
+	<desc length="5" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="11" y="10"/>
-	<mountPoint x="2" y="27"/>
+	<firePoint x="18" y="9"/>
+	<mountPoint x="4" y="44"/>
 	<chargeImage>weapons/disruptor/disruptor_1_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_2" w="459" h="62" fw="27" fh="62">weapons/disruptor/disruptor_2.png</animSheet>
+<animSheet name="disruptor_2" w="228" h="59" fw="38" fh="59">weapons/disruptor/disruptor_2.png</animSheet>
 <weaponAnim name="disruptor_2">
 	<sheet>disruptor_2</sheet>
-	<desc length="17" x="0" y="0"/>
+	<desc length="6" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="15" y="14"/>
-	<mountPoint x="3" y="45"/>
+	<firePoint x="21" y="10"/>
+	<mountPoint x="4" y="40"/>
 	<chargeImage>weapons/disruptor/disruptor_2_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_3" w="714" h="80" fw="34" fh="80">weapons/disruptor/disruptor_3.png</animSheet>
+<animSheet name="disruptor_3" w="287" h="76" fw="41" fh="76">weapons/disruptor/disruptor_3.png</animSheet>
 <weaponAnim name="disruptor_3">
 	<sheet>disruptor_3</sheet>
-	<desc length="21" x="0" y="0"/>
+	<desc length="7" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="18" y="19"/>
-	<mountPoint x="5" y="61"/>
+	<firePoint x="25" y="19"/>
+	<mountPoint x="4" y="52"/>
 	<chargeImage>weapons/disruptor/disruptor_3_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_bio" w="638" h="64" fw="29" fh="64">weapons/disruptor/disruptor_bio.png</animSheet>
+<animSheet name="disruptor_bio" w="252" h="62" fw="42" fh="62">weapons/disruptor/disruptor_bio.png</animSheet>
 <weaponAnim name="disruptor_bio">
 	<sheet>disruptor_bio</sheet>
-	<desc length="22" x="0" y="0"/>
+	<desc length="6" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="15" y="17"/>
-	<mountPoint x="3" y="42"/>
+	<firePoint x="26" y="11"/>
+	<mountPoint x="4" y="43"/>
 	<chargeImage>weapons/disruptor/disruptor_bio_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_stun" w="510" h="54" fw="30" fh="54">weapons/disruptor/disruptor_stun.png</animSheet>
+<animSheet name="disruptor_stun" w="240" h="57" fw="40" fh="57">weapons/disruptor/disruptor_stun.png</animSheet>
 <weaponAnim name="disruptor_stun">
 	<sheet>disruptor_stun</sheet>
-	<desc length="17" x="0" y="0"/>
+	<desc length="6" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="17" y="10"/>
-	<mountPoint x="3" y="36"/>
+	<firePoint x="24" y="10"/>
+	<mountPoint x="5" y="37"/>
 	<chargeImage>weapons/disruptor/disruptor_stun_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_energy" w="594" h="56" fw="27" fh="56">weapons/disruptor/disruptor_energy.png</animSheet>
-<weaponAnim name="disruptor_energy">
-	<sheet>disruptor_energy</sheet>
-	<desc length="22" x="0" y="0"/>
+<animSheet name="disruptor_pierce" w="234" h="64" fw="39" fh="64">weapons/disruptor/disruptor_pierce.png</animSheet>
+<weaponAnim name="disruptor_pierce">
+	<sheet>disruptor_pierce</sheet>
+	<desc length="6" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="15" y="8"/>
-	<mountPoint x="3" y="39"/>
+	<firePoint x="24" y="12"/>
+	<mountPoint x="4" y="42"/>
+	<chargeImage>weapons/disruptor/disruptor_pierce_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="disruptor_energy" w="910" h="61" fw="35" fh="61">weapons/disruptor/disruptor_energy.png</animSheet>
+<weaponAnim name="disruptor_energy">
+	<sheet>disruptor_energy</sheet>
+	<desc length="26" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="21" y="7"/>
+	<mountPoint x="4" y="39"/>
 	<chargeImage>weapons/disruptor/disruptor_energy_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="disruptor_adaptive" w="1406" h="79" fw="37" fh="79">weapons/disruptor/disruptor_adaptive.png</animSheet>
+<animSheet name="disruptor_adaptive" w="920" h="70" fw="40" fh="70">weapons/disruptor/disruptor_adaptive.png</animSheet>
 <weaponAnim name="disruptor_adaptive">
 	<sheet>disruptor_adaptive</sheet>
-	<desc length="38" x="0" y="0"/>
-	<chargedFrame>19</chargedFrame>
-	<fireFrame>20</fireFrame>
-	<firePoint x="19" y="35"/>
-	<mountPoint x="5" y="55"/>
+	<desc length="23" x="0" y="0"/>
+	<chargedFrame>11</chargedFrame>
+	<fireFrame>12</fireFrame>
+	<firePoint x="24" y="24"/>
+	<mountPoint x="4" y="51"/>
 </weaponAnim>
 
-<animSheet name="disruptor_conservative" w="390" h="50" fw="26" fh="50">weapons/disruptor/disruptor_conservative.png</animSheet>
+<animSheet name="disruptor_conservative" w="170" h="50" fw="34" fh="50">weapons/disruptor/disruptor_conservative.png</animSheet>
 <weaponAnim name="disruptor_conservative">
 	<sheet>disruptor_conservative</sheet>
-	<desc length="15" x="0" y="0"/>
+	<desc length="5" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="14" y="14"/>
-	<mountPoint x="2" y="31"/>
+	<firePoint x="20" y="10"/>
+	<mountPoint x="4" y="33"/>
 	<chargeImage>weapons/disruptor/disruptor_conservative_glow.png</chargeImage>
-</weaponAnim>
-
-<animSheet name="disruptor_pierce" w="540" h="63" fw="30" fh="63">weapons/disruptor/disruptor_pierce.png</animSheet>
-<weaponAnim name="disruptor_pierce">
-	<sheet>disruptor_pierce</sheet>
-	<desc length="18" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="15" y="13"/>
-	<mountPoint x="3" y="39"/>
-	<chargeImage>weapons/disruptor/disruptor_pierce_glow.png</chargeImage>
 </weaponAnim>
 
 
@@ -852,36 +896,58 @@
 	<chargeImage>weapons/pinpoint/focus_particle_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="capacitor_1" w="81" h="79" fw="27" fh="79">weapons/capacitor/capacitor_1.png</animSheet>
+<animSheet name="focus_smash" w="551" h="58" fw="29" fh="58">weapons/pinpoint/focus_smash.png</animSheet>
+<weaponAnim name="focus_smash">
+	<sheet>focus_smash</sheet>
+	<desc length="19" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="16" y="19"/>
+	<mountPoint x="3" y="45"/>
+	<chargeImage>weapons/pinpoint/focus_smash_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="capacitor_1" w="120" h="70" fw="40" fh="70">weapons/capacitor/capacitor_1.png</animSheet>
 <weaponAnim name="capacitor_1">
 	<sheet>capacitor_1</sheet>
 	<desc length="3" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="14" y="29"/>
-	<mountPoint x="2" y="58"/>
+	<firePoint x="21" y="11"/>
+	<mountPoint x="4" y="52"/>
 	<chargeImage>weapons/capacitor/capacitor_1_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="capacitor_2" w="99" h="95" fw="33" fh="95">weapons/capacitor/capacitor_2.png</animSheet>
+<animSheet name="capacitor_2" w="135" h="73" fw="45" fh="73">weapons/capacitor/capacitor_2.png</animSheet>
 <weaponAnim name="capacitor_2">
 	<sheet>capacitor_2</sheet>
 	<desc length="3" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="20" y="27"/>
-	<mountPoint x="3" y="66"/>
+	<firePoint x="25" y="1"/>
+	<mountPoint x="5" y="53"/>
 	<chargeImage>weapons/capacitor/capacitor_2_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="capacitor_pierce" w="93" h="92" fw="31" fh="92">weapons/capacitor/capacitor_pierce.png</animSheet>
+<animSheet name="capacitor_stun" w="135" h="69" fw="45" fh="69">weapons/capacitor/capacitor_stun.png</animSheet>
+<weaponAnim name="capacitor_stun">
+	<sheet>capacitor_stun</sheet>
+	<desc length="3" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="25" y="7"/>
+	<mountPoint x="5" y="49"/>
+	<chargeImage>weapons/capacitor/capacitor_stun_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="capacitor_pierce" w="120" h="73" fw="40" fh="73">weapons/capacitor/capacitor_pierce.png</animSheet>
 <weaponAnim name="capacitor_pierce">
 	<sheet>capacitor_pierce</sheet>
 	<desc length="3" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="31"/>
-	<mountPoint x="3" y="67"/>
+	<firePoint x="22" y="11"/>
+	<mountPoint x="4" y="55"/>
 	<chargeImage>weapons/capacitor/capacitor_pierce_glow.png</chargeImage>
 </weaponAnim>
 
@@ -1043,7 +1109,7 @@
 	<desc length="11" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="22" y="22" />
+	<firePoint x="14" y="6" />
 	<mountPoint x="3" y="32" />
 	<chargeImage>weapons/misc/electron_glow.png</chargeImage>
 </weaponAnim>
@@ -1054,9 +1120,20 @@
 	<desc length="17" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="22" y="22" />
+	<firePoint x="17" y="10" />
 	<mountPoint x="3" y="38" />
 	<chargeImage>weapons/misc/electron_heavy_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="electron_stun" w="308" h="54" fw="28" fh="54">weapons/misc/electron_stun.png</animSheet>
+<weaponAnim name="electron_stun">
+	<sheet>electron_stun</sheet>
+	<desc length="11" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="17" y="6" />
+	<mountPoint x="3" y="36" />
+	<chargeImage>weapons/misc/electron_stun_glow.png</chargeImage>
 </weaponAnim>
 
 <animSheet name="shock_cannon" w="189" h="54" fw="27" fh="54">weapons/misc/shock_cannon.png</animSheet>
@@ -1132,6 +1209,27 @@
 	<mountPoint x="8" y="63"/>
 </weaponAnim>
 
+<animSheet name="renegade_loot_monk" w="308" h="77" fw="44" fh="77">weapons/loot/loot_mvboss_monk.png</animSheet>
+<weaponAnim name="renegade_loot_monk">
+	<sheet>renegade_loot_monk</sheet>
+	<desc length="7" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="27" y="24"/>
+	<mountPoint x="4" y="55"/>
+	<chargeImage>weapons/loot/loot_mvboss_monk_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="renegade_loot_monk_chaos" w="308" h="77" fw="44" fh="77">weapons/loot/loot_mvboss_monk_chaos.png</animSheet>
+<weaponAnim name="renegade_loot_monk_chaos">
+	<sheet>renegade_loot_monk_chaos</sheet>
+	<desc length="7" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint x="27" y="24"/>
+	<mountPoint x="4" y="55"/>
+	<chargeImage>weapons/loot/loot_mvboss_monk_glow.png</chargeImage>
+</weaponAnim>
+
 <animSheet name="railgun_icon" w="138" h="30" fw="69" fh="30">weapons/loot/railgun_icon.png</animSheet>
 <anim name="railgun_icon">
 	<sheet>railgun_icon</sheet>
@@ -1155,6 +1253,12 @@
 	<desc length="15" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
+<animSheet name="beam_imagine_icon" w="124" h="42" fw="62" fh="42">weapons/loot/beam_imagine_icon.png</animSheet>
+<anim name="beam_imagine_icon">
+	<sheet>beam_imagine_icon</sheet>
+	<desc length="2" x="0" y="0"/>
+	<time>1</time>
+</anim>
 <animSheet name="beam_imagine" w="1500" h="76" fw="50" fh="76">weapons/loot/beam_imagine.png</animSheet>
 <weaponAnim name="beam_imagine">
 	<sheet>beam_imagine</sheet>
@@ -1166,6 +1270,13 @@
 	<chargeImage>weapons/loot/beam_imagine_glow.png</chargeImage>
 </weaponAnim>
 
+<animSheet name="gazer_statue" w="40" h="46" fw="40" fh="46">weapons/loot/gazer_statue.png</animSheet>
+<anim name="gazer_statue">
+    <sheet>gazer_statue</sheet>
+    <desc length="1" x="0" y="0"/>
+    <time>1</time>
+</anim>
+
 
 
 
@@ -1173,8 +1284,7 @@
 
 
 <!-- // DUSTWORMS // -->
-
-<animSheet name="aa_dustworm" w="630" h="280" fw="35" fh="35">people/aa_dustworm_base.png</animSheet>
+<animSheet name="aa_dustworm" w="630" h="315" fw="35" fh="35">people/aa_dustworm_base.png</animSheet>
 <anim name="aa_dustworm_walk_down">
 	<sheet>aa_dustworm</sheet>
 	<desc length="5" x="0" y="8"/>
@@ -1252,22 +1362,22 @@
 </anim>
 <anim name="aa_dustworm_shoot_down">
 	<sheet>aa_dustworm</sheet>
-	<desc length="4" x="0" y="2"/>
+	<desc length="3" x="0" y="2"/>
 	<time>0.75</time>
 </anim>
 <anim name="aa_dustworm_shoot_right">
 	<sheet>aa_dustworm</sheet>
-	<desc length="4" x="4" y="2"/>
+	<desc length="3" x="3" y="2"/>
 	<time>0.75</time>
 </anim>
 <anim name="aa_dustworm_shoot_up">
 	<sheet>aa_dustworm</sheet>
-	<desc length="4" x="8" y="2"/>
+	<desc length="3" x="6" y="2"/>
 	<time>0.75</time>
 </anim>
 <anim name="aa_dustworm_shoot_left">
 	<sheet>aa_dustworm</sheet>
-	<desc length="4" x="12" y="2"/>
+	<desc length="3" x="9" y="2"/>
 	<time>0.75</time>
 </anim>
 <anim name="aa_dustworm_teleport">
@@ -1297,6 +1407,135 @@
 </anim>
 <anim name="aa_dustworm_crewLaser">
 	<sheet>aa_dustworm</sheet>
+	<desc length="1" x="1" y="0"/>
+	<time>0.75</time>
+</anim>
+
+
+<!-- // MORPHS // -->
+<animSheet name="aa_blob_dustworm" w="630" h="315" fw="35" fh="35">people/aa_blob_dustworm_base.png</animSheet>
+<anim name="aa_blob_dustworm_walk_down">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="5" x="0" y="8"/>
+	<time>0.5</time>
+</anim>
+<anim name="aa_blob_dustworm_walk_right">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="6" x="5" y="8"/>
+	<time>0.5</time>
+</anim>
+<anim name="aa_blob_dustworm_walk_up">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="6" x="0" y="7"/>
+	<time>0.5</time>
+</anim>
+<anim name="aa_blob_dustworm_walk_left">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="6" x="6" y="7"/>
+	<time>0.5</time>
+</anim>
+<anim name="aa_blob_dustworm_type_down">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="4" x="0" y="6"/>
+	<time>1</time>
+</anim>
+<anim name="aa_blob_dustworm_type_right">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="4" x="4" y="6"/>
+	<time>1</time>
+</anim>
+<anim name="aa_blob_dustworm_type_up">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="1" x="8" y="6"/>
+	<time>1</time>
+</anim>
+<anim name="aa_blob_dustworm_type_left">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="4" x="9" y="6"/>
+	<time>1</time>
+</anim>
+<anim name="aa_blob_dustworm_fire_down">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="4" x="0" y="5"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_blob_dustworm_fire_right">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="4" x="4" y="5"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_blob_dustworm_fire_up">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="4" x="8" y="5"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_blob_dustworm_fire_left">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="4" x="12" y="5"/>
+	<time>1.0</time>
+</anim>
+<anim name="aa_blob_dustworm_repair">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="18" x="0" y="4"/>
+	<time>2</time>
+</anim>
+<anim name="aa_blob_dustworm_punch_down">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="8" x="0" y="3"/>
+	<time>2.0</time>
+</anim>
+<anim name="aa_blob_dustworm_punch_up">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="8" x="8" y="3"/>
+	<time>2.0</time>
+</anim>
+<anim name="aa_blob_dustworm_shoot_down">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="3" x="0" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_blob_dustworm_shoot_right">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="3" x="3" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_blob_dustworm_shoot_up">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="3" x="6" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_blob_dustworm_shoot_left">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="3" x="9" y="2"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_blob_dustworm_teleport">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="7" x="0" y="1"/>
+	<time>0.5</time>
+</anim>
+<anim name="aa_blob_dustworm_death_right">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="7" x="7" y="1"/>
+	<time>1.25</time>
+</anim>
+<anim name="aa_blob_dustworm_death_left">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="7" x="7" y="1"/>
+	<time>1.25</time>
+</anim>
+<anim name="aa_blob_dustworm_clone">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="6" x="2" y="0"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_blob_dustworm_portrait">
+	<sheet>aa_blob_dustworm</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+<anim name="aa_blob_dustworm_crewLaser">
+	<sheet>aa_blob_dustworm</sheet>
 	<desc length="1" x="1" y="0"/>
 	<time>0.75</time>
 </anim>
@@ -1461,25 +1700,6 @@
 	<time>1</time>
 </anim>
 
-<animSheet name="nightshade" w="945" h="60" fw="45" fh="60">weapons/overwrite/nightshade.png</animSheet>
-<weaponAnim name="nightshade">
-	<sheet>nightshade</sheet>
-	<desc length="21" x="0" y="0"/>
-	<chargedFrame>11</chargedFrame>
-	<fireFrame>16</fireFrame>
-	<firePoint  x="25" y="13" charge="11"/>
-	<mountPoint x="6" y="35"/>
-</weaponAnim>
-<animSheet name="nightshade_chaos" w="945" h="60" fw="45" fh="60">weapons/overwrite/nightshade_chaos.png</animSheet>
-<weaponAnim name="nightshade_chaos">
-	<sheet>nightshade_chaos</sheet>
-	<desc length="21" x="0" y="0"/>
-	<chargedFrame>11</chargedFrame>
-	<fireFrame>16</fireFrame>
-	<firePoint  x="25" y="13" charge="11"/>
-	<mountPoint x="6" y="35"/>
-</weaponAnim>
-
 
 <!-- // BEAMS // -->
 
@@ -1554,62 +1774,6 @@
 </anim>
 
 
-<!-- // INSTANT // -->
-
-<animSheet name="pre_fire_burnout" w="49" h="90" fw="49" fh="90">weapons/overwrite/instant_torch_burnout.png</animSheet>
-<anim name="pre_fire_burnout">
-	<sheet>pre_fire_burnout</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="pre_fire" w="392" h="90" fw="49" fh="90">weapons/overwrite/instant_torch.png</animSheet>
-<weaponAnim name="pre_fire">
-	<sheet>pre_fire</sheet>
-	<desc length="8" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint x="29" y="45"/>
-	<mountPoint x="8" y="62"/>
-	<chargeImage>weapons/overwrite/instant_torch_glow.png</chargeImage>
-	<boost>pre_fire_burnout</boost>
-</weaponAnim>
-
-<animSheet name="shotgun_adv_burnout" w="45" h="55" fw="45" fh="55">weapons/overwrite/instant_shotgun_burnout.png</animSheet>
-<anim name="shotgun_adv_burnout">
-	<sheet>shotgun_adv_burnout</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="shotgun_adv" w="360" h="55" fw="45" fh="55">weapon_flak/shotgun_adv.png</animSheet>
-<weaponAnim name="shotgun_adv">
-	<sheet>shotgun_adv</sheet>
-	<desc length="8" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>4</fireFrame>
-	<firePoint  x="22" y="8"/>
-	<mountPoint x="7" y="31"/>
-	<chargeImage>weapon_flak/shotgun_adv_glow.png</chargeImage>
-	<boost>shotgun_adv_burnout</boost>
-</weaponAnim>
-
-<animSheet name="pre_missiles_charge" w="44" h="75" fw="44" fh="75">weapons/overwrite/instant_missiles_burnout.png</animSheet>
-<anim name="pre_missiles_charge">
-	<sheet>pre_missiles_charge</sheet>
-	<desc length="1" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-<animSheet name="pre_missiles" w="220" h="75" fw="44" fh="75">weapons/overwrite/instant_missiles.png</animSheet>
-<weaponAnim name="pre_missiles">
-	<sheet>pre_missiles</sheet>
-	<desc length="5" x="0" y="0"/>
-	<chargedFrame>1</chargedFrame>
-	<fireFrame>2</fireFrame>
-	<firePoint  x="28" y="10"/>
-	<mountPoint x="7" y="45"/>
-	<boost>missiles_instant_charge</boost>
-</weaponAnim>
-
-
 <!-- // ARTILLERY // -->
 
 <animSheet name="artillery_generic_laser" w="396" h="65" fw="33" fh="65">weapons/overwrite/artillery_generic_laser.png</animSheet>
@@ -1618,39 +1782,39 @@
 	<desc length="12" x="0" y="0"/>
 	<chargedFrame>4</chargedFrame>
 	<fireFrame>8</fireFrame>
-	<firePoint x="16" y="20"/>
+	<firePoint x="17" y="20"/>
 	<mountPoint x="0" y="0"/>
+	<chargeImage>weapons/overwrite/artillery_generic_laser_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="artillery_generic_missile" w="99" h="65" fw="33" fh="65">weapons/overwrite/artillery_generic_missile.png</animSheet>
+<animSheet name="artillery_generic_missile" w="198" h="65" fw="33" fh="65">weapons/overwrite/artillery_generic_missile.png</animSheet>
 <weaponAnim name="artillery_generic_missile">
 	<sheet>artillery_generic_missile</sheet>
-	<desc length="3" x="0" y="0"/>
+	<desc length="6" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="20"/>
+	<firePoint x="17" y="20"/>
 	<mountPoint x="0" y="0"/>
-	<chargeImage>weapons/overwrite/artillery_generic_missile_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="artillery_generic_beam" w="594" h="65" fw="33" fh="65">weapons/overwrite/artillery_generic_beam.png</animSheet>
+<animSheet name="artillery_generic_beam" w="561" h="65" fw="33" fh="65">weapons/overwrite/artillery_generic_beam.png</animSheet>
 <weaponAnim name="artillery_generic_beam">
 	<sheet>artillery_generic_beam</sheet>
-	<desc length="18" x="0" y="0"/>
+	<desc length="17" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="30"/>
+	<firePoint x="17" y="31"/>
 	<mountPoint x="0" y="0"/>
 	<chargeImage>weapons/overwrite/artillery_generic_beam_glow.png</chargeImage>
 </weaponAnim>
 
-<animSheet name="artillery_generic_ion" w="330" h="65" fw="33" fh="65">weapons/overwrite/artillery_generic_ion.png</animSheet>
+<animSheet name="artillery_generic_ion" w="264" h="65" fw="33" fh="65">weapons/overwrite/artillery_generic_ion.png</animSheet>
 <weaponAnim name="artillery_generic_ion">
 	<sheet>artillery_generic_ion</sheet>
-	<desc length="10" x="0" y="0"/>
+	<desc length="8" x="0" y="0"/>
 	<chargedFrame>1</chargedFrame>
 	<fireFrame>2</fireFrame>
-	<firePoint x="16" y="20"/>
+	<firePoint x="17" y="10"/>
 	<mountPoint x="0" y="0"/>
 	<chargeImage>weapons/overwrite/artillery_generic_ion_glow.png</chargeImage>
 </weaponAnim>

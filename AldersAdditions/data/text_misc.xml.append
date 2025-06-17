@@ -2,30 +2,29 @@
 
 <!-- /// TOOLTIPS /// -->
 
-<!-- // MISC. // -->
 
-<text name="addon_hover_aa">ALDER'S ADDITIONS
-Currently Enabled.
-Click to see more info.</text>
-<text name="info_addon_aa">Alder's Additions: First Strike
-Developed by: Alder, Vertaalfout, Chrono Vortex, Tabbi
-Currently Enabled.
-	
-An expansion pack that contains many unusual weapons, and which serves as a groundwork for future segments of Alder's Additions to come. As this mod is in open beta, it may contain strong balance variations; play at your own risk!
-</text>
-
-<!-- // WEAPONS // -->
-
-<text name="aa_tip_disruptor">Tip: Disruptors deal ion damage, allowing them to take down shields but weakening their effect on a ship compared to standard beams. They have an advantage over standard ion weapons by being able to strike multiple systems with one sweep, and cannot miss.</text>
-<text name="aa_tip_capacitor">Tip: Capacitors deal ion damage, serving a similar purpose to ion barrage weapons with increased accuracy and precision.</text>
+<!-- // WEAPON TOOLTIPS // -->
+<text name="aa_tip_disruptor">Tip: Disruptors are Beams that deal ion damage. They have an advantage over standard ion weapons by being able to strike multiple systems with one sweep, and they cannot miss.</text>
+<text name="aa_tip_capacitor">Tip: Capacitors are Pinpoints that deal ion damage. They cannot self-chain, but they also cannot miss or be stopped by defense drones.</text>
 <text name="aa_tip_driver">Tip: Mass drivers do not lose charge when depowered. Instead, they continue to charge at a quarter of the usual speed. Firing them still requires power.</text>
 <text name="aa_tip_scrambler">Tip: Scramblers quarter a crew's healing from non-instant effects for the duration of their effect.</text>
-<text name="aa_tip_smash">Tip: When one of these weapons pops the final layer of shielding on a ship, the shield will be crushed, forcing it to regenerate its first layer at a rate slowed by the crush intensity percentage.</text>
-<text name="aa_tip_inducer">Tip: Electric Inducers completely bypass almost all forms of defense, similar to bombs. They also have a +100% bonus to hit, making them nearly impossible to avoid even when wielded by the enemy.</text>
+<text name="aa_tip_smash">Tip: When one of these weapons pops the final layer of shielding on a ship, a shield crush is added. While that crush is present, the ship's shield layer will be reduced by the crush's intensity percentage. When a shield layer regenerates, the most recent crush is removed.</text>
+<text name="aa_tip_inducer">Tip: Inducers completely bypass almost all forms of defense, similar to bombs. They also have a +100% bonus to hit, making them nearly impossible to avoid even when wielded by the enemy.</text>
 <text name="aa_tip_accumulator">Tip: When left to charge, accumulating weapons gradually increase the damage of their shot. This lends them a degree of flexibility similar to charge weapons.</text>
-<text name="aa_tip_infuser">Tip: Infusers cannot be manually shot. When the weapon to its right fires, an Infuser copies its combat statistics to that weapon, then behaves as if it was fired.</text>
+<text name="aa_tip_infuser">Tip: Infusers cannot be shot. When the weapon to its right fires, an Infuser copies its combat statistics to that weapon, then behaves as if it were fired.</text>
+
 <text name="aa_tip_pointer">Tip: Do not underestimate this device.</text>
 <text name="aa_tip_imagine">Tip: You never know what you'll get.</text>
 <text name="aa_tip_system">Tip: We will set you free.</text>
+
+<!-- // WEAPON DESCRIPTIONS // -->
+<text name="aa_stat_smash_crush">Crushes Applied: \1</text>
+<text name="aa_stat_smash_reduction">Crush Intensity: \1%</text>
+<text name="aa_stat_smash_onhit">Pops shields on contact with the hull</text>
+
+<text name="aa_stat_holder">Powerless Charge Rate: \1%</text>
+
+<text name="aa_stat_infuser">Can't be shot, but applies damage, hazard, and affliction statistics to the weapon to its right</text>
+
 
 </FTL>

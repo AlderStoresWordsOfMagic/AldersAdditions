@@ -1,5 +1,5 @@
 <metadata>
-  <title><![CDATA[ ALDER'S ADDITIONS: First Strike ]]></title>
+  <title><![CDATA[ ALDER'S ADDITIONS ]]></title>
   <threadUrl><![CDATA[]]></threadUrl>
   <author><![CDATA[ Alder]]></author>
   <version><![CDATA[ 2.0.1 ]]></version>
@@ -9,7 +9,7 @@ This addon for FTL: Multiverse incorporates a significant array of new equipment
 
 Special thanks to:
 - Chrono Vortex, Julk, Arc, Vertaalfout, and Sillysandvich for guiding me through the Lua scripts.
-- Tabbi and Terry, for balancing feedback.
+- Tabbi, Nauter, and Terry, for balancing feedback.
 - R4V3-ON, for encouragement and art tips.
 ]]>
   </description>

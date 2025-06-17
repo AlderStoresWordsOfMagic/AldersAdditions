@@ -25,9 +25,8 @@
         <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
@@ -42,13 +41,16 @@
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
         <mod-append:name>AA_INDUCER</mod-append:name>
         <mod-append:name>AA_INDUCER_HEAVY</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
@@ -74,6 +76,8 @@
         <mod-append:name>AA_MVLOOT_STEALTH_CHAOS</mod-append:name>
         <mod-append:name>AA_MVLOOT_HACKER</mod-append:name>
         <mod-append:name>AA_MVLOOT_HACKER_CHAOS</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -95,9 +99,8 @@
         <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
@@ -112,13 +115,16 @@
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
         <mod-append:name>AA_INDUCER</mod-append:name>
         <mod-append:name>AA_INDUCER_HEAVY</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_CONSERVATIVE</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
@@ -144,6 +150,8 @@
         <mod-append:name>AA_MVLOOT_STEALTH_CHAOS</mod-append:name>
         <mod-append:name>AA_MVLOOT_HACKER</mod-append:name>
         <mod-append:name>AA_MVLOOT_HACKER_CHAOS</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_DRONES_ALL">
@@ -156,15 +164,19 @@
 
         <mod-append:name>AA_MVLOOT_PALADIN</mod-append:name>
         <mod-append:name>AA_MVLOOT_PALADIN_CHAOS</mod-append:name>
+        <mod-append:name>AA_MVLOOT_LIMIT_DEFENSE</mod-append:name>
+        <mod-append:name>AA_MVLOOT_LIMIT_CHAOS_DEFENSE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_DRONES_ALL_CRAPBUCKET">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
         <mod-append:name>AA_SPLICER</mod-append:name>
 
         <mod-append:name>AA_MVLOOT_PALADIN</mod-append:name>
         <mod-append:name>AA_MVLOOT_PALADIN_CHAOS</mod-append:name>
+        <mod-append:name>AA_MVLOOT_LIMIT_DEFENSE</mod-append:name>
+        <mod-append:name>AA_MVLOOT_LIMIT_CHAOS_DEFENSE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="DRONE_CONTROL_COMBAT">
@@ -191,15 +203,21 @@
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_CONSERVATIVE</mod-append:name>
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
 
         <mod-append:name>AA_INDUCER</mod-append:name>
         <mod-append:name>AA_INDUCER_HEAVY</mod-append:name>
 
         <mod-append:name>AA_DRIVER_ION</mod-append:name>
+
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ENERGY">
@@ -225,6 +243,10 @@
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
     </mod:findName>
 
+    <mod:findName type="blueprintList" name="BLUELIST_BOMBS_CREWDAMAGE">
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+    </mod:findName>
+
     <mod:findName type="blueprintList" name="BLUELIST_SUPPORT">
         <mod-append:name>AA_LASER_REPAIR</mod-append:name>
         <mod-append:name>AA_MISSILES_SMASH</mod-append:name>
@@ -234,7 +256,8 @@
 
     <mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
@@ -248,13 +271,23 @@
 
         <mod-append:name>AA_MVLOOT_STEALTH</mod-append:name>
         <mod-append:name>AA_MVLOOT_STEALTH_CHAOS</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HEAVY">
@@ -263,6 +296,7 @@
         <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
         <mod-append:name>AA_DRIVER_BIO</mod-append:name>
         <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+        <mod-append:name>AA_RAILGUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
@@ -271,6 +305,9 @@
         <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_NODAMAGE">
@@ -278,6 +315,9 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO">
@@ -320,6 +360,9 @@
         <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FIRE_NONBALLISTIC">
@@ -327,11 +370,18 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FIRE_BALLISTIC">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_MIND_AFFECT">
+        <mod-append:name>AA_INFUSER_MADNESS</mod-append:name>
     </mod:findName>
 
 <!-- // STORE LIST APPENDS // -->
@@ -362,6 +412,8 @@
 
         <mod-append:name>AA_INDUCER</mod-append:name>
         <mod-append:name>AA_INDUCER_HEAVY</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
     </mod:findName>
 
 <!-- / FACTION FAVORITES / -->
@@ -384,6 +436,7 @@
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ENGI_ITEM_WEAPONS_ION">
@@ -395,6 +448,8 @@
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
 
         <mod-append:name>AA_DRIVER_ION</mod-append:name>
     </mod:findName>
@@ -409,16 +464,10 @@
         <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
-
-        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
-        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
-        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
 
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
@@ -431,8 +480,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ZOLTAN_ITEM_WEAPONS_BEAM">
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
@@ -485,9 +533,6 @@
 
         <mod-append:name>AA_BOMB_SMASH</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
-
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
         <mod-append:name>AA_INDUCER</mod-append:name>
         <mod-append:name>AA_INDUCER_HEAVY</mod-append:name>
@@ -511,6 +556,7 @@
     <mod:findName type="blueprintList" name="SHOP_DYNASTY_ITEM_WEAPONS_BREACH_AND_PIERCE">
         <mod-append:name>AA_LASER_BREACH</mod-append:name>
         <mod-append:name>AA_DRIVER</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_SLUG_ITEM_WEAPONS_BIO">
@@ -518,6 +564,7 @@
         <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
         <mod-append:name>AA_DRIVER_BIO</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
     </mod:findName>
@@ -527,6 +574,10 @@
         <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
     </mod:findName>
 
+    <mod:findName type="blueprintList" name="SHOP_LEECH_ITEM_WEAPONS_STUN">
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
+    </mod:findName>
+
     <mod:findName type="blueprintList" name="SHOP_HARDSCIFI">
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
@@ -534,7 +585,7 @@
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
@@ -547,6 +598,7 @@
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
 
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
@@ -577,6 +629,7 @@
         <mod-append:name>AA_LASER_PURGE</mod-append:name>
         <mod-append:name>AA_ENERGY_BIO</mod-append:name>
         <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
         <mod-append:name>AA_DRIVER_BIO</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
     </mod:findName>
@@ -595,16 +648,23 @@
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_CHARGE">
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_ENERGY_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_SHOTGUN_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
-    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BEAM_UTILITY">
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BEAM_STRONG">
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_FOCUS_SPECIAL">
+        <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_BEAM_BIO">
         <mod-append:name>AA_BEAM_PURGE</mod-append:name>
     </mod:findName>
-
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_ION_ATTRIBUTE">
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
@@ -639,7 +699,7 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_DRONES_COMBAT_AMP">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_DRONES_COMBAT_SPECIAL">
@@ -650,91 +710,39 @@
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_UNIQUE">
         <mod-append:name>AA_MVLOOT_STEALTH</mod-append:name>
         <mod-append:name>AA_MVLOOT_HACKER</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
 
         <mod-append:name>AA_MVLOOT_PALADIN</mod-append:name>
+        <mod-append:name>AA_MVLOOT_LIMIT_DEFENSE</mod-append:name>
     </mod:findName>
 
 <!-- / THE OBSERVERS' CATEGORIES / -->
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_LASER_BOSS">
-        <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
-        <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
-        <mod-append:name>AA_LASER_PARTICLE_INSTANT</mod-append:name>
-        <mod-append:name>AA_LASER_BREACH</mod-append:name>
-        <mod-append:name>AA_LASER_STRAIN</mod-append:name>
-        <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_ION_BOSS">
-        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
-        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_BEAM_BOSS">
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_AMMUNITION_BOSS">
-        <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
-        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_BIO_BOSS">
-        <mod-append:name>AA_LASER_PURGE</mod-append:name>
-        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
-        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
-        <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_FLAK_BOSS">
-        <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_POWERFUL_BOSS">
-        <mod-append:name>AA_DRIVER</mod-append:name>
-        <mod-append:name>AA_DRIVER_BIO</mod-append:name>
-        <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
-        <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
-        <mod-append:name>AA_DRIVER_ION</mod-append:name>
-        <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_SLUG_BOSS">
-        <mod-append:name>AA_LASER_PURGE</mod-append:name>
-        <mod-append:name>AA_BEAM_PURGE</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_ENGI_BOSS">
-        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
-        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
-        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
-
-        <mod-append:name>AA_ION_RAINBOW</mod-append:name>
-        <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
-    </mod:findName>
-
-    <mod:findName type="blueprintList" name="LIST_WEAPONS_PACIFIST_BOSS">
-        <mod-append:name>AA_POINTER</mod-append:name>
-    </mod:findName>
 
     <mod:findName type="blueprintList" name="JUDGELIST_ROCK_RENEGADE_LOOT">
         <mod-append:name>AA_MVLOOT_STEALTH</mod-append:name>
         <mod-append:name>AA_MVLOOT_STEALTH_CHAOS</mod-append:name>
         <mod-append:name>AA_MVLOOT_HACKER</mod-append:name>
         <mod-append:name>AA_MVLOOT_HACKER_CHAOS</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK</mod-append:name>
+        <mod-append:name>AA_MVLOOT_MONK_CHAOS</mod-append:name>
 
         <mod-append:name>AA_MVLOOT_PALADIN</mod-append:name>
         <mod-append:name>AA_MVLOOT_PALADIN_CHAOS</mod-append:name>
+        <mod-append:name>AA_MVLOOT_LIMIT_DEFENSE</mod-append:name>
+        <mod-append:name>AA_MVLOOT_LIMIT_CHAOS_DEFENSE</mod-append:name>
     </mod:findName>
+
+    <mod:findName type="blueprintList" name="JUDGELIST_ROCK_SPECIAL_LOOT">
+        <mod-append:name>AA_RAILGUN</mod-append:name>
+    </mod:findName>
+
 
 <!-- /// OTHER SHIPS FROM MULTIVERSE /// -->
 
 <!-- // FRIENDLY // -->
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_UNION">
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_MILITIA">
@@ -742,6 +750,8 @@
         <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
     </mod:findName>
@@ -757,6 +767,8 @@
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
         <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
 
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
+
         <mod-append:name>AA_DRIVER</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
@@ -770,8 +782,6 @@
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
         <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
-
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
 
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
 
@@ -793,13 +803,14 @@
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_DRONES_ENGI">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
     </mod:findName>
     <mod:findName type="blueprintList" name="LIST_DRONES_ENGI_COMBAT">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ZOLTAN">
@@ -809,23 +820,21 @@
         <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
 
-        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
-        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_INDUCER</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_DRONES_ZOLTAN">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
-        <mod-append:name>AA_DISRUPTOR_1_AMP3</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP3</mod-append:name> -->
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_INDUCER</mod-append:name>
     </mod:findName>
@@ -835,19 +844,16 @@
 
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
-
-        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
-        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
 
         <mod-append:name>AA_INDUCER</mod-append:name>
         <mod-append:name>AA_INDUCER_HEAVY</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_DRONES_ZOLTAN">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
-        <mod-append:name>AA_DISRUPTOR_1_AMP3</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP3</mod-append:name> -->
         <mod-append:name>AA_ELEMENTARY_INDUCER</mod-append:name>
     </mod:findName>
 
@@ -889,6 +895,8 @@
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
+
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
@@ -905,6 +913,7 @@
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LOSTSUN">
@@ -932,19 +941,22 @@
         <mod-append:name>AA_LASER_BREACH</mod-append:name>
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_SIREN">
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_RHYME">
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_SLUG">
@@ -954,6 +966,8 @@
         <mod-append:name>AA_LASER_STRAIN</mod-append:name>
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
 
@@ -969,26 +983,35 @@
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LEECH">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REVOLUTIONARY">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_DRIVER_PARTICLE</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LEECH_ELITE">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_LANIUS">
@@ -1020,6 +1043,8 @@
         <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_DRIVER</mod-append:name>
         <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
         <mod-append:name>AA_DRIVER_ION</mod-append:name>
@@ -1031,12 +1056,15 @@
         <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
         <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
         <mod-append:name>AA_DRIVER_SHOTGUN</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_REBEL_SELITEA">
@@ -1045,7 +1073,8 @@
         <mod-append:name>AA_LASER_STRAIN</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
@@ -1054,7 +1083,6 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ENGINEER">
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
@@ -1070,12 +1098,15 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
 
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_DRIVER_EXPLOSIVE</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_COALITION">
@@ -1086,11 +1117,14 @@
 
         <mod-append:name>AA_ION_CHARGEGUN_DAMAGE</mod-append:name>
 
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ROCK">
@@ -1151,19 +1185,17 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_MANTIS">
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
-    
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
 
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_SUZERAIN">
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
-    
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
 
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_DUSKBRINGER">
@@ -1174,18 +1206,15 @@
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
-        <mod-append:name>AA_BEAM_ION_ADAPT</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
         <mod-append:name>AA_BEAM_ENERGY</mod-append:name>
 
-        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
-        <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
-
         <mod-append:name>AA_INDUCER</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
     </mod:findName>
@@ -1228,12 +1257,17 @@
 
         <mod-append:name>AA_ION_RAINBOW</mod-append:name>
 
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
     
         <mod-append:name>AA_INDUCER</mod-append:name>
         <mod-append:name>AA_INDUCER_HEAVY</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
+
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_DRIVER_ION</mod-append:name>
@@ -1243,12 +1277,25 @@
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
     </mod:findName>
 
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_UNFAIR"> <!-- Normally disallowed, but enemies in the Stargrove can have them -->
+        <mod-append:name>AA_ENERGY_INSTANT</mod-append:name>
+
+        <mod-append:name>AA_BOMB_PURGE</mod-append:name>
+
+        <mod-append:name>AA_MINELAUNCHER_CLOAK</mod-append:name>
+    </mod:findName>
+
+    <mod:findName type="blueprintList" name="LIST_WEAPONS_LOSTSUN_UNFAIR">
+        <mod-append:name>AA_MINELAUNCHER_PARTICLE</mod-append:name>
+    </mod:findName>
+
 <!-- // CORPORATIONS // -->
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_HEPHAESTUS">
         <mod-append:name>AA_LASER_SMASH</mod-append:name>
 
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
 
         <mod-append:name>AA_MISSILES_ION_ENEMY</mod-append:name>
     </mod:findName>
@@ -1262,9 +1309,13 @@
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_PHASE</mod-append:name>
+
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
-<!-- // MULTIVERSE TRAVELLERS // -->
+<!-- // MULTIVERSE TRAVELERS // -->
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_ALL">
         <mod-append:name>AA_LASER_PARTICLE_MINI</mod-append:name>
@@ -1282,8 +1333,8 @@
 
         <mod-append:name>AA_ENERGY_BIO</mod-append:name>
 
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
@@ -1291,11 +1342,15 @@
 
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
         <mod-append:name>AA_INDUCER</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
 
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
+
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
 
         <mod-append:name>AA_DRIVER</mod-append:name>
@@ -1312,11 +1367,13 @@
 
         <mod-append:name>AA_MISSILES_SMASH_ENEMY</mod-append:name>
 
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
+
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
 
         <mod-append:name>AA_BOMB_SMASH_ENEMY</mod-append:name>
 
@@ -1387,27 +1444,30 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS">
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS_FOCUS">
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
         <mod-append:name>AA_SHOCK_CANNON</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS_ONLY">
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
+
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
@@ -1415,17 +1475,18 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS_DAMAGE">
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
+        <mod-append:name>AA_BEAM_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_BEAMS_UTILITY">
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
         <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_3</mod-append:name>
         <mod-append:name>AA_BEAM_ION_BIO</mod-append:name>
         <mod-append:name>AA_BEAM_ION_STUN</mod-append:name>
 
         <mod-append:name>AA_FOCUS_PARTICLE</mod-append:name>
+        <mod-append:name>AA_FOCUS_SMASH</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
     </mod:findName>
 
@@ -1436,6 +1497,7 @@
         <mod-append:name>AA_ENERGY_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_ION_PROJECTILE">
@@ -1459,6 +1521,7 @@
         <mod-append:name>AA_ENERGY_BIO</mod-append:name>
 
         <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_WEAPONS_ENERGY">
@@ -1485,19 +1548,19 @@
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_DRONES_ALL">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
         <mod-append:name>AA_ELEMENTARY_INDUCER</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_DRONES_COMBAT">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
         <mod-append:name>AA_ELEMENTARY_INDUCER</mod-append:name>
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="MV_DRONES_COMBAT_ION">
-        <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name>
+        <!-- <mod-append:name>AA_DISRUPTOR_1_AMP2</mod-append:name> -->
     </mod:findName>
 
 <!-- // MISCELLANEOUS // -->
@@ -1539,7 +1602,6 @@
         <mod-append:name>AA_LASER_SMASH_2</mod-append:name>
         <mod-append:name>AA_INDUCER_HEAVY</mod-append:name>
         <mod-append:name>AA_MISSILES_ION</mod-append:name>
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
         <mod-append:name>AA_BEAM_ION_3</mod-append:name>
         <mod-append:name>AA_FOCUS_ION_2</mod-append:name>
         <mod-append:name>AA_DRIVER</mod-append:name>
@@ -1590,14 +1652,17 @@
 
     <mod:findName type="blueprintList" name="GIFTLIST_ENGI">
         <mod-append:name>AA_ELEMENTARY_SMASH</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_1</mod-append:name>
+        <mod-append:name>AA_FOCUS_ION_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_ZOLTAN">
         <mod-append:name>AA_BEAM_ION_1</mod-append:name>
+        <mod-append:name>AA_BEAM_ION_2</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_REBEL">
-        <!-- <mod-append:name>AA_BEAM_SUSTAIN</mod-append:name> -->
         <mod-append:name>AA_LASER_CHARGEGUN_DAMAGE</mod-append:name>
     </mod:findName>
 
@@ -1623,12 +1688,9 @@
         <mod-append:name>AA_LASER_PARTICLE_PIERCE</mod-append:name>
     </mod:findName>
 
-    <mod:findName type="blueprintList" name="GIFTLIST_MANTIS">
-        <mod-append:name>AA_BEAM_SMASH</mod-append:name>
-    </mod:findName>
-
     <mod:findName type="blueprintList" name="GIFTLIST_LEECH">
         <mod-append:name>AA_SHOTGUN_PARTICLE</mod-append:name>
+        <mod-append:name>AA_INDUCER_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_DYNASTY">
@@ -1668,6 +1730,16 @@
 
 <mod:findName type="blueprintList" name="LIST_CREW_SIREN_SLAVE"> <!-- Append: list of bonus crew Siren ships can spawn with -->
 	<mod-append:name>aa_dustworm</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH"> <!-- Append: lists of Morph crew -->
+	<mod-append:name>aa_blob_dustworm</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_TRANSFORMED">
+	<mod-append:name>aa_blob_dustworm</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_CREW_MORPH_ONLY">
+	<mod-append:name>aa_blob_dustworm</mod-append:name>
 </mod:findName>
 
     
@@ -1712,37 +1784,7 @@
     <name>AA_FOCUS_ION_PHASE</name>
 </blueprintList>
 
-<!-- // MISC // -->
 
-<blueprintList name="AA_LIST_WEAPON_RAINBOW_ION_BLASTS"> <!-- Gives the Prismatic Ion a random effect on hit. -->
-	<name>AA_ION_RAINBOW_NORMAL</name>
-    <name>AA_ION_RAINBOW_NORMAL</name>
-    <name>AA_ION_RAINBOW_STUN</name>
-    <name>AA_ION_RAINBOW_STUN</name>
-    <name>AA_ION_RAINBOW_BIO</name>
-    <name>AA_ION_RAINBOW_BIO</name>
-    <name>AA_ION_RAINBOW_FIRE</name>
-    <name>AA_ION_RAINBOW_FIRE</name>
-    <name>AA_ION_RAINBOW_BREACH</name>
-    <name>AA_ION_RAINBOW_BREACH</name>
-    <name>AA_ION_RAINBOW_PHASE</name>
-    <name>AA_ION_RAINBOW_PHASE</name>
-    <name>AA_ION_RAINBOW_ENERGY</name>
-    <name>AA_ION_RAINBOW_ENERGY</name>
-</blueprintList>
-
-<blueprintList name="AA_LIST_WEAPON_IMAGINATOR_BLASTS"> <!-- Gives the Imaginator a random effect on hit. -->
-	<name>AA_BEAM_IMAGINE_HACK</name>
-    <name>AA_BEAM_IMAGINE_MC</name>
-    <name>AA_BEAM_IMAGINE_LOCKDOWN</name>
-    <name>AA_BEAM_IMAGINE_SPORES_POSITIVE</name>
-    <name>AA_BEAM_IMAGINE_SPORES_NEGATIVE</name>
-    <name>AA_BEAM_IMAGINE_SENTRY_NEURO</name>
-    <name>AA_BEAM_IMAGINE_SENTRY_FROST</name>
-    <name>AA_BEAM_IMAGINE_BAIT</name>
-    <name>AA_BEAM_IMAGINE_SPIDER</name>
-    <name>AA_BEAM_IMAGINE_GHOST</name>
-</blueprintList>
 
 
 <!-- /// NON-MV CREW LISTS /// -->
@@ -1755,6 +1797,65 @@
 
 
 <!-- /// SHIPS NOT FROM MULTIVERSE /// -->
+
+
+<!-- // REGULAR SHIPS // -->
+
+
+<!-- // MINIBOSSES // -->
+
+<!-- Imaginator Quest MFK Dropship Ace -->
+<shipBlueprint name="AA_SHIP_REBEL_IMAGINATOR" layout="mu_rebel_dropship" img="mu_rebel_dropship_superelite">
+	<class>MFK Dropship Ace</class>
+	<minSector>3</minSector>
+	<systemList>
+		<clonebay power="1" max="3" room="7" start="false" />
+		<doors power="1" max="3" room="11" start="false" />
+		<engines power="1" max="2" room="2" start="true" />
+		<medbay power="1" max="3" room="7" start="false" />
+		<oxygen power="1" max="3" room="10" start="true" />
+		<pilot power="2" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="3" start="true" />
+		<teleporter power="2" max="3" room="1" start="true" />
+		<weapons power="3" max="6" room="4" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="10" count="4" load="LIST_WEAPONS_REBEL_SELITE" />
+	<droneList drones="0" count="0" />
+	<health amount="14" />
+	<maxPower amount="16" />
+	<crewCount amount="4" max="10" class="human_soldier" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="UPG_SHIELDS_PERFORMANCE" />
+	<aug name="UPG_TECH_RESPIRATOR" />
+</shipBlueprint>
+
+<!-- Pastiche Quest Rock Battleship -->
+<shipBlueprint name="AA_SHIP_ROCK_PASTICHE" layout="mu_rock_battleship" img="aa_rock_battleship_pastiche">
+	<class>Gazer Battleship</class>
+	<minSector>3</minSector>
+	<systemList>
+		<doors power="2" max="3" room="9" start="false" />
+		<engines power="1" max="2" room="5" start="true" />
+		<medbay power="1" max="3" room="14" start="false" />
+        <mind power="3" max="3" room="3" start="true" />
+		<oxygen power="1" max="2" room="8" start="true" />
+		<pilot power="1" max="3" room="0" start="true" />
+		<shields power="4" max="10" room="4" start="true" />
+		<teleporter power="1" max="2" room="12" start="false" />
+		<weapons power="6" max="10" room="1" start="true" />
+	</systemList>
+	<weaponSlots>6</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="20" count="6" load="LIST_WEAPONS_ROCK_ELITE" />
+	<droneList drones="0" count="0" />
+	<health amount="15" />
+	<maxPower amount="21" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="ROCK_ARMOR"/>
+    <aug name="SIREN_ENEMY_MC"/>
+</shipBlueprint>
 
 
 <!-- // BOSSES // -->
@@ -1791,6 +1892,40 @@
 	<health amount="20" />
 	<maxPower amount="36" />
 	<boardingAI>sabotage</boardingAI>
+</shipBlueprint>
+
+
+<!-- ??? -->
+<shipBlueprint name="AA_BOSS_SIREN_PASTICHE" layout="mu_her_battleship" img="mu_her_battleship">
+	<class>???</class>
+	<systemList>
+		<temporal power="2" max="2" room="14" start="true" />
+		<cloaking power="2" max="2" room="9" start="true" />
+		<doors power="3" max="3" room="10" start="true" />
+		<engines power="2" max="2" room="6" start="true" />
+		<mind power="3" max="3" room="13" start="true" />
+		<oxygen power="2" max="2" room="3" start="true" />
+		<pilot power="1" max="1" room="2" start="true" />
+		<shields power="8" max="8" room="0" start="true" />
+		<teleporter power="3" max="3" room="5" start="true" />
+		<weapons power="10" max="10" room="1" start="true" />
+	</systemList>
+	<weaponSlots>6</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="12" count="4">
+        <weapon name="BEAM_MADNESS_VISION"/>
+        <weapon name="MISSILES_FIRE_ENEMY"/>
+        <weapon name="AA_LASER_CHARGEGUN_DAMAGE"/>
+        <weapon name="SHOTGUN_2"/>
+        <weapon name="AA_INDUCER_STUN"/>
+    </weaponList>
+	<droneList drones="0" count="0"/>
+	<health amount="22"/>
+	<maxPower amount="37"/>
+	<boardingAI>sabotage</boardingAI>
+	<aug name="CHAOS"/>
+	<aug name="RHYME_SHIELDS"/>
+    <aug name="SIREN_ENEMY_MC"/>
 </shipBlueprint>
 
 
@@ -1896,7 +2031,7 @@
     <aug name="SYSTEM_CASING_NEW"/>
 </shipBlueprint>
 <shipBlueprint name="AA_MVBOSS_STEALTH_CRUISER_CHAOS" layout="aa_mvboss_stealth_cruiser" img="aa_mvboss_stealth_cruiser">
-	<class>Renegade Cruiser</class>
+	<class>Chaotic Renegade Cruiser</class>
 	<minSector>1</minSector>
 	<maxSector>8</maxSector>
 	<systemList>
@@ -1909,12 +2044,12 @@
 		<oxygen power="3" max="3" room="13" start="true" />
 		<pilot power="2" max="2" room="0" start="true" />
 		<shields power="4" max="8" room="10" start="true" />
-		<weapons power="9" max="9" room="8" start="true" />
+		<weapons power="6" max="6" room="8" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="0" count="4">
-		<weapon name="AA_BEAM_ION_BIO" />
+		<weapon name="ION_INSTANT" />
 		<weapon name="AA_ENERGY_BIO" />
 		<weapon name="AA_MVLOOT_STEALTH" />
 		<weapon name="AA_MVLOOT_STEALTH" />
@@ -1924,7 +2059,7 @@
 		<drone name="ION_1_AMP3_ENEMY" />
 	</droneList>
 	<health amount="20" />
-	<maxPower amount="37" />
+	<maxPower amount="34" />
 	<boardingAI>sabotage</boardingAI>
 	<aug name="UPG_CLOAK_FIRE" />
     <aug name="SYSTEM_CASING_NEW"/>
@@ -1978,13 +2113,13 @@
 		<oxygen power="1" max="1" room="19" start="true" />
 		<pilot power="3" max="3" room="2" start="true" />
 		<shields power="8" max="8" room="15" start="true" />
-		<weapons power="4" max="4" room="5" start="true" />
+		<weapons power="5" max="5" room="5" start="true" />
 	</systemList>
 	<weaponSlots>4</weaponSlots>
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="20" count="2">
         <weapon name="AA_MISSILES_ION_ENEMY" />
-		<weapon name="ION_3" />
+		<weapon name="SHOTGUN_ION" />
 	</weaponList>
 	<droneList drones="20" count="4">
 		<drone name="COMBAT_1_LASER" />
@@ -1993,7 +2128,7 @@
         <drone name="AA_ELEMENTARY_INDUCER" />
 	</droneList>
 	<health amount="20" />
-	<maxPower amount="27" />
+	<maxPower amount="28" />
 	<boardingAI>sabotage</boardingAI>
 	<aug name="ROCK_ARMOR" />
 	<aug name="EX_LAB_ROCK_SKIN" />
@@ -2033,7 +2168,7 @@
 	<aug name="EX_LAB_ROCK_SKIN" />
 </shipBlueprint>
 <shipBlueprint name="AA_MVBOSS_PALADIN_CRUISER_CHAOS" layout="aa_mvboss_paladin_cruiser" img="aa_mvboss_paladin_cruiser">
-	<class>Renegade Cruiser</class>
+	<class>Chaotic Renegade Cruiser</class>
 	<minSector>1</minSector>
 	<maxSector>8</maxSector>
 	<systemList>
@@ -2163,7 +2298,7 @@
 	<aug name="LAB_SLUG_BUFF" />
 </shipBlueprint>
 <shipBlueprint name="AA_MVBOSS_HACKER_CRUISER_CHAOS" layout="aa_mvboss_hacker_cruiser" img="aa_mvboss_hacker_cruiser">
-	<class>Renegade Cruiser</class>
+	<class>Chaotic Renegade Cruiser</class>
 	<minSector>1</minSector>
 	<maxSector>8</maxSector>
 	<systemList>
@@ -2191,6 +2326,145 @@
 	<boardingAI>invasion</boardingAI>
 	<aug name="UPG_HACK_STUN" />
     <aug name="LAB_SLUG_BUFF" />
+</shipBlueprint>
+
+<shipBlueprint name="AA_MVBOSS_MONK_CRUISER_NORMAL" layout="aa_mvboss_monk_cruiser" img="aa_mvboss_monk_cruiser">
+	<class>Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<doors power="1" max="1" room="10" start="true" />
+		<drones power="5" max="5" room="15" start="true" />
+		<engines power="2" max="2" room="12" start="true" />
+		<hacking power="1" max="1" room="0" start="true" />
+		<clonebay power="2" max="2" room="1" start="true" />
+		<oxygen power="3" max="3" room="7" start="true" />
+		<pilot power="1" max="1" room="3" start="true" />
+		<shields power="6" max="6" room="5" start="true" />
+		<weapons power="10" max="10" room="17" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="0" count="4">
+        <weapon name="AA_BEAM_ION_3" />
+		<weapon name="AA_BEAM_ENERGY" />
+		<weapon name="AA_BEAM_ION_STUN" />
+		<weapon name="AA_LASER_PARTICLE_MINI" />
+	</weaponList>
+	<droneList drones="10" count="2">
+		<drone name="ASSAULT_PARTICLE" />
+		<drone name="BATTLETOG2_BOARDER" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="28" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="EX_LAB_ZOLTAN_SHIELD" />
+	<aug name="ENERGY_SHIELD" />
+</shipBlueprint>
+<shipBlueprint name="AA_MVBOSS_MONK_CRUISER_CHALLENGE" layout="aa_mvboss_monk_cruiser" img="aa_mvboss_monk_cruiser">
+	<class>Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<doors power="2" max="2" room="10" start="true" />
+		<drones power="8" max="8" room="15" start="true" />
+		<engines power="2" max="2" room="12" start="true" />
+		<hacking power="2" max="2" room="0" start="true" />
+		<clonebay power="2" max="2" room="1" start="true" />
+		<oxygen power="3" max="3" room="7" start="true" />
+		<pilot power="1" max="1" room="3" start="true" />
+		<shields power="8" max="8" room="5" start="true" />
+		<weapons power="11" max="11" room="17" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="0" count="4">
+        <weapon name="AA_BEAM_ION_ADAPT" />
+		<weapon name="AA_BEAM_ENERGY" />
+		<weapon name="AA_BEAM_ION_STUN" />
+		<weapon name="AA_LASER_PARTICLE_MINI" />
+	</weaponList>
+	<droneList drones="10" count="3">
+		<drone name="ASSAULT_PARTICLE" />
+		<drone name="BATTLETOG2_DEFEND" />
+		<drone name="BATTLETOG2_BOARDER" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="36" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="EX_LAB_ZOLTAN_SHIELD" />
+	<aug name="ENERGY_SHIELD" />
+</shipBlueprint>
+<shipBlueprint name="AA_MVBOSS_MONK_CRUISER_EXTREME" layout="aa_mvboss_monk_cruiser" img="aa_mvboss_monk_cruiser">
+	<class>Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<doors power="2" max="2" room="10" start="true" />
+		<drones power="11" max="11" room="15" start="true" />
+		<engines power="2" max="2" room="12" start="true" />
+		<hacking power="2" max="2" room="0" start="true" />
+		<clonebay power="2" max="2" room="1" start="true" />
+		<oxygen power="3" max="3" room="7" start="true" />
+		<pilot power="1" max="1" room="3" start="true" />
+		<shields power="8" max="8" room="5" start="true" />
+		<weapons power="11" max="11" room="17" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="0" count="4">
+        <weapon name="AA_BEAM_ION_ADAPT" />
+		<weapon name="AA_BEAM_ENERGY" />
+		<weapon name="AA_BEAM_ION_STUN" />
+		<weapon name="AA_LASER_PARTICLE_MINI" />
+	</weaponList>
+	<droneList drones="10" count="4">
+		<drone name="ASSAULT_PARTICLE" />
+        <drone name="HELLRAISER_FIRE" />
+		<drone name="BATTLETOG2_DEFEND" />
+		<drone name="BATTLETOG2_BOARDER" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="39" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="EX_LAB_ZOLTAN_SHIELD" />
+	<aug name="ENERGY_SHIELD" />
+</shipBlueprint>
+<shipBlueprint name="AA_MVBOSS_MONK_CRUISER_CHAOS" layout="aa_mvboss_monk_cruiser" img="aa_mvboss_monk_cruiser">
+	<class>Chaotic Renegade Cruiser</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<doors power="3" max="3" room="10" start="true" />
+		<drones power="10" max="10" room="15" start="true" />
+		<engines power="2" max="2" room="12" start="true" />
+		<hacking power="3" max="3" room="0" start="true" />
+		<clonebay power="3" max="3" room="1" start="true" />
+		<oxygen power="3" max="3" room="7" start="true" />
+		<pilot power="3" max="3" room="3" start="true" />
+		<shields power="8" max="8" room="5" start="true" />
+		<weapons power="11" max="11" room="17" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="12" count="4">
+        <weapon name="AA_MVLOOT_MONK" />
+		<weapon name="AA_BEAM_ENERGY" />
+		<weapon name="BEAM_FIRE_PIERCE" />
+		<weapon name="AA_MINELAUNCHER_PARTICLE" />
+	</weaponList>
+	<droneList drones="10" count="4">
+		<drone name="HELLRAISER_FIRE" />
+        <drone name="HELLRAISER_FIRE" />
+		<drone name="AA_ELEMENTARY_SMASH" />
+		<drone name="AA_ELEMENTARY_SMASH" />
+	</droneList>
+	<health amount="20" />
+	<maxPower amount="37" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="EX_LAB_ZOLTAN_SHIELD" />
+	<aug name="ENERGY_SHIELD" />
+    <aug name="UPG_TECH_EXTINGUISHERS" />
 </shipBlueprint>
 
 <shipBlueprint name="AA_MVBOSS_LIMIT_CRUISER_NORMAL" layout="aa_mvboss_limit_cruiser" img="aa_mvboss_limit_cruiser">
@@ -2301,7 +2575,7 @@
 	<aug name="COMBAT_CLOAKING_JAMMER" />
 </shipBlueprint>
 <shipBlueprint name="AA_MVBOSS_LIMIT_CRUISER_CHAOS" layout="aa_mvboss_limit_cruiser" img="aa_mvboss_limit_cruiser">
-	<class>Renegade Cruiser</class>
+	<class>Chaotic Renegade Cruiser</class>
 	<minSector>1</minSector>
 	<maxSector>8</maxSector>
 	<systemList>
@@ -2368,7 +2642,7 @@
 	<health amount="10" />
 	<maxPower amount="8" />
 	<boardingAI>sabotage</boardingAI>
-    <aug name="AA_PARTICLE_SHIELD" />
+    <!-- <aug name="AA_PARTICLE_SHIELD" /> -->
 </shipBlueprint>
 
 

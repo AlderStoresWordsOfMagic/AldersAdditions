@@ -1,66 +1,30 @@
 local userdata_table = mods.multiverse.userdata_table
 
+-- XML parsing imports
+local string_replace = mods.multiverse.string_replace
+local node_get_number_default = mods.multiverse.node_get_number_default
+local node_get_bool_default = mods.multiverse.node_get_bool_default
+local weaponTagParsers = mods.multiverse.weaponTagParsers
+
 -- [Smash Weapons - Pop shield without hull damage on collision with shield, and crush when fully drained.]
 
+-- Add Lua statistics to every weapon with the <aa-shieldSmash> tag
 mods.alder.popWeapons = {}
 local popWeapons = mods.alder.popWeapons
 
-popWeapons["AA_LASER_SMASH"] = {
-    count = 1, -- Number of shield layers to pop
-    countSuper = 1, -- Number of super shield layers to pop
-    crush = 1, -- If this weapon reduces shields to 0, apply this many layers of crushed shields
-    reduction = 0.6, -- Percentage to reduce shield recharge rate by while crushed
-    onHit = false -- If true, the weapon pops and crushes when it hits the hull instead of when it hits shields
-}
-popWeapons["AA_LASER_SMASH_2"] = {
-    count = 1,
-    countSuper = 1,
-    crush = 1,
-    reduction = 0.6,
-    onHit = false
-}
-popWeapons["AA_DRONE_LASER_SMASH"] = {
-    count = 1,
-    countSuper = 1,
-    crush = 1,
-    reduction = 0.6,
-    onHit = false
-}
-popWeapons["AA_BEAM_SMASH"] = {
-    count = 2,
-    countSuper = 2,
-    crush = 1,
-    reduction = 0.6,
-    onHit = false
-}
-popWeapons["AA_MISSILES_SMASH"] = {
-    count = 4,
-    countSuper = 4,
-    crush = 1,
-    reduction = 0.6,
-    onHit = true
-}
-popWeapons["AA_MISSILES_SMASH_ENEMY"] = {
-    count = 4,
-    countSuper = 4,
-    crush = 1,
-    reduction = 0.6,
-    onHit = true
-}
-popWeapons["AA_BOMB_SMASH"] = {
-    count = 4,
-    countSuper = 4,
-    crush = 1,
-    reduction = 0.6,
-    onHit = true
-}
-popWeapons["AA_BOMB_SMASH_ENEMY"] = {
-    count = 4,
-    countSuper = 4,
-    crush = 1,
-    reduction = 0.6,
-    onHit = true
-}
+table.insert(weaponTagParsers, function(weaponNode)
+    local smashNode = weaponNode:first_node("aa-shieldSmash")
+    if smashNode then
+        local smashStats = {}
+        smashStats.count = node_get_number_default(smashNode:first_node("count"), 0)
+        smashStats.countSuper = node_get_number_default(smashNode:first_node("countSuper"), 0)
+        smashStats.crush = node_get_number_default(smashNode:first_node("crush"), 0)
+        smashStats.reduction = (node_get_number_default(smashNode:first_node("reduction"), 0) / 10) -- Akin to vanilla behavior; 1 in the tag equals 10% reduction
+        smashStats.onHit = node_get_bool_default(smashNode:first_node("onHit"), false)
+        popWeapons[weaponNode:first_attribute("name"):value()] = smashStats
+    end
+end)
+
 
 -- Apply crush on shield hit
 local function crush_shield(popData, ship, x, y)
@@ -126,12 +90,12 @@ end)
 local crushIcon = Hyperspace.Resources:GetImageId("statusUI/top_shieldsquare_crushed_full.png")
 local function render_crush_bubbles(ship, x, y)
     local crushTable = userdata_table(ship, "mods.aa.shieldCrush").crush
-    local crushCount = crushTable and #crushTable or 0 -- # means length of the table, and the length of the table is the number of shields crushed
+    local crushCount = crushTable and #crushTable or 0 -- "#" means length of the table, and the length of the table is the number of shields crushed
     for i = 1, crushCount do
         Graphics.CSurface.GL_BlitImage(crushIcon, x + (23 * i), y, 30, 30, 0, Graphics.GL_Color(1.0, 1.0, 1.0, 0.6), false)
     end
 end
-script.on_render_event(Defines.RenderEvents.GUI_CONTAINER, mods.alder.doNothing, function()
+script.on_render_event(Defines.RenderEvents.SHIP_STATUS, mods.alder.doNothing, function()
     if Hyperspace.ships.player then render_crush_bubbles(Hyperspace.ships.player, 7, 47) end
     if Hyperspace.ships.enemy and not Hyperspace.ships.enemy.bDestroyed then
         if Hyperspace.Global.GetInstance():GetCApp().gui.combatControl.boss_visual then
@@ -139,5 +103,29 @@ script.on_render_event(Defines.RenderEvents.GUI_CONTAINER, mods.alder.doNothing,
         else
             render_crush_bubbles(Hyperspace.ships.enemy, 865, 114)
         end
+    end
+end)
+
+
+-- Add info to stats
+script.on_internal_event(Defines.InternalEvents.WEAPON_STATBOX, function(bp, stats)
+    local smash = popWeapons[bp.name]
+    if smash then
+        stats = stats.."\n\n"..string_replace(Hyperspace.Text:GetText("stat_pop"), "\\1", smash.count)
+        if smash.countSuper > 0 and smash.countSuper ~= smash.count then
+            stats = stats.."\n"..string_replace(Hyperspace.Text:GetText("stat_pop_super"), "\\1", smash.countSuper)
+        end
+        if smash.crush > 0 then
+            stats = stats.."\n"..string_replace(Hyperspace.Text:GetText("aa_stat_smash_crush"), "\\1", smash.crush)
+        end
+        if smash.reduction > 0 then
+            stats = stats.."\n"..string_replace(Hyperspace.Text:GetText("aa_stat_smash_reduction"), "\\1", (smash.reduction * 100))
+        end
+        if smash.onHit then
+            stats = stats.."\n"..Hyperspace.Text:GetText("aa_stat_smash_onhit")
+        end
+        return Defines.Chain.CONTINUE, stats
+    -- Muffle VSCode warning
+    ---@diagnostic disable-next-line: missing-return
     end
 end)
