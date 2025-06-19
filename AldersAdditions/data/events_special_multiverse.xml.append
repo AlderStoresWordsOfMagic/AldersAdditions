@@ -482,7 +482,7 @@
 	</choice>
 </event>
 
-</event>
+
 <event name="AA_SHIP_MVBOSS_PALADIN_CRUISER_DESTROYED">
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
