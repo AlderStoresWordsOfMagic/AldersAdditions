@@ -669,7 +669,6 @@
 	</choice>
 </event>
 
-</event>
 <event name="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED">
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
@@ -865,7 +864,6 @@
 	</choice>
 </event>
 
-</event>
 <event name="AA_SHIP_MVBOSS_MONK_CRUISER_DESTROYED">
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
@@ -1115,7 +1113,6 @@
 	</choice>
 </event>
 
-</event>
 <event name="AA_SHIP_MVBOSS_LIMIT_CRUISER_DESTROYED">
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
