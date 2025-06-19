@@ -112,18 +112,12 @@ This enemy has one or more firewalled rooms, marked by the purple border and pur
             <tooltip>ENCASED ROOMS:
 This enemy has one or more encased rooms, marked by the orange border and orange R icon in the top left. Encased rooms are immune to sabotage and fire damage, but otherwise take damage as normal.</tooltip>
         </mod-append:shipIcon>
-    
-        <!--<mod-append:shipIcon>
-            <name>aa_icon_multiresist</name>
-            <tooltip>MULTIPLE RESISTANCES:
-    This enemy has multiple resistant rooms of different types, marked by the letter in the top left. Use your knowledge to determine which rooms are resistant to what.</tooltip>
-        </mod-append:shipIcon> 
         
         <mod-append:shipIcon>
-            <name>aa_icon_superauto</name>
-            <tooltip>ADVANCED AUTOMATION:
-    This enemy is controlled by a complex artificial intelligence, and therefore cannot be crew-killed. Systems behave as if manned by crew with fully developed skills, and automatic repairs are made at triple the rate of a normal automated ship.</tooltip>
-	    </mod-append:shipIcon>-->
+            <name>aa_icon_auto_super</name>
+            <tooltip>ASCENDANT AUTOMATION:
+This enemy is automated, meaning it cannot be crew-killed. All systems act as though they are manned by crew with fully developed skills, and repairs will be made automatically at triple the speed of a normal Auto-ship. Breaches will be repaired at a slow rate.</tooltip>
+	    </mod-append:shipIcon>
 
 
         <!-- / GENERAL AUGMENTS / -->
@@ -156,12 +150,13 @@ Enemy Slugs have a 25% boost to combat, sabotage, and repair speed.</tooltip>
         </mod-append:shipIcon>
 
         <mod-append:shipIcon>
-            <name>aa_icon_lab_zoltan_shielding</name>
-            <tooltip>HARD-LIGHT SHIELDING:
-Enemy Zoltan can't fight, but cause all other crew in the room to take 33% damage from all sources.</tooltip>
+            <name>aa_icon_lab_zoltan_healing</name>
+            <tooltip>EMITTER CALIBRATION:
+Enemy Zoltan heal at 2.5 hp/s if undisturbed for 5 seconds, but do not heal from other passive sources.</tooltip>
         </mod-append:shipIcon>
 
     </mod:findLike>
+    
 
     <!-- // CUSTOM SHIP SPECIFICATIONS // -->
 
@@ -588,20 +583,10 @@ Enemy Zoltan can't fight, but cause all other crew in the room to take 33% damag
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep_chaos</shipIcon>
-            <shipIcon>icon_invasion</shipIcon>
+            <shipIcon>icon_no2</shipIcon>
+            <shipIcon>aa_icon_auto_super</shipIcon>
             <shipIcon>aa_icon_resist_hack</shipIcon>
-            <shipIcon>aa_icon_lab_slug_boost</shipIcon>
         </shipIcons>
-		<crew>
-			<human_technician room="1"/>
-            <slug_ranger room="13"/>
-            <slug_knight room="16"/>
-            <human_soldier room="14"/>
-            <slug_saboteur room="15"/>
-            <human_medic room="17"/>
-            <siren_harpy room="5"/>
-            <siren_harpy room="11"/>
-		</crew>
         <rooms>
             <room id="11"> <!-- Temporal -->
                 <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
@@ -611,15 +596,19 @@ Enemy Zoltan can't fight, but cause all other crew in the room to take 33% damag
                 <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
                 <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
             </room>
+            <room id="5"> <!-- Drones -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
         </rooms>
-        <autoShipForce>false</autoShipForce>
+        <autoShipForce>true</autoShipForce>
     </mod-append:customShip>
 
     <mod-append:customShip name="AA_MVBOSS_MONK_CRUISER_NORMAL">
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
-            <shipIcon>aa_icon_lab_zoltan_shielding</shipIcon>
+            <shipIcon>aa_icon_lab_zoltan_healing</shipIcon>
         </shipIcons>
 		<crew>
 			<zoltan_monk room="3"/>
@@ -637,7 +626,7 @@ Enemy Zoltan can't fight, but cause all other crew in the room to take 33% damag
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
-            <shipIcon>aa_icon_lab_zoltan_shielding</shipIcon>
+            <shipIcon>aa_icon_lab_zoltan_healing</shipIcon>
         </shipIcons>
 		<crew>
 			<zoltan_monk room="3"/>
@@ -655,7 +644,7 @@ Enemy Zoltan can't fight, but cause all other crew in the room to take 33% damag
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep</shipIcon>
-            <shipIcon>aa_icon_lab_zoltan_shielding</shipIcon>
+            <shipIcon>aa_icon_lab_zoltan_healing</shipIcon>
         </shipIcons>
 		<crew>
 			<zoltan_infernum room="3"/>
@@ -673,7 +662,7 @@ Enemy Zoltan can't fight, but cause all other crew in the room to take 33% damag
 		<shipIcons>
             <shipIcon>icon_threat</shipIcon>
             <shipIcon>icon_specialwep_chaos</shipIcon>
-            <shipIcon>aa_icon_lab_zoltan_shielding</shipIcon>
+            <shipIcon>aa_icon_lab_zoltan_healing</shipIcon>
         </shipIcons>
 		<crew>
 			<zoltan_infernum room="3"/>
@@ -1052,8 +1041,14 @@ Creates a semi-permanent effect in the current room, which will dissipate only w
     </mod-append:aug>
 
     <!-- // TECHNICAL // -->
+
+    <mod-append:aug name="AA_AUTO_SUPER"> <!-- Both functions are augments from Fusion. -->
+        <function name="AUTOMATED_SHIP" value="3"/>
+        <function name="AUTOMATED_REPAIR" value="3"/>
+        <function name="SLUG_GEL" value="0.125" useForReqs="false"/>
+    </mod-append:aug>
     
-    <mod-append:aug name="AA_TECH_ENCASED_CLOAKING">
+    <mod-append:aug name="AA_TECH_ENCASED_CLOAKING"> <!-- Fire resistance handled by Lua -->
         <statBoosts>
             <statBoost name="sabotageSpeedMultiplier">
                 <boostType>SET</boostType>

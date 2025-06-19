@@ -533,11 +533,11 @@
     <deadCrew load="AA_SHIP_MVBOSS_HACKER_CRUISER_DEADCREW"/>
 </ship>
 <ship name="AA_MVBOSS_HACKER_CRUISER_CHAOS" auto_blueprint="AA_MVBOSS_HACKER_CRUISER_CHAOS">
-    <destroyed load="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED"/>
-    <deadCrew load="AA_SHIP_MVBOSS_HACKER_CRUISER_DEADCREW"/>
+    <destroyed load="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED_CHAOS"/>
+    <deadCrew load="OPTION_INVALID"/> <!-- Should never appear; Chaotic version is an auto-ship -->
 </ship>
 <event name="AA_EVENT_MVBOSS_HACKER_CRUISER_NORMAL">
-	<text>From out of the tunnel comes a massive cruiser vessel, of Hacker design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<text>From out of the tunnel comes a massive cruiser vessel, of Slug design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
 	<playSound>mysteriousBeacon</playSound>
 	<ship load="AA_MVBOSS_HACKER_CRUISER_NORMAL" hostile="false"/> 
 	<choice hidden="true" max_group="0">
@@ -571,7 +571,7 @@
 		<unvisitedTooltip>This is the location of abnormal energy signatures. [???]</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
 	</beaconType>
-	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<text>From out of the tunnel comes a massive cruiser vessel, of Slug design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
 	<playSound>mysteriousBeacon</playSound>
 	<ship load="AA_MVBOSS_HACKER_CRUISER_CHALLENGE" hostile="false"/> 
 	<choice hidden="true" max_group="0">
@@ -600,7 +600,7 @@
 	</choice>
 </event>
 <event name="AA_EVENT_MVBOSS_HACKER_CRUISER_EXTREME">
-	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<text>From out of the tunnel comes a massive cruiser vessel, of Slug design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
 	<playSound>mysteriousBeacon</playSound>
 	<ship load="AA_MVBOSS_HACKER_CRUISER_EXTREME" hostile="false"/> 
 	<choice hidden="true" max_group="0">
@@ -633,7 +633,7 @@
 	</choice>
 </event>
 <event name="AA_EVENT_MVBOSS_HACKER_CRUISER_CHAOS">
-	<text>From out of the tunnel comes a massive cruiser vessel, of Paladin design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
+	<text>From out of the tunnel comes a massive cruiser vessel, of Slug design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
 	<playSound>mysteriousBeacon</playSound>
 	<ship load="AA_MVBOSS_HACKER_CRUISER_CHAOS" hostile="false"/> 
 	<eventAlias jumpClear="false" name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP">AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHAOS</eventAlias>
@@ -679,6 +679,15 @@
 		<event load="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHANCE"/>
 	</choice>
 </event>
+<eventList name="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED_CHAOS"> <!-- Auto-ship; cannot be crewkilled so drop is guaranteed on hullkill instead -->
+	<text id="renegade_destroyed"/>
+	<autoReward level="HIGH">standard_no_item</autoReward>
+	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHAOS"/>
+	</choice>
+</eventList>
 <eventList name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHANCE">
 	<event>
 		<text id="renegade_drop_fail"/>
@@ -730,7 +739,7 @@
 	<choice hidden="true" max_group="0">
 		<text>Continue...</text>
 		<event>
-			<text>"All of us Renegades are stuck in the same infinite loop of hunting vessels and gathering scrap. An existence ruled by brutality and survival of the fittest, a repeating pattern with no end in sight. Perhaps this cycle goes deeper than any of us know, and perhaps there is a way to escape. But it is our lot in life to uphold it, to partake in the struggle for survival... and that means you are our next prey." You have no idea what the Monk captain is on about, but a fight is a fight.</text>
+			<text>"All of us Renegades are stuck in the same infinite loop of hunting vessels and gathering scrap. An existence ruled by brutality and survival of the fittest, a repeating pattern with no end in sight. Perhaps this cycle goes deeper than any of us know, and perhaps there is a way to escape. But it is our lot in life to uphold it, to partake in the struggle for survival... and that means you are our next prey." You have no idea what the Monk captain is on about, but they have raised their weapons - it's best that you do the same.</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -764,7 +773,7 @@
 	<choice hidden="true" max_group="0">
 		<text>Continue...</text>
 		<event>
-			<text>"All of us Renegades are stuck in the same infinite loop of hunting vessels and gathering scrap. An existence ruled by brutality and survival of the fittest, a repeating pattern with no end in sight. Perhaps this cycle goes deeper than any of us know, and perhaps there is a way to escape. But it is our lot in life to uphold it, to partake in the struggle for survival... and that means you are our next prey." You have no idea what the Monk captain is on about, but a fight is a fight.</text>
+			<text>"All of us Renegades are stuck in the same infinite loop of hunting vessels and gathering scrap. An existence ruled by brutality and survival of the fittest, a repeating pattern with no end in sight. Perhaps this cycle goes deeper than any of us know, and perhaps there is a way to escape. But it is our lot in life to uphold it, to partake in the struggle for survival... and that means you are our next prey." You have no idea what the Monk captain is on about, but they have raised their weapons - it's best that you do the same.</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -793,7 +802,7 @@
 	<choice hidden="true" max_group="0">
 		<text>Continue...</text>
 		<event>
-			<text>"All of us Renegades are stuck in the same infinite loop of hunting vessels and gathering scrap. An existence ruled by brutality and survival of the fittest, a repeating pattern with no end in sight. Perhaps this cycle goes deeper than any of us know, and perhaps there is a way to escape. But it is our lot in life to uphold it, to partake in the struggle for survival... and that means you are our next prey." You have no idea what the Monk captain is on about, but a fight is a fight.</text>
+			<text>"All of us Renegades are stuck in the same infinite loop of hunting vessels and gathering scrap. An existence ruled by brutality and survival of the fittest, a repeating pattern with no end in sight. Perhaps this cycle goes deeper than any of us know, and perhaps there is a way to escape. But it is our lot in life to uphold it, to partake in the struggle for survival... and that means you are our next prey." You have no idea what the Monk captain is on about, but they have raised their weapons - it's best that you do the same.</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -827,7 +836,7 @@
 	<choice hidden="true">
 		<text>Prepare to fight!</text>
 		<event>
-			<text>"All of us Renegades are stuck in the same infinite loop of hunting vessels and gathering scrap. An existence ruled by brutality and survival of the fittest, a repeating pattern with no end in sight. Perhaps this cycle goes deeper than any of us know, and perhaps there is a way to escape. But it is our lot in life to uphold it, to partake in the struggle for survival... and that means you are our next prey." You have no idea what the Monk captain is on about, but a fight is a fight.</text>
+			<text>"All of us Renegades are stuck in the same infinite loop of hunting vessels and gathering scrap. An existence ruled by brutality and survival of the fittest, a repeating pattern with no end in sight. Perhaps this cycle goes deeper than any of us know, and perhaps there is a way to escape. But it is our lot in life to uphold it, to partake in the struggle for survival... and that means you are our next prey." You have no idea what the Monk captain is on about, but they have raised their weapons - it's best that you do the same.</text>
 			<ship hostile="true"/> 
 			<choice hidden="true">
 				<text>Continue...</text>

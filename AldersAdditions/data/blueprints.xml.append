@@ -2204,7 +2204,7 @@
 	<damage>0</damage>
 	<stun>5</stun>
 	<stunChance>10</stunChance>
-	<length>0</length>
+	<length>1</length>
 	<aa-shieldSmash>
 		<count>2</count>
 		<countSuper>2</countSuper>
@@ -2529,7 +2529,7 @@
 	<short>Ion Driver</short>
 	<tip>aa_tip_driver</tip>
 	<desc>This mass driver contains shells filled with hot plasma, which annihilate shields and cripple systems with ease.</desc>
-	<ion>5</ion>
+	<ion>4</ion>
 	<speed>150</speed>
 	<shots>1</shots>
 	<stunChance>10</stunChance>
@@ -2615,7 +2615,7 @@
 	<aa-infuser/> <!-- New weapon tag that denotes this weapon as an infuser -->
 	<damage>0</damage>
 	<sysDamage>1</sysDamage> <!-- Damage properties of infusers are imparted onto the weapon to its right -->
-	<cooldown>15</cooldown> <!-- After imparting stats, they must cooldown before they can do so again -->
+	<cooldown>16</cooldown> <!-- After imparting stats, they must cooldown before they can do so again -->
 	<rarity>0</rarity>
 	<power>3</power>
 	<cost>80</cost>
@@ -2640,7 +2640,7 @@
 		<statBoost name="stunMultiplier" load="RAD_STUN"/>
         <statBoost name="repairSpeed" load="RAD_REPAIR"/>
     </statBoosts>
-	<cooldown>10</cooldown>
+	<cooldown>11</cooldown>
 	<rarity>0</rarity>
 	<power>2</power>
 	<cost>50</cost>
@@ -2660,7 +2660,7 @@
 	<aa-infuser/>
 	<damage>0</damage>
 	<ion>1</ion>
-	<cooldown>15</cooldown>
+	<cooldown>16</cooldown>
 	<rarity>0</rarity>
 	<power>3</power>
 	<cost>70</cost>
@@ -2680,7 +2680,7 @@
 	<aa-infuser/>
 	<damage>0</damage>
 	<fireChance>10</fireChance>
-	<cooldown>14</cooldown>
+	<cooldown>16</cooldown>
 	<rarity>0</rarity>
 	<power>3</power>
 	<cost>70</cost>
@@ -3032,7 +3032,7 @@
 	<title>Combat Projector</title>
 	<short>C. Projector</short>
 	<locked>1</locked>
-	<desc>This weapon appears ethereal, as if it were simply a projection over reality. It transmits temporary simulated combat personnel to the enemy shipBlueprint.</desc>
+	<desc>This weapon appears ethereal, as if it were simply a projection over reality. It transmits temporary simulated combat personnel to the enemy ship.</desc>
 	<damage>0</damage>
 	<accuracyMod>30</accuracyMod>
 	<shots>1</shots>
@@ -3086,7 +3086,7 @@
 	<short>C. Projector™</short>
 	<locked>1</locked>
 	<desc>This weapon appears ethereal, as if it were simply a projection over reality. It transmits temporary simulated combat personnel to the enemy ship.
-	Chaotic variant is a Pre-emptive weapon that spawns 8 crew who are invulnerable to all damage.</desc>
+	Chaotic variant is a Pre-emptive weapon that spawns 8 crew who are invulnerable to all damage and have a lifespan of 60 seconds.</desc>
 	<damage>0</damage>
 	<accuracyMod>30</accuracyMod>
 	<shots>1</shots>
@@ -3099,7 +3099,7 @@
 	<spawnCrew>
 		<number>8</number>
 		<race>aa_red_guy</race>
-		<lifetime>20</lifetime>
+		<lifetime>60</lifetime>
 		<statBoosts>
 			<statBoost name="noClone">
                 <boostType>SET</boostType>
@@ -4838,6 +4838,14 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 
 
 <!-- // TECHNICAL // -->
+
+<augBlueprint name="AA_AUTO_SUPER">
+    <title>Ascendant Automation [T]</title>
+	<desc>You should never see this. You are automated, man all systems at level 2 skill, and repair rooms at triple the rate of typical automated repair. Also fixes breaches at half the rate of standard breach sealant.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+</augBlueprint>
 
 <augBlueprint name="AA_TECH_JUMP_REPAIR">
     <title>Repair On Jump [T]</title>

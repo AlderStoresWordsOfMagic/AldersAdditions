@@ -2200,7 +2200,7 @@
 	<maxPower amount="39" />
 	<boardingAI>sabotage</boardingAI>
 	<aug name="ROCK_ARMOR" />
-    <aug name="EX_EXPLOSIVE_REPLICATOR" />
+    <aug name="KERNEL_REPLICATOR" />
 	<aug name="EX_LAB_ROCK_SKIN" />
 </shipBlueprint>
 
@@ -2302,12 +2302,11 @@
 	<minSector>1</minSector>
 	<maxSector>8</maxSector>
 	<systemList>
-		<clonebay power="3" max="3" room="4" start="true" />
-		<doors power="1" max="1" room="17" start="true" />
+        <drones power="6" max="6" room="5" start="true" />
+		<doors power="2" max="2" room="17" start="true" />
 		<engines power="2" max="2" room="13" start="true" />
 		<hacking power="3" max="3" room="8" start="true" />
 		<mind power="3" max="3" room="7" start="true" />
-		<oxygen power="2" max="2" room="16" start="true" />
 		<pilot power="3" max="3" room="1" start="true" />
 		<shields power="6" max="10" room="15" start="true" />
 		<temporal power="2" max="2" room="11" start="true" />
@@ -2321,11 +2320,15 @@
 		<weapon name="AA_INDUCER" />
 		<weapon name="AA_INDUCER" />
 	</weaponList>
+    <droneList drones="10" count="2">
+		<drone name="BATTLETOG2_BOARDER" />
+		<drone name="BATTLETOG2_BOARDER" />
+	</droneList>
 	<health amount="20" />
-	<maxPower amount="33" />
+	<maxPower amount="34" />
 	<boardingAI>invasion</boardingAI>
 	<aug name="UPG_HACK_STUN" />
-    <aug name="LAB_SLUG_BUFF" />
+    <aug name="AA_AUTO_SUPER" />
 </shipBlueprint>
 
 <shipBlueprint name="AA_MVBOSS_MONK_CRUISER_NORMAL" layout="aa_mvboss_monk_cruiser" img="aa_mvboss_monk_cruiser">
@@ -2358,7 +2361,7 @@
 	<health amount="20" />
 	<maxPower amount="28" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="EX_LAB_ZOLTAN_SHIELD" />
+	<aug name="LAB_ZOLTAN_EMITTER" />
 	<aug name="ENERGY_SHIELD" />
 </shipBlueprint>
 <shipBlueprint name="AA_MVBOSS_MONK_CRUISER_CHALLENGE" layout="aa_mvboss_monk_cruiser" img="aa_mvboss_monk_cruiser">
@@ -2392,7 +2395,7 @@
 	<health amount="20" />
 	<maxPower amount="36" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="EX_LAB_ZOLTAN_SHIELD" />
+	<aug name="LAB_ZOLTAN_EMITTER" />
 	<aug name="ENERGY_SHIELD" />
 </shipBlueprint>
 <shipBlueprint name="AA_MVBOSS_MONK_CRUISER_EXTREME" layout="aa_mvboss_monk_cruiser" img="aa_mvboss_monk_cruiser">
@@ -2427,7 +2430,7 @@
 	<health amount="20" />
 	<maxPower amount="39" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="EX_LAB_ZOLTAN_SHIELD" />
+	<aug name="LAB_ZOLTAN_EMITTER" />
 	<aug name="ENERGY_SHIELD" />
 </shipBlueprint>
 <shipBlueprint name="AA_MVBOSS_MONK_CRUISER_CHAOS" layout="aa_mvboss_monk_cruiser" img="aa_mvboss_monk_cruiser">
@@ -2462,7 +2465,7 @@
 	<health amount="20" />
 	<maxPower amount="37" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="EX_LAB_ZOLTAN_SHIELD" />
+	<aug name="LAB_ZOLTAN_EMITTER" />
 	<aug name="ENERGY_SHIELD" />
     <aug name="UPG_TECH_EXTINGUISHERS" />
 </shipBlueprint>

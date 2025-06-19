@@ -97,7 +97,7 @@ local function render_crush_bubbles(ship, x, y)
 end
 script.on_render_event(Defines.RenderEvents.SHIP_STATUS, mods.alder.doNothing, function()
     if Hyperspace.ships.player then render_crush_bubbles(Hyperspace.ships.player, 7, 47) end
-    if Hyperspace.ships.enemy and not Hyperspace.ships.enemy.bDestroyed then
+    if Hyperspace.ships.enemy and not Hyperspace.ships.enemy.bDestroyed and Hyperspace.ships.enemy._targetable.hostile then
         if Hyperspace.Global.GetInstance():GetCApp().gui.combatControl.boss_visual then
             render_crush_bubbles(Hyperspace.ships.enemy, 740, 71) -- Boss box has different shield counter position
         else

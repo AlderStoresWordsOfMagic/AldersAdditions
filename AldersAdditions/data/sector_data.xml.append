@@ -61,6 +61,8 @@
 		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
 
 		<mod-append:blueprint name="AA_DRIVER_ION" rarity="5" />
+
+		<mod-append:blueprint name="AA_INFUSER_ION" rarity="5" /> <!-- Temporary -->
 	</mod:findLike>
 </mod:findName>
 
@@ -98,6 +100,8 @@
 		<mod-append:blueprint name="AA_LASER_PARTICLE_INSTANT" rarity="5" />
 
 		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
+
+		<mod-append:blueprint name="AA_INFUSER_PARTICLE" rarity="5" /> <!-- Temporary -->
 	</mod:findLike>
 </mod:findName>
 
@@ -123,6 +127,10 @@
 
 <mod:findName type="sectorDescription" name="SECTOR_OUTCAST_UNIQUE">
 	<mod-append:priorityEvent name="AA_EVENT_OUTCAST_SANDWORM" min="1" max="1" priority="2"/>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_LOSTSUN_UNIQUE">
+	<mod-append:blueprint name="AA_INFUSER_FIRE" rarity="5" /> <!-- Temporary -->
 </mod:findName>
 
 
@@ -189,6 +197,14 @@
 		<mod-append:blueprint name="AA_LASER_BREACH" rarity="4" />
 
 		<mod-append:blueprint name="AA_DRIVER_SHOTGUN" rarity="5" />
+
+		<mod-append:blueprint name="AA_INFUSER_BREACH" rarity="5" /> <!-- Temporary -->
+	</mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_REPUBLIC_UNIQUE">
+	<mod:findLike type="rarityList">
+		<mod-append:blueprint name="AA_INFUSER_STUN" rarity="5" /> <!-- Temporary -->
 	</mod:findLike>
 </mod:findName>
 
@@ -208,6 +224,8 @@
 		<mod-append:blueprint name="AA_DRIVER_BIO" rarity="5" />
 
 		<mod-append:blueprint name="AA_SHOCK_CANNON" rarity="5" />
+
+		<mod-append:blueprint name="AA_INFUSER_BIO" rarity="5" /> <!-- Temporary -->
 	</mod:findLike>
 </mod:findName>
 
@@ -255,6 +273,8 @@
 		<!-- <mod-append:blueprint name="AA_BOMB_DECAY" rarity="4" /> -->
 
 		<mod-append:blueprint name="AA_DRIVER_EXPLOSIVE" rarity="5" />
+
+		<mod-append:blueprint name="AA_INFUSER_BREACH" rarity="5" /> <!-- Temporary -->
 	</mod:findLike>
 </mod:findName>
 
