@@ -6,6 +6,7 @@
 
     <mod-append:script>data/scripts/AA_core.lua</mod-append:script>
 
+    <mod-append:script>data/scripts/augments/power_augs_modular.lua</mod-append:script>
     <mod-append:script>data/scripts/augments/regen_hull.lua</mod-append:script>
     <mod-append:script>data/scripts/augments/regen_shields.lua</mod-append:script>
 
@@ -22,7 +23,6 @@
 
     <mod-append:script>data/scripts/misc/resistant_rooms.lua</mod-append:script>
 
-
 </mod:findLike>
 
 
@@ -32,15 +32,37 @@
 
     <!-- // EVENT FILES // -->
 
-    <mod-append:eventFile>special_testing</mod-append:eventFile>
-    <!-- <mod-append:eventFile>special_temp</mod-append:eventFile> -->
+    <mod-append:eventFile>aa</mod-append:eventFile>
+
 
     <!-- // VARIABLES // -->
-    <mod-append:variable name="aa_found_imaginator" op="set" val="0"/> <!-- Loads the generic version of the quest if the quest has been examined thoroughly enough. -->
-    <mod-append:variable name="aa_found_dustworm" op="set" val="0"/> <!-- Changes certain event text if Dustworms have been encountered in the run. -->
+
+    <!-- / EVENT CONTROL / -->
+    <mod-append:variable name="aa_found_dustworm" op="set" val="0"/> <!-- Changes certain event text if Dustworms have been encountered in the run. When this value is 3, you get an achievement. -->
+
+    <!-- / JUDGE BOONS / -->
+    <mod-append:metaVariable name="aa_meta_boon_z_dustworm" op="set" val="0"/>
+
+    <mod-append:metaVariable name="aa_meta_boon_r_disruptor" op="set" val="0"/>
+    <mod-append:metaVariable name="aa_meta_boon_r_infuser" op="set" val="0"/>
+    <mod-append:metaVariable name="aa_meta_boon_r_imagine" op="set" val="0"/>
+
 
     <!-- // REQS // -->
+    <mod:findName type="req" name="ANY_BOON">
+        <mod-append:name>aa_meta_boon_z_dustworm</mod-append:name>
 
+        <mod-append:name>aa_meta_boon_r_disruptor</mod-append:name>
+        <mod-append:name>aa_meta_boon_r_infuser</mod-append:name>
+        <mod-append:name>aa_meta_boon_r_imagine</mod-append:name>
+    </mod:findName>
+    <mod:findName type="req" name="ALL_BOONS">
+        <mod-append:name>aa_meta_boon_z_dustworm</mod-append:name>
+
+        <mod-append:name>aa_meta_boon_r_disruptor</mod-append:name>
+        <mod-append:name>aa_meta_boon_r_infuser</mod-append:name>
+        <mod-append:name>aa_meta_boon_r_imagine</mod-append:name>
+    </mod:findName>
 
 
     <!-- // CUSTOM FLEETS // -->
@@ -85,6 +107,97 @@
 </mod:findLike>
 
 
+
+
+<!-- /// ACHIEVEMENTS /// -->
+<mod:findLike type="achievements" limit="1">
+    <mod-append:page>
+        <mod-append:section text="Alder's Additions" hidden="false">
+            <mod-append:achievement name="AA_ACH_GEN_DUSTWORM">
+                <name>A Story Yet To Tell</name>
+                <description>Recruit three Dustworms in a single run.</description>
+                <secretDescription>???</secretDescription>
+                <icon>general/aa_ach_generic_dustworm</icon>
+                <lockImage>ach_locked</lockImage>
+                <multiDifficulty>false</multiDifficulty>
+                <variable name="aa_found_dustworm" amount="3"/>
+                <sound>achievement_aa</sound>
+            </mod-append:achievement>
+            <mod-append:achievement name="AA_ACH_GEN_FAROUT">
+                <name>Far, Far Away</name>
+                <description>Defeat a Far-Out Renegade.</description>
+                <secretDescription>???</secretDescription>
+                <icon>general/aa_ach_generic_farout</icon>
+                <lockImage>ach_locked</lockImage>
+                <multiDifficulty>false</multiDifficulty>
+                <sound>achievement_aa</sound>
+            </mod-append:achievement>
+            <mod-append:achievement name="AA_ACH_GEN_GAZER">
+                <name>Eyes In Your Nightmares</name>
+                <description>Defeat the Gazers' herald and acquire the 'Twisted Pastiche.'</description>
+                <secretDescription>???</secretDescription>
+                <icon>general/aa_ach_generic_gazer</icon>
+                <lockImage>ach_locked</lockImage>
+                <multiDifficulty>false</multiDifficulty>
+                <sound>achievement_spooky</sound>
+            </mod-append:achievement>
+        </mod-append:section>
+        <mod-append:section text="Peculiar Boons" hidden="false">
+            <mod-append:achievement name="AA_ACH_BOON_DUSTWORM">
+                <secretName>Boon of ???</secretName>
+                <secretDescription>Receive the Boon of ??? from Thest.</secretDescription>
+                <name>Boon of Worms</name>
+                <description>Show a Dustworm to Thest. 
+While in effect; you can pick a Dustworm up from the hangar.</description>
+                <header>Boon Received</header>
+                <icon>boons/aa_ach_boon_dustworm</icon>
+                <lockImage>ach_locked</lockImage>
+                <multiDifficulty>false</multiDifficulty>
+                <sound>achievement_aa</sound>
+            </mod-append:achievement>
+            <mod-append:achievement name="AA_ACH_BOON_DISRUPTOR">
+                <secretName>Blessing of ???</secretName>
+                <secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
+                <name>Blessing of Insulation</name>
+                <description>Show a Disruptor to Wakeson. 
+While in effect; you start with the Ion Field internal upgrade.</description>
+                <header>Boon Received</header>
+                <icon>boons/aa_ach_boon_disruptor</icon>
+                <lockImage>ach_locked</lockImage>
+                <multiDifficulty>false</multiDifficulty>
+                <sound>achievement_aa</sound>
+            </mod-append:achievement>
+            <mod-append:achievement name="AA_ACH_BOON_INFUSER">
+                <secretName>Blessing of ???</secretName>
+                <secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
+                <name>Blessing of Empowerment</name>
+                <description>Show an Infuser to Wakeson. 
+While in effect; your Weapons room naturally has 2 power.</description>
+                <header>Boon Received</header>
+                <icon>boons/aa_ach_boon_infuser</icon>
+                <lockImage>ach_locked</lockImage>
+                <multiDifficulty>false</multiDifficulty>
+                <sound>achievement_aa</sound>
+            </mod-append:achievement>
+            <mod-append:achievement name="AA_ACH_BOON_IMAGINATOR">
+                <secretName>Blessing of ???</secretName>
+                <secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
+                <name>Blessing of Imagination</name>
+                <description>Show the 'Imaginator' to Wakeson. 
+While in effect; you can choose to fire a single Imaginator beam at the start of combat.</description>
+                <header>Boon Received</header>
+                <icon>boons/aa_ach_boon_wonder</icon>
+                <lockImage>ach_locked</lockImage>
+                <multiDifficulty>false</multiDifficulty>
+                <sound>achievement_aa</sound>
+            </mod-append:achievement>
+        </mod-append:section>
+    </mod-append:page>
+</mod:findLike>
+
+
+
+
 <!-- /// SHIPS /// -->
 
 <mod:findLike type="ships" limit="1">
@@ -100,13 +213,11 @@
             <tooltip>INSULATED ROOMS:
 This enemy has one or more insulated rooms, marked by the blue border and blue R icon in the top left. Insulated rooms will take no ion damage from weapons or instant crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
         </mod-append:shipIcon>
-    
         <mod-append:shipIcon>
             <name>aa_icon_resist_hack</name>
             <tooltip>FIREWALLED ROOMS:
 This enemy has one or more firewalled rooms, marked by the purple border and purple R icon in the top left. Firewalled rooms cannot be hacked, but take all damage as normal.</tooltip>
         </mod-append:shipIcon>
-    
         <mod-append:shipIcon>
             <name>aa_icon_resist_sabo</name>
             <tooltip>ENCASED ROOMS:
@@ -1000,7 +1111,6 @@ Creates a semi-permanent effect in the current room, which will dissipate only w
 				<extraConditions type="and">
 					<burning>false</burning> <!-- this debuff is nullified in the presence of fire -->
 				</extraConditions>
-                <boostAnim>status_depression</boostAnim> <!-- :( -->
             </statBoost>
         </statBoosts>
     </mod-append:aug>
@@ -1182,10 +1292,6 @@ Creates a semi-permanent effect in the current room, which will dissipate only w
 </mod:findLike>
 
 
-<!-- /// ACHIEVEMENTS /// -->
-<mod:findLike type="achievements" limit="1">
-
-</mod:findLike>
 
 
 <!-- /// DISCORD RICH PRESENCE INTEGRATION /// -->

@@ -1745,6 +1745,30 @@
     
 <!-- /// NON-MV EQUIPMENT LISTS /// -->
 
+<!-- // WEAPON TYPES // -->
+
+<blueprintList name="AA_LIST_WEAPONS_DISRUPTOR">
+    <name>AA_BEAM_ION_1</name>
+    <name>AA_BEAM_ION_2</name>
+    <name>AA_BEAM_ION_3</name>
+    <name>AA_BEAM_ION_STUN</name>
+    <name>AA_BEAM_ION_BIO</name>
+    <name>AA_BEAM_ION_PHASE</name>
+    <name>AA_BEAM_ION_ADAPT</name>
+    <name>AA_BEAM_ION_CONSERVATIVE</name>
+    <name>AA_BEAM_ENERGY</name>
+</blueprintList>
+
+<blueprintList name="AA_LIST_WEAPONS_INFUSER">
+    <name>AA_INFUSER_PARTICLE</name>
+    <name>AA_INFUSER_ION</name>
+    <name>AA_INFUSER_BIO</name>
+    <name>AA_INFUSER_FIRE</name>
+    <name>AA_INFUSER_BREACH</name>
+    <name>AA_INFUSER_STUN</name>
+</blueprintList>
+
+
 <!-- // SYLVAN SHOPS // -->
 
 <blueprintList name="AA_SHOP_ITEM_SYLVAN_PARTICLE_OLD">

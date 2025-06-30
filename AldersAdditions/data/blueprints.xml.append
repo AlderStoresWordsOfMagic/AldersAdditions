@@ -2365,7 +2365,7 @@
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<breachChance>10</breachChance>
-	<cooldown>23</cooldown>
+	<cooldown>20</cooldown>
 	<aa-chargeHolder> <!-- New XML tag for weapons with this property -->
 		<rate>5</rate> <!-- Percentage to reduce by; every 1 is 10% chance-->
 	</aa-chargeHolder>
@@ -2406,7 +2406,7 @@
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<breachChance>10</breachChance>
-	<cooldown>24</cooldown>
+	<cooldown>25</cooldown>
 	<aa-chargeHolder>
 		<rate>5</rate>
 	</aa-chargeHolder>
@@ -2439,13 +2439,13 @@
 	<title>Flak Mass Driver</title>
 	<short>Flak Driver</short>
 	<tip>aa_tip_driver</tip>
-	<desc>This wide mass driver scatters a spray of sharp projectiles across the target zone, sacrificing hull damage in exchange for shredding targets at a low level.</desc>
+	<desc>This wide mass driver scatters a spray of sharp projectiles across the target zone, sacrificing hull damage in exchange for shredding everything else it hits.</desc>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
 	<speed>150</speed>
 	<shots>1</shots>
 	<breachChance>3</breachChance>
-	<cooldown>22</cooldown>
+	<cooldown>25</cooldown>
 	<aa-chargeHolder>
 		<rate>5</rate>
 	</aa-chargeHolder>
@@ -2535,7 +2535,7 @@
 	<stunChance>10</stunChance>
 	<stun>5</stun>
 	<accuracyMod>100</accuracyMod>
-	<cooldown>21</cooldown>
+	<cooldown>24</cooldown>
 	<aa-chargeHolder>
 		<rate>5</rate>
 	</aa-chargeHolder>
@@ -2575,7 +2575,7 @@
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<fireChance>10</fireChance>
-	<cooldown>22</cooldown>
+	<cooldown>21</cooldown>
 	<aa-chargeHolder>
 		<rate>5</rate>
 	</aa-chargeHolder>
@@ -3215,12 +3215,12 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<shots>1</shots>
 	<accuracyMod>100</accuracyMod>
 	<breachChance>10</breachChance>
-	<cooldown>30</cooldown>
+	<cooldown>22</cooldown>
 	<aa-chargeHolder>
 		<rate>5</rate>
 	</aa-chargeHolder>
 	<power>3</power>
-	<cost>80</cost>
+	<cost>110</cost>
 	<rarity>0</rarity>
 	<radius>0</radius>
 	<spin>0</spin>
@@ -4828,6 +4828,14 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 
 <!-- // OBSERVER BOONS // -->
 
+<augBlueprint name="AA_BOON_INFUSER">
+    <title>Blessing of Empowerment</title>
+	<desc>Your Weapons system naturally has 2 bars of power.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>2</value>
+</augBlueprint>
 <augBlueprint name="AA_BOON_IMAGINE">
     <title>Blessing of Wonder</title>
 	<desc>At the start of each fight, you can choose to fire an Imaginator beam.</desc>

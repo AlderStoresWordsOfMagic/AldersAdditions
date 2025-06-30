@@ -259,13 +259,6 @@
 	<time>1.0</time>
 </anim>
 
-<animSheet name="status_depression" w="70" h="14" fw="14" fh="14">people/status_depression.png</animSheet>
-<anim name="status_depression">
-	<sheet>status_depression</sheet>
-	<desc length="5" x="0" y="0"/>
-	<time>1.0</time>
-</anim>
-
 <animSheet name="status_mania" w="70" h="14" fw="14" fh="14">people/status_mania.png</animSheet>
 <anim name="status_mania">
 	<sheet>status_mania</sheet>

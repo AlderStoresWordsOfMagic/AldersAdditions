@@ -17,7 +17,7 @@ mods.alder = {}
 -- [Checks for requisite mods.]
 
 if not (Hyperspace.version and Hyperspace.version.major == 1 and Hyperspace.version.minor >= 19) then
-    if not (Hyperspace.version.patch >= 0) then
+    if not (Hyperspace.version.patch >= 1) then
         error("Incorrect Hyperspace version detected! Alder's Additions requires Hyperspace 1.19+ to function properly.")
     end
 end

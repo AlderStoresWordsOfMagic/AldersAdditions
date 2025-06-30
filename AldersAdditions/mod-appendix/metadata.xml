@@ -1,16 +1,18 @@
 <metadata>
-  <title><![CDATA[ ALDER'S ADDITIONS ]]></title>
-  <threadUrl><![CDATA[]]></threadUrl>
-  <author><![CDATA[ Alder]]></author>
-  <version><![CDATA[ 2.0.1 ]]></version>
-  <description>
-<![CDATA[ 
-This addon for FTL: Multiverse incorporates a significant array of new equipment that can be found on your runs.
+    <title><![CDATA[ ALDER'S ADDITIONS ]]></title>
+    <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/82/alders-additions-first-strike]]></threadUrl>
+    <author><![CDATA[Alder]]></author>
+    <version><![CDATA[ 2.1.1 ]]></version>
+    <description>
+<![CDATA[
+PATCH AFTER MULTIVERSE 5.5 AND FUSION 0.1.5+
+This addon for FTL: Multiverse incorporates a significant array of new equipment that can be found on your runs, as well as a few quests and small features to enhance gameplay variety.
 
 Special thanks to:
-- Chrono Vortex, Julk, Arc, Vertaalfout, and Sillysandvich for guiding me through the Lua scripts.
 - Tabbi, Nauter, and Terry, for balancing feedback.
-- R4V3-ON, for encouragement and art tips.
+- Crow and Willow, for writing assistance.
+- R4V3-ON and Laythe, for encouragement and art tips.
+- Chrono Vortex, Julk, Arc, Vertaalfout, and Sillysandvich for guiding me through Lua scripting.
 ]]>
-  </description>
+    </description>
 </metadata>

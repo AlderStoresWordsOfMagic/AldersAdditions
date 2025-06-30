@@ -55,13 +55,52 @@
 
 <!-- // THE OBSERVERS // -->
 
+<mod:findName type="event" name="THE_JUDGES_ZOLTAN">
+	<mod-append:choice req="AA_LIST_CREW_DUSTWORM" blue="false">
+		<text>Present a Dustworm.</text>
+		<event>
+			<text>"Strange beings. Alien to this reality... but why, I... cannot say. Your influence must reach... far, your careful searching... lucrative. To recruit such species is an... impressive feat. Yes, I am... impressed. Well done, traveler. Expect... rewards before your next journey."</text>
+			<metaVariable name="aa_meta_boon_z_dustworm" op="set" val="1"/>
+			<achievement silent="false">AA_ACH_BOON_DUSTWORM</achievement>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="THE_JUDGES_ZOLTAN_ADVICE"/>
+			</choice>
+		</event>
+	</mod-append:choice>
+</mod:findName>
+
 <mod:findName type="event" name="THE_JUDGES_ROCKMAN_REAL">
+	<mod-append:choice req="AA_LIST_WEAPONS_DISRUPTOR" blue="false">
+		<text>Present a Disruptor.</text>
+		<event>
+			<text>"A BEAM? That IONIZES? A PECULIAR weapon, from a PECULIAR source... I CANNOT tell you what I have SEEN, for the CREED binds me, but it was BOUND to appear SOONER rather than LATER! It is TRIBUTE, I suppose. So, I shall BLESS you with the BLESSING OF INSULATION. But have PATIENCE. It is not for now, but for LATER!"</text>
+			<metaVariable name="aa_meta_boon_r_disruptor" op="set" val="1"/>
+			<achievement silent="false">AA_ACH_BOON_DISRUPTOR</achievement>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="THE_JUDGES_ROCK_ADVICE"/>
+			</choice>
+		</event>
+	</mod-append:choice>
+	<mod-append:choice req="AA_LIST_WEAPONS_INFUSER" blue="false">
+		<text>Present an Infuser.</text>
+		<event>
+			<text>"What... is THIS? It does not FIRE, but it helps OTHERS do the same? Hah! Such tribute is NOT impressive to the UNTRAINED eye... but one should NEVER underestimate a weapon BOOSTED by the RIGHT TECHNOLOGY! I shall BLESS you with the BLESSING OF EMPOWERMENT. But have PATIENCE. It is not for now, but for LATER!"</text>
+			<metaVariable name="aa_meta_boon_r_infuser" op="set" val="1"/>
+			<achievement silent="false">AA_ACH_BOON_INFUSER</achievement>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="THE_JUDGES_ROCK_ADVICE"/>
+			</choice>
+		</event>
+	</mod-append:choice>
 	<mod-append:choice req="AA_BEAM_IMAGINE" blue="false">
 		<text>Present the 'Imaginator'.</text>
 		<event>
-			<text>"I do not quite UNDERSTAND what it is you have SHOWN me. This is a BEAM, yes? But what does it DO? WONDER, you say? I have no IDEA what that means! Thest fancies to think he KNOWS EVERYTHING, but does he know THIS?! I doubt it. If he did, he would have SHARED it with us. RIGHT? Alas. I shall BLESS you with the BLESSING OF WONDER. But have PATIENCE. It is not for now, but for LATER!"</text>
-			<metaVariable name="prof_r_boon_madness" op="set" val="1"/>
-			<achievement silent="false">ACH_BOON_MADNESS</achievement>
+			<text>"I do not quite UNDERSTAND what it is you have SHOWN me. This is a BEAM, yes? But what does it DO? WONDER, you say? I have no IDEA what that means! Thest fancies to think he KNOWS EVERYTHING, but does he know THIS?! I doubt it. If he did, he would have SHARED it with us. RIGHT? Alas. I shall BLESS you with the BLESSING OF IMAGINATION. But have PATIENCE. It is not for now, but for LATER!"</text>
+			<metaVariable name="aa_meta_boon_r_imagine" op="set" val="1"/>
+			<achievement silent="false">AA_ACH_BOON_IMAGINATOR</achievement>
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="THE_JUDGES_ROCK_ADVICE"/>
@@ -82,6 +121,14 @@
 			</choice>
 		</event>
 	</mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="THE_JUDGES_VARIABLE_CLEAR">
+	<mod-append:metaVariable name="aa_meta_boon_z_dustworm" op="set" val="0"/>
+
+	<mod-append:metaVariable name="aa_meta_boon_r_disruptor" op="set" val="0"/>
+	<mod-append:metaVariable name="aa_meta_boon_r_infuser" op="set" val="0"/>
+	<mod-append:metaVariable name="aa_meta_boon_r_imagine" op="set" val="0"/>
 </mod:findName>
 
 
@@ -113,7 +160,7 @@
 		<mod-append:event name="AA_EVENT_MVBOSS_PALADIN_CRUISER_NORMAL"/>
 		<mod-append:event name="AA_EVENT_MVBOSS_HACKER_CRUISER_NORMAL"/>
 		<mod-append:event name="AA_EVENT_MVBOSS_MONK_CRUISER_NORMAL"/>
-		<mod-append:event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_NORMAL"/>
+		<!-- <mod-append:event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_NORMAL"/> -->
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="event" name="MV_TRAVELER_SECRET_CHALLENGE">
@@ -122,7 +169,7 @@
 		<mod-append:event name="AA_EVENT_MVBOSS_PALADIN_CRUISER_CHALLENGE"/>
 		<mod-append:event name="AA_EVENT_MVBOSS_HACKER_CRUISER_CHALLENGE"/>
 		<mod-append:event name="AA_EVENT_MVBOSS_MONK_CRUISER_CHALLENGE"/>
-		<mod-append:event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_CHALLENGE"/>
+		<!-- <mod-append:event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_CHALLENGE"/> -->
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="event" name="MV_TRAVELER_SECRET_EXTREME">
@@ -131,7 +178,7 @@
 		<mod-append:event name="AA_EVENT_MVBOSS_PALADIN_CRUISER_EXTREME"/>
 		<mod-append:event name="AA_EVENT_MVBOSS_HACKER_CRUISER_EXTREME"/>
 		<mod-append:event name="AA_EVENT_MVBOSS_MONK_CRUISER_EXTREME"/>
-		<mod-append:event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_EXTREME"/>
+		<!-- <mod-append:event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_EXTREME"/> -->
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="event" name="MV_TRAVELER_SECRET_CHAOS">
@@ -140,7 +187,7 @@
 		<mod-append:event name="AA_EVENT_MVBOSS_PALADIN_CRUISER_CHAOS"/>
 		<mod-append:event name="AA_EVENT_MVBOSS_HACKER_CRUISER_CHAOS"/>
 		<mod-append:event name="AA_EVENT_MVBOSS_MONK_CRUISER_CHAOS"/>
-		<mod-append:event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_CHAOS"/>
+		<!-- <mod-append:event name="AA_EVENT_MVBOSS_LIMIT_CRUISER_CHAOS"/> -->
 	</mod:findLike>
 </mod:findName>
 
@@ -295,11 +342,11 @@
 	</choice>
 </event>
 
-</event>
 <event name="AA_SHIP_MVBOSS_STEALTH_CRUISER_DESTROYED">
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP_CHANCE"/>
@@ -316,6 +363,7 @@
 	<text id="renegade_killed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event><loadEvent>AA_SHIP_MVBOSS_STEALTH_CRUISER_DROP</loadEvent></event>
@@ -487,6 +535,7 @@
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP_CHANCE"/>
@@ -503,6 +552,7 @@
 	<text id="renegade_killed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event><loadEvent>AA_SHIP_MVBOSS_PALADIN_CRUISER_DROP</loadEvent></event>
@@ -673,6 +723,7 @@
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHANCE"/>
@@ -698,6 +749,7 @@
 	<text id="renegade_killed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event><loadEvent>AA_SHIP_MVBOSS_HACKER_CRUISER_DROP</loadEvent></event>
@@ -868,6 +920,7 @@
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="AA_SHIP_MVBOSS_MONK_CRUISER_DROP_CHANCE"/>
@@ -884,6 +937,7 @@
 	<text id="renegade_killed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event><loadEvent>AA_SHIP_MVBOSS_MONK_CRUISER_DROP</loadEvent></event>

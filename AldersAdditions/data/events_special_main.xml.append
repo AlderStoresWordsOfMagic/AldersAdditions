@@ -1,0 +1,12 @@
+<FTL>
+
+<mod:findName type="event" name="BOON_SELECT">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="AA_BOON_SELECT_DUSTWORM" req="aa_meta_boon_z_dustworm"/>
+        <mod-append:event name="AA_BOON_SELECT_DISRUPTOR" req="aa_meta_boon_r_disruptor"/>
+        <mod-append:event name="AA_BOON_SELECT_INFUSER" req="aa_meta_boon_r_infuser"/>
+		<mod-append:event name="AA_BOON_SELECT_WONDER" req="aa_meta_boon_r_imagine"/>
+    </mod:findLike>
+</mod:findName>
+
+</FTL>

@@ -1,0 +1,26 @@
+/// FEATURE ADDITIONS ///
+
+Added multiple Observer boons.
+Added multiple achievements.
+
+
+/// FEATURE CHANGES ///
+
+
+/// BALANCING ///
+
+Mass Driver: cooldown 25s -> 20s
+Explosive Mass Driver: cooldown 30s -> 25s
+Flak Mass Driver: cooldown 27s -> 25s
+Irradiated Mass Driver: cooldown 26s -> 21s
+Electrified Mass Driver: cooldown 30s -> 24s
+Accelerated Mass Driver: cooldown 25s -> 21s
+
+Railcannon: cooldown 30s -> 22s, price 80 -> 100
+
+
+/// BUGFIXES ///
+
+Event file adjustments should hopefully make it possible to play Alder's Additions with Slipstream.
+Updated mod metadata to list all modern contributors and display the correct version.
+Game now throws an error if any Hyperspace below 1.19.1 is used.

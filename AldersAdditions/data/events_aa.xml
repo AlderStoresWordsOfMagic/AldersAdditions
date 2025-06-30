@@ -1,3 +1,6 @@
+<FTL>
+
+
 <!-- Certain AA content will drop as loot from special sector events until they can be properly assigned quests in the future. For now, enjoy my mediocre event writing. -->
 
 
@@ -104,6 +107,7 @@
             <text>As the sand settles to the floor, it reveals a strange, caterpillar-like alien who tumbles to the floor in a daze. The streaming particles also release a couple of Rockmen, who are resilient enough to get back up after a successful resuscitation procedure. This was certainly not the kind of sandworm the Outcasts told you about, and the now-found exploration team doesn't recognize them either, but they do their best to aid in the search for remaining members of the team. Your return to the colony is triumphant, with the colony thankful and the alien offering to join your crew!</text>
             <autoReward level="MED">stuff</autoReward>
             <crewMember amount="1" class="aa_dustworm"/>
+            <variable name="aa_found_dustworm" op="add" val="1"/>
         </event>
     </choice>
     <choice hidden="true" blue="false" req="aa_found_dustworm" lvl="1" max_group="1">
@@ -237,6 +241,7 @@
                             <text>Still somewhat afraid, the insects nod, waiting in the room as you dock with your ship. They all board your ship, relieved to be out of the situation, and hide out in the cargo bay until you drop them off at a nearby station with many curious eyes. On the way, a couple of them have the handiness to help fix up your hull, and one of them even wants to join you on your journey through the stars!</text>
                             <crewMember amount="1" class="aa_dustworm"/>
                             <damage amount="-7"/>
+                            <variable name="aa_found_dustworm" op="add" val="1"/>
                         </event>
                     </choice>
                     <choice hidden="true">
@@ -266,6 +271,7 @@
                             <text>Still somewhat afraid, the Dustworms nod, waiting in the room as you dock with your ship. They all board your ship, relieved to be out of the situation, and hide out in the cargo bay until you drop them off at a nearby station with many curious eyes. On the way, a couple of them have the handiness to help fix up your hull, and one of them even wants to join you on your journey through the stars!</text>
                             <crewMember amount="1" class="aa_dustworm"/>
                             <damage amount="-7"/>
+                            <variable name="aa_found_dustworm" op="add" val="1"/>
                         </event>
                     </choice>
                     <choice hidden="true">
@@ -309,6 +315,7 @@
                             <text>The alien calms down as you explain the situation to them, their stare of fear quickly being replaced by one of embarrassment. The others turn to listen to the conversation, the sounds of crunching throughout the room ceasing and leaving a dead silence. Although it's tough, you're able to coax the Orchids into working out a negotiation, and nudge the worms into vacating the station. The Orchids offer you one of the few uneaten Kernel weapons being grown aboard as thanks, and one of the bugs offers to join you instead of being dropped off.</text>
                             <crewMember amount="1" class="aa_dustworm"/>
                             <weapon name="GIFTLIST_KERNEL"/>
+                            <variable name="aa_found_dustworm" op="add" val="1"/>
                         </event>
                     </choice>
                     <choice>
@@ -331,6 +338,7 @@
                     <text>A Caretaker among the staff hands you the keycard to open the greenhouses. The heat and humidity flow out, revealing several Dustworms devouring the plants. Thankfully, since you know what they are, you are able to defuse the situation and lead them out of the greenhouse. The Orchids offer you one of the few uneaten Kernel weapons being grown aboard as thanks, and one of the bugs offers to join you instead of being dropped off.</text>
                     <crewMember amount="1" class="aa_dustworm"/>
                     <weapon name="GIFTLIST_KERNEL"/>
+                    <variable name="aa_found_dustworm" op="add" val="1"/>
                 </event>
             </choice>
             <choice hidden="true" req="AA_LIST_CREW_DUSTWORM" max_group="1">
@@ -339,6 +347,7 @@
                     <text>Noticing their reaction, your Dustworm speaks up. It doesn't take long for the situation to calm down, and it quickly becomes obvious from the Orchids' descriptions of the situation that a small group of other Dustworms managed to infest the greenhouse without knowing what they were eating. After they clear out from the greenhouse, the Orchids offer you one of the few uneaten Kernel weapons being grown aboard as thanks, and one of the bugs offers to join you instead of being dropped off.</text>
                     <crewMember amount="1" class="aa_dustworm"/>
                     <weapon name="GIFTLIST_KERNEL"/>
+                    <variable name="aa_found_dustworm" op="add" val="1"/>
                 </event>
             </choice>
             <choice max_group="2">
@@ -398,10 +407,9 @@
     <text>You arrive at the beacon. In spite of the oppressive Duskbringer presence here, several Union and Ministry ships have established a trading post around it, their colorful hulls gleaming in the light of a distant sun. A Peacekeeper stands guard, as most of the vessels are unarmed.</text>
     <ship load="AA_SHIP_ZOLTAN_IMAGINATOR" hostile="false"/>
     <customFleet right="false" firing="false" autoDarkening="true">CUSTOM_FLEET_CIVILIAN</customFleet>
-    <choice req="aa_found_imaginator" lvl="0" hidden="true" max_group="0" blue="false"> <!-- Have not found this event yet -->
+    <choice>
         <text>Hail the traders.</text>
         <event>
-            <variable name="aa_found_imaginator" op="set" val="1"/> <!-- This event cannot yield the loot outcome more than once per run. -->
             <text>Out of all the ships, it is the Peacekeeper that responds directly to your hail. An old Zoltan in heavy armor responds in an uncharacteristic panic. "Oh, thank goodness! You're military, right? Renegade, even?"</text>
             <choice>
                 <text>That would be us.</text>
@@ -428,13 +436,6 @@
                 <text>Nope.</text>
                 <event load="AA_EVENT_FILLER_IMAGINATOR_DECLINE"/>
             </choice>
-        </event>
-    </choice>
-    <choice req="aa_found_imaginator" lvl="1" hidden="true" max_group="0" blue="false"> <!-- Already found this event -->
-        <text>Hail the traders.</text>
-        <event>
-            <text>A sense of deja-vu resonates within you as you approach the traders. However, the Peacekeeper doesn't make a move to hail you. Just a few vessels open to trade this time, it seems.</text>
-            <store>STORE_STANDARD</store>
         </event>
     </choice>
     <choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
@@ -486,7 +487,7 @@
 	<text>The flares fade into the background of space. Your systems have returned to normal.</text>
 	<status type="clear" target="player" system="cloaking" amount="100"/>
 </event>
-</event>
+
 <event name="AA_EVENT_QUEST_IMAGINATOR">
     <beaconType id="map_icon_quest" global="true">
 		<color r="69" g="168" b="235" a="1"/>
@@ -1303,7 +1304,7 @@
         <text>Continue...</text>
         <event>
             <text>When you finally come to, you see the rest of your crew also pulling themselves off of the floor. Your ship's systems begin to sputter back online, revealing the smoldering wreckage of an enemy ship you barely recognize. Its hull is darker than the depths of space, and it bears runic marks across its exterior that once glowed with a disorienting light. Its scrap, though relatively low in quantity and still crackling with an energy you do not understand, is sure to be extremely valuable thanks to its mysterious source.</text>
-            <autoReward level="HIGH">scrap</autoReward>
+            <autoReward level="HIGH">scrap_only</autoReward>
             <changeBackground>BACKGROUND</changeBackground>
             <variable name="loc_protomv_drive_block" op="set" val="0"/>
             <playMusic/>
@@ -1311,11 +1312,15 @@
                 <text>Continue...</text>
                 <event>
                     <text>Amidst the wreckage, you find the corpses of the tripods who tried to take control of you, crossed with the crumbled stones of the cultists who fell in the battle. You're able to retrieve both a surviving weapon and a cultist sealed in a stasis pod, their mind now free of the creatures' influence!</text>
-                    <autoReward level="HIGH">stuff</autoReward>
+                    <autoReward level="HIGH">standard_no_item</autoReward>
                     <weapon name="AA_INFUSER_MADNESS"/>
                     <crewMember amount="1" class="rock_crusader"/>
+                    <achievement silent="false">AA_ACH_GEN_GAZER</achievement>
                 </event>
             </choice>
         </event>
     </choice>
 </event>
+
+
+</FTL>

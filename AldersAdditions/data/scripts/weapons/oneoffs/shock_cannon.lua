@@ -3,6 +3,7 @@
 local burstsToBeams = {}
 burstsToBeams.AA_SHOCK_CANNON = "AA_SHOCK_CANNON_PROJECTILE"
 
+
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local beamReplacement = Hyperspace.Blueprints:GetWeaponBlueprint(burstsToBeams[weapon.blueprint.name])
     if beamReplacement then
