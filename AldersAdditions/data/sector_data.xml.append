@@ -331,8 +331,10 @@
 		<!-- <mod-append:blueprint name="AA_BOMB_DECAY" rarity="0" /> -->
 		<mod-append:blueprint name="AA_INDUCER" rarity="0" />
 		<mod-append:blueprint name="AA_INDUCER_HEAVY" rarity="0" />
+		<mod-append:blueprint name="AA_INDUCER_STUN" rarity="0" />
 
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
+		<mod-append:blueprint name="AA_SHOTGUN_STUN" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CONSERVATIVE" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE" rarity="0" />
 
@@ -400,8 +402,10 @@
 		<!-- <mod-append:blueprint name="AA_BOMB_DECAY" rarity="0" /> -->
 		<mod-append:blueprint name="AA_INDUCER" rarity="0" />
 		<mod-append:blueprint name="AA_INDUCER_HEAVY" rarity="0" />
+		<mod-append:blueprint name="AA_INDUCER_STUN" rarity="0" />
 
 		<mod-append:blueprint name="AA_SHOTGUN_PARTICLE" rarity="0" />
+		<mod-append:blueprint name="AA_SHOTGUN_STUN" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CONSERVATIVE" rarity="0" />
 		<mod-append:blueprint name="AA_SHOTGUN_CHARGEGUN_DAMAGE" rarity="0" />
 
