@@ -1,11 +1,12 @@
 -- [Beam Cannons - Replace burst projectiles with beams.]
 
 local burstsToBeams = {}
-burstsToBeams.AA_SHOCK_CANNON = "AA_SHOCK_CANNON_PROJECTILE"
+burstsToBeams.AA_SHOCK_CANNON = Hyperspace.Blueprints:GetWeaponBlueprint("AA_SHOCK_CANNON_PROJECTILE")
 
 
+-- Replacement logic
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
-    local beamReplacement = Hyperspace.Blueprints:GetWeaponBlueprint(burstsToBeams[weapon.blueprint.name])
+    local beamReplacement = burstsToBeams[weapon.blueprint.name]
     if beamReplacement then
         local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
         local beam = spaceManager:CreateBeam(

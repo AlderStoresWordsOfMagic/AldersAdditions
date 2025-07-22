@@ -88,7 +88,7 @@ end)
 local blockIon = false
 
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION_PRE, function(ship, projectile, damage, response)
-    blockIon = projectile:GetType() == 5 and not projectile --[[@as Hyperspace.BeamWeapon]].bDamageSuperShield and Hyperspace.Blueprints:GetWeaponBlueprint(projectile.extend.name).damage.iIonDamage == 0
+    blockIon = projectile:GetType() == 5 and not projectile and Hyperspace.Blueprints:GetWeaponBlueprint(projectile.extend.name).damage.iIonDamage == 0
     return Defines.Chain.CONTINUE -- Weird comment silences an ambiguous weapon typing warning from VSCode already handled by condition 1
 end)
 

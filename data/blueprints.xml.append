@@ -1271,7 +1271,7 @@
 	<cost>90</cost>
 	<bp>3</bp>
 	<rarity>5</rarity>
-	<shotLimit>1</shotLimit> <!-- Weapons can now have a shot limit, which helps reduce jank with pre-emptive weaponry -->
+	<shotLimit>1</shotLimit>
 	<mv-conservative/>
 	<projectiles>
 		<projectile count="5" fake="false">energy_shot</projectile>
@@ -1664,6 +1664,7 @@
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
 	<stunChance>3</stunChance>
+	<mv-conservative/>
 	<stun>5</stun>
 	<cooldown>17</cooldown>
 	<speed>3</speed>
@@ -1956,6 +1957,7 @@
 	<spin>720</spin>
 	<fireChance>0</fireChance>
 	<breachChance>2</breachChance>
+	<mv-conservative/>
 	<cooldown>15</cooldown>
 	<power>0</power>
 	<cost>70</cost>
@@ -2606,7 +2608,7 @@
 
 <!-- // INFUSER // -->
 
-<weaponBlueprint name="AA_INFUSER_PARTICLE"> <!-- Most are currently unobtainable, but will be obtainable soon. -->
+<weaponBlueprint name="AA_INFUSER_PARTICLE"> <!-- Most are currently obtainable only through ultra-rare store drops. -->
 	<type>BEAM</type>
 	<tip>aa_tip_infuser</tip>
 	<title>Accelerated Infuser</title>
@@ -2807,13 +2809,11 @@
 	<title>Neural Inducer</title>
 	<short>Stun Inducer</short>
 	<locked>1</locked>
-	<desc>This weapon creates a neural disruption pulse fast enough to self-chain.</desc>
+	<desc>This weapon creates a perfectly accurate neural disruption pulse fast enough to self-chain.</desc>
 	<damage>0</damage>
 	<accuracyMod>100</accuracyMod>
 	<shots>1</shots>
 	<sp>0</sp>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
 	<stunChance>10</stunChance>
 	<stun>10</stun>
 	<cooldown>9</cooldown>
@@ -2920,8 +2920,7 @@
 	<tip>aa_tip_pointer</tip>
 	<title>Drone Pointer</title>
 	<short>Pointer</short>
-	<locked>1</locked>
-	<desc>Though it does nothing on its own, this communications array causes all active combat drones to change their current target to the room it points to.</desc>
+	<desc>A target painter for combat drones that can influence where their shots land.</desc>
 	<damage>0</damage>
 	<speed>2147483647</speed>
 	<accuracyMod>100</accuracyMod>
@@ -2932,6 +2931,38 @@
 	<cost>50</cost>
 	<bp>4</bp>
 	<rarity>5</rarity>
+	<mv-aiSystemTarget system="any"/>
+	<explosion>center_pointer</explosion>
+	<launchSounds>
+		<sound>pointer</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<weaponArt>pointer</weaponArt>
+	<iconImage>bomb</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="AA_TARGETER"> <!-- UNIMPLEMENTED -->
+	<type>LASER</type>
+	<tip>aa_tip_pointer</tip>
+	<title>External Targeting Computer</title>
+	<short>Targeter</short>
+	<desc>This array of sensors is designed to improve weapon accuracy further than the system itself can provide.</desc>
+	<damage>0</damage>
+	<speed>2147483647</speed>
+	<accuracyMod>100</accuracyMod>
+	<shots>1</shots>
+	<sp>10</sp>
+	<cooldown>3</cooldown>
+	<power>1</power>
+	<cost>50</cost>
+	<bp>4</bp>
+	<rarity>0</rarity> <!-- Temporary -->
+	<shotLimit>1</shotLimit>
+	<mv-conservative/>
 	<mv-aiSystemTarget system="any"/>
 	<explosion>center_pointer</explosion>
 	<launchSounds>
@@ -3204,7 +3235,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_RAILGUN">
-	<type>BURST</type>
+	<type>LASER</type>
 	<title>Railcannon</title>
 	<short>Railcannon</short>
 	<tip>aa_tip_driver</tip>
@@ -3225,6 +3256,47 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<radius>0</radius>
 	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
+	<image>driver_projectile</image>
+	<explosion>explosion_big2</explosion>
+	<launchSounds>
+		<sound>railgun</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>explosion_heavy</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>railgun</weaponArt>
+	<iconReplace>railgun_icon</iconReplace>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="AA_RED_TETHER"> <!-- UNIMPLEMENTED -->
+	<type>BURST</type>
+	<title>Hard-Light Tether</title>
+	<short>Tether</short>
+	<tip>tip_preemptive</tip>
+	<desc>A unique pre-emptive weapon that hurls a spear of energy into the enemy ship. While tethered, the target cannot jump away and loses 20% evasion, and the room the tether lands in has a breach that cannot be fixed.</desc>
+	<damage>0</damage>
+	<speed>2147483647</speed>
+	<sp>10</sp>
+	<shots>1</shots>
+	<accuracyMod>100</accuracyMod>
+	<breachChance>10</breachChance>
+	<shotLimit>1</shotLimit>
+	<mv-conservative/>
+	<cooldown>1</cooldown>
+	<power>0</power>
+	<cost>110</cost>
+	<rarity>0</rarity>
+	<radius>0</radius>
+	<spin>0</spin>
 	<projectiles>
 		<projectile count="1" fake="false">debris_small</projectile>
 	</projectiles>

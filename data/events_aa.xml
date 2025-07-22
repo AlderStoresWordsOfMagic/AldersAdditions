@@ -224,6 +224,12 @@
         </event>
     </choice>
 </event>
+
+<event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP_LOAD">
+    <loadEventList name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP_LOADLIST" seeded="false" first="true" default="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP">
+        <event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP_DUSTWORM" req="aa_found_dustworm" lvl="1"/>
+    </loadEventList> 
+</event>
 <event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER">
     <text>As your shots rock the hull, the ship hails again. The voice that comes out over the waves isn't the stutter of a Separatist Engi, but of a much lighter, more organic nature. "Stop, stop! What did they tell you to do!?"</text>
     <choice hidden="true" blue="false" req="aa_found_dustworm" lvl="0" max_group="0">
@@ -232,27 +238,7 @@
             <text>The strange voice manages to get the camera working, revealing a group of small, caterpillar-like creatures peering through cracks in the wall. "N-no, we had no other choice! This was the only ship we could find, we ended up with a bunch of pirates who wanted to get rid of us... I thought the robot-thing would do the same!"</text>
             <choice>
                 <text>Explain the situation to the Separatist.</text>
-                <event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP">
-                    <text>"What? This... i-i-i-is..." The Engi, having managed to force their way in through the airlock, is completely stunned, not sure what to do about the situation. A couple of the braver aliens begin to crawl out of panels in the wall, squeaking out and staring at the red figure in the center of the room. "I-I-I-I thought it was a -virus-... what to do [now]?" The Engi, and the creatures, stare at you.</text>
-                    <ship hostile="false"/>
-                    <choice hidden="true">
-                        <text>Suggest the creatures come with you.</text>
-                        <event>
-                            <text>Still somewhat afraid, the insects nod, waiting in the room as you dock with your ship. They all board your ship, relieved to be out of the situation, and hide out in the cargo bay until you drop them off at a nearby station with many curious eyes. On the way, a couple of them have the handiness to help fix up your hull, and one of them even wants to join you on your journey through the stars!</text>
-                            <crewMember amount="1" class="aa_dustworm"/>
-                            <damage amount="-7"/>
-                            <variable name="aa_found_dustworm" op="add" val="1"/>
-                        </event>
-                    </choice>
-                    <choice hidden="true">
-                        <text>Suggest the Engi coexists with the creatures.</text>
-                        <event>
-                            <text>Although the bugs are concerned, you, your crew, and the Engi are able to help calm them down and fully describe the misunderstanding. The Separatist is quite grateful that you were able to help solve the issue, and is quite curious about these... "dustworms." In return, they offer a number of useful supplies and a spare weapon!</text>
-                            <autoReward level="HIGH">stuff</autoReward>
-                            <weapon name="GIFTLIST_ION"/>
-                        </event>
-                    </choice>
-                </event>
+                <event load="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP_LOAD"/>
             </choice>
         </event>
     </choice>
@@ -262,27 +248,7 @@
             <text>The strange voice manages to get the camera working, revealing a group of Dustworms peering through cracks in the wall. "N-no, we had no other choice! This was the only ship we could find, we ended up with a bunch of pirates who wanted to get rid of us... I thought the robot-thing would do the same!"</text>
             <choice>
                 <text>Explain the situation to the Separatist.</text>
-                <event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP">
-                    <text>"What? This... i-i-i-is..." The Engi, having managed to force their way in through the airlock, is completely stunned, not sure what to do about the situation. A couple of the braver Dustworms begin to crawl out of panels in the wall, squeaking out and staring at the red figure in the center of the room. "I-I-I-I thought it was a -virus-... what to do [now]?" The Engi, and the Dustworms, stare at you.</text>
-                    <ship hostile="false"/>
-                    <choice hidden="true">
-                        <text>Suggest the Dustworms come with you.</text>
-                        <event>
-                            <text>Still somewhat afraid, the Dustworms nod, waiting in the room as you dock with your ship. They all board your ship, relieved to be out of the situation, and hide out in the cargo bay until you drop them off at a nearby station with many curious eyes. On the way, a couple of them have the handiness to help fix up your hull, and one of them even wants to join you on your journey through the stars!</text>
-                            <crewMember amount="1" class="aa_dustworm"/>
-                            <damage amount="-7"/>
-                            <variable name="aa_found_dustworm" op="add" val="1"/>
-                        </event>
-                    </choice>
-                    <choice hidden="true">
-                        <text>Suggest the Engi coexists with the Dustworms.</text>
-                        <event>
-                            <text>Although the Dustworms are concerned, you, your crew, and the Engi are able to help calm them down and fully describe the misunderstanding. The Separatist is quite grateful that you were able to help solve the issue, and is quite curious about them. In return, they offer a number of useful supplies and a spare weapon!</text>
-                            <autoReward level="HIGH">stuff</autoReward>
-                            <weapon name="GIFTLIST_ION"/>
-                        </event>
-                    </choice>
-                </event>
+                <event load="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP_LOAD"/>
             </choice>
         </event>
     </choice>
@@ -290,6 +256,48 @@
         <text>Ignore the communication.</text>
         <event>
             <text>"Wait, STO-" The voice is shut off, and you continue to attack the ship. It may not be what the Separatist wanted, but it'll still benefit you.</text>
+        </event>
+    </choice>
+</event>
+<event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP">
+    <text>"What? This... i-i-i-is..." The Engi, having managed to force their way in through the airlock, is completely stunned, not sure what to do about the situation. A couple of the braver aliens begin to crawl out of panels in the wall, squeaking out and staring at the red figure in the center of the room. "I-I-I-I thought it was a -virus-... what to do [now]?" The Engi, and the creatures, stare at you.</text>
+    <ship hostile="false"/>
+    <choice hidden="true">
+        <text>Suggest the creatures come with you.</text>
+        <event>
+            <text>Still somewhat afraid, the insects nod, waiting in the room as you dock with your ship. They all board your ship, relieved to be out of the situation, and hide out in the cargo bay until you drop them off at a nearby station with many curious eyes. On the way, a couple of them have the handiness to help fix up your hull, and one of them even wants to join you on your journey through the stars!</text>
+            <crewMember amount="1" class="aa_dustworm"/>
+            <damage amount="-7"/>
+            <variable name="aa_found_dustworm" op="add" val="1"/>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Suggest the Engi coexists with the creatures.</text>
+        <event>
+            <text>Although the bugs are concerned, you, your crew, and the Engi are able to help calm them down and fully describe the misunderstanding. The Separatist is quite grateful that you were able to help solve the issue, and is quite curious about these... "dustworms." In return, they offer a number of useful supplies and a spare weapon!</text>
+            <autoReward level="HIGH">stuff</autoReward>
+            <weapon name="GIFTLIST_ION"/>
+        </event>
+    </choice>
+</event>
+<event name="AA_EVENT_SEPARATIST_INFESTATION_SURRENDER_SKIP_DUSTWORM">
+    <text>"What? This... i-i-i-is..." The Engi, having managed to force their way in through the airlock, is completely stunned, not sure what to do about the situation. A couple of the braver Dustworms begin to crawl out of panels in the wall, squeaking out and staring at the red figure in the center of the room. "I-I-I-I thought it was a -virus-... what to do [now]?" The Engi, and the Dustworms, stare at you.</text>
+    <ship hostile="false"/>
+    <choice hidden="true">
+        <text>Suggest the Dustworms come with you.</text>
+        <event>
+            <text>Still somewhat afraid, the Dustworms nod, waiting in the room as you dock with your ship. They all board your ship, relieved to be out of the situation, and hide out in the cargo bay until you drop them off at a nearby station with many curious eyes. On the way, a couple of them have the handiness to help fix up your hull, and one of them even wants to join you on your journey through the stars!</text>
+            <crewMember amount="1" class="aa_dustworm"/>
+            <damage amount="-7"/>
+            <variable name="aa_found_dustworm" op="add" val="1"/>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Suggest the Engi coexists with the Dustworms.</text>
+        <event>
+            <text>Although the Dustworms are concerned, you, your crew, and the Engi are able to help calm them down and fully describe the misunderstanding. The Separatist is quite grateful that you were able to help solve the issue, and is quite curious about them. In return, they offer a number of useful supplies and a spare weapon!</text>
+            <autoReward level="HIGH">stuff</autoReward>
+            <weapon name="GIFTLIST_ION"/>
         </event>
     </choice>
 </event>

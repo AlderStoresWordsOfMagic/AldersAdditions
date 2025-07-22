@@ -211,17 +211,17 @@ While in effect; you can choose to fire a single Imaginator beam at the start of
         <mod-append:shipIcon>
             <name>aa_icon_resist_ion</name>
             <tooltip>INSULATED ROOMS:
-This enemy has one or more insulated rooms, marked by the blue border and blue R icon in the top left. Insulated rooms will take no ion damage from weapons or instant crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
+This enemy has one or more insulated rooms, marked by the blue border and blue R icon in the top left. Insulated rooms will take no ion damage from weapons, but can be damaged by crew abilities. Insulated rooms will take hull and system damage as normal.</tooltip>
         </mod-append:shipIcon>
         <mod-append:shipIcon>
             <name>aa_icon_resist_hack</name>
             <tooltip>FIREWALLED ROOMS:
-This enemy has one or more firewalled rooms, marked by the purple border and purple R icon in the top left. Firewalled rooms cannot be hacked, but take all damage as normal.</tooltip>
+This enemy has one or more firewalled rooms, marked by the purple border and purple R icon in the top left. Firewalled rooms cannot be hacked or have their power limited, but take damage as normal. A firewalled room's doors are still vulnerable to hacking.</tooltip>
         </mod-append:shipIcon>
         <mod-append:shipIcon>
             <name>aa_icon_resist_sabo</name>
             <tooltip>ENCASED ROOMS:
-This enemy has one or more encased rooms, marked by the orange border and orange R icon in the top left. Encased rooms are immune to sabotage and fire damage, but otherwise take damage as normal.</tooltip>
+This enemy has one or more encased rooms, marked by the orange border and orange R icon in the top left. Encased rooms are immune to sabotage and fire damage, but otherwise take damage as normal. They do not extinguish any fires in them, and crew still try to sabotage them.</tooltip>
         </mod-append:shipIcon>
         
         <mod-append:shipIcon>
@@ -229,7 +229,6 @@ This enemy has one or more encased rooms, marked by the orange border and orange
             <tooltip>ASCENDANT AUTOMATION:
 This enemy is automated, meaning it cannot be crew-killed. All systems act as though they are manned by crew with fully developed skills, and repairs will be made automatically at triple the speed of a normal Auto-ship. Breaches will be repaired at a slow rate.</tooltip>
 	    </mod-append:shipIcon>
-
 
         <!-- / GENERAL AUGMENTS / -->
 
@@ -707,6 +706,10 @@ Enemy Zoltan heal at 2.5 hp/s if undisturbed for 5 seconds, but do not heal from
                 <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
                 <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
             </room>
+            <room id="14"> <!-- Weapons -->
+                <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
+                <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
+            </room>
             <room id="5"> <!-- Drones -->
                 <roomAnim renderLayer="0">resist_2x2_hack</roomAnim>
                 <roomAnim renderLayer="3">resist_icon_hack</roomAnim>
@@ -992,6 +995,8 @@ Creates a semi-permanent effect in the current room, which will dissipate only w
     <!-- // MISC // -->
 
     <mod-append:race name="aa_red_guy"> <!-- temporary variant of humans spawned from a specific Renegade loot -->
+        <lowHealthThreshold>-1</lowHealthThreshold>
+		<noWarning>true</noWarning>
         <controllable>false</controllable>
         <selectable>false</selectable>
         <resistsMindControl>true</resistsMindControl>

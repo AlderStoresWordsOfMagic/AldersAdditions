@@ -583,7 +583,7 @@
     <deadCrew load="AA_SHIP_MVBOSS_HACKER_CRUISER_DEADCREW"/>
 </ship>
 <ship name="AA_MVBOSS_HACKER_CRUISER_CHAOS" auto_blueprint="AA_MVBOSS_HACKER_CRUISER_CHAOS">
-    <destroyed load="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED_CHAOS"/>
+    <destroyed load="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED_CHAOS"/> <!-- Special situation; can't be crewkilled so drop is guaranteed -->
     <deadCrew load="OPTION_INVALID"/> <!-- Should never appear; Chaotic version is an auto-ship -->
 </ship>
 <event name="AA_EVENT_MVBOSS_HACKER_CRUISER_NORMAL">
@@ -685,8 +685,8 @@
 <event name="AA_EVENT_MVBOSS_HACKER_CRUISER_CHAOS">
 	<text>From out of the tunnel comes a massive cruiser vessel, of Slug design! At once, a strange pattern appears on your computer... its frequency matches the signal from that beacon you had activated earlier!</text>
 	<playSound>mysteriousBeacon</playSound>
-	<ship load="AA_MVBOSS_HACKER_CRUISER_CHAOS" hostile="false"/> 
-	<eventAlias jumpClear="false" name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP">AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHAOS</eventAlias>
+	<ship load="AA_MVBOSS_HACKER_CRUISER_CHAOS" hostile="false"/>
+	<!-- No event alias here, since the ship behaves very differently in Chaos Mode -->
 	<choice hidden="true">
 		<text>Prepare to fight!</text>
 		<event>
@@ -729,15 +729,20 @@
 		<event load="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHANCE"/>
 	</choice>
 </event>
-<eventList name="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED_CHAOS"> <!-- Auto-ship; cannot be crewkilled so drop is guaranteed on hullkill instead -->
+<event name="AA_SHIP_MVBOSS_HACKER_CRUISER_DESTROYED_CHAOS"> <!-- Auto-ship; cannot be crewkilled so drop is guaranteed on hullkill instead -->
 	<text id="renegade_destroyed"/>
 	<autoReward level="HIGH">standard_no_item</autoReward>
 	<metaVariable name="prof_renegades_killed" op="add" val="1"/>
+	<achievement silent="false">AA_ACH_GEN_FAROUT</achievement>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHAOS"/>
+		<event>
+			<text id="renegade_drop_yes"/>
+			<autoReward level="LOW">stuff</autoReward>
+			<weapon name="AA_MVLOOT_HACKER_CHAOS"/>
+		</event>
 	</choice>
-</eventList>
+</event>
 <eventList name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHANCE">
 	<event>
 		<text id="renegade_drop_fail"/>
@@ -759,11 +764,6 @@
 	<text id="renegade_drop_yes"/>
 	<autoReward level="LOW">stuff</autoReward>
 	<weapon name="AA_MVLOOT_HACKER"/>
-</event>
-<event name="AA_SHIP_MVBOSS_HACKER_CRUISER_DROP_CHAOS">
-	<text id="renegade_drop_yes"/>
-	<autoReward level="LOW">stuff</autoReward>
-	<weapon name="AA_MVLOOT_HACKER_CHAOS"/>
 </event>
 
 <!-- Far-Out Monk -->

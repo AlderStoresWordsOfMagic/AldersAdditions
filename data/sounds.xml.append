@@ -12,11 +12,17 @@
 
 <!-- // ENVIRONMENT // -->
 
+<!-- // SHIP // -->
+
 <!-- / AUGMENT EFFECTS / -->
 
 <regen_shield volume="3">ship/regen_shield.ogg</regen_shield>
 <regen_hull volume="2">ship/regen_hull.ogg</regen_hull>
 <reality_manipulator volume="5">ship/reality_manipulator.ogg</reality_manipulator>
+
+<!-- / ROOM EFFECTS / -->
+
+<hack_resist volume="3">ship/hack_resist.ogg</hack_resist>
 
 
 <!-- // WEAPONS // -->

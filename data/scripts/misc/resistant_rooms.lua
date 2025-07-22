@@ -1,3 +1,4 @@
+local vter = mods.multiverse.vter
 local fires = mods.fusion.custom_fires.fires -- Silly wrote a library in Fusion that allows fires to be manipulated through Lua more easily.
 local get_fire_extend = mods.fusion.custom_fires.get_fire_extend
 local FIRE_STAT_APPLICATION_PRIORITY = mods.fusion.custom_fires.constants.FIRE_STAT_APPLICATION_PRIORITY
@@ -8,7 +9,7 @@ mods.alder.firewallShips = { -- List of room IDs for each ship that uses firewal
     AA_MVBOSS_HACKER_CRUISER_NORMAL = {15, 5}, -- shields, teleporter
     AA_MVBOSS_HACKER_CRUISER_CHALLENGE = {15, 5}, -- shields, teleporter
     AA_MVBOSS_HACKER_CRUISER_EXTREME = {15, 5, 11}, -- shields, teleporter, temporal
-    AA_MVBOSS_HACKER_CRUISER_CHAOS = {15, 11}, -- shields, temporal
+    AA_MVBOSS_HACKER_CRUISER_CHAOS = {15, 14, 5, 11}, -- shields, weapons, drones, temporal
 }
 
 mods.alder.encasedShips = { -- List of room IDs for each ship that uses encased rooms
@@ -29,11 +30,21 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
     if firewalledRooms ~= nil then
         for _, room in ipairs(firewalledRooms) do
             local system = shipManager:GetSystemInRoom(room)
+
+            -- Handle power drain
+            system.extend.additionalPowerLoss = 0
+
+            -- Handle hacking effects and drones in the room
             if system.iHackEffect == 2 and system.bUnderAttack then
-            system:StopHacking() -- Unhack system
+                system:StopHacking()
+                system.iHackEffect = 0
+                Hyperspace.Sounds:PlaySoundMix("hack_resist", -1, false) -- Fun sound effect
             end
             if enemyHacking and enemyHacking.drone.arrived and enemyHacking.currentSystem == system then
                 enemyHacking:BlowHackingDrone() -- Destroy the hacking drone not owned by the room owner
+                enemyHacking.currentSystem = nil -- Experimental
+                system:StopHacking()
+                system.iHackEffect = 0
             end
         end
     end
@@ -46,6 +57,8 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
     if encasedRooms ~= nil then
         for _, room in ipairs(encasedRooms) do
             for fire in fires(shipManager.ship.vRoomList[room], shipManager) do
+
+                -- Reduce fire damage to 0
                 get_fire_extend(fire).systemDamageMultiplier = 0
             end
         end

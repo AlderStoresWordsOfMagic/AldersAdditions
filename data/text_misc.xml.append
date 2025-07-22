@@ -12,8 +12,9 @@
 <text name="aa_tip_inducer">Tip: Inducers completely bypass almost all forms of defense, similar to bombs. They also have a +100% bonus to hit, making them nearly impossible to avoid even when wielded by the enemy.</text>
 <text name="aa_tip_accumulator">Tip: When left to charge, accumulating weapons gradually increase the damage of their shot. This lends them a degree of flexibility similar to charge weapons.</text>
 <text name="aa_tip_infuser">Tip: Infusers cannot be shot. When the weapon to its right fires, an Infuser copies its combat statistics to that weapon, then behaves as if it were fired.</text>
+<text name="aa_tip_pointer">Tip: When used, all active combat drones change their next target to the shot room. They will resume normal behavior after.</text>
+<text name="aa_tip_targeter">Tip: When used, all weapon shots aimed at the target room cannot miss.</text>
 
-<text name="aa_tip_pointer">Tip: Do not underestimate this device.</text>
 <text name="aa_tip_imagine">Tip: You never know what you'll get.</text>
 <text name="aa_tip_system">Tip: We will set you free.</text>
 
