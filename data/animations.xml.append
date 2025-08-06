@@ -150,6 +150,7 @@
 
 
 <!-- // CLONE CANNON PROJECTILES // -->
+
 <animSheet name="crewproj_dustworm" w="24" h="24" fw="24" fh="24">projectile/crewproj_dustworm.png</animSheet>
 <anim name="crewproj_dustworm">
 	<sheet>crewproj_dustworm</sheet>
@@ -303,6 +304,22 @@
 <anim name="tile_decay">
 	<sheet>tile_decay</sheet>
 	<desc length="10" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+
+<!-- // WALL EFFECTS // -->
+
+<animSheet name="aa_effect_wall_silk" w="35" h="35" fw="35" fh="35">effects/wall/wall_silk.png</animSheet>
+<anim name="aa_effect_wall_silk">
+	<sheet>aa_effect_wall_silk</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="aa_effect_wall_silk_silence" w="35" h="35" fw="35" fh="35">effects/wall/wall_silk_silence.png</animSheet>
+<anim name="aa_effect_wall_silk_silence">
+	<sheet>aa_effect_wall_silk_silence</sheet>
+	<desc length="1" x="0" y="0"/>
 	<time>1</time>
 </anim>
 

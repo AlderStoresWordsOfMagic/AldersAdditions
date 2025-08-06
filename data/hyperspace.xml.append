@@ -897,6 +897,7 @@ Enemy Zoltan heal at 2.5 hp/s if undisturbed for 5 seconds, but do not heal from
 	<mod-append:race name="aa_dustworm"> <!-- Stock dustworm -->
         
 		<canFight>false</canFight>
+        <canPunch>false</canPunch>
 		<canSabotage>true</canSabotage>
 		<maxHealth>90</maxHealth>
         <lowHealthThreshold>30.0</lowHealthThreshold>
@@ -908,7 +909,6 @@ Enemy Zoltan heal at 2.5 hp/s if undisturbed for 5 seconds, but do not heal from
 
         <moveSpeedMultiplier>0.7</moveSpeedMultiplier>
         <repairSpeedMultiplier>1.5</repairSpeedMultiplier>
-        <sabotageSpeedMultiplier>1.5</sabotageSpeedMultiplier>
 		<doorDamageMultiplier>3</doorDamageMultiplier>
 
 		<deathSounds>
@@ -934,14 +934,14 @@ Enemy Zoltan heal at 2.5 hp/s if undisturbed for 5 seconds, but do not heal from
 
 			<buttonText>SILK</buttonText>
 			<tooltip>[COOLDOWN:10s]
-Creates a semi-permanent effect in the current room, which will dissipate only when jumping. Sabotage becomes impossible in the affected room, and enemy crew have their movement speed quartered.</tooltip>
+Creates a semi-permanent effect in the current room, which will dissipate only when jumping. Enemy crew have their movement and sabotage speed fifthed.</tooltip>
 			<cooldownColor r="200" g="255" b="255"/>
             <powerSounds>
 				<powerSound>power_dustworm</powerSound>
 			</powerSounds>
 
 			<roomStatBoosts>
-                <statBoost name="canSabotage" load="AA_SILK_SABO"/>
+                <statBoost name="sabotageSpeedMultiplier" load="AA_SILK_SABO"/>
 				<statBoost name="moveSpeedMultiplier" load="AA_SILK_MOVE"/>
 			</roomStatBoosts>
 		</powerEffect>
@@ -964,6 +964,7 @@ Creates a semi-permanent effect in the current room, which will dissipate only w
 
         <crewSlots>0.5</crewSlots>
 		<canFight>false</canFight>
+        <canPunch>false</canPunch>
 		<canSabotage>true</canSabotage>
 		<maxHealth>67</maxHealth>
         <lowHealthThreshold>30.0</lowHealthThreshold>
@@ -1066,19 +1067,24 @@ Creates a semi-permanent effect in the current room, which will dissipate only w
 
     <!-- // CREW LABS // -->
 
-    <mod-append:aug name="AA_LAB_DUSTWORM_ESCAPE">
+    <mod-append:aug name="AA_LAB_DUSTWORM_SABOTAGE">
         <statBoosts>
-			<statBoost name="statBoost">
-				<statBoost name="moveSpeedMultiplier">
-                    <boostType>MULT</boostType>
-					<amount>2</amount>
-                    <shipTarget>CURRENT_ROOM</shipTarget>
-                    <crewTarget>ALL</crewTarget>
-					<whiteList load="AA_LIST_CREW_DUSTWORM"/>
-                </statBoost>
-				<shipTarget>CURRENT_ROOM</shipTarget>
-				<crewTarget>ENEMIES</crewTarget>
+            <statBoost name="sabotageSpeedMultiplier">
+                <boostType>MULT</boostType>
+                <amount>1.5</amount>
+                <shipTarget>CURRENT_ROOM</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <whiteList>
+                    <aa_dustworm/>
+                </whiteList>
 			</statBoost>
+            <statBoost name="repairSpeed"> <!-- Only one is needed, since it always has the same effect on each dustworm type -->
+                <boostType>SET</boostType>
+                <amount>1</amount>
+                <shipTarget>CURRENT_ROOM</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <whiteList load="AA_LIST_CREW_DUSTWORM"/>
+            </statBoost>
         </statBoosts>
     </mod-append:aug>
     <mod-append:aug name="AA_LAB_DUSTWORM_DEFENSE">
@@ -1086,36 +1092,35 @@ Creates a semi-permanent effect in the current room, which will dissipate only w
 			<statBoost name="statBoost">
 				<statBoost name="damageTakenMultiplier">
                     <boostType>MULT</boostType>
-					<amount>0.5</amount>
+					<amount>0.25</amount>
                     <shipTarget>CURRENT_ROOM</shipTarget>
                     <crewTarget>ALL</crewTarget>
 					<whiteList load="AA_LIST_CREW_DUSTWORM"/>
+                    <maxStacks>1</maxStacks> <!-- prevents stacking for stupid damage reduction -->
                 </statBoost>
 				<shipTarget>CURRENT_ROOM</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
+                <blackList load="AA_LIST_CREW_DUSTWORM"/>
 			</statBoost>
         </statBoosts>
     </mod-append:aug>
     <mod-append:aug name="AA_LAB_DUSTWORM_FIRE">
         <statBoosts>
-			<statBoost name="canBurn">
+			<statBoost name="fireDamageMultiplier">
 				<boostType>SET</boostType>
-				<value>false</value>
+				<value>-0.5</value>
 				<shipTarget>ALL</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
 				<priority>999</priority>
                 <whiteList load="AA_LIST_CREW_DUSTWORM"/>
 			</statBoost>
-			<statBoost name="sabotageSpeedMultiplier">
+			<statBoost name="fireRepairMultiplier">
 				<boostType>SET</boostType>
-				<amount>1</amount>
+				<amount>0</amount>
 				<shipTarget>ALL</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
 				<priority>999</priority>
                 <whiteList load="AA_LIST_CREW_DUSTWORM"/>
-				<extraConditions type="and">
-					<burning>false</burning> <!-- this debuff is nullified in the presence of fire -->
-				</extraConditions>
             </statBoost>
         </statBoosts>
     </mod-append:aug>

@@ -429,19 +429,19 @@
 
 <event name="AA_STORAGE_CHECK_LAB_DUSTWORM">
 	<text>You are viewing the lab menu for: [DUSTWORM]</text>
-	<choice req="AA_LAB_DUSTWORM_ESCAPE" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: Escape Protocol.
-		[Dustworms move at doubled speed in a room with enemy crew]</text>
+	<choice req="AA_LAB_DUSTWORM_SABOTAGE" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Teardown Toolkits.
+		[Dustworms exchange their repair speed bonus for an equal sabotage speed bonus]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_DEFENSE" lvl="1" max_group="0" blue="false" hidden="true">
 		<text>Currently Installed: Hunker Down.
-		[Dustworms take halved damage from combat when an allied crew is in the room]</text>
+		[Dustworms take quartered damage from combat when an allied non-Dustworm crew is in the room]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_FIRE" lvl="1" max_group="0" blue="false" hidden="true">
-		<text>Currently Installed: Flaming Passion.
-		[Dustworms become immune to fire, but their sabotage bonus is reduced to 1.0x while outside of fire]</text>
+		<text>Currently Installed: Pyromania.
+		[Dustworms slowly heal from fire, but lose the ability to extinguish it]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
@@ -449,12 +449,12 @@
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="1" max_group="1" blue="false" hidden="true">
-		<text>Pri: Escape Protocol. [An upgrade is already installed]</text>
+		<text>Pri: Teardown Toolkits. [An upgrade is already installed]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="0" max_group="1" blue="false" hidden="true">
-		<text>Pri: Escape Protocol. [Cost: 25~, 3}]</text>
-		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_ESCAPE"/>
+		<text>Pri: Teardown Toolkits. [Cost: 25~, 3}]</text>
+		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_SABOTAGE"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="1" max_group="2" blue="false" hidden="true">
 		<text>Pri: Hunker Down. [An upgrade is already installed]</text>
@@ -465,11 +465,11 @@
 		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_DEFENSE"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="1" max_group="3" blue="false" hidden="true">
-		<text>Pri: Flaming Passion. [An upgrade is already installed]</text>
+		<text>Pri: Pyromania. [An upgrade is already installed]</text>
 		<event load="OPTION_INVALID"/>
 	</choice>
 	<choice req="AA_LAB_DUSTWORM_INSTALLED" lvl="0" max_group="3" blue="false" hidden="true">
-		<text>Pri: Flaming Passion. [Cost: 30~, 3{}]</text>
+		<text>Pri: Pyromania. [Cost: 30~, 3{]</text>
 		<event load="AA_STORAGE_CHECK_LAB_DUSTWORM_FIRE"/>
 	</choice>
 		<choice req="AA_LAB_DUSTWORM_SECONDARY_SILENCE" lvl="1" max_group="4" blue="false" hidden="true">
@@ -487,9 +487,9 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
-<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_ESCAPE">
-	<text>You are about to install the Escape Protocol modification.
-	[Effects: Dustworms move at doubled speed in a room with enemy crew]
+<event name="AA_STORAGE_CHECK_LAB_DUSTWORM_SABOTAGE">
+	<text>You are about to install the Teardown Toolkits modification.
+	[Effects: Dustworms exchange their repair speed bonus for an equal sabotage speed bonus]
 	
 	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
 	<choice hidden="true">
@@ -502,7 +502,7 @@
 			</item_modify>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="AA_INSTALL_LAB_DUSTWORM_ESCAPE"/>
+				<event load="AA_INSTALL_LAB_DUSTWORM_SABOTAGE"/>
 			</choice>
 		</event>
 	</choice>
@@ -511,15 +511,15 @@
 		<event load="STORAGE_CHECK_LAB_LOAD"/>
 	</choice>
 </event>
-<event name="AA_INSTALL_LAB_DUSTWORM_ESCAPE">
+<event name="AA_INSTALL_LAB_DUSTWORM_SABOTAGE">
 	<variable name="loc_lab_upgrades" op="add" val="1"/>
-	<hiddenAug>AA_LAB_DUSTWORM_ESCAPE</hiddenAug>
+	<hiddenAug>AA_LAB_DUSTWORM_SABOTAGE</hiddenAug>
 	<hiddenAug>AA_LAB_DUSTWORM_INSTALLED</hiddenAug>
 	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
 </event>
 <event name="AA_STORAGE_CHECK_LAB_DUSTWORM_DEFENSE">
 	<text>You are about to install the Hunker Down modification.
-	[Effects: Dustworms take halved damage from combat when an allied crew is in the room]
+	[Effects: Dustworms take quartered damage from combat when an allied non-Dustworm crew is in the room]
 	
 	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
 	<choice hidden="true">
@@ -548,8 +548,8 @@
 	<loadEvent>AA_STORAGE_CHECK_LAB_DUSTWORM</loadEvent>
 </event>
 <event name="AA_STORAGE_CHECK_LAB_DUSTWORM_FIRE">
-	<text>You are about to install the Flaming Passion modification.
-	[Effects: Dustworms become immune to fire, but they lose any bonus to sabotage speed while not on fire]
+	<text>You are about to install the Pyromania modification.
+	[Effects: Dustworms slowly heal from fire, but lose the ability to extinguish it]
 	
 	[Warning: After installing this, you will not be able to install any more primary upgrades for Dustworm crew. You will not be able to deactivate this mod either.]</text>
 	<choice hidden="true">

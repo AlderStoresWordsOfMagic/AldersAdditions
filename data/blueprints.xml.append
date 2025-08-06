@@ -33,20 +33,20 @@
 			<boostAnim>status_purge</boostAnim>
 		</statBoost>
 
-		<statBoost name="canSabotage" save="AA_SILK_SABO"> <!-- Dustworm silk -->
-			<boostType>SET</boostType>
-			<value>FALSE</value>
+		<statBoost name="sabotageSpeedMultiplier" save="AA_SILK_SABO"> <!-- Dustworm silk -->
+			<boostType>MULT</boostType>
+			<amount>0.2</amount>
 			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALL</crewTarget>
+			<crewTarget>ENEMIES</crewTarget>
 			<droneTarget>CREW</droneTarget>
-			<affectsSelf>true</affectsSelf>
+			<affectsSelf>false</affectsSelf>
 			<priority>10000</priority>
 			<permanent>true</permanent>
 			<jumpClear>true</jumpClear>
 		</statBoost>
 		<statBoost name="moveSpeedMultiplier" save="AA_SILK_MOVE">
 			<boostType>MULT</boostType>
-			<amount>0.25</amount>
+			<amount>0.2</amount>
 			<shipTarget>ALL</shipTarget>
 			<crewTarget>ENEMIES</crewTarget>
 			<droneTarget>CREW</droneTarget>
@@ -55,8 +55,9 @@
 			<permanent>true</permanent>
 			<jumpClear>true</jumpClear>
 			<boostAnim>status_silk</boostAnim>
-			<roomAnim renderLayer="1">
+			<roomAnim renderLayer="2">
 				<anim animType="center">center_silk</anim>
+				<wallAnim>aa_effect_wall_silk</wallAnim>
 			</roomAnim>
 		</statBoost>
 		<statBoost name="silenced" save="AA_SILK_LAB_SILENCE"> <!-- used for Captivating Strands lab -->
@@ -70,8 +71,9 @@
 			<permanent>true</permanent>
 			<jumpClear>true</jumpClear>
 			<boostAnim>status_silk_silence</boostAnim>
-			<roomAnim renderLayer="1">
+			<roomAnim renderLayer="2">
 				<anim animType="center">center_silk_silence</anim>
+				<wallAnim>aa_effect_wall_silk_silence</wallAnim>
 			</roomAnim>
 		</statBoost>
 		<statBoost name="canTeleport" save="AA_SILK_LAB_TELEPORT"> <!-- used for Captivating Strands lab -->
@@ -4868,23 +4870,23 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
-<augBlueprint name="AA_LAB_DUSTWORM_ESCAPE">
-    <title>Escape Protocol</title>
-	<desc>Dustworms move 50% faster while in a room with enemy crew.</desc>
+<augBlueprint name="AA_LAB_DUSTWORM_SABOTAGE">
+    <title>Teardown Toolkits</title>
+	<desc>Dustworms exchange their repair speed bonus for an equal sabotage speed bonus.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
 <augBlueprint name="AA_LAB_DUSTWORM_DEFENSE">
     <title>Hunker Down</title>
-	<desc>Dustworms take halved damage from combat when an allied crew is in the room.</desc>
+	<desc>Dustworms take quartered damage from combat when an allied non-Dustworm crew is in the room.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
 <augBlueprint name="AA_LAB_DUSTWORM_FIRE">
-    <title>Flaming Passion</title>
-	<desc>Dustworms become immune to fire, but their sabotage bonus is reduced to 1.0x while outside of fire.</desc>
+    <title>Pyromania</title>
+	<desc>Dustworms slowly heal from fire, but lose the ability to extinguish it.</desc>
 	<cost>0</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -4965,12 +4967,11 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 	<cost>70</cost>
 	<rarity>0</rarity>
 	<powerList>
-		<!-- <power>When not controlled by the player and targeted by an enemy, runs to a random room</power> -->
-		<power>Active Ability (1 charge): Entangles the room in silk, preventing sabotage and slowing enemy crew. The zone will expire after an FTL jump.</power>
+		<power>Active Ability (1 charge): Entangles the room in silk, slowing enemy crew movement and sabotage. The zone will expire after an FTL jump.</power>
 		<power>Max health is reduced to 90</power>
-		<power>Repairs and sabotages systems at 1.5x speed, and deals 3.0x damage to doors</power>
+		<power>Repairs systems at 1.5x speed, and deals 3.0x damage to doors</power>
 		<power>0.7x movement speed</power>
-		<power>Takes 2x damage from ship weapons and instant damage</power>
+		<power>Takes 2x damage from ship weapons and other instant damage</power>
 	</powerList>
 	<colorList>
 		<layer> <!-- Body Color -->
