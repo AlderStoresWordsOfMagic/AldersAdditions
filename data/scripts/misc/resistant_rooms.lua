@@ -30,21 +30,22 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
     if firewalledRooms ~= nil then
         for _, room in ipairs(firewalledRooms) do
             local system = shipManager:GetSystemInRoom(room)
+            if system ~= nil then
+                -- Handle power drain
+                system.extend.additionalPowerLoss = 0
 
-            -- Handle power drain
-            system.extend.additionalPowerLoss = 0
-
-            -- Handle hacking effects and drones in the room
-            if system.iHackEffect == 2 and system.bUnderAttack then
-                system:StopHacking()
-                system.iHackEffect = 0
-                Hyperspace.Sounds:PlaySoundMix("hack_resist", -1, false) -- Fun sound effect
-            end
-            if enemyHacking and enemyHacking.drone.arrived and enemyHacking.currentSystem == system then
-                enemyHacking:BlowHackingDrone() -- Destroy the hacking drone not owned by the room owner
-                enemyHacking.currentSystem = nil -- Experimental
-                system:StopHacking()
-                system.iHackEffect = 0
+                -- Handle hacking effects and drones in the room
+                if system.iHackEffect == 2 and system.bUnderAttack then
+                    system:StopHacking()
+                    system.iHackEffect = 0
+                    Hyperspace.Sounds:PlaySoundMix("hack_resist", -1, false) -- Fun sound effect
+                end
+                if enemyHacking and enemyHacking.drone.arrived and enemyHacking.currentSystem == system then
+                    enemyHacking:BlowHackingDrone() -- Destroy the hacking drone not owned by the room owner
+                    enemyHacking.currentSystem = nil -- Experimental
+                    system:StopHacking()
+                    system.iHackEffect = 0
+                end
             end
         end
     end
