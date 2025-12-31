@@ -6,8 +6,8 @@ burstsToBeams.AA_SHOCK_CANNON = Hyperspace.Blueprints:GetWeaponBlueprint("AA_SHO
 
 -- Replacement logic
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
-    local beamReplacement = burstsToBeams[weapon.blueprint.name]
-    if beamReplacement then
+    if burstsToBeams[weapon.blueprint.name] then
+        local beamReplacement = burstsToBeams[weapon.blueprint.name]
         local spaceManager = Hyperspace.Global.GetInstance():GetCApp().world.space
         local beam = spaceManager:CreateBeam(
             beamReplacement, projectile.position, projectile.currentSpace, projectile.ownerId,

@@ -326,7 +326,7 @@
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_CHARGEGUN_DAMAGE" rarity="0" />
 
-		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
+		<!-- <mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" /> -->
 		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="0" />
 		<!-- <mod-append:blueprint name="AA_BOMB_DECAY" rarity="0" /> -->
 		<mod-append:blueprint name="AA_INDUCER" rarity="0" />
@@ -342,7 +342,7 @@
 		<mod-append:blueprint name="AA_MINELAUNCHER_PARTICLE" rarity="0" />
 
 		<mod-append:blueprint name="AA_FOCUS_PARTICLE" rarity="0" />
-		<mod-append:blueprint name="AA_FOCUS_SMASH" rarity="0" />
+		<!-- <mod-append:blueprint name="AA_FOCUS_SMASH" rarity="0" /> -->
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />
@@ -397,7 +397,7 @@
 		<mod-append:blueprint name="AA_BEAM_PURGE" rarity="0" />
 		<mod-append:blueprint name="AA_BEAM_CHARGEGUN_DAMAGE" rarity="0" />
 
-		<mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" />
+		<!-- <mod-append:blueprint name="AA_BOMB_SMASH" rarity="0" /> -->
 		<mod-append:blueprint name="AA_BOMB_PURGE" rarity="0" />
 		<!-- <mod-append:blueprint name="AA_BOMB_DECAY" rarity="0" /> -->
 		<mod-append:blueprint name="AA_INDUCER" rarity="0" />
@@ -413,7 +413,7 @@
 		<mod-append:blueprint name="AA_MINELAUNCHER_PARTICLE" rarity="0" />
 
 		<mod-append:blueprint name="AA_FOCUS_PARTICLE" rarity="0" />
-		<mod-append:blueprint name="AA_FOCUS_SMASH" rarity="0" />
+		<!-- <mod-append:blueprint name="AA_FOCUS_SMASH" rarity="0" /> -->
 		<mod-append:blueprint name="AA_FOCUS_ION_1" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_2" rarity="0" />
 		<mod-append:blueprint name="AA_FOCUS_ION_PHASE" rarity="0" />

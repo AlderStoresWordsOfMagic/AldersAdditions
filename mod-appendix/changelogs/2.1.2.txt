@@ -1,0 +1,33 @@
+/// FEATURE ADDITIONS ///
+
+Added the Heavy Smasher; it shoots only one projectile but has a much more powerful crush effect.
+
+
+/// FEATURE CHANGES ///
+
+Reworked Smash weapons entirely (for the second time); they now apply ion when crushing shields instead of a charge speed reduction, and shield-piercing variants now trigger on shield collision like all others.
+Made the Smashing Pinpoint and Smashing Bomb unobtainable until the new system can be set to work with them. Their game data and files are still present.
+
+Reworked Firewalled rooms; they now prevent hacking drones from targeting the room at all. Other hack effects behave as they did pre-rework. [TO ADD]
+
+
+/// BALANCING ///
+
+Smash Laser MK I: new system (2 ion), cooldown 12s -> 10s
+Smash Laser MK II: new system (2 ion)
+Smashing Missiles: new system (2 ion), cooldown 20s -> 17s
+
+
+/// BUGFIXES ///
+
+Fixed the Conservative Flak Gun not behaving like other conservative weapons.
+Fived the Shock Cannon creating a Lua error every time it fired.
+Fixed the Chaotic Combat Projector having the wrong explosion sprite.
+
+Temporary crew spawned from weapons no longer trigger the dialogue box warning you to not leave your crew behind.
+
+Fixed the Chaotic Far-Out Hacker Cruiser crashing on hull kill due to malformed event XML.
+Fixed various events behaving poorly due to malformed event XML.
+
+All animation names now use the "aa_" prefix. This means the Railcannon now no longer overlaps its sprite art with certain other addons that add their own railguns, and similar errors are unlikely to exist in the future.
+All spritework has been compressed in a lossless manner, reducing the overall file size of the mod.

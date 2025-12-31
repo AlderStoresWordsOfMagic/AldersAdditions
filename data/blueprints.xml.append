@@ -156,7 +156,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_particle_pierce</weaponArt>
+	<weaponArt>aa_laser_particle_pierce</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_LASER_PARTICLE_MINI">
@@ -197,7 +197,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>mini_particle</weaponArt>
+	<weaponArt>aa_mini_particle</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -241,7 +241,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_particle_instant</weaponArt>
+	<weaponArt>aa_laser_particle_instant</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -263,7 +263,7 @@
 	<cost>30</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
-	<image>laser_purge_projectile</image>
+	<image>aa_laser_purge_projectile</image>
 	<launchSounds>
 		<sound>laser_purge</sound>
 	</launchSounds>
@@ -279,7 +279,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_purge</weaponArt>
+	<weaponArt>aa_laser_purge</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -302,17 +302,15 @@
 	<aa-shieldSmash> <!-- New XML tag for weapons with these properties -->
 		<count>1</count> <!-- Number of layers to pop -->
 		<countSuper>1</countSuper> <!-- Number of energy layers to pop -->
-		<crush>1</crush> <!-- Number of crushes to apply with the given reduction chance -->
-		<reduction>6</reduction> <!-- Percentage to reduce by; every 1 is 10% chance-->
-		<onHit>false</onHit> <!-- Should smash be applied on hull hit, rather than shield hit? -->
+		<ion>2</ion> <!-- Ion damage to apply on hitting last layer -->
 	</aa-shieldSmash>
-	<cooldown>12</cooldown>
+	<cooldown>10</cooldown>
 	<power>1</power>
 	<cost>60</cost>
 	<bp>2</bp>
 	<spin>0</spin>
 	<projectiles>
-		<projectile count="1" fake="false">laser_smash_projectile</projectile>
+		<projectile count="1" fake="false">aa_laser_smash_projectile</projectile>
 	</projectiles>
 	<rarity>3</rarity>
 	<launchSounds>
@@ -327,7 +325,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_smash</weaponArt>
+	<weaponArt>aa_laser_smash</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_LASER_SMASH_2">
@@ -349,9 +347,7 @@
 	<aa-shieldSmash>
 		<count>1</count>
 		<countSuper>1</countSuper>
-		<crush>1</crush>
-		<reduction>6</reduction>
-		<onHit>false</onHit>
+		<ion>2</ion>
 	</aa-shieldSmash>
 	<cooldown>15</cooldown>
 	<power>3</power>
@@ -360,7 +356,7 @@
 	<rarity>4</rarity>
 	<spin>0</spin>
 	<projectiles>
-		<projectile count="3" fake="false">laser_smash_projectile</projectile>
+		<projectile count="3" fake="false">aa_laser_smash_projectile</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>laser_smash</sound>
@@ -374,7 +370,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_smash_2</weaponArt>
+	<weaponArt>aa_laser_smash_2</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_LASER_BREACH">
@@ -408,7 +404,7 @@
 	<cost>70</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
-	<image>laser_breach_projectile</image>
+	<image>aa_laser_breach_projectile</image>
 	<launchSounds>
 		<sound>heavyLaser1</sound>
 		<sound>heavyLaser2</sound>
@@ -425,7 +421,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_breach</weaponArt>
+	<weaponArt>aa_laser_breach</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -442,7 +438,7 @@
 	<cost>70</cost>
 	<bp>2</bp>
 	<rarity>4</rarity>
-	<image>laser_breach_projectile</image>
+	<image>aa_laser_breach_projectile</image>
 	<launchSounds>
 		<sound>heavyLaser1</sound>
 		<sound>heavyLaser2</sound>
@@ -459,7 +455,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_strain</weaponArt>
+	<weaponArt>aa_laser_strain</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 
@@ -502,7 +498,7 @@
 	<cost>40</cost>
 	<bp>8</bp>
 	<rarity>0</rarity>
-	<image>laser_prohull_projectile</image>
+	<image>aa_laser_prohull_projectile</image>
 	<explosion>explosion_big1_heal</explosion>
 	<launchSounds>
 		<sound>heavyLaser1</sound>
@@ -520,7 +516,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_prohull</weaponArt> 
+	<weaponArt>aa_laser_prohull</weaponArt> 
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_LASER_CHARGEGUN_DAMAGE"> 
@@ -578,7 +574,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_cumulative</weaponArt> 
+	<weaponArt>aa_laser_cumulative</weaponArt> 
 	<iconImage>laser_chain</iconImage>
 </weaponBlueprint>
 
@@ -606,7 +602,7 @@
 	<cost>75</cost>
 	<bp>6</bp>
 	<rarity>5</rarity>
-	<image>missile_ion</image>
+	<image>aa_missile_ion</image>
 	<launchSounds>
 		<sound>smallMissile1</sound>
 		<sound>smallMissile2</sound>
@@ -622,7 +618,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>missiles_ion</weaponArt>
+	<weaponArt>aa_missiles_ion</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
@@ -646,7 +642,7 @@
 	<cost>75</cost>
 	<bp>6</bp>
 	<rarity>0</rarity>
-	<image>missile_ion</image>
+	<image>aa_missile_ion</image>
 	<launchSounds>
 		<sound>smallMissile1</sound>
 		<sound>smallMissile2</sound>
@@ -662,7 +658,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>missiles_ion</weaponArt>
+	<weaponArt>aa_missiles_ion</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
@@ -682,17 +678,15 @@
 	<aa-shieldSmash>
 		<count>4</count>
 		<countSuper>4</countSuper>
-		<crush>1</crush>
-		<reduction>6</reduction>
-		<onHit>true</onHit>
+		<ion>2</ion>
 	</aa-shieldSmash>
-	<cooldown>20</cooldown>
+	<cooldown>17</cooldown>
 	<power>3</power>
 	<cost>90</cost>
 	<bp>6</bp>
 	<rarity>5</rarity>
-	<image>missile_smash</image>
-	<explosion>explosion_smash</explosion>
+	<image>aa_missile_smash</image>
+	<explosion>aa_explosion_smash</explosion>
 	<launchSounds>
 		<sound>smallMissile1</sound>
 		<sound>smallMissile2</sound>
@@ -708,7 +702,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>missiles_smash</weaponArt>
+	<weaponArt>aa_missiles_smash</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
@@ -727,17 +721,15 @@
 	<aa-shieldSmash>
 		<count>4</count>
 		<countSuper>4</countSuper>
-		<crush>1</crush>
-		<reduction>6</reduction>
-		<onHit>true</onHit>
+		<ion>2</ion>
 	</aa-shieldSmash>
-	<cooldown>20</cooldown>
+	<cooldown>17</cooldown>
 	<power>3</power>
 	<cost>90</cost>
 	<bp>6</bp>
 	<rarity>0</rarity>
-	<image>missile_smash</image>
-	<explosion>explosion_smash</explosion>
+	<image>aa_missile_smash</image>
+	<explosion>aa_explosion_smash</explosion>
 	<launchSounds>
 		<sound>smallMissile1</sound>
 		<sound>smallMissile2</sound>
@@ -753,7 +745,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>missiles_smash</weaponArt>
+	<weaponArt>aa_missiles_smash</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
@@ -798,7 +790,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ion_rainbow</weaponArt> 
+	<weaponArt>aa_ion_rainbow</weaponArt> 
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 <blueprintList name="AA_LIST_WEAPON_RAINBOW_ION_BLASTS"> <!-- Gives the Prismatic Ion a random effect on hit. -->
@@ -1130,7 +1122,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>ion_cumulative</weaponArt> 
+	<weaponArt>aa_ion_cumulative</weaponArt> 
 	<iconImage>ion_chain</iconImage>
 </weaponBlueprint>
 
@@ -1163,7 +1155,7 @@
 	<cost>70</cost>
 	<bp>3</bp>
 	<rarity>4</rarity>
-	<image>energy_bio_projectile</image>
+	<image>aa_energy_bio_projectile</image>
 	<explosion>explosion_small_ion_bio</explosion>
 	<launchSounds>
 		<sound>energy</sound>
@@ -1181,7 +1173,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>energy_bio</weaponArt> 
+	<weaponArt>aa_energy_bio</weaponArt> 
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
@@ -1247,7 +1239,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>energy_cumulative</weaponArt> 
+	<weaponArt>aa_energy_cumulative</weaponArt> 
 	<iconImage>energy</iconImage>
 </weaponBlueprint>
 
@@ -1295,7 +1287,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>pre_energy</weaponArt>
+	<weaponArt>aa_pre_energy</weaponArt>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 
@@ -1329,7 +1321,7 @@
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
-	<weaponArt>beam_purge</weaponArt>
+	<weaponArt>aa_beam_purge</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1380,7 +1372,7 @@
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
-	<weaponArt>beam_cumulative</weaponArt>
+	<weaponArt>aa_beam_cumulative</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1408,12 +1400,12 @@
 	<cost>40</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<length>55</length>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_1</weaponArt>
+	<weaponArt>aa_disruptor_1</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1441,11 +1433,11 @@
 	<bp>7</bp>
 	<rarity>0</rarity>
 	<length>85</length>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_2</weaponArt>
+	<weaponArt>aa_disruptor_2</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1474,11 +1466,11 @@
 	<rarity>0</rarity>
 	<length>90</length>
 	<speed>7</speed>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_heavy</sound>
 	</launchSounds>
-	<weaponArt>disruptor_3</weaponArt>
+	<weaponArt>aa_disruptor_3</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1509,11 +1501,11 @@
 	<rarity>0</rarity>
 	<length>110</length>
 	<speed>8</speed>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_heavy</sound>
 	</launchSounds>
-	<weaponArt>disruptor_bio</weaponArt>
+	<weaponArt>aa_disruptor_bio</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1542,11 +1534,11 @@
 	<rarity>0</rarity>
 	<length>90</length>
 	<speed>5</speed>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_stun</weaponArt>
+	<weaponArt>aa_disruptor_stun</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1575,11 +1567,11 @@
 	<bp>7</bp>
 	<rarity>0</rarity>
 	<length>90</length>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_pierce</weaponArt>
+	<weaponArt>aa_disruptor_pierce</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1611,11 +1603,11 @@
 	<rarity>0</rarity>
 	<length>85</length>
 	<speed>4</speed>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_heavy</sound>
 	</launchSounds>
-	<weaponArt>disruptor_energy</weaponArt>
+	<weaponArt>aa_disruptor_energy</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1646,11 +1638,11 @@
         <amount>1</amount>
         <count>999</count>
     </boost>
-    <image>impact_disruptor</image>
+    <image>aa_impact_disruptor</image>
     <launchSounds>
         <sound>disruptor_light</sound>
     </launchSounds>
-    <weaponArt>disruptor_adaptive</weaponArt>
+    <weaponArt>aa_disruptor_adaptive</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -1680,18 +1672,18 @@
 	<bp>7</bp>
 	<rarity>0</rarity>
 	<length>65</length>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_conservative</weaponArt>
+	<weaponArt>aa_disruptor_conservative</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
 
 <!-- // BOMBS // -->
 
-<weaponBlueprint name="AA_BOMB_SMASH">
+<!-- <weaponBlueprint name="AA_BOMB_SMASH">
 	<type>BOMB</type>
 	<tip>aa_tip_smash</tip>
 	<title>Smashing Bomb</title>
@@ -1702,30 +1694,28 @@
 	<accuracyMod>30</accuracyMod>
 	<missiles>1</missiles>
 	<shots>1</shots>
-	<sp>0</sp>
+	<sp>10</sp>
 	<stun>5</stun>
 	<stunChance>10</stunChance>
 	<aa-shieldSmash>
 		<count>4</count>
 		<countSuper>4</countSuper>
-		<crush>1</crush>
-		<reduction>6</reduction>
-		<onHit>true</onHit>
+		<ion>2</ion>
 	</aa-shieldSmash>
 	<cooldown>20</cooldown>
 	<power>2</power>
 	<cost>75</cost>
 	<bp>4</bp>
 	<rarity>5</rarity>
-	<image>bomb_smash</image>
-	<explosion>explosion_smash</explosion>
+	<image>aa_bomb_smash</image>
+	<explosion>aa_explosion_smash</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
 	</hitShipSounds>
-	<weaponArt>bomblauncher_smash</weaponArt>
+	<weaponArt>aa_bomblauncher_smash</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
@@ -1739,15 +1729,13 @@
 	<damage>0</damage>
 	<missiles>1</missiles>
 	<shots>1</shots>
-	<sp>0</sp>
+	<sp>10</sp>
 	<stun>5</stun>
 	<stunChance>10</stunChance>
 	<aa-shieldSmash>
 		<count>4</count>
 		<countSuper>4</countSuper>
-		<crush>1</crush>
-		<reduction>6</reduction>
-		<onHit>true</onHit>
+		<ion>2</ion>
 	</aa-shieldSmash>
 	<cooldown>20</cooldown>
 	<power>2</power>
@@ -1755,17 +1743,17 @@
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<mv-aiCrewTarget>RANDOM</mv-aiCrewTarget>
-	<image>bomb_smash</image>
-	<explosion>explosion_smash</explosion>
+	<image>aa_bomb_smash</image>
+	<explosion>aa_explosion_smash</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>fireBomb</sound>
 	</hitShipSounds>
-	<weaponArt>bomblauncher_smash</weaponArt>
+	<weaponArt>aa_bomblauncher_smash</weaponArt>
 	<iconImage>bomb</iconImage>
-</weaponBlueprint>
+</weaponBlueprint> -->
 
 <weaponBlueprint name="AA_BOMB_PURGE">
 	<type>BOMB</type>
@@ -1789,15 +1777,15 @@
 	<bp>4</bp>
 	<rarity>0</rarity>
 	<mv-aiCrewTarget>MOST_CREW</mv-aiCrewTarget>
-	<image>bomb_purge</image>
-	<explosion>explosion_purge</explosion>
+	<image>aa_bomb_purge</image>
+	<explosion>aa_explosion_purge</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
 	</hitShipSounds>
-	<weaponArt>bomblauncher_purge</weaponArt>
+	<weaponArt>aa_bomblauncher_purge</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
@@ -1834,15 +1822,15 @@
 	<cost>100</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>bomb_decay</image>
-	<explosion>explosion_erosion</explosion>
+	<image>aa_bomb_decay</image>
+	<explosion>aa_explosion_erosion</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
 	<hitShipSounds>
 		<sound>smallExplosion</sound>
 	</hitShipSounds>
-	<weaponArt>bomblauncher_decay</weaponArt>
+	<weaponArt>aa_bomblauncher_decay</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint> -->
 
@@ -1872,7 +1860,7 @@
 	<speed>26</speed>
 	<rarity>5</rarity>
 	<projectiles>
-		<projectile count="4" fake="false">debris_large_particle</projectile>
+		<projectile count="4" fake="false">aa_debris_large_particle</projectile>
 		<projectile count="6" fake="true">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
@@ -1892,7 +1880,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>shotgun_particle</weaponArt> 
+	<weaponArt>aa_shotgun_particle</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1920,7 +1908,7 @@
 	<speed>26</speed>
 	<rarity>5</rarity>
 	<projectiles>
-		<projectile count="4" fake="false">debris_large_stun</projectile>
+		<projectile count="4" fake="false">aa_debris_large_stun</projectile>
 		<projectile count="6" fake="true">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
@@ -1940,7 +1928,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>shotgun_stun</weaponArt> 
+	<weaponArt>aa_shotgun_stun</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -1987,7 +1975,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>shotgun_conservative</weaponArt> 
+	<weaponArt>aa_shotgun_conservative</weaponArt> 
 	<iconImage>flak</iconImage>
 </weaponBlueprint>
 
@@ -2045,7 +2033,7 @@
 	<rarity>5</rarity>
 	<spin>720</spin>
 	<projectiles>
-		<projectile count="3" fake="false">debris_large_cumulative</projectile>
+		<projectile count="3" fake="false">aa_debris_large_cumulative</projectile>
 		<projectile count="4" fake="true">debris_small</projectile>
 	</projectiles>
 	<launchSounds>
@@ -2065,7 +2053,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>shotgun_cumulative</weaponArt>  
+	<weaponArt>aa_shotgun_cumulative</weaponArt>  
 	<iconImage>missile_charge</iconImage>
 </weaponBlueprint>
 
@@ -2099,7 +2087,7 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="4" fake="false">mine_projectile_cloak</projectile>
+		<projectile count="4" fake="false">aa_mine_projectile_cloak</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>smallMissile1</sound>
@@ -2116,7 +2104,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>minelauncher_cloak</weaponArt>
+	<weaponArt>aa_minelauncher_cloak</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
@@ -2144,9 +2132,9 @@
 	<bp>2</bp>
 	<rarity>0</rarity>
 	<projectiles>
-		<projectile count="4" fake="false">mine_projectile_particle</projectile>
+		<projectile count="4" fake="false">aa_mine_projectile_particle</projectile>
 	</projectiles>
-	<explosion>explosion_particle</explosion>
+	<explosion>aa_explosion_particle</explosion>
 	<launchSounds>
 		<sound>smallMissile1</sound>
 		<sound>smallMissile2</sound>
@@ -2162,7 +2150,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>minelauncher_particle</weaponArt>
+	<weaponArt>aa_minelauncher_particle</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 
@@ -2195,11 +2183,11 @@
 	<launchSounds>
 		<sound>focus_weak</sound>
 	</launchSounds>
-	<weaponArt>focus_particle</weaponArt>
+	<weaponArt>aa_focus_particle</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_FOCUS_SMASH">
+<!-- <weaponBlueprint name="AA_FOCUS_SMASH">
 	<type>BEAM</type>
 	<tip>aa_tip_smash</tip>
 	<title>Smashing Pinpoint</title>
@@ -2212,9 +2200,7 @@
 	<aa-shieldSmash>
 		<count>2</count>
 		<countSuper>2</countSuper>
-		<crush>1</crush>
-		<reduction>6</reduction>
-		<onHit>false</onHit>
+		<ion>1</ion>
 	</aa-shieldSmash>
 	<cooldown>14</cooldown>
 	<color>
@@ -2226,14 +2212,14 @@
 	<cost>80</cost>
 	<bp>5</bp>
 	<rarity>4</rarity>
-	<image>beam_contact</image>
-	<explosion>explosion_smash</explosion>
+	<image>aa_beam_contact</image>
+	<explosion>aa_explosion_smash</explosion>
 	<launchSounds>
 		<sound>focus_smash</sound>
 	</launchSounds>
-	<weaponArt>focus_smash</weaponArt>
+	<weaponArt>aa_focus_smash</weaponArt>
 	<iconImage>beam</iconImage>
-</weaponBlueprint>
+</weaponBlueprint> -->
 
 <weaponBlueprint name="AA_FOCUS_ION_1">
 	<type>BEAM</type>
@@ -2261,7 +2247,7 @@
 	<launchSounds>
 		<sound>focus_ion</sound>
 	</launchSounds>
-	<weaponArt>capacitor_1</weaponArt>
+	<weaponArt>aa_capacitor_1</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -2291,7 +2277,7 @@
 	<launchSounds>
 		<sound>focus_ion</sound>
 	</launchSounds>
-	<weaponArt>capacitor_2</weaponArt>
+	<weaponArt>aa_capacitor_2</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -2322,7 +2308,7 @@
 	<launchSounds>
 		<sound>focus_ion</sound>
 	</launchSounds>
-	<weaponArt>capacitor_stun</weaponArt>
+	<weaponArt>aa_capacitor_stun</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -2352,7 +2338,7 @@
 	<launchSounds>
 		<sound>focus_ion</sound>
 	</launchSounds>
-	<weaponArt>capacitor_pierce</weaponArt>
+	<weaponArt>aa_capacitor_pierce</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -2376,7 +2362,7 @@
 	<power>2</power>
 	<cost>80</cost>
 	<rarity>5</rarity>
-	<image>driver_projectile</image>
+	<image>aa_driver_projectile</image>
 	<explosion>explosion_big2</explosion>
 	<launchSounds>
 		<sound>driver</sound>
@@ -2392,7 +2378,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver</weaponArt>
+	<weaponArt>aa_driver</weaponArt>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
@@ -2418,8 +2404,8 @@
 	<cost>90</cost>
 	<rarity>0</rarity>
 	<mv-aiSystemTarget system="any"/>
-	<image>driver_projectile_explosive</image>
-	<explosion>explosion_massive</explosion>
+	<image>aa_driver_projectile_explosive</image>
+	<explosion>aa_explosion_massive</explosion>
 	<launchSounds>
 		<sound>driver_heavy</sound>
 	</launchSounds>
@@ -2434,7 +2420,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver_explosive</weaponArt>
+	<weaponArt>aa_driver_explosive</weaponArt>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
@@ -2460,7 +2446,7 @@
 	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
 	<projectiles>
-		<projectile count="8" fake="false">driver_projectile_flak</projectile>
+		<projectile count="8" fake="false">aa_driver_projectile_flak</projectile>
 	</projectiles>
 	<launchSounds>
 		<sound>driver_heavy</sound>
@@ -2476,7 +2462,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver_flak</weaponArt>
+	<weaponArt>aa_driver_flak</weaponArt>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
@@ -2507,7 +2493,7 @@
 	<cost>90</cost>
 	<rarity>0</rarity>
 	<mv-aiCrewTarget>RANDOM</mv-aiCrewTarget>
-	<image>driver_projectile_rad</image>
+	<image>aa_driver_projectile_rad</image>
 	<explosion>explosion_bio</explosion>
 	<launchSounds>
 		<sound>driver</sound>
@@ -2523,7 +2509,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver_bio</weaponArt>
+	<weaponArt>aa_driver_bio</weaponArt>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
@@ -2546,8 +2532,8 @@
 	<power>3</power>
 	<cost>100</cost>
 	<rarity>0</rarity>
-	<image>driver_projectile_ion</image>
-	<explosion>explosion_massive_ion</explosion>
+	<image>aa_driver_projectile_ion</image>
+	<explosion>aa_explosion_massive_ion</explosion>
 	<launchSounds>
 		<sound>driver</sound>
 	</launchSounds>
@@ -2564,7 +2550,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver_ion</weaponArt>
+	<weaponArt>aa_driver_ion</weaponArt>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
@@ -2587,8 +2573,8 @@
 	<cost>100</cost>
 	<rarity>0</rarity>
 	<mv-aiSystemTarget system="any"/>
-	<image>driver_projectile_particle</image>
-	<explosion>explosion_particle</explosion>
+	<image>aa_driver_projectile_particle</image>
+	<explosion>aa_explosion_particle</explosion>
 	<launchSounds>
 		<sound>driver_heavy</sound>
 	</launchSounds>
@@ -2603,7 +2589,7 @@
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>driver_particle</weaponArt>
+	<weaponArt>aa_driver_particle</weaponArt>
 	<iconImage>heavyL</iconImage>
 </weaponBlueprint>
 
@@ -2627,7 +2613,7 @@
 		<sound>infuser_buff</sound> <!-- Sound to play when infusing a weapon -->
 	</launchSounds>
 	<image>beam_contact</image>
-	<weaponArt>core_particle</weaponArt>
+	<weaponArt>aa_core_particle</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_INFUSER_BIO">
@@ -2652,7 +2638,7 @@
 		<sound>infuser_buff</sound>
 	</launchSounds>
 	<image>beam_contact</image>
-	<weaponArt>core_rad</weaponArt>
+	<weaponArt>aa_core_rad</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_INFUSER_ION">
@@ -2672,7 +2658,7 @@
 		<sound>infuser_buff</sound>
 	</launchSounds>
 	<image>beam_contact</image>
-	<weaponArt>core_ion</weaponArt>
+	<weaponArt>aa_core_ion</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_INFUSER_FIRE">
@@ -2692,7 +2678,7 @@
 		<sound>infuser_buff</sound>
 	</launchSounds>
 	<image>beam_contact</image>
-	<weaponArt>core_fire</weaponArt>
+	<weaponArt>aa_core_fire</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_INFUSER_BREACH">
@@ -2712,7 +2698,7 @@
 		<sound>infuser_buff</sound>
 	</launchSounds>
 	<image>beam_contact</image>
-	<weaponArt>core_breach</weaponArt>
+	<weaponArt>aa_core_breach</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_INFUSER_STUN">
@@ -2733,7 +2719,7 @@
 		<sound>infuser_buff</sound>
 	</launchSounds>
 	<image>beam_contact</image>
-	<weaponArt>core_stun</weaponArt>
+	<weaponArt>aa_core_stun</weaponArt>
 </weaponBlueprint>
 
 
@@ -2758,7 +2744,7 @@
 	<cost>40</cost>
 	<bp>4</bp>
 	<rarity>4</rarity>
-	<image>electron_projectile</image>
+	<image>aa_electron_projectile</image>
 	<explosion>explosion_big1_ion</explosion>
 	<launchSounds>
 		<sound>electron</sound>
@@ -2768,7 +2754,7 @@
 		<sound>ionHit2</sound>
 		<sound>ionHit3</sound>
 	</hitShipSounds>
-	<weaponArt>electron</weaponArt>
+	<weaponArt>aa_electron</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
@@ -2791,8 +2777,8 @@
 	<cost>100</cost>
 	<bp>4</bp>
 	<rarity>5</rarity>
-	<image>electron_projectile</image>
-	<explosion>explosion_massive_ion</explosion>
+	<image>aa_electron_projectile</image>
+	<explosion>aa_explosion_massive_ion</explosion>
 	<launchSounds>
 		<sound>electron</sound>
 	</launchSounds>
@@ -2801,7 +2787,7 @@
 		<sound>ionHit2</sound>
 		<sound>ionHit3</sound>
 	</hitShipSounds>
-	<weaponArt>electron_heavy</weaponArt>
+	<weaponArt>aa_electron_heavy</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
@@ -2823,8 +2809,8 @@
 	<cost>50</cost>
 	<bp>4</bp>
 	<rarity>4</rarity>
-	<image>electron_stun_projectile</image>
-	<explosion>explosion_stun</explosion>
+	<image>aa_electron_stun_projectile</image>
+	<explosion>aa_explosion_stun</explosion>
 	<launchSounds>
 		<sound>electron</sound>
 	</launchSounds>
@@ -2833,7 +2819,7 @@
 		<sound>ionHit2</sound>
 		<sound>ionHit3</sound>
 	</hitShipSounds>
-	<weaponArt>electron_stun</weaponArt>
+	<weaponArt>aa_electron_stun</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
@@ -2880,12 +2866,12 @@
 	<projectiles>
         <projectile count="3" fake="false">laser_burst</projectile> <!-- Amount of beams to shoot. -->
     </projectiles>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<length>1</length>
 	<launchSounds>
 		<sound>shock_cannon</sound>
 	</launchSounds>
-	<weaponArt>shock_cannon</weaponArt>
+	<weaponArt>aa_shock_cannon</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="AA_SHOCK_CANNON_PROJECTILE">
@@ -2910,11 +2896,11 @@
 	<cost>45</cost>
 	<bp>2</bp>
 	<rarity>0</rarity>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>shock_cannon</sound>
 	</launchSounds>
-	<weaponArt>shock_cannon</weaponArt> 
+	<weaponArt>aa_shock_cannon</weaponArt> 
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_POINTER">
@@ -2934,7 +2920,7 @@
 	<bp>4</bp>
 	<rarity>5</rarity>
 	<mv-aiSystemTarget system="any"/>
-	<explosion>center_pointer</explosion>
+	<explosion>aa_center_pointer</explosion>
 	<launchSounds>
 		<sound>pointer</sound>
 	</launchSounds>
@@ -2943,11 +2929,11 @@
 		<sound>ionHit2</sound>
 		<sound>ionHit3</sound>
 	</hitShipSounds>
-	<weaponArt>pointer</weaponArt>
+	<weaponArt>aa_pointer</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="AA_TARGETER"> <!-- UNIMPLEMENTED -->
+<!-- <weaponBlueprint name="AA_TARGETER">
 	<type>LASER</type>
 	<tip>aa_tip_pointer</tip>
 	<title>External Targeting Computer</title>
@@ -2962,11 +2948,11 @@
 	<power>1</power>
 	<cost>50</cost>
 	<bp>4</bp>
-	<rarity>0</rarity> <!-- Temporary -->
+	<rarity>0</rarity>
 	<shotLimit>1</shotLimit>
 	<mv-conservative/>
 	<mv-aiSystemTarget system="any"/>
-	<explosion>center_pointer</explosion>
+	<explosion>aa_center_pointer</explosion>
 	<launchSounds>
 		<sound>pointer</sound>
 	</launchSounds>
@@ -2975,9 +2961,9 @@
 		<sound>ionHit2</sound>
 		<sound>ionHit3</sound>
 	</hitShipSounds>
-	<weaponArt>pointer</weaponArt>
+	<weaponArt>aa_pointer</weaponArt>
 	<iconImage>bomb</iconImage>
-</weaponBlueprint>
+</weaponBlueprint> -->
 
 
 <!-- // LOOT WEAPONS // -->
@@ -3016,7 +3002,7 @@
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
-	<weaponArt>renegade_loot_stealth</weaponArt>
+	<weaponArt>aa_renegade_loot_stealth</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="AA_MVLOOT_STEALTH_CHAOS">
@@ -3055,7 +3041,7 @@
 	<launchSounds>
 		<sound>beam2</sound>
 	</launchSounds>
-	<weaponArt>renegade_loot_stealth_chaos</weaponArt>
+	<weaponArt>aa_renegade_loot_stealth_chaos</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -3093,14 +3079,21 @@
                 <crewTarget>ALL</crewTarget>
                 <priority>999999</priority>
             </statBoost>
+			<statBoost name="noWarning">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
 		</statBoosts>
 		<noSlot>true</noSlot>
 	</spawnCrew>
 	<crewSpawnChance>10</crewSpawnChance>
 	<rarity>0</rarity>
 	<mv-aiSystemTarget system="any"/>
-	<image>projector_projectile</image>
-	<explosion>explosion_projector</explosion>
+	<image>aa_projector_projectile</image>
+	<explosion>aa_explosion_projector</explosion>
 	<launchSounds>
 		<sound>electron</sound>
 	</launchSounds>
@@ -3109,7 +3102,7 @@
 		<sound>ionHit2</sound>
 		<sound>ionHit3</sound>
 	</hitShipSounds>
-	<weaponArt>renegade_loot_hacker</weaponArt>
+	<weaponArt>aa_renegade_loot_hacker</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="AA_MVLOOT_HACKER_CHAOS">
@@ -3155,14 +3148,21 @@
                 <crewTarget>ALL</crewTarget>
                 <priority>999999</priority>
             </statBoost>
+			<statBoost name="noWarning">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
 		</statBoosts>
 		<noSlot>true</noSlot>
 	</spawnCrew>
 	<crewSpawnChance>10</crewSpawnChance>
 	<rarity>0</rarity>
 	<mv-aiSystemTarget system="any"/>
-	<image>projector_projectile</image>
-	<explosion>explosion_big1_ion</explosion>
+	<image>aa_projector_projectile</image>
+	<explosion>aa_explosion_projector</explosion>
 	<launchSounds>
 		<sound>electron</sound>
 	</launchSounds>
@@ -3171,7 +3171,7 @@
 		<sound>ionHit2</sound>
 		<sound>ionHit3</sound>
 	</hitShipSounds>
-	<weaponArt>renegade_loot_hacker_chaos</weaponArt>
+	<weaponArt>aa_renegade_loot_hacker_chaos</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 
@@ -3197,11 +3197,11 @@
 	<bp>7</bp>
 	<rarity>0</rarity>
 	<length>85</length>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_heavy</sound>
 	</launchSounds>
-	<weaponArt>renegade_loot_monk</weaponArt>
+	<weaponArt>aa_renegade_loot_monk</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 <weaponBlueprint name="AA_MVLOOT_MONK_CHAOS">
@@ -3228,11 +3228,11 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<bp>7</bp>
 	<rarity>0</rarity>
 	<length>85</length>
-	<image>impact_disruptor</image>
+	<image>aa_impact_disruptor</image>
 	<launchSounds>
 		<sound>disruptor_heavy</sound>
 	</launchSounds>
-	<weaponArt>renegade_loot_monk_chaos</weaponArt>
+	<weaponArt>aa_renegade_loot_monk_chaos</weaponArt>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -3258,7 +3258,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<radius>0</radius>
 	<spin>0</spin>
 	<drone_targetable>1</drone_targetable>
-	<image>driver_projectile</image>
+	<image>aa_driver_projectile</image>
 	<explosion>explosion_big2</explosion>
 	<launchSounds>
 		<sound>railgun</sound>
@@ -3274,12 +3274,12 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>railgun</weaponArt>
-	<iconReplace>railgun_icon</iconReplace>
+	<weaponArt>aa_railgun</weaponArt>
+	<iconReplace>aa_railgun_icon</iconReplace>
 </weaponBlueprint>
 
 
-<weaponBlueprint name="AA_RED_TETHER"> <!-- UNIMPLEMENTED -->
+<!-- <weaponBlueprint name="AA_RED_TETHER">
 	<type>BURST</type>
 	<title>Hard-Light Tether</title>
 	<short>Tether</short>
@@ -3317,9 +3317,9 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>railgun</weaponArt>
+	<weaponArt>aa_railgun</weaponArt>
 	<iconReplace>railgun_icon</iconReplace>
-</weaponBlueprint>
+</weaponBlueprint> -->
 
 <weaponBlueprint name="AA_INFUSER_MADNESS">
 	<type>BEAM</type>
@@ -3363,7 +3363,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 		<sound>infuser_buff</sound>
 	</launchSounds>
 	<image>beam_contact</image>
-	<weaponArt>core_madness</weaponArt>
+	<weaponArt>aa_core_madness</weaponArt>
 </weaponBlueprint>
 
 <weaponBlueprint name="AA_BEAM_IMAGINE">
@@ -3389,7 +3389,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<launchSounds>
 		<sound>beam_eldritch</sound>
 	</launchSounds>
-	<weaponArt>beam_imagine</weaponArt>
+	<weaponArt>aa_beam_imagine</weaponArt>
 	<iconReplace>beam_imagine_icon</iconReplace>
 	<iconImage>beam</iconImage>
 </weaponBlueprint>
@@ -3424,8 +3424,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3452,8 +3452,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3477,8 +3477,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3517,8 +3517,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3585,8 +3585,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3629,8 +3629,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3711,8 +3711,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3779,8 +3779,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3829,8 +3829,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3880,8 +3880,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3932,8 +3932,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -3982,8 +3982,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_imagine</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -4013,6 +4013,13 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 				<crewTarget>ALL</crewTarget>
 				<priority>999999</priority>
 			</statBoost>
+			<statBoost name="noWarning">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
 		</statBoosts>
 	</spawnCrew>
 	<shots>1</shots>
@@ -4021,7 +4028,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
+	<image>aa_projectile_imagine</image>
 	<explosion>explosion_big1_ion</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
@@ -4065,6 +4072,13 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
                 <crewTarget>ALL</crewTarget>
                 <priority>999999</priority>
             </statBoost>
+			<statBoost name="noWarning">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
 		</statBoosts>
 		<noSlot>true</noSlot>
 	</spawnCrew>
@@ -4074,8 +4088,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_big1_ion</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_imagine</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -4118,6 +4132,13 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
                 <crewTarget>ALL</crewTarget>
                 <priority>999999</priority>
             </statBoost>
+			<statBoost name="noWarning">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
 		</statBoosts>
 		<noSlot>true</noSlot>
 	</spawnCrew>
@@ -4127,8 +4148,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_big1_ion</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_particle</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -4171,6 +4192,13 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
                 <crewTarget>ALL</crewTarget>
                 <priority>999999</priority>
             </statBoost>
+			<statBoost name="noWarning">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <priority>999999</priority>
+            </statBoost>
 		</statBoosts>
 		<noSlot>true</noSlot>
 	</spawnCrew>
@@ -4180,8 +4208,8 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>projectile_imagine</image>
-	<explosion>explosion_big1_ion</explosion>
+	<image>aa_projectile_imagine</image>
+	<explosion>aa_explosion_projector</explosion>
 	<launchSounds>
 		<sound>bombTeleport</sound>
 	</launchSounds>
@@ -4213,7 +4241,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>130</cost>
 	<image>beam_contact</image>
 	<weaponArt>invisible</weaponArt>
-    <iconReplace>gazer_statue</iconReplace>
+    <iconReplace>aa_gazer_statue</iconReplace>
 </weaponBlueprint>
 
 
@@ -4227,14 +4255,11 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<tip>tip_clone_cannon</tip>
 	<short>Cloner [WORM]</short>
 	<desc>No weapon has ever sparked a larger ethical controversy, but if it works it works. The Dustworm inside definitely does not like it.</desc>
-	<tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
 	<radius>40</radius>
 	<damage>0</damage>
 	<shots>1</shots>
 	<sp>1</sp>
 	<spin>720</spin>
-	<fireChance>0</fireChance>
-	<breachChance>0</breachChance>
 	<cooldown>9</cooldown>
 	<power>2</power>
 	<cost>65</cost>
@@ -4274,7 +4299,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<projectiles>
 		<projectile count="1" fake="false">crewproj_dustworm</projectile>
 	</projectiles>
-	<explosion>explosion_random</explosion> <!--funnier than zoltan explosion?-->
+	<explosion>explosion_random</explosion>
 	<launchSounds>
 		<sound>smallMissile1</sound>
 		<sound>smallMissile2</sound>
@@ -4321,7 +4346,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_1</weaponArt>
+	<weaponArt>aa_disruptor_1</weaponArt>
 </weaponBlueprint>
 <weaponBlueprint name="AA_DRONE_BEAM_ION_AMP2">
 	<type>BEAM</type>
@@ -4342,7 +4367,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_2</weaponArt>
+	<weaponArt>aa_disruptor_2</weaponArt>
 </weaponBlueprint>
 <weaponBlueprint name="AA_DRONE_BEAM_ION_AMP3">
 	<type>BEAM</type>
@@ -4363,7 +4388,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<launchSounds>
 		<sound>disruptor_light</sound>
 	</launchSounds>
-	<weaponArt>disruptor_3</weaponArt>
+	<weaponArt>aa_disruptor_3</weaponArt>
 </weaponBlueprint>
 <blueprintList name="AA_LIST_AMP_DISRUPTOR">
     <name>AA_DISRUPTOR_1_AMP2</name>
@@ -4439,9 +4464,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<aa-shieldSmash>
 		<count>1</count>
 		<countSuper>1</countSuper>
-		<crush>1</crush>
-		<reduction>6</reduction>
-		<onHit>false</onHit>
+		<ion>1</ion>
 	</aa-shieldSmash>
 	<bp>2</bp>
 	<spin>0</spin>
@@ -4461,7 +4484,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_smash</weaponArt>
+	<weaponArt>aa_laser_smash</weaponArt>
 </weaponBlueprint>
 <weaponBlueprint name="AA_DRONE_INDUCER">
 	<type>BOMB</type>
@@ -4476,7 +4499,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<stunChance>3</stunChance>
 	<bp>4</bp>
 	<rarity>0</rarity>
-	<image>electron_projectile</image>
+	<image>aa_electron_projectile</image>
 	<explosion>explosion_big1_ion</explosion>
 	<launchSounds>
 		<sound>electron</sound>
@@ -4486,7 +4509,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 		<sound>ionHit2</sound>
 		<sound>ionHit3</sound>
 	</hitShipSounds>
-	<weaponArt>electron</weaponArt>
+	<weaponArt>aa_electron</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
 <blueprintList name="AA_LIST_TOGGLE_ELEMENTARY">
@@ -4540,7 +4563,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	</statBoosts>
 	<shots>1</shots>
 	<rarity>0</rarity>
-	<image>laser_purge_projectile</image>
+	<image>aa_laser_purge_projectile</image>
 	<launchSounds>
 		<sound>laser_purge</sound>
 	</launchSounds>
@@ -4556,7 +4579,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>laser_purge</weaponArt>
+	<weaponArt>aa_laser_purge</weaponArt>
 	<iconImage>laser</iconImage>
 </weaponBlueprint>
 <droneBlueprint name="AA_SPLICER">
@@ -4596,7 +4619,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>0</cost>
 	<bp>6</bp>
 	<rarity>0</rarity>
-	<image>missile_ion</image>
+	<image>aa_missile_ion</image>
 	<launchSounds>
 		<sound>smallMissile1</sound>
 		<sound>smallMissile2</sound>
@@ -4612,7 +4635,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>missiles_ion</weaponArt>
+	<weaponArt>aa_missiles_ion</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 <droneBlueprint name="AA_MVLOOT_PALADIN">
@@ -4652,7 +4675,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<cost>75</cost>
 	<bp>6</bp>
 	<rarity>0</rarity>
-	<image>missile_ion</image>
+	<image>aa_missile_ion</image>
 	<launchSounds>
 		<sound>smallMissile1</sound>
 		<sound>smallMissile2</sound>
@@ -4668,7 +4691,7 @@ Chaotic variant deals 1 system damage and charges faster but loses 1 ion damage.
 	<missSounds>
 		<sound>miss</sound>
 	</missSounds>
-	<weaponArt>missiles_ion</weaponArt>
+	<weaponArt>aa_missiles_ion</weaponArt>
 	<iconImage>missile</iconImage>
 </weaponBlueprint>
 <droneBlueprint name="AA_MVLOOT_PALADIN_CHAOS">
@@ -4819,14 +4842,14 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 
 <augBlueprint name="AA_SILK_ARMOR">
 	<title>Silksteel Hull</title>
-	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and self-binding. All crew repair 20% faster, and you restore 2 hull points on jump.</desc>
+	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and self-healing. All crew repair 20% faster, and you restore 2 hull points on jump.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
 </augBlueprint>
 <augBlueprint name="AA_SILK_ARMOR_LOCKED">
 	<title>Silksteel Hull</title>
-	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and self-binding. All crew repair 20% faster, and you restore 2 hull points on jump.</desc>
+	<desc>A peculiar hull armor interwoven with sheets of strong, flexible silk, making it malleable and self-healing. All crew repair 20% faster, and you restore 2 hull points on jump.</desc>
 	<cost>80</cost>
 	<rarity>0</rarity>
 	<stackable>false</stackable>
@@ -5033,7 +5056,7 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 
 <mod:findName type="weaponBlueprint" name="LASER_BURST_8">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>laser_burst_8</mod:setValue>
+		<mod:setValue>aa_laser_burst_8</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 
@@ -5044,7 +5067,7 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 		<b>0</b>
 	</mod-overwrite:color>
 	<mod:findLike type="weaponArt">
-		<mod:setValue>beam_prohull</mod:setValue>
+		<mod:setValue>aa_beam_prohull</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 
@@ -5086,14 +5109,14 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="BOMB_STUN">
-	<mod-append:explosion>explosion_stun</mod-append:explosion>
+	<mod-append:explosion>aa_explosion_stun</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="BOMB_STUN_ENEMY">
-	<mod-append:explosion>explosion_stun</mod-append:explosion>
+	<mod-append:explosion>aa_explosion_stun</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="LOOT_FREEMANTIS_1">
-	<mod-append:explosion>explosion_stun</mod-append:explosion>
+	<mod-append:explosion>aa_explosion_stun</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_1">
@@ -5116,7 +5139,7 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_STUN">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_stun</mod-append:explosion>
+	<mod-append:explosion>aa_explosion_stun</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="TRC_MINELAUNCHER_ION">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
@@ -5125,7 +5148,7 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_GIANT">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_massive</mod-append:explosion>
+	<mod-append:explosion>aa_explosion_massive</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="MINELAUNCHER_GIANT_CHAOS">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
@@ -5134,58 +5157,58 @@ Chaotic variant always starts fires, but deals no hull or ion damage.</desc>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_BOSS_1">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>artillery_generic_laser</mod:setValue>
+		<mod:setValue>aa_artillery_generic_laser</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_BOSS_2">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>artillery_generic_missile</mod:setValue>
+		<mod:setValue>aa_artillery_generic_missile</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_BOSS_3">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>artillery_generic_beam</mod:setValue>
+		<mod:setValue>aa_artillery_generic_beam</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_BOSS_4">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>artillery_generic_ion</mod:setValue>
+		<mod:setValue>aa_artillery_generic_ion</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_BOSSMV_LASER">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>artillery_bossmv_laser</mod:setValue>
+		<mod:setValue>aa_artillery_bossmv_laser</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_BOSSMV_MISSILE">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>artillery_bossmv_missile</mod:setValue>
+		<mod:setValue>aa_artillery_bossmv_missile</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_BOSSMV_BEAM">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>artillery_bossmv_beam</mod:setValue>
+		<mod:setValue>aa_artillery_bossmv_beam</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_BOSSMV_PHASE">
 	<mod:findLike type="weaponArt">
-		<mod:setValue>artillery_bossmv_phase</mod:setValue>
+		<mod:setValue>aa_artillery_bossmv_phase</mod:setValue>
 	</mod:findLike>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MINELAUNCHER">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_massive</mod-append:explosion>
+	<mod-append:explosion>aa_explosion_massive</mod-append:explosion>
 </mod:findName>
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MINELAUNCHER_ENEMY">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_massive</mod-append:explosion>
+	<mod-append:explosion>aa_explosion_massive</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_AUTO_MINELAUNCHER">
 	<mod-overwrite:spin>50</mod-overwrite:spin>
-	<mod-append:explosion>explosion_massive</mod-append:explosion>
+	<mod-append:explosion>aa_explosion_massive</mod-append:explosion>
 </mod:findName>
 
 <mod:findName type="weaponBlueprint" name="ARTILLERY_MADNESS">

@@ -8,7 +8,7 @@
 <text name="aa_tip_capacitor">Tip: Capacitors are Pinpoints that deal ion damage. They cannot self-chain, but they also cannot miss or be stopped by defense drones.</text>
 <text name="aa_tip_driver">Tip: Mass drivers do not lose charge when depowered. Instead, they continue to charge at a quarter of the usual speed. Firing them still requires power.</text>
 <text name="aa_tip_scrambler">Tip: Scramblers quarter a crew's healing from non-instant effects for the duration of their effect.</text>
-<text name="aa_tip_smash">Tip: When one of these weapons pops the final layer of shielding on a ship, a shield crush is added. While that crush is present, the ship's shield layer will be reduced by the crush's intensity percentage. When a shield layer regenerates, the most recent crush is removed.</text>
+<text name="aa_tip_smash">Tip: When one of these weapons pops the final layer of shielding on a ship, it deals bonus ion damage to the Shields system.</text>
 <text name="aa_tip_inducer">Tip: Inducers completely bypass almost all forms of defense, similar to bombs. They also have a +100% bonus to hit, making them nearly impossible to avoid even when wielded by the enemy.</text>
 <text name="aa_tip_accumulator">Tip: When left to charge, accumulating weapons gradually increase the damage of their shot. This lends them a degree of flexibility similar to charge weapons.</text>
 <text name="aa_tip_infuser">Tip: Infusers cannot be shot. When the weapon to its right fires, an Infuser copies its combat statistics to that weapon, then behaves as if it were fired.</text>
@@ -19,12 +19,9 @@
 <text name="aa_tip_system">Tip: We will set you free.</text>
 
 <!-- // WEAPON DESCRIPTIONS // -->
-<text name="aa_stat_smash_crush">Crushes Applied: \1</text>
-<text name="aa_stat_smash_reduction">Crush Intensity: \1%</text>
-<text name="aa_stat_smash_onhit">Pops shields on contact with the hull</text>
-
 <text name="aa_stat_holder">Powerless Charge Rate: \1%</text>
 
+<text name="aa_stat_smash">Deals \1 ion damage when breaking final shield layer</text>
 <text name="aa_stat_infuser">Can't be shot, but applies damage, hazard, and affliction statistics to the weapon to its right</text>
 
 

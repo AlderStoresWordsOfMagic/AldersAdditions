@@ -3,7 +3,7 @@ local fires = mods.fusion.custom_fires.fires -- Silly wrote a library in Fusion 
 local get_fire_extend = mods.fusion.custom_fires.get_fire_extend
 local FIRE_STAT_APPLICATION_PRIORITY = mods.fusion.custom_fires.constants.FIRE_STAT_APPLICATION_PRIORITY
 
--- [Advanced Room Resistances - Allows for the creation of unhackable and non-flammable rooms.]
+-- [Advanced Room Resistances - Allows for the creation of rooms which are unhackable/unlimitable and non-flammable/impossible to sabotage.]
 
 mods.alder.firewallShips = { -- List of room IDs for each ship that uses firewalled rooms
     AA_MVBOSS_HACKER_CRUISER_NORMAL = {15, 5}, -- shields, teleporter
@@ -46,6 +46,12 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                     system:StopHacking()
                     system.iHackEffect = 0
                 end
+
+                -- Prevent attempts to hack if the player tries to target the hacking system at the room
+                
+
+                -- Prevent the enemy from targeting that room with a hacking effect
+                
             end
         end
     end

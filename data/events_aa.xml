@@ -564,8 +564,7 @@
 <!-- // RAILGUN // -->
 <ship name="AA_SHIP_AUTO_RAILGUN" auto_blueprint="LIST_SHIPS_ESTATE_AUTO">
 	<destroyed>
-        <text>The powerful Auto-ship is consumed by the fire of your weaponry, letting you snag some useful components and take a closer look at the coordinates you wrote down. You still can't stay for long, though - the city's PDS is still active!</text>
-        <quest event="AA_EVENT_QUEST_RAILGUN"/>
+        <text>The powerful Auto-ship is consumed by the fire of your weaponry, letting you snag some useful components. You still can't stay for long, though - the city's PDS is still active!</text>
         <autoReward level="MED">scrap</autoReward>
     </destroyed>
 </ship>
@@ -585,6 +584,7 @@
                         <text>Listen in, and risk getting caught.</text>
                         <event>
                             <text>You fly close, doing your best to quell the hum of your engines. Splitting your attention between stealth and listening is not easy, but you are able to determine that the station was asking the Rebels to recover a pair of crashed Auto-ships investigating a mysterious shipwreck. Unfortunately, you don't even get the opportunity to read the coordinates you wrote down before the Auto-ship leading the group notices something's off and turns to face you. Even worse, the city's PDS batteries take notice as chatter surges through the facility and the Rebel team!</text>
+                            <quest event="AA_EVENT_QUEST_RAILGUN"/>
                             <ship hostile="true"/>
                             <environment type="PDS" target="player"/>
                             <choice hidden="true">

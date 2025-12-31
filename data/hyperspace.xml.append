@@ -902,10 +902,12 @@ Enemy Zoltan heal at 2.5 hp/s if undisturbed for 5 seconds, but do not heal from
 		<maxHealth>90</maxHealth>
         <lowHealthThreshold>30.0</lowHealthThreshold>
 
-        <allDamageTakenMultiplier>2</allDamageTakenMultiplier> <!-- no stat for instant damage, so this finagling has to happen -->
+        <allDamageTakenMultiplier>2</allDamageTakenMultiplier>
 		<damageTakenMultiplier>0.5</damageTakenMultiplier>
 		<fireDamageMultiplier>0.5</fireDamageMultiplier>
 		<suffocationModifier>0.5</suffocationModifier>
+
+        <!-- <persDamageMultiplier>2</persDamageMultiplier> BETA: new crew stat. -->
 
         <moveSpeedMultiplier>0.7</moveSpeedMultiplier>
         <repairSpeedMultiplier>1.5</repairSpeedMultiplier>

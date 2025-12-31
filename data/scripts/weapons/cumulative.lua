@@ -37,9 +37,8 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
     if needsNameGenerated then
         local stability = Hyperspace.playerVariables.stability
 
-        -- Set up weapon data
-        local shortDescLaser = stability >= 200 and "Laser Acc." or "Cum. Laser"
-        local blueprintLaser = Hyperspace.Blueprints:GetWeaponBlueprint("AA_LASER_CHARGEGUN_DAMAGE")
+        -- Change the name
+        Hyperspace.Blueprints:GetWeaponBlueprint("AA_LASER_CHARGEGUN_DAMAGE").desc.shortTitle.data = stability >= 200 and "Laser Acc." or "Cum. Laser"
         local shortDescShotgun = stability >= 200 and "Flak Acc." or "Cum. Flak"
         local blueprintShotgun = Hyperspace.Blueprints:GetWeaponBlueprint("AA_SHOTGUN_CHARGEGUN_DAMAGE")
         local shortDescIon = stability >= 200 and "Ion Acc." or "Cum. Ion"
@@ -50,7 +49,6 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
         local blueprintBeam = Hyperspace.Blueprints:GetWeaponBlueprint("AA_BEAM_CHARGEGUN_DAMAGE")
 
         -- Change the name
-        blueprintLaser.desc.shortTitle.data = shortDescLaser
         blueprintShotgun.desc.shortTitle.data = shortDescShotgun
         blueprintIon.desc.shortTitle.data = shortDescIon
         blueprintEnergy.desc.shortTitle.data = shortDescEnergy

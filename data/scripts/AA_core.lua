@@ -3,6 +3,7 @@
 
 -- [VSCode won't shut up about Hyperspace's defs not being defined, so these statements satisfy its complaints.]
 
+---@diagnostic disable-next-line: lowercase-global
 mods = mods or {}
 Hyperspace = Hyperspace or {}
 script = script or {}
